@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descargar Demo | ADEstock</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html" class="logo">
+                    <img src="img/logo-home.svg" alt="ADEstock Logo" class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#features">Características</a></li>
+                <li><a href="index.html#target-audience">¿Para Quién Es?</a></li>
+                <li><a href="index.html#faq">Preguntas Frecuentes</a></li>
+                <li><a href="tutoriales.html">Tutoriales</a></li>
+                <li><a href="contacto.html" class="cta-button">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>Descarga la Demo de ADEstock</h1>
+        </div>
+    </header>
+    <main class="legal-main" style="max-width: 700px; margin: 0 auto;">
+        <section class="legal-section">
+            <h2>1. Descargar la Demo</h2>
+            <p>Haz clic en el siguiente botón para descargar el archivo ZIP con la demo de ADEstock. El archivo contiene el instalador y todo lo necesario para comenzar tu prueba gratuita de 3 días.</p>
+            <div style="text-align:center; margin: 20px 0;">
+                <a href="https://github.com/adema-websites/adestock/releases/download/ADEstock-1.0.1/ADEstock-1.0.1v.zip" class="cta-button large" download>Descargar Demo (ZIP)</a>
+            </div>
+            <div style="text-align:center; margin: 20px 0;">
+                <img src="img/tutoriales/descargar-demo.gif" alt="Tutorial descarga demo ADEstock" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 8px #0001;">
+                <p style="font-size:0.95em; color:#555;">GIF: Cómo descargar el archivo demo</p>
+            </div>
+
+            <h2>2. Aviso de Seguridad de Windows</h2>
+            <div style="background:#fffbe6; border-left:4px solid #f7c948; padding:12px 18px; margin-bottom:18px;">
+                <strong>¿Por qué Windows avisa que "no es seguro"?</strong><br>
+                El instalador y el ejecutable aún <b>NO cuentan con firma digital</b>. Por eso, SmartScreen o tu antivirus pueden mostrar una advertencia porque no reconocen el editor.<br>
+                <ul style="margin:8px 0 0 18px;">
+                  <li>El software es seguro: solo contiene el intérprete de Python y los archivos necesarios para ejecutar ADEstock en tu equipo.</li>
+                  <li>Para continuar, hacé clic en <b>“Más información” → “Ejecutar de todas formas”</b>. Windows recordará tu decisión y no volverá a preguntar.</li>
+                </ul>
+            </div>
+
+            <h2>3. Instalación Paso a Paso</h2>
+            <ol>
+                <li>Descomprime el archivo <strong>adestock-demo.zip</strong> en una carpeta de tu PC (por ejemplo, en el Escritorio).</li>
+                <li>Abre la carpeta descomprimida y ejecuta el archivo <strong>adestock-demo.exe</strong> (o el instalador correspondiente).</li>
+                <li>Si Windows muestra una advertencia, sigue las instrucciones del paso anterior.</li>
+                <li>El instalador creará la carpeta <b>Documentos\ADEstock</b> y un acceso directo en el Escritorio.</li>
+                <li>No se requiere conexión a internet ni configuración avanzada.</li>
+            </ol>
+            <div style="text-align:center; margin: 20px 0;">
+                <img src="img/tutoriales/instalar-demo.gif" alt="Tutorial instalación demo ADEstock" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 8px #0001;">
+                <p style="font-size:0.95em; color:#555;">GIF: Instalación paso a paso</p>
+            </div>
+
+            <h2>4. Cómo Iniciar ADEstock</h2>
+            <ol>
+                <li>Haz doble clic en el acceso directo <b>ADEstock</b> del Escritorio.</li>
+                <li>Se abrirá una ventana negra (CMD). <b>¡No la cierres!</b> Esa ventana es el servidor local y debe permanecer abierta mientras uses el sistema.</li>
+                <li>En la consola verás dos enlaces, por ejemplo:<br>
+                    <code>http://127.0.0.1:8965</code> (solo este PC)<br>
+                    <code>http://192.168.0.123:8965</code> (cualquier dispositivo de tu red)</li>
+                <li>Con el ratón dentro de la ventana, <b>clic derecho → Abrir vínculo</b> (o copia y pega en tu navegador).</li>
+                <li>ADEstock se cargará en el navegador que prefieras (Chrome, Edge, Firefox, etc.). ¡Listo para trabajar, sin necesidad de internet!</li>
+            </ol>
+            <div style="text-align:center; margin: 20px 0;">
+                <img src="img/tutoriales/usar-demo.gif" alt="Tutorial uso demo ADEstock" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 8px #0001;">
+                <p style="font-size:0.95em; color:#555;">GIF: Cómo acceder y usar la demo</p>
+            </div>
+
+            <h2>5. Acceder desde otros dispositivos de la misma red</h2>
+            <ul>
+                <li>Asegúrate de que la PC anfitrión (donde instalaste ADEstock) esté encendida y con ADEstock ejecutándose.</li>
+                <li>Desde el móvil, tablet u otra PC conectada al wifi, ingresa la segunda dirección que aparece en la consola (la que contiene tu IP local).</li>
+                <li>Si no carga, verifica que ningún firewall bloquee el puerto 8965.</li>
+            </ul>
+
+            <h2>6. Cómo cerrar ADEstock</h2>
+            <ul>
+                <li>Cierra la ventana CMD para detener el servidor.</li>
+                <li>Para volver a usar ADEstock, solo haz doble clic en el acceso directo nuevamente.</li>
+            </ul>
+
+            <h2>7. Servicio en la nube y soporte</h2>
+            <p>¿Preferís olvidarte de respaldos, actualizaciones y configuraciones de correo? ADEMA Sistemas ofrece hosting administrado para ADEstock:</p>
+            <ul>
+                <li>Copias de seguridad automáticas</li>
+                <li>Correos transaccionales y alertas por e-mail</li>
+                <li>Certificado HTTPS y acceso remoto seguro</li>
+                <li>Escalabilidad bajo demanda</li>
+            </ul>
+            <p>Escribinos a <a href="mailto:contact@ademasistemas.com">contact@ademasistemas.com</a> o completá el formulario en nuestra web <a href="https://ademasistemas.com/" target="_blank">ademasistemas.com</a> para recibir una propuesta a medida.</p>
+
+            <h2>¿Dudas o problemas?</h2>
+            <p>Si tienes inconvenientes con la descarga, instalación o uso, contáctanos a <a href="mailto:contact@ademasistemas.com">contact@ademasistemas.com</a> o revisa los <a href="tutoriales.html">tutoriales</a> para más ayuda.</p>
+            <div style="text-align:center; margin: 32px 0;">
+                <a href="https://github.com/adema-websites/adestock/releases/download/ADEstock-1.0.1/ADEstock-1.0.1v.zip" class="cta-button large" download>Descargar Demo (ZIP)</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="footer-year"></span> ADEstock by <a href="https://ademasistemas.com" target="_blank">ADEMA Sistemas</a>. Todos los derechos reservados.</p>
+        <p><a href="politica-privacidad.html">Política de Privacidad</a> | <a href="terminos-condiciones.html">Términos y Condiciones</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

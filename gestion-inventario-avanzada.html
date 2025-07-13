@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión Avanzada de Productos con ADEstock (Simples, Variantes, Kits)</title>
+    <meta name="description" content="Controla todo tu inventario con ADEstock: productos simples, con variantes (talle/color) y compuestos (kits/recetas). Software de stock para pymes.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="page-header"> <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.svg" alt="ADEstock Logo">
+                    <span>ADEstock</span>
+                </a>
+            </div>
+             <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html#features">Características</a></li>
+                <li><a href="index.html#target-audience">¿Para Quién Es?</a></li>
+                <li><a href="index.html#faq">Preguntas Frecuentes</a></li>
+                <li><a href="tutoriales.html">Tutoriales</a></li>
+                <li><a href="contacto.html" class="cta-button">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container page-content">
+        <article>
+            <h1>Gestión Avanzada de Productos e Inventario en ADEstock</h1>
+            <p class="intro-paragraph">Gestionar un catálogo de productos diverso es un desafío clave para pymes y emprendedores. ADEstock te ofrece la flexibilidad para manejar todo tipo de artículos, desde los más básicos hasta los más complejos, manteniendo un control preciso de tu stock.</p>
+
+            <section id="productos-simples">
+                <h2><i class="fas fa-box"></i> Manejo de Productos Simples</h2>
+                <p>Son los productos que compras y vendes tal cual, sin variaciones. Ideales para artículos estándar.</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Creación rápida con nombre, código (opcional) y costo.</li>
+                    <li><i class="fas fa-check"></i> Asignación a categorías y subcategorías para organización.</li>
+                    <li><i class="fas fa-check"></i> Control de stock automático con cada compra y venta registrada.</li>
+                    <li><i class="fas fa-check"></i> Asignación opcional de proveedor habitual.</li>
+                </ul>
+                 <img src="img/placeholder-producto-simple.png" alt="Interfaz de creación de producto simple en ADEstock" class="content-image"> </section>
+
+            <section id="productos-variantes">
+                <h2><i class="fas fa-tshirt"></i> Productos con Variantes (Talles, Colores, Modelos)</h2>
+                <p>Perfecto para ropa, calzado o cualquier producto con múltiples opciones. Define un "Producto Madre" y crea todas sus variantes.</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Crea atributos como Talle, Color, Modelo según tu necesidad.</li>
+                    <li><i class="fas fa-check"></i> Genera variantes individuales (ej: Camiseta Roja Talle M).</li>
+                    <li><i class="fas fa-check"></i> Asigna SKU, costo y precio específico a cada variante si es necesario.</li>
+                    <li><i class="fas fa-check"></i> Control de stock detallado por cada variante específica.</li>
+                    <li><i class="fas fa-check"></i> Opción para generar combinaciones de variantes automáticamente.</li>
+                </ul>
+                 <img src="img/placeholder-producto-variantes.png" alt="Gestión de variantes de producto en ADEstock" class="content-image"> </section>
+
+            <section id="productos-compuestos">
+                 <h2><i class="fas fa-puzzle-piece"></i> Productos Compuestos (Kits y Recetas)</h2>
+                 <p>Ideal para combos, packs promocionales o productos que fabricas a partir de otros componentes.</p>
+                 <ul>
+                    <li><i class="fas fa-check"></i> Define la "receta" o composición: qué productos y qué cantidad componen el kit.</li>
+                    <li><i class="fas fa-check"></i> El costo del producto compuesto se calcula automáticamente sumando el costo de sus componentes.</li>
+                    <li><i class="fas fa-check"></i> Al vender un producto compuesto, ADEstock descuenta automáticamente el stock de cada uno de sus componentes.</li>
+                    <li><i class="fas fa-check"></i> Simplifica la gestión de promociones y productos fabricados.</li>
+                 </ul>
+                  <img src="img/placeholder-producto-compuesto.png" alt="Creación de producto compuesto o kit en ADEstock" class="content-image"> </section>
+
+             <section id="herramientas-adicionales">
+                 <h2><i class="fas fa-tools"></i> Herramientas Adicionales de Inventario</h2>
+                 <ul>
+                    <li><strong>Categorización:</strong> Organiza tu catálogo con Categorías y Subcategorías personalizables.</li>
+                    <li><strong>Unidades de Medida:</strong> Define si vendes por unidad, kilo, litro, metro, etc.</li>
+                    <li><strong>Importación Masiva:</strong> Carga rápidamente tu catálogo de productos desde un archivo Excel o CSV (<a href="tutoriales.html#importar-productos">ver tutorial</a>).</li>
+                    <li><strong>Control de Costos:</strong> Registra costos y permite la actualización automática al ingresar compras.</li>
+                 </ul>
+             </section>
+
+            <section class="cta-section-inner">
+                <h3>¿Listo para un control de inventario sin fisuras?</h3>
+                <p>Descubre cómo ADEstock se adapta a tu catálogo, sin importar su complejidad.</p>
+                <a href="index.html#contact" class="cta-button large">Solicitar una Demo</a>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="footer-year"></span> ADEstock by <a href="https://ademasistemas.com" target="_blank">ADEMA Sistemas</a>. Todos los derechos reservados.</p>
+         <p><a href="politica-privacidad.html">Política de Privacidad</a> | <a href="terminos-condiciones.html">Términos y Condiciones</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="es" class="light-theme">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutoriales | ADEstock</title>
+
+    <!-- Estilos y librerías -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<header class="hero">
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo-home.svg" alt="ADEstock" class="logo-img">
+            </a>
+        </div>
+
+        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+
+        <ul class="nav-links">
+            <li><a href="index.html#features">Características</a></li>
+            <li><a href="index.html#faq">Preguntas Frecuentes</a></li>
+            <li><a href="tutoriales.html" class="active">Tutoriales</a></li>
+            <li><a href="contacto.html" class="cta-button">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-content">
+        <h1>Guías Paso a Paso</h1>
+        <p>Aprende a configurar y dominar ADEstock en minutos.</p>
+        <a href="#quicklinks" class="cta-button large">Ir a los tutoriales</a>
+    </div>
+</header>
+
+<!-- BOTONERA DE NAVEGACIÓN DE TUTORIALES -->
+<nav class="tutorial-nav" id="tutorial-nav-container">
+    <button class="tutorial-nav-toggle" id="tutorial-nav-toggle" aria-expanded="false" aria-controls="tutorial-links">
+        <span class="toggle-text">Ver Secciones del Tutorial</span>
+        <i class="fas fa-chevron-down toggle-icon"></i>
+    </button>
+
+    <ul id="tutorial-links">
+        <li><a href="#empresa-principal">🏛️ Configuración Inicial</a></li>
+        <li><a href="#empresas-subordinadas">🏢 Empresas Subordinadas</a></li>
+        <li><a href="#depositos">🏪 Depósitos</a></li>
+        <li><a href="#puntos-venta">🛍️ Puntos de Venta</a></li>
+        <li><a href="#categorias">📁 Categorías</a></li>
+        <li><a href="#producto-simple">🧴 Producto Simple</a></li>
+        <li><a href="#producto-compuesto">🧩 Producto Compuesto</a></li>
+        <li><a href="#producto-variantes">👕 Producto con Variantes</a></li>
+        <li><a href="#agenda">👥 Agenda</a></li>
+        <li><a href="#proveedor">🚚 Proveedores</a></li>
+        <li><a href="#clientes">🧍‍♂️ Clientes</a></li>
+        <li><a href="#compras">🛒 Compras</a></li>
+        <li><a href="#movimientos">🔄 Movimientos</a></li>
+        <li><a href="#ventas">💰 Ventas</a></li>
+        <li><a href="#reportes-pdf">📑 Reportes PDF</a></li>
+        <li><a href="#reportes-excel">📊 Reportes Excel</a></li>
+        <li><a href="#exportar-datos">⬇️ Exportar Datos</a></li>
+        <li><a href="#importar-datos">⬆️ Importar Datos</a></li>
+        <li><a href="#modo-demo">🧪 Modo Demo</a></li>
+    </ul>
+</nav>
+
+<style>
+  /* ==================================================
+     NUEVA NAVEGACIÓN DE TUTORIALES (RESPONSIVE)
+     ================================================== */
+
+  .tutorial-nav {
+    position: sticky; /* Se mantiene fijo al hacer scroll */
+    top: 0;
+    z-index: 1000;
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.03);
+    margin-bottom: 1.5em;
+    /* Necesario para posicionar el menú desplegable */
+    position: relative; 
+  }
+
+  /* --- Estilos para Móvil (por defecto) --- */
+
+  /* El botón que controla el menú en móviles */
+  .tutorial-nav-toggle {
+    display: flex; /* Para alinear texto e ícono */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.8em 1em;
+    font-size: 1.05em;
+    font-weight: 500;
+    color: #333;
+    background: #f9f9f9;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+  }
+  
+  .tutorial-nav-toggle .toggle-icon {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  /* Gira la flecha cuando el menú está abierto */
+  .tutorial-nav-toggle[aria-expanded="true"] .toggle-icon {
+    transform: rotate(180deg);
+  }
+
+  /* La lista de enlaces (oculta por defecto en móvil) */
+  .tutorial-nav ul {
+    display: none; /* Oculto hasta que se hace clic */
+    position: absolute; /* Se superpone al contenido */
+    top: 100%; /* Justo debajo del botón */
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    list-style: none;
+    margin: 0;
+    padding: 0.5em 0;
+    max-height: 70vh; /* Altura máxima para no ocupar toda la pantalla */
+    overflow-y: auto; /* Scroll si hay muchos elementos */
+    flex-direction: column; /* Apila los enlaces verticalmente */
+  }
+
+  /* Muestra la lista cuando el botón está activo */
+  .tutorial-nav ul.is-open {
+    display: block;
+  }
+  
+  .tutorial-nav li {
+    margin: 0;
+  }
+  
+  /* Estilo de cada enlace en el menú desplegable */
+  .tutorial-nav a {
+    display: block;
+    padding: 0.7em 1.5em;
+    color: #333;
+    text-decoration: none;
+    font-size: 1em;
+    border-left: 3px solid transparent;
+  }
+  
+  .tutorial-nav a:hover,
+  .tutorial-nav a:focus,
+  .tutorial-nav a.active-link { /* Clase para resaltar el link activo */
+    background: #f0f7ff;
+    color: #1976d2;
+    border-left-color: #1976d2;
+  }
+  
+  /* --- Estilos para Tablet y Escritorio (a partir de 900px) --- */
+  @media (min-width: 900px) {
+    /* Ocultamos el botón del menú desplegable */
+    .tutorial-nav-toggle {
+      display: none;
+    }
+
+    /* Restauramos la barra horizontal */
+    .tutorial-nav ul {
+      display: flex; /* Lo volvemos a mostrar como flexbox */
+      position: static; /* Quitamos el posicionamiento absoluto */
+      flex-direction: row; /* Enlaces en fila */
+      flex-wrap: wrap; /* Permite que pasen a la siguiente línea si no caben */
+      justify-content: center;
+      gap: 0.5em;
+      padding: 0.5em 1em;
+      box-shadow: none; /* Quitamos la sombra de dropdown */
+      max-height: none; /* Reseteamos la altura máxima */
+    }
+
+    /* Restauramos el estilo de "píldora" de los enlaces */
+    .tutorial-nav a {
+      padding: 0.4em 1em;
+      border-radius: 20px;
+      background: #f5f5f5;
+      font-size: 0.98em;
+      border-left: none; /* Quitamos el borde izquierdo */
+      border: 1px solid transparent;
+    }
+
+    .tutorial-nav a:hover,
+    .tutorial-nav a:focus,
+    .tutorial-nav a.active-link {
+      background: #008080;
+      color: #fff;
+      border-color: #024f4f;
+    }
+  }
+</style>
+<style>
+  /* ==================================================
+     NUEVA NAVEGACIÓN DE TUTORIALES (CORREGIDA Y FIJA)
+     ================================================== */
+
+  /* NUEVO: Evita que el contenido quede oculto debajo de la barra al navegar a un ancla (#) */
+  html {
+    scroll-behavior: smooth; /* Opcional: para un desplazamiento suave */
+    scroll-padding-top: 85px; /* AJUSTA ESTE VALOR si tu barra es más alta/baja */
+  }
+
+  .tutorial-nav {
+    /* CORRECCIÓN: Nos aseguramos que sea 'sticky' para que se quede siempre arriba */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.03);
+    margin-bottom: 1.5em;
+  }
+
+  /* --- Estilos para Móvil (por defecto) --- */
+
+  .tutorial-nav-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.8em 1em;
+    font-size: 1.05em;
+    font-weight: 500;
+    color: #333;
+    background: #f9f9f9;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+  }
+  
+  .tutorial-nav-toggle .toggle-icon {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .tutorial-nav-toggle[aria-expanded="true"] .toggle-icon {
+    transform: rotate(180deg);
+  }
+
+  .tutorial-nav ul {
+    display: none;
+    /* CORRECCIÓN: 'position: absolute' funciona perfecto dentro de un contenedor 'sticky' */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    list-style: none;
+    margin: 0;
+    padding: 0.5em 0;
+    max-height: 70vh;
+    overflow-y: auto;
+    flex-direction: column;
+  }
+
+  .tutorial-nav ul.is-open {
+    display: block;
+  }
+  
+  .tutorial-nav li {
+    margin: 0;
+  }
+  
+  .tutorial-nav a {
+    display: block;
+    padding: 0.7em 1.5em;
+    color: #333;
+    text-decoration: none;
+    font-size: 1em;
+    border-left: 3px solid transparent;
+  }
+  
+  .tutorial-nav a:hover,
+  .tutorial-nav a:focus,
+  .tutorial-nav a.active-link {
+    background: #f0f7ff;
+    color: #1976d2;
+    border-left-color: #1976d2;
+  }
+  
+  /* --- Estilos para Tablet y Escritorio (a partir de 900px) --- */
+  @media (min-width: 900px) {
+    .tutorial-nav-toggle {
+      display: none;
+    }
+
+    .tutorial-nav ul {
+      display: flex;
+      position: static;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5em;
+      padding: 0.5em 1em;
+      box-shadow: none;
+      max-height: none;
+    }
+
+    .tutorial-nav a {
+      padding: 0.4em 1em;
+      border-radius: 20px;
+      background: #f5f5f5;
+      font-size: 0.98em;
+      border-left: none;
+      border: 1px solid transparent;
+    }
+
+    .tutorial-nav a:hover,
+    .tutorial-nav a:focus,
+    .tutorial-nav a.active-link {
+      background: #1976d2;
+      color: #fff;
+      border-color: #1976d2;
+    }
+  }
+</style>
+<main class="container">
+
+<!-- =============================================================================
+     A partir de aquí se incluyen TODAS las secciones completas que proporcionaste
+============================================================================= -->
+
+<!-- ================= EMPRESA PRINCIPAL ================= -->
+<section id="empresa-principal" class="content-section">
+    <!-- …contenidos tal cual los enviaste (GIFs, textos, tip-box, etc.) … -->
+    <!-- (Se han omitido comentarios para aligerar la vista; copia íntegro      -->
+    <!--  el bloque que compartiste: encabezado, párrafos, tutorial-steps, etc.)-->
+    <!-- --------------------------------------------------------------------- -->
+    <div class="section-header">
+
+        <div class="section-title-container">
+            <h2 class="section-title">🏛️ Crear la Empresa Principal</h2>
+            <p class="section-subtitle">La empresa que administra todo el sistema</p>
+        </div>
+    </div>
+    <div class="section-content">
+        <p>Esta es la empresa que administra todo. Es la "cabeza del sistema", desde donde vas a poder ver y controlar las demás empresas, sus depósitos y movimientos.</p>
+        <div class="tutorial-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Accede al panel de administración.</h3>
+                    <p>Verás en la parte superior 3 módulos (Core, Inventario y Agenda), debes ingresar en "Core" &gt; "Empresa Principal".</p>
+                    <div class="tutorial-image"><img src="img/tutoriales/empresa-principal-1.gif" alt="Formulario de Empresa Principal"></div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Completa los datos básicos</h3>
+                    <p>Carga nombre de tu Empresa, dirección, correo electrónico de contacto, logo y la configuración de precios de variantes.</p>
+                    <div class="tutorial-image"><img src="img/tutoriales/empresa-principal-2.gif" alt="Formulario de Empresa Principal"></div>
+                    <div class="example-box">
+                        <i class="fas fa-book"></i>
+                        <div><strong>Explicación:</strong> Si las variantes de tus productos de tipo 'Madre' tienen costos diferentes selecciona 'Por Variante'. (Profundizamos esto cuando veamos el inventario de productos).</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= EMPRESAS SUBORDINADAS ================= -->
+<section id="empresas-subordinadas" class="content-section">
+    <div class="section-header">
+        <div class="section-icon green"></div>
+        <div class="section-title-container">
+            <h2 class="section-title">🏢 Crear Empresas Subordinadas</h2>
+            <p class="section-subtitle">Unidades de negocio dentro de tu estructura</p>
+        </div>
+    </div>
+    <div class="section-content">
+        <p>Cada empresa subordinada puede ser una sucursal, un cliente interno, una unidad de negocio o una marca dentro de tu operación. Estas empresas van a tener sus propios depósitos, productos y operaciones. Es como darles autonomía dentro de tu sistema.</p>
+        <div class="tutorial-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Accede a la sección de empresas</h3>
+                    <p>Ve a "Core" &gt; "Empresas" y haz clic en "Añadir Empresa".</p>
+                    <div class="tutorial-image"><img src="img/tutoriales/empresas-subordinadas-1.gif" alt="Formulario de Empresa Subordinada"></div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Completa los datos de la empresa subordinada</h3>
+                    <p>Ingresa nombre, dirección, teléfono, email de contacto y los dos checks siguientes te permiten mostrar la empresa en la tabla de productos y permitir vender en negativo.</p>
+                    <div class="tutorial-image"><img src="img/tutoriales/empresas-subordinadas-2.gif" alt="Formulario de Empresa Subordinada"></div>
+                    <div class="tip-box">
+                        <i class="fas fa-lightbulb"></i>
+                        <div><strong>Consejo:</strong> Tienes diferentes plantillas para las facturas de cada empresa, puedes alternar entre las plantillas para que cada empresa emita su tipo de factura (Puedes alternar entre las opciones y probar la que más te guste).</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= DEPÓSITOS ================= -->
+<section id="depositos" class="content-section">
+    <div class="section-header">
+        <div class="section-icon yellow"></div>
+        <div class="section-title-container">
+            <h2 class="section-title">🏪 Crear los Depósitos</h2>
+            <p class="section-subtitle">Lugares físicos donde se almacena la mercadería</p>
+        </div>
+    </div>
+    <div class="section-content">
+        <p>Un depósito representa un lugar físico donde se guarda la mercadería. Cada empresa puede tener uno o varios depósitos.</p>
+        <div class="tutorial-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Accede a la sección de Inventarios</h3>
+                    <p>Ve a "Inventarios" &gt; "Depósitos" y haz clic en "Añadir Depósito".</p>
+                    <div class="tutorial-image"><img src="img/tutoriales/depositos-1.gif" alt="Selecciona la empresa propietaria"></div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Completa los datos del depósito</h3>
+                    <p>Indicá a qué empresa pertenece este depósito y cargá los datos básicos como dirección y nombre. Esto permitirá organizar bien los reportes por empresa y ubicación.</p>
+                    <div class="tutorial-image"><img src="img/tutoriales/depositos-2.gif" alt="Completa los datos del depósito"></div>
+                    <div class="example-box">
+                        <i class="fas fa-book"></i>
+                        <div><strong>Ejemplo:</strong> Un depósito puede ser "Central Pilar", "Taller Villa Luzuriaga" o "Almacén Online". Nombres claros ayudan a identificarlo rápido en los reportes.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= PUNTOS DE VENTA ================= -->
+<section id="puntos-venta" class="content-section">
+    <div class="section-header">
+        <div class="section-icon red"></div>
+        <div class="section-title-container">
+            <h2 class="section-title">🛍️ Configurar los puntos de venta</h2>
+            <p class="section-subtitle">Lugares donde realizas ventas</p>
+        </div>
+    </div>
+    <div class="section-content">
+        <p>Un punto de venta representa un lugar desde donde se realizan ventas: puede ser un local comercial (podés tener varios en un mismo espacio físico), una tienda online, un vendedor particular, etc. Cada punto de venta está <strong>siempre asociado a un depósito</strong>, ya que el sistema necesita saber de dónde sale o entra la mercadería al vender o comprar.</p>
+        <div class="tutorial-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Accedé a la sección de puntos de venta</h3>
+                    <p>Entrá al módulo "Core" y seleccioná "Puntos de Venta".</p>
+                    <div class="tutorial-image"><img src="img/tutoriales/puntos-venta-1.gif" alt="Formulario de Punto de Venta"></div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Completá los datos del nuevo punto</h3>
+                    <p>Hacé clic en "Añadir Punto de Venta" e ingresá los datos principales: nombre, <strong>código fiscal</strong> (ej. <code>00001</code>), <strong>depósito asociado</strong>, dirección, teléfono y el <strong>canal de venta</strong> (físico, online o móvil).</p>
+                    <div class="tutorial-image"><img src="img/tutoriales/puntos-venta-2.gif" alt="Formulario de Punto de Venta"></div>
+                    <div class="tip-box">
+                        <i class="fas fa-lightbulb"></i>
+                        <div><strong>Consejo:</strong> El canal de venta es útil para reportes y análisis. Te permite ver, por ejemplo, cuánto estás vendiendo online vs en locales físicos.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="example-box">
+            <i class="fas fa-book"></i>
+            <div><strong>Ejemplos de puntos de venta:</strong> local comercial físico, tienda online o stand en feria. Elegí nombres claros para identificarlos rápido en los reportes.</div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= CATEGORÍAS ================= -->
+<section id="categorias" class="content-section">
+    <div class="section-header">
+        <div class="section-icon purple"></div>
+        <div class="section-title-container">
+            <h2 class="section-title">📁 Crear Categorías y Subcategorías</h2>
+            <p class="section-subtitle">Organiza tus productos de forma lógica</p>
+        </div>
+    </div>
+    <div class="section-content">
+        <p>Las categorías y subcategorías te permiten agrupar productos y encontrarlos más fácil cuando tengas un catálogo extenso.</p>
+        <div class="tutorial-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Accede a la sección de categorías</h3>
+                    <p>Ve a "Inventario" &gt; "Categoría".</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Crea una categoría principal</h3>
+                    <p>Ingresa el nombre de la categoría y guarda los cambios.</p>
+                    <div class="tutorial-image"><img src="img/tutoriales/categorias-1.gif" alt="Formulario de Categoría"></div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Crea subcategorías (opcional)</h3>
+                    <p>La subcategoría es una clasificación libre que podés aplicar como complemento a la categoría principal. Ejemplo: categoría "Indumentaria" y subcategoría "Invierno".</p>
+                    <div class="tutorial-image"><img src="img/tutoriales/categorias-2.gif" alt="Formulario de Categoría"></div>
+                    <div class="tip-box">
+                        <i class="fas fa-lightbulb"></i>
+                        <div><strong>Consejo:</strong> Mantené la estructura simple. Una categoría + una subcategoría suele alcanzar para tener un catálogo ordenado.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= PRODUCTO SIMPLE ================= -->
+<section id="producto-simple" class="content-section">
+    <div class="section-header">
+        <div class="section-icon blue"></div>
+        <div class="section-title-container">
+            <h2 class="section-title">🧴 Crear un Producto Simple</h2>
+            <p class="section-subtitle">Productos sin variantes</p>
+        </div>
+    </div>
+    <div class="section-content">
+        <p>Los productos simples son aquellos que se compran y revenden tal cual, es decir que no tienen variantes. Por ejemplo: "Fideos integrales 500g", "Aceite de oliva 1L", etc.</p>
+        <div class="tutorial-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Accede a la sección de productos</h3>
+                    <p>Ve a "Inventario" &gt; "Productos" y haz clic en "Añadir Producto".</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Completamos todos los campos</h3>
+                    <p>Los campos con <strong>asterisco rojo</strong> son obligatorios:</p>
+                    <ul class="step-list">
+                        <li>🚀 Código del producto (opcional).</li>
+                        <li>🚀 Nombre del producto (obligatorio).</li>
+                        <li>🚀 Descripción adicional (opcional).</li>
+                        <li>🚀 Tipo = <strong>Simple</strong>.</li>
+                        <li>🚀 Categoría y subcategoría (opcionales).</li>
+                        <li>🚀 Costo unitario y unidad de medida.</li>
+                        <li>🚀 Proveedor (opcional).</li>
+                        <li>🚀 Imagen (opcional).</li>
+                        <li>🚀 Activar <strong>Habilitar venta</strong>.</li>
+                    </ul>
+                    <div class="tutorial-image"><img src="img/tutoriales/producto-simple-1.gif" alt="Selección de Tipo de Producto"></div>
+                    <div class="tip-box">
+                        <i class="fas fa-lightbulb"></i>
+                        <div><strong>Tip:</strong> Puedes crear/editar/eliminar categorías y subcategorías desde esta misma ventana con los botones ➕ 🖊️ ✖️.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Configuración de precios</h3>
+                    <p>Los precios de venta los definiremos en la lista de precios correspondiente.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Guarda el producto</h3>
+                    <p>Haz clic en "Guardar" para crear el producto en el sistema.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= PRODUCTO COMPUESTO ================= -->
+<section id="producto-compuesto" class="content-section alt-bg">
+    <div class="section-header">
+        <div class="section-icon yellow"></div>
+        <div class="section-title-container">
+            <h2 class="section-title">🧩 Crear Productos Compuestos</h2>
+            <p class="section-subtitle">Productos que se fabrican con proporciones de otros productos o promociones especiales</p>
+        </div>
+    </div>
+    <div class="section-content">
+        <p>Los productos compuestos están formados por otros productos. Ej.: "Combo de desayuno". ADEstock calcula el costo total sumando los costos de los componentes según la cantidad usada.</p>
+        <p>A continuación, cómo crearlo:</p>
+        <div class="tutorial-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Crea un nuevo producto</h3>
+                    <p>Ve a "Inventario" &gt; "Productos" y haz clic en "Añadir Producto".</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Selecciona "Producto Compuesto"</h3>
+                    <p>En el formulario, elige el tipo "Producto Compuesto" y asigna un nombre.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Define los componentes</h3>
+                    <p>En la pestaña "Composición" agrega los productos que forman tu combo, indicando cantidades.</p>
+                    <ul class="step-list">
+                        <li>🚀 Selecciona cada producto.</li>
+                        <li>🚀 Define la cantidad exacta.</li>
+                        <li>🚀 ADEstock calculará el costo total automáticamente.</li>
+                    </ul>
+                    <div class="tutorial-image"><img src="img/tutoriales/producto-compuesto-1.gif" alt="Agregar Componentes"></div>
+                </div>
+            </div>
+        </div>
+        <p>¡Listo! ADEstock gestionará stock y costos automáticamente.</p>
+    </div>
+</section>
+
+<!-- ================= PRODUCTO VARIANTES ================= -->
+<section id="producto-variantes" class="content-section">
+    <div class="section-header">
+        <div class="section-icon green"></div>
+        <div class="section-title-container">
+            <h2 class="section-title">👕 Crear un Producto Madre</h2>
+            <p class="section-subtitle">Productos con múltiples variantes (talle, color, modelo…)</p>
+        </div>
+    </div>
+    <div class="section-content">
+        <p>Un <strong>producto madre</strong> agrupa variantes, ideal para ropa, calzado, etc.</p>
+        <div class="tutorial-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Accede a productos</h3>
+                    <p>Ve a "Inventario" &gt; "Productos" y haz clic en "Añadir Producto".</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Selecciona "Producto Madre"</h3>
+                    <p>En el tipo de producto elige <strong>Madre</strong>.</p>
+                    <div class="tutorial-image"><img src="img/tutoriales/producto-variantes-1.gif" alt="Seleccionar Producto Madre"></div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Define las variantes</h3>
+                    <p>Después de guardar, agrega talles, colores o modelos:</p>
+                    <ul class="step-list">
+                        <li>👕 Talles (S, M, L…)</li>
+                        <li>🎨 Colores (Rojo, Azul…)</li>
+                        <li>📦 Modelos (Básico, Con capucha…)</li>
+                    </ul>
+                    <div class="tutorial-image"><img src="img/tutoriales/producto-variantes-2.gif" alt="Añadir Producto Madre"></div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Generar combinaciones automáticas (opcional)</h3>
+                    <p>En la lista de productos, selecciona "Generar Variantes" para crear todas las combinaciones.</p>
+                    <div class="tutorial-image"><img src="img/tutoriales/producto-variantes-3.gif" alt="Generar Variantes Producto Madre"></div>
+                </div>
+            </div>
+        </div>
+        <p>¡Variantes listas! ADEstock gestiona stock y precios por variante.</p>
+        <div class="tip-box">
+            <i class="fas fa-lightbulb"></i>
+            <div><strong>Tip:</strong> Si necesitas vender variantes por separado como productos individuales, crea productos hijos.</div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= AGENDA (Resumen) ================= -->
+<section id="agenda" class="content-section">
+    <div class="section-header">
+        <div class="section-icon green"></div>
+        <div class="section-title-container">
+            <h2 class="section-title">👥 Agenda: Proveedores y Clientes</h2>
+            <p class="section-subtitle">Gestiona tus contactos comerciales de forma eficiente</p>
+        </div>
+    </div>
+    <div class="section-content">
+        <p>En la sección "Agenda" gestionas toda la info de tus contactos comerciales.</p>
+        <div class="categories-grid">
+            <a href="#proveedor" class="category-card">
+                <div class="category-icon blue"><i class="fas fa-truck"></i></div>
+                <div class="category-content">
+                    <h3 class="category-title">Proveedores</h3>
+                    <p class="category-description">Controla tus compras y pagos.</p>
+                </div>
+            </a>
+            <a href="#clientes" class="category-card">
+                <div class="category-icon green"><i class="fas fa-user-tie"></i></div>
+                <div class="category-content">
+                    <h3 class="category-title">Clientes</h3>
+                    <p class="category-description">Gestiona ventas y seguimiento de pagos.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ================= PROVEEDORES ================= -->
+<section id="proveedor" class="content-section">
+    <div class="section-header">
+        <div class="section-icon blue"></div>
+        <div class="section-title-container">
+            <h2 class="section-title">🚚 Cargar Proveedores</h2>
+            <p class="section-subtitle">Contactos que te venden productos o servicios</p>
+        </div>
+    </div>
+    <div class="section-content">
+        <p>Registra a tus proveedores para organizar compras y pagos.</p>
+        <div class="section-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Accede al módulo Agenda</h3>
+                    <p>Ve a <strong>Agenda &gt; Proveedores</strong> y haz clic en <strong>Añadir Proveedor</strong>.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Completa los datos</h3>
+                    <p>Nombre, tipo (empresa/persona), dirección, teléfono, email, observaciones.</p>
+                    <div class="tutorial-image"><img src="img/tutoriales/proveedores-1.gif" alt="Formulario Proveedor"></div>
+                    <div class="tip-box">
+                        <i class="fas fa-lightbulb"></i>
+                        <div><strong>Consejo:</strong> Observaciones útiles: "Entrega lunes", "Solicitar lista mensual", etc.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= CLIENTES ================= -->
+<section id="clientes" class="content-section alt-bg">
+    <div class="section-header">
+        <div class="section-icon green"></div>
+        <div class="section-title-container">
+            <h2 class="section-title">🧍‍♂️ Cargar Clientes</h2>
+            <p class="section-subtitle">Contactos a los que vendes productos o servicios</p>
+        </div>
+    </div>
+    <div class="section-content">
+        <p>Registra a tus clientes para hacer seguimientos, facturar y controlar ventas.</p>
+        <div class="section-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Accede al módulo Agenda</h3>
+                    <p>Ve a <strong>Agenda &gt; Clientes</strong> y haz clic en <strong>Añadir Cliente</strong>.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Completa los datos</h3>
+                    <p>Nombre o razón social, email, teléfono, dirección, etiquetas, etc.</p>
+                    <div class="section-image"><img src="img/tutoriales/clientes-1.gif" alt="Formulario Cliente"></div>
+                    <div class="example-box">
+                        <i class="fas fa-book"></i>
+                        <div><strong>Ejemplo:</strong> Etiqueta clientes frecuentes como “Mayorista” o “Online”.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= COMPRAS ================= -->
+<section id="compras" class="content-section">
+    <div class="section-header">
+        <div class="section-icon blue"></div>
+        <div class="section-title-container">
+            <h2 class="section-title">🛒 Realizar Compras</h2>
+            <p class="section-subtitle">Cómo registrar y confirmar una compra</p>
+        </div>
+    </div>
+    <div class="section-content">
+        <p>Compras se organiza en tres pestañas: <em>General</em>, <em>Detalles de Compra</em> y <em>Detalles de Compra Variantes</em>.</p>
+        <div class="tutorial-steps">
+            <!-- General -->
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Pestaña <strong>General</strong></h3>
+                    <p>Fecha, depósito, proveedor (opcional), total calculado.</p>
+                    <div class="tutorial-image"><img src="img/tutoriales/compra-general.gif" alt="Formulario de Compra General"></div>
+                </div>
+            </div>
+            <!-- Detalles simples -->
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Pestaña <strong>Detalles de Compra</strong></h3>
+                    <p>Producto simple, cantidad, precio.</p>
+                    <div class="tutorial-image"><img src="img/tutoriales/compra-simple.gif" alt="Detalle de Compra Simple"></div>
+                </div>
+            </div>
+            <!-- Detalles variantes -->
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Pestaña <strong>Detalles de Compra Variantes</strong></h3>
+                    <p>Variantes (talle, color), cantidad, precio.</p>
+                    <div class="tutorial-image"><img src="img/tutoriales/compra-variantes.gif" alt="Detalle de Compra Variantes"></div>
+                    <div class="example-box">
+                        <i class="fas fa-book"></i>
+                        <div><strong>Importante:</strong> No se pueden comprar <strong>productos compuestos</strong>.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Guardar -->
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Guardar la compra</h3>
+                    <p>Usa <strong>Guardar y continuar editando</strong> para calcular total.</p>
+                    <ul class="step-list">
+                        <li>💡 Botón recomendado mientras cargas ítems.</li>
+                        <li>🧮 El campo total suma ambas pestañas.</li>
+                    </ul>
+                    <div class="tip-box">
+                        <i class="fas fa-lightbulb"></i>
+                        <div><strong>Consejo:</strong> “Guardar” sale al listado pero no recalcula total hasta reingresar.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Confirmar -->
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h3>Confirmar la compra</h3>
+                    <p>En el listado, menú Acciones &gt; Confirmar compra.</p>
+                    <ul>
+                        <li>🔐 Queda bloqueada.</li>
+                        <li>📦 Genera movimientos de inventario.</li>
+                    </ul>
+                    <div class="tutorial-image"><img src="img/tutoriales/compra-confirmar.gif" alt="Confirmar Compra"></div>
+                </div>
+            </div>
+            <!-- Verificar stock -->
+            <div class="step">
+                <div class="step-number">6</div>
+                <div class="step-content">
+                    <h3>Verificar stock actualizado</h3>
+                    <p>Revisa tabla de productos o proveedores para ver stock.</p>
+                    <div class="tutorial-image"><img src="img/tutoriales/compra-verificar-stock.gif" alt="Verificar stock tras compra"></div>
+                    <div class="tip-box">
+                        <i class="fas fa-lightbulb"></i>
+                        <div><strong>Tip:</strong> Con depósitos múltiples, filtra por el depósito correcto.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= MOVIMIENTOS ENTRE DEPÓSITOS ================= -->
+<section id="movimientos" class="content-section">
+    <div class="section-header">
+        <div class="section-icon yellow"></div>
+        <div class="section-title-container">
+            <h2 class="section-title">🔄 Movimientos entre Depósitos</h2>
+            <p class="section-subtitle">Cómo transferir productos entre depósitos de la misma empresa</p>
+        </div>
+    </div>
+    <div class="section-content">
+        <p>Transfiere mercadería entre depósitos de la misma empresa.</p>
+        <div class="example-box">
+            <i class="fas fa-exclamation-circle"></i>
+            <div><strong>Importante:</strong> Solo entre depósitos de la misma empresa.</div>
+        </div>
+        <div class="tutorial-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Ingresar a las transferencias</h3>
+                    <p>Operaciones &gt; Movimientos entre Depósitos &gt; Añadir Transferencia.</p>
+                    <div class="tutorial-image"><img src="img/tutoriales/movimiento-inicio.gif" alt="Ir a Transferencias de Inventario"></div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Seleccionar depósitos y fecha</h3>
+                    <p>Fecha, depósito origen, destino.</p>
+                    <div class="tutorial-image"><img src="img/tutoriales/movimiento-validacion.gif" alt="Error por empresas diferentes"></div>
+                    <div class="example-box">
+                        <i class="fas fa-times-circle"></i>
+                        <div>Error “Los depósitos deben ser de la misma empresa”. Corrige y guarda.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Cargar productos simples</h3>
+                    <p>Pestaña “Productos”, agrega producto y cantidad.</p>
+                    <div class="tutorial-image"><img src="img/tutoriales/movimiento-producto-simple.gif" alt="Cargar producto simple en movimiento"></div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Cargar productos con variantes</h3>
+                    <p>Pestaña “Productos Variante”.</p>
+                    <div class="tutorial-image"><img src="img/tutoriales/movimiento-variantes-error.gif" alt="Error por stock insuficiente"></div>
+                    <div class="example-box">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <div>No hay stock disponible → ajusta cantidad o depósito.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h3>Confirmar la transferencia</h3>
+                    <p>Guardar y continuar &gt; Listado &gt; Acciones &gt; Confirmar Transferencia.</p>
+                    <div class="tutorial-image"><img src="img/tutoriales/movimiento-confirmar.gif" alt="Confirmar movimiento"></div>
+                    <div class="example-box">
+                        <i class="fas fa-lock"></i>
+                        <div>Genera movimientos en ambos depósitos y se bloquea la transferencia.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= VENTAS ================= -->
+<section id="ventas" class="content-section">
+    <div class="section-header">
+        <div class="section-icon green"></div>
+        <div class="section-title-container">
+            <h2 class="section-title">💰 Realizar Ventas</h2>
+            <p class="section-subtitle">Cómo registrar ventas a clientes</p>
+        </div>
+    </div>
+    <div class="section-content">
+        <p>Registra las ventas, controla stock y genera reportes.</p>
+        <div class="tutorial-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Accede a Ventas</h3>
+                    <p>Operaciones &gt; Ventas &gt; Añadir Venta.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Selecciona el Cliente</h3>
+                    <p>Elige un cliente existente o regístralo en Agenda.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Agrega Productos</h3>
+                    <p>Selecciona productos y cantidades; el stock se descuenta.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Finaliza la Venta</h3>
+                    <p>Haz clic en Guardar. Se registra la venta y actualiza stock.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= REPORTES PDF ================= -->
+<section id="reportes-pdf" class="content-section">
+    <div class="section-header">
+        <div class="section-icon purple"></div>
+        <div class="section-title-container">
+            <h2 class="section-title">📑 Reportes en PDF</h2>
+            <p class="section-subtitle">Genera reportes PDF de productos, ventas, compras y más</p>
+        </div>
+    </div>
+    <div class="section-content">
+        <p>Genera reportes en PDF para análisis o presentación.</p>
+        <div class="tutorial-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Accede a Reportes</h3>
+                    <p>Operaciones &gt; Reportes.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Selecciona tipo de reporte</h3>
+                    <p>Ventas, Compras, Inventario…</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Filtra la información</h3>
+                    <p>Fecha, categoría, proveedor o cliente.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Genera el reporte</h3>
+                    <p>Haz clic en Generar Reporte.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h3>Descarga o imprime</h3>
+                    <p>Descarga el PDF o imprímelo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= REPORTES EXCEL ================= -->
+<section id="reportes-excel" class="content-section">
+    <div class="section-header">
+        <div class="section-icon green"></div>
+        <div class="section-title-container">
+            <h2 class="section-title">📊 Reportes en Excel</h2>
+            <p class="section-subtitle">Exporta datos a Excel para análisis avanzado</p>
+        </div>
+    </div>
+    <div class="section-content">
+        <p>Exporta reportes a Excel para análisis detallado.</p>
+        <div class="tutorial-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Accede a Reportes</h3>
+                    <p>Operaciones &gt; Reportes.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Selecciona tipo de reporte</h3>
+                    <p>Ventas, Compras, Inventario…</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Aplica filtros (opcional)</h3>
+                    <p>Fecha, categoría, proveedor…</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Genera el reporte</h3>
+                    <p>Generar Reporte en Excel.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h3>Descarga el archivo</h3>
+                    <p>Descarga el .xlsx a tu PC.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= EXPORTAR DATOS ================= -->
+<section id="exportar-datos" class="content-section">
+    <div class="section-header">
+        <div class="section-icon blue"></div>
+        <div class="section-title-container">
+            <h2 class="section-title">⬇️ Exportar Datos</h2>
+            <p class="section-subtitle">Exporta datos de tu sistema en Excel o CSV</p>
+        </div>
+    </div>
+    <div class="section-content">
+        <p>Exporta productos, ventas, compras y movimientos a otros sistemas.</p>
+        <div class="tutorial-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Accede a Importar/Exportar</h3>
+                    <p>Operaciones &gt; Importar/Exportar.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Selecciona los datos</h3>
+                    <p>Productos, ventas, compras, etc.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Configura filtros</h3>
+                    <p>Filtra lo que necesites exportar.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Genera el archivo</h3>
+                    <p>Haz clic en Exportar.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h3>Descarga el archivo</h3>
+                    <p>Descarga Excel o CSV.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= IMPORTAR DATOS ================= -->
+<section id="importar-datos" class="content-section">
+    <div class="section-header">
+        <div class="section-icon yellow"></div>
+        <div class="section-title-container">
+            <h2 class="section-title">⬆️ Importar Datos</h2>
+            <p class="section-subtitle">Importa productos, proveedores, clientes… desde CSV o Excel</p>
+        </div>
+    </div>
+    <div class="section-content">
+        <p>Importa grandes volúmenes de datos rápidamente.</p>
+        <div class="tutorial-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Accede a Importar/Exportar</h3>
+                    <p>Operaciones &gt; Importar/Exportar.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Selecciona tipo de datos</h3>
+                    <p>Productos, clientes, proveedores…</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Sube el archivo</h3>
+                    <p>Seleccionar archivo CSV o Excel.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Revisa la vista previa</h3>
+                    <p>Verifica los datos antes de importar.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h3>Finaliza la importación</h3>
+                    <p>Haz clic en Importar.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= MODO DEMO (placeholder) ================= -->
+<section id="modo-demo" class="content-section alt-bg">
+    <div class="section-header">
+        <div class="section-icon indigo"></div>
+        <div class="section-title-container">
+            <h2 class="section-title">🧪 Modo Demo</h2>
+            <p class="section-subtitle">Prueba ADEstock con datos de ejemplo</p>
+        </div>
+    </div>
+    <div class="section-content">
+        <p>¡Próximamente añadiremos aquí las instrucciones para activar y usar el modo demo!</p>
+    </div>
+</section>
+
+</main>
+
+<!-- ╔════════════════════════════════╗
+     ║            FOOTER             ║
+     ╚════════════════════════════════╝ -->
+<footer>
+    <p>&copy; <span id="year"></span> ADEstock — desarrollado por
+        <a href="https://ademasistemas.com" target="_blank">ADEMA Sistemas</a>.
+    </p>
+    <p>
+        <a href="politica-privacidad.html">Política de Privacidad</a> ·
+        <a href="terminos-condiciones.html">Términos y Condiciones</a>
+    </p>
+</footer>
+
+
+<script>
+    // --- LÓGICA PARA EL MENÚ DESPLEGABLE DE TUTORIALES ---
+
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.getElementById('tutorial-nav-toggle');
+    const navLinks = document.getElementById('tutorial-links');
+    const links = navLinks.querySelectorAll('a');
+
+    if (toggleButton && navLinks) {
+        // 1. Abrir/cerrar el menú al hacer clic en el botón
+        toggleButton.addEventListener('click', () => {
+            const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
+            toggleButton.setAttribute('aria-expanded', !isExpanded);
+            navLinks.classList.toggle('is-open');
+        });
+
+        // 2. Cerrar el menú al hacer clic en un enlace (para navegar a la sección)
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('is-open')) {
+                    toggleButton.setAttribute('aria-expanded', 'false');
+                    navLinks.classList.remove('is-open');
+                }
+            });
+        });
+
+        // 3. (Opcional) Cerrar el menú si se hace clic fuera de él
+        document.addEventListener('click', (event) => {
+            const isClickInside = toggleButton.contains(event.target) || navLinks.contains(event.target);
+            if (!isClickInside && navLinks.classList.contains('is-open')) {
+                toggleButton.setAttribute('aria-expanded', 'false');
+                navLinks.classList.remove('is-open');
+            }
+        });
+    }
+
+    // --- Lógica para resaltar el enlace de la sección visible ---
+    const sections = document.querySelectorAll('.content-section');
+    const tutorialLinks = document.querySelectorAll('.tutorial-nav a');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Quitar la clase activa de todos los links
+                tutorialLinks.forEach(link => link.classList.remove('active-link'));
+                
+                // Añadir la clase activa al link correspondiente
+                const activeId = entry.target.id;
+                const activeLink = document.querySelector(`.tutorial-nav a[href="#${activeId}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('active-link');
+                }
+            }
+        });
+    }, { rootMargin: '-40% 0px -60% 0px' }); // Ajusta este margen para cambiar cuándo se activa el enlace
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+});
+</script>
+
+</body>
+</html>
