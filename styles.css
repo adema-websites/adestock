@@ -110,21 +110,21 @@
 
 /* --- Variables CSS --- */
 :root {
-    --primary-color: #005f73; /* Teal oscuro */
-    --secondary-color: #0a9396; /* Teal medio */
-    --accent-color: #e9d8a6; /* Amarillo pálido */
-    --light-bg: #f8f9fa;
+    --primary-color: #0b5e6b; /* Teal oscuro refinado */
+    --secondary-color: #0f8a8b; /* Teal medio moderno */
+    --accent-color: #f2d492; /* Amarillo cálido suave */
+    --light-bg: #f6f8fa;
     --dark-bg: #212529;
     --text-light: #f8f9fa;
-    --text-dark: #343a40; /* Un gris oscuro más suave */
+    --text-dark: #2f343a; /* Un gris oscuro más suave */
     --card-bg: #ffffff;
-    --card-shadow: 0 5px 15px rgba(0, 95, 115, 0.08);
-    --border-color: #dee2e6;
+    --card-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+    --border-color: #e6eaef;
     --font-family: 'Poppins', 'Segoe UI', Roboto, sans-serif;
     --success-color: #10b981; /* Verde para éxito/completado */
     --error-color: #ef4444; /* Rojo para error */
-    --link-color: #0a9396;
-    --link-hover-color: #005f73;
+    --link-color: #0f8a8b;
+    --link-hover-color: #0b5e6b;
 }
 
 /* --- Reset y Base --- */
@@ -143,7 +143,7 @@ body {
     font-family: var(--font-family);
     line-height: 1.7;
     color: var(--text-dark);
-    background-color: #fdfdfd;
+    background-color: #f8fafc;
     overflow-x: hidden; /* Prevenir scroll horizontal */
 }
 
@@ -342,7 +342,7 @@ height: 50px;
 
 /* --- Hero Section --- */
 .hero {
-    background: linear-gradient(rgba(0, 95, 115, 0.75), rgba(0, 75, 90, 0.85)), url('img/hero-bg.jpg') no-repeat center center/cover; /* Placeholder */
+    background: linear-gradient(120deg, rgba(11, 94, 107, 0.86), rgba(15, 138, 139, 0.82)), url('img/hero-bg.jpg') no-repeat center center/cover; /* Placeholder */
     min-height: 90vh; /* Un poco más alto */
     display: flex;
     align-items: center;
@@ -390,13 +390,286 @@ height: 50px;
     border-radius: 12px; /* Más redondeado */
     box-shadow: var(--card-shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-top: 5px solid transparent; /* Borde más grueso */
+    border: 1px solid var(--border-color);
+    border-top: 4px solid transparent; /* Borde sutil */
 }
 
 .feature-card:hover {
     transform: translateY(-12px);
     box-shadow: 0 10px 30px rgba(0, 95, 115, 0.12);
     border-top-color: var(--secondary-color);
+}
+
+/* --- Tutoriales Page --- */
+.tutorials-page .hero {
+    min-height: 70vh;
+}
+
+.tutorials-layout {
+    display: grid;
+    grid-template-columns: minmax(240px, 300px) minmax(0, 1fr);
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4rem;
+}
+
+.tutorial-sidebar {
+    position: sticky;
+    top: 90px;
+    align-self: start;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: var(--card-shadow);
+}
+
+.tutorial-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: rgba(15, 138, 139, 0.12);
+    color: var(--secondary-color);
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.tutorial-sidebar-header h2 {
+    font-size: 1.35rem;
+    margin: 0.8rem 0 0.5rem;
+    text-align: left;
+}
+
+.tutorials-page .tutorial-sidebar-header h2::after,
+.tutorials-page .tutorial-intro h2::after,
+.tutorials-page .tutorial-header h2::after {
+    content: none;
+}
+
+.tutorial-sidebar-header p {
+    font-size: 0.95rem;
+    color: #55606c;
+    margin-bottom: 1.25rem;
+}
+
+.sidebar-toggle {
+    display: none;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    background: #f2f6f9;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 0.7rem 0.9rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.tutorial-sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    max-height: 60vh;
+    overflow: auto;
+    padding-right: 0.25rem;
+}
+
+.tutorial-sidebar-nav a {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.6rem 0.8rem;
+    border-radius: 10px;
+    color: var(--text-dark);
+    background: #f7f9fb;
+    border: 1px solid transparent;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.tutorial-sidebar-nav a:hover {
+    border-color: rgba(15, 138, 139, 0.2);
+    background: rgba(15, 138, 139, 0.08);
+    color: var(--primary-color);
+}
+
+.tutorial-sidebar-nav a.active {
+    background: rgba(15, 138, 139, 0.14);
+    border-color: rgba(15, 138, 139, 0.4);
+    color: var(--primary-color);
+    font-weight: 700;
+    position: relative;
+}
+
+.tutorial-sidebar-nav a.active::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+}
+
+.tutorial-sidebar-cta {
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 0.8rem;
+}
+
+.tutorials-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.tutorial-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr);
+    gap: 1.5rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    padding: 1.8rem;
+    box-shadow: var(--card-shadow);
+}
+
+.tutorial-intro h2 {
+    text-align: left;
+    margin-bottom: 0.8rem;
+}
+
+.tutorial-intro ul {
+    margin-left: 1.2rem;
+    list-style: disc;
+    color: #4a5562;
+}
+
+.tutorial-intro-highlight {
+    background: linear-gradient(135deg, rgba(15, 138, 139, 0.12), rgba(242, 212, 146, 0.2));
+    border-radius: 14px;
+    padding: 1.4rem;
+    border: 1px solid rgba(15, 138, 139, 0.2);
+}
+
+.tutorial-card {
+    background: var(--card-bg);
+    border-radius: 18px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.tutorial-header {
+    padding: 1.4rem 1.6rem;
+    background: #f7fafb;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tutorial-header h2 {
+    margin: 0;
+    font-size: 1.35rem;
+    color: var(--primary-color);
+    text-align: left;
+}
+
+.tutorial-content {
+    padding: 1.8rem 1.6rem 2rem;
+}
+
+.objective {
+    margin-bottom: 1.4rem;
+    color: #4b5563;
+    background: #f0f7ff;
+    padding: 1rem 1.1rem;
+    border-left: 4px solid #1976d2;
+    border-radius: 12px;
+}
+
+.step-list {
+    margin-left: 1.5rem;
+    margin-bottom: 1.4rem;
+}
+
+.step-list li {
+    margin-bottom: 0.7rem;
+    line-height: 1.6;
+    color: #374151;
+}
+
+.expected-result {
+    margin-bottom: 1.6rem;
+    font-weight: 600;
+    color: #216e4e;
+    background: #e8f5e9;
+    padding: 0.9rem 1rem;
+    border-radius: 12px;
+    border: 1px solid #c8e6c9;
+}
+
+.video-placeholder {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: linear-gradient(135deg, #0f172a, #111827);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 14px;
+}
+
+.video-placeholder-text {
+    text-align: center;
+}
+
+.video-placeholder-text i {
+    display: block;
+    font-size: 3rem;
+    margin-bottom: 0.8rem;
+    color: #ff3b30;
+}
+
+@media (max-width: 980px) {
+    .tutorials-layout {
+        grid-template-columns: 1fr;
+        padding: 2rem 1.2rem 3rem;
+    }
+
+    .tutorial-sidebar {
+        position: static;
+    }
+
+    .sidebar-toggle {
+        display: flex;
+    }
+
+    .tutorial-sidebar-nav {
+        display: none;
+        margin-top: 1rem;
+    }
+
+    .tutorial-sidebar.is-open .tutorial-sidebar-nav {
+        display: flex;
+    }
+
+    .tutorial-intro {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .tutorials-page .hero {
+        min-height: 60vh;
+    }
+
+    .tutorial-header h2 {
+        font-size: 1.2rem;
+    }
 }
 
 .feature-card i {

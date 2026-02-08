@@ -91,4 +91,56 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- Tutorial Sidebar (active state + mobile toggle) ---
+    const tutorialSidebar = document.querySelector('.tutorial-sidebar');
+    const sidebarToggle = document.getElementById('sidebar-toggle');
+    const sidebarNav = document.getElementById('tutorial-sidebar-links');
+    const tutorialSections = document.querySelectorAll('article.tutorial-card[id]');
+    const sidebarLinks = document.querySelectorAll('.tutorial-sidebar-nav a');
+
+    if (sidebarToggle && sidebarNav && tutorialSidebar) {
+        sidebarToggle.addEventListener('click', () => {
+            const isOpen = tutorialSidebar.classList.toggle('is-open');
+            sidebarToggle.setAttribute('aria-expanded', isOpen);
+        });
+
+        sidebarNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 980) {
+                    tutorialSidebar.classList.remove('is-open');
+                    sidebarToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+    }
+
+    if (tutorialSections.length && sidebarLinks.length) {
+        const linkMap = new Map();
+        sidebarLinks.forEach(link => linkMap.set(link.getAttribute('href'), link));
+
+        sidebarLinks.forEach(link => link.classList.remove('active'));
+        const firstLink = sidebarLinks[0];
+        if (firstLink) {
+            firstLink.classList.add('active');
+        }
+
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = `#${entry.target.id}`;
+                        sidebarLinks.forEach(link => link.classList.remove('active'));
+                        const activeLink = linkMap.get(id);
+                        if (activeLink) {
+                            activeLink.classList.add('active');
+                        }
+                    }
+                });
+            },
+            { rootMargin: '-20% 0px -60% 0px', threshold: 0.1 }
+        );
+
+        tutorialSections.forEach(section => observer.observe(section));
+    }
+
 }); // End DOMContentLoaded
