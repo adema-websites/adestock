@@ -454,6 +454,34 @@
         const COUNTER_KEY = 'demo-downloads';
         const COUNTAPI_URL = `https://api.countapi.xyz`;
 
+        // Función para inicializar el contador (crear si no existe)
+        async function initCounter() {
+            try {
+                // Intentar obtener el contador primero
+                const getResponse = await fetch(`${COUNTAPI_URL}/get/${COUNTER_NAMESPACE}/${COUNTER_KEY}`);
+                const getData = await getResponse.json();
+                
+                // Si el contador no existe o hay error, intentar crearlo
+                if (getData.value === undefined || getData.value === null) {
+                    const createResponse = await fetch(`${COUNTAPI_URL}/create?namespace=${COUNTER_NAMESPACE}&key=${COUNTER_KEY}&value=0`);
+                    const createData = await createResponse.json();
+                    return createData.value || 0;
+                }
+                return getData.value;
+            } catch (error) {
+                console.error('Error al inicializar contador:', error);
+                // Intentar crear el contador como fallback
+                try {
+                    const createResponse = await fetch(`${COUNTAPI_URL}/create?namespace=${COUNTER_NAMESPACE}&key=${COUNTER_KEY}&value=0`);
+                    const createData = await createResponse.json();
+                    return createData.value || 0;
+                } catch (createError) {
+                    console.error('Error al crear contador:', createError);
+                    return 0;
+                }
+            }
+        }
+
         // Función para obtener el contador actual
         async function getDownloadCount() {
             try {
@@ -471,6 +499,7 @@
             try {
                 const response = await fetch(`${COUNTAPI_URL}/hit/${COUNTER_NAMESPACE}/${COUNTER_KEY}`);
                 const data = await response.json();
+                console.log('Contador incrementado:', data);
                 return data.value;
             } catch (error) {
                 console.error('Error al incrementar contador:', error);
@@ -487,7 +516,8 @@
         async function updateModalCounter() {
             const countElement = document.getElementById('download-count-modal');
             if (countElement) {
-                const count = await getDownloadCount();
+                // Inicializar el contador si es necesario
+                const count = await initCounter();
                 countElement.textContent = formatNumber(count);
             }
         }
@@ -504,6 +534,7 @@
         const downloadButton = document.getElementById('downloadButton');
         if (downloadButton) {
             downloadButton.addEventListener('click', async () => {
+                console.log('Botón de descarga del modal clickeado');
                 // Incrementar el contador
                 const newCount = await incrementDownloadCount();
                 if (newCount !== null) {
