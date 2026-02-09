@@ -33,15 +33,6 @@
         <section class="legal-section">
             <h2>Instalación y Puesta en Marcha</h2>
             
-            <!-- Contador de Descargas -->
-            <div style="text-align: center; margin: 30px 0; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);">
-                <div style="color: white;">
-                    <i class="fas fa-download" style="font-size: 2em; margin-bottom: 10px;"></i>
-                    <h3 style="margin: 10px 0 5px 0; font-size: 1.8em; font-weight: 700;"><span id="download-count">...</span></h3>
-                    <p style="margin: 0; font-size: 1.1em; opacity: 0.95;">descargas realizadas</p>
-                </div>
-            </div>
-            
             <div style="text-align:center; margin: 20px 0;">
                 <video width="100%" controls style="max-width: 800px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                     <source src="videos/tutorial-instalacion.mp4" type="video/mp4">
@@ -89,98 +80,5 @@
         <p><a href="politica-privacidad.html">Política de Privacidad</a> | <a href="terminos-condiciones.html">Términos y Condiciones</a></p>
     </footer>
     <script src="script.js"></script>
-    <script>
-        // Contador de descargas usando CountAPI
-        const COUNTER_NAMESPACE = 'adestock';
-        const COUNTER_KEY = 'demo-downloads';
-        const COUNTAPI_URL = `https://api.countapi.xyz`;
-
-        // Función para inicializar el contador (crear si no existe)
-        async function initCounter() {
-            try {
-                // Intentar obtener el contador primero
-                const getResponse = await fetch(`${COUNTAPI_URL}/get/${COUNTER_NAMESPACE}/${COUNTER_KEY}`);
-                const getData = await getResponse.json();
-                
-                // Si el contador no existe o hay error, intentar crearlo
-                if (getData.value === undefined || getData.value === null) {
-                    const createResponse = await fetch(`${COUNTAPI_URL}/create?namespace=${COUNTER_NAMESPACE}&key=${COUNTER_KEY}&value=0`);
-                    const createData = await createResponse.json();
-                    return createData.value || 0;
-                }
-                return getData.value;
-            } catch (error) {
-                console.error('Error al inicializar contador:', error);
-                // Intentar crear el contador como fallback
-                try {
-                    const createResponse = await fetch(`${COUNTAPI_URL}/create?namespace=${COUNTER_NAMESPACE}&key=${COUNTER_KEY}&value=0`);
-                    const createData = await createResponse.json();
-                    return createData.value || 0;
-                } catch (createError) {
-                    console.error('Error al crear contador:', createError);
-                    return 0;
-                }
-            }
-        }
-
-        // Función para obtener el contador actual
-        async function getDownloadCount() {
-            try {
-                const response = await fetch(`${COUNTAPI_URL}/get/${COUNTER_NAMESPACE}/${COUNTER_KEY}`);
-                const data = await response.json();
-                return data.value || 0;
-            } catch (error) {
-                console.error('Error al obtener contador:', error);
-                return 0;
-            }
-        }
-
-        // Función para incrementar el contador
-        async function incrementDownloadCount() {
-            try {
-                const response = await fetch(`${COUNTAPI_URL}/hit/${COUNTER_NAMESPACE}/${COUNTER_KEY}`);
-                const data = await response.json();
-                console.log('Contador incrementado:', data);
-                return data.value;
-            } catch (error) {
-                console.error('Error al incrementar contador:', error);
-                return null;
-            }
-        }
-
-        // Función para formatear el número con separadores de miles
-        function formatNumber(num) {
-            return num.toLocaleString('es-ES');
-        }
-
-        // Cargar el contador al cargar la página
-        window.addEventListener('DOMContentLoaded', async () => {
-            const countElement = document.getElementById('download-count');
-            
-            // Inicializar el contador (crear si no existe)
-            const count = await initCounter();
-            countElement.textContent = formatNumber(count);
-
-            // Agregar evento al botón de descarga
-            const downloadButton = document.getElementById('download-button');
-            if (downloadButton) {
-                downloadButton.addEventListener('click', async () => {
-                    console.log('Botón de descarga clickeado');
-                    // Incrementar el contador
-                    const newCount = await incrementDownloadCount();
-                    if (newCount !== null) {
-                        countElement.textContent = formatNumber(newCount);
-                        
-                        // Animación visual
-                        countElement.style.transform = 'scale(1.3)';
-                        countElement.style.transition = 'transform 0.3s ease';
-                        setTimeout(() => {
-                            countElement.style.transform = 'scale(1)';
-                        }, 300);
-                    }
-                });
-            }
-        });
-    </script>
 </body>
 </html>
