@@ -143,4 +143,114 @@ document.addEventListener('DOMContentLoaded', () => {
         tutorialSections.forEach(section => observer.observe(section));
     }
 
+    // --- Download Modal ---
+    const downloadModal = document.getElementById('downloadModal');
+    const openDownloadModalBtns = document.querySelectorAll('#openDownloadModal, .open-download-modal');
+    const closeDownloadModalBtn = document.getElementById('closeDownloadModal');
+    const closeModalButton = document.getElementById('closeModalButton');
+    const downloadButton = document.getElementById('downloadButton');
+
+    // Función para abrir el modal
+    const openModal = (e) => {
+        if (e) {
+            e.preventDefault(); // Prevenir comportamiento por defecto de enlaces
+        }
+        if (downloadModal) {
+            downloadModal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevenir scroll del body
+        }
+    };
+
+    // Función para cerrar el modal
+    const closeModal = () => {
+        if (downloadModal) {
+            downloadModal.classList.remove('active');
+            document.body.style.overflow = ''; // Restaurar scroll del body
+            // Pausar el video cuando se cierra el modal
+            const video = downloadModal.querySelector('video');
+            if (video) {
+                video.pause();
+            }
+        }
+    };
+
+    // Event listeners para TODOS los botones que abren el modal
+    openDownloadModalBtns.forEach(btn => {
+        if (btn) {
+            btn.addEventListener('click', openModal);
+        }
+    });
+
+    if (closeDownloadModalBtn) {
+        closeDownloadModalBtn.addEventListener('click', closeModal);
+    }
+
+    if (closeModalButton) {
+        closeModalButton.addEventListener('click', closeModal);
+    }
+
+    // Cerrar modal al hacer clic fuera del contenido
+    if (downloadModal) {
+        downloadModal.addEventListener('click', (e) => {
+            if (e.target === downloadModal) {
+                closeModal();
+            }
+        });
+    }
+
+    // Cerrar modal con tecla Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && downloadModal && downloadModal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+
+    // --- Copy to Clipboard ---
+    const copyButtons = document.querySelectorAll('.copy-btn');
+    copyButtons.forEach(button => {
+        button.addEventListener('click', async () => {
+            const textToCopy = button.getAttribute('data-copy');
+            const icon = button.querySelector('i');
+            
+            try {
+                await navigator.clipboard.writeText(textToCopy);
+                
+                // Cambiar el icono temporalmente para feedback visual
+                icon.classList.remove('fa-copy');
+                icon.classList.add('fa-check');
+                button.classList.add('copied');
+                
+                // Restaurar el icono después de 2 segundos
+                setTimeout(() => {
+                    icon.classList.remove('fa-check');
+                    icon.classList.add('fa-copy');
+                    button.classList.remove('copied');
+                }, 2000);
+            } catch (err) {
+                console.error('Error al copiar:', err);
+                // Fallback para navegadores antiguos
+                const textArea = document.createElement('textarea');
+                textArea.value = textToCopy;
+                textArea.style.position = 'fixed';
+                textArea.style.left = '-999999px';
+                document.body.appendChild(textArea);
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    icon.classList.remove('fa-copy');
+                    icon.classList.add('fa-check');
+                    button.classList.add('copied');
+                    setTimeout(() => {
+                        icon.classList.remove('fa-check');
+                        icon.classList.add('fa-copy');
+                        button.classList.remove('copied');
+                    }, 2000);
+                } catch (err2) {
+                    console.error('Fallback también falló:', err2);
+                }
+                document.body.removeChild(textArea);
+            }
+        });
+    });
+
 }); // End DOMContentLoaded
