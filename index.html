@@ -427,6 +427,15 @@
                     <p class="credentials-note"><i class="fas fa-info-circle"></i> Recuerda escribir las credenciales exactamente como se muestran (sensible a mayúsculas).</p>
                 </div>
 
+                <!-- Contador de Descargas -->
+                <div style="text-align: center; margin: 20px 0; padding: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);">
+                    <div style="color: white;">
+                        <i class="fas fa-download" style="font-size: 1.5em; margin-bottom: 8px;"></i>
+                        <h3 style="margin: 8px 0 5px 0; font-size: 1.6em; font-weight: 700;"><span id="download-count-modal">...</span></h3>
+                        <p style="margin: 0; font-size: 1em; opacity: 0.95;">descargas realizadas</p>
+                    </div>
+                </div>
+
                 <!-- Botones de acción -->
                 <div class="modal-actions">
                     <a href="https://github.com/adema-websites/adestock/releases/download/1.2.0.0/Adestock_Installer_v1.2.exe" class="cta-button large" id="downloadButton">
@@ -439,6 +448,80 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+        // Contador de descargas usando CountAPI (compartido con descargar-demo.html)
+        const COUNTER_NAMESPACE = 'adestock';
+        const COUNTER_KEY = 'demo-downloads';
+        const COUNTAPI_URL = `https://api.countapi.xyz`;
+
+        // Función para obtener el contador actual
+        async function getDownloadCount() {
+            try {
+                const response = await fetch(`${COUNTAPI_URL}/get/${COUNTER_NAMESPACE}/${COUNTER_KEY}`);
+                const data = await response.json();
+                return data.value || 0;
+            } catch (error) {
+                console.error('Error al obtener contador:', error);
+                return 0;
+            }
+        }
+
+        // Función para incrementar el contador
+        async function incrementDownloadCount() {
+            try {
+                const response = await fetch(`${COUNTAPI_URL}/hit/${COUNTER_NAMESPACE}/${COUNTER_KEY}`);
+                const data = await response.json();
+                return data.value;
+            } catch (error) {
+                console.error('Error al incrementar contador:', error);
+                return null;
+            }
+        }
+
+        // Función para formatear el número con separadores de miles
+        function formatNumber(num) {
+            return num.toLocaleString('es-ES');
+        }
+
+        // Actualizar el contador en el modal
+        async function updateModalCounter() {
+            const countElement = document.getElementById('download-count-modal');
+            if (countElement) {
+                const count = await getDownloadCount();
+                countElement.textContent = formatNumber(count);
+            }
+        }
+
+        // Cargar el contador cuando se abre el modal
+        const openModalButtons = document.querySelectorAll('#openDownloadModal');
+        openModalButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                updateModalCounter();
+            });
+        });
+
+        // Agregar evento al botón de descarga del modal
+        const downloadButton = document.getElementById('downloadButton');
+        if (downloadButton) {
+            downloadButton.addEventListener('click', async () => {
+                // Incrementar el contador
+                const newCount = await incrementDownloadCount();
+                if (newCount !== null) {
+                    const countElement = document.getElementById('download-count-modal');
+                    if (countElement) {
+                        countElement.textContent = formatNumber(newCount);
+                        
+                        // Animación visual
+                        countElement.style.transform = 'scale(1.3)';
+                        countElement.style.transition = 'transform 0.3s ease';
+                        setTimeout(() => {
+                            countElement.style.transform = 'scale(1)';
+                        }, 300);
+                    }
+                }
+            });
+        }
+    </script>
 </body>
 <style>
 .whatsapp-float {

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Descargar Demo | ADEstock</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles-modern.css">
 </head>
 <body>
@@ -29,82 +31,57 @@
     </header>
     <main class="legal-main" style="max-width: 700px; margin: 0 auto;">
         <section class="legal-section">
-            <h2>1. Descargar la Demo</h2>
-            <p>Haz clic en el siguiente botón para descargar el archivo ZIP con la demo de ADEstock. El archivo contiene el instalador y todo lo necesario para comenzar tu prueba gratuita de 3 días.</p>
-            <div style="text-align:center; margin: 20px 0;">
-                <a href="https://github.com/adema-websites/adestock/releases/download/ADEstock-1.0.1/ADEstock-1.0.1v.zip" class="cta-button large" download>Descargar Demo (ZIP)</a>
+            <h2>Instalación y Puesta en Marcha</h2>
+            
+            <!-- Contador de Descargas -->
+            <div style="text-align: center; margin: 30px 0; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);">
+                <div style="color: white;">
+                    <i class="fas fa-download" style="font-size: 2em; margin-bottom: 10px;"></i>
+                    <h3 style="margin: 10px 0 5px 0; font-size: 1.8em; font-weight: 700;"><span id="download-count">...</span></h3>
+                    <p style="margin: 0; font-size: 1.1em; opacity: 0.95;">descargas realizadas</p>
+                </div>
             </div>
+            
             <div style="text-align:center; margin: 20px 0;">
-                <img src="img/descarga/descarga.gif" alt="Tutorial descarga demo ADEstock" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 8px #0001;">
-                <p style="font-size:0.95em; color:#555;">GIF: Cómo descargar el archivo demo</p>
+                <video width="100%" controls style="max-width: 800px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <source src="videos/tutorial-instalacion.mp4" type="video/mp4">
+                    Tu navegador no soporta videos HTML5.
+                </video>
+                <p style="font-size:0.95em; color:#555;">Video: Guía de Instalación y Primeros Pasos</p>
             </div>
 
-            <h2>2. Aviso de Seguridad de Windows</h2>
-            <div style="background:#fffbe6; border-left:4px solid #f7c948; padding:12px 18px; margin-bottom:18px;">
-                <strong>¿Por qué Windows avisa que "no es seguro"?</strong><br>
-                El instalador y el ejecutable aún <b>NO cuentan con firma digital</b>. Por eso, SmartScreen o tu antivirus pueden mostrar una advertencia porque no reconocen el editor.<br>
-                <ul style="margin:8px 0 0 18px;">
-                  <li>El software es seguro: solo contiene el intérprete de Python y los archivos necesarios para ejecutar ADEstock en tu equipo.</li>
-                  <li>Para continuar, hacé clic en <b>“Más información” → “Ejecutar de todas formas”</b>. Windows recordará tu decisión y no volverá a preguntar.</li>
-                </ul>
-            </div>
-
-            <h2>3. Instalación Paso a Paso</h2>
-            <ol>
-                <li>Descomprime el archivo <strong>adestock-demo.zip</strong> en una carpeta de tu PC (por ejemplo, en el Escritorio).</li>
-                <li>Abre la carpeta descomprimida y ejecuta el archivo <strong>adestock-demo.exe</strong> (o el instalador correspondiente).</li>
-                <li>Si Windows muestra una advertencia, sigue las instrucciones del paso anterior.</li>
-                <li>El instalador creará la carpeta <b>Documentos\ADEstock</b> y un acceso directo en el Escritorio.</li>
-                <li>No se requiere conexión a internet ni configuración avanzada.</li>
+            <ol style="margin-top: 30px; line-height: 1.8; font-size: 1.1em;">
+                <li><strong>Descargar del botón:</strong> Haz clic en el siguiente enlace para obtener el instalador.<br>
+                    <div style="margin: 15px 0 25px 0;">
+                         <a href="https://github.com/adema-websites/adestock/releases/download/1.2.0.0/Adestock_Installer_v1.2.exe" class="cta-button large" style="display:inline-block;" download id="download-button">Descargar Demo</a>
+                    </div>
+                </li>
+                <li><strong>Instalar:</strong> Ejecuta el archivo descargado para proceder con la instalación.</li>
+                <li><strong>Iniciar sesión:</strong> Ingresa colocando los usuarios base.
+                     <div class="credentials-box" style="background:#f0f4f8; border:1px solid #dbe2e8; border-radius:8px; padding:15px; margin:15px 0; max-width:400px;">
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                            <span>Usuario: <strong>ADEMASISTEMAS</strong></span>
+                            <button class="copy-btn" data-copy="ADEMASISTEMAS" title="Copiar usuario" style="background:none; border:none; color:#0e5d9c; cursor:pointer; font-size:1.1em;">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                        <div style="display:flex; justify-content:space-between; align-items:center;">
+                            <span>Contraseña: <strong>Adema123.</strong></span>
+                            <button class="copy-btn" data-copy="Adema123." title="Copiar contraseña" style="background:none; border:none; color:#0e5d9c; cursor:pointer; font-size:1.1em;">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                </li>
+                <li><strong>Ejecutar:</strong> Debe aparecer en el escritorio el ícono, lo ejecutas y listo.</li>
+                <li><strong>Ingresar:</strong> Haz clic derecho en los iconos del reloj (bandeja del sistema) y busca el engranaje, clic derecho y selecciona "Abrir en navegador".</li>
+                <li><strong>Favoritos:</strong> Puedes dejar la web como favoritos para acceder fácilmente.</li>
             </ol>
-            <div style="text-align:center; margin: 20px 0;">
-                <img src="img/descarga/instalador.gif" alt="Tutorial instalación demo ADEstock" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 8px #0001;">
-                <p style="font-size:0.95em; color:#555;">GIF: Instalación paso a paso</p>
-            </div>
 
-            <h2>4. Cómo Iniciar ADEstock</h2>
-            <ol>
-                <li>Haz doble clic en el acceso directo <b>ADEstock</b> del Escritorio.</li>
-                <li>Se abrirá una ventana negra (CMD). <b>¡No la cierres!</b> Esa ventana es el servidor local y debe permanecer abierta mientras uses el sistema.</li>
-                <li>En la consola verás dos enlaces, por ejemplo:<br>
-                    <code>http://127.0.0.1:8965</code> (solo este PC)<br>
-                    <code>http://192.168.0.123:8965</code> (cualquier dispositivo de tu red)</li>
-                <li>Con el ratón dentro de la ventana, <b>clic derecho → Abrir vínculo</b> (o copia y pega en tu navegador).</li>
-                <li>ADEstock se cargará en el navegador que prefieras (Chrome, Edge, Firefox, etc.). ¡Listo para trabajar, sin necesidad de internet!</li>
-            </ol>
-            <div style="text-align:center; margin: 20px 0;">
-                <img src="img/descarga/iniciar.gif" alt="Tutorial uso demo ADEstock" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 8px #0001;">
-                <p style="font-size:0.95em; color:#555;">GIF: Cómo acceder y usar la demo</p>
-            </div>
-
-            <h2>5. Acceder desde otros dispositivos de la misma red</h2>
-            <ul>
-                <li>Asegúrate de que la PC anfitrión (donde instalaste ADEstock) esté encendida y con ADEstock ejecutándose.</li>
-                <li>Desde el móvil, tablet u otra PC conectada al wifi, ingresa la segunda dirección que aparece en la consola (la que contiene tu IP local).</li>
-                <li>Si no carga, verifica que ningún firewall bloquee el puerto 8965.</li>
-            </ul>
-
-            <h2>6. Cómo cerrar ADEstock</h2>
-            <ul>
-                <li>Cierra la ventana CMD para detener el servidor.</li>
-                <li>Para volver a usar ADEstock, solo haz doble clic en el acceso directo nuevamente.</li>
-            </ul>
-
-            <h2>7. Servicio en la nube y soporte</h2>
-            <p>¿Preferís olvidarte de respaldos, actualizaciones y configuraciones de correo? ADEMA Sistemas ofrece hosting administrado para ADEstock:</p>
-            <ul>
-                <li>Copias de seguridad automáticas</li>
-                <li>Correos transaccionales y alertas por e-mail</li>
-                <li>Certificado HTTPS y acceso remoto seguro</li>
-                <li>Escalabilidad bajo demanda</li>
-            </ul>
-            <p>Escribinos a <a href="mailto:contact@ademasistemas.com">contact@ademasistemas.com</a> o completá el formulario en nuestra web <a href="https://ademasistemas.com/" target="_blank">ademasistemas.com</a> para recibir una propuesta a medida.</p>
+            <hr style="margin: 40px 0; border: 0; border-top: 1px solid #eee;">
 
             <h2>¿Dudas o problemas?</h2>
             <p>Si tienes inconvenientes con la descarga, instalación o uso, contáctanos a <a href="mailto:contact@ademasistemas.com">contact@ademasistemas.com</a> o revisa los <a href="tutoriales.html">tutoriales</a> para más ayuda.</p>
-            <div style="text-align:center; margin: 32px 0;">
-                <a href="https://github.com/adema-websites/adestock/releases/download/ADEstock-1.0.1/ADEstock-1.0.1v.zip" class="cta-button large" download>Descargar Demo (ZIP)</a>
-            </div>
         </section>
     </main>
     <footer>
@@ -112,5 +89,66 @@
         <p><a href="politica-privacidad.html">Política de Privacidad</a> | <a href="terminos-condiciones.html">Términos y Condiciones</a></p>
     </footer>
     <script src="script.js"></script>
+    <script>
+        // Contador de descargas usando CountAPI
+        const COUNTER_NAMESPACE = 'adestock';
+        const COUNTER_KEY = 'demo-downloads';
+        const COUNTAPI_URL = `https://api.countapi.xyz`;
+
+        // Función para obtener el contador actual
+        async function getDownloadCount() {
+            try {
+                const response = await fetch(`${COUNTAPI_URL}/get/${COUNTER_NAMESPACE}/${COUNTER_KEY}`);
+                const data = await response.json();
+                return data.value || 0;
+            } catch (error) {
+                console.error('Error al obtener contador:', error);
+                return 0;
+            }
+        }
+
+        // Función para incrementar el contador
+        async function incrementDownloadCount() {
+            try {
+                const response = await fetch(`${COUNTAPI_URL}/hit/${COUNTER_NAMESPACE}/${COUNTER_KEY}`);
+                const data = await response.json();
+                return data.value;
+            } catch (error) {
+                console.error('Error al incrementar contador:', error);
+                return null;
+            }
+        }
+
+        // Función para formatear el número con separadores de miles
+        function formatNumber(num) {
+            return num.toLocaleString('es-ES');
+        }
+
+        // Cargar el contador al cargar la página
+        window.addEventListener('DOMContentLoaded', async () => {
+            const countElement = document.getElementById('download-count');
+            const count = await getDownloadCount();
+            countElement.textContent = formatNumber(count);
+
+            // Agregar evento al botón de descarga
+            const downloadButton = document.getElementById('download-button');
+            if (downloadButton) {
+                downloadButton.addEventListener('click', async () => {
+                    // Incrementar el contador
+                    const newCount = await incrementDownloadCount();
+                    if (newCount !== null) {
+                        countElement.textContent = formatNumber(newCount);
+                        
+                        // Animación visual
+                        countElement.style.transform = 'scale(1.3)';
+                        countElement.style.transition = 'transform 0.3s ease';
+                        setTimeout(() => {
+                            countElement.style.transform = 'scale(1)';
+                        }, 300);
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
