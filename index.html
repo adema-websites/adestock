@@ -105,31 +105,15 @@
                 <h2>Mira ADEstock en Acción</h2>
                 <p class="video-intro">Descubre cómo ADEstock simplifica la gestión de tu negocio en menos de 2 minutos</p>
                 
-                <div class="video-wrapper">
-                    <!-- PEGA AQUÍ TU VIDEO -->
-                    <!-- Opción 1: Video local -->
-                    <!-- <video controls poster="img/video-thumbnail.jpg">
-                        <source src="videos/tu-video.mp4" type="video/mp4">
-                        Tu navegador no soporta el elemento de video.
-                    </video> -->
-                    
-                    <!-- Opción 2: Video de YouTube (reemplaza VIDEO_ID con tu ID) -->
-                    <!-- <iframe 
-                        src="https://www.youtube.com/embed/VIDEO_ID" 
-                        title="Video de ADEstock" 
+                <div class="video-wrapper" style="position: relative; width: 100%; max-width: 1000px; margin: 30px auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">
+                    <iframe 
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                        src="https://www.youtube.com/embed/DKPJGRH1mXc" 
+                        title="Video de ADEstock - Sistema de Gestión" 
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen>
-                    </iframe> -->
-                    
-                    <!-- Opción 3: Video de Vimeo (reemplaza VIDEO_ID con tu ID) -->
-                    <!-- <iframe 
-                        src="https://player.vimeo.com/video/VIDEO_ID" 
-                        title="Video de ADEstock" 
-                        frameborder="0" 
-                        allow="autoplay; fullscreen; picture-in-picture" 
-                        allowfullscreen>
-                    </iframe> -->
+                    </iframe>
                 </div>
             </div>
         </section>
@@ -211,12 +195,14 @@
                 <p>Descubrí cómo aplica ADEstock a tu emprendimiento específico.</p>
                 
                 <div class="use-cases-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; justify-items: center;">
+                    <!-- Caso de uso de distribuidora de belleza oculto temporalmente
                     <div class="use-case-card" style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); max-width: 350px; width: 100%;">
                         <i class="fas fa-boxes" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
                         <h3>Pequeñas Distribuidoras</h3>
                         <p style="margin-bottom: 1.5rem;">Ideal para venta de accesorios de belleza, cosmética y afines por mayor.</p>
                         <a href="casos-uso-distribuidora-belleza.html" class="cta-button secondary">Ver Caso de Uso</a>
                     </div>
+                    -->
                     <div class="use-case-card" style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); max-width: 350px; width: 100%;">
                         <i class="fas fa-leaf" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
                         <h3>Almacén y Dietética</h3>
@@ -460,9 +446,76 @@
 
     </main>
 
-    <footer>
-        <p>&copy; <span id="footer-year"></span> ADEstock by <a href="https://ademasistemas.com" target="_blank">ADEMA Sistemas</a>. Todos los derechos reservados.</p>
-         <p><a href="politica-privacidad.html">Política de Privacidad</a> | <a href="terminos-condiciones.html">Términos y Condiciones</a></p> </footer>
+    <footer style="background-color: #2c3e50; color: #ecf0f1; padding: 3rem 2rem 1rem;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                <!-- Columna 1: Logo y descripción -->
+                <div>
+                    <img src="img/logo-home.svg" alt="ADEstock Logo" style="max-width: 150px; margin-bottom: 1rem; filter: brightness(0) invert(1);">
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #bdc3c7;">Sistema de gestión de stock e inventario para pymes. Multi-depósito, multi-POS y control total de tu negocio.</p>
+                </div>
+                
+                <!-- Columna 2: Casos de Uso -->
+                <div>
+                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;">Casos de Uso</h4>
+                    <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
+                        <li style="margin-bottom: 0.5rem;"><a href="casos-uso-almacen-dietetica.html" style="color: #bdc3c7; text-decoration: none;">Almacén y Dietética</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="casos-uso-minimarket.html" style="color: #bdc3c7; text-decoration: none;">Minimarket</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="tutoriales.html" style="color: #bdc3c7; text-decoration: none;">Tutoriales</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Columna 3: Recursos -->
+                <div>
+                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;">Recursos</h4>
+                    <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
+                        <li style="margin-bottom: 0.5rem;"><a href="index.html#features" style="color: #bdc3c7; text-decoration: none;">Características</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="index.html#pricing" style="color: #bdc3c7; text-decoration: none;">Precios</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="index.html#faq" style="color: #bdc3c7; text-decoration: none;">Preguntas Frecuentes</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="descargar-demo.html" style="color: #bdc3c7; text-decoration: none;">Descargar Demo</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Columna 4: Contacto -->
+                <div>
+                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;">Contacto</h4>
+                    <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
+                        <li style="margin-bottom: 0.5rem;">
+                            <i class="fas fa-envelope" style="color: #3498db; margin-right: 8px;"></i>
+                            <a href="mailto:contact@ademasistemas.com" style="color: #bdc3c7; text-decoration: none;">contact@ademasistemas.com</a>
+                        </li>
+                        <li style="margin-bottom: 0.5rem;">
+                            <i class="fab fa-whatsapp" style="color: #25D366; margin-right: 8px;"></i>
+                            <a href="https://wa.me/5491127888995" target="_blank" style="color: #bdc3c7; text-decoration: none;">+54 9 11 2788-8995</a>
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <i class="fas fa-globe" style="color: #3498db; margin-right: 8px;"></i>
+                            <a href="https://ademasistemas.com" target="_blank" style="color: #bdc3c7; text-decoration: none;">ademasistemas.com</a>
+                        </li>
+                        <li style="margin-bottom: 0.5rem;"><a href="contacto.html" style="color: #bdc3c7; text-decoration: none;">Sobre Nosotros</a></li>
+                    </ul>
+                    <!-- Redes Sociales -->
+                    <div style="margin-top: 1rem;">
+                        <a href="https://www.instagram.com/ademasistemas/" target="_blank" style="color: #fff; font-size: 1.5rem; margin-right: 1rem;" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@AdemaSistemas" target="_blank" style="color: #fff; font-size: 1.5rem; margin-right: 1rem;" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://ademasistemas.com" target="_blank" style="color: #fff; font-size: 1.5rem;" aria-label="Web"><i class="fas fa-globe"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Línea divisoria -->
+            <hr style="border: none; border-top: 1px solid #34495e; margin: 2rem 0 1rem;">
+            
+            <!-- Copyright y enlaces legales -->
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem; color: #95a5a6;">
+                <p style="margin: 0;">&copy; <span id="footer-year"></span> ADEstock by <a href="https://ademasistemas.com" target="_blank" style="color: #3498db; text-decoration: none;">ADEMA Sistemas</a>. Todos los derechos reservados.</p>
+                <div>
+                    <a href="politica-privacidad.html" style="color: #95a5a6; text-decoration: none; margin-right: 1rem;">Política de Privacidad</a>
+                    <a href="terminos-condiciones.html" style="color: #95a5a6; text-decoration: none;">Términos y Condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Botón flotante de WhatsApp -->
     <a href="https://wa.me/5491127888995?text=Hola!%20quiero%20adquirir%20ADEstock.." class="whatsapp-float" target="_blank" aria-label="WhatsApp ADEstock">
