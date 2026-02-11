@@ -669,6 +669,10 @@ footer a:hover {
     z-index: 900;
 }
 
+.page-header + main {
+    padding-top: var(--nav-height);
+}
+
 .page-content {
     max-width: 900px;
     margin: 0 auto;

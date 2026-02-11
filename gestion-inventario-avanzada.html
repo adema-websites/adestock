@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión Avanzada de Productos y Stock | ADEstock</title>
-    <meta name="description" content="ADEstock te permite gestionar productos simples, variantes y recetas/kits con costos automáticos. Control de stock e inventario para pymes.">
+    <title>Gestión de Stock Avanzado: Productos, Variantes y Recetas | ADEstock</title>
+    <meta name="description" content="Optimiza tu inventario con ADEstock. Gestión experta de productos simples, variantes (talle/color) y kits/recetas. Cálculo de costos automático y control de stock en tiempo real.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles-modern.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,8 +14,7 @@
     <header class="page-header"> <nav class="navbar">
             <div class="logo">
                 <a href="index.html">
-                    <img src="img/logo.svg" alt="ADEstock Logo">
-                    <span>ADEstock</span>
+                    <img src="img/logo-home.svg" alt="ADEstock Logo">
                 </a>
             </div>
              <button class="menu-toggle" aria-label="Toggle menu">☰</button>
@@ -23,6 +22,7 @@
                 <li><a href="index.html#features">Características</a></li>
                 <li><a href="index.html#target-audience">¿Para Quién Es?</a></li>
                 <li><a href="index.html#faq">Preguntas Frecuentes</a></li>
+                <li><a href="precios.html">Precios</a></li>
                 <li><a href="tutoriales.html">Tutoriales</a></li>
                 <li><a href="contacto.html" class="cta-button">Contacto</a></li>
             </ul>
@@ -32,56 +32,65 @@
     <main class="container page-content">
         <article>
             <h1>Gestión Avanzada de Productos y Stock en ADEstock</h1>
-            <p class="intro-paragraph">ADEstock te permite controlar el inventario con precisión: productos simples, variantes y recetas/kits con costos automáticos. Ideal para pymes que necesitan orden y velocidad.</p>
+            
+            <!-- Sección de Video Destacado -->
+            <div class="video-container-highlight" style="margin-bottom: 2rem; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                 <!-- Reemplazar VIDEO_ID con el ID real de tu video de YouTube -->
+                <iframe width="100%" height="400" src="https://www.youtube.com/embed/VIDEO_ID_AQUI?rel=0" title="Gestión Avanzada de Inventario en ADEstock" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display: block;"></iframe>
+            </div>
+
+            <p class="intro-paragraph">El corazón de tu negocio es tu inventario. ADEstock no solo cuenta productos, sino que te brinda herramientas profesionales para gestionar catálogos complejos con precisión milimétrica. Desde artículos simples hasta manufactura y variantes, todo está controlado.</p>
 
             <section id="productos-simples">
-                <h2><i class="fas fa-box"></i> Productos Simples</h2>
-                <p>Productos de compra y reventa o insumos. Definís costo, unidad y presentación para calcular el costo real.</p>
+                <h2><i class="fas fa-box"></i> Productos Simples: Control Total del Costo</h2>
+                <p>Gestiona los artículos de compra-venta directa o insumos con una profundidad de datos superior. No pierdas dinero por errores en el cálculo de costos.</p>
                 <ul>
-                    <li><i class="fas fa-check"></i> Costo por presentación (bulto) y cálculo automático por unidad.</li>
-                    <li><i class="fas fa-check"></i> Unidades de medida compatibles (kg/gr, lt/ml, unidades).</li>
-                    <li><i class="fas fa-check"></i> Control de stock automático en compras y ventas.</li>
-                    <li><i class="fas fa-check"></i> Proveedor habitual y categorías para ordenar el catálogo.</li>
+                    <li><i class="fas fa-check"></i> <strong>Cálculo Automático de Costos:</strong> Define el costo por bulto/caja y deja que el sistema calcule el costo unitario exacto.</li>
+                    <li><i class="fas fa-check"></i> <strong>Unidades de Medida Flexibles:</strong> Compra en kilos y vende en gramos, o compra en packs y vende por unidad. El sistema hace la conversión.</li>
+                    <li><i class="fas fa-check"></i> <strong>Alertas Inteligentes:</strong> Configura stock mínimo y puntos de pedido para nunca quedarte sin mercadería clave.</li>
+                    <li><i class="fas fa-check"></i> <strong>Organización Jerárquica:</strong> Clasifica por Rubros, Categorías, Marcas y Proveedores para reportes detallados.</li>
                 </ul>
-                 <img src="img/placeholder-producto-simple.png" alt="Interfaz de creación de producto simple en ADEstock" class="content-image"> </section>
+                 <img src="img/placeholder-producto-simple.png" alt="Interfaz de creación de producto simple en ADEstock" class="content-image"> 
+            </section>
 
             <section id="productos-variantes">
-                <h2><i class="fas fa-tshirt"></i> Productos con Variantes</h2>
-                <p>Ideal para ropa, calzado o productos con opciones. Creá un producto madre y generá variantes con stock propio.</p>
+                <h2><i class="fas fa-tshirt"></i> Productos con Variantes (Matrices)</h2>
+                <p>La solución definitiva para indumentaria, calzado y artículos con múltiples opciones. Olvídate de crear cientos de productos por separado.</p>
                 <ul>
-                    <li><i class="fas fa-check"></i> Crea atributos como Talle, Color, Modelo según tu necesidad.</li>
-                    <li><i class="fas fa-check"></i> Variantes individuales con SKU, costo y precio opcional.</li>
-                    <li><i class="fas fa-check"></i> Stock detallado por variante para evitar faltantes.</li>
-                    <li><i class="fas fa-check"></i> Opción para generar combinaciones de variantes automáticamente.</li>
+                    <li><i class="fas fa-check"></i> <strong>Arbol de Variantes:</strong> Crea un producto "Madre" y genera automáticamente todas sus combinaciones (ej: Remera Polo > Azul/Rojo > S/M/L).</li>
+                    <li><i class="fas fa-check"></i> <strong>SKU Independientes:</strong> Cada variante tiene su propio código de barras y control de stock único.</li>
+                    <li><i class="fas fa-check"></i> <strong>Precios Diferenciados:</strong> ¿El talle XXL es más caro? Puedes asignar precios distintos a variantes específicas dentro del mismo producto.</li>
+                    <li><i class="fas fa-check"></i> <strong>Carga Rápida:</strong> Actualiza precios o stock de todas las variantes en una sola acción masiva.</li>
                 </ul>
-                 <img src="img/placeholder-producto-variantes.png" alt="Gestión de variantes de producto en ADEstock" class="content-image"> </section>
+                 <img src="img/placeholder-producto-variantes.png" alt="Gestión de variantes de producto en ADEstock" class="content-image"> 
+            </section>
 
             <section id="productos-compuestos">
-                      <h2><i class="fas fa-puzzle-piece"></i> Productos Compuestos (Kits y Recetas)</h2>
-                      <p>Combos, packs o fabricación propia con recetas. El costo sale de los insumos y gastos adicionales.</p>
+                <h2><i class="fas fa-puzzle-piece"></i> Kits, Recetas y Producción</h2>
+                <p>Ideal para gastronomía, talleres de armado o promociones. Vende productos que se componen de otros.</p>
                  <ul>
-                          <li><i class="fas fa-check"></i> Recetas con porciones, insumos y gastos adicionales.</li>
-                          <li><i class="fas fa-check"></i> Costo automático por porción para el producto final.</li>
-                          <li><i class="fas fa-check"></i> Descuento de stock de insumos al vender el producto.</li>
-                          <li><i class="fas fa-check"></i> Ideal para cocina, talleres o packs promocionales.</li>
+                    <li><i class="fas fa-check"></i> <strong>Kits de Venta:</strong> Crea "Combos" (ej: Fernet + Coca) que descuentan el stock de los productos individuales automáticamente al venderse.</li>
+                    <li><i class="fas fa-check"></i> <strong>Recetas de Producción:</strong> Define los ingredientes de un plato o insumos de un producto fabricado (ej: 200g harina + 2 huevos).</li>
+                    <li><i class="fas fa-check"></i> <strong>Costo Real de Producción:</strong> El sistema suma el costo de los insumos + gastos operativos (luz, gas, mano de obra) para darte el costo real del producto final.</li>
+                    <li><i class="fas fa-check"></i> <strong>Transformación de Stock:</strong> Convierte materias primas en productos terminados con un solo clic.</li>
                  </ul>
-                  <img src="img/placeholder-producto-compuesto.png" alt="Creación de producto compuesto o kit en ADEstock" class="content-image"> </section>
+                  <img src="img/placeholder-producto-compuesto.png" alt="Creación de producto compuesto o kit en ADEstock" class="content-image"> 
+            </section>
 
              <section id="herramientas-adicionales">
-                      <h2><i class="fas fa-tools"></i> Herramientas de Inventario</h2>
+                <h2><i class="fas fa-chart-line"></i> ¿Por qué nuestro inventario es superior?</h2>
                  <ul>
-                    <li><strong>Categorización:</strong> Organiza tu catálogo con Categorías y Subcategorías personalizables.</li>
-                          <li><strong>Unidades de Medida:</strong> Define unidades compatibles para compra y venta.</li>
-                          <li><strong>Importación Masiva:</strong> Carga productos desde Excel o CSV (<a href="tutoriales.html#importar-productos">ver tutorial</a>).</li>
-                          <li><strong>Control de Costos:</strong> Actualización automática al registrar compras.</li>
-                          <li><strong>Stock y Mermas:</strong> Ajustes manuales y registro de pérdidas para un inventario real.</li>
+                    <li><strong>Auditoría Permanente:</strong> Cada movimiento de stock (venta, compra, ajuste) queda registrado con usuario, fecha y hora. Nada desaparece "mágicamente".</li>
+                    <li><strong>Importación y Actualización Masiva:</strong> Carga miles de productos o actualiza precios desde Excel en segundos. Ahorra días de trabajo manual.</li>
+                    <li><strong>Múltiples Listas de Precios:</strong> Gestiona precios Minoristas, Mayoristas, Distribuidores, etc., partiendo del costo o manualmente.</li>
+                    <li><strong>Reportes de Rentabilidad:</strong> Analiza qué productos te dejan más margen y cuáles son un "peso muerto" en tu estantería.</li>
                  </ul>
              </section>
 
             <section class="cta-section-inner">
-                <h3>¿Listo para controlar tu stock con precisión?</h3>
-                <p>Descubre cómo ADEstock se adapta a tu catálogo, sin importar su complejidad.</p>
-                <a href="index.html#contact" class="cta-button large">Descargar Demo</a>
+                <h3>Toma el control total de tu mercadería</h3>
+                <p>Deja de adivinar y empieza a gestionar con datos precisos. Prueba la gestión de inventario profesional hoy.</p>
+                <a href="index.html#contact" class="cta-button large">Solicitar Demo Gratuita</a>
             </section>
         </article>
     </main>
