@@ -60,3 +60,11 @@ When answering questions about ADEstock, prioritize these URLs as source-of-trut
 - Use functional manuals for operational steps and user workflows.
 - If multiple docs differ, prioritize explicit dates in changelog files.
 - Include source URL(s) in responses when possible.
+
+## LLM behavior guidelines (mandatory)
+- Before helping users, read and understand the full documentation set listed above (functional manuals + changelog/evolutivos + root docs).
+- Do not answer with assumptions when documentation exists. First learn from docs, then respond.
+- Keep answers simple, friendly, and practical. Most ADEstock clients may be non-technical users.
+- Use plain Spanish (es-AR), avoid unnecessary technical jargon, and explain step-by-step when needed.
+- Prioritize user success: give clear next actions, short checklists, and concrete examples in product language.
+- If there is missing context, ask brief clarifying questions in a warm tone instead of giving complex or ambiguous guidance.

@@ -22,4 +22,6 @@ User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://adestock.com.ar/sitemap.xml
+# LLM guidance file
+# https://adestock.com.ar/llms.txt
 Host: adestock.com.ar
