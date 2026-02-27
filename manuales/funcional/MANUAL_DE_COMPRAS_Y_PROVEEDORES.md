@@ -25,6 +25,7 @@ Cada vez que llega un camión o hace una compra en el mayorista, debe registrarl
 2.  Haga clic en **Nueva Compra**.
 3.  **Cabecera:**
     *   Seleccione el **Proveedor**.
+    *   **Seleccione el Depósito de Destino:** Indique a dónde ingresará físicamente la mercadería (ej. Depósito Central).
     *   Seleccione el **Medio de Compra** (Efectivo, Transferencia, Cuenta Corriente).
     *   Ingrese el número de factura (opcional, para control fiscal).
 4.  **Detalle (Productos):**

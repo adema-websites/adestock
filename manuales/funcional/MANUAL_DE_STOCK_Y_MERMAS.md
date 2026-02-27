@@ -2,6 +2,11 @@
 
 Mantener el inventario al día es clave para no perder ventas por falta de mercadería y para detectar robos o desperdicios.
 
+> **⚠️ IMPORTANTE - MULTI-DEPÓSITO:**
+> Este sistema soporta múltiples depósitos (Central, Sucursal, Cocina).
+> Toda consulta o ajuste de stock debe referirse siempre a un **Depósito Específico**.
+> Si usted vende desde la "Sucursal", el stock bajará solo de allí, manteniendo intacto el "Depósito Central".
+
 ---
 
 ## 1. Consulta de Stock
@@ -9,8 +14,9 @@ Mantener el inventario al día es clave para no perder ventas por falta de merca
 Para saber cuánto tiene de un producto:
 
 1.  Vaya a **Producto** > **Lista de Productos**.
-2.  En la columna **Stock**, verá la cantidad actual.
-3.  El sistema descuenta automáticamente al vender y suma al comprar.
+2.  Seleccione el **Depósito** que desea consultar en los filtros superiores.
+3.  En la columna **Stock**, verá la cantidad actual **disponible en ese depósito**.
+4.  El sistema descuenta automáticamente al vender (desde el depósito de la caja) y suma al comprar (al depósito de ingreso).
 
 > **Stock Crítico:** Algunos reportes le avisarán cuando un producto esté por debajo del mínimo deseado (si está configurado).
 

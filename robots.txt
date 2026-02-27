@@ -1,6 +1,25 @@
 User-agent: *
 Allow: /
-
-# LLM Discovery
+Allow: /manuales/
+Allow: /manuales/changelog/
+Allow: /manuales/funcional/
 Allow: /llms.txt
-Sitemap: https://adestock.com/sitemap.xml
+Allow: /README.md
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://adestock.com.ar/sitemap.xml
+Host: adestock.com.ar

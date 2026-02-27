@@ -89,7 +89,7 @@
                 <li><a href="#faq">Preguntas Frecuentes</a></li>
                 <li><a href="precios.html" style="color: var(--primary); font-weight: 700;">Precios</a></li>
                 <li><a href="tutoriales.html">Tutoriales</a></li>
-                <li><a id="openDownloadModal" href="#download" class="cta-button">Descargar</a></li>
+                <li><a href="#download" class="cta-button open-download-modal">Descargar</a></li>
             </ul>
         </nav>
         <div class="hero-content">
@@ -357,10 +357,18 @@
             </div>
         </section> -->
 
+        <section id="google-drive-backup" style="max-width: 1100px; margin: 0 auto 2.5rem auto; background: linear-gradient(135deg, #eff6ff 0%, #ecfeff 100%); border: 1px solid #bfdbfe; border-radius: 14px; padding: 1.4rem;">
+            <h2 style="margin: 0 0 .6rem 0; font-size: 1.5rem; color: #1e3a8a;">Nueva integración: Google Drive para respaldos</h2>
+            <p style="margin: 0 0 1rem 0; color: #334155;">Ahora podés vincular ADEstock con Google Drive y guardar tus datos cuando quieras, de forma simple y segura desde tu celular o PC.</p>
+            <div style="display: flex; gap: .75rem; flex-wrap: wrap;">
+                <a href="#download" class="cta-button open-download-modal">Descargar versión 1.7.x</a>
+            </div>
+        </section>
+
         <section id="contact" class="contact-section">
             <h2>Descarga la Demo de ADEstock</h2>
             <p>Prueba ADEstock gratis durante 3 días. Descarga el instalador y comienza a gestionar tu stock e inventario de manera profesional. La demo solicitará licencia luego del período de prueba.</p>
-            <button id="openDownloadModal" class="cta-button large">Descargar Demo</button>
+            <button class="cta-button large open-download-modal">Descargar Demo</button>
             <div class="social-links-contact">
                 <a href="https://www.instagram.com/ademasistemas/" target="_blank" aria-label="Instagram de ADEMA Sistemas"><i class="fab fa-instagram"></i></a>
                 <a href="https://ademasistemas.com" target="_blank" aria-label="Sitio web de ADEMA Sistemas"><i class="fas fa-globe"></i></a>
@@ -471,7 +479,7 @@
                     <h3><i class="fas fa-user-lock"></i> Credenciales de Acceso</h3>
                     <p>Una vez instalado ADEstock, inicia sesión con estas credenciales:</p>
                     <div class="credentials-box">
-                        <div class="credential-item">precios.html
+                        <div class="credential-item">
                             <div class="credential-content">
                                 <strong>Usuario:</strong> <code id="username">ADEMASISTEMAS</code>
                             </div>
@@ -494,7 +502,7 @@
 
                 <!-- Botones de acción -->
                 <div class="modal-actions">
-                    <a href="https://github.com/adema-websites/adestock/releases/download/ADEstock-desktop-1.5.2v/Adestock_Installer_v1.5.2.exe" class="cta-button large" id="downloadButton">
+                    <a href="https://github.com/adema-websites/adestock/releases/download/1.7.2v/Adestock_Installer_v1.7.2.exe" class="cta-button large" id="downloadButton">
                         <i class="fas fa-download"></i> Descargar Instalador
                     </a>
                     <button class="cta-1 large" style="background-color: crimson;color: white;" id="closeModalButton">Cerrar</button>
@@ -579,7 +587,7 @@
         }
 
         // Cargar el contador cuando se abre el modal
-        const openModalButtons = document.querySelectorAll('#openDownloadModal');
+        const openModalButtons = document.querySelectorAll('.open-download-modal');
         openModalButtons.forEach(button => {
             button.addEventListener('click', () => {
                 updateModalCounter();
