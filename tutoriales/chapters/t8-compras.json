@@ -1,0 +1,46 @@
+﻿{
+    "id":  "t8-compras",
+    "title":  {
+                  "es":  "8) Cómo hacer una compra",
+                  "en":  "8) How to Make a Purchase",
+                  "pt":  "8) Como Fazer uma Compra"
+              },
+    "objective":  {
+                      "es":  "Registrar facturas de compra para ingresar mercadería y actualizar costos.",
+                      "en":  "Record purchase invoices to receive goods and update costs.",
+                      "pt":  "Registrar notas de compra para entrada de mercadorias e atualização de custos."
+                  },
+    "steps":  {
+                  "es":  [
+                             "Andá al módulo Compras.",
+                             "Creá una Nueva compra.",
+                             "Seleccioná el Proveedor y cargá los productos con sus nuevos costos.",
+                             "Elegí el medio de compra (o Cuenta Corriente si es a deuda).",
+                             "Confirmá la compra."
+                         ],
+                  "en":  [
+                             "Go to the Purchases module.",
+                             "Create a New purchase.",
+                             "Select the Supplier and load products with updated costs.",
+                             "Choose purchase method (or Current Account if on credit).",
+                             "Confirm the purchase."
+                         ],
+                  "pt":  [
+                             "Vá para o módulo Compras.",
+                             "Crie uma Nova compra.",
+                             "Selecione o Fornecedor e adicione os produtos com seus novos custos.",
+                             "Escolha o meio de compra (ou Conta Corrente se for a prazo).",
+                             "Confirme a compra."
+                         ]
+              },
+    "result":  {
+                   "es":  "Stock ingresado al depósito y precios de costo actualizados.",
+                   "en":  "Stock entered into warehouse and cost prices updated.",
+                   "pt":  "Estoque lançado no depósito e preços de custo atualizados."
+               },
+    "videoLabel":  {
+                       "es":  "Video Tutorial: Cómo Comprar",
+                       "en":  "Video Tutorial: How to Buy",
+                       "pt":  "Vídeo Tutorial: Como Comprar"
+                   }
+}

@@ -1,0 +1,46 @@
+﻿{
+    "id":  "t5-productos",
+    "title":  {
+                  "es":  "5) Productos",
+                  "en":  "5) Products",
+                  "pt":  "5) Produtos"
+              },
+    "objective":  {
+                      "es":  "Dar de alta productos simples, insumos y definir precios de venta.",
+                      "en":  "Create simple products, supplies, and define selling prices.",
+                      "pt":  "Cadastrar produtos simples, insumos e definir preços de venda."
+                  },
+    "steps":  {
+                  "es":  [
+                             "Andá a Productos y hacé clic en Crear Producto.",
+                             "Definí el nombre, la Unidad de medida (unidades, kg, lts) y la categoría.",
+                             "Ingresá el costo de compra y la cantidad por bulto.",
+                             "Configurá el Precio de venta manual o por margen de ganancia.",
+                             "Guardá el producto."
+                         ],
+                  "en":  [
+                             "Go to Products and click Create Product.",
+                             "Define the name, Unit of measure (units, kg, lts), and category.",
+                             "Enter purchase cost and quantity per package.",
+                             "Set the Selling price manually or by profit margin.",
+                             "Save the product."
+                         ],
+                  "pt":  [
+                             "Vá para Produtos e clique em Criar Produto.",
+                             "Defina o nome, a Unidade de medida (unidades, kg, lts) e a categoria.",
+                             "Informe o custo de compra e a quantidade por fardo.",
+                             "Configure o Preço de venda manualmente ou por margem de lucro.",
+                             "Salve o produto."
+                         ]
+              },
+    "result":  {
+                   "es":  "Producto disponible para la venta, compra y control de stock.",
+                   "en":  "Product available for sales, purchases, and stock control.",
+                   "pt":  "Produto disponível para venda, compra e controle de estoque."
+               },
+    "videoLabel":  {
+                       "es":  "Video Tutorial: Productos Simples",
+                       "en":  "Video Tutorial: Simple Products",
+                       "pt":  "Vídeo Tutorial: Produtos Simples"
+                   }
+}

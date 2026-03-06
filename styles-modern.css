@@ -1147,3 +1147,77 @@ footer a:hover {
         transform: scale(1);
     }
 }
+
+/* ─── Language Switcher ─────────────────────────────────── */
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-left: 0.5rem;
+}
+
+.lang-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.35);
+    color: rgba(255,255,255,0.75);
+    border-radius: 5px;
+    padding: 3px 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    line-height: 1.4;
+}
+
+.lang-btn:hover {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.6);
+}
+
+.lang-btn--active {
+    background: var(--primary, #2563eb);
+    color: #fff !important;
+    border-color: var(--primary, #2563eb);
+}
+
+/* Scrolled navbar: adapt lang buttons to dark-on-light */
+.navbar.scrolled .lang-btn {
+    border-color: rgba(0,0,0,0.2);
+    color: var(--text-body, #475569);
+}
+
+.navbar.scrolled .lang-btn:hover {
+    background: var(--bg-surface, #f1f5f9);
+    color: var(--text-heading, #0f172a);
+}
+
+.navbar.scrolled .lang-btn--active {
+    background: var(--primary, #2563eb);
+    color: #fff !important;
+    border-color: var(--primary, #2563eb);
+}
+
+/* Page-header variant (non-hero pages) */
+.page-header .lang-btn {
+    border-color: rgba(0,0,0,0.2);
+    color: var(--text-body, #475569);
+}
+
+.page-header .lang-btn:hover {
+    background: var(--bg-surface, #f1f5f9);
+}
+
+.page-header .lang-btn--active {
+    background: var(--primary, #2563eb);
+    color: #fff !important;
+    border-color: var(--primary, #2563eb);
+}
+
+@media (max-width: 768px) {
+    .lang-switcher {
+        margin: 0.5rem 0 0.25rem;
+        justify-content: center;
+    }
+}

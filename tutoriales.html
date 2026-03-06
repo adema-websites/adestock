@@ -25,8 +25,11 @@
     <link rel="stylesheet" href="styles-modern.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="translations/es.js"></script>
+    <script src="translations/en.js"></script>
+    <script src="translations/pt.js"></script>
 </head>
-<body class="tutorials-page">
+<body class="tutorials-page" data-page-title="tut.title" data-page-desc="tut.meta_desc">
 
 <header class="hero">
     <nav class="navbar">
@@ -36,55 +39,55 @@
             </a>
         </div>
 
-        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+        <button class="menu-toggle" aria-label="Abrir menú" data-i18n-aria="nav.menu_aria">☰</button>
 
         <ul class="nav-links">
-            <li><a href="index.html#features">Características</a></li>
-            <li><a href="index.html#faq">Preguntas Frecuentes</a></li>
-            <li><a href="precios.html">Precios</a></li>
-            <li><a href="tutoriales.html" class="active">Tutoriales</a></li>
-            <li><a href="contacto.html" class="cta-button">Contacto</a></li>
+            <li><a href="index.html#features" data-i18n="nav.features">Características</a></li>
+            <li><a href="index.html#faq" data-i18n="nav.faq">Preguntas Frecuentes</a></li>
+            <li><a href="precios.html" data-i18n="nav.prices">Precios</a></li>
+            <li><a href="tutoriales.html" class="active" data-i18n="nav.tutorials">Tutoriales</a></li>
+            <li><a href="contacto.html" class="cta-button" data-i18n="nav.contact">Contacto</a></li>
         </ul>
     </nav>
 
     <div class="hero-content">
-        <h1>Guía de Tutoriales ADEstock</h1>
-        <p>Aprende paso a paso cómo configurar y gestionar tu negocio. Ventas, stock, compras y más.</p>
-        <a href="#tutorials" class="cta-button large">Ver Guías</a>
+        <h1 data-i18n="tut.hero_h1">Guía de Tutoriales ADEstock</h1>
+        <p data-i18n="tut.hero_p">Aprende paso a paso cómo configurar y gestionar tu negocio. Ventas, stock, compras y más.</p>
+        <a href="#tutorials" class="cta-button large" data-i18n="tut.hero_cta">Ver Guías</a>
     </div>
 </header>
 
 <main class="tutorials-layout" id="tutorials">
-    <aside class="tutorial-sidebar" aria-label="Temas de tutoriales">
+    <aside class="tutorial-sidebar" aria-label="Temas de tutoriales" data-i18n-aria="tut.sidebar_aria">
         <div class="tutorial-sidebar-header">
-            <span class="tutorial-badge">Guía rápida</span>
-            <h2>Temas de la guía</h2>
-            <p>Usá el panel para ubicarte y avanzar. El tema activo se marca automáticamente.</p>
+            <span class="tutorial-badge" data-i18n="tut.sidebar_badge">Guía rápida</span>
+            <h2 data-i18n="tut.sidebar_h2">Temas de la guía</h2>
+            <p data-i18n="tut.sidebar_p">Usá el panel para ubicarte y avanzar. El tema activo se marca automáticamente.</p>
             <button class="sidebar-toggle" id="sidebar-toggle" aria-expanded="false" aria-controls="tutorial-sidebar-links">
-                <span>Ver temas</span>
+                <span data-i18n="tut.sidebar_btn">Ver temas</span>
                 <i class="fas fa-chevron-down"></i>
             </button>
         </div>
         <nav class="tutorial-sidebar-nav" id="tutorial-sidebar-links">
-            <a href="#t1-onboarding">1. Onboarding</a>
-            <a href="#t1-config-general">Configuración General</a>
-            <a href="#t2-depositos">2. Depósitos</a>
-            <a href="#t3-puntos-venta">3. Puntos de venta</a>
-            <a href="#t4-medios-pago">4. Medios de pago</a>
-            <a href="#t5-productos">5. Productos</a>
-            <a href="#t6-recetas">6. Recetas</a>
-            <a href="#t7-ventas">7. Ventas</a>
-            <a href="#t8-compras">8. Compras</a>
-            <a href="#t9-stock">9. Stock</a>
-            <a href="#t10-gastos">10. Gastos</a>
-            <a href="#t11-dashboard">11. Dashboard</a>
-            <a href="#t12-reportes">12. Reportes de caja</a>
-            <a href="#t13-impresoras">13. Impresoras</a>
-            <a href="#t14-usuarios">14. Usuarios</a>
+            <a href="#t1-onboarding" data-i18n="tut.nav_onboarding">1. Onboarding</a>
+            <a href="#t1-config-general" data-i18n="tut.nav_config">Configuración General</a>
+            <a href="#t2-depositos" data-i18n="tut.nav_depositos">2. Depósitos</a>
+            <a href="#t3-puntos-venta" data-i18n="tut.nav_pos">3. Puntos de venta</a>
+            <a href="#t4-medios-pago" data-i18n="tut.nav_pagos">4. Medios de pago</a>
+            <a href="#t5-productos" data-i18n="tut.nav_productos">5. Productos</a>
+            <a href="#t6-recetas" data-i18n="tut.nav_recetas">6. Recetas</a>
+            <a href="#t7-ventas" data-i18n="tut.nav_ventas">7. Ventas</a>
+            <a href="#t8-compras" data-i18n="tut.nav_compras">8. Compras</a>
+            <a href="#t9-stock" data-i18n="tut.nav_stock">9. Stock</a>
+            <a href="#t10-gastos" data-i18n="tut.nav_gastos">10. Gastos</a>
+            <a href="#t11-dashboard" data-i18n="tut.nav_dashboard">11. Dashboard</a>
+            <a href="#t12-reportes" data-i18n="tut.nav_reportes">12. Reportes de caja</a>
+            <a href="#t13-impresoras" data-i18n="tut.nav_impresoras">13. Impresoras</a>
+            <a href="#t14-usuarios" data-i18n="tut.nav_usuarios">14. Usuarios</a>
         </nav>
         <div class="tutorial-sidebar-cta">
-            <a class="cta-button" href="contacto.html">Necesito ayuda</a>
-            <a class="cta-button secondary" href="descargar-demo.html">Probar demo</a>
+            <a class="cta-button" href="contacto.html" data-i18n="tut.sidebar_cta1">Necesito ayuda</a>
+            <a class="cta-button secondary" href="descargar-demo.html" data-i18n="tut.sidebar_cta2">Probar demo</a>
         </div>
     </aside>
 
@@ -92,423 +95,22 @@
         <!-- Introducción -->
         <div class="tutorial-intro">
             <div>
-                <h2>Cómo usar esta guía</h2>
-                <p>Tutoriales cortos, directos y pensados para que avances rápido. Cada tarjeta explica un proceso clave del sistema.</p>
+                <h2 data-i18n="tut.intro_h2">Cómo usar esta guía</h2>
+                <p data-i18n="tut.intro_p">Tutoriales cortos, directos y pensados para que avances rápido. Cada tarjeta explica un proceso clave del sistema.</p>
                 <ul>
-                    <li>Leé el objetivo del tutorial para entender el resultado.</li>
-                    <li>Seguí el paso a paso.</li>
-                    <li>Usá el video (cuando esté disponible) para ver el flujo real.</li>
+                    <li data-i18n="tut.intro_li1">Leé el objetivo del tutorial para entender el resultado.</li>
+                    <li data-i18n="tut.intro_li2">Seguí el paso a paso.</li>
+                    <li data-i18n="tut.intro_li3">Usá el video (cuando esté disponible) para ver el flujo real.</li>
                 </ul>
             </div>
             <div class="tutorial-intro-highlight">
-                <h3>¿Necesitás una guía rápida?</h3>
-                <p>Empezá por Onboarding, Productos y Ventas. Es el circuito básico para tener el sistema funcionando.</p>
-                <a class="cta-button" href="#t1-onboarding">Empezar ahora</a>
+                <h3 data-i18n="tut.highlight_h3">¿Necesitás una guía rápida?</h3>
+                <p data-i18n="tut.highlight_p">Empezá por Onboarding, Productos y Ventas. Es el circuito básico para tener el sistema funcionando.</p>
+                <a class="cta-button" href="#t1-onboarding" data-i18n="tut.highlight_cta">Empezar ahora</a>
             </div>
         </div>
 
-    <!-- 1) Configuración inicial -->
-    <article id="t1-onboarding" class="tutorial-card">
-        <div class="tutorial-header">
-            <h2>1) Configuración inicial (Onboarding)</h2>
-        </div>
-        <div class="tutorial-content">
-            <div class="objective">
-                <strong>Objetivo:</strong> Configurar la identidad del negocio, definir si usarás múltiples depósitos y establecer los medios de pago iniciales.
-            </div>
-            <h3>Paso a paso:</h3>
-            <ol class="step-list">
-                <li>Ingresá al sistema por primera vez para iniciar el asistente de Onboarding.</li>
-                <li>Completá el <strong>Nombre del negocio</strong>.</li>
-                <li>Definí si usarás un único inventario o <strong>Múltiples Inventarios</strong> (selecciona la cantidad de depósitos).</li>
-                <li>Configurá tus <strong>Billeteras</strong> iniciales (Caja Fuerte, Bancos) y tus <strong>Medios de Pago</strong> (Efectivo, Tarjetas).</li>
-                <li>Creá los usuarios básicos si el sistema lo requiere.</li>
-                <li>Confirmá para finalizar. El sistema creará automáticamente los depósitos y cajas correspondientes.</li>
-            </ol>
-            <div class="expected-result">
-                <strong>Resultado esperado:</strong> El sistema queda listo con la estructura básica, depósitos creados y cajas asignadas.
-            </div>
-            <div class="video-placeholder">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/SORqKlgKhwY" title="Video Tutorial: Configuración Inicial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-    </article>
-
-    <!-- 1.5) Configuración General -->
-    <article id="t1-config-general" class="tutorial-card">
-        <div class="tutorial-header">
-            <h2>Configuración General</h2>
-        </div>
-        <div class="tutorial-content">
-            <div class="objective">
-                <strong>Objetivo:</strong> Repaso de las configuraciones generales del sistema y ajustes de preferencias.
-            </div>
-            <div class="video-placeholder">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/0Xf16cJOaTE" title="Video Tutorial: Configuración General" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-    </article>
-
-    <!-- 2) Manejo de depósitos -->
-    <article id="t2-depositos" class="tutorial-card">
-        <div class="tutorial-header">
-            <h2>2) Manejo de depósitos/inventarios</h2>
-        </div>
-        <div class="tutorial-content">
-            <div class="objective">
-                <strong>Objetivo:</strong> Crear, editar y organizar múltiples depósitos (inventarios) para gestionar el stock en distintas ubicaciones.
-            </div>
-            <h3>Paso a paso:</h3>
-            <ol class="step-list">
-                <li>Andá a <strong>Inventarios > Depósitos</strong>.</li>
-                <li>Hacé clic en <strong>Crear un depósito nuevo</strong>.</li>
-                <li>Asigná un nombre descriptivo (ej: "Depósito Central", "Sucursal Centro") y su ubicación.</li>
-                <li>Guardá los cambios.</li>
-            </ol>
-            <div class="expected-result">
-                <strong>Resultado esperado:</strong> Nuevo depósito activo, visible en movimientos y listo para recibir stock.
-            </div>
-            <div class="video-placeholder">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/dvtGgge_38U" title="Video Tutorial: Manejo de Depósitos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-    </article>
-
-    <!-- 3) Puntos de venta -->
-    <article id="t3-puntos-venta" class="tutorial-card">
-        <div class="tutorial-header">
-            <h2>3) Puntos de venta</h2>
-        </div>
-        <div class="tutorial-content">
-            <div class="objective">
-                <strong>Objetivo:</strong> Crear y configurar las cajas (POS) desde donde se realizarán las ventas.
-            </div>
-            <h3>Paso a paso:</h3>
-            <ol class="step-list">
-                <li>Andá a <strong>Agenda > Cajas/Puntos de venta</strong>.</li>
-                <li>Seleccioná <strong>Crear nueva caja</strong>.</li>
-                <li>Asigná un nombre (ej: "Caja Mostrador 1") y seleccioná el <strong>Depósito</strong> del cual descontará mercadería.</li>
-                <li>Guardá la configuración.</li>
-            </ol>
-            <div class="expected-result">
-                <strong>Resultado esperado:</strong> Caja lista para operar y asignada a un usuario.
-            </div>
-            <div class="video-placeholder">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/PZ9C54cMuS4" title="Video Tutorial: Puntos de Venta" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-
-        </div>
-    </article>
-
-    <!-- 4) Medios de pago & cuentas -->
-    <article id="t4-medios-pago" class="tutorial-card">
-        <div class="tutorial-header">
-            <h2>4) Medios de pago & medios de compra (Cuentas)</h2>
-        </div>
-        <div class="tutorial-content">
-            <div class="objective">
-                <strong>Objetivo:</strong> Crear medios de pago (ej: Tarjetas, QR) y asociarlos a billeteras o cuentas bancarias.
-            </div>
-            <h3>Paso a paso:</h3>
-            <ol class="step-list">
-                <li>Andá a <strong>Billeteras/Cuentas</strong>.</li>
-                <li>Creá una billetera nueva si te falta (ej: "Banco Nación", "MercadoPago").</li>
-                <li>Andá a la pestaña <strong>Medios de pago</strong>.</li>
-                <li>Creá un nuevo medio (ej: "Tarjeta Visa") y asocialo a la billetera donde querés que vaya el dinero.</li>
-                <li>Asigná este medio a los puntos de venta habilitados.</li>
-            </ol>
-            <div class="expected-result">
-                <strong>Resultado esperado:</strong> Los medios de pago aparecen disponibles al momento de cobrar o pagar a proveedores.
-            </div>
-            <div class="video-placeholder">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/wNTAC85Uymo" title="Video Tutorial: Medios de Pago" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-    </article>
-
-    <!-- 5) Productos -->
-    <article id="t5-productos" class="tutorial-card">
-        <div class="tutorial-header">
-            <h2>5) Productos</h2>
-        </div>
-        <div class="tutorial-content">
-            <div class="objective">
-                <strong>Objetivo:</strong> Dar de alta productos simples, insumos y definir precios de venta.
-            </div>
-            <h3>Paso a paso:</h3>
-            <ol class="step-list">
-                <li>Andá a <strong>Productos</strong> y hacé clic en Crear Producto.</li>
-                <li>Definí el nombre, la <strong>Unidad de medida</strong> (unidades, kg, lts) y la categoría.</li>
-                <li>Ingresá el costo de compra y la cantidad por bulto.</li>
-                <li>Configurá el <strong>Precio de venta</strong> manual o por margen de ganancia.</li>
-                <li>Guardá el producto.</li>
-            </ol>
-            <div class="expected-result">
-                <strong>Resultado esperado:</strong> Producto disponible para la venta, compra y control de stock.
-            </div>
-            <div class="video-placeholder">
-                <div class="video-placeholder-text">
-                    <i class="fab fa-youtube"></i>
-                    <span>Video Tutorial: Productos Simples</span>
-                </div>
-            </div>
-        </div>
-    </article>
-
-    <!-- 6) Recetas / Combos -->
-    <article id="t6-recetas" class="tutorial-card">
-        <div class="tutorial-header">
-            <h2>6) Recetas / Combos</h2>
-        </div>
-        <div class="tutorial-content">
-            <div class="objective">
-                <strong>Objetivo:</strong> Crear productos elaborados (recetas) que descuentan stock de sus insumos automáticamente.
-            </div>
-            <h3>Paso a paso:</h3>
-            <ol class="step-list">
-                <li>Andá a <strong>Cocina/Recetas</strong>.</li>
-                <li>Creá una receta nueva y agregá los insumos necesarios con sus cantidades.</li>
-                <li>Definí las porciones y revisá los gastos de elaboración.</li>
-                <li>Guardá la receta.</li>
-                <li>Andá a <strong>Productos</strong>, creá el producto final y asociale la receta creada.</li>
-            </ol>
-            <div class="expected-result">
-                <strong>Resultado esperado:</strong> Producto final listo para vender; al venderlo se descuenta el stock de los ingredientes.
-            </div>
-            <div class="video-placeholder">
-                <div class="video-placeholder-text">
-                    <i class="fab fa-youtube"></i>
-                    <span>Video Tutorial: Recetas y Combos</span>
-                </div>
-            </div>
-        </div>
-    </article>
-
-    <!-- 7) Cómo hacer una venta -->
-    <article id="t7-ventas" class="tutorial-card">
-        <div class="tutorial-header">
-            <h2>7) Cómo hacer una venta</h2>
-        </div>
-        <div class="tutorial-content">
-            <div class="objective">
-                <strong>Objetivo:</strong> Registrar una venta de forma rápida en el POS y emitir ticket.
-            </div>
-            <h3>Paso a paso:</h3>
-            <ol class="step-list">
-                <li>Ingresá al <strong>Punto de venta</strong>.</li>
-                <li>(Opcional) Seleccioná un cliente en la barra de búsqueda superior.</li>
-                <li>Agregá los productos escaneando el código de barras o buscándolos por nombre.</li>
-                <li>Hacé clic en <strong>Cobrar</strong> y elegí el medio de pago (Efectivo, Débito, QR).</li>
-                <li>Confirmá la operación para imprimir el comprobante.</li>
-            </ol>
-            <div class="expected-result">
-                <strong>Resultado esperado:</strong> Venta registrada, dinero ingresado a la caja y stock actualizado.
-            </div>
-            <div class="video-placeholder">
-                <div class="video-placeholder-text">
-                    <i class="fab fa-youtube"></i>
-                    <span>Video Tutorial: Cómo Vender</span>
-                </div>
-            </div>
-        </div>
-    </article>
-
-    <!-- 8) Cómo hacer una compra -->
-    <article id="t8-compras" class="tutorial-card">
-        <div class="tutorial-header">
-            <h2>8) Cómo hacer una compra</h2>
-        </div>
-        <div class="tutorial-content">
-            <div class="objective">
-                <strong>Objetivo:</strong> Registrar facturas de compra para ingresar mercadería y actualizar costos.
-            </div>
-            <h3>Paso a paso:</h3>
-            <ol class="step-list">
-                <li>Andá al módulo <strong>Compras</strong>.</li>
-                <li>Creá una <strong>Nueva compra</strong>.</li>
-                <li>Seleccioná el <strong>Proveedor</strong> y cargá los productos con sus nuevos costos.</li>
-                <li>Elegí el medio de compra (o Cuenta Corriente si es a deuda).</li>
-                <li>Confirmá la compra.</li>
-            </ol>
-            <div class="expected-result">
-                <strong>Resultado esperado:</strong> Stock ingresado al depósito y precios de costo actualizados.
-            </div>
-            <div class="video-placeholder">
-                <div class="video-placeholder-text">
-                    <i class="fab fa-youtube"></i>
-                    <span>Video Tutorial: Cómo Comprar</span>
-                </div>
-            </div>
-        </div>
-    </article>
-
-    <!-- 9) Stock y Dashboard -->
-    <article id="t9-stock" class="tutorial-card">
-        <div class="tutorial-header">
-            <h2>9) Movimientos de stock & dashboard</h2>
-        </div>
-        <div class="tutorial-content">
-            <div class="objective">
-                <strong>Objetivo:</strong> Consultar, ajustar y auditar el stock en tiempo real.
-            </div>
-            <h3>Paso a paso:</h3>
-            <ol class="step-list">
-                <li>Andá a <strong>Stock > Movimientos</strong>.</li>
-                <li>Filtrá por depósito, producto o fecha para rastrear cambios.</li>
-                <li>Usá la herramienta de ajustes para corregir diferencias de inventario.</li>
-                <li>Ingresá al <strong>Dashboard de inventario</strong> para ver valoración total y alertas de stock bajo.</li>
-            </ol>
-            <div class="expected-result">
-                <strong>Resultado esperado:</strong> Visión clara del patrimonio en mercadería y control de mermas.
-            </div>
-            <div class="video-placeholder">
-                <div class="video-placeholder-text">
-                    <i class="fab fa-youtube"></i>
-                    <span>Video Tutorial: Control de Stock</span>
-                </div>
-            </div>
-        </div>
-    </article>
-
-    <!-- 10) Gastos -->
-    <article id="t10-gastos" class="tutorial-card">
-        <div class="tutorial-header">
-            <h2>10) Registro de gastos</h2>
-        </div>
-        <div class="tutorial-content">
-            <div class="objective">
-                <strong>Objetivo:</strong> Cargar gastos operativos y retiros de dinero de la caja.
-            </div>
-            <h3>Paso a paso:</h3>
-            <ol class="step-list">
-                <li>Andá a <strong>Gastos</strong> o hacé un "Retiro" desde el punto de venta.</li>
-                <li>Creá un <strong>Nuevo gasto</strong>.</li>
-                <li>Seleccioná la categoría (ej: Alquiler, Limpieza, Proveedores varios).</li>
-                <li>Indicá el monto y el medio de pago/caja de origen.</li>
-                <li>Guardá el registro.</li>
-            </ol>
-            <div class="expected-result">
-                <strong>Resultado esperado:</strong> Gasto registrado, descontado de la caja y visible en reportes de rentabilidad.
-            </div>
-            <div class="video-placeholder">
-                <div class="video-placeholder-text">
-                    <i class="fab fa-youtube"></i>
-                    <span>Video Tutorial: Registro de Gastos</span>
-                </div>
-            </div>
-        </div>
-    </article>
-
-    <!-- 11) Dashboard admin -->
-    <article id="t11-dashboard" class="tutorial-card">
-        <div class="tutorial-header">
-            <h2>11) Dashboard principal</h2>
-        </div>
-        <div class="tutorial-content">
-            <div class="objective">
-                <strong>Objetivo:</strong> Visualizar los indicadores clave de desempeño (KPIs) del negocio.
-            </div>
-            <h3>Paso a paso:</h3>
-            <ol class="step-list">
-                <li>Ingresá al panel principal (Dashboard).</li>
-                <li>Revisá los indicadores de ventas, ganancias del día y cuentas por cobrar.</li>
-                <li>Utilizá los accesos rápidos para entrar a las secciones más usadas.</li>
-            </ol>
-            <div class="expected-result">
-                <strong>Resultado esperado:</strong> Control general del estado del negocio en una sola pantalla.
-            </div>
-            <div class="video-placeholder">
-                <div class="video-placeholder-text">
-                    <i class="fab fa-youtube"></i>
-                    <span>Video Tutorial: Dashboard</span>
-                </div>
-            </div>
-        </div>
-    </article>
-
-    <!-- 12) Reportes caja -->
-    <article id="t12-reportes" class="tutorial-card">
-        <div class="tutorial-header">
-            <h2>12) Reportes de caja (cierres, retiros)</h2>
-        </div>
-        <div class="tutorial-content">
-            <div class="objective">
-                <strong>Objetivo:</strong> Realizar el arqueo de caja al final del turno y generar reportes financieros.
-            </div>
-            <h3>Paso a paso:</h3>
-            <ol class="step-list">
-                <li>Andá a <strong>Reportes de caja</strong> o seleccioná "Cerrar Caja" en el POS.</li>
-                <li>Seleccioná la caja y el período a cerrar.</li>
-                <li>Ingresá el conteo de dinero físico (si usás arqueo ciego).</li>
-                <li>Generá el cierre y verificá sobrantes/faltantes.</li>
-            </ol>
-            <div class="expected-result">
-                <strong>Resultado esperado:</strong> Caja cerrada correctamente y reporte de turno generado.
-            </div>
-            <div class="video-placeholder">
-                <div class="video-placeholder-text">
-                    <i class="fab fa-youtube"></i>
-                    <span>Video Tutorial: Cierre de Caja</span>
-                </div>
-            </div>
-        </div>
-    </article>
-
-    <!-- 13) Impresoras -->
-    <article id="t13-impresoras" class="tutorial-card">
-        <div class="tutorial-header">
-            <h2>13) Cómo configurar las impresoras</h2>
-        </div>
-        <div class="tutorial-content">
-            <div class="objective">
-                <strong>Objetivo:</strong> Conectar y asignar impresoras térmicas a cada punto de venta.
-            </div>
-            <h3>Paso a paso:</h3>
-            <ol class="step-list">
-                <li>Andá a <strong>Configuración de impresoras</strong> dentro de la edición de Caja.</li>
-                <li>Agregá una impresora indicando si es USB o de Red.</li>
-                <li>Si es USB, introducí el nombre exacto de la impresora en Windows.</li>
-                <li>Asignala al punto de venta y probá la impresión.</li>
-            </ol>
-            <div class="expected-result">
-                <strong>Resultado esperado:</strong> Tickets y comandas impresos automáticamente al vender.
-            </div>
-            <div class="video-placeholder">
-                <div class="video-placeholder-text">
-                    <i class="fab fa-youtube"></i>
-                    <span>Video Tutorial: Configurar Impresoras</span>
-                </div>
-            </div>
-        </div>
-    </article>
-
-    <!-- 14) Usuarios -->
-    <article id="t14-usuarios" class="tutorial-card">
-        <div class="tutorial-header">
-            <h2>14) Usuarios y permisos</h2>
-        </div>
-        <div class="tutorial-content">
-            <div class="objective">
-                <strong>Objetivo:</strong> Crear cuentas para empleados y definir qué pueden ver o hacer.
-            </div>
-            <h3>Paso a paso:</h3>
-            <ol class="step-list">
-                <li>Andá a <strong>Usuarios</strong>.</li>
-                <li>Creá un nuevo usuario con su contraseña.</li>
-                <li>Asignale un grupo o rol (ej: Vendedor, Cajero, Cocina).</li>
-                <li>Guardá para activar el acceso.</li>
-            </ol>
-            <div class="expected-result">
-                <strong>Resultado esperado:</strong> Usuario activo con los permisos de acceso restringidos según su rol.
-            </div>
-            <div class="video-placeholder">
-                <div class="video-placeholder-text">
-                    <i class="fab fa-youtube"></i>
-                    <span>Video Tutorial: Usuarios y Permisos</span>
-                </div>
-            </div>
-        </div>
-    </article>
+    <div id="tutorial-chapters"></div>
 
     </section>
 </main>
@@ -518,32 +120,32 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
                 <div>
                     <img src="img/logo-home.svg" alt="ADEstock Logo" style="max-width: 150px; margin-bottom: 1rem; filter: brightness(0) invert(1);">
-                    <p style="font-size: 0.9rem; line-height: 1.6; color: #bdc3c7;">Sistema de gestión de stock e inventario para pymes. Multi-depósito, multi-POS y control total de tu negocio.</p>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #bdc3c7;" data-i18n="footer.desc">Sistema de gestión de stock e inventario para pymes. Multi-depósito, multi-POS y control total de tu negocio.</p>
                 </div>
                 <div>
-                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;">Casos de Uso</h4>
+                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;" data-i18n="footer.use_cases">Casos de Uso</h4>
                     <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                        <li style="margin-bottom: 0.5rem;"><a href="casos-uso-almacen-dietetica.html" style="color: #bdc3c7; text-decoration: none;">Almacén y Dietética</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="casos-uso-minimarket.html" style="color: #bdc3c7; text-decoration: none;">Minimarket</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="tutoriales.html" style="color: #bdc3c7; text-decoration: none;">Tutoriales</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="casos-uso-almacen-dietetica.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.almacen">Almacén y Dietética</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="casos-uso-minimarket.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.minimarket">Minimarket</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="tutoriales.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.tutorials">Tutoriales</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;">Recursos</h4>
+                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;" data-i18n="footer.resources">Recursos</h4>
                     <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                        <li style="margin-bottom: 0.5rem;"><a href="index.html#features" style="color: #bdc3c7; text-decoration: none;">Características</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="index.html#pricing" style="color: #bdc3c7; text-decoration: none;">Precios</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="index.html#faq" style="color: #bdc3c7; text-decoration: none;">Preguntas Frecuentes</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="descargar-demo.html" style="color: #bdc3c7; text-decoration: none;">Descargar Demo</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="index.html#features" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.features">Características</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="index.html#pricing" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.prices">Precios</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="index.html#faq" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.faq">Preguntas Frecuentes</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="descargar-demo.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.dl_demo">Descargar Demo</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;">Contacto</h4>
+                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;" data-i18n="footer.contact_col">Contacto</h4>
                     <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
                         <li style="margin-bottom: 0.5rem;"><i class="fas fa-envelope" style="color: #3498db; margin-right: 8px;"></i><a href="mailto:contact@ademasistemas.com" style="color: #bdc3c7; text-decoration: none;">contact@ademasistemas.com</a></li>
                         <li style="margin-bottom: 0.5rem;"><i class="fab fa-whatsapp" style="color: #25D366; margin-right: 8px;"></i><a href="https://wa.me/5491127888995" target="_blank" style="color: #bdc3c7; text-decoration: none;">+54 9 11 2788-8995</a></li>
                         <li style="margin-bottom: 1rem;"><i class="fas fa-globe" style="color: #3498db; margin-right: 8px;"></i><a href="https://ademasistemas.com" target="_blank" style="color: #bdc3c7; text-decoration: none;">ademasistemas.com</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="contacto.html" style="color: #bdc3c7; text-decoration: none;">Sobre Nosotros</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="contacto.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.about_us">Sobre Nosotros</a></li>
                     </ul>
                     <div style="margin-top: 1rem;">
                         <a href="https://www.instagram.com/ademasistemas/" target="_blank" style="color: #fff; font-size: 1.5rem; margin-right: 1rem;" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -554,16 +156,18 @@
             </div>
             <hr style="border: none; border-top: 1px solid #34495e; margin: 2rem 0 1rem;">
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem; color: #95a5a6;">
-                <p style="margin: 0;">&copy; <span id="footer-year"></span> ADEstock by <a href="https://ademasistemas.com" target="_blank" style="color: #3498db; text-decoration: none;">ADEMA Sistemas</a>. Todos los derechos reservados.</p>
+                <p style="margin: 0;">&copy; <span id="footer-year"></span> ADEstock by <a href="https://ademasistemas.com" target="_blank" style="color: #3498db; text-decoration: none;">ADEMA Sistemas</a>. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
                 <div>
-                    <a href="politica-privacidad.html" style="color: #95a5a6; text-decoration: none; margin-right: 1rem;">Política de Privacidad</a>
-                    <a href="terminos-condiciones.html" style="color: #95a5a6; text-decoration: none;">Términos y Condiciones</a>
+                    <a href="politica-privacidad.html" style="color: #95a5a6; text-decoration: none; margin-right: 1rem;" data-i18n="footer.privacy">Política de Privacidad</a>
+                    <a href="terminos-condiciones.html" style="color: #95a5a6; text-decoration: none;" data-i18n="footer.terms">Términos y Condiciones</a>
                 </div>
             </div>
         </div>
     </footer>
 
 <script src="script.js"></script>
+<script src="i18n.js"></script>
+<script src="tutoriales/render-tutorials.js"></script>
 
 </body>
 </html>

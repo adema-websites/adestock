@@ -1,0 +1,47 @@
+﻿{
+    "id":  "t4-medios-pago",
+    "video":  "https://www.youtube.com/embed/wNTAC85Uymo",
+    "title":  {
+                  "es":  "4) Medios de pago \u0026 medios de compra (Cuentas)",
+                  "en":  "4) Payment Methods \u0026 Purchase Accounts",
+                  "pt":  "4) Formas de Pagamento \u0026 Contas de Compra"
+              },
+    "objective":  {
+                      "es":  "Crear medios de pago (ej: Tarjetas, QR) y asociarlos a billeteras o cuentas bancarias.",
+                      "en":  "Create payment methods (e.g., Cards, QR) and link them to wallets or bank accounts.",
+                      "pt":  "Criar meios de pagamento (ex.: Cartões, QR) e associá-los a carteiras ou contas bancárias."
+                  },
+    "steps":  {
+                  "es":  [
+                             "Andá a Billeteras/Cuentas.",
+                             "Creá una billetera nueva si te falta (ej: Banco Nación, MercadoPago).",
+                             "Andá a la pestaña Medios de pago.",
+                             "Creá un nuevo medio (ej: Tarjeta Visa) y asocialo a la billetera donde querés que vaya el dinero.",
+                             "Asigná este medio a los puntos de venta habilitados."
+                         ],
+                  "en":  [
+                             "Go to Wallets/Accounts.",
+                             "Create a new wallet if needed (e.g., National Bank, MercadoPago).",
+                             "Go to the Payment Methods tab.",
+                             "Create a new method (e.g., Visa Card) and link it to the wallet where you want the money to go.",
+                             "Assign this method to enabled points of sale."
+                         ],
+                  "pt":  [
+                             "Vá para Carteiras/Contas.",
+                             "Crie uma nova carteira se necessário (ex.: Banco Nacional, MercadoPago).",
+                             "Vá para a aba Meios de pagamento.",
+                             "Crie um novo meio (ex.: Cartão Visa) e associe-o à carteira para onde você quer enviar o dinheiro.",
+                             "Atribua esse meio aos pontos de venda habilitados."
+                         ]
+              },
+    "result":  {
+                   "es":  "Los medios de pago aparecen disponibles al momento de cobrar o pagar a proveedores.",
+                   "en":  "Payment methods become available when charging customers or paying suppliers.",
+                   "pt":  "Os meios de pagamento ficam disponíveis ao cobrar clientes ou pagar fornecedores."
+               },
+    "videoTitle":  {
+                       "es":  "Video Tutorial: Medios de Pago",
+                       "en":  "Video Tutorial: Payment Methods",
+                       "pt":  "Vídeo Tutorial: Meios de Pagamento"
+                   }
+}

@@ -1,0 +1,40 @@
+﻿{
+    "id":  "t11-dashboard",
+    "title":  {
+                  "es":  "11) Dashboard principal",
+                  "en":  "11) Main Dashboard",
+                  "pt":  "11) Dashboard Principal"
+              },
+    "objective":  {
+                      "es":  "Visualizar los indicadores clave de desempeño (KPIs) del negocio.",
+                      "en":  "View key business performance indicators (KPIs).",
+                      "pt":  "Visualizar os principais indicadores de desempenho (KPIs) do negócio."
+                  },
+    "steps":  {
+                  "es":  [
+                             "Ingresá al panel principal (Dashboard).",
+                             "Revisá los indicadores de ventas, ganancias del día y cuentas por cobrar.",
+                             "Utilizá los accesos rápidos para entrar a las secciones más usadas."
+                         ],
+                  "en":  [
+                             "Open the main panel (Dashboard).",
+                             "Review sales indicators, daily profit, and accounts receivable.",
+                             "Use quick access shortcuts to enter the most used sections."
+                         ],
+                  "pt":  [
+                             "Acesse o painel principal (Dashboard).",
+                             "Revise os indicadores de vendas, lucro do dia e contas a receber.",
+                             "Use os atalhos rápidos para acessar as seções mais utilizadas."
+                         ]
+              },
+    "result":  {
+                   "es":  "Control general del estado del negocio en una sola pantalla.",
+                   "en":  "Overall control of business status on a single screen.",
+                   "pt":  "Controle geral do estado do negócio em uma única tela."
+               },
+    "videoLabel":  {
+                       "es":  "Video Tutorial: Dashboard",
+                       "en":  "Video Tutorial: Dashboard",
+                       "pt":  "Vídeo Tutorial: Dashboard"
+                   }
+}

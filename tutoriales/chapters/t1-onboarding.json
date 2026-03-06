@@ -1,0 +1,50 @@
+﻿{
+    "id":  "t1-onboarding",
+    "video":  "https://www.youtube.com/embed/SORqKlgKhwY",
+    "title":  {
+                  "es":  "1) Configuración inicial (Onboarding)",
+                  "en":  "1) Initial Setup (Onboarding)",
+                  "pt":  "1) Configuração Inicial (Onboarding)"
+              },
+    "objective":  {
+                      "es":  "Configurar la identidad del negocio, definir si usarás múltiples depósitos y establecer los medios de pago iniciales.",
+                      "en":  "Set up your business identity, define whether you will use multiple warehouses, and configure initial payment methods.",
+                      "pt":  "Configurar a identidade do negócio, definir se você usará múltiplos depósitos e configurar os meios de pagamento iniciais."
+                  },
+    "steps":  {
+                  "es":  [
+                             "Ingresá al sistema por primera vez para iniciar el asistente de Onboarding.",
+                             "Completá el Nombre del negocio.",
+                             "Definí si usarás un único inventario o Múltiples Inventarios (selecciona la cantidad de depósitos).",
+                             "Configurá tus Billeteras iniciales (Caja Fuerte, Bancos) y tus Medios de Pago (Efectivo, Tarjetas).",
+                             "Creá los usuarios básicos si el sistema lo requiere.",
+                             "Confirmá para finalizar. El sistema creará automáticamente los depósitos y cajas correspondientes."
+                         ],
+                  "en":  [
+                             "Enter the system for the first time to start the Onboarding assistant.",
+                             "Complete the Business name.",
+                             "Define whether you will use a single inventory or Multiple Inventories (select the number of warehouses).",
+                             "Set up your initial Wallets (Safe Cash, Banks) and Payment Methods (Cash, Cards).",
+                             "Create basic users if the system requires it.",
+                             "Confirm to finish. The system will automatically create the corresponding warehouses and cash registers."
+                         ],
+                  "pt":  [
+                             "Acesse o sistema pela primeira vez para iniciar o assistente de Onboarding.",
+                             "Preencha o Nome do negócio.",
+                             "Defina se você usará um único inventário ou Múltiplos Inventários (selecione a quantidade de depósitos).",
+                             "Configure suas Carteiras iniciais (Caixa Forte, Bancos) e seus Meios de Pagamento (Dinheiro, Cartões).",
+                             "Crie os usuários básicos se o sistema exigir.",
+                             "Confirme para finalizar. O sistema criará automaticamente os depósitos e caixas correspondentes."
+                         ]
+              },
+    "result":  {
+                   "es":  "El sistema queda listo con la estructura básica, depósitos creados y cajas asignadas.",
+                   "en":  "The system is ready with the basic structure, created warehouses, and assigned cash registers.",
+                   "pt":  "O sistema fica pronto com a estrutura básica, depósitos criados e caixas atribuídas."
+               },
+    "videoTitle":  {
+                       "es":  "Video Tutorial: Configuración Inicial",
+                       "en":  "Video Tutorial: Initial Setup",
+                       "pt":  "Vídeo Tutorial: Configuração Inicial"
+                   }
+}

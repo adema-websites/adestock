@@ -23,29 +23,32 @@
     <link rel="stylesheet" href="styles-modern.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
      <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="translations/es.js"></script>
+    <script src="translations/en.js"></script>
+    <script src="translations/pt.js"></script>
 </head>
-<body>
+<body data-page-title="inv.title" data-page-desc="inv.meta_desc">
     <header class="page-header"> <nav class="navbar">
             <div class="logo">
                 <a href="index.html">
                     <img src="img/logo-home.svg" alt="ADEstock Logo">
                 </a>
             </div>
-             <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+             <button class="menu-toggle" aria-label="Toggle menu" data-i18n-aria="nav.menu_aria">☰</button>
             <ul class="nav-links">
-                <li><a href="index.html#features">Características</a></li>
-                <li><a href="index.html#target-audience">¿Para Quién Es?</a></li>
-                <li><a href="index.html#faq">Preguntas Frecuentes</a></li>
-                <li><a href="precios.html">Precios</a></li>
-                <li><a href="tutoriales.html">Tutoriales</a></li>
-                <li><a href="contacto.html" class="cta-button">Contacto</a></li>
+                <li><a href="index.html#features" data-i18n="nav.features">Características</a></li>
+                <li><a href="index.html#target-audience" data-i18n="nav.audience">¿Para Quién Es?</a></li>
+                <li><a href="index.html#faq" data-i18n="nav.faq">Preguntas Frecuentes</a></li>
+                <li><a href="precios.html" data-i18n="nav.prices">Precios</a></li>
+                <li><a href="tutoriales.html" data-i18n="nav.tutorials">Tutoriales</a></li>
+                <li><a href="contacto.html" class="cta-button" data-i18n="nav.contact">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="container page-content">
         <article>
-            <h1>Gestión Avanzada de Productos y Stock en ADEstock</h1>
+            <h1 data-i18n="inv.h1">Gestión Avanzada de Productos y Stock en ADEstock</h1>
             
             <!-- Sección de Video Destacado -->
             <div class="video-container-highlight" style="margin-bottom: 2rem; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
@@ -53,11 +56,11 @@
                 <iframe width="100%" height="400" src="https://www.youtube.com/embed/VIDEO_ID_AQUI?rel=0" title="Gestión Avanzada de Inventario en ADEstock" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display: block;"></iframe>
             </div>
 
-            <p class="intro-paragraph">El corazón de tu negocio es tu inventario. ADEstock no solo cuenta productos, sino que te brinda herramientas profesionales para gestionar catálogos complejos con precisión milimétrica. Desde artículos simples hasta manufactura y variantes, todo está controlado.</p>
+            <p class="intro-paragraph" data-i18n="inv.intro_p">El corazón de tu negocio es tu inventario. ADEstock no solo cuenta productos, sino que te brinda herramientas profesionales para gestionar catálogos complejos con precisión milimétrica. Desde artículos simples hasta manufactura y variantes, todo está controlado.</p>
 
             <section id="productos-simples">
-                <h2><i class="fas fa-box"></i> Productos Simples: Control Total del Costo</h2>
-                <p>Gestiona los artículos de compra-venta directa o insumos con una profundidad de datos superior. No pierdas dinero por errores en el cálculo de costos.</p>
+                <h2><i class="fas fa-box"></i> <span data-i18n="inv.s1_h2">Productos Simples: Control Total del Costo</span></h2>
+                <p data-i18n="inv.s1_p">Gestiona los artículos de compra-venta directa o insumos con una profundidad de datos superior. No pierdas dinero por errores en el cálculo de costos.</p>
                 <ul>
                     <li><i class="fas fa-check"></i> <strong>Cálculo Automático de Costos:</strong> Define el costo por bulto/caja y deja que el sistema calcule el costo unitario exacto.</li>
                     <li><i class="fas fa-check"></i> <strong>Unidades de Medida Flexibles:</strong> Compra en kilos y vende en gramos, o compra en packs y vende por unidad. El sistema hace la conversión.</li>
@@ -68,8 +71,8 @@
             </section>
 
             <section id="productos-variantes">
-                <h2><i class="fas fa-tshirt"></i> Productos con Variantes (Matrices)</h2>
-                <p>La solución definitiva para indumentaria, calzado y artículos con múltiples opciones. Olvídate de crear cientos de productos por separado.</p>
+                <h2><i class="fas fa-tshirt"></i> <span data-i18n="inv.s2_h2">Productos con Variantes (Matrices)</span></h2>
+                <p data-i18n="inv.s2_p">La solución definitiva para indumentaria, calzado y artículos con múltiples opciones. Olvídate de crear cientos de productos por separado.</p>
                 <ul>
                     <li><i class="fas fa-check"></i> <strong>Arbol de Variantes:</strong> Crea un producto "Madre" y genera automáticamente todas sus combinaciones (ej: Remera Polo > Azul/Rojo > S/M/L).</li>
                     <li><i class="fas fa-check"></i> <strong>SKU Independientes:</strong> Cada variante tiene su propio código de barras y control de stock único.</li>
@@ -80,8 +83,8 @@
             </section>
 
             <section id="productos-compuestos">
-                <h2><i class="fas fa-puzzle-piece"></i> Kits, Recetas y Producción</h2>
-                <p>Ideal para gastronomía, talleres de armado o promociones. Vende productos que se componen de otros.</p>
+                <h2><i class="fas fa-puzzle-piece"></i> <span data-i18n="inv.s3_h2">Kits, Recetas y Producción</span></h2>
+                <p data-i18n="inv.s3_p">Ideal para gastronomía, talleres de armado o promociones. Vende productos que se componen de otros.</p>
                  <ul>
                     <li><i class="fas fa-check"></i> <strong>Kits de Venta:</strong> Crea "Combos" (ej: Fernet + Coca) que descuentan el stock de los productos individuales automáticamente al venderse.</li>
                     <li><i class="fas fa-check"></i> <strong>Recetas de Producción:</strong> Define los ingredientes de un plato o insumos de un producto fabricado (ej: 200g harina + 2 huevos).</li>
@@ -92,7 +95,7 @@
             </section>
 
              <section id="herramientas-adicionales">
-                <h2><i class="fas fa-chart-line"></i> ¿Por qué nuestro inventario es superior?</h2>
+                <h2><i class="fas fa-chart-line"></i> <span data-i18n="inv.s4_h2">¿Por qué nuestro inventario es superior?</span></h2>
                  <ul>
                     <li><strong>Auditoría Permanente:</strong> Cada movimiento de stock (venta, compra, ajuste) queda registrado con usuario, fecha y hora. Nada desaparece "mágicamente".</li>
                     <li><strong>Importación y Actualización Masiva:</strong> Carga miles de productos o actualiza precios desde Excel en segundos. Ahorra días de trabajo manual.</li>
@@ -102,9 +105,9 @@
              </section>
 
             <section class="cta-section-inner">
-                <h3>Toma el control total de tu mercadería</h3>
-                <p>Deja de adivinar y empieza a gestionar con datos precisos. Prueba la gestión de inventario profesional hoy.</p>
-                <a href="index.html#contact" class="cta-button large">Solicitar Demo Gratuita</a>
+                <h3 data-i18n="inv.cta_h3">Toma el control total de tu mercancía</h3>
+                <p data-i18n="inv.cta_p">Deja de adivinar y empieza a gestionar con datos precisos. Prueba la gestión de inventario profesional hoy.</p>
+                <a href="index.html#contact" class="cta-button large" data-i18n="inv.cta_btn">Solicitar Demo Gratuita</a>
             </section>
         </article>
     </main>
@@ -114,32 +117,32 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
                 <div>
                     <img src="img/logo-home.svg" alt="ADEstock Logo" style="max-width: 150px; margin-bottom: 1rem; filter: brightness(0) invert(1);">
-                    <p style="font-size: 0.9rem; line-height: 1.6; color: #bdc3c7;">Sistema de gestión de stock e inventario para pymes. Multi-depósito, multi-POS y control total de tu negocio.</p>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #bdc3c7;" data-i18n="footer.desc">Sistema de gestión de stock e inventario para pymes. Multi-depósito, multi-POS y control total de tu negocio.</p>
                 </div>
                 <div>
-                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;">Casos de Uso</h4>
+                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;" data-i18n="footer.use_cases">Casos de Uso</h4>
                     <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                        <li style="margin-bottom: 0.5rem;"><a href="casos-uso-almacen-dietetica.html" style="color: #bdc3c7; text-decoration: none;">Almacén y Dietética</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="casos-uso-minimarket.html" style="color: #bdc3c7; text-decoration: none;">Minimarket</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="tutoriales.html" style="color: #bdc3c7; text-decoration: none;">Tutoriales</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="casos-uso-almacen-dietetica.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.almacen">Almacén y Dietética</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="casos-uso-minimarket.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.minimarket">Minimarket</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="tutoriales.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.tutorials">Tutoriales</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;">Recursos</h4>
+                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;" data-i18n="footer.resources">Recursos</h4>
                     <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                        <li style="margin-bottom: 0.5rem;"><a href="index.html#features" style="color: #bdc3c7; text-decoration: none;">Características</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="index.html#pricing" style="color: #bdc3c7; text-decoration: none;">Precios</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="index.html#faq" style="color: #bdc3c7; text-decoration: none;">Preguntas Frecuentes</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="descargar-demo.html" style="color: #bdc3c7; text-decoration: none;">Descargar Demo</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="index.html#features" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.features">Características</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="index.html#pricing" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.prices">Precios</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="index.html#faq" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.faq">Preguntas Frecuentes</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="descargar-demo.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.dl_demo">Descargar Demo</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;">Contacto</h4>
+                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;" data-i18n="footer.contact_col">Contacto</h4>
                     <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
                         <li style="margin-bottom: 0.5rem;"><i class="fas fa-envelope" style="color: #3498db; margin-right: 8px;"></i><a href="mailto:contact@ademasistemas.com" style="color: #bdc3c7; text-decoration: none;">contact@ademasistemas.com</a></li>
                         <li style="margin-bottom: 0.5rem;"><i class="fab fa-whatsapp" style="color: #25D366; margin-right: 8px;"></i><a href="https://wa.me/5491127888995" target="_blank" style="color: #bdc3c7; text-decoration: none;">+54 9 11 2788-8995</a></li>
                         <li style="margin-bottom: 1rem;"><i class="fas fa-globe" style="color: #3498db; margin-right: 8px;"></i><a href="https://ademasistemas.com" target="_blank" style="color: #bdc3c7; text-decoration: none;">ademasistemas.com</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="contacto.html" style="color: #bdc3c7; text-decoration: none;">Sobre Nosotros</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="contacto.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.about_us">Sobre Nosotros</a></li>
                     </ul>
                     <div style="margin-top: 1rem;">
                         <a href="https://www.instagram.com/ademasistemas/" target="_blank" style="color: #fff; font-size: 1.5rem; margin-right: 1rem;" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -152,13 +155,14 @@
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem; color: #95a5a6;">
                 <p style="margin: 0;">&copy; <span id="footer-year"></span> ADEstock by <a href="https://ademasistemas.com" target="_blank" style="color: #3498db; text-decoration: none;">ADEMA Sistemas</a>. Todos los derechos reservados.</p>
                 <div>
-                    <a href="politica-privacidad.html" style="color: #95a5a6; text-decoration: none; margin-right: 1rem;">Política de Privacidad</a>
-                    <a href="terminos-condiciones.html" style="color: #95a5a6; text-decoration: none;">Términos y Condiciones</a>
+                    <a href="politica-privacidad.html" style="color: #95a5a6; text-decoration: none; margin-right: 1rem;" data-i18n="footer.privacy">Política de Privacidad</a>
+                    <a href="terminos-condiciones.html" style="color: #95a5a6; text-decoration: none;" data-i18n="footer.terms">Términos y Condiciones</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script src="i18n.js"></script>
 </body>
 </html>

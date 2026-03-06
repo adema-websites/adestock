@@ -1,0 +1,46 @@
+﻿{
+    "id":  "t6-recetas",
+    "title":  {
+                  "es":  "6) Recetas / Combos",
+                  "en":  "6) Recipes / Combos",
+                  "pt":  "6) Receitas / Combos"
+              },
+    "objective":  {
+                      "es":  "Crear productos elaborados (recetas) que descuentan stock de sus insumos automáticamente.",
+                      "en":  "Create prepared products (recipes) that automatically deduct stock from their ingredients.",
+                      "pt":  "Criar produtos elaborados (receitas) que descontam automaticamente o estoque de seus insumos."
+                  },
+    "steps":  {
+                  "es":  [
+                             "Andá a Cocina/Recetas.",
+                             "Creá una receta nueva y agregá los insumos necesarios con sus cantidades.",
+                             "Definí las porciones y revisá los gastos de elaboración.",
+                             "Guardá la receta.",
+                             "Andá a Productos, creá el producto final y asociale la receta creada."
+                         ],
+                  "en":  [
+                             "Go to Kitchen/Recipes.",
+                             "Create a new recipe and add required ingredients with quantities.",
+                             "Define portions and review production costs.",
+                             "Save the recipe.",
+                             "Go to Products, create the final product, and link the created recipe."
+                         ],
+                  "pt":  [
+                             "Vá para Cozinha/Receitas.",
+                             "Crie uma nova receita e adicione os insumos necessários com suas quantidades.",
+                             "Defina as porções e revise os custos de produção.",
+                             "Salve a receita.",
+                             "Vá para Produtos, crie o produto final e associe a receita criada."
+                         ]
+              },
+    "result":  {
+                   "es":  "Producto final listo para vender; al venderlo se descuenta el stock de los ingredientes.",
+                   "en":  "Final product ready to sell; when sold, ingredient stock is deducted.",
+                   "pt":  "Produto final pronto para vender; ao vender, o estoque dos ingredientes é descontado."
+               },
+    "videoLabel":  {
+                       "es":  "Video Tutorial: Recetas y Combos",
+                       "en":  "Video Tutorial: Recipes and Combos",
+                       "pt":  "Vídeo Tutorial: Receitas e Combos"
+                   }
+}

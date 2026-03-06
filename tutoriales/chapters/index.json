@@ -1,0 +1,64 @@
+﻿{
+    "chapters":  [
+                     {
+                         "id":  "t1-onboarding",
+                         "file":  "tutoriales/chapters/t1-onboarding.json"
+                     },
+                     {
+                         "id":  "t1-config-general",
+                         "file":  "tutoriales/chapters/t1-config-general.json"
+                     },
+                     {
+                         "id":  "t2-depositos",
+                         "file":  "tutoriales/chapters/t2-depositos.json"
+                     },
+                     {
+                         "id":  "t3-puntos-venta",
+                         "file":  "tutoriales/chapters/t3-puntos-venta.json"
+                     },
+                     {
+                         "id":  "t4-medios-pago",
+                         "file":  "tutoriales/chapters/t4-medios-pago.json"
+                     },
+                     {
+                         "id":  "t5-productos",
+                         "file":  "tutoriales/chapters/t5-productos.json"
+                     },
+                     {
+                         "id":  "t6-recetas",
+                         "file":  "tutoriales/chapters/t6-recetas.json"
+                     },
+                     {
+                         "id":  "t7-ventas",
+                         "file":  "tutoriales/chapters/t7-ventas.json"
+                     },
+                     {
+                         "id":  "t8-compras",
+                         "file":  "tutoriales/chapters/t8-compras.json"
+                     },
+                     {
+                         "id":  "t9-stock",
+                         "file":  "tutoriales/chapters/t9-stock.json"
+                     },
+                     {
+                         "id":  "t10-gastos",
+                         "file":  "tutoriales/chapters/t10-gastos.json"
+                     },
+                     {
+                         "id":  "t11-dashboard",
+                         "file":  "tutoriales/chapters/t11-dashboard.json"
+                     },
+                     {
+                         "id":  "t12-reportes",
+                         "file":  "tutoriales/chapters/t12-reportes.json"
+                     },
+                     {
+                         "id":  "t13-impresoras",
+                         "file":  "tutoriales/chapters/t13-impresoras.json"
+                     },
+                     {
+                         "id":  "t14-usuarios",
+                         "file":  "tutoriales/chapters/t14-usuarios.json"
+                     }
+                 ]
+}

@@ -159,19 +159,22 @@
             .subtitle { font-size: 15px; }
         }
     </style>
+    <script src="translations/es.js"></script>
+    <script src="translations/en.js"></script>
+    <script src="translations/pt.js"></script>
 </head>
-<body>
+<body data-page-title="link.title">
     <main class="panel" role="main">
         <section class="header">
-            <span class="badge">GOOGLE DRIVE + ADESTOCK</span>
-            <h1>Tu vinculación fue exitosa</h1>
-            <p class="subtitle">La conexión se realizó correctamente. Ya podés ejecutar respaldos y verlos en Drive.</p>
+            <span class="badge" data-i18n="link.badge">GOOGLE DRIVE + ADESTOCK</span>
+            <h1 data-i18n="link.h1">Tu vinculación fue exitosa</h1>
+            <p class="subtitle" data-i18n="link.subtitle">La conexión se realizó correctamente. Ya podés ejecutar respaldos y verlos en Drive.</p>
         </section>
 
         <section class="content">
-            <div class="ok-box">✅ Ya podés volver a ADEstock y continuar usando el sistema normalmente.</div>
+            <div class="ok-box" data-i18n="link.ok_box">✅ Ya podés volver a ADEstock y continuar usando el sistema normalmente.</div>
 
-            <h2>Paso a paso: respaldo en ADEstock</h2>
+            <h2 data-i18n="link.steps_h2">Paso a paso: respaldo en ADEstock</h2>
             <ol>
                 <li>Ingresá al módulo <strong>Respaldos → Configuraciones de respaldo</strong>.</li>
                 <li>Seleccioná la configuración deseada, elegí la acción <strong>“Ejecutar respaldo ahora (ZIP DB + media)”</strong> y hacé click en <strong>Ejecutar</strong>.</li>
@@ -180,13 +183,14 @@
                 <li>Repetí el proceso de forma diaria o semanal para mantener historial de seguridad.</li>
             </ol>
 
-            <p class="note">Sugerencia: usá una configuración activa por sucursal o equipo para ordenar mejor los respaldos.</p>
+            <p class="note" data-i18n="link.note">Sugerencia: usá una configuración activa por sucursal o equipo para ordenar mejor los respaldos.</p>
 
             <div class="actions">
-                <a href="index.html" class="btn btn-primary">Ir al inicio</a>
-                <button class="btn btn-ghost" onclick="window.close()">Cerrar esta pestaña</button>
+                <a href="index.html" class="btn btn-primary" data-i18n="link.btn_home">Ir al inicio</a>
+                <button class="btn btn-ghost" onclick="window.close()" data-i18n="link.btn_close">Cerrar esta pestaña</button>
             </div>
         </section>
     </main>
+    <script src="i18n.js"></script>
 </body>
 </html>

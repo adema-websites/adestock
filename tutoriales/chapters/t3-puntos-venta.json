@@ -1,0 +1,44 @@
+﻿{
+    "id":  "t3-puntos-venta",
+    "video":  "https://www.youtube.com/embed/PZ9C54cMuS4",
+    "title":  {
+                  "es":  "3) Puntos de venta",
+                  "en":  "3) Points of Sale",
+                  "pt":  "3) Pontos de Venda"
+              },
+    "objective":  {
+                      "es":  "Crear y configurar las cajas (POS) desde donde se realizarán las ventas.",
+                      "en":  "Create and configure the cash registers (POS) where sales will be made.",
+                      "pt":  "Criar e configurar os caixas (PDV) de onde as vendas serão realizadas."
+                  },
+    "steps":  {
+                  "es":  [
+                             "Andá a Agenda \u003e Cajas/Puntos de venta.",
+                             "Seleccioná Crear nueva caja.",
+                             "Asigná un nombre (ej: Caja Mostrador 1) y seleccioná el Depósito del cual descontará mercadería.",
+                             "Guardá la configuración."
+                         ],
+                  "en":  [
+                             "Go to Schedule \u003e Cash Registers/Points of Sale.",
+                             "Select Create new register.",
+                             "Assign a name (e.g., Front Counter Register 1) and select the Warehouse from which stock will be deducted.",
+                             "Save the configuration."
+                         ],
+                  "pt":  [
+                             "Vá para Agenda \u003e Caixas/Pontos de venda.",
+                             "Selecione Criar novo caixa.",
+                             "Atribua um nome (ex.: Caixa Balcão 1) e selecione o Depósito de onde o estoque será descontado.",
+                             "Salve a configuração."
+                         ]
+              },
+    "result":  {
+                   "es":  "Caja lista para operar y asignada a un usuario.",
+                   "en":  "Register ready to operate and assigned to a user.",
+                   "pt":  "Caixa pronto para operar e atribuído a um usuário."
+               },
+    "videoTitle":  {
+                       "es":  "Video Tutorial: Puntos de Venta",
+                       "en":  "Video Tutorial: Points of Sale",
+                       "pt":  "Vídeo Tutorial: Pontos de Venda"
+                   }
+}

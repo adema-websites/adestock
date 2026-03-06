@@ -1,0 +1,19 @@
+﻿{
+    "id":  "t1-config-general",
+    "video":  "https://www.youtube.com/embed/0Xf16cJOaTE",
+    "title":  {
+                  "es":  "Configuración General",
+                  "en":  "General Settings",
+                  "pt":  "Configurações Gerais"
+              },
+    "objective":  {
+                      "es":  "Repaso de las configuraciones generales del sistema y ajustes de preferencias.",
+                      "en":  "Overview of general system settings and preference adjustments.",
+                      "pt":  "Revisão das configurações gerais do sistema e ajustes de preferências."
+                  },
+    "videoTitle":  {
+                       "es":  "Video Tutorial: Configuración General",
+                       "en":  "Video Tutorial: General Settings",
+                       "pt":  "Vídeo Tutorial: Configurações Gerais"
+                   }
+}

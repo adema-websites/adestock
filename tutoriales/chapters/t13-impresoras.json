@@ -1,0 +1,43 @@
+﻿{
+    "id":  "t13-impresoras",
+    "title":  {
+                  "es":  "13) Cómo configurar las impresoras",
+                  "en":  "13) How to Configure Printers",
+                  "pt":  "13) Como Configurar Impressoras"
+              },
+    "objective":  {
+                      "es":  "Conectar y asignar impresoras térmicas a cada punto de venta.",
+                      "en":  "Connect and assign thermal printers to each point of sale.",
+                      "pt":  "Conectar e atribuir impressoras térmicas a cada ponto de venda."
+                  },
+    "steps":  {
+                  "es":  [
+                             "Andá a Configuración de impresoras dentro de la edición de Caja.",
+                             "Agregá una impresora indicando si es USB o de Red.",
+                             "Si es USB, introducí el nombre exacto de la impresora en Windows.",
+                             "Asignala al punto de venta y probá la impresión."
+                         ],
+                  "en":  [
+                             "Go to Printer settings inside Register editing.",
+                             "Add a printer specifying whether it is USB or Network.",
+                             "If USB, enter exact printer name in Windows.",
+                             "Assign it to point of sale and test printing."
+                         ],
+                  "pt":  [
+                             "Vá para Configuração de impressoras dentro da edição de Caixa.",
+                             "Adicione uma impressora indicando se é USB ou de Rede.",
+                             "Se for USB, informe o nome exato da impressora no Windows.",
+                             "Atribua ao ponto de venda e teste a impressão."
+                         ]
+              },
+    "result":  {
+                   "es":  "Tickets y comandas impresos automáticamente al vender.",
+                   "en":  "Receipts and kitchen tickets printed automatically when selling.",
+                   "pt":  "Tickets e comandas impressos automaticamente ao vender."
+               },
+    "videoLabel":  {
+                       "es":  "Video Tutorial: Configurar Impresoras",
+                       "en":  "Video Tutorial: Configure Printers",
+                       "pt":  "Vídeo Tutorial: Configurar Impressoras"
+                   }
+}

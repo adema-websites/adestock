@@ -1,0 +1,43 @@
+﻿{
+    "id":  "t12-reportes",
+    "title":  {
+                  "es":  "12) Reportes de caja (cierres, retiros)",
+                  "en":  "12) Cash Register Reports (Closings)",
+                  "pt":  "12) Relatórios de Caixa (Fechamentos)"
+              },
+    "objective":  {
+                      "es":  "Realizar el arqueo de caja al final del turno y generar reportes financieros.",
+                      "en":  "Perform cash register counting at shift end and generate financial reports.",
+                      "pt":  "Realizar a conferência do caixa ao final do turno e gerar relatórios financeiros."
+                  },
+    "steps":  {
+                  "es":  [
+                             "Andá a Reportes de caja o seleccioná Cerrar Caja en el POS.",
+                             "Seleccioná la caja y el período a cerrar.",
+                             "Ingresá el conteo de dinero físico (si usás arqueo ciego).",
+                             "Generá el cierre y verificá sobrantes/faltantes."
+                         ],
+                  "en":  [
+                             "Go to Cash reports or select Close Register in POS.",
+                             "Select the register and closing period.",
+                             "Enter physical cash count (if using blind cash count).",
+                             "Generate closing and verify overages/shortages."
+                         ],
+                  "pt":  [
+                             "Vá para Relatórios de caixa ou selecione Fechar Caixa no PDV.",
+                             "Selecione o caixa e o período de fechamento.",
+                             "Informe a contagem de dinheiro físico (se usar conferência cega).",
+                             "Gere o fechamento e verifique sobras/faltas."
+                         ]
+              },
+    "result":  {
+                   "es":  "Caja cerrada correctamente y reporte de turno generado.",
+                   "en":  "Register closed correctly and shift report generated.",
+                   "pt":  "Caixa fechado corretamente e relatório de turno gerado."
+               },
+    "videoLabel":  {
+                       "es":  "Video Tutorial: Cierre de Caja",
+                       "en":  "Video Tutorial: Register Closing",
+                       "pt":  "Vídeo Tutorial: Fechamento de Caixa"
+                   }
+}

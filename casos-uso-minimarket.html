@@ -51,8 +51,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles-modern.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> </head>
-<body>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="translations/es.js"></script>
+    <script src="translations/en.js"></script>
+    <script src="translations/pt.js"></script>
+</head>
+<body data-page-title="mini.title" data-page-desc="mini.meta_desc">
     <header class="hero">
         <nav class="navbar">
             <div class="logo">
@@ -60,20 +64,20 @@
                     <img src="img/logo-home.svg" alt="ADEstock Logo" class="logo-img">
                 </a>
             </div>
-            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <button class="menu-toggle" aria-label="Toggle menu" data-i18n-aria="nav.menu_aria">☰</button>
             <ul class="nav-links">
-                <li><a href="index.html#features">Características</a></li>
-                <li><a href="index.html#target-audience">¿Para Quién Es?</a></li>
-                <li><a href="index.html#faq">Preguntas</a></li>
-                <li><a href="precios.html">Precios</a></li>
-                <li><a href="tutoriales.html">Tutoriales</a></li>
-                <li><a href="contacto.html" class="cta-button">Contacto</a></li>
+                <li><a href="index.html#features" data-i18n="nav.features">Características</a></li>
+                <li><a href="index.html#target-audience" data-i18n="nav.audience">¿Para Quién Es?</a></li>
+                <li><a href="index.html#faq" data-i18n="nav.faq">Preguntas</a></li>
+                <li><a href="precios.html" data-i18n="nav.prices">Precios</a></li>
+                <li><a href="tutoriales.html" data-i18n="nav.tutorials">Tutoriales</a></li>
+                <li><a href="contacto.html" class="cta-button" data-i18n="nav.contact">Contacto</a></li>
             </ul>
         </nav>
         <div class="hero-content">
-            <h1>Gestión para Minimarkets y Pequeños Supermercados</h1>
-            <p>Optimiza tus ventas y controla tu stock en tiempo real. Múltiples cajas POS, scanner de códigos y reportes completos para tu negocio.</p>
-            <a href="index.html#contact" class="cta-button large">Probar Gratis</a>
+            <h1 data-i18n="mini.hero_h1">Gestión para Minimarkets y Pequeños Supermercados</h1>
+            <p data-i18n="mini.hero_p">Optimiza tus ventas y controla tu stock en tiempo real. Múltiples cajas POS, scanner de códigos y reportes completos para tu negocio.</p>
+            <a href="index.html#contact" class="cta-button large" data-i18n="mini.hero_cta">Probar Gratis</a>
         </div>
     </header>
 
@@ -87,7 +91,7 @@
 
         <!-- Main Content Section -->
         <section id="features" class="features-section">
-            <h2>Control Total para tu Negocio: Sistema de Gestión Integral (ADEstock)</h2>
+            <h2 data-i18n="mini.feat_h2">Control Total para tu Negocio: Sistema de Gestión Integral (ADEstock)</h2>
             <div style="max-width: 1000px; margin: 0 auto; text-align: left; line-height: 1.8; font-size: 1.05rem;">
                 <p style="margin-bottom: 30px;">Transforma la administración de tu almacén o kiosco con una herramienta que combina un Punto de Venta moderno con un potente Panel de Administración. Mantén tu negocio ordenado y bajo control, desde la caja hasta el depósito.</p>
                 
@@ -127,38 +131,38 @@
         </section>
 
         <section id="how-it-works" class="how-it-works-section">
-            <h2>Tu operación diaria con ADEstock</h2>
+            <h2 data-i18n="mini.hiw_h2">Tu operación diaria con ADEstock</h2>
             <div class="steps-container">
                  <div class="step-line"></div> <div class="step-card">
                     <div class="step-number">1</div>
-                    <h3>Apertura de Caja</h3>
-                    <p>Cada cajero abre su caja con el monto inicial. ADEstock registra todas las transacciones del día.</p>
+                    <h3 data-i18n="mini.step1_h3">Apertura de Caja</h3>
+                    <p data-i18n="mini.step1_p">Cada cajero abre su caja con el monto inicial. ADEstock registra todas las transacciones del día.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">2</div>
-                    <h3>Ventas Rápidas</h3>
-                    <p>Escanea productos o búscalos por nombre. El sistema descuenta stock automáticamente y genera tickets.</p>
+                    <h3 data-i18n="mini.step2_h3">Ventas Rápidas</h3>
+                    <p data-i18n="mini.step2_p">Escanea productos o búscalos por nombre. El sistema descuenta stock automáticamente y genera tickets.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">3</div>
-                    <h3>Reposición de Stock</h3>
-                    <p>Registra compras a proveedores. El stock se actualiza instantáneamente en todos los puntos de venta.</p>
+                    <h3 data-i18n="mini.step3_h3">Reposición de Stock</h3>
+                    <p data-i18n="mini.step3_p">Registra compras a proveedores. El stock se actualiza instantáneamente en todos los puntos de venta.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">4</div>
-                    <h3>Cierre y Reportes</h3>
-                    <p>Cierra cada caja al final del día. Obtén reportes de ventas, productos más vendidos y rentabilidad.</p>
+                    <h3 data-i18n="mini.step4_h3">Cierre y Reportes</h3>
+                    <p data-i18n="mini.step4_p">Cierra cada caja al final del día. Obtén reportes de ventas, productos más vendidos y rentabilidad.</p>
                 </div>
             </div>
-            <a href="tutoriales.html" class="cta-button secondary">Ver Tutoriales</a>
+            <a href="tutoriales.html" class="cta-button secondary" data-i18n="mini.hiw_cta">Ver Tutoriales</a>
         </section>
 
         <section id="faq" class="faq-section">
-            <h2>Preguntas Frecuentes - Minimarket</h2>
+            <h2 data-i18n="mini.faq_h2">Preguntas Frecuentes - Minimarket</h2>
             <div class="faq-container">
                 <div class="faq-item">
-                    <button class="faq-question">¿Cómo funciona el sistema de recetas y producción para productos elaborados?</button>
-                    <div class="faq-answer">
+                    <button class="faq-question"><span data-i18n="mini.faq1_q">¿Cómo funciona el sistema de recetas y producción para productos elaborados?</span></button>
+                    <div class="faq-answer" data-i18n-html="mini.faq1_a">
                         <p>El sistema de recetas de ADEstock está diseñado para negocios que fabrican sus propios productos (panificados, comidas preparadas, etc.), permitiendo un control preciso de costos y stock:</p>
                         <ul style="margin-top: 10px; margin-bottom: 10px; padding-left: 20px;">
                             <li><strong>Creación de fichas técnicas:</strong> Define cada producto elaborado con su lista de insumos y cantidades exactas necesarias.</li>
@@ -170,8 +174,8 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">¿Cómo gestiona ADEstock las actualizaciones de precios ante la inflación?</button>
-                    <div class="faq-answer">
+                    <button class="faq-question"><span data-i18n="mini.faq2_q">¿Cómo gestiona ADEstock las actualizaciones de precios ante la inflación?</span></button>
+                    <div class="faq-answer" data-i18n-html="mini.faq2_a">
                         <p>ADEstock automatiza la gestión de precios para ahorrarte horas de trabajo manual en contextos inflacionarios:</p>
                         <ul style="margin-top: 10px; margin-bottom: 10px; padding-left: 20px;">
                             <li><strong>Actualización en cascada:</strong> Al cargar una compra con un nuevo precio de insumo, el sistema recalcula automáticamente el costo de todos los productos elaborados que utilizan ese ingrediente.</li>
@@ -183,8 +187,8 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">¿Qué es la auditoría inteligente y cómo me ayuda a evitar pérdidas?</button>
-                    <div class="faq-answer">
+                    <button class="faq-question"><span data-i18n="mini.faq3_q">¿Qué es la auditoría inteligente y cómo me ayuda a evitar pérdidas?</span></button>
+                    <div class="faq-answer" data-i18n-html="mini.faq3_a">
                         <p>La herramienta de auditoría de ADEstock es tu asistente virtual que revisa constantemente la consistencia de tu inventario, especialmente útil cuando manejas cientos o miles de productos:</p>
                         <ul style="margin-top: 10px; margin-bottom: 10px; padding-left: 20px;">
                             <li><strong>Detección de productos sin precio:</strong> Identifica artículos que tienes en stock pero que no tienen precio de venta asignado, evitando errores en el mostrador.</li>
@@ -197,8 +201,8 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">¿Puedo usar lectores de códigos de barras con ADEstock?</button>
-                    <div class="faq-answer">
+                    <button class="faq-question"><span data-i18n="mini.faq4_q">¿Puedo usar lectores de códigos de barras con ADEstock?</span></button>
+                    <div class="faq-answer" data-i18n-html="mini.faq4_a">
                         <p>Sí, ADEstock tiene soporte completo para escaneo de códigos de barras, una característica esencial para la agilidad en minimarkets:</p>
                         <ul style="margin-top: 10px; margin-bottom: 10px; padding-left: 20px;">
                             <li><strong>Compatibilidad plug and play:</strong> Funciona con lectores USB estándar. Solo conectas el scanner y está listo para usar, sin instalaciones complicadas.</li>
@@ -210,8 +214,8 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">¿Cuántas cajas POS puedo tener operando simultáneamente?</button>
-                    <div class="faq-answer">
+                    <button class="faq-question"><span data-i18n="mini.faq5_q">¿Cuántas cajas POS puedo tener operando simultáneamente?</span></button>
+                    <div class="faq-answer" data-i18n-html="mini.faq5_a">
                         <p>ADEstock soporta múltiples puntos de venta funcionando al mismo tiempo, ideal para minimarkets y supermercados con varios cajeros:</p>
                         <ul style="margin-top: 10px; margin-bottom: 10px; padding-left: 20px;">
                             <li><strong>Cajas ilimitadas:</strong> Puedes configurar tantas cajas como necesites (depende de tu licencia), cada una con su propio terminal de venta.</li>
@@ -224,8 +228,8 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">¿Cómo controlo que no me falte mercadería en las góndolas?</button>
-                    <div class="faq-answer">
+                    <button class="faq-question"><span data-i18n="mini.faq6_q">¿Cómo controlo que no me falte mercadería en las góndolas?</span></button>
+                    <div class="faq-answer" data-i18n-html="mini.faq6_a">
                         <p>ADEstock incluye un sistema inteligente de alertas y reportes de stock para que nunca te quedes sin productos clave:</p>
                         <ul style="margin-top: 10px; margin-bottom: 10px; padding-left: 20px;">
                             <li><strong>Stock mínimo configurable:</strong> Define para cada producto cuál es la cantidad mínima que debes mantener en inventario.</li>
@@ -238,8 +242,8 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">¿Qué reportes y análisis ofrece ADEstock para mi minimarket?</button>
-                    <div class="faq-answer">
+                    <button class="faq-question"><span data-i18n="mini.faq7_q">¿Qué reportes y análisis ofrece ADEstock para mi minimarket?</span></button>
+                    <div class="faq-answer" data-i18n-html="mini.faq7_a">
                         <p>ADEstock transforma tus datos de ventas en información accionable con reportes completos y fáciles de entender:</p>
                         <ul style="margin-top: 10px; margin-bottom: 10px; padding-left: 20px;">
                             <li><strong>Top de productos más vendidos:</strong> Conoce qué productos son tus estrellas y cuáles no se venden para tomar decisiones de compra inteligentes.</li>
@@ -253,8 +257,8 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">¿Funciona ADEstock sin conexión a internet?</button>
-                    <div class="faq-answer">
+                    <button class="faq-question"><span data-i18n="mini.faq8_q">¿Funciona ADEstock sin conexión a internet?</span></button>
+                    <div class="faq-answer" data-i18n-html="mini.faq8_a">
                         <p>Sí, ADEstock está diseñado para funcionar de manera completamente offline, garantizando continuidad operativa sin depender de la conexión a internet:</p>
                         <ul style="margin-top: 10px; margin-bottom: 10px; padding-left: 20px;">
                             <li><strong>Instalación local:</strong> El software se instala directamente en tu PC o servidor local, todos los datos permanecen en tu equipo.</li>
@@ -267,16 +271,16 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">¿Cómo funciona exactamente la actualización de precios en cuentas corrientes?</button>
-                    <div class="faq-answer">
+                    <button class="faq-question"><span data-i18n="mini.faq9_q">¿Cómo funciona exactamente la actualización de precios en cuentas corrientes?</span></button>
+                    <div class="faq-answer" data-i18n-html="mini.faq9_a">
                         <p>El sistema actualiza el saldo de la cuenta corriente de forma automática al precio real del día. Esto significa que, al momento en que el cliente va a pagar, el sistema toma el precio actual del producto tal como figura cargado en ese instante, en lugar del precio histórico de cuando se retiró la mercadería.</p>
                         <p style="margin-top: 10px;">Esto evita que tengas que realizar cálculos manuales, discusiones sobre porcentajes de recargo o especulaciones sobre la inflación según el tiempo que pasó desde la compra. El cliente paga lo que el producto vale HOY, de manera transparente y automática, protegiendo tu margen de ganancia sin generar conflictos.</p>
                         <p style="margin-top: 10px;"><strong>Beneficio clave:</strong> Eliminas la necesidad de negociar recargos por tiempo transcurrido o hacer complicados cálculos de ajuste por inflación.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">¿Qué tipo de alertas específicas muestra la herramienta de auditoría?</button>
-                    <div class="faq-answer">
+                    <button class="faq-question"><span data-i18n="mini.faq10_q">¿Qué tipo de alertas específicas muestra la herramienta de auditoría?</span></button>
+                    <div class="faq-answer" data-i18n-html="mini.faq10_a">
                         <p>La herramienta de auditoría analiza tu base de datos y muestra alertas para detectar errores antes de que generen pérdidas, señalando específicamente:</p>
                         <ul style="margin-top: 10px; margin-bottom: 10px; padding-left: 20px;">
                             <li><strong>Productos sin precio de venta:</strong> Artículos que están cargados en el sistema pero no tienen precio de venta asignado, lo que podría generar errores al intentar venderlos.</li>
@@ -289,8 +293,8 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">¿Cómo exporto mis reportes de ventas a formato Excel o PDF?</button>
-                    <div class="faq-answer">
+                    <button class="faq-question"><span data-i18n="mini.faq11_q">¿Cómo exporto mis reportes de ventas a formato Excel o PDF?</span></button>
+                    <div class="faq-answer" data-i18n-html="mini.faq11_a">
                         <p>Para exportar la información, debes buscar los atajos rápidos de descarga que se encuentran disponibles en cada área del sistema. Desde allí, puedes seleccionar si deseas bajar la información en formato Excel o PDF, según lo que te resulte más cómodo para trabajar o enviar a tu contador.</p>
                         <p style="margin-top: 10px;"><strong>Esta función aplica a múltiples áreas:</strong></p>
                         <ul style="margin-top: 10px; margin-bottom: 10px; padding-left: 20px;">
@@ -308,9 +312,9 @@
         </section>
 
         <section id="contact" class="contact-section">
-            <h2>¿Listo para Modernizar tu Minimarket?</h2>
-            <p>Prueba ADEstock gratis por 3 días y descubre cómo agiliza la gestión de tu negocio minorista.</p>
-            <button id="openDownloadModal" class="cta-button large">Descargar Demo</button>
+            <h2 data-i18n="mini.cta2_h2">¿Listo para Modernizar tu Minimarket?</h2>
+            <p data-i18n="mini.cta2_p">Prueba ADEstock gratis por 3 días y descubre cómo agiliza la gestión de tu negocio minorista.</p>
+            <button id="openDownloadModal" class="cta-button large" data-i18n="mini.cta2_btn">Descargar Demo</button>
             <div class="social-links-contact">
                 <a href="https://www.instagram.com/ademasistemas/" target="_blank" aria-label="Instagram de ADEMA Sistemas"><i class="fab fa-instagram"></i></a>
                 <a href="https://ademasistemas.com" target="_blank" aria-label="Sitio web de ADEMA Sistemas"><i class="fas fa-globe"></i></a>
@@ -324,32 +328,32 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
                 <div>
                     <img src="img/logo-home.svg" alt="ADEstock Logo" style="max-width: 150px; margin-bottom: 1rem; filter: brightness(0) invert(1);">
-                    <p style="font-size: 0.9rem; line-height: 1.6; color: #bdc3c7;">Sistema de gestión de stock e inventario para pymes. Multi-depósito, multi-POS y control total de tu negocio.</p>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #bdc3c7;" data-i18n="footer.desc">Sistema de gestión de stock e inventario para pymes. Multi-depósito, multi-POS y control total de tu negocio.</p>
                 </div>
                 <div>
-                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;">Casos de Uso</h4>
+                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;" data-i18n="footer.use_cases">Casos de Uso</h4>
                     <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                        <li style="margin-bottom: 0.5rem;"><a href="casos-uso-almacen-dietetica.html" style="color: #bdc3c7; text-decoration: none;">Almacén y Dietética</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="casos-uso-minimarket.html" style="color: #bdc3c7; text-decoration: none;">Minimarket</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="tutoriales.html" style="color: #bdc3c7; text-decoration: none;">Tutoriales</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="casos-uso-almacen-dietetica.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.almacen">Almacén y Dietética</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="casos-uso-minimarket.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.minimarket">Minimarket</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="tutoriales.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.tutorials">Tutoriales</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;">Recursos</h4>
+                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;" data-i18n="footer.resources">Recursos</h4>
                     <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                        <li style="margin-bottom: 0.5rem;"><a href="index.html#features" style="color: #bdc3c7; text-decoration: none;">Características</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="index.html#pricing" style="color: #bdc3c7; text-decoration: none;">Precios</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="index.html#faq" style="color: #bdc3c7; text-decoration: none;">Preguntas Frecuentes</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="descargar-demo.html" style="color: #bdc3c7; text-decoration: none;">Descargar Demo</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="index.html#features" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.features">Características</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="index.html#pricing" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.prices">Precios</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="index.html#faq" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.faq">Preguntas Frecuentes</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="descargar-demo.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.dl_demo">Descargar Demo</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;">Contacto</h4>
+                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;" data-i18n="footer.contact_col">Contacto</h4>
                     <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
                         <li style="margin-bottom: 0.5rem;"><i class="fas fa-envelope" style="color: #3498db; margin-right: 8px;"></i><a href="mailto:contact@ademasistemas.com" style="color: #bdc3c7; text-decoration: none;">contact@ademasistemas.com</a></li>
                         <li style="margin-bottom: 0.5rem;"><i class="fab fa-whatsapp" style="color: #25D366; margin-right: 8px;"></i><a href="https://wa.me/5491127888995" target="_blank" style="color: #bdc3c7; text-decoration: none;">+54 9 11 2788-8995</a></li>
                         <li style="margin-bottom: 1rem;"><i class="fas fa-globe" style="color: #3498db; margin-right: 8px;"></i><a href="https://ademasistemas.com" target="_blank" style="color: #bdc3c7; text-decoration: none;">ademasistemas.com</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="contacto.html" style="color: #bdc3c7; text-decoration: none;">Sobre Nosotros</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="contacto.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.about_us">Sobre Nosotros</a></li>
                     </ul>
                     <div style="margin-top: 1rem;">
                         <a href="https://www.instagram.com/ademasistemas/" target="_blank" style="color: #fff; font-size: 1.5rem; margin-right: 1rem;" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -362,8 +366,8 @@
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem; color: #95a5a6;">
                 <p style="margin: 0;">&copy; <span id="footer-year"></span> ADEstock by <a href="https://ademasistemas.com" target="_blank" style="color: #3498db; text-decoration: none;">ADEMA Sistemas</a>. Todos los derechos reservados.</p>
                 <div>
-                    <a href="politica-privacidad.html" style="color: #95a5a6; text-decoration: none; margin-right: 1rem;">Política de Privacidad</a>
-                    <a href="terminos-condiciones.html" style="color: #95a5a6; text-decoration: none;">Términos y Condiciones</a>
+                    <a href="politica-privacidad.html" style="color: #95a5a6; text-decoration: none; margin-right: 1rem;" data-i18n="footer.privacy">Política de Privacidad</a>
+                    <a href="terminos-condiciones.html" style="color: #95a5a6; text-decoration: none;" data-i18n="footer.terms">Términos y Condiciones</a>
                 </div>
             </div>
         </div>
@@ -432,6 +436,7 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="i18n.js"></script>
 </body>
 <style>
 .whatsapp-float {

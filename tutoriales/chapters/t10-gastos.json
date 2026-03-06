@@ -1,0 +1,46 @@
+﻿{
+    "id":  "t10-gastos",
+    "title":  {
+                  "es":  "10) Registro de gastos",
+                  "en":  "10) Recording Expenses",
+                  "pt":  "10) Registro de Despesas"
+              },
+    "objective":  {
+                      "es":  "Cargar gastos operativos y retiros de dinero de la caja.",
+                      "en":  "Record operating expenses and cash withdrawals from the register.",
+                      "pt":  "Lançar despesas operacionais e retiradas de dinheiro do caixa."
+                  },
+    "steps":  {
+                  "es":  [
+                             "Andá a Gastos o hacé un Retiro desde el punto de venta.",
+                             "Creá un Nuevo gasto.",
+                             "Seleccioná la categoría (ej: Alquiler, Limpieza, Proveedores varios).",
+                             "Indicá el monto y el medio de pago/caja de origen.",
+                             "Guardá el registro."
+                         ],
+                  "en":  [
+                             "Go to Expenses or make a Withdrawal from the point of sale.",
+                             "Create a New expense.",
+                             "Select category (e.g., Rent, Cleaning, Misc. Suppliers).",
+                             "Enter amount and source payment method/register.",
+                             "Save the record."
+                         ],
+                  "pt":  [
+                             "Vá para Despesas ou faça uma Retirada no ponto de venda.",
+                             "Crie uma Nova despesa.",
+                             "Selecione a categoria (ex.: Aluguel, Limpeza, Fornecedores diversos).",
+                             "Informe o valor e o meio de pagamento/caixa de origem.",
+                             "Salve o registro."
+                         ]
+              },
+    "result":  {
+                   "es":  "Gasto registrado, descontado de la caja y visible en reportes de rentabilidad.",
+                   "en":  "Expense recorded, deducted from register, and visible in profitability reports.",
+                   "pt":  "Despesa registrada, descontada do caixa e visível nos relatórios de rentabilidade."
+               },
+    "videoLabel":  {
+                       "es":  "Video Tutorial: Registro de Gastos",
+                       "en":  "Video Tutorial: Expense Recording",
+                       "pt":  "Vídeo Tutorial: Registro de Despesas"
+                   }
+}

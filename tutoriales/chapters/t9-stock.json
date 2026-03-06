@@ -1,0 +1,43 @@
+﻿{
+    "id":  "t9-stock",
+    "title":  {
+                  "es":  "9) Movimientos de stock \u0026 dashboard",
+                  "en":  "9) Stock Movements \u0026 Dashboard",
+                  "pt":  "9) Movimentos de Estoque \u0026 Dashboard"
+              },
+    "objective":  {
+                      "es":  "Consultar, ajustar y auditar el stock en tiempo real.",
+                      "en":  "Check, adjust, and audit stock in real time.",
+                      "pt":  "Consultar, ajustar e auditar o estoque em tempo real."
+                  },
+    "steps":  {
+                  "es":  [
+                             "Andá a Stock \u003e Movimientos.",
+                             "Filtrá por depósito, producto o fecha para rastrear cambios.",
+                             "Usá la herramienta de ajustes para corregir diferencias de inventario.",
+                             "Ingresá al Dashboard de inventario para ver valoración total y alertas de stock bajo."
+                         ],
+                  "en":  [
+                             "Go to Stock \u003e Movements.",
+                             "Filter by warehouse, product, or date to track changes.",
+                             "Use adjustment tools to correct inventory differences.",
+                             "Open Inventory Dashboard to view total valuation and low-stock alerts."
+                         ],
+                  "pt":  [
+                             "Vá para Estoque \u003e Movimentos.",
+                             "Filtre por depósito, produto ou data para rastrear alterações.",
+                             "Use a ferramenta de ajustes para corrigir diferenças de inventário.",
+                             "Acesse o Dashboard de inventário para ver a valorização total e alertas de estoque baixo."
+                         ]
+              },
+    "result":  {
+                   "es":  "Visión clara del patrimonio en mercadería y control de mermas.",
+                   "en":  "Clear view of merchandise assets and shrinkage control.",
+                   "pt":  "Visão clara do patrimônio em mercadorias e controle de perdas."
+               },
+    "videoLabel":  {
+                       "es":  "Video Tutorial: Control de Stock",
+                       "en":  "Video Tutorial: Stock Control",
+                       "pt":  "Vídeo Tutorial: Controle de Estoque"
+                   }
+}

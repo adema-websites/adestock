@@ -23,8 +23,11 @@
     <link rel="stylesheet" href="styles-modern.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
      <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="translations/es.js"></script>
+    <script src="translations/en.js"></script>
+    <script src="translations/pt.js"></script>
 </head>
-<body>
+<body data-page-title="mdep.title" data-page-desc="mdep.meta_desc">
      <header class="page-header">
          <nav class="navbar">
             <div class="logo">
@@ -32,21 +35,21 @@
                     <img src="img/logo-home.svg" alt="ADEstock Logo">
                 </a>
             </div>
-            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <button class="menu-toggle" aria-label="Toggle menu" data-i18n-aria="nav.menu_aria">☰</button>
             <ul class="nav-links">
-                <li><a href="index.html#features">Características</a></li>
-                <li><a href="index.html#target-audience">¿Para Quién Es?</a></li>
-                <li><a href="index.html#faq">Preguntas Frecuentes</a></li>
-                <li><a href="precios.html">Precios</a></li>
-                <li><a href="tutoriales.html">Tutoriales</a></li>
-                <li><a href="contacto.html" class="cta-button">Contacto</a></li>
+                <li><a href="index.html#features" data-i18n="nav.features">Características</a></li>
+                <li><a href="index.html#target-audience" data-i18n="nav.audience">¿Para Quién Es?</a></li>
+                <li><a href="index.html#faq" data-i18n="nav.faq">Preguntas Frecuentes</a></li>
+                <li><a href="precios.html" data-i18n="nav.prices">Precios</a></li>
+                <li><a href="tutoriales.html" data-i18n="nav.tutorials">Tutoriales</a></li>
+                <li><a href="contacto.html" class="cta-button" data-i18n="nav.contact">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="container page-content">
         <article>
-            <h1>Gestiona Múltiples Depósitos y Sucursales con ADEstock</h1>
+            <h1 data-i18n="mdep.h1">Gestiona Múltiples Depósitos y Sucursales con ADEstock</h1>
             
             <!-- Sección de Video Destacado -->
             <div class="video-container-highlight" style="margin-bottom: 2rem; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
@@ -54,11 +57,11 @@
                 <iframe width="100%" height="400" src="https://www.youtube.com/embed/VIDEO_ID_AQUI?rel=0" title="Gestión Multi-Depósito en ADEstock" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display: block;"></iframe>
             </div>
 
-            <p class="intro-paragraph">Escalar tu negocio no debe ser un dolor de cabeza logístico. ADEstock te ofrece una plataforma centralizada para administrar infinitas sucursales, depósitos y puntos de venta, manteniendo todo bajo un mismo techo digital.</p>
+            <p class="intro-paragraph" data-i18n="mdep.intro_p">Escalar tu negocio no debe ser un dolor de cabeza logístico. ADEstock te ofrece una plataforma centralizada para administrar infinitas sucursales, depósitos y puntos de venta, manteniendo todo bajo un mismo techo digital.</p>
 
             <section id="estructura-flexible">
-                <h2><i class="fas fa-sitemap"></i> Infraestructura Escalable: Crece sin límites</h2>
-                <p>Ya sea que tengas 2 locales o una cadena de franquicias, el sistema se adapta a tu estructura operativa.</p>
+                <h2><i class="fas fa-sitemap"></i> <span data-i18n="mdep.s1_h2">Infraestructura Escalable: Crece sin límites</span></h2>
+                <p data-i18n="mdep.s1_p">Ya sea que tengas 2 locales o una cadena de franquicias, el sistema se adapta a tu estructura operativa.</p>
                 <ul>
                     <li><i class="fas fa-check"></i> <strong>Depósitos Ilimitados:</strong> Configura desde el "Depósito Central" hasta pequeños almacenes en cada sucursal o depósitos virtuales para e-commerce.</li>
                     <li><i class="fas fa-check"></i> <strong>Segmentación Lógica:</strong> Mantén separada la administración, stock y facturación de cada ubicación, pero con visión global.</li>
@@ -68,8 +71,8 @@
             </section>
 
             <section id="puntos-venta">
-                <h2><i class="fas fa-network-wired"></i> Conexión Inteligente entre POS y Depósitos</h2>
-                <p>La clave del éxito multi-sucursal es la correcta asignación de recursos. Evita quiebres de stock vendiendo lo que realmente tienes.</p>
+                <h2><i class="fas fa-network-wired"></i> <span data-i18n="mdep.s2_h2">Conexión Inteligente entre POS y Depósitos</span></h2>
+                <p data-i18n="mdep.s2_p">La clave del éxito multi-sucursal es la correcta asignación de recursos. Evita quiebres de stock vendiendo lo que realmente tienes.</p>
                 <ul>
                     <li><i class="fas fa-check"></i> <strong>Vinculación Directa:</strong> Cada Punto de Venta (POS) se conecta a un depósito específico. Si vendes en la Sucursal Norte, descuentas del depósito Norte.</li>
                     <li><i class="fas fa-check"></i> <strong>Stock de Seguridad por Sucursal:</strong> Configura alertas de reposición independientes para cada local según su volumen de venta.</li>
@@ -79,8 +82,8 @@
             </section>
 
             <section id="transferencias-stock">
-                <h2><i class="fas fa-truck-loading"></i> Logística Interna: Transferencias de Mercadería</h2>
-                <p>Mueve productos entre tus depósitos con total trazabilidad y seguridad. Dile adiós a las planillas de excel compartidas.</p>
+                <h2><i class="fas fa-truck-loading"></i> <span data-i18n="mdep.s3_h2">Logística Interna: Transferencias de Mercancía</span></h2>
+                <p data-i18n="mdep.s3_p">Mueve productos entre tus depósitos con total trazabilidad y seguridad. Dile adiós a las planillas de excel compartidas.</p>
                  <ul>
                     <li><i class="fas fa-check"></i> <strong>Flujo de Envío y Recepción:</strong> Genera órdenes de transferencia que restan stock del origen y lo dejan "en tránsito" hasta su confirmación en destino.</li>
                     <li><i class="fas fa-check"></i> <strong>Control de Recepción:</strong> El encargado de la sucursal receptora verifica la mercadería y acepta el ingreso, asegurando que no haya faltantes en el camino.</li>
@@ -90,8 +93,8 @@
             </section>
 
             <section id="control-centralizado">
-                <h2><i class="fas fa-project-diagram"></i> Panel de Control Unificado (Headquarters)</h2>
-                <p>Como dueño o gerente, necesitas ver el panorama completo o hacer zoom en los detalles.</p>
+                <h2><i class="fas fa-project-diagram"></i> <span data-i18n="mdep.s4_h2">Panel de Control Unificado (Headquarters)</span></h2>
+                <p data-i18n="mdep.s4_p">Como dueño o gerente, necesitas ver el panorama completo o hacer zoom en los detalles.</p>
                 <ul>
                     <li><i class="fas fa-check"></i> <strong>Stock Global vs. Local:</strong> Consulta cuánto tienes de un producto en total y cómo está distribuido mapa a mapa.</li>
                     <li><i class="fas fa-check"></i> <strong>Comparativa de Rendimiento:</strong> Analiza qué sucursal vende más, cuál tiene mejor rotación y dónde se está acumulando stock inmovilizado.</li>
@@ -100,9 +103,9 @@
             </section>
 
              <section class="cta-section-inner">
-                <h3>Escala tu negocio con una base sólida</h3>
-                <p>La gestión multi-sucursal de ADEstock está diseñada para impulasar tu crecimiento, no para frenarlo.</p>
-                <a href="index.html#contact" class="cta-button large">Hablar con un Asesor</a>
+                <h3 data-i18n="mdep.cta_h3">Escala tu negocio con una base sólida</h3>
+                <p data-i18n="mdep.cta_p">La gestión multi-sucursal de ADEstock está diseñada para impulasar tu crecimiento, no para frenarlo.</p>
+                <a href="index.html#contact" class="cta-button large" data-i18n="mdep.cta_btn">Hablar con un Asesor</a>
             </section>
         </article>
     </main>
@@ -112,32 +115,32 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
                 <div>
                     <img src="img/logo-home.svg" alt="ADEstock Logo" style="max-width: 150px; margin-bottom: 1rem; filter: brightness(0) invert(1);">
-                    <p style="font-size: 0.9rem; line-height: 1.6; color: #bdc3c7;">Sistema de gestión de stock e inventario para pymes. Multi-depósito, multi-POS y control total de tu negocio.</p>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #bdc3c7;" data-i18n="footer.desc">Sistema de gestión de stock e inventario para pymes. Multi-depósito, multi-POS y control total de tu negocio.</p>
                 </div>
                 <div>
-                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;">Casos de Uso</h4>
+                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;" data-i18n="footer.use_cases">Casos de Uso</h4>
                     <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                        <li style="margin-bottom: 0.5rem;"><a href="casos-uso-almacen-dietetica.html" style="color: #bdc3c7; text-decoration: none;">Almacén y Dietética</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="casos-uso-minimarket.html" style="color: #bdc3c7; text-decoration: none;">Minimarket</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="tutoriales.html" style="color: #bdc3c7; text-decoration: none;">Tutoriales</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="casos-uso-almacen-dietetica.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.almacen">Almacén y Dietética</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="casos-uso-minimarket.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.minimarket">Minimarket</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="tutoriales.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.tutorials">Tutoriales</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;">Recursos</h4>
+                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;" data-i18n="footer.resources">Recursos</h4>
                     <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                        <li style="margin-bottom: 0.5rem;"><a href="index.html#features" style="color: #bdc3c7; text-decoration: none;">Características</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="index.html#pricing" style="color: #bdc3c7; text-decoration: none;">Precios</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="index.html#faq" style="color: #bdc3c7; text-decoration: none;">Preguntas Frecuentes</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="descargar-demo.html" style="color: #bdc3c7; text-decoration: none;">Descargar Demo</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="index.html#features" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.features">Características</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="index.html#pricing" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.prices">Precios</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="index.html#faq" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.faq">Preguntas Frecuentes</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="descargar-demo.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.dl_demo">Descargar Demo</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;">Contacto</h4>
+                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;" data-i18n="footer.contact_col">Contacto</h4>
                     <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
                         <li style="margin-bottom: 0.5rem;"><i class="fas fa-envelope" style="color: #3498db; margin-right: 8px;"></i><a href="mailto:contact@ademasistemas.com" style="color: #bdc3c7; text-decoration: none;">contact@ademasistemas.com</a></li>
                         <li style="margin-bottom: 0.5rem;"><i class="fab fa-whatsapp" style="color: #25D366; margin-right: 8px;"></i><a href="https://wa.me/5491127888995" target="_blank" style="color: #bdc3c7; text-decoration: none;">+54 9 11 2788-8995</a></li>
                         <li style="margin-bottom: 1rem;"><i class="fas fa-globe" style="color: #3498db; margin-right: 8px;"></i><a href="https://ademasistemas.com" target="_blank" style="color: #bdc3c7; text-decoration: none;">ademasistemas.com</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="contacto.html" style="color: #bdc3c7; text-decoration: none;">Sobre Nosotros</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="contacto.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.about_us">Sobre Nosotros</a></li>
                     </ul>
                     <div style="margin-top: 1rem;">
                         <a href="https://www.instagram.com/ademasistemas/" target="_blank" style="color: #fff; font-size: 1.5rem; margin-right: 1rem;" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -150,13 +153,14 @@
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem; color: #95a5a6;">
                 <p style="margin: 0;">&copy; <span id="footer-year"></span> ADEstock by <a href="https://ademasistemas.com" target="_blank" style="color: #3498db; text-decoration: none;">ADEMA Sistemas</a>. Todos los derechos reservados.</p>
                 <div>
-                    <a href="politica-privacidad.html" style="color: #95a5a6; text-decoration: none; margin-right: 1rem;">Política de Privacidad</a>
-                    <a href="terminos-condiciones.html" style="color: #95a5a6; text-decoration: none;">Términos y Condiciones</a>
+                    <a href="politica-privacidad.html" style="color: #95a5a6; text-decoration: none; margin-right: 1rem;" data-i18n="footer.privacy">Política de Privacidad</a>
+                    <a href="terminos-condiciones.html" style="color: #95a5a6; text-decoration: none;" data-i18n="footer.terms">Términos y Condiciones</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script src="i18n.js"></script>
 </body>
 </html>

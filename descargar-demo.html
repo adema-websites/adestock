@@ -23,8 +23,11 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles-modern.css">
+    <script src="translations/es.js"></script>
+    <script src="translations/en.js"></script>
+    <script src="translations/pt.js"></script>
 </head>
-<body>
+<body data-page-title="dl.title" data-page-desc="dl.meta_desc">
     <header class="hero">
         <nav class="navbar">
             <div class="logo">
@@ -33,24 +36,24 @@
                 </a>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html#features">Características</a></li>
-                <li><a href="index.html#target-audience">¿Para Quién Es?</a></li>
-                <li><a href="index.html#faq">Preguntas Frecuentes</a></li>
-                <li><a href="precios.html">Precios</a></li>
-                <li><a href="tutoriales.html">Tutoriales</a></li>
-                <li><a href="contacto.html" class="cta-button">Contacto</a></li>
+                <li><a href="index.html#features" data-i18n="nav.features">Características</a></li>
+                <li><a href="index.html#target-audience" data-i18n="nav.audience">¿Para Quién Es?</a></li>
+                <li><a href="index.html#faq" data-i18n="nav.faq">Preguntas Frecuentes</a></li>
+                <li><a href="precios.html" data-i18n="nav.prices">Precios</a></li>
+                <li><a href="tutoriales.html" data-i18n="nav.tutorials">Tutoriales</a></li>
+                <li><a href="contacto.html" class="cta-button" data-i18n="nav.contact">Contacto</a></li>
             </ul>
         </nav>
         <div class="hero-content">
-            <h1>Descarga la Demo de ADEstock</h1>
+            <h1 data-i18n="dl.hero_h1">Descarga la Demo de ADEstock</h1>
         </div>
     </header>
     <main style="padding: 2rem 3% 3rem 3%;">
         <section style="max-width: 1000px; margin: 0 auto;">
             <!-- Sección de Video -->
             <div style="text-align: center; margin-bottom: 3rem;">
-                <h2 style="font-size: 2rem; color: #2c3e50; margin-bottom: 1rem;">Tutorial de Instalación</h2>
-                <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem;">Sigue este video paso a paso para instalar y configurar ADEstock en minutos</p>
+                <h2 style="font-size: 2rem; color: #2c3e50; margin-bottom: 1rem;" data-i18n="dl.install_h2">Tutorial de Instalación</h2>
+                <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem;" data-i18n="dl.install_p">Sigue este video paso a paso para instalar y configurar ADEstock en minutos</p>
                 
                 <div style="position: relative; width: 100%; max-width: 900px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">
                     <iframe 
@@ -66,16 +69,16 @@
 
             <!-- Pasos de Instalación -->
             <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 16px; padding: 3rem 2rem; color: white; margin-bottom: 3rem; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);">
-                <h2 style="font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Pasos para Empezar</h2>
+                <h2 style="font-size: 2rem; margin-bottom: 1.5rem; text-align: center;" data-i18n="dl.steps_h2">Pasos para Empezar</h2>
                 
                 <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 12px; padding: 2rem; margin-bottom: 2rem;">
                     <div style="display: flex; align-items: start; gap: 1.5rem; margin-bottom: 2rem;">
                         <div style="background: white; color: #667eea; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.3rem; flex-shrink: 0;">1</div>
                         <div>
-                            <h3 style="margin: 0 0 1rem 0; font-size: 1.3rem;"><i class="fas fa-download" style="margin-right: 8px;"></i>Descargar el Instalador</h3>
-                            <p style="margin: 0 0 1rem 0; opacity: 0.95;">Haz clic en el botón para obtener la última versión de ADEstock.</p>
+                            <h3 style="margin: 0 0 1rem 0; font-size: 1.3rem;"><i class="fas fa-download" style="margin-right: 8px;"></i><span data-i18n="dl.step1_h3">Descargar el Instalador</span></h3>
+                            <p style="margin: 0 0 1rem 0; opacity: 0.95;" data-i18n="dl.step1_p">Haz clic en el botón para obtener la última versión de ADEstock.</p>
                             <a href="https://github.com/adema-websites/adestock/releases/download/1.7.2v/Adestock_Installer_v1.7.2.exe" class="cta-button large" style="display: inline-block; background: #667eea; color: white; font-weight: 600; padding: 12px 30px; border-radius: 8px; text-decoration: none; transition: transform 0.2s;" download id="download-button">
-                                <i class="fas fa-download text-dark"></i> Descargar Demo
+                                <i class="fas fa-download text-dark"></i> <span data-i18n="dl.step1_btn">Descargar Demo</span>
                             </a>
                         </div>
                     </div>
@@ -83,25 +86,25 @@
                     <div style="display: flex; align-items: start; gap: 1.5rem; margin-bottom: 2rem;">
                         <div style="background: white; color: #667eea; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.3rem; flex-shrink: 0;">2</div>
                         <div>
-                            <h3 style="margin: 0 0 0.5rem 0; font-size: 1.3rem;"><i class="fas fa-cog" style="margin-right: 8px;"></i>Instalar ADEstock</h3>
-                            <p style="margin: 0; opacity: 0.95;">Ejecuta el archivo descargado y sigue el asistente de instalación. Se creará un acceso directo en tu escritorio.</p>
+                            <h3 style="margin: 0 0 0.5rem 0; font-size: 1.3rem;"><i class="fas fa-cog" style="margin-right: 8px;"></i><span data-i18n="dl.step2_h3">Instalar ADEstock</span></h3>
+                            <p style="margin: 0; opacity: 0.95;" data-i18n="dl.step2_p">Ejecuta el archivo descargado y sigue el asistente de instalación. Se creará un acceso directo en tu escritorio.</p>
                         </div>
                     </div>
 
                     <div style="display: flex; align-items: start; gap: 1.5rem; margin-bottom: 2rem;">
                         <div style="background: white; color: #667eea; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.3rem; flex-shrink: 0;">3</div>
                         <div>
-                            <h3 style="margin: 0 0 1rem 0; font-size: 1.3rem;"><i class="fas fa-user-lock" style="margin-right: 8px;"></i>Iniciar Sesión</h3>
-                            <p style="margin: 0 0 1rem 0; opacity: 0.95;">Usa estas credenciales para acceder por primera vez:</p>
+                            <h3 style="margin: 0 0 1rem 0; font-size: 1.3rem;"><i class="fas fa-user-lock" style="margin-right: 8px;"></i><span data-i18n="dl.step3_h3">Iniciar Sesión</span></h3>
+                            <p style="margin: 0 0 1rem 0; opacity: 0.95;" data-i18n="dl.step3_p">Usa estas credenciales para acceder por primera vez:</p>
                             <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 1.5rem;">
                                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding: 10px; background: rgba(255,255,255,0.1); border-radius: 6px;">
-                                    <span style="font-size: 1.05rem;"><strong>Usuario:</strong> <code style="background: rgba(0,0,0,0.2); padding: 4px 10px; border-radius: 4px; font-size: 1rem;">ADEMASISTEMAS</code></span>
+                                    <span style="font-size: 1.05rem;"><strong data-i18n="dl.user_label">Usuario:</strong> <code style="background: rgba(0,0,0,0.2); padding: 4px 10px; border-radius: 4px; font-size: 1rem;">ADEMASISTEMAS</code></span>
                                     <button class="copy-btn" data-copy="ADEMASISTEMAS" title="Copiar usuario" style="background: white; border: none; color: #667eea; cursor: pointer; padding: 8px 12px; border-radius: 6px; font-size: 1rem;">
                                         <i class="fas fa-copy"></i>
                                     </button>
                                 </div>
                                 <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background: rgba(255,255,255,0.1); border-radius: 6px;">
-                                    <span style="font-size: 1.05rem;"><strong>Contraseña:</strong> <code style="background: rgba(0,0,0,0.2); padding: 4px 10px; border-radius: 4px; font-size: 1rem;">Adema123.</code></span>
+                                    <span style="font-size: 1.05rem;"><strong data-i18n="dl.pass_label">Contraseña:</strong> <code style="background: rgba(0,0,0,0.2); padding: 4px 10px; border-radius: 4px; font-size: 1rem;">Adema123.</code></span>
                                     <button class="copy-btn" data-copy="Adema123." title="Copiar contraseña" style="background: white; border: none; color: #667eea; cursor: pointer; padding: 8px 12px; border-radius: 6px; font-size: 1rem;">
                                         <i class="fas fa-copy"></i>
                                     </button>
@@ -113,16 +116,16 @@
                     <div style="display: flex; align-items: start; gap: 1.5rem; margin-bottom: 2rem;">
                         <div style="background: white; color: #667eea; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.3rem; flex-shrink: 0;">4</div>
                         <div>
-                            <h3 style="margin: 0 0 0.5rem 0; font-size: 1.3rem;"><i class="fas fa-rocket" style="margin-right: 8px;"></i>Ejecutar ADEstock</h3>
-                            <p style="margin: 0; opacity: 0.95;">Abre la aplicación desde el escritorio. Busca el ícono en la bandeja del sistema (junto al reloj), haz clic derecho en el engranaje y selecciona "Abrir en navegador".</p>
+                            <h3 style="margin: 0 0 0.5rem 0; font-size: 1.3rem;"><i class="fas fa-rocket" style="margin-right: 8px;"></i><span data-i18n="dl.step4_h3">Ejecutar ADEstock</span></h3>
+                            <p style="margin: 0; opacity: 0.95;" data-i18n="dl.step4_p">Abre la aplicación desde el escritorio. Busca el ícono en la bandeja del sistema (junto al reloj), haz clic derecho en el engranaje y selecciona &quot;Abrir en navegador&quot;.</p>
                         </div>
                     </div>
 
                     <div style="display: flex; align-items: start; gap: 1.5rem;">
                         <div style="background: white; color: #667eea; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.3rem; flex-shrink: 0;">5</div>
                         <div>
-                            <h3 style="margin: 0 0 0.5rem 0; font-size: 1.3rem;"><i class="fas fa-star" style="margin-right: 8px;"></i>Acceso Rápido</h3>
-                            <p style="margin: 0; opacity: 0.95;">Guarda la página en tus favoritos del navegador para acceder más rápido la próxima vez.</p>
+                            <h3 style="margin: 0 0 0.5rem 0; font-size: 1.3rem;"><i class="fas fa-star" style="margin-right: 8px;"></i><span data-i18n="dl.step5_h3">Acceso Rápido</span></h3>
+                            <p style="margin: 0; opacity: 0.95;" data-i18n="dl.step5_p">Guarda la página en tus favoritos del navegador para acceder más rápido la próxima vez.</p>
                         </div>
                     </div>
                 </div>
@@ -130,17 +133,17 @@
 
             <!-- Sección de Ayuda -->
             <div style="background: #f8f9fa; border-left: 4px solid #667eea; border-radius: 8px; padding: 2rem; margin-bottom: 2rem;">
-                <h2 style="color: #2c3e50; font-size: 1.5rem; margin-bottom: 1rem;"><i class="fas fa-question-circle" style="color: #667eea; margin-right: 10px;"></i>¿Necesitas Ayuda?</h2>
-                <p style="color: #555; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem;">Si tienes problemas con la instalación o el uso de ADEstock, estamos aquí para ayudarte:</p>
+                <h2 style="color: #2c3e50; font-size: 1.5rem; margin-bottom: 1rem;"><i class="fas fa-question-circle" style="color: #667eea; margin-right: 10px;"></i><span data-i18n="dl.help_h2">¿Necesitas Ayuda?</span></h2>
+                <p style="color: #555; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem;" data-i18n="dl.help_p">Si tienes problemas con la instalación o el uso de ADEstock, estamos aquí para ayudarte:</p>
                 <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
                     <a href="mailto:contact@ademasistemas.com" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: white; border: 2px solid #667eea; color: #667eea; text-decoration: none; border-radius: 6px; font-weight: 500; transition: all 0.3s;">
-                        <i class="fas fa-envelope"></i> Enviar Email
+                        <i class="fas fa-envelope"></i> <span data-i18n="dl.help_email">Enviar Email</span>
                     </a>
                     <a href="https://wa.me/5491127888995" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: #25D366; color: white; text-decoration: none; border-radius: 6px; font-weight: 500; transition: all 0.3s;">
                         <i class="fab fa-whatsapp"></i> WhatsApp
                     </a>
                     <a href="tutoriales.html" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: white; border: 2px solid #667eea; color: #667eea; text-decoration: none; border-radius: 6px; font-weight: 500; transition: all 0.3s;">
-                        <i class="fas fa-book"></i> Ver Tutoriales
+                        <i class="fas fa-book"></i> <span data-i18n="dl.help_tuts">Ver Tutoriales</span>
                     </a>
                 </div>
             </div>
@@ -152,32 +155,32 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
                 <div>
                     <img src="img/logo-home.svg" alt="ADEstock Logo" style="max-width: 150px; margin-bottom: 1rem; filter: brightness(0) invert(1);">
-                    <p style="font-size: 0.9rem; line-height: 1.6; color: #bdc3c7;">Sistema de gestión de stock e inventario para pymes. Multi-depósito, multi-POS y control total de tu negocio.</p>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #bdc3c7;" data-i18n="footer.desc">Sistema de gestión de stock e inventario para pymes. Multi-depósito, multi-POS y control total de tu negocio.</p>
                 </div>
                 <div>
-                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;">Casos de Uso</h4>
+                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;" data-i18n="footer.use_cases">Casos de Uso</h4>
                     <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                        <li style="margin-bottom: 0.5rem;"><a href="casos-uso-almacen-dietetica.html" style="color: #bdc3c7; text-decoration: none;">Almacén y Dietética</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="casos-uso-minimarket.html" style="color: #bdc3c7; text-decoration: none;">Minimarket</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="tutoriales.html" style="color: #bdc3c7; text-decoration: none;">Tutoriales</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="casos-uso-almacen-dietetica.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.almacen">Almacén y Dietética</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="casos-uso-minimarket.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.minimarket">Minimarket</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="tutoriales.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.tutorials">Tutoriales</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;">Recursos</h4>
+                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;" data-i18n="footer.resources">Recursos</h4>
                     <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                        <li style="margin-bottom: 0.5rem;"><a href="index.html#features" style="color: #bdc3c7; text-decoration: none;">Características</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="index.html#pricing" style="color: #bdc3c7; text-decoration: none;">Precios</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="index.html#faq" style="color: #bdc3c7; text-decoration: none;">Preguntas Frecuentes</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="descargar-demo.html" style="color: #bdc3c7; text-decoration: none;">Descargar Demo</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="index.html#features" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.features">Características</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="index.html#pricing" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.prices">Precios</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="index.html#faq" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.faq">Preguntas Frecuentes</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="descargar-demo.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.dl_demo">Descargar Demo</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;">Contacto</h4>
+                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;" data-i18n="footer.contact_col">Contacto</h4>
                     <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
                         <li style="margin-bottom: 0.5rem;"><i class="fas fa-envelope" style="color: #3498db; margin-right: 8px;"></i><a href="mailto:contact@ademasistemas.com" style="color: #bdc3c7; text-decoration: none;">contact@ademasistemas.com</a></li>
                         <li style="margin-bottom: 0.5rem;"><i class="fab fa-whatsapp" style="color: #25D366; margin-right: 8px;"></i><a href="https://wa.me/5491127888995" target="_blank" style="color: #bdc3c7; text-decoration: none;">+54 9 11 2788-8995</a></li>
                         <li style="margin-bottom: 1rem;"><i class="fas fa-globe" style="color: #3498db; margin-right: 8px;"></i><a href="https://ademasistemas.com" target="_blank" style="color: #bdc3c7; text-decoration: none;">ademasistemas.com</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="contacto.html" style="color: #bdc3c7; text-decoration: none;">Sobre Nosotros</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="contacto.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.about_us">Sobre Nosotros</a></li>
                     </ul>
                     <div style="margin-top: 1rem;">
                         <a href="https://www.instagram.com/ademasistemas/" target="_blank" style="color: #fff; font-size: 1.5rem; margin-right: 1rem;" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -188,14 +191,15 @@
             </div>
             <hr style="border: none; border-top: 1px solid #34495e; margin: 2rem 0 1rem;">
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem; color: #95a5a6;">
-                <p style="margin: 0;">&copy; <span id="footer-year"></span> ADEstock by <a href="https://ademasistemas.com" target="_blank" style="color: #3498db; text-decoration: none;">ADEMA Sistemas</a>. Todos los derechos reservados.</p>
+                <p style="margin: 0;">&copy; <span id="footer-year"></span> ADEstock by <a href="https://ademasistemas.com" target="_blank" style="color: #3498db; text-decoration: none;">ADEMA Sistemas</a>. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
                 <div>
-                    <a href="politica-privacidad.html" style="color: #95a5a6; text-decoration: none; margin-right: 1rem;">Política de Privacidad</a>
-                    <a href="terminos-condiciones.html" style="color: #95a5a6; text-decoration: none;">Términos y Condiciones</a>
+                    <a href="politica-privacidad.html" style="color: #95a5a6; text-decoration: none; margin-right: 1rem;" data-i18n="footer.privacy">Política de Privacidad</a>
+                    <a href="terminos-condiciones.html" style="color: #95a5a6; text-decoration: none;" data-i18n="footer.terms">Términos y Condiciones</a>
                 </div>
             </div>
         </div>
     </footer>
     <script src="script.js"></script>
+    <script src="i18n.js"></script>
 </body>
 </html>

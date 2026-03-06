@@ -51,8 +51,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles-modern.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> </head>
-<body>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="translations/es.js"></script>
+    <script src="translations/en.js"></script>
+    <script src="translations/pt.js"></script>
+ </head>
+<body data-page-title="almacen.title" data-page-desc="almacen.meta_desc">
     <header class="hero">
         <nav class="navbar">
             <div class="logo">
@@ -60,20 +64,20 @@
                     <img src="img/logo-home.svg" alt="ADEstock Logo" class="logo-img">
                 </a>
             </div>
-            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <button class="menu-toggle" aria-label="Toggle menu" data-i18n-aria="nav.menu_aria">☰</button>
             <ul class="nav-links">
-                <li><a href="index.html#features">Características</a></li>
-                <li><a href="index.html#target-audience">¿Para Quién Es?</a></li>
-                <li><a href="index.html#faq">Preguntas</a></li>
-                <li><a href="precios.html">Precios</a></li>
-                <li><a href="tutoriales.html">Tutoriales</a></li>
-                <li><a href="contacto.html" class="cta-button">Contacto</a></li>
+                <li><a href="index.html#features" data-i18n="nav.features">Características</a></li>
+                <li><a href="index.html#target-audience" data-i18n="nav.audience">¿Para Quién Es?</a></li>
+                <li><a href="index.html#faq" data-i18n="nav.faq">Preguntas</a></li>
+                <li><a href="precios.html" data-i18n="nav.prices">Precios</a></li>
+                <li><a href="tutoriales.html" data-i18n="nav.tutorials">Tutoriales</a></li>
+                <li><a href="contacto.html" class="cta-button" data-i18n="nav.contact">Contacto</a></li>
             </ul>
         </nav>
         <div class="hero-content">
-            <h1>Gestión para Almacenes y Dietéticas</h1>
-            <p>Controla tus productos naturales, suplementos y alimentos saludables. Gestiona vencimientos, lotes, peso variable y granel con precisión.</p>
-            <a href="index.html#contact" class="cta-button large">Probar Gratis</a>
+            <h1 data-i18n="almacen.hero_h1">Gestión para Almacenes y Dietéticas</h1>
+            <p data-i18n="almacen.hero_p">Controla tus productos naturales, suplementos y alimentos saludables. Gestiona vencimientos, lotes, peso variable y granel con precisión.</p>
+            <a href="index.html#contact" class="cta-button large" data-i18n="almacen.hero_cta">Probar Gratis</a>
         </div>
     </header>
 
@@ -87,7 +91,7 @@
 
         <!-- Main Content Section -->
         <section id="features" class="features-section">
-            <h2>¿Vendes a granel? Descubre cómo ADEstock simplifica la gestión de tu Dietética</h2>
+            <h2 data-i18n="almacen.feat_h2">¿Vendes a granel? Descubre cómo ADEstock simplifica la gestión de tu Dietética</h2>
             <div style="max-width: 1000px; margin: 0 auto; text-align: left; line-height: 1.8; font-size: 1.05rem;">
                 <p style="margin-bottom: 20px;">Si viste el video de arriba, seguramente te sientes identificado con los desafíos diarios de Ceci. Gestionar una dietética —o cualquier negocio de venta a granel— tiene una complejidad única: compras mercadería en grandes cantidades (bolsas de 5 o 20 kg), pero tus clientes compran fraccionado, llevándose apenas 100 gramos o medio kilo.</p>
                 
@@ -112,38 +116,38 @@
         </section>
 
         <section id="how-it-works" class="how-it-works-section">
-            <h2>Tu día a día con ADEstock</h2>
+            <h2 data-i18n="almacen.hiw_h2">Tu día a día con ADEstock</h2>
             <div class="steps-container">
                  <div class="step-line"></div> <div class="step-card">
                     <div class="step-number">1</div>
-                    <h3>Carga de Productos</h3>
-                    <p>Ingresa tu catálogo con códigos, precios, unidades de medida y categorías (orgánico, sin TACC, etc.).</p>
+                    <h3 data-i18n="almacen.step1_h3">Carga de Productos</h3>
+                    <p data-i18n="almacen.step1_p">Ingresa tu catálogo con códigos, precios, unidades de medida y categorías (orgánico, sin TACC, etc.).</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">2</div>
-                    <h3>Recepción de Compras</h3>
-                    <p>Registra cada ingreso de mercadería con su proveedor, fecha de vencimiento y lote.</p>
+                    <h3 data-i18n="almacen.step2_h3">Recepción de Compras</h3>
+                    <p data-i18n="almacen.step2_p">Registra cada ingreso de mercancía con su proveedor, fecha de vencimiento y lote.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">3</div>
-                    <h3>Ventas en POS</h3>
-                    <p>Vende rápidamente desde el punto de venta, con scanner o búsqueda manual. Cobra con múltiples medios de pago.</p>
+                    <h3 data-i18n="almacen.step3_h3">Ventas en POS</h3>
+                    <p data-i18n="almacen.step3_p">Vende rápidamente desde el punto de venta, con scanner o búsqueda manual. Cobra con múltiples medios de pago.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">4</div>
-                    <h3>Reportes y Control</h3>
-                    <p>Consulta vencimientos próximos, productos con bajo stock y análisis de ventas para tomar mejores decisiones.</p>
+                    <h3 data-i18n="almacen.step4_h3">Reportes y Control</h3>
+                    <p data-i18n="almacen.step4_p">Consulta vencimientos próximos, productos con bajo stock y análisis de ventas para tomar mejores decisiones.</p>
                 </div>
             </div>
-            <a href="tutoriales.html" class="cta-button secondary">Ver Tutoriales</a>
+            <a href="tutoriales.html" class="cta-button secondary" data-i18n="almacen.hiw_cta">Ver Tutoriales</a>
         </section>
 
         <section id="faq" class="faq-section">
-            <h2>Preguntas Frecuentes - Almacén/Dietética</h2>
+            <h2 data-i18n="almacen.faq_h2">Preguntas Frecuentes - Almacén/Dietética</h2>
             <div class="faq-container">
                 <div class="faq-item">
-                    <button class="faq-question">¿Cómo automatiza ADEstock el cálculo de precios al fraccionar productos?</button>
-                    <div class="faq-answer">
+                    <button class="faq-question"><span data-i18n="almacen.faq1_q">¿Cómo automatiza ADEstock el cálculo de precios al fraccionar productos?</span></button>
+                    <div class="faq-answer" data-i18n-html="almacen.faq1_a">
                         <p>El sistema resuelve el problema común de comprar en una unidad de medida (ej. bolsas de 5 kg) y vender en otra (fraccionado), eliminando la necesidad de cálculos manuales constantes:</p>
                         <ul style="margin-top: 10px; margin-bottom: 10px; padding-left: 20px;">
                             <li><strong>Definición de fracciones y rentabilidad:</strong> En la pestaña de precios, el usuario define las diferentes opciones de venta (por ejemplo: 100 g, 250 g, medio kilo), asignando a cada una su propia rentabilidad deseada.</li>
@@ -152,8 +156,8 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">¿De qué manera el sistema facilita la gestión de inventario?</button>
-                    <div class="faq-answer">
+                    <button class="faq-question"><span data-i18n="almacen.faq2_q">¿De qué manera el sistema facilita la gestión de inventario?</span></button>
+                    <div class="faq-answer" data-i18n-html="almacen.faq2_a">
                         <p>El video describe un proceso de gestión de stock intuitivo que va desde la compra hasta la venta:</p>
                         <ul style="margin-top: 10px; margin-bottom: 10px; padding-left: 20px;">
                             <li><strong>Carga de compras intuitiva:</strong> Desde el panel de administración se generan nuevas compras ingresando fecha, punto de venta y medio de pago. Se cargan los productos tal como se compran (cantidad y precio), y el sistema calcula el nuevo costo unitario.</li>
@@ -164,8 +168,8 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">¿Cuáles son las ventajas de profesionalizar una dietética con este software?</button>
-                    <div class="faq-answer">
+                    <button class="faq-question"><span data-i18n="almacen.faq3_q">¿Cuáles son las ventajas de profesionalizar una dietética con este software?</span></button>
+                    <div class="faq-answer" data-i18n-html="almacen.faq3_a">
                         <p>El uso de ADEstock permite pasar de un manejo manual o en Excel a una gestión profesional, ofreciendo las siguientes ventajas:</p>
                         <ul style="margin-top: 10px; margin-bottom: 10px; padding-left: 20px;">
                             <li><strong>Delegación eficiente:</strong> Soluciona el "terror" de tener toda la información en la cabeza del dueño. Al sistematizar los precios y productos, es fácil sumar empleados o ayudantes, ya que el sistema les ofrece todas las opciones de venta claras en el mostrador.</li>
@@ -176,15 +180,15 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">¿Puedo vender productos por peso (kg, gramos) en mi dietética?</button>
-                    <div class="faq-answer">
+                    <button class="faq-question"><span data-i18n="almacen.faq4_q">¿Puedo vender productos por peso (kg, gramos) en mi dietética?</span></button>
+                    <div class="faq-answer" data-i18n-html="almacen.faq4_a">
                         <p>Absolutamente. ADEstock está diseñado específicamente para negocios que venden a granel. El sistema permite configurar productos con unidades de medida variables (kilogramo, gramo, litro, mililitro, unidad) y calculará automáticamente el precio según el peso o cantidad ingresada en el momento de la venta.</p>
                         <p style="margin-top: 10px;">Por ejemplo, si un cliente compra 350 gramos de almendras, simplemente ingresas la cantidad y el sistema calcula el precio total basándose en el costo por kilogramo configurado. Esto es ideal para cereales, frutos secos, harinas, semillas, hierbas y cualquier producto que vendas fraccionado.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">¿Cómo gestiono los vencimientos y lotes de productos naturales?</button>
-                    <div class="faq-answer">
+                    <button class="faq-question"><span data-i18n="almacen.faq5_q">¿Cómo gestiono los vencimientos y lotes de productos naturales?</span></button>
+                    <div class="faq-answer" data-i18n-html="almacen.faq5_a">
                         <p>ADEstock incluye un sistema completo de gestión de vencimientos y trazabilidad por lotes, esencial para productos naturales y alimentos:</p>
                         <ul style="margin-top: 10px; margin-bottom: 10px; padding-left: 20px;">
                             <li><strong>Registro por lote:</strong> Al registrar una compra, puedes agregar la fecha de vencimiento y número de lote de cada producto recibido.</li>
@@ -195,8 +199,8 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">¿Puedo armar combos, viandas o productos compuestos con recetas?</button>
-                    <div class="faq-answer">
+                    <button class="faq-question"><span data-i18n="almacen.faq6_q">¿Puedo armar combos, viandas o productos compuestos con recetas?</span></button>
+                    <div class="faq-answer" data-i18n-html="almacen.faq6_a">
                         <p>Sí, ADEstock cuenta con un potente sistema de "recetas" o productos compuestos que te permite:</p>
                         <ul style="margin-top: 10px; margin-bottom: 10px; padding-left: 20px;">
                             <li><strong>Crear productos elaborados:</strong> Define un producto compuesto (ej: "Vianda Vegana", "Mix Energético", "Combo Desayuno Saludable") especificando todos los ingredientes que lo conforman con sus respectivas cantidades.</li>
@@ -207,8 +211,8 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">¿Necesito conexión a internet para usar ADEstock en mi dietética?</button>
-                    <div class="faq-answer">
+                    <button class="faq-question"><span data-i18n="almacen.faq7_q">¿Necesito conexión a internet para usar ADEstock en mi dietética?</span></button>
+                    <div class="faq-answer" data-i18n-html="almacen.faq7_a">
                         <p>No, ADEstock funciona completamente offline de manera local en tu PC o computadora del negocio. No requiere conexión a internet para operar en el día a día, lo que garantiza:</p>
                         <ul style="margin-top: 10px; margin-bottom: 10px; padding-left: 20px;">
                             <li><strong>Funcionamiento continuo:</strong> Tu negocio sigue operando incluso si hay problemas con el servicio de internet.</li>
@@ -223,9 +227,9 @@
         </section>
 
         <section id="contact" class="contact-section">
-            <h2>¿Listo para Ordenar tu Almacén?</h2>
-            <p>Prueba ADEstock gratis por 3 días y descubre cómo simplifica la gestión de tu dietética o almacén natural.</p>
-            <button id="openDownloadModal" class="cta-button large">Descargar Demo</button>
+            <h2 data-i18n="almacen.cta2_h2">¿Listo para Ordenar tu Almacén?</h2>
+            <p data-i18n="almacen.cta2_p">Prueba ADEstock gratis por 3 días y descubre cómo simplifica la gestión de tu dietética o almacén natural.</p>
+            <button id="openDownloadModal" class="cta-button large" data-i18n="almacen.cta2_btn">Descargar Demo</button>
             <div class="social-links-contact">
                 <a href="https://www.instagram.com/ademasistemas/" target="_blank" aria-label="Instagram de ADEMA Sistemas"><i class="fab fa-instagram"></i></a>
                 <a href="https://ademasistemas.com" target="_blank" aria-label="Sitio web de ADEMA Sistemas"><i class="fas fa-globe"></i></a>
@@ -239,32 +243,32 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
                 <div>
                     <img src="img/logo-home.svg" alt="ADEstock Logo" style="max-width: 150px; margin-bottom: 1rem; filter: brightness(0) invert(1);">
-                    <p style="font-size: 0.9rem; line-height: 1.6; color: #bdc3c7;">Sistema de gestión de stock e inventario para pymes. Multi-depósito, multi-POS y control total de tu negocio.</p>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #bdc3c7;" data-i18n="footer.desc">Sistema de gestión de stock e inventario para pymes. Multi-depósito, multi-POS y control total de tu negocio.</p>
                 </div>
                 <div>
-                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;">Casos de Uso</h4>
+                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;" data-i18n="footer.use_cases">Casos de Uso</h4>
                     <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                        <li style="margin-bottom: 0.5rem;"><a href="casos-uso-almacen-dietetica.html" style="color: #bdc3c7; text-decoration: none;">Almacén y Dietética</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="casos-uso-minimarket.html" style="color: #bdc3c7; text-decoration: none;">Minimarket</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="tutoriales.html" style="color: #bdc3c7; text-decoration: none;">Tutoriales</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="casos-uso-almacen-dietetica.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.almacen">Almacén y Dietética</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="casos-uso-minimarket.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.minimarket">Minimarket</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="tutoriales.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.tutorials">Tutoriales</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;">Recursos</h4>
+                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;" data-i18n="footer.resources">Recursos</h4>
                     <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                        <li style="margin-bottom: 0.5rem;"><a href="index.html#features" style="color: #bdc3c7; text-decoration: none;">Características</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="index.html#pricing" style="color: #bdc3c7; text-decoration: none;">Precios</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="index.html#faq" style="color: #bdc3c7; text-decoration: none;">Preguntas Frecuentes</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="descargar-demo.html" style="color: #bdc3c7; text-decoration: none;">Descargar Demo</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="index.html#features" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.features">Características</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="index.html#pricing" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.prices">Precios</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="index.html#faq" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.faq">Preguntas Frecuentes</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="descargar-demo.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.dl_demo">Descargar Demo</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;">Contacto</h4>
+                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;" data-i18n="footer.contact_col">Contacto</h4>
                     <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
                         <li style="margin-bottom: 0.5rem;"><i class="fas fa-envelope" style="color: #3498db; margin-right: 8px;"></i><a href="mailto:contact@ademasistemas.com" style="color: #bdc3c7; text-decoration: none;">contact@ademasistemas.com</a></li>
                         <li style="margin-bottom: 0.5rem;"><i class="fab fa-whatsapp" style="color: #25D366; margin-right: 8px;"></i><a href="https://wa.me/5491127888995" target="_blank" style="color: #bdc3c7; text-decoration: none;">+54 9 11 2788-8995</a></li>
                         <li style="margin-bottom: 1rem;"><i class="fas fa-globe" style="color: #3498db; margin-right: 8px;"></i><a href="https://ademasistemas.com" target="_blank" style="color: #bdc3c7; text-decoration: none;">ademasistemas.com</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="contacto.html" style="color: #bdc3c7; text-decoration: none;">Sobre Nosotros</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="contacto.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.about_us">Sobre Nosotros</a></li>
                     </ul>
                     <div style="margin-top: 1rem;">
                         <a href="https://www.instagram.com/ademasistemas/" target="_blank" style="color: #fff; font-size: 1.5rem; margin-right: 1rem;" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -275,10 +279,10 @@
             </div>
             <hr style="border: none; border-top: 1px solid #34495e; margin: 2rem 0 1rem;">
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem; color: #95a5a6;">
-                <p style="margin: 0;">&copy; <span id="footer-year"></span> ADEstock by <a href="https://ademasistemas.com" target="_blank" style="color: #3498db; text-decoration: none;">ADEMA Sistemas</a>. Todos los derechos reservados.</p>
+                <p style="margin: 0;">&copy; <span id="footer-year"></span> ADEstock by <a href="https://ademasistemas.com" target="_blank" style="color: #3498db; text-decoration: none;">ADEMA Sistemas</a>. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
                 <div>
-                    <a href="politica-privacidad.html" style="color: #95a5a6; text-decoration: none; margin-right: 1rem;">Política de Privacidad</a>
-                    <a href="terminos-condiciones.html" style="color: #95a5a6; text-decoration: none;">Términos y Condiciones</a>
+                    <a href="politica-privacidad.html" style="color: #95a5a6; text-decoration: none; margin-right: 1rem;" data-i18n="footer.privacy">Política de Privacidad</a>
+                    <a href="terminos-condiciones.html" style="color: #95a5a6; text-decoration: none;" data-i18n="footer.terms">Términos y Condiciones</a>
                 </div>
             </div>
         </div>
@@ -347,6 +351,7 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="i18n.js"></script>
 </body>
 <style>
 .whatsapp-float {

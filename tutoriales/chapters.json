@@ -1,0 +1,650 @@
+{
+  "chapters": [
+    {
+      "id": "t1-onboarding",
+      "video": "https://www.youtube.com/embed/SORqKlgKhwY",
+      "title": {
+        "es": "1) Configuración inicial (Onboarding)",
+        "en": "1) Initial Setup (Onboarding)",
+        "pt": "1) Configuração Inicial (Onboarding)"
+      },
+      "objective": {
+        "es": "Configurar la identidad del negocio, definir si usarás múltiples depósitos y establecer los medios de pago iniciales.",
+        "en": "Set up your business identity, define whether you will use multiple warehouses, and configure initial payment methods.",
+        "pt": "Configurar a identidade do negócio, definir se você usará múltiplos depósitos e configurar os meios de pagamento iniciais."
+      },
+      "steps": {
+        "es": [
+          "Ingresá al sistema por primera vez para iniciar el asistente de Onboarding.",
+          "Completá el Nombre del negocio.",
+          "Definí si usarás un único inventario o Múltiples Inventarios (selecciona la cantidad de depósitos).",
+          "Configurá tus Billeteras iniciales (Caja Fuerte, Bancos) y tus Medios de Pago (Efectivo, Tarjetas).",
+          "Creá los usuarios básicos si el sistema lo requiere.",
+          "Confirmá para finalizar. El sistema creará automáticamente los depósitos y cajas correspondientes."
+        ],
+        "en": [
+          "Enter the system for the first time to start the Onboarding assistant.",
+          "Complete the Business name.",
+          "Define whether you will use a single inventory or Multiple Inventories (select the number of warehouses).",
+          "Set up your initial Wallets (Safe Cash, Banks) and Payment Methods (Cash, Cards).",
+          "Create basic users if the system requires it.",
+          "Confirm to finish. The system will automatically create the corresponding warehouses and cash registers."
+        ],
+        "pt": [
+          "Acesse o sistema pela primeira vez para iniciar o assistente de Onboarding.",
+          "Preencha o Nome do negócio.",
+          "Defina se você usará um único inventário ou Múltiplos Inventários (selecione a quantidade de depósitos).",
+          "Configure suas Carteiras iniciais (Caixa Forte, Bancos) e seus Meios de Pagamento (Dinheiro, Cartões).",
+          "Crie os usuários básicos se o sistema exigir.",
+          "Confirme para finalizar. O sistema criará automaticamente os depósitos e caixas correspondentes."
+        ]
+      },
+      "result": {
+        "es": "El sistema queda listo con la estructura básica, depósitos creados y cajas asignadas.",
+        "en": "The system is ready with the basic structure, created warehouses, and assigned cash registers.",
+        "pt": "O sistema fica pronto com a estrutura básica, depósitos criados e caixas atribuídas."
+      },
+      "videoTitle": {
+        "es": "Video Tutorial: Configuración Inicial",
+        "en": "Video Tutorial: Initial Setup",
+        "pt": "Vídeo Tutorial: Configuração Inicial"
+      }
+    },
+    {
+      "id": "t1-config-general",
+      "video": "https://www.youtube.com/embed/0Xf16cJOaTE",
+      "title": {
+        "es": "Configuración General",
+        "en": "General Settings",
+        "pt": "Configurações Gerais"
+      },
+      "objective": {
+        "es": "Repaso de las configuraciones generales del sistema y ajustes de preferencias.",
+        "en": "Overview of general system settings and preference adjustments.",
+        "pt": "Revisão das configurações gerais do sistema e ajustes de preferências."
+      },
+      "videoTitle": {
+        "es": "Video Tutorial: Configuración General",
+        "en": "Video Tutorial: General Settings",
+        "pt": "Vídeo Tutorial: Configurações Gerais"
+      }
+    },
+    {
+      "id": "t2-depositos",
+      "video": "https://www.youtube.com/embed/dvtGgge_38U",
+      "title": {
+        "es": "2) Manejo de depósitos/inventarios",
+        "en": "2) Managing Warehouses/Inventories",
+        "pt": "2) Gerenciamento de Depósitos/Inventários"
+      },
+      "objective": {
+        "es": "Crear, editar y organizar múltiples depósitos (inventarios) para gestionar el stock en distintas ubicaciones.",
+        "en": "Create, edit, and organize multiple warehouses (inventories) to manage stock across different locations.",
+        "pt": "Criar, editar e organizar múltiplos depósitos (inventários) para gerenciar o estoque em diferentes locais."
+      },
+      "steps": {
+        "es": [
+          "Andá a Inventarios > Depósitos.",
+          "Hacé clic en Crear un depósito nuevo.",
+          "Asigná un nombre descriptivo (ej: Depósito Central, Sucursal Centro) y su ubicación.",
+          "Guardá los cambios."
+        ],
+        "en": [
+          "Go to Inventories > Warehouses.",
+          "Click Create a new warehouse.",
+          "Assign a descriptive name (e.g., Central Warehouse, Downtown Branch) and its location.",
+          "Save the changes."
+        ],
+        "pt": [
+          "Vá para Inventários > Depósitos.",
+          "Clique em Criar um novo depósito.",
+          "Atribua um nome descritivo (ex.: Depósito Central, Filial Centro) e sua localização.",
+          "Salve as alterações."
+        ]
+      },
+      "result": {
+        "es": "Nuevo depósito activo, visible en movimientos y listo para recibir stock.",
+        "en": "New active warehouse, visible in movements and ready to receive stock.",
+        "pt": "Novo depósito ativo, visível nos movimentos e pronto para receber estoque."
+      },
+      "videoTitle": {
+        "es": "Video Tutorial: Manejo de Depósitos",
+        "en": "Video Tutorial: Warehouse Management",
+        "pt": "Vídeo Tutorial: Gerenciamento de Depósitos"
+      }
+    },
+    {
+      "id": "t3-puntos-venta",
+      "video": "https://www.youtube.com/embed/PZ9C54cMuS4",
+      "title": {
+        "es": "3) Puntos de venta",
+        "en": "3) Points of Sale",
+        "pt": "3) Pontos de Venda"
+      },
+      "objective": {
+        "es": "Crear y configurar las cajas (POS) desde donde se realizarán las ventas.",
+        "en": "Create and configure the cash registers (POS) where sales will be made.",
+        "pt": "Criar e configurar os caixas (PDV) de onde as vendas serão realizadas."
+      },
+      "steps": {
+        "es": [
+          "Andá a Agenda > Cajas/Puntos de venta.",
+          "Seleccioná Crear nueva caja.",
+          "Asigná un nombre (ej: Caja Mostrador 1) y seleccioná el Depósito del cual descontará mercadería.",
+          "Guardá la configuración."
+        ],
+        "en": [
+          "Go to Schedule > Cash Registers/Points of Sale.",
+          "Select Create new register.",
+          "Assign a name (e.g., Front Counter Register 1) and select the Warehouse from which stock will be deducted.",
+          "Save the configuration."
+        ],
+        "pt": [
+          "Vá para Agenda > Caixas/Pontos de venda.",
+          "Selecione Criar novo caixa.",
+          "Atribua um nome (ex.: Caixa Balcão 1) e selecione o Depósito de onde o estoque será descontado.",
+          "Salve a configuração."
+        ]
+      },
+      "result": {
+        "es": "Caja lista para operar y asignada a un usuario.",
+        "en": "Register ready to operate and assigned to a user.",
+        "pt": "Caixa pronto para operar e atribuído a um usuário."
+      },
+      "videoTitle": {
+        "es": "Video Tutorial: Puntos de Venta",
+        "en": "Video Tutorial: Points of Sale",
+        "pt": "Vídeo Tutorial: Pontos de Venda"
+      }
+    },
+    {
+      "id": "t4-medios-pago",
+      "video": "https://www.youtube.com/embed/wNTAC85Uymo",
+      "title": {
+        "es": "4) Medios de pago & medios de compra (Cuentas)",
+        "en": "4) Payment Methods & Purchase Accounts",
+        "pt": "4) Formas de Pagamento & Contas de Compra"
+      },
+      "objective": {
+        "es": "Crear medios de pago (ej: Tarjetas, QR) y asociarlos a billeteras o cuentas bancarias.",
+        "en": "Create payment methods (e.g., Cards, QR) and link them to wallets or bank accounts.",
+        "pt": "Criar meios de pagamento (ex.: Cartões, QR) e associá-los a carteiras ou contas bancárias."
+      },
+      "steps": {
+        "es": [
+          "Andá a Billeteras/Cuentas.",
+          "Creá una billetera nueva si te falta (ej: Banco Nación, MercadoPago).",
+          "Andá a la pestaña Medios de pago.",
+          "Creá un nuevo medio (ej: Tarjeta Visa) y asocialo a la billetera donde querés que vaya el dinero.",
+          "Asigná este medio a los puntos de venta habilitados."
+        ],
+        "en": [
+          "Go to Wallets/Accounts.",
+          "Create a new wallet if needed (e.g., National Bank, MercadoPago).",
+          "Go to the Payment Methods tab.",
+          "Create a new method (e.g., Visa Card) and link it to the wallet where you want the money to go.",
+          "Assign this method to enabled points of sale."
+        ],
+        "pt": [
+          "Vá para Carteiras/Contas.",
+          "Crie uma nova carteira se necessário (ex.: Banco Nacional, MercadoPago).",
+          "Vá para a aba Meios de pagamento.",
+          "Crie um novo meio (ex.: Cartão Visa) e associe-o à carteira para onde você quer enviar o dinheiro.",
+          "Atribua esse meio aos pontos de venda habilitados."
+        ]
+      },
+      "result": {
+        "es": "Los medios de pago aparecen disponibles al momento de cobrar o pagar a proveedores.",
+        "en": "Payment methods become available when charging customers or paying suppliers.",
+        "pt": "Os meios de pagamento ficam disponíveis ao cobrar clientes ou pagar fornecedores."
+      },
+      "videoTitle": {
+        "es": "Video Tutorial: Medios de Pago",
+        "en": "Video Tutorial: Payment Methods",
+        "pt": "Vídeo Tutorial: Meios de Pagamento"
+      }
+    },
+    {
+      "id": "t5-productos",
+      "title": {
+        "es": "5) Productos",
+        "en": "5) Products",
+        "pt": "5) Produtos"
+      },
+      "objective": {
+        "es": "Dar de alta productos simples, insumos y definir precios de venta.",
+        "en": "Create simple products, supplies, and define selling prices.",
+        "pt": "Cadastrar produtos simples, insumos e definir preços de venda."
+      },
+      "steps": {
+        "es": [
+          "Andá a Productos y hacé clic en Crear Producto.",
+          "Definí el nombre, la Unidad de medida (unidades, kg, lts) y la categoría.",
+          "Ingresá el costo de compra y la cantidad por bulto.",
+          "Configurá el Precio de venta manual o por margen de ganancia.",
+          "Guardá el producto."
+        ],
+        "en": [
+          "Go to Products and click Create Product.",
+          "Define the name, Unit of measure (units, kg, lts), and category.",
+          "Enter purchase cost and quantity per package.",
+          "Set the Selling price manually or by profit margin.",
+          "Save the product."
+        ],
+        "pt": [
+          "Vá para Produtos e clique em Criar Produto.",
+          "Defina o nome, a Unidade de medida (unidades, kg, lts) e a categoria.",
+          "Informe o custo de compra e a quantidade por fardo.",
+          "Configure o Preço de venda manualmente ou por margem de lucro.",
+          "Salve o produto."
+        ]
+      },
+      "result": {
+        "es": "Producto disponible para la venta, compra y control de stock.",
+        "en": "Product available for sales, purchases, and stock control.",
+        "pt": "Produto disponível para venda, compra e controle de estoque."
+      },
+      "videoLabel": {
+        "es": "Video Tutorial: Productos Simples",
+        "en": "Video Tutorial: Simple Products",
+        "pt": "Vídeo Tutorial: Produtos Simples"
+      }
+    },
+    {
+      "id": "t6-recetas",
+      "title": {
+        "es": "6) Recetas / Combos",
+        "en": "6) Recipes / Combos",
+        "pt": "6) Receitas / Combos"
+      },
+      "objective": {
+        "es": "Crear productos elaborados (recetas) que descuentan stock de sus insumos automáticamente.",
+        "en": "Create prepared products (recipes) that automatically deduct stock from their ingredients.",
+        "pt": "Criar produtos elaborados (receitas) que descontam automaticamente o estoque de seus insumos."
+      },
+      "steps": {
+        "es": [
+          "Andá a Cocina/Recetas.",
+          "Creá una receta nueva y agregá los insumos necesarios con sus cantidades.",
+          "Definí las porciones y revisá los gastos de elaboración.",
+          "Guardá la receta.",
+          "Andá a Productos, creá el producto final y asociale la receta creada."
+        ],
+        "en": [
+          "Go to Kitchen/Recipes.",
+          "Create a new recipe and add required ingredients with quantities.",
+          "Define portions and review production costs.",
+          "Save the recipe.",
+          "Go to Products, create the final product, and link the created recipe."
+        ],
+        "pt": [
+          "Vá para Cozinha/Receitas.",
+          "Crie uma nova receita e adicione os insumos necessários com suas quantidades.",
+          "Defina as porções e revise os custos de produção.",
+          "Salve a receita.",
+          "Vá para Produtos, crie o produto final e associe a receita criada."
+        ]
+      },
+      "result": {
+        "es": "Producto final listo para vender; al venderlo se descuenta el stock de los ingredientes.",
+        "en": "Final product ready to sell; when sold, ingredient stock is deducted.",
+        "pt": "Produto final pronto para vender; ao vender, o estoque dos ingredientes é descontado."
+      },
+      "videoLabel": {
+        "es": "Video Tutorial: Recetas y Combos",
+        "en": "Video Tutorial: Recipes and Combos",
+        "pt": "Vídeo Tutorial: Receitas e Combos"
+      }
+    },
+    {
+      "id": "t7-ventas",
+      "title": {
+        "es": "7) Cómo hacer una venta",
+        "en": "7) How to Make a Sale",
+        "pt": "7) Como Fazer uma Venda"
+      },
+      "objective": {
+        "es": "Registrar una venta de forma rápida en el POS y emitir ticket.",
+        "en": "Register a sale quickly in POS and issue a receipt.",
+        "pt": "Registrar uma venda rapidamente no PDV e emitir comprovante."
+      },
+      "steps": {
+        "es": [
+          "Ingresá al Punto de venta.",
+          "(Opcional) Seleccioná un cliente en la barra de búsqueda superior.",
+          "Agregá los productos escaneando el código de barras o buscándolos por nombre.",
+          "Hacé clic en Cobrar y elegí el medio de pago (Efectivo, Débito, QR).",
+          "Confirmá la operación para imprimir el comprobante."
+        ],
+        "en": [
+          "Enter the Point of sale.",
+          "(Optional) Select a customer in the top search bar.",
+          "Add products by scanning barcodes or searching by name.",
+          "Click Charge and choose payment method (Cash, Debit, QR).",
+          "Confirm the operation to print the receipt."
+        ],
+        "pt": [
+          "Acesse o Ponto de venda.",
+          "(Opcional) Selecione um cliente na barra de busca superior.",
+          "Adicione produtos escaneando o código de barras ou buscando por nome.",
+          "Clique em Cobrar e escolha o meio de pagamento (Dinheiro, Débito, QR).",
+          "Confirme a operação para imprimir o comprovante."
+        ]
+      },
+      "result": {
+        "es": "Venta registrada, dinero ingresado a la caja y stock actualizado.",
+        "en": "Sale recorded, money entered into register, and stock updated.",
+        "pt": "Venda registrada, dinheiro lançado no caixa e estoque atualizado."
+      },
+      "videoLabel": {
+        "es": "Video Tutorial: Cómo Vender",
+        "en": "Video Tutorial: How to Sell",
+        "pt": "Vídeo Tutorial: Como Vender"
+      }
+    },
+    {
+      "id": "t8-compras",
+      "title": {
+        "es": "8) Cómo hacer una compra",
+        "en": "8) How to Make a Purchase",
+        "pt": "8) Como Fazer uma Compra"
+      },
+      "objective": {
+        "es": "Registrar facturas de compra para ingresar mercadería y actualizar costos.",
+        "en": "Record purchase invoices to receive goods and update costs.",
+        "pt": "Registrar notas de compra para entrada de mercadorias e atualização de custos."
+      },
+      "steps": {
+        "es": [
+          "Andá al módulo Compras.",
+          "Creá una Nueva compra.",
+          "Seleccioná el Proveedor y cargá los productos con sus nuevos costos.",
+          "Elegí el medio de compra (o Cuenta Corriente si es a deuda).",
+          "Confirmá la compra."
+        ],
+        "en": [
+          "Go to the Purchases module.",
+          "Create a New purchase.",
+          "Select the Supplier and load products with updated costs.",
+          "Choose purchase method (or Current Account if on credit).",
+          "Confirm the purchase."
+        ],
+        "pt": [
+          "Vá para o módulo Compras.",
+          "Crie uma Nova compra.",
+          "Selecione o Fornecedor e adicione os produtos com seus novos custos.",
+          "Escolha o meio de compra (ou Conta Corrente se for a prazo).",
+          "Confirme a compra."
+        ]
+      },
+      "result": {
+        "es": "Stock ingresado al depósito y precios de costo actualizados.",
+        "en": "Stock entered into warehouse and cost prices updated.",
+        "pt": "Estoque lançado no depósito e preços de custo atualizados."
+      },
+      "videoLabel": {
+        "es": "Video Tutorial: Cómo Comprar",
+        "en": "Video Tutorial: How to Buy",
+        "pt": "Vídeo Tutorial: Como Comprar"
+      }
+    },
+    {
+      "id": "t9-stock",
+      "title": {
+        "es": "9) Movimientos de stock & dashboard",
+        "en": "9) Stock Movements & Dashboard",
+        "pt": "9) Movimentos de Estoque & Dashboard"
+      },
+      "objective": {
+        "es": "Consultar, ajustar y auditar el stock en tiempo real.",
+        "en": "Check, adjust, and audit stock in real time.",
+        "pt": "Consultar, ajustar e auditar o estoque em tempo real."
+      },
+      "steps": {
+        "es": [
+          "Andá a Stock > Movimientos.",
+          "Filtrá por depósito, producto o fecha para rastrear cambios.",
+          "Usá la herramienta de ajustes para corregir diferencias de inventario.",
+          "Ingresá al Dashboard de inventario para ver valoración total y alertas de stock bajo."
+        ],
+        "en": [
+          "Go to Stock > Movements.",
+          "Filter by warehouse, product, or date to track changes.",
+          "Use adjustment tools to correct inventory differences.",
+          "Open Inventory Dashboard to view total valuation and low-stock alerts."
+        ],
+        "pt": [
+          "Vá para Estoque > Movimentos.",
+          "Filtre por depósito, produto ou data para rastrear alterações.",
+          "Use a ferramenta de ajustes para corrigir diferenças de inventário.",
+          "Acesse o Dashboard de inventário para ver a valorização total e alertas de estoque baixo."
+        ]
+      },
+      "result": {
+        "es": "Visión clara del patrimonio en mercadería y control de mermas.",
+        "en": "Clear view of merchandise assets and shrinkage control.",
+        "pt": "Visão clara do patrimônio em mercadorias e controle de perdas."
+      },
+      "videoLabel": {
+        "es": "Video Tutorial: Control de Stock",
+        "en": "Video Tutorial: Stock Control",
+        "pt": "Vídeo Tutorial: Controle de Estoque"
+      }
+    },
+    {
+      "id": "t10-gastos",
+      "title": {
+        "es": "10) Registro de gastos",
+        "en": "10) Recording Expenses",
+        "pt": "10) Registro de Despesas"
+      },
+      "objective": {
+        "es": "Cargar gastos operativos y retiros de dinero de la caja.",
+        "en": "Record operating expenses and cash withdrawals from the register.",
+        "pt": "Lançar despesas operacionais e retiradas de dinheiro do caixa."
+      },
+      "steps": {
+        "es": [
+          "Andá a Gastos o hacé un Retiro desde el punto de venta.",
+          "Creá un Nuevo gasto.",
+          "Seleccioná la categoría (ej: Alquiler, Limpieza, Proveedores varios).",
+          "Indicá el monto y el medio de pago/caja de origen.",
+          "Guardá el registro."
+        ],
+        "en": [
+          "Go to Expenses or make a Withdrawal from the point of sale.",
+          "Create a New expense.",
+          "Select category (e.g., Rent, Cleaning, Misc. Suppliers).",
+          "Enter amount and source payment method/register.",
+          "Save the record."
+        ],
+        "pt": [
+          "Vá para Despesas ou faça uma Retirada no ponto de venda.",
+          "Crie uma Nova despesa.",
+          "Selecione a categoria (ex.: Aluguel, Limpeza, Fornecedores diversos).",
+          "Informe o valor e o meio de pagamento/caixa de origem.",
+          "Salve o registro."
+        ]
+      },
+      "result": {
+        "es": "Gasto registrado, descontado de la caja y visible en reportes de rentabilidad.",
+        "en": "Expense recorded, deducted from register, and visible in profitability reports.",
+        "pt": "Despesa registrada, descontada do caixa e visível nos relatórios de rentabilidade."
+      },
+      "videoLabel": {
+        "es": "Video Tutorial: Registro de Gastos",
+        "en": "Video Tutorial: Expense Recording",
+        "pt": "Vídeo Tutorial: Registro de Despesas"
+      }
+    },
+    {
+      "id": "t11-dashboard",
+      "title": {
+        "es": "11) Dashboard principal",
+        "en": "11) Main Dashboard",
+        "pt": "11) Dashboard Principal"
+      },
+      "objective": {
+        "es": "Visualizar los indicadores clave de desempeño (KPIs) del negocio.",
+        "en": "View key business performance indicators (KPIs).",
+        "pt": "Visualizar os principais indicadores de desempenho (KPIs) do negócio."
+      },
+      "steps": {
+        "es": [
+          "Ingresá al panel principal (Dashboard).",
+          "Revisá los indicadores de ventas, ganancias del día y cuentas por cobrar.",
+          "Utilizá los accesos rápidos para entrar a las secciones más usadas."
+        ],
+        "en": [
+          "Open the main panel (Dashboard).",
+          "Review sales indicators, daily profit, and accounts receivable.",
+          "Use quick access shortcuts to enter the most used sections."
+        ],
+        "pt": [
+          "Acesse o painel principal (Dashboard).",
+          "Revise os indicadores de vendas, lucro do dia e contas a receber.",
+          "Use os atalhos rápidos para acessar as seções mais utilizadas."
+        ]
+      },
+      "result": {
+        "es": "Control general del estado del negocio en una sola pantalla.",
+        "en": "Overall control of business status on a single screen.",
+        "pt": "Controle geral do estado do negócio em uma única tela."
+      },
+      "videoLabel": {
+        "es": "Video Tutorial: Dashboard",
+        "en": "Video Tutorial: Dashboard",
+        "pt": "Vídeo Tutorial: Dashboard"
+      }
+    },
+    {
+      "id": "t12-reportes",
+      "title": {
+        "es": "12) Reportes de caja (cierres, retiros)",
+        "en": "12) Cash Register Reports (Closings)",
+        "pt": "12) Relatórios de Caixa (Fechamentos)"
+      },
+      "objective": {
+        "es": "Realizar el arqueo de caja al final del turno y generar reportes financieros.",
+        "en": "Perform cash register counting at shift end and generate financial reports.",
+        "pt": "Realizar a conferência do caixa ao final do turno e gerar relatórios financeiros."
+      },
+      "steps": {
+        "es": [
+          "Andá a Reportes de caja o seleccioná Cerrar Caja en el POS.",
+          "Seleccioná la caja y el período a cerrar.",
+          "Ingresá el conteo de dinero físico (si usás arqueo ciego).",
+          "Generá el cierre y verificá sobrantes/faltantes."
+        ],
+        "en": [
+          "Go to Cash reports or select Close Register in POS.",
+          "Select the register and closing period.",
+          "Enter physical cash count (if using blind cash count).",
+          "Generate closing and verify overages/shortages."
+        ],
+        "pt": [
+          "Vá para Relatórios de caixa ou selecione Fechar Caixa no PDV.",
+          "Selecione o caixa e o período de fechamento.",
+          "Informe a contagem de dinheiro físico (se usar conferência cega).",
+          "Gere o fechamento e verifique sobras/faltas."
+        ]
+      },
+      "result": {
+        "es": "Caja cerrada correctamente y reporte de turno generado.",
+        "en": "Register closed correctly and shift report generated.",
+        "pt": "Caixa fechado corretamente e relatório de turno gerado."
+      },
+      "videoLabel": {
+        "es": "Video Tutorial: Cierre de Caja",
+        "en": "Video Tutorial: Register Closing",
+        "pt": "Vídeo Tutorial: Fechamento de Caixa"
+      }
+    },
+    {
+      "id": "t13-impresoras",
+      "title": {
+        "es": "13) Cómo configurar las impresoras",
+        "en": "13) How to Configure Printers",
+        "pt": "13) Como Configurar Impressoras"
+      },
+      "objective": {
+        "es": "Conectar y asignar impresoras térmicas a cada punto de venta.",
+        "en": "Connect and assign thermal printers to each point of sale.",
+        "pt": "Conectar e atribuir impressoras térmicas a cada ponto de venda."
+      },
+      "steps": {
+        "es": [
+          "Andá a Configuración de impresoras dentro de la edición de Caja.",
+          "Agregá una impresora indicando si es USB o de Red.",
+          "Si es USB, introducí el nombre exacto de la impresora en Windows.",
+          "Asignala al punto de venta y probá la impresión."
+        ],
+        "en": [
+          "Go to Printer settings inside Register editing.",
+          "Add a printer specifying whether it is USB or Network.",
+          "If USB, enter exact printer name in Windows.",
+          "Assign it to point of sale and test printing."
+        ],
+        "pt": [
+          "Vá para Configuração de impressoras dentro da edição de Caixa.",
+          "Adicione uma impressora indicando se é USB ou de Rede.",
+          "Se for USB, informe o nome exato da impressora no Windows.",
+          "Atribua ao ponto de venda e teste a impressão."
+        ]
+      },
+      "result": {
+        "es": "Tickets y comandas impresos automáticamente al vender.",
+        "en": "Receipts and kitchen tickets printed automatically when selling.",
+        "pt": "Tickets e comandas impressos automaticamente ao vender."
+      },
+      "videoLabel": {
+        "es": "Video Tutorial: Configurar Impresoras",
+        "en": "Video Tutorial: Configure Printers",
+        "pt": "Vídeo Tutorial: Configurar Impressoras"
+      }
+    },
+    {
+      "id": "t14-usuarios",
+      "title": {
+        "es": "14) Usuarios y permisos",
+        "en": "14) Users & Permissions",
+        "pt": "14) Usuários e Permissões"
+      },
+      "objective": {
+        "es": "Crear cuentas para empleados y definir qué pueden ver o hacer.",
+        "en": "Create employee accounts and define what they can view or do.",
+        "pt": "Criar contas para funcionários e definir o que podem ver ou fazer."
+      },
+      "steps": {
+        "es": [
+          "Andá a Usuarios.",
+          "Creá un nuevo usuario con su contraseña.",
+          "Asignale un grupo o rol (ej: Vendedor, Cajero, Cocina).",
+          "Guardá para activar el acceso."
+        ],
+        "en": [
+          "Go to Users.",
+          "Create a new user with password.",
+          "Assign a group or role (e.g., Seller, Cashier, Kitchen).",
+          "Save to activate access."
+        ],
+        "pt": [
+          "Vá para Usuários.",
+          "Crie um novo usuário com senha.",
+          "Atribua um grupo ou papel (ex.: Vendedor, Caixa, Cozinha).",
+          "Salve para ativar o acesso."
+        ]
+      },
+      "result": {
+        "es": "Usuario activo con los permisos de acceso restringidos según su rol.",
+        "en": "Active user with access permissions restricted by role.",
+        "pt": "Usuário ativo com permissões de acesso restritas conforme o papel."
+      },
+      "videoLabel": {
+        "es": "Video Tutorial: Usuarios y Permisos",
+        "en": "Video Tutorial: Users and Permissions",
+        "pt": "Vídeo Tutorial: Usuários e Permissões"
+      }
+    }
+  ]
+}

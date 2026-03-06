@@ -1,0 +1,44 @@
+﻿{
+    "id":  "t2-depositos",
+    "video":  "https://www.youtube.com/embed/dvtGgge_38U",
+    "title":  {
+                  "es":  "2) Manejo de depósitos/inventarios",
+                  "en":  "2) Managing Warehouses/Inventories",
+                  "pt":  "2) Gerenciamento de Depósitos/Inventários"
+              },
+    "objective":  {
+                      "es":  "Crear, editar y organizar múltiples depósitos (inventarios) para gestionar el stock en distintas ubicaciones.",
+                      "en":  "Create, edit, and organize multiple warehouses (inventories) to manage stock across different locations.",
+                      "pt":  "Criar, editar e organizar múltiplos depósitos (inventários) para gerenciar o estoque em diferentes locais."
+                  },
+    "steps":  {
+                  "es":  [
+                             "Andá a Inventarios \u003e Depósitos.",
+                             "Hacé clic en Crear un depósito nuevo.",
+                             "Asigná un nombre descriptivo (ej: Depósito Central, Sucursal Centro) y su ubicación.",
+                             "Guardá los cambios."
+                         ],
+                  "en":  [
+                             "Go to Inventories \u003e Warehouses.",
+                             "Click Create a new warehouse.",
+                             "Assign a descriptive name (e.g., Central Warehouse, Downtown Branch) and its location.",
+                             "Save the changes."
+                         ],
+                  "pt":  [
+                             "Vá para Inventários \u003e Depósitos.",
+                             "Clique em Criar um novo depósito.",
+                             "Atribua um nome descritivo (ex.: Depósito Central, Filial Centro) e sua localização.",
+                             "Salve as alterações."
+                         ]
+              },
+    "result":  {
+                   "es":  "Nuevo depósito activo, visible en movimientos y listo para recibir stock.",
+                   "en":  "New active warehouse, visible in movements and ready to receive stock.",
+                   "pt":  "Novo depósito ativo, visível nos movimentos e pronto para receber estoque."
+               },
+    "videoTitle":  {
+                       "es":  "Video Tutorial: Manejo de Depósitos",
+                       "en":  "Video Tutorial: Warehouse Management",
+                       "pt":  "Vídeo Tutorial: Gerenciamento de Depósitos"
+                   }
+}

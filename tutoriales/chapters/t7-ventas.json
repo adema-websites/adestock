@@ -1,0 +1,46 @@
+﻿{
+    "id":  "t7-ventas",
+    "title":  {
+                  "es":  "7) Cómo hacer una venta",
+                  "en":  "7) How to Make a Sale",
+                  "pt":  "7) Como Fazer uma Venda"
+              },
+    "objective":  {
+                      "es":  "Registrar una venta de forma rápida en el POS y emitir ticket.",
+                      "en":  "Register a sale quickly in POS and issue a receipt.",
+                      "pt":  "Registrar uma venda rapidamente no PDV e emitir comprovante."
+                  },
+    "steps":  {
+                  "es":  [
+                             "Ingresá al Punto de venta.",
+                             "(Opcional) Seleccioná un cliente en la barra de búsqueda superior.",
+                             "Agregá los productos escaneando el código de barras o buscándolos por nombre.",
+                             "Hacé clic en Cobrar y elegí el medio de pago (Efectivo, Débito, QR).",
+                             "Confirmá la operación para imprimir el comprobante."
+                         ],
+                  "en":  [
+                             "Enter the Point of sale.",
+                             "(Optional) Select a customer in the top search bar.",
+                             "Add products by scanning barcodes or searching by name.",
+                             "Click Charge and choose payment method (Cash, Debit, QR).",
+                             "Confirm the operation to print the receipt."
+                         ],
+                  "pt":  [
+                             "Acesse o Ponto de venda.",
+                             "(Opcional) Selecione um cliente na barra de busca superior.",
+                             "Adicione produtos escaneando o código de barras ou buscando por nome.",
+                             "Clique em Cobrar e escolha o meio de pagamento (Dinheiro, Débito, QR).",
+                             "Confirme a operação para imprimir o comprovante."
+                         ]
+              },
+    "result":  {
+                   "es":  "Venta registrada, dinero ingresado a la caja y stock actualizado.",
+                   "en":  "Sale recorded, money entered into register, and stock updated.",
+                   "pt":  "Venda registrada, dinheiro lançado no caixa e estoque atualizado."
+               },
+    "videoLabel":  {
+                       "es":  "Video Tutorial: Cómo Vender",
+                       "en":  "Video Tutorial: How to Sell",
+                       "pt":  "Vídeo Tutorial: Como Vender"
+                   }
+}

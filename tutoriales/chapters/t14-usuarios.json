@@ -1,0 +1,43 @@
+﻿{
+    "id":  "t14-usuarios",
+    "title":  {
+                  "es":  "14) Usuarios y permisos",
+                  "en":  "14) Users \u0026 Permissions",
+                  "pt":  "14) Usuários e Permissões"
+              },
+    "objective":  {
+                      "es":  "Crear cuentas para empleados y definir qué pueden ver o hacer.",
+                      "en":  "Create employee accounts and define what they can view or do.",
+                      "pt":  "Criar contas para funcionários e definir o que podem ver ou fazer."
+                  },
+    "steps":  {
+                  "es":  [
+                             "Andá a Usuarios.",
+                             "Creá un nuevo usuario con su contraseña.",
+                             "Asignale un grupo o rol (ej: Vendedor, Cajero, Cocina).",
+                             "Guardá para activar el acceso."
+                         ],
+                  "en":  [
+                             "Go to Users.",
+                             "Create a new user with password.",
+                             "Assign a group or role (e.g., Seller, Cashier, Kitchen).",
+                             "Save to activate access."
+                         ],
+                  "pt":  [
+                             "Vá para Usuários.",
+                             "Crie um novo usuário com senha.",
+                             "Atribua um grupo ou papel (ex.: Vendedor, Caixa, Cozinha).",
+                             "Salve para ativar o acesso."
+                         ]
+              },
+    "result":  {
+                   "es":  "Usuario activo con los permisos de acceso restringidos según su rol.",
+                   "en":  "Active user with access permissions restricted by role.",
+                   "pt":  "Usuário ativo com permissões de acesso restritas conforme o papel."
+               },
+    "videoLabel":  {
+                       "es":  "Video Tutorial: Usuarios y Permisos",
+                       "en":  "Video Tutorial: Users and Permissions",
+                       "pt":  "Vídeo Tutorial: Usuários e Permissões"
+                   }
+}

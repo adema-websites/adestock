@@ -27,6 +27,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles-modern.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="translations/es.js"></script>
+    <script src="translations/en.js"></script>
+    <script src="translations/pt.js"></script>
     
     <style>
         .pricing-hero {
@@ -263,7 +266,7 @@
 
     </style>
 </head>
-<body>
+<body data-page-title="prices.title" data-page-desc="prices.meta_desc">
     <header class="page-header">
         <nav class="navbar">
             <div class="logo">
@@ -273,27 +276,27 @@
             </div>
             <button class="menu-toggle" aria-label="Toggle menu">☰</button>
             <ul class="nav-links">
-                <li><a href="index.html#features">Características</a></li>
-                <li><a href="index.html#target-audience">¿Para Quién Es?</a></li>
-                <li><a href="tutoriales.html">Tutoriales</a></li>
-                <li><a href="precios.html" class="active" style="color: var(--primary);">Precios</a></li>
-                <li><a href="contacto.html" class="cta-button">Contacto</a></li>
+                <li><a href="index.html#features" data-i18n="nav.features">Características</a></li>
+                <li><a href="index.html#target-audience" data-i18n="nav.for_who">¿Para Quién Es?</a></li>
+                <li><a href="tutoriales.html" data-i18n="nav.tutorials">Tutoriales</a></li>
+                <li><a href="precios.html" class="active" style="color: var(--primary);" data-i18n="nav.prices">Precios</a></li>
+                <li><a href="contacto.html" class="cta-button" data-i18n="nav.contact">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main >
         <div class="pricing-hero">
-            <h1>Elige el plan ideal para tu negocio</h1>
-            <p style="max-width: 600px; margin: 0 auto; color: var(--text-body);">Desde acceso total en la nube hasta el control absoluto en tu propio equipo. Transparencia total, sin costos ocultos.</p>
+            <h1 data-i18n="prices.hero_h1">Elige el plan ideal para tu negocio</h1>
+            <p style="max-width: 600px; margin: 0 auto; color: var(--text-body);" data-i18n="prices.hero_p">Desde acceso total en la nube hasta el control absoluto en tu propio equipo. Transparencia total, sin costos ocultos.</p>
         </div>
 
         <div class="pricing-section">
             
             <!-- Opción WEB / NUBE -->
             <div class="pricing-web-card">
-                <h2>ADEstock Web / Nube</h2>
-                <p style="font-size: 1.1rem; opacity: 0.9;">Tu negocio online, accesible desde cualquier lugar y dispositivo.</p>
+                <h2 data-i18n="prices.web_h2">ADEstock Web / Nube</h2>
+                <p style="font-size: 1.1rem; opacity: 0.9;" data-i18n="prices.web_sub">Tu negocio online, accesible desde cualquier lugar y dispositivo.</p>
 
                 <div style="margin: 1.5rem 0 0.5rem;">
                     <div style="font-size: 2.8rem; font-weight: 800; line-height: 1;">$ 60.000</div>
@@ -301,20 +304,20 @@
                 </div>
                 
                 <div class="features-list">
-                    <div class="feature-item"><i class="fas fa-check-circle"></i> Acceso 24/7 desde cualquier navegador</div>
-                    <div class="feature-item"><i class="fas fa-check-circle"></i> Hosting incluido (Nosotros alojamos)</div>
-                    <div class="feature-item"><i class="fas fa-check-circle"></i> Backups automáticos diarios</div>
-                    <div class="feature-item"><i class="fas fa-check-circle"></i> Actualizaciones automáticas</div>
-                    <div class="feature-item"><i class="fas fa-check-circle"></i> Multi-usuario concurrente</div>
-                    <div class="feature-item"><i class="fas fa-check-circle"></i> Soporte Prioritario</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> <span data-i18n="prices.web_fi1">Acceso 24/7 desde cualquier navegador</span></div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> <span data-i18n="prices.web_fi2">Hosting incluido (Nosotros alojamos)</span></div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> <span data-i18n="prices.web_fi3">Backups automáticos diarios</span></div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> <span data-i18n="prices.web_fi4">Actualizaciones automáticas</span></div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> <span data-i18n="prices.web_fi5">Multi-usuario concurrente</span></div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> <span data-i18n="prices.web_fi6">Soporte Prioritario</span></div>
                 </div>
 
-                <div class="disclaimer">
+                <div class="disclaimer" data-i18n-html="prices.web_disc">
                     <strong>¿Qué cubre este plan?</strong> Incluye el uso del software alojado en nuestros servidores seguros. Te olvidas del mantenimiento técnico, virus o pérdida de datos en tu PC. Ideal si no tienes equipo informático dedicado.
                 </div>
 
                 <a href="https://wa.me/5491127888995?text=Hola%20ADEstock,%20me%20interesa%20el%20Plan%20WEB/NUBE%20de%20$60.000%20mensuales.%20%C2%BFPodemos%20avanzar?" class="cta-button" style="background: white; color: var(--primary) !important; font-size: 1.1rem;">
-                    <i class="fab fa-whatsapp"></i> Empezar Ahora
+                    <i class="fab fa-whatsapp"></i> <span data-i18n="prices.web_cta">Empezar Ahora</span>
                 </a>
             </div>
 
@@ -323,69 +326,69 @@
 
             <!-- Opción LOCAL / ESCRITORIO -->
             <div class="local-license-header">
-                <h2>Licencias Locales (Instalación en PC)</h2>
-                <p>Tu compras la licencia y la instalas en tu equipo. Control total en tu infraestructura.</p>
+                <h2 data-i18n="prices.local_h2">Licencias Locales (Instalación en PC)</h2>
+                <p data-i18n="prices.local_sub">Tu compras la licencia y la instalas en tu equipo. Control total en tu infraestructura.</p>
                 
                 <div style="display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1rem; background: #e0f2fe; color: #0369a1; padding: 0.5rem 1rem; border-radius: 50px; font-weight: 600; font-size: 0.9rem;">
-                    <i class="fab fa-windows"></i> Requisito: Windows 10 o superior (64 bits)
+                    <i class="fab fa-windows"></i> <span data-i18n="prices.local_req">Requisito: Windows 10 o superior (64 bits)</span>
                 </div>
             </div>
 
             <div class="pricing-grid">
                 <!-- Licencia 30 Días -->
                 <div class="pricing-card">
-                    <div class="license-duration">30 Días</div>
-                    <div class="license-type">Licencia Mensual</div>
+                    <div class="license-duration" data-i18n="prices.card1_dur">30 Días</div>
+                    <div class="license-type" data-i18n="prices.card1_type">Licencia Mensual</div>
                     <div class="price-tag" style="font-size: 2rem;">$ 45.000</div>
-                    <div style="margin-top: -1rem; margin-bottom: 1.5rem; color: #64748b; font-weight: 600;">/ mes</div>
+                    <div style="margin-top: -1rem; margin-bottom: 1.5rem; color: #64748b; font-weight: 600;" data-i18n="prices.card1_period">/ mes</div>
                     
                     <ul class="card-features">
-                        <li><i class="fas fa-check"></i> Uso completo por 30 días</li>
-                        <li><i class="fas fa-check"></i> Instalación Local</li>
-                        <li><i class="fas fa-check"></i> Actualizaciones incluidas</li>
-                        <li><i class="fas fa-check"></i> Ideal para proyectos cortos o pruebas</li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="prices.card1_li1">Uso completo por 30 días</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="prices.card1_li2">Instalación Local</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="prices.card1_li3">Actualizaciones incluidas</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="prices.card1_li4">Ideal para proyectos cortos o pruebas</span></li>
                     </ul>
                     
                     <a href="https://wa.me/5491127888995?text=Hola,%20quisiera%20consultar%20el%20precio%20de%20la%20Licencia%20Local%20por%2030%20d%C3%ADas." class="whatsapp-btn">
-                        <i class="fab fa-whatsapp"></i> Suscribirme
+                        <i class="fab fa-whatsapp"></i> <span data-i18n="prices.card1_cta">Suscribirme</span>
                     </a>
                 </div>
 
                 <!-- Licencia 1 Año -->
                 <div class="pricing-card featured">
-                    <div class="license-duration">1 Año</div>
-                    <div class="license-type">Licencia Anual</div>
+                    <div class="license-duration" data-i18n="prices.card2_dur">1 Año</div>
+                    <div class="license-type" data-i18n="prices.card2_type">Licencia Anual</div>
                     <div class="price-tag" style="font-size: 2rem;">$ 450.000</div>
-                    <div style="margin-top: -1rem; margin-bottom: 1.5rem; color: #64748b; font-weight: 600;">/ año</div>
+                    <div style="margin-top: -1rem; margin-bottom: 1.5rem; color: #64748b; font-weight: 600;" data-i18n="prices.card2_period">/ año</div>
                     
                     <ul class="card-features">
-                        <li><i class="fas fa-check"></i> <strong>Ahorro significativo</strong> vs mensual</li>
-                        <li><i class="fas fa-check"></i> 12 meses de uso continuo</li>
-                        <li><i class="fas fa-check"></i> Actualizaciones incluidas todo el año</li>
-                        <li><i class="fas fa-check"></i> Soporte técnico vía WhatsApp</li>
+                        <li><i class="fas fa-check"></i> <span data-i18n-html="prices.card2_li1"><strong>Ahorro significativo</strong> vs mensual</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="prices.card2_li2">12 meses de uso continuo</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="prices.card2_li3">Actualizaciones incluidas todo el año</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="prices.card2_li4">Soporte técnico vía WhatsApp</span></li>
                     </ul>
                     
                     <a href="https://wa.me/5491127888995?text=Hola,%20me%20interesa%20la%20Licencia%20Anual%20(Local).%20%C2%BFPrecio?" class="whatsapp-btn">
-                        <i class="fab fa-whatsapp"></i> Ahorrar Ahora
+                        <i class="fab fa-whatsapp"></i> <span data-i18n="prices.card2_cta">Ahorrar Ahora</span>
                     </a>
                 </div>
 
                 <!-- Licencia De Por Vida -->
                 <div class="pricing-card" style="background-color: #f1f5f9; border-color: #cbd5e1;">
-                    <div class="license-duration">DE POR VIDA</div>
-                    <div class="license-type">Pago Único (Lifetime)</div>
+                    <div class="license-duration" data-i18n="prices.card3_dur">DE POR VIDA</div>
+                    <div class="license-type" data-i18n="prices.card3_type">Pago Único (Lifetime)</div>
                     <div class="price-tag" style="font-size: 2rem;">Consultar</div>
-                    <div style="margin-top: -1rem; margin-bottom: 1.5rem; color: #64748b; font-weight: 600;">/ unico</div>
+                    <div style="margin-top: -1rem; margin-bottom: 1.5rem; color: #64748b; font-weight: 600;" data-i18n="prices.card3_period">/ unico</div>
                     
                     <ul class="card-features">
-                        <li><i class="fas fa-check"></i> <strong>Un solo pago, uso ilimitado</strong></li>
-                        <li><i class="fas fa-check"></i> Sin renovaciones mensuales ni anuales</li>
-                        <li><i class="fas fa-check"></i> Propiedad perpetua de la licencia</li>
-                        <li><i class="fas fa-check"></i> Soporte estándar</li>
+                        <li><i class="fas fa-check"></i> <span data-i18n-html="prices.card3_li1"><strong>Un solo pago, uso ilimitado</strong></span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="prices.card3_li2">Sin renovaciones mensuales ni anuales</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="prices.card3_li3">Propiedad perpetua de la licencia</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="prices.card3_li4">Soporte estándar</span></li>
                     </ul>
                     
                     <a href="https://wa.me/5491127888995?text=Hola,%20quiero%20saber%20el%20precio%20de%20la%20Licencia%20DE%20POR%20VIDA." class="whatsapp-btn" style="background-color: #1e293b;">
-                        <i class="fab fa-whatsapp"></i> Comprar Licencia
+                        <i class="fab fa-whatsapp"></i> <span data-i18n="prices.card3_cta">Comprar Licencia</span>
                     </a>
                 </div>
             </div>
@@ -393,22 +396,22 @@
             <!-- Sección de Tip VPN -->
             <div class="vpn-tip-section">
                 <div>
-                    <span class="vpn-badge"><i class="fas fa-lightbulb"></i> TIP DE EXPERTO</span>
-                    <h3 style="color: white; margin-bottom: 1rem; font-size: 1.8rem;">¿Acceso remoto en tu Licencia Local?</h3>
-                    <p style="color: #cbd5e1;">Aunque las licencias locales se instalan en tu PC, existe una forma segura de acceder desde fuera de tu negocio sin pagar un servidor en la nube.</p>
-                    <p style="color: #cbd5e1;">Puedes utilizar <strong>VPNs como Tailscale o ZeroTier</strong>. Estas herramientas crean un "tunel" seguro entre tu casa y la PC de tu negocio.</p>
+                    <span class="vpn-badge"><i class="fas fa-lightbulb"></i> <span data-i18n="prices.vpn_badge">TIP DE EXPERTO</span></span>
+                    <h3 style="color: white; margin-bottom: 1rem; font-size: 1.8rem;" data-i18n="prices.vpn_h3">¿Acceso remoto en tu Licencia Local?</h3>
+                    <p style="color: #cbd5e1;" data-i18n="prices.vpn_p1">Aunque las licencias locales se instalan en tu PC, existe una forma segura de acceder desde fuera de tu negocio sin pagar un servidor en la nube.</p>
+                    <p style="color: #cbd5e1;" data-i18n-html="prices.vpn_p2">Puedes utilizar <strong>VPNs como Tailscale o ZeroTier</strong>. Estas herramientas crean un "tunel" seguro entre tu casa y la PC de tu negocio.</p>
                     <button class="cta-button secondary" style="border-color: rgba(255,255,255,0.3); color: white !important; cursor: not-allowed; opacity: 0.7;">
-                        <i class="fab fa-youtube"></i> Video Tutorial (Próximamente)
+                        <i class="fab fa-youtube"></i> <span data-i18n="prices.vpn_cta">Video Tutorial (Próximamente)</span>
                     </button>
                 </div>
                 <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 12px;">
-                    <h4 style="color: #94a3b8; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 1rem;">Cómo funciona:</h4>
+                    <h4 style="color: #94a3b8; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 1rem;" data-i18n="prices.vpn_how">Cómo funciona:</h4>
                     <ul style="list-style: none; padding: 0; color: #e2e8f0; font-size: 0.95rem;">
-                        <li style="margin-bottom: 0.8rem;"><i class="fas fa-arrow-right" style="color: #2563eb; margin-right: 8px;"></i> Instalas ADEstock en tu PC (Windows 10).</li>
-                        <li style="margin-bottom: 0.8rem;"><i class="fas fa-arrow-right" style="color: #2563eb; margin-right: 8px;"></i> Instalas Tailscale (Gratis) en ambos equipos.</li>
-                        <li style="margin-bottom: 0.8rem;"><i class="fas fa-arrow-right" style="color: #2563eb; margin-right: 8px;"></i> ¡Listo! Te conectas como si estuvieras ahí.</li>
+                        <li style="margin-bottom: 0.8rem;"><i class="fas fa-arrow-right" style="color: #2563eb; margin-right: 8px;"></i> <span data-i18n="prices.vpn_li1">Instalas ADEstock en tu PC (Windows 10).</span></li>
+                        <li style="margin-bottom: 0.8rem;"><i class="fas fa-arrow-right" style="color: #2563eb; margin-right: 8px;"></i> <span data-i18n="prices.vpn_li2">Instalas Tailscale (Gratis) en ambos equipos.</span></li>
+                        <li style="margin-bottom: 0.8rem;"><i class="fas fa-arrow-right" style="color: #2563eb; margin-right: 8px;"></i> <span data-i18n="prices.vpn_li3">¡Listo! Te conectas como si estuvieras ahí.</span></li>
                     </ul>
-                    <div class="vpn-disclaimer">
+                    <div class="vpn-disclaimer" data-i18n-html="prices.vpn_disc">
                         <i class="fas fa-exclamation-triangle" style="color: #f59e0b;"></i> <strong>Importante:</strong> Las VPNs son herramientas de terceros ajenas a ADEstock. Nosotros recomendamos su uso como una facilidad para expertos, pero <strong>no brindamos soporte técnico sobre configuración de redes o VPNs</strong>.
                     </div>
                 </div>
@@ -422,27 +425,27 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
                 <div>
                     <img src="img/logo-home.svg" alt="ADEstock Logo" style="max-width: 150px; margin-bottom: 1rem; filter: brightness(0) invert(1);">
-                    <p style="font-size: 0.9rem; line-height: 1.6; color: #bdc3c7;">Tu socio tecnológico para el crecimiento. Gestión inteligente para negocios inteligentes.</p>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #bdc3c7;" data-i18n="footer.desc_alt">Tu socio tecnológico para el crecimiento. Gestión inteligente para negocios inteligentes.</p>
                 </div>
                 <div>
-                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;">Navegación</h4>
+                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;" data-i18n="footer.nav_col">Navegación</h4>
                     <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                        <li style="margin-bottom: 0.5rem;"><a href="index.html" style="color: #bdc3c7; text-decoration: none;">Inicio</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="precios.html" style="color: #ffffff; font-weight: bold; text-decoration: none;">Precios y Planes</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="tutoriales.html" style="color: #bdc3c7; text-decoration: none;">Tutoriales</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="contacto.html" style="color: #bdc3c7; text-decoration: none;">Contacto</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="index.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.home">Inicio</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="precios.html" style="color: #ffffff; font-weight: bold; text-decoration: none;" data-i18n="footer.prices_plans">Precios y Planes</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="tutoriales.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.tutorials">Tutoriales</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="contacto.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.contact_col">Contacto</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;">Recursos</h4>
+                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;" data-i18n="footer.resources">Recursos</h4>
                     <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                        <li style="margin-bottom: 0.5rem;"><a href="gestion-multi-deposito.html" style="color: #bdc3c7; text-decoration: none;">Multi-Depósito</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="multiples-cajas-pos.html" style="color: #bdc3c7; text-decoration: none;">Punto de Venta (POS)</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="gestion-inventario-avanzada.html" style="color: #bdc3c7; text-decoration: none;">Inventario Avanzado</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="gestion-multi-deposito.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.multi_dep">Multi-Depósito</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="multiples-cajas-pos.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.pos">Punto de Venta (POS)</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="gestion-inventario-avanzada.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.adv_inv">Inventario Avanzado</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;">Contacto</h4>
+                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;" data-i18n="footer.contact_col">Contacto</h4>
                     <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
                         <li style="margin-bottom: 0.5rem;"><i class="fas fa-envelope" style="color: #3498db; margin-right: 8px;"></i><a href="mailto:contact@ademasistemas.com" style="color: #bdc3c7; text-decoration: none;">contact@ademasistemas.com</a></li>
                         <li style="margin-bottom: 0.5rem;"><i class="fab fa-whatsapp" style="color: #25D366; margin-right: 8px;"></i><a href="https://wa.me/5491127888995" target="_blank" style="color: #bdc3c7; text-decoration: none;">+54 9 11 2788-8995</a></li>
@@ -456,15 +459,16 @@
             </div>
             <hr style="border: none; border-top: 1px solid #34495e; margin: 2rem 0 1rem;">
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem; color: #95a5a6;">
-                <p style="margin: 0;">&copy; 2026 ADEstock by <a href="https://ademasistemas.com" target="_blank" style="color: #3498db; text-decoration: none;">ADEMA Sistemas</a>.</p>
+                <p style="margin: 0;">&copy; 2026 ADEstock by <a href="https://ademasistemas.com" target="_blank" style="color: #3498db; text-decoration: none;">ADEMA Sistemas</a>. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
                 <div>
-                     <a href="politica-privacidad.html" style="color: #95a5a6; text-decoration: none; margin-right: 1rem;">Política de Privacidad</a>
-                     <a href="terminos-condiciones.html" style="color: #95a5a6; text-decoration: none;">Términos y Condiciones</a>
+                     <a href="politica-privacidad.html" style="color: #95a5a6; text-decoration: none; margin-right: 1rem;" data-i18n="footer.privacy">Política de Privacidad</a>
+                     <a href="terminos-condiciones.html" style="color: #95a5a6; text-decoration: none;" data-i18n="footer.terms">Términos y Condiciones</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script src="i18n.js"></script>
 </body>
 </html>
