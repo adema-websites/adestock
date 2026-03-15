@@ -6,9 +6,9 @@
                   "pt":  "6) Receitas / Combos"
               },
     "objective":  {
-                      "es":  "Crear productos elaborados (recetas) que descuentan stock de sus insumos automáticamente.",
-                      "en":  "Create prepared products (recipes) that automatically deduct stock from their ingredients.",
-                      "pt":  "Criar produtos elaborados (receitas) que descontam automaticamente o estoque de seus insumos."
+                      "es":  "Escalar la operativa comercial exige visibilidad absoluta sobre los márgenes y la trazabilidad del inventario. Detallamos cómo estructurar kits de productos, liquidar costos operativos y automatizar el flujo de fabricación en ADEstock.",
+                      "en":  "Scaling commercial operations demands absolute visibility over margins and inventory traceability. We detail how to structure product kits, settle operational costs, and automate the manufacturing workflow in ADEstock.",
+                      "pt":  "Escalar a operação comercial exige visibilidade absoluta sobre as margens e a rastreabilidade do inventário. Detalhamos como estruturar kits de produtos, liquidar custos operacionais e automatizar o fluxo de fabricação no ADEstock."
                   },
     "steps":  {
                   "es":  [
@@ -34,13 +34,19 @@
                          ]
               },
     "result":  {
-                   "es":  "Producto final listo para vender; al venderlo se descuenta el stock de los ingredientes.",
-                   "en":  "Final product ready to sell; when sold, ingredient stock is deducted.",
-                   "pt":  "Produto final pronto para vender; ao vender, o estoque dos ingredientes é descontado."
+                   "es":  "Contarás con un proceso automatizado que protege tus márgenes, asegura la reposición de insumos y estandariza la comercialización de productos compuestos.",
+                   "en":  "You'll have an automated process that protects your margins, ensures ingredient replenishment, and standardizes the commercialization of composite products.",
+                   "pt":  "Você terá um processo automatizado que protege suas margens, garante a reposição de insumos e padroniza a comercialização de produtos compostos."
                },
+    "video":  "https://www.youtube.com/embed/FHvgeFF6Blo",
+    "videoTitle":  {
+                       "es":  "Cómo Crear Combos, Automatizar Stock y Controlar Costos en ADEstock",
+                       "en":  "How to Create Combos, Automate Stock and Control Costs in ADEstock",
+                       "pt":  "Como Criar Combos, Automatizar Estoque e Controlar Custos no ADEstock"
+                   },
     "videoLabel":  {
-                       "es":  "Video Tutorial: Recetas y Combos",
-                       "en":  "Video Tutorial: Recipes and Combos",
-                       "pt":  "Vídeo Tutorial: Receitas e Combos"
+                       "es":  "Cómo Crear Combos, Automatizar Stock y Controlar Costos en ADEstock",
+                       "en":  "How to Create Combos, Automate Stock and Control Costs in ADEstock",
+                       "pt":  "Como Criar Combos, Automatizar Estoque e Controlar Custos no ADEstock"
                    }
 }

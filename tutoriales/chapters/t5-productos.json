@@ -6,41 +6,47 @@
                   "pt":  "5) Produtos"
               },
     "objective":  {
-                      "es":  "Dar de alta productos simples, insumos y definir precios de venta.",
-                      "en":  "Create simple products, supplies, and define selling prices.",
-                      "pt":  "Cadastrar produtos simples, insumos e definir preços de venda."
+                      "es":  "Optimizá el catálogo de tu negocio para maximizar ventas. Te mostramos el flujo exacto para dar de alta productos, automatizar el cálculo de costos y establecer reglas de precios dinámicas en ADEstock.",
+                      "en":  "Optimize your business catalog to maximize sales. We show you the exact workflow to register products, automate cost calculation, and set dynamic pricing rules in ADEstock.",
+                      "pt":  "Otimize o catálogo do seu negócio para maximizar as vendas. Mostramos o fluxo exato para cadastrar produtos, automatizar o cálculo de custos e estabelecer regras de preços dinâmicos no ADEstock."
                   },
     "steps":  {
                   "es":  [
-                             "Andá a Productos y hacé clic en Crear Producto.",
-                             "Definí el nombre, la Unidad de medida (unidades, kg, lts) y la categoría.",
-                             "Ingresá el costo de compra y la cantidad por bulto.",
-                             "Configurá el Precio de venta manual o por margen de ganancia.",
-                             "Guardá el producto."
+                             "Alta de Catálogo Estructurada: Creá el producto definiendo nombre, descripción, marca y categoría para mantener tu inventario organizado y escalable.",
+                             "Costeo Inteligente por Bulto: Ingresá la unidad de medida exacta según cómo comprás a tu proveedor (ej. bulto de 50 unidades o bolsa de 20 kg) y su costo total; el sistema calculará el costo unitario automáticamente.",
+                             "Márgenes de Ganancia Escalonados: Configurá precios por volumen con márgenes dinámicos para incentivar compras mayores (ej. 50% por 1 unidad, 45% por 3 unidades, 30% por 12 unidades).",
+                             "Códigos de Barras Automáticos: Configurá la generación de códigos inteligentes (combinando categoría, marca y secuencias numéricas) para estandarizar el control logístico.",
+                             "Sincronización Inmediata (POS): Guardá el producto y dejalo disponible en todos los puntos de venta al instante, sin procesos manuales adicionales."
                          ],
                   "en":  [
-                             "Go to Products and click Create Product.",
-                             "Define the name, Unit of measure (units, kg, lts), and category.",
-                             "Enter purchase cost and quantity per package.",
-                             "Set the Selling price manually or by profit margin.",
-                             "Save the product."
+                             "Structured Catalog Setup: Create the product by defining name, description, brand, and category to keep your inventory organized and scalable.",
+                             "Smart Bulk Costing: Enter the exact unit of measure based on how you purchase from your supplier (e.g. box of 50 units or bag of 20 kg) and its total cost; the system will calculate unit cost automatically.",
+                             "Tiered Profit Margins: Set up volume pricing with dynamic margins to encourage larger purchases (e.g. 50% for 1 unit, 45% for 3 units, 30% for 12 units).",
+                             "Automatic Barcodes: Configure smart code generation (combining category, brand, and numeric sequences) to standardize logistics control.",
+                             "Instant POS Sync: Save the product and make it available across all points of sale instantly, without additional manual processes."
                          ],
                   "pt":  [
-                             "Vá para Produtos e clique em Criar Produto.",
-                             "Defina o nome, a Unidade de medida (unidades, kg, lts) e a categoria.",
-                             "Informe o custo de compra e a quantidade por fardo.",
-                             "Configure o Preço de venda manualmente ou por margem de lucro.",
-                             "Salve o produto."
+                             "Cadastro de Catálogo Estruturado: Crie o produto definindo nome, descrição, marca e categoria para manter seu inventário organizado e escalável.",
+                             "Custeio Inteligente por Fardo: Insira a unidade de medida exata conforme você compra do seu fornecedor (ex. fardo de 50 unidades ou saco de 20 kg) e seu custo total; o sistema calculará o custo unitário automaticamente.",
+                             "Margens de Lucro Escalonadas: Configure preços por volume com margens dinâmicas para incentivar compras maiores (ex. 50% por 1 unidade, 45% por 3 unidades, 30% por 12 unidades).",
+                             "Códigos de Barras Automáticos: Configure a geração de códigos inteligentes (combinando categoria, marca e sequências numéricas) para padronizar o controle logístico.",
+                             "Sincronização Imediata (POS): Salve o produto e disponibilize para sua equipe em todos os pontos de venda instantaneamente, sem processos manuais adicionais."
                          ]
               },
     "result":  {
-                   "es":  "Producto disponible para la venta, compra y control de stock.",
-                   "en":  "Product available for sales, purchases, and stock control.",
-                   "pt":  "Produto disponível para venda, compra e controle de estoque."
+                   "es":  "Tendrás un control riguroso sobre tus costos, una estrategia de precios por volumen activa y un catálogo listo para operar sin fricciones.",
+                   "en":  "You'll have rigorous cost control, an active volume pricing strategy, and a catalog ready to operate without friction.",
+                   "pt":  "Você terá um controle rigoroso sobre seus custos, uma estratégia de preços por volume ativa e um catálogo pronto para operar sem atritos."
                },
+    "video":  "https://www.youtube.com/embed/V0ILb5h0O3E",
+    "videoTitle":  {
+                       "es":  "Cómo Crear Productos y Configurar Precios por Volumen en ADEstock",
+                       "en":  "How to Create Products and Configure Volume Prices in ADEstock",
+                       "pt":  "Como Criar Produtos e Configurar Preços por Volume no ADEstock"
+                   },
     "videoLabel":  {
-                       "es":  "Video Tutorial: Productos Simples",
-                       "en":  "Video Tutorial: Simple Products",
-                       "pt":  "Vídeo Tutorial: Produtos Simples"
+                       "es":  "Cómo Crear Productos y Configurar Precios por Volumen en ADEstock",
+                       "en":  "How to Create Products and Configure Volume Prices in ADEstock",
+                       "pt":  "Como Criar Produtos e Configurar Preços por Volume no ADEstock"
                    }
 }
