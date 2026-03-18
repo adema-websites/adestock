@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+  PROXY OAUTH GOOGLE DRIVE — Adestock
+  =====================================
+  Subir este archivo a: https://adestock.com.ar/oauth/drive/callback/
+  (o la URL que configures en GOOGLE_OAUTH_REDIRECT_URI)
+
+  Registrar en Google Cloud Console → APIs → Credenciales → tu OAuth Client ID:
+    URI de redireccionamiento autorizado: https://adestock.com.ar/oauth/drive/callback/
+
+  Cómo funciona:
+    1. El nodo envía al cliente a Google con state = BASE64URL(tenant_url).db_state
+    2. Google redirige acá con ?code=...&state=...
+    3. Esta página decodifica el tenant_url del state y redirige al nodo correcto
+    4. El nodo completa el intercambio del token con Google
+-->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinculando Google Drive...</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            display: flex; align-items: center; justify-content: center;
+            min-height: 100vh; margin: 0; background: #f8fafc; color: #1e293b;
+        }
+        .box {
+            text-align: center; padding: 2rem;
+            background: white; border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,.08);
+            max-width: 420px; width: 90%;
+        }
+        .spinner {
+            width: 40px; height: 40px; margin: 0 auto 1rem;
+            border: 3px solid #e2e8f0; border-top-color: #059669;
+            border-radius: 50%; animation: spin .8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .error { color: #dc2626; }
+        h2 { margin: 0 0 .5rem; font-size: 1.1rem; }
+        p  { margin: 0; font-size: .9rem; color: #64748b; }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <div class="spinner" id="spinner"></div>
+    <h2 id="title">Completando vinculación...</h2>
+    <p  id="msg">Serás redirigido en un momento.</p>
+</div>
+
+<script>
+(function () {
+    var params  = new URLSearchParams(window.location.search);
+    var state   = params.get('state') || '';
+    var error   = params.get('error') || '';
+
+    function showError(msg) {
+        document.getElementById('spinner').style.display = 'none';
+        document.getElementById('title').textContent = 'Error de vinculación';
+        document.getElementById('msg').innerHTML =
+            '<span class="error">' + msg + '</span>';
+    }
+
+    // Google informó un error (ej: usuario canceló)
+    if (error) {
+        showError('Google devolvió: ' + error);
+        return;
+    }
+
+    if (!state || state.indexOf('.') === -1) {
+        showError('State inválido o sin prefijo de nodo. Contactá al administrador.');
+        return;
+    }
+
+    // State = BASE64URL(tenant_url) + "." + db_state
+    var dotIndex   = state.indexOf('.');
+    var b64Tenant  = state.substring(0, dotIndex);
+
+    // Restaurar padding base64 si falta
+    var pad = b64Tenant.length % 4;
+    if (pad === 2) b64Tenant += '==';
+    else if (pad === 3) b64Tenant += '=';
+
+    var tenantUrl;
+    try {
+        tenantUrl = atob(b64Tenant.replace(/-/g, '+').replace(/_/g, '/'));
+        // Validar que se parece a una URL
+        new URL(tenantUrl);
+    } catch (e) {
+        showError('No se pudo decodificar el nodo de destino.');
+        return;
+    }
+
+    // Construir la URL de callback del nodo con todos los parámetros originales
+    var callbackPath = '/respaldo/drive/callback/';
+    var destination  = tenantUrl.replace(/\/$/, '') + callbackPath + '?' + params.toString();
+
+    document.getElementById('msg').textContent =
+        'Redirigiendo a ' + tenantUrl + '…';
+
+    // Redirigir al nodo
+    window.location.replace(destination);
+})();
+</script>
+</body>
+</html>
