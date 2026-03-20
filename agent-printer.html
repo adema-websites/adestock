@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W01VQ5GZND"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-W01VQ5GZND');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Printer | Impresión Local para ADEstock en la Nube</title>
+    <meta name="description" content="Agent Printer conecta ADEstock en la nube con tus impresoras locales (USB, LAN). Instalador para Windows, gratis para clientes de ADEstock Cloud.">
+    <link rel="canonical" href="https://adestock.com.ar/agent-printer.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://adestock.com.ar/agent-printer.html">
+    <meta property="og:title" content="Agent Printer | Impresión Local para ADEstock Cloud">
+    <meta property="og:description" content="Agente local para Windows que conecta ADEstock en la nube con tus impresoras físicas (USB o red local). Sin exponer tu red a Internet.">
+    <meta property="og:image" content="https://adestock.com.ar/img/social-preview.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-modern.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="translations/es.js"></script>
+    <script src="translations/en.js"></script>
+    <script src="translations/pt.js"></script>
+
+    <style>
+        /* ---- Agent Printer Page Styles ---- */
+        .ap-hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            background: rgba(6, 182, 212, .15);
+            color: var(--secondary);
+            border: 1px solid rgba(6, 182, 212, .35);
+            border-radius: var(--radius-full);
+            padding: .35rem 1rem;
+            font-size: .85rem;
+            font-weight: 600;
+            letter-spacing: .04em;
+            margin-bottom: 1.25rem;
+        }
+
+        /* Architecture diagram */
+        .arch-diagram {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            flex-wrap: wrap;
+            margin: 2.5rem 0;
+        }
+        .arch-node {
+            background: var(--bg-surface);
+            border: 2px solid #e2e8f0;
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            text-align: center;
+            min-width: 160px;
+            box-shadow: var(--shadow-md);
+        }
+        .arch-node .arch-icon {
+            font-size: 2rem;
+            margin-bottom: .6rem;
+        }
+        .arch-node h4 {
+            font-size: .9rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin: 0 0 .25rem;
+        }
+        .arch-node p {
+            font-size: .78rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .arch-arrow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 .75rem;
+            color: var(--text-muted);
+            font-size: .75rem;
+            gap: .2rem;
+        }
+        .arch-arrow i { font-size: 1.2rem; color: var(--secondary); }
+        .arch-arrow span { white-space: nowrap; }
+        .arch-node.highlight {
+            border-color: var(--secondary);
+            background: linear-gradient(135deg, #ecfeff 0%, #f0f9ff 100%);
+        }
+
+        /* Version list (PyPI style) */
+        .version-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: .6rem;
+        }
+        .version-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: .85rem 1.1rem;
+            background: var(--bg-surface-alt);
+            border: 1px solid #e2e8f0;
+            border-radius: var(--radius-sm);
+            transition: background .2s, border-color .2s;
+        }
+        .version-item:hover { background: var(--bg-surface); border-color: var(--secondary); }
+        .version-tag {
+            font-family: 'Courier New', monospace;
+            font-weight: 700;
+            font-size: .92rem;
+            color: var(--primary);
+            min-width: 60px;
+        }
+        .version-label {
+            background: var(--success);
+            color: #fff;
+            font-size: .7rem;
+            font-weight: 700;
+            border-radius: var(--radius-full);
+            padding: .15rem .55rem;
+            letter-spacing: .05em;
+        }
+        .version-label.stable { background: var(--success); }
+        .version-label.latest { background: var(--secondary); }
+        .version-date {
+            font-size: .82rem;
+            color: var(--text-muted);
+            margin-left: auto;
+        }
+        .version-notes {
+            font-size: .85rem;
+            color: var(--text-body);
+            flex: 1;
+        }
+        .version-dl-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: .4rem;
+            padding: .35rem .9rem;
+            background: var(--primary);
+            color: #fff;
+            border-radius: var(--radius-sm);
+            font-size: .82rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background .2s;
+            white-space: nowrap;
+        }
+        .version-dl-btn:hover { background: var(--primary-hover); }
+
+        /* Steps */
+        .install-steps {
+            counter-reset: step-counter;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+        .install-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+            padding: 1.25rem 1.5rem;
+            background: var(--bg-surface);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid #f1f5f9;
+        }
+        .step-num {
+            counter-increment: step-counter;
+            min-width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #fff;
+            font-size: .95rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .install-step h4 { margin: 0 0 .3rem; font-size: 1rem; color: var(--text-main); }
+        .install-step p, .install-step code { margin: 0; font-size: .9rem; color: var(--text-body); }
+        .inline-code {
+            background: #f1f5f9;
+            color: #334155;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            padding: .1rem .4rem;
+            font-family: 'Courier New', monospace;
+            font-size: .85em;
+        }
+
+        /* Requirements grid */
+        .req-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+            margin-top: 1.5rem;
+        }
+        .req-card {
+            background: var(--bg-surface);
+            border: 1px solid #e2e8f0;
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+            display: flex;
+            align-items: flex-start;
+            gap: .9rem;
+        }
+        .req-card i { font-size: 1.5rem; color: var(--primary); margin-top: .1rem; flex-shrink: 0; }
+        .req-card h4 { font-size: .95rem; font-weight: 700; color: var(--text-main); margin: 0 0 .25rem; }
+        .req-card p { font-size: .85rem; color: var(--text-body); margin: 0; }
+
+        /* Highlight box */
+        .info-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.1rem 1.4rem;
+            border-radius: var(--radius-md);
+            background: linear-gradient(135deg, #eff6ff 0%, #ecfeff 100%);
+            border: 1px solid #bfdbfe;
+        }
+        .info-box i { font-size: 1.25rem; color: var(--primary); flex-shrink: 0; margin-top: .1rem; }
+        .info-box p { margin: 0; font-size: .9rem; color: #334155; line-height: 1.6; }
+
+        @media (max-width: 640px) {
+            .arch-diagram { flex-direction: column; }
+            .arch-arrow { flex-direction: row; transform: rotate(90deg); }
+            .version-item { flex-wrap: wrap; }
+            .version-date { margin-left: 0; }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero" style="min-height: 320px;">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html" class="logo">
+                    <img src="img/logo-home.svg" alt="ADEstock Logo" class="logo-img">
+                </a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html#features">Características</a></li>
+                <li><a href="index.html#faq">Preguntas Frecuentes</a></li>
+                <li><a href="precios.html" style="color: var(--primary); font-weight: 700;">Precios</a></li>
+                <li><a href="tutoriales.html">Tutoriales</a></li>
+                <li><a href="descargar-demo.html" class="cta-button">Descargar ADEstock</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <div class="ap-hero-badge">
+                <i class="fas fa-print"></i> Herramienta gratuita para clientes Cloud
+            </div>
+            <h1>Agent Printer</h1>
+            <p>Conecta ADEstock en la nube con tus impresoras locales.<br>Imprime tickets desde cualquier dispositivo sin exponer tu red a Internet.</p>
+            <a href="#download-agent" class="cta-button large" style="margin-top: .5rem;">
+                <i class="fas fa-download" style="margin-right: .5rem;"></i>Descargar Agent Printer
+            </a>
+        </div>
+    </header>
+
+    <main style="padding: 0 3% 0 3%;">
+
+        <!-- ¿Qué es? -->
+        <section style="max-width: 900px; margin: 3rem auto; text-align: center;">
+            <h2 style="font-size: 2rem; color: var(--text-main); margin-bottom: 1rem;">¿Qué es Agent Printer?</h2>
+            <p style="font-size: 1.1rem; color: var(--text-body); max-width: 680px; margin: 0 auto 2rem;">
+                Es un pequeño programa para Windows que corre en la PC de tu local o sucursal.
+                Se conecta a ADEstock Cloud, toma los trabajos de impresión encolados y los envía
+                a la impresora física que tengas instalada — ya sea por USB o por red local (LAN).
+            </p>
+
+            <!-- Architecture diagram -->
+            <div class="arch-diagram">
+                <div class="arch-node">
+                    <div class="arch-icon" style="color: var(--primary);">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h4>ADEstock Cloud</h4>
+                    <p>Genera el ticket y lo encola</p>
+                </div>
+
+                <div class="arch-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>HTTPS</span>
+                </div>
+
+                <div class="arch-node highlight">
+                    <div class="arch-icon" style="color: var(--secondary);">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h4>Agent Printer</h4>
+                    <p>Corre en tu PC · Windows</p>
+                </div>
+
+                <div class="arch-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>USB / LAN</span>
+                </div>
+
+                <div class="arch-node">
+                    <div class="arch-icon" style="color: #10b981;">
+                        <i class="fas fa-print"></i>
+                    </div>
+                    <h4>Impresora Local</h4>
+                    <p>USB o red privada · ESC/POS</p>
+                </div>
+            </div>
+
+            <div class="info-box" style="max-width: 700px; margin: 0 auto;">
+                <i class="fas fa-shield-alt"></i>
+                <p>
+                    <strong>Sin abrir puertos.</strong> El agente solo hace conexiones <em>salientes</em> hacia ADEstock Cloud.
+                    Tu red local nunca queda expuesta a Internet, cumpliendo con los estándares de seguridad más exigentes.
+                </p>
+            </div>
+        </section>
+
+        <!-- El problema que resuelve -->
+        <section style="background: var(--bg-surface-alt); padding: 3rem 1rem;">
+            <div style="max-width: 1100px; margin: 0 auto;">
+                <h2 style="text-align: center; font-size: 1.8rem; color: var(--text-main); margin-bottom: 2rem;">El Problema que Resuelve</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+
+                    <div class="feature-card" style="border-left: 4px solid #ef4444;">
+                        <i class="fas fa-ban" style="color: #ef4444;"></i>
+                        <h3>Sin Agent Printer</h3>
+                        <p>Un sistema cloud <strong>no puede acceder directamente</strong> a una impresora USB ni a una red privada de sucursal. Imprimir desde Internet a hardware local es técnicamente imposible sin un puente.</p>
+                    </div>
+
+                    <div class="feature-card" style="border-left: 4px solid var(--success);">
+                        <i class="fas fa-check-circle" style="color: var(--success);"></i>
+                        <h3>Con Agent Printer</h3>
+                        <p>El agente actúa de <strong>puente seguro</strong>: consulta nuevos trabajos de impresión cada pocos segundos, los ejecuta en la impresora local y reporta el resultado al sistema cloud.</p>
+                    </div>
+
+                    <div class="feature-card" style="border-left: 4px solid var(--secondary);">
+                        <i class="fas fa-expand-arrows-alt" style="color: var(--secondary);"></i>
+                        <h3>Multi-caja y Multi-sucursal</h3>
+                        <p>Cada agente se vincula a una <strong>caja y sucursal específica</strong>. Podés tener tantos agentes como cajas activas, todos administrados desde ADEstock Cloud sin configuraciones adicionales.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Beneficios -->
+        <section style="max-width: 1100px; margin: 3rem auto;">
+            <h2 style="text-align: center; font-size: 1.8rem; color: var(--text-main); margin-bottom: 2rem;">Características Principales</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-usb"></i>
+                    <h3>USB y LAN</h3>
+                    <p>Soporta impresoras conectadas por cable USB (por nombre de impresora Windows) y por red local IP/puerto (habitual <code class="inline-code">9100</code>).</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-ticket-alt"></i>
+                    <h3>Tickets ESC/POS</h3>
+                    <p>Compatible con cualquier impresora térmica que entienda ESC/POS — el estándar de la industria para tickets de venta y comprobantes.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Monitoreo en Tiempo Real</h3>
+                    <p>El agente envía un heartbeat periódico al sistema cloud. Si deja de responder, ADEstock te alerta para que puedas actuar antes de que afecte la operación.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-redo-alt"></i>
+                    <h3>Reintentos Automáticos</h3>
+                    <p>Si una impresión falla (papel agotado, impresora ocupada), el sistema registra el error y puede reintentar automáticamente con control de idempotencia.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-lock"></i>
+                    <h3>Autenticación Segura</h3>
+                    <p>Toda comunicación usa HTTPS y una <code class="inline-code">api_key</code> por sucursal. Sin credenciales compartidas entre locales.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-tasks"></i>
+                    <h3>Trazabilidad Completa</h3>
+                    <p>Cada impresión tiene un estado (<code class="inline-code">QUEUED → PRINTING → SUCCESS / FAILED</code>) visible desde el panel de ADEstock Cloud.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Requisitos -->
+        <section style="background: var(--bg-surface-alt); padding: 3rem 1rem;">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h2 style="text-align: center; font-size: 1.8rem; color: var(--text-main); margin-bottom: .75rem;">Requisitos</h2>
+                <p style="text-align: center; color: var(--text-body); margin-bottom: 0;">Agent Printer se instala en la PC del local, no en el servidor.</p>
+                <div class="req-grid">
+                    <div class="req-card">
+                        <i class="fab fa-windows"></i>
+                        <div>
+                            <h4>Windows 10 / 11</h4>
+                            <p>Arquitectura 64-bit. No requiere instalación de Python ni dependencias adicionales.</p>
+                        </div>
+                    </div>
+                    <div class="req-card">
+                        <i class="fas fa-print"></i>
+                        <div>
+                            <h4>Impresora instalada</h4>
+                            <p>Visible en Windows (USB) o accesible por IP y puerto en la red local (LAN).</p>
+                        </div>
+                    </div>
+                    <div class="req-card">
+                        <i class="fas fa-wifi"></i>
+                        <div>
+                            <h4>Conexión a Internet</h4>
+                            <p>Solo se necesita salida HTTPS (puerto 443) hacia tu dominio de ADEstock Cloud. Sin puertos entrantes.</p>
+                        </div>
+                    </div>
+                    <div class="req-card">
+                        <i class="fas fa-user-shield"></i>
+                        <div>
+                            <h4>Permisos de Administrador</h4>
+                            <p>Requeridos solo para la instalación inicial. El agente corre como tarea programada de Windows.</p>
+                        </div>
+                    </div>
+                    <div class="req-card">
+                        <i class="fas fa-cloud"></i>
+                        <div>
+                            <h4>ADEstock Cloud activo</h4>
+                            <p>Necesitás ser cliente del plan Cloud de ADEstock con el módulo de cola de impresión habilitado.</p>
+                        </div>
+                    </div>
+                    <div class="req-card">
+                        <i class="fas fa-key"></i>
+                        <div>
+                            <h4>API Key de sucursal</h4>
+                            <p>Se genera desde el panel de administración de ADEstock Cloud para cada sucursal/caja.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instalación paso a paso -->
+        <section style="max-width: 800px; margin: 3rem auto;">
+            <h2 style="text-align: center; font-size: 1.8rem; color: var(--text-main); margin-bottom: .75rem;">Instalación en 4 Pasos</h2>
+            <p style="text-align: center; color: var(--text-body); margin-bottom: 2rem;">Todo el proceso tarda menos de 5 minutos.</p>
+
+            <ol class="install-steps">
+                <li class="install-step">
+                    <div class="step-num">1</div>
+                    <div>
+                        <h4><i class="fas fa-download" style="margin-right:.5rem;color:var(--primary);"></i>Descargá el instalador</h4>
+                        <p>Bajá <code class="inline-code">AgentPrinter_Setup_vX.Y.Z.exe</code> desde la sección de versiones más abajo y ejecutalo como administrador.</p>
+                    </div>
+                </li>
+                <li class="install-step">
+                    <div class="step-num">2</div>
+                    <div>
+                        <h4><i class="fas fa-sliders-h" style="margin-right:.5rem;color:var(--primary);"></i>Completá el formulario de configuración</h4>
+                        <p>El instalador abre una pantalla donde ingresás:</p>
+                        <ul style="margin-top:.6rem; padding-left:1.2rem; font-size:.9rem; color:var(--text-body); line-height:2;">
+                            <li><strong>Cloud URL</strong> — tu dirección de ADEstock Cloud</li>
+                            <li><strong>API Key</strong> — la clave del agente que generaste en el panel</li>
+                            <li><strong>Store ID</strong> — identificador de tu sucursal (ej. <code class="inline-code">sucursal-centro</code>)</li>
+                            <li><strong>POS ID</strong> — identificador de la caja (ej. <code class="inline-code">caja-01</code>)</li>
+                            <li><strong>Agent Name</strong> — nombre descriptivo (ej. <code class="inline-code">PC-CAJA-01</code>)</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="install-step">
+                    <div class="step-num">3</div>
+                    <div>
+                        <h4><i class="fas fa-cog" style="margin-right:.5rem;color:var(--primary);"></i>El instalador configura todo automáticamente</h4>
+                        <p>Copia los binarios en <code class="inline-code">C:\Program Files\AgentPrinter\</code>, guarda la configuración en <code class="inline-code">%APPDATA%\AgentPrinter\</code> y crea una tarea programada de Windows para que el agente arranque solo con cada inicio del sistema.</p>
+                    </div>
+                </li>
+                <li class="install-step">
+                    <div class="step-num">4</div>
+                    <div>
+                        <h4><i class="fas fa-check-circle" style="margin-right:.5rem;color:var(--success);"></i>Verificá que el agente esté activo</h4>
+                        <p>Desde ADEstock Cloud vas a ver el agente conectado con su estado de salud en tiempo real. Podés hacer una impresión de prueba directamente desde el panel para confirmar que todo funciona.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Download section -->
+        <section id="download-agent" style="max-width: 860px; margin: 0 auto 4rem;">
+            <div style="background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%); border-radius: var(--radius-lg); padding: 2.5rem 2rem; color: #fff; text-align: center; margin-bottom: 2rem; box-shadow: var(--shadow-xl);">
+                <i class="fas fa-download" style="font-size: 2.5rem; color: var(--secondary); margin-bottom: 1rem;"></i>
+                <h2 style="font-size: 1.9rem; margin-bottom: .75rem;">Descargar Agent Printer</h2>
+                <p style="color: #94a3b8; margin-bottom: 1.75rem; font-size: 1rem;">Gratuito para todos los clientes de ADEstock Cloud.<br>Instalador para Windows 10/11 — sin dependencias adicionales.</p>
+                <a href="https://github.com/adema-websites/adestock/releases/latest/download/AgentPrinter_Setup_v1.0.0.exe"
+                   class="cta-button large"
+                   style="background: var(--secondary); font-size: 1.1rem; padding: .9rem 2.2rem;"
+                   download>
+                    <i class="fas fa-download" style="margin-right:.5rem;"></i>
+                    AgentPrinter_Setup_v1.0.0.exe
+                </a>
+                <p style="font-size: .8rem; color: #64748b; margin-top: 1rem;">
+                    <i class="fas fa-shield-alt" style="margin-right:.3rem;"></i>
+                    Verificá la integridad con el archivo <code style="font-size:.78rem;">AgentPrinter_Setup_v1.0.0.exe.sha256</code> incluido en el release.
+                </p>
+            </div>
+
+            <!-- Version list (PyPI style) -->
+            <div style="background: var(--bg-surface); border: 1px solid #e2e8f0; border-radius: var(--radius-md); overflow: hidden;">
+                <div style="padding: 1rem 1.4rem; background: var(--bg-surface-alt); border-bottom: 1px solid #e2e8f0; display:flex; align-items:center; gap:.75rem;">
+                    <i class="fas fa-history" style="color:var(--primary);"></i>
+                    <strong style="font-size:.95rem; color:var(--text-main);">Historial de versiones</strong>
+                    <span style="font-size:.8rem; color:var(--text-muted); margin-left:auto;">Windows 10/11 · 64-bit</span>
+                </div>
+                <div style="padding: 1rem 1.4rem;">
+                    <ul class="version-list">
+
+                        <!-- v1.0.0 -->
+                        <li class="version-item">
+                            <span class="version-tag">v1.0.0</span>
+                            <span class="version-label latest">latest</span>
+                            <span class="version-label stable">stable</span>
+                            <span class="version-notes">Lanzamiento inicial. Soporte USB y LAN, heartbeat, reintentos automáticos, instalador NSIS.</span>
+                            <span class="version-date">Mar 2026</span>
+                            <a href="https://github.com/adema-websites/adestock/releases/download/AgentPrinter-v1.0.0/AgentPrinter_Setup_v1.0.0.exe"
+                               class="version-dl-btn" download title="Descargar v1.0.0">
+                                <i class="fas fa-download"></i> .exe
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <p style="font-size:.8rem; color:var(--text-muted); margin-top:1rem; margin-bottom:0;">
+                        <i class="fas fa-info-circle" style="margin-right:.3rem;"></i>
+                        Cada release incluye el instalador <code style="font-size:.78rem;">.exe</code> y su hash <code style="font-size:.78rem;">.sha256</code> para verificación de integridad.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA final -->
+        <section class="contact-section" style="margin-bottom: 0;">
+            <h2>¿Necesitás ayuda con la instalación?</h2>
+            <p>Nuestro equipo te acompaña en cada paso. Escribinos por WhatsApp o contacto directo.</p>
+            <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:1.25rem;">
+                <a href="https://wa.me/5491127888995?text=Hola!%20necesito%20ayuda%20con%20Agent%20Printer%20para%20ADEstock"
+                   class="cta-button large"
+                   target="_blank"
+                   style="background:#25D366;">
+                    <i class="fab fa-whatsapp" style="margin-right:.4rem;"></i>WhatsApp
+                </a>
+                <a href="contacto.html" class="cta-button large secondary">
+                    <i class="fas fa-envelope" style="margin-right:.4rem;"></i>Formulario de contacto
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer style="background-color: #2c3e50; color: #ecf0f1; padding: 3rem 2rem 1rem;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                <div>
+                    <img src="img/logo-home.svg" alt="ADEstock Logo" style="max-width: 150px; margin-bottom: 1rem; filter: brightness(0) invert(1);">
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #bdc3c7;">Sistema de gestión de stock e inventario para pymes. Multi-depósito, multi-POS y control total de tu negocio.</p>
+                </div>
+                <div>
+                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;">Herramientas</h4>
+                    <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
+                        <li style="margin-bottom: 0.5rem;"><a href="descargar-demo.html" style="color: #bdc3c7; text-decoration: none;">Descargar Demo</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="agent-printer.html" style="color: #bdc3c7; text-decoration: none;">Agent Printer</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="tutoriales.html" style="color: #bdc3c7; text-decoration: none;">Tutoriales</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;">Recursos</h4>
+                    <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
+                        <li style="margin-bottom: 0.5rem;"><a href="index.html#features" style="color: #bdc3c7; text-decoration: none;">Características</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="precios.html" style="color: #bdc3c7; text-decoration: none;">Precios</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="index.html#faq" style="color: #bdc3c7; text-decoration: none;">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;">Contacto</h4>
+                    <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
+                        <li style="margin-bottom: 0.5rem;">
+                            <i class="fas fa-envelope" style="color: #3498db; margin-right: 8px;"></i>
+                            <a href="mailto:contact@ademasistemas.com" style="color: #bdc3c7; text-decoration: none;">contact@ademasistemas.com</a>
+                        </li>
+                        <li style="margin-bottom: 0.5rem;">
+                            <i class="fab fa-whatsapp" style="color: #25D366; margin-right: 8px;"></i>
+                            <a href="https://wa.me/5491127888995" target="_blank" style="color: #bdc3c7; text-decoration: none;">+54 9 11 2788-8995</a>
+                        </li>
+                        <li style="margin-bottom: 0.5rem;">
+                            <i class="fas fa-globe" style="color: #3498db; margin-right: 8px;"></i>
+                            <a href="https://ademasistemas.com" target="_blank" style="color: #bdc3c7; text-decoration: none;">ademasistemas.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr style="border: none; border-top: 1px solid #34495e; margin: 2rem 0 1rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem; color: #95a5a6;">
+                <p style="margin: 0;">&copy; <span id="footer-year"></span> ADEstock by <a href="https://ademasistemas.com" target="_blank" style="color: #3498db; text-decoration: none;">ADEMA Sistemas</a>. Todos los derechos reservados.</p>
+                <div>
+                    <a href="politica-privacidad.html" style="color: #95a5a6; text-decoration: none; margin-right: 1rem;">Política de Privacidad</a>
+                    <a href="terminos-condiciones.html" style="color: #95a5a6; text-decoration: none;">Términos y Condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp float -->
+    <a href="https://wa.me/5491127888995?text=Hola!%20quiero%20saber%20m%C3%A1s%20sobre%20Agent%20Printer%20para%20ADEstock.." class="whatsapp-float" target="_blank" aria-label="WhatsApp ADEstock">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
