@@ -1,0 +1,49 @@
+{
+  "id": "t16-edicion-rapida-pos",
+  "title": {
+    "es": "16) Edición rápida de productos en POS",
+    "en": "16) Quick Product Editing in POS",
+    "pt": "16) Edição rápida de produtos no PDV"
+  },
+  "objective": {
+    "es": "Corregir datos de catálogo desde el explorador visual del POS sin salir del flujo de atención ni perder el ritmo del mostrador.",
+    "en": "Fix catalog data from the POS visual browser without leaving the service flow or slowing down counter operations.",
+    "pt": "Corrigir dados do catálogo pelo explorador visual do PDV sem sair do fluxo de atendimento nem perder o ritmo do balcão."
+  },
+  "steps": {
+    "es": [
+      "Ingresá al Punto de venta y abrí el explorador rápido de productos.",
+      "Buscá el producto que necesitás corregir por nombre, categoría o código.",
+      "Si tu usuario tiene permiso para gestionar productos en POS, vas a ver la acción Editar producto dentro de la tarjeta.",
+      "Hacé clic en Editar producto. El sistema cierra el modal del catálogo y abre el mismo formulario de edición que se usa desde el carrito.",
+      "Actualizá los datos necesarios: nombre, código de barras, costo, cantidad o precios.",
+      "Guardá los cambios y volvé al flujo de venta con el producto actualizado."
+    ],
+    "en": [
+      "Enter Point of Sale and open the quick product browser.",
+      "Search for the product you need to correct by name, category or code.",
+      "If your user has permission to manage products in POS, you will see the Edit product action inside the card.",
+      "Click Edit product. The system closes the catalog modal and opens the same edit form used from the cart.",
+      "Update the needed data: name, barcode, cost, quantity or prices.",
+      "Save changes and return to the sales flow with the updated product."
+    ],
+    "pt": [
+      "Entre no Ponto de venda e abra o explorador rápido de produtos.",
+      "Busque o produto que precisa corrigir por nome, categoria ou código.",
+      "Se o usuário tiver permissão para gerenciar produtos no PDV, a ação Editar produto aparecerá dentro do cartão.",
+      "Clique em Editar produto. O sistema fecha o modal do catálogo e abre o mesmo formulário de edição usado no carrinho.",
+      "Atualize os dados necessários: nome, código de barras, custo, quantidade ou preços.",
+      "Salve as alterações e volte ao fluxo de venda com o produto atualizado."
+    ]
+  },
+  "result": {
+    "es": "El cajero o administrador corrige el producto en el momento, con los mismos permisos y validaciones del flujo existente.",
+    "en": "The cashier or administrator corrects the product immediately, with the same permissions and validations as the existing flow.",
+    "pt": "O caixa ou administrador corrige o produto na hora, com as mesmas permissões e validações do fluxo existente."
+  },
+  "videoLabel": {
+    "es": "Video Tutorial: Edición rápida en POS",
+    "en": "Video Tutorial: Quick POS Editing",
+    "pt": "Vídeo Tutorial: Edição rápida no PDV"
+  }
+}

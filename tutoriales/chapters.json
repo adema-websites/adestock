@@ -645,6 +645,110 @@
         "en": "Video Tutorial: Users and Permissions",
         "pt": "Vídeo Tutorial: Usuários e Permissões"
       }
+    },
+    {
+      "id": "t15-presupuestos",
+      "title": {
+        "es": "15) Presupuestos desde POS",
+        "en": "15) Quotes from POS",
+        "pt": "15) Orçamentos no PDV"
+      },
+      "objective": {
+        "es": "Generar presupuestos desde el carrito sin afectar stock, imprimirlos, buscarlos y convertirlos en ventas cuando el cliente confirme la compra.",
+        "en": "Create quotes from the cart without affecting stock, print them, search them and convert them into sales when the customer confirms the purchase.",
+        "pt": "Gerar orçamentos a partir do carrinho sem afetar estoque, imprimir, buscar e converter em vendas quando o cliente confirmar a compra."
+      },
+      "steps": {
+        "es": [
+          "Andá a Configuración > Configuración de Ventas y activá Generar presupuestos desde POS.",
+          "Definí los días de vigencia de presupuestos y si los cajeros pueden ver todos los presupuestos o solo los propios.",
+          "Ingresá al POS, armá el carrito como en una venta normal y seleccioná la acción de presupuestar.",
+          "Elegí o cargá el cliente cuando corresponda. El sistema guarda un snapshot de los ítems y congela los precios durante la vigencia configurada.",
+          "Imprimí el presupuesto en ticket PDF o en hoja A4 para entregarlo al cliente.",
+          "Para recuperarlo, usá el buscador de presupuestos del POS e ingresá número, nombre del cliente o documento.",
+          "Si el presupuesto sigue vigente, cargalo al POS para finalizar la venta. Si está vencido o cancelado, renovalo para generar un documento nuevo con precios actuales.",
+          "Desde Admin también podés asignarlo a un cajero con turno abierto o usar el cierre rápido para cobrar y finalizar la venta en el acto."
+        ],
+        "en": [
+          "Go to Settings > Sales Settings and enable Generate quotes from POS.",
+          "Set quote validity days and whether cashiers can view all quotes or only their own.",
+          "Enter POS, build the cart as in a regular sale and choose the quote action.",
+          "Choose or add the customer when needed. The system stores an item snapshot and freezes prices during the configured validity period.",
+          "Print the quote as ticket PDF or A4 page for the customer.",
+          "To retrieve it, use the POS quote search and enter quote number, customer name or document.",
+          "If the quote is still valid, load it into POS to finish the sale. If it is expired or canceled, renew it to generate a new document with current prices.",
+          "From Admin you can also assign it to a cashier with an open shift or use quick close to charge and finish the sale immediately."
+        ],
+        "pt": [
+          "Vá para Configuração > Configuração de Vendas e ative Gerar orçamentos no PDV.",
+          "Defina os dias de validade dos orçamentos e se os caixas podem ver todos os orçamentos ou apenas os próprios.",
+          "Entre no PDV, monte o carrinho como em uma venda normal e escolha a ação de orçamento.",
+          "Escolha ou cadastre o cliente quando necessário. O sistema salva um snapshot dos itens e congela os preços durante a validade configurada.",
+          "Imprima o orçamento em ticket PDF ou folha A4 para entregar ao cliente.",
+          "Para recuperar, use a busca de orçamentos do PDV e informe número, nome do cliente ou documento.",
+          "Se o orçamento ainda estiver válido, carregue no PDV para finalizar a venda. Se estiver vencido ou cancelado, renove para gerar um novo documento com preços atuais.",
+          "No Admin também é possível atribuir a um caixa com turno aberto ou usar o fechamento rápido para cobrar e finalizar a venda imediatamente."
+        ]
+      },
+      "result": {
+        "es": "El presupuesto queda trazable, imprimible y listo para convertirse en venta sin haber movido stock ni registrado pagos antes de la confirmación.",
+        "en": "The quote remains traceable, printable and ready to become a sale without moving stock or recording payments before confirmation.",
+        "pt": "O orçamento fica rastreável, imprimível e pronto para virar venda sem movimentar estoque nem registrar pagamentos antes da confirmação."
+      },
+      "videoLabel": {
+        "es": "Video Tutorial: Presupuestos desde POS",
+        "en": "Video Tutorial: Quotes from POS",
+        "pt": "Vídeo Tutorial: Orçamentos no PDV"
+      }
+    },
+    {
+      "id": "t16-edicion-rapida-pos",
+      "title": {
+        "es": "16) Edición rápida de productos en POS",
+        "en": "16) Quick Product Editing in POS",
+        "pt": "16) Edição rápida de produtos no PDV"
+      },
+      "objective": {
+        "es": "Corregir datos de catálogo desde el explorador visual del POS sin salir del flujo de atención ni perder el ritmo del mostrador.",
+        "en": "Fix catalog data from the POS visual browser without leaving the service flow or slowing down counter operations.",
+        "pt": "Corrigir dados do catálogo pelo explorador visual do PDV sem sair do fluxo de atendimento nem perder o ritmo do balcão."
+      },
+      "steps": {
+        "es": [
+          "Ingresá al Punto de venta y abrí el explorador rápido de productos.",
+          "Buscá el producto que necesitás corregir por nombre, categoría o código.",
+          "Si tu usuario tiene permiso para gestionar productos en POS, vas a ver la acción Editar producto dentro de la tarjeta.",
+          "Hacé clic en Editar producto. El sistema cierra el modal del catálogo y abre el mismo formulario de edición que se usa desde el carrito.",
+          "Actualizá los datos necesarios: nombre, código de barras, costo, cantidad o precios.",
+          "Guardá los cambios y volvé al flujo de venta con el producto actualizado."
+        ],
+        "en": [
+          "Enter Point of Sale and open the quick product browser.",
+          "Search for the product you need to correct by name, category or code.",
+          "If your user has permission to manage products in POS, you will see the Edit product action inside the card.",
+          "Click Edit product. The system closes the catalog modal and opens the same edit form used from the cart.",
+          "Update the needed data: name, barcode, cost, quantity or prices.",
+          "Save changes and return to the sales flow with the updated product."
+        ],
+        "pt": [
+          "Entre no Ponto de venda e abra o explorador rápido de produtos.",
+          "Busque o produto que precisa corrigir por nome, categoria ou código.",
+          "Se o usuário tiver permissão para gerenciar produtos no PDV, a ação Editar produto aparecerá dentro do cartão.",
+          "Clique em Editar produto. O sistema fecha o modal do catálogo e abre o mesmo formulário de edição usado no carrinho.",
+          "Atualize os dados necessários: nome, código de barras, custo, quantidade ou preços.",
+          "Salve as alterações e volte ao fluxo de venda com o produto atualizado."
+        ]
+      },
+      "result": {
+        "es": "El cajero o administrador corrige el producto en el momento, con los mismos permisos y validaciones del flujo existente.",
+        "en": "The cashier or administrator corrects the product immediately, with the same permissions and validations as the existing flow.",
+        "pt": "O caixa ou administrador corrige o produto na hora, com as mesmas permissões e validações do fluxo existente."
+      },
+      "videoLabel": {
+        "es": "Video Tutorial: Edición rápida en POS",
+        "en": "Video Tutorial: Quick POS Editing",
+        "pt": "Vídeo Tutorial: Edição rápida no PDV"
+      }
     }
   ]
 }

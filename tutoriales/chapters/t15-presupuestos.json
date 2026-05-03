@@ -1,0 +1,55 @@
+{
+  "id": "t15-presupuestos",
+  "title": {
+    "es": "15) Presupuestos desde POS",
+    "en": "15) Quotes from POS",
+    "pt": "15) Orçamentos no PDV"
+  },
+  "objective": {
+    "es": "Generar presupuestos desde el carrito sin afectar stock, imprimirlos, buscarlos y convertirlos en ventas cuando el cliente confirme la compra.",
+    "en": "Create quotes from the cart without affecting stock, print them, search them and convert them into sales when the customer confirms the purchase.",
+    "pt": "Gerar orçamentos a partir do carrinho sem afetar estoque, imprimir, buscar e converter em vendas quando o cliente confirmar a compra."
+  },
+  "steps": {
+    "es": [
+      "Andá a Configuración > Configuración de Ventas y activá Generar presupuestos desde POS.",
+      "Definí los días de vigencia de presupuestos y si los cajeros pueden ver todos los presupuestos o solo los propios.",
+      "Ingresá al POS, armá el carrito como en una venta normal y seleccioná la acción de presupuestar.",
+      "Elegí o cargá el cliente cuando corresponda. El sistema guarda un snapshot de los ítems y congela los precios durante la vigencia configurada.",
+      "Imprimí el presupuesto en ticket PDF o en hoja A4 para entregarlo al cliente.",
+      "Para recuperarlo, usá el buscador de presupuestos del POS e ingresá número, nombre del cliente o documento.",
+      "Si el presupuesto sigue vigente, cargalo al POS para finalizar la venta. Si está vencido o cancelado, renovalo para generar un documento nuevo con precios actuales.",
+      "Desde Admin también podés asignarlo a un cajero con turno abierto o usar el cierre rápido para cobrar y finalizar la venta en el acto."
+    ],
+    "en": [
+      "Go to Settings > Sales Settings and enable Generate quotes from POS.",
+      "Set quote validity days and whether cashiers can view all quotes or only their own.",
+      "Enter POS, build the cart as in a regular sale and choose the quote action.",
+      "Choose or add the customer when needed. The system stores an item snapshot and freezes prices during the configured validity period.",
+      "Print the quote as ticket PDF or A4 page for the customer.",
+      "To retrieve it, use the POS quote search and enter quote number, customer name or document.",
+      "If the quote is still valid, load it into POS to finish the sale. If it is expired or canceled, renew it to generate a new document with current prices.",
+      "From Admin you can also assign it to a cashier with an open shift or use quick close to charge and finish the sale immediately."
+    ],
+    "pt": [
+      "Vá para Configuração > Configuração de Vendas e ative Gerar orçamentos no PDV.",
+      "Defina os dias de validade dos orçamentos e se os caixas podem ver todos os orçamentos ou apenas os próprios.",
+      "Entre no PDV, monte o carrinho como em uma venda normal e escolha a ação de orçamento.",
+      "Escolha ou cadastre o cliente quando necessário. O sistema salva um snapshot dos itens e congela os preços durante a validade configurada.",
+      "Imprima o orçamento em ticket PDF ou folha A4 para entregar ao cliente.",
+      "Para recuperar, use a busca de orçamentos do PDV e informe número, nome do cliente ou documento.",
+      "Se o orçamento ainda estiver válido, carregue no PDV para finalizar a venda. Se estiver vencido ou cancelado, renove para gerar um novo documento com preços atuais.",
+      "No Admin também é possível atribuir a um caixa com turno aberto ou usar o fechamento rápido para cobrar e finalizar a venda imediatamente."
+    ]
+  },
+  "result": {
+    "es": "El presupuesto queda trazable, imprimible y listo para convertirse en venta sin haber movido stock ni registrado pagos antes de la confirmación.",
+    "en": "The quote remains traceable, printable and ready to become a sale without moving stock or recording payments before confirmation.",
+    "pt": "O orçamento fica rastreável, imprimível e pronto para virar venda sem movimentar estoque nem registrar pagamentos antes da confirmação."
+  },
+  "videoLabel": {
+    "es": "Video Tutorial: Presupuestos desde POS",
+    "en": "Video Tutorial: Quotes from POS",
+    "pt": "Vídeo Tutorial: Orçamentos no PDV"
+  }
+}

@@ -59,6 +59,14 @@
                      {
                          "id":  "t14-usuarios",
                          "file":  "tutoriales/chapters/t14-usuarios.json"
+                     },
+                     {
+                         "id":  "t15-presupuestos",
+                         "file":  "tutoriales/chapters/t15-presupuestos.json"
+                     },
+                     {
+                         "id":  "t16-edicion-rapida-pos",
+                         "file":  "tutoriales/chapters/t16-edicion-rapida-pos.json"
                      }
                  ]
 }

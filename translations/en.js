@@ -95,9 +95,9 @@ window.i18n_en = {
   "index.faq6_a":         "You record the cost when creating or purchasing products. The system can update it automatically with each purchase. Selling prices are defined in flexible Price Lists assigned to your points of sale. <a href='tutoriales.html#listas-precios'>View tutorial</a>.",
   "index.faq7_q":         "Can I manage deliveries or dispatches?",
   "index.faq7_a":         "Yes, the Dispatch module lets you create delivery requests (manually or from a sale), assign them to your couriers and easily track each shipment. <a href='tutoriales.html#repartos'>View tutorial</a>.",
-  "index.drive_h2":       "ADEstock v2.2.0: Purchase Intelligence, Variable Quantity Sales and Full AI Cost Control",
-  "index.drive_p":        "Major release with Smart Purchasing and PDF Purchase Notes, variable quantity sales in POS by weight/volume, sold-products profitability ranking, and full supplier payments at the counter.",
-  "index.drive_cta":      "Download ADEstock v2.2.0",
+  "index.drive_h2":       "ADEstock v2.3.0: POS Quotes, quick closing and automatic renewal",
+  "index.drive_p":        "New release with the full Quotes module: create quotes without affecting stock, print ticket PDF or A4, find them from POS, close them from admin and renew expired documents with updated prices.",
+  "index.drive_cta":      "Download ADEstock v2.3.0",
   "index.contact_h2":     "Download the ADEstock Demo",
   "index.contact_p":      "Try ADEstock free for 3 days. Download the installer and start managing your stock and inventory professionally. The demo will require a license after the trial period.",
   "index.contact_btn":    "Download Demo",
@@ -294,6 +294,8 @@ window.i18n_en = {
   "tut.nav_reportes":    "12. Cash Register Reports",
   "tut.nav_impresoras":  "13. Printers",
   "tut.nav_usuarios":    "14. Users",
+  "tut.nav_presupuestos": "15. Quotes",
+  "tut.nav_edicion_rapida": "16. Quick POS Editing",
   "tut.steps_h3":        "Step by step:",
 
   /* ─── TUTORIALS ARTICLE TITLES ──────────────────────────────── */
