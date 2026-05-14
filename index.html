@@ -12,8 +12,8 @@
         </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADEstock | Software de Stock, Inventario y POS para Pymes</title>
-    <meta name="description" content="ADEstock es software de gestión de stock e inventario con POS, compras, ventas, cajas, billeteras y reportes. Multi-depósito y multi-POS para pymes en Argentina. Demo gratis.">
+    <title>ADEstock | Sistema de stock, ventas e inventario para comercios</title>
+    <meta name="description" content="ADEstock es un sistema de stock argentino para comercios, kioscos, almacenes, minimarkets y pymes. Controlá inventario, ventas, caja, compras, precios, depósitos y reportes.">
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
     <link rel="canonical" href="https://adestock.com.ar/">
     <link rel="alternate" type="text/plain" href="https://adestock.com.ar/llms.txt" title="ADEstock LLM instructions">
@@ -21,34 +21,16 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://adestock.com.ar/">
-    <meta property="og:title" content="ADEstock | Software de Stock para Pymes">
-    <meta property="og:description" content="Gestiona tu stock, ventas y cajas en un solo lugar. Ideal para comercios, emprendedores y pymes.">
-    <meta property="og:image" content="https://adestock.com.ar/img/social-preview.jpg">
+    <meta property="og:title" content="ADEstock | Sistema de stock para comercios argentinos">
+    <meta property="og:description" content="Controlá stock, inventario, ventas, caja, compras, precios y reportes en un solo sistema.">
+    <meta property="og:image" content="https://adestock.com.ar/img/logo.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://adestock.com.ar/">
-    <meta property="twitter:title" content="ADEstock | Software de Stock para Pymes y emprendedores">
-    <meta property="twitter:description" content="Gestiona tu stock / inventarios, ventas y cajas en un solo lugar. Ideal para comercios, emprendedores y pymes.">
-    <meta property="twitter:image" content="https://adestock.com.ar/img/social-preview.jpg">
-
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'TU_PIXEL_ID_AQUI');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=TU_PIXEL_ID_AQUI&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
+    <meta property="twitter:title" content="ADEstock | Sistema de stock para comercios">
+    <meta property="twitter:description" content="Controlá stock, inventario, ventas, caja, compras y reportes. Ideal para comercios argentinos.">
+    <meta property="twitter:image" content="https://adestock.com.ar/img/logo.png">
 
     <script type="application/ld+json">
     {
@@ -75,10 +57,37 @@
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "ADEMA Sistemas",
-      "url": "https://ademasistemas.com",
-            "logo": "https://ademasistemas.com/logo.svg"
+            "url": "https://adestock.com.ar/",
+                        "logo": "https://adestock.com.ar/img/logo.png"
     }
     </script>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [{
+                "@type": "Product",
+                "name": "ADEstock",
+                "brand": { "@type": "Brand", "name": "ADEstock" },
+                "category": "Sistema de stock para comercios",
+                "description": "Sistema argentino para controlar stock, inventario, ventas, caja, compras, precios, depósitos y reportes.",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "ARS",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://adestock.com.ar/descargar-demo.html"
+                }
+            },{
+                "@type": "BreadcrumbList",
+                "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Inicio",
+                    "item": "https://adestock.com.ar/"
+                }]
+            }]
+        }
+        </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -94,23 +103,26 @@
         <nav class="navbar">
             <div class="logo">
                 <a href="index.html" class="logo">
-                    <img src="img/logo-home.svg" alt="ADEstock Logo" class="logo-img">
+                    <img src="img/logo-home.svg" alt="Logo de ADEstock, sistema de stock argentino" class="logo-img">
                 </a>
             </div>
             <button class="menu-toggle" aria-label="Toggle menu">☰</button>
             <ul class="nav-links">
                 <li><a href="#features" data-i18n="nav.features">Características</a></li>
+                <li><a href="sistema-de-stock/">Sistema de stock</a></li>
+                <li><a href="control-de-stock/">Control de stock</a></li>
                 <li><a href="#target-audience" data-i18n="nav.for_who">¿Para Quién Es?</a></li>
                 <li><a href="#faq" data-i18n="nav.faq">Preguntas Frecuentes</a></li>
                 <li><a href="precios.html" style="color: var(--primary); font-weight: 700;" data-i18n="nav.prices">Precios</a></li>
+                <li><a href="blog/">Guías</a></li>
                 <li><a href="tutoriales.html" data-i18n="nav.tutorials">Tutoriales</a></li>
                 <li><a href="#download" class="cta-button open-download-modal" data-i18n="nav.download">Descargar</a></li>
             </ul>
         </nav>
         <div class="hero-content">
-            <h1 data-i18n="index.hero_h1">ADEstock: Gestión de Stock e Inventario para Pymes</h1>
-            <p data-i18n="index.hero_p">Centraliza compras, ventas, POS, cajas y depósitos en un solo sistema. ADEstock es multi-depósito y multi-POS, para operar simple y rápido.</p>
-            <a href="#features" class="cta-button large" data-i18n="index.hero_cta">Conocer ADEstock</a>
+            <h1 data-i18n="index.hero_h1">ADEstock: sistema de stock, ventas e inventario para comercios argentinos</h1>
+            <p data-i18n="index.hero_p">Ordená productos, compras, ventas, caja, precios, reportes y depósitos en un solo sistema. Ideal para kioscos, almacenes, minimarkets, distribuidoras chicas y pymes que quieren dejar Excel.</p>
+            <a href="#features" class="cta-button large" data-i18n="index.hero_cta">Conocé ADEstock</a>
         </div>
     </header>
 
@@ -118,8 +130,8 @@
         <!-- Sección de Video -->
         <section class="video-section">
             <div class="video-container">
-                <h2 data-i18n="index.video_h2">Mira el Tutorial de Ceci</h2>
-                <p class="video-intro" data-i18n="index.video_p">Conoce cómo Ceci usa ADEstock para simplificar el control de stock, ventas y cajas en su negocio.</p>
+                <h2 data-i18n="index.video_h2">Mirá el tutorial de Ceci</h2>
+                <p class="video-intro" data-i18n="index.video_p">Conocé cómo Ceci usa ADEstock para simplificar el control de stock, ventas y cajas en su negocio.</p>
                 
                 <div class="video-wrapper" style="position: relative; width: 100%; max-width: 1000px; margin: 30px auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">
                     <iframe 
@@ -128,6 +140,7 @@
                         title="Tutorial de Ceci - ADEstock" 
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        loading="lazy"
                         allowfullscreen>
                     </iframe>
                 </div>
@@ -135,22 +148,22 @@
         </section>
 
         <section id="features" class="features-section">
-            <h2 data-i18n="index.features_h2">Potencia tu Negocio con ADEstock</h2>
+            <h2 data-i18n="index.features_h2">Potenciá tu negocio con ADEstock</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <i class="fas fa-boxes"></i>
                     <h3 data-i18n="index.f1_title">Inventario Preciso y Mermas</h3>
-                    <p data-i18n="index.f1_desc">Gestiona stock real con productos simples o recetas/combos/kits. Registra ajustes y mermas para evitar pérdidas y visualizá todos tus inventarios en 1 solo lugar.</p>
+                    <p data-i18n="index.f1_desc">Gestioná stock real con productos simples o recetas, combos y kits. Registrá ajustes y mermas para evitar pérdidas y visualizá todos tus inventarios en un solo lugar.</p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-warehouse"></i>
                     <h3 data-i18n="index.f2_title">Multi-Depósito y Transferencias</h3>
-                    <p data-i18n="index.f2_desc">Controla el stock en múltiples depósitos y puntos de venta con transferencias ágiles y trazabilidad de productos.</p>
+                    <p data-i18n="index.f2_desc">Controlá el stock en múltiples depósitos y puntos de venta con transferencias ágiles y trazabilidad de productos.</p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-cash-register"></i>
                     <h3 data-i18n="index.f3_title">POS y Cajas Ágiles</h3>
-                    <p data-i18n="index.f3_desc">Vende rápido desde cualquier punto de venta, apto scanner de códigos, tickets y control por caja.</p>
+                    <p data-i18n="index.f3_desc">Vendé rápido desde cualquier punto de venta, con lector de códigos, tickets y control por caja.</p>
                 </div>
                  <div class="feature-card">
                     <i class="fas fa-money-bill-wave"></i>
@@ -163,18 +176,33 @@
         <section id="target-audience" class="target-audience-section">
              <div class="target-content">
                 <h2 data-i18n="index.target_h2">ADEstock para Pymes y Emprendedores en Argentina</h2>
-                <p data-i18n="index.target_intro">Si buscas controlar stock e inventario sin complicarte, ADEstock es para ti:</p>
+                <p data-i18n="index.target_intro">Si buscás controlar stock e inventario sin complicarte, ADEstock es para vos:</p>
                 <ul>
-                    <li><i class="fas fa-check-circle"></i> <span data-i18n-html="index.target_li1"><strong>Dejar las planillas:</strong> Centraliza la gestión de stock e inventario.</span></li>
-                    <li><i class="fas fa-check-circle"></i> <span data-i18n-html="index.target_li2"><strong>Controlar tu stock real:</strong> Evita pérdidas por faltantes o excesos.</span></li>
-                    <li><i class="fas fa-check-circle"></i> <span data-i18n-html="index.target_li3"><strong>Escalar tu operación:</strong> Administra múltiples depósitos y puntos de venta.</span></li>
-                    <li><i class="fas fa-check-circle"></i> <span data-i18n-html="index.target_li4"><strong>Orden financiero:</strong> Controla cajas, billeteras y cuentas.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n-html="index.target_li1"><strong>Dejar las planillas:</strong> Centralizá la gestión de stock e inventario.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n-html="index.target_li2"><strong>Controlar tu stock real:</strong> Evitá pérdidas por faltantes o excesos.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n-html="index.target_li3"><strong>Escalar tu operación:</strong> Administrá múltiples depósitos y puntos de venta.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n-html="index.target_li4"><strong>Orden financiero:</strong> Controlá cajas, billeteras y cuentas.</span></li>
                     <li><i class="fas fa-check-circle"></i> <span data-i18n-html="index.target_li5"><strong>Decisiones con datos:</strong> Reportes de ventas, costos y stock.</span></li>
                     <li><i class="fas fa-check-circle"></i> <span data-i18n-html="index.target_li6"><strong>Operación simple:</strong> ADEstock es monoempresa, sin complejidad extra.</span></li>
                 </ul>
             </div>
              <div class="target-image">
-                 <img src="img/adestock_run.gif" alt="Emprendedor Pyme usando ADEstock para gestion de inventario" class="hide-mobile"> </div>
+                 <img src="img/adestock_run.gif" alt="Comerciante argentino usando ADEstock para controlar stock, ventas e inventario" class="hide-mobile" loading="lazy"> </div>
+        </section>
+
+        <section id="seo-soluciones" class="use-cases-section" style="background-color: #ffffff; padding: 4rem 1rem;">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <div style="text-align: center; max-width: 820px; margin: 0 auto 2rem;">
+                    <h2>Soluciones de stock para comercios argentinos</h2>
+                    <p>ADEstock cubre búsquedas y necesidades concretas: controlar inventario, evitar faltantes, ordenar caja y dejar planillas que ya no alcanzan.</p>
+                </div>
+                <div class="use-cases-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                    <article class="use-case-card"><h3>Sistema de stock</h3><p>Para negocios que necesitan centralizar productos, ventas, compras y reportes.</p><a href="sistema-de-stock/" class="cta-button secondary">Ver solución</a></article>
+                    <article class="use-case-card"><h3>Control de stock</h3><p>Para evitar faltantes, exceso de mercadería, precios viejos y compras a ojo.</p><a href="control-de-stock/" class="cta-button secondary">Ver control de stock</a></article>
+                    <article class="use-case-card"><h3>Software de inventario</h3><p>Una solución argentina para inventario, depósitos, reportes y trazabilidad.</p><a href="software-de-inventario-argentina/" class="cta-button secondary">Ver software</a></article>
+                    <article class="use-case-card"><h3>Por rubro</h3><p>Kioscos, almacenes y minimarkets con ventas, caja y reposición diaria.</p><a href="sistema-de-stock-para-kioscos/" class="cta-button secondary">Ver rubros</a></article>
+                </div>
+            </div>
         </section>
 
         <section id="how-it-works" class="how-it-works-section">
@@ -182,23 +210,23 @@
             <div class="steps-container">
                  <div class="step-line"></div> <div class="step-card">
                     <div class="step-number">1</div>
-                    <h3 data-i18n="index.step1_h3">Configura tu Negocio</h3>
-                    <p data-i18n="index.step1_p">Define datos básicos, tu moneda, usuarios y parámetros de venta.</p>
+                    <h3 data-i18n="index.step1_h3">Configurá tu negocio</h3>
+                    <p data-i18n="index.step1_p">Definí datos básicos, moneda, usuarios y parámetros de venta.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">2</div>
                     <h3 data-i18n="index.step2_h3">Carga tu Catálogo</h3>
-                    <p data-i18n="index.step2_p">Ingresa productos simples o recetas/kits (Las recetas permiten combinar varios productos en uno solo).</p>
+                    <p data-i18n="index.step2_p">Cargá productos simples o recetas/kits. Las recetas permiten combinar varios productos en uno solo.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">3</div>
-                    <h3 data-i18n="index.step3_h3">Registra Operaciones</h3>
+                    <h3 data-i18n="index.step3_h3">Registrá operaciones</h3>
                     <p data-i18n="index.step3_p">Compras, ventas y movimientos actualizan el stock de forma automática.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">4</div>
-                    <h3 data-i18n="index.step4_h3">Gestiona y Mejora</h3>
-                    <p data-i18n="index.step4_p">Controla inventarios, reportes, billeteras y cierres de caja.</p>
+                    <h3 data-i18n="index.step4_h3">Gestioná y mejorá</h3>
+                    <p data-i18n="index.step4_p">Controlá inventarios, reportes, billeteras y cierres de caja.</p>
                 </div>
             </div>
             <a href="tutoriales.html" class="cta-button secondary" data-i18n="index.hiw_cta">Ver Guías Paso a Paso</a>
@@ -241,38 +269,38 @@
             <div class="container"> -->
 
         <section id="faq" class="faq-section">
-            <h2 data-i18n="index.faq_h2">Preguntas Frecuentes (FAQ)</h2>
+            <h2 data-i18n="index.faq_h2">Preguntas frecuentes sobre ADEstock</h2>
              <script type="application/ld+json">
              {
                "@context": "https://schema.org",
                "@type": "FAQPage",
                "mainEntity": [{
                  "@type": "Question",
-                 "name": "¿Es ADEstock difícil de usar si no sé de sistemas?",
+                                 "name": "¿Qué es un sistema de stock?",
                  "acceptedAnswer": {
                    "@type": "Answer",
-                   "text": "No, ADEstock está pensado para emprendedores. Su interfaz es intuitiva y nuestros tutoriales te guían para que le saques provecho sin ser un experto."
+                                     "text": "Es una herramienta para controlar productos, entradas, salidas, ventas, compras y existencias reales. ADEstock suma caja, reportes, precios y depósitos para comercios argentinos."
                  }
                },{
                  "@type": "Question",
-                 "name": "¿Qué tipos de productos puedo gestionar?",
+                                 "name": "¿Puedo reemplazar Excel con ADEstock?",
                  "acceptedAnswer": {
                    "@type": "Answer",
-                   "text": "Puedes manejar todo tipo: productos simples, productos con variantes (ideal para ropa o calzado con talles y colores) y productos compuestos o kits (perfecto para combos, recetas o packs promocionales)."
+                                     "text": "Sí. ADEstock permite centralizar productos, ventas, caja, compras, precios, stock mínimo, reportes y depósitos para dejar planillas y cuadernos."
                  }
                },{
                  "@type": "Question",
-                 "name": "Tengo un local y vendo online, ¿me sirve?",
+                                 "name": "¿Sirve ADEstock para almacenes?",
                  "acceptedAnswer": {
                    "@type": "Answer",
-                   "text": "¡Sí! ADEstock te permite gestionar múltiples puntos de venta (locales físicos, tiendas online, ventas móviles) y controlar el stock de cada uno desde diferentes depósitos si es necesario."
+                                     "text": "Sí. Sirve para almacenes, dietéticas y comercios de barrio que necesitan controlar mercadería, ventas, caja, compras, precios y reposición."
                  }
                },{
                 "@type": "Question",
                                  "name": "¿ADEstock emite facturas electrónicas AFIP?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "No, ADEstock se enfoca 100% en la gestión interna de stock, compras, ventas y operaciones. No incluye facturación electrónica fiscal. Puedes usarlo para controlar tu negocio y complementar con un facturador externo o el sistema de AFIP cuando necesites emitir comprobantes oficiales."
+                  "text": "No, ADEstock se enfoca 100% en la gestión interna de stock, compras, ventas y operaciones. No incluye facturación electrónica fiscal. Podés usarlo para controlar tu negocio y complementar con un facturador externo o el sistema de AFIP cuando necesites emitir comprobantes oficiales."
                 }
                             },{
                                 "@type": "Question",
@@ -286,7 +314,7 @@
                  "name": "¿Cómo se manejan los costos y los precios de venta?",
                  "acceptedAnswer": {
                    "@type": "Answer",
-                   "text": "Registras el costo al crear o comprar productos. El sistema puede actualizarlo automáticamente con cada compra. Los precios de venta los defines en Listas de Precios flexibles que asignas a tus puntos de venta."
+                   "text": "Registrás el costo al crear o comprar productos. El sistema puede actualizarlo automáticamente con cada compra. Los precios de venta los definís en listas flexibles que asignás a tus puntos de venta."
                  }
                },{
                  "@type": "Question",
@@ -313,7 +341,7 @@
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="faq-answer">
-                    <p data-i18n-html="index.faq2_a">Puedes manejar todo tipo: productos simples, productos con variantes (ideal para ropa o calzado con talles y colores) y productos compuestos o kits (perfecto para combos, recetas o packs promocionales). <a href='gestion-inventario-avanzada.html'>Más detalles aquí</a>.</p>
+                    <p data-i18n-html="index.faq2_a">Podés manejar productos simples, productos con variantes y productos compuestos o kits. Es útil para comercios que necesitan controlar stock, costos, precios y reportes. <a href='gestion-inventario-avanzada.html'>Más detalles aquí</a>.</p>
                 </div>
             </div>
             <div class="faq-item">
@@ -322,7 +350,7 @@
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="faq-answer">
-                    <p data-i18n-html="index.faq3_a">¡Sí! ADEstock te permite gestionar múltiples puntos de venta (locales físicos, tiendas online, ventas móviles) y controlar el stock de cada uno desde diferentes depósitos si es necesario. <a href='gestion-multi-deposito.html'>Más detalles aquí</a>.</p>
+                    <p data-i18n-html="index.faq3_a">Sí. ADEstock te permite gestionar múltiples puntos de venta y controlar el stock de cada uno desde diferentes depósitos si es necesario. <a href='gestion-multi-deposito.html'>Más detalles aquí</a>.</p>
                 </div>
             </div>
              <div class="faq-item">
@@ -331,7 +359,7 @@
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="faq-answer">
-                    <p data-i18n="index.faq4_a">No, ADEstock se enfoca 100% en la gestión interna de stock, compras, ventas y operaciones. No incluye facturación electrónica fiscal. Puedes usarlo para controlar tu negocio y complementar con un facturador externo o el sistema de AFIP cuando necesites emitir comprobantes oficiales.</p>
+                    <p data-i18n="index.faq4_a">No, ADEstock se enfoca 100% en la gestión interna de stock, compras, ventas y operaciones. No incluye facturación electrónica fiscal. Podés usarlo para controlar tu negocio y complementar con un facturador externo o el sistema de AFIP cuando necesites emitir comprobantes oficiales.</p>
                 </div>
             </div>
             <div class="faq-item">
@@ -349,7 +377,7 @@
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="faq-answer">
-                    <p data-i18n-html="index.faq6_a">Registras el costo al crear o comprar productos. El sistema puede actualizarlo automáticamente con cada compra. Los precios de venta los defines en Listas de Precios flexibles que asignas a tus puntos de venta. <a href='tutoriales.html#listas-precios'>Ver tutorial</a>.</p>
+                    <p data-i18n-html="index.faq6_a">Registrás el costo al crear o comprar productos. El sistema puede actualizarlo automáticamente con cada compra. Los precios de venta los definís en listas flexibles que asignás a tus puntos de venta. <a href='tutoriales.html#listas-precios'>Ver tutorial</a>.</p>
                 </div>
             </div>
              <div class="faq-item">
@@ -413,8 +441,8 @@
         </section>
 
         <section id="contact" class="contact-section">
-            <h2 data-i18n="index.contact_h2">Descarga la Demo de ADEstock</h2>
-            <p data-i18n="index.contact_p">Prueba ADEstock gratis durante 3 días. Descarga el instalador y comienza a gestionar tu stock e inventario de manera profesional. La demo solicitará licencia luego del período de prueba.</p>
+            <h2 data-i18n="index.contact_h2">Descargá la demo de ADEstock</h2>
+            <p data-i18n="index.contact_p">Probá ADEstock gratis durante 3 días. Descargá el instalador y empezá a gestionar tu stock e inventario de manera profesional. La demo solicitará licencia luego del período de prueba.</p>
             <button class="cta-button large open-download-modal" data-i18n="index.contact_btn">Descargar Demo</button>
             <div class="social-links-contact">
                 <a href="https://www.instagram.com/ademasistemas/" target="_blank" aria-label="Instagram de ADEMA Sistemas"><i class="fab fa-instagram"></i></a>
@@ -429,7 +457,7 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
                 <!-- Columna 1: Logo y descripción -->
                 <div>
-                    <img src="img/logo-home.svg" alt="ADEstock Logo" style="max-width: 150px; margin-bottom: 1rem; filter: brightness(0) invert(1);">
+                    <img src="img/logo-home.svg" alt="Logo de ADEstock" style="max-width: 150px; margin-bottom: 1rem; filter: brightness(0) invert(1);" loading="lazy">
                     <p style="font-size: 0.9rem; line-height: 1.6; color: #bdc3c7;" data-i18n="footer.desc">Sistema de gestión de stock e inventario para pymes. Multi-depósito, multi-POS y control total de tu negocio.</p>
                 </div>
                 
@@ -439,6 +467,9 @@
                     <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
                         <li style="margin-bottom: 0.5rem;"><a href="casos-uso-almacen-dietetica.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.almacen">Almacén y Dietética</a></li>
                         <li style="margin-bottom: 0.5rem;"><a href="casos-uso-minimarket.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.minimarket">Minimarket</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="sistema-de-stock-para-kioscos/" style="color: #bdc3c7; text-decoration: none;">Sistema para kioscos</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="sistema-de-stock-para-almacenes/" style="color: #bdc3c7; text-decoration: none;">Sistema para almacenes</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="sistema-de-stock-para-minimarkets/" style="color: #bdc3c7; text-decoration: none;">Sistema para minimarkets</a></li>
                         <li style="margin-bottom: 0.5rem;"><a href="tutoriales.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.tutorials">Tutoriales</a></li>
                     </ul>
                 </div>
@@ -448,6 +479,10 @@
                     <h4 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;" data-i18n="footer.resources">Recursos</h4>
                     <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
                         <li style="margin-bottom: 0.5rem;"><a href="index.html#features" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.features">Características</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="sistema-de-stock/" style="color: #bdc3c7; text-decoration: none;">Sistema de stock</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="control-de-stock/" style="color: #bdc3c7; text-decoration: none;">Control de stock</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="control-de-inventarios/" style="color: #bdc3c7; text-decoration: none;">Control de inventarios</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="blog/" style="color: #bdc3c7; text-decoration: none;">Guías de stock</a></li>
                         <li style="margin-bottom: 0.5rem;"><a href="index.html#pricing" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.prices">Precios</a></li>
                         <li style="margin-bottom: 0.5rem;"><a href="index.html#faq" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.faq">Preguntas Frecuentes</a></li>
                         <li style="margin-bottom: 0.5rem;"><a href="descargar-demo.html" style="color: #bdc3c7; text-decoration: none;" data-i18n="footer.dl_demo">Descargar Demo</a></li>
@@ -519,6 +554,7 @@
                         title="Tutorial de instalación y primeros pasos" 
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        loading="lazy"
                         allowfullscreen>
                     </iframe>
                     <p class="video-caption" data-i18n="index.modal_vid_cap">Tutorial de instalación y primeros pasos</p>

@@ -3,6 +3,14 @@ Allow: /
 Allow: /manuales/
 Allow: /manuales/changelog/
 Allow: /manuales/funcional/
+Allow: /sistema-de-stock/
+Allow: /control-de-stock/
+Allow: /control-de-inventarios/
+Allow: /software-de-inventario-argentina/
+Allow: /sistema-de-stock-para-kioscos/
+Allow: /sistema-de-stock-para-almacenes/
+Allow: /sistema-de-stock-para-minimarkets/
+Allow: /blog/
 Allow: /llms.txt
 Allow: /README.md
 
