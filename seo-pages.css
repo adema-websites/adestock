@@ -2,6 +2,7 @@
 .seo-body {
     background: #f8fafc;
     color: #243042;
+    padding-top: var(--nav-height);
 }
 
 .seo-nav {

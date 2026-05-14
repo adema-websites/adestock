@@ -101,6 +101,7 @@
   function injectSwitcher() {
     var navLinks = document.querySelector('.nav-links');
     if (!navLinks) return;
+    if (navLinks.closest('.adestock-site-nav')) return;
 
     // Avoid double injection
     if (document.querySelector('.lang-switcher')) return;

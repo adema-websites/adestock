@@ -2,31 +2,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Navbar Scroll Effect ---
     const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
+    const sharedNav = document.querySelector('.adestock-site-nav');
 
-    // --- Mobile Menu Toggle ---
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    if (menuToggle && navLinks) {
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+    if (navbar && !sharedNav) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
         });
 
-        // Close menu when a link is clicked (for single-page navigation)
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (navLinks.classList.contains('active')) {
-                    navLinks.classList.remove('active');
-                }
+        // --- Mobile Menu Toggle ---
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
             });
-        });
+
+            // Close menu when a link is clicked (for single-page navigation)
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                    }
+                });
+            });
+        }
     }
 
 
@@ -82,8 +86,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         behavior: 'smooth'
                     });
                      // Close mobile menu after clicking anchor link
-                    if (navLinks && navLinks.classList.contains('active')) {
-                        navLinks.classList.remove('active');
+                    const openNavLinks = document.querySelector('.nav-links.active');
+                    if (openNavLinks) {
+                        openNavLinks.classList.remove('active');
                     }
                 }
             }

@@ -241,6 +241,19 @@ section {
     color: var(--primary);
 }
 
+.nav-links li a.is-active {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.adestock-site-nav .cta-button {
+    color: var(--text-on-primary) !important;
+}
+
+.nav-replaced-page-header main:first-of-type {
+    padding-top: var(--nav-height);
+}
+
 .menu-toggle {
     display: none;
     background: none;
