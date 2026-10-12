@@ -16,6 +16,8 @@ import pwaRadiografia from '../assets/web/pwa-radiografia.png';
 import pwaProductos from '../assets/web/pwa-productos.png';
 import pwaCuentas from '../assets/web/pwa-cuentas.png';
 import pwaProveedores from '../assets/web/pwa-proveedores.png';
+import pwaComparar from '../assets/web/pwa-comparar.png';
+import posCarrito from '../assets/web/pos-carrito.png';
 
 // Los enlaces a tutoriales solo apuntan a guías que existen en este build; si no, al índice vigente.
 const existentes = new Set((await getTutoriales()).map((t) => t.data.slug));
@@ -42,6 +44,7 @@ const celulares = [
   { img: pwaProductos, t: 'Productos', d: 'Rentabilidad, stock y movimientos de cada producto.' },
   { img: pwaCuentas, t: 'Cuentas corrientes', d: 'Lo que te deben los clientes y lo que debés a proveedores.' },
   { img: pwaProveedores, t: 'Proveedores', d: 'Qué le comprás a cada uno y a qué precio.' },
+  { img: pwaComparar, t: 'Comparar proveedores', d: 'Quién te vende más barato lo mismo y cuánto pagaste de más.' },
 ];
 
 const faq = [
@@ -168,7 +171,7 @@ const jsonLd = [
             <p>Ves los renglones leídos, los productos asignados y si los totales coinciden con la boleta.</p>
           </li>
           <li class="flujo-item rev" style="--d:280ms">
-            <div class="flujo-img celular-mini"><div class="celular"><Image src={pwaProveedores} alt="App del dueño: lo que le comprás a cada proveedor y a qué precio" widths={[260, 520]} sizes="240px" loading="lazy" /></div></div>
+            <div class="flujo-img celular-mini"><div class="celular"><Image src={pwaComparar} alt="App del dueño: comparación de proveedores con el mismo producto y la diferencia de precio" widths={[260, 520]} sizes="240px" loading="lazy" /></div></div>
             <h3>3. Comparás proveedores</h3>
             <p>Cada compra guarda el precio por proveedor. Después mirás desde el celular quién te vende más barato lo mismo.</p>
           </li>
@@ -201,7 +204,10 @@ const jsonLd = [
       <div class="wrap">
         <h2 id="t-circ" class="rev" style="max-width:20ch">Vendé, controlá y cerrá la caja</h2>
         <div class="bento">
-          <article class="b b-a rev"><h3>Punto de venta</h3><p>Buscás por nombre o código de barras, cobrás con varios medios de pago y el stock se descuenta solo.</p></article>
+          <article class="b b-a rev">
+            <div class="b-a-txt"><h3>Punto de venta</h3><p>Buscás por nombre o código de barras, cobrás con varios medios de pago y el stock se descuenta solo.</p></div>
+            <div class="pantalla b-a-img"><Image src={posCarrito} alt="Punto de venta con cuatro productos en el carrito y el total a cobrar" widths={[480, 720, 960]} sizes="(max-width: 900px) 90vw, 520px" loading="lazy" /></div>
+          </article>
           <article class="b b-b rev" style="--d:80ms"><h3>Caja</h3><p>Abrís el turno, registrás gastos y retiros y cerrás con arqueo.</p></article>
           <article class="b b-c rev" style="--d:160ms"><h3>Stock</h3><p>Contás por depósito y corregís diferencias sin perder el historial.</p></article>
           <article class="b b-d rev" style="--d:240ms"><h3>Depósitos</h3><p>Varios depósitos y puntos de venta, con transferencias entre ellos.</p></article>
@@ -317,7 +323,9 @@ const jsonLd = [
   .bento { margin-top: 2.5rem; display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; }
   .b { border-radius: var(--r-card); padding: 1.75rem; display: grid; gap: .5rem; align-content: end; min-height: 220px; background: var(--surface); border: 1px solid var(--line); }
   .b p { color: var(--ink-2); max-width: 36ch; }
-  .b-a { grid-column: span 4; background: var(--night); color: var(--night-ink); border-color: var(--night); min-height: 280px; }
+  .b-a { grid-column: span 4; background: var(--night); color: var(--night-ink); border-color: var(--night); min-height: 320px; grid-template-columns: 1fr 1.2fr; gap: 1.5rem; align-items: center; align-content: stretch; }
+  .b-a-txt { display: grid; gap: .5rem; align-self: end; }
+  .b-a-img { box-shadow: none; border-color: transparent; }
   .b-a p { color: color-mix(in srgb, var(--night-ink) 75%, transparent); }
   .b-b { grid-column: span 2; background: var(--accent-soft); border-color: transparent; }
   .b-c { grid-column: span 2; }
@@ -325,6 +333,7 @@ const jsonLd = [
   .b-e { grid-column: span 2; background: var(--accent); color: var(--accent-ink); border-color: transparent; }
   .b-e p { color: color-mix(in srgb, var(--accent-ink) 85%, transparent); }
   @media (max-width: 900px) { .bento { grid-template-columns: 1fr 1fr; } .b-a { grid-column: span 2; } .b-b, .b-c, .b-d { grid-column: span 1; } .b-e { grid-column: span 2; } }
+  @media (max-width: 700px) { .b-a { grid-template-columns: 1fr; } }
   @media (max-width: 520px) { .bento { grid-template-columns: 1fr; } .b-a, .b-b, .b-c, .b-d, .b-e { grid-column: span 1; min-height: 0; } }
 
   .rubros-lista { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; }

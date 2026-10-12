@@ -36,8 +36,9 @@ Widget (`src/components/Chat.astro`) + servicio (`chat-api/`). Detalle y desplie
 
 ## Pendiente antes de publicar
 
-- [ ] **Capturas de demo mejores**: los productos de la demo no tienen foto ("Sin foto" en la revista) y "Comparar proveedores" muestra $0. Cargar fotos y una compra del mismo producto a dos proveedores y recapturar (`scripts/web-capturas/`).
-- [ ] Capturas limpias del POS (venta, caja) y del conteo de stock para el bento.
+- [x] Demo sembrada (solo base de demo): 45 fotos ilustrativas de producto (packshots generados, no son fotos reales) y dos compras confirmadas de los mismos 5 productos a dos proveedores. Recapturadas la revista, la app del dueño (6 pantallas, incluida "Comparar proveedores": $9.480 de más, +5,9 %) y el POS (`scripts/web-capturas/`).
+- [ ] Reemplazar los packshots ilustrativos por fotos reales de producto antes de usar la revista como prueba de resultado.
+- [ ] Capturas limpias de caja y de conteo de stock; hoy esas celdas del bento son solo texto. El POS de la captura muestra botones de presupuesto: rearmar el carrito desde una venta nueva.
 - [ ] Video corto de compras con foto y de la app del dueño; convertir a MP4 (no hay ffmpeg en esta PC).
 - [ ] Revisión de copy con alguien del rubro; en particular "en pocos clics" y el mensaje de ahorro de tiempo, que no están medidos.
 - [ ] Probar la home en Safari/iOS y con lector de pantalla; medir LCP/INP/CLS en el despliegue.
