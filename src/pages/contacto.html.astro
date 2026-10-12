@@ -1,0 +1,76 @@
+---
+import Pagina from '../layouts/Pagina.astro';
+
+const equipo = [
+  { nombre: 'Kevin', rol: 'El arquitecto del sistema', texto: 'Es quien empezó todo esto. Kevin es programador con años de experiencia desarrollando software para emprendedores y se especializa en automatizar procesos. Está detrás del código y es quien responde las consultas técnicas. Además de crear soluciones, es youtuber: comparte herramientas gratuitas y enseña programación de forma clara.' },
+  { nombre: 'Ingrid', rol: 'Tu guía y aliada en el negocio', texto: 'Te acompaña en la posventa y te enseña a adaptar el sistema a tu realidad. Ingrid entiende tus dolores de cabeza porque tiene su propio almacén de barrio con producción de comidas: necesitaba ordenar sus costos y recetas, y de esa necesidad nació ADEMA. También se ocupa de que más personas nos conozcan y comparte tips de marketing y redes para tu emprendimiento.' },
+  { nombre: 'Andrea', rol: 'El orden y la claridad', texto: 'Mantiene todo en regla detrás de escena: facturación, logística y que los números cierren. Si necesitás claridad sobre tu plan, tu membresía o temas administrativos, ella te da la respuesta precisa.' },
+];
+---
+<Pagina
+  title="Contacto ADEstock | Sistema de stock para comercios"
+  description="Contactá a ADEMA Sistemas para consultar por ADEstock, sistema argentino de stock, inventario, ventas, caja, compras y reportes para comercios."
+  path="/contacto.html"
+>
+  <div class="crumbs"><a href="/">Inicio</a>{' / '}Contacto</div>
+  <main id="contenido">
+    <header class="page-hero">
+      <div class="page-hero__inner">
+        <h1>Hablá con el equipo de ADEstock</h1>
+        <p class="page-lead">Soporte humano, cercano y directo. Aquí no hay bots ni respuestas automáticas.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://wa.me/5491127888995">Escribir por WhatsApp</a>
+          <a class="btn btn-ghost" href="mailto:contact@ademasistemas.com">contact@ademasistemas.com</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="band alt">
+      <div class="seo-hero__inner cols-2">
+        <div>
+          <h2 style="max-width: 20ch">Nacimos dentro de un comercio real</h2>
+        </div>
+        <div style="color:var(--ink-2)">
+          <p>ADEMA Sistemas no nació en una oficina de corporativos: nació dentro de un comercio, entre el mostrador y los clientes, buscando resolver problemas verdaderos como el desorden, el estrés y los papelitos perdidos.</p>
+          <p style="margin-top:1rem">Entendemos lo que vivís porque lo vivimos. Por eso no te ofrecemos solo un sistema, sino un equipo de tres personas reales trabajando todos los días para que tengas claridad y tranquilidad en tu gestión.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="equipo">
+      <div class="seo-hero__inner">
+        <h2 id="equipo" style="max-width: 24ch">Quiénes estamos detrás de ADEMA</h2>
+        <p class="page-lead">Un equipo con roles definidos para que tu experiencia sea completa, de lo técnico a lo administrativo.</p>
+        <div class="cols-3" style="margin-top:1.75rem">
+          {equipo.map((e) => (
+            <article class="card">
+              <h3>{e.nombre}</h3>
+              <p style="color:var(--accent); font-weight:600">{e.rol}</p>
+              <p style="color:var(--ink-2)">{e.texto}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="band alt">
+      <div class="seo-hero__inner cols-2">
+        <div>
+          <h2 style="max-width: 18ch">Nuestra promesa</h2>
+          <p class="page-lead">Funcionar como un empleado más de tu negocio: registramos, ordenamos y controlamos para que vos puedas tomar mejores decisiones.</p>
+        </div>
+        <div class="card">
+          <h3>Contacto y soporte</h3>
+          <p style="color:var(--ink-2)">¿Tenés dudas sobre ADEstock o necesitás ayuda con el sistema?</p>
+          <dl class="kv" style="margin-top:.5rem">
+            <dt>Email</dt><dd><a href="mailto:contact@ademasistemas.com">contact@ademasistemas.com</a></dd>
+            <dt>WhatsApp</dt><dd><a href="https://wa.me/5491127888995">+54 9 11 2788-8995</a></dd>
+            <dt>Instagram</dt><dd><a href="https://www.instagram.com/ademasistemas/">@ademasistemas</a></dd>
+            <dt>Web</dt><dd><a href="https://ademasistemas.com">ademasistemas.com</a></dd>
+          </dl>
+          <p class="muted" style="margin-top:.75rem; font-size:.95rem">Antes de escribir, probá el asistente de la web o buscá en los <a href="/tutoriales/" style="color:var(--accent)">tutoriales</a>: muchas respuestas están ahí.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Pagina>

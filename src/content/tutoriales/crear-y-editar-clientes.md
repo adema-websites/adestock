@@ -52,7 +52,7 @@ Tocá **Nuevo Cliente**.
 |---|---|---|
 | 1 | **Nombre** *(obligatorio)* | Nombre o razón social. Es el único dato imprescindible |
 | 2 | **Documento (DNI/CUIT)** | Sirve para identificarlo y para facturar. Es lo que podés usar para buscarlo |
-| — | Teléfono, Email, Dirección | Datos de contacto. Opcionales |
+| - | Teléfono, Email, Dirección | Datos de contacto. Opcionales |
 | 3 | **Categoría IVA** *(obligatorio)* | *Consumidor Final*, *Monotributista*, *Responsable Inscripto* o *Exento*. Se usa para **discriminar el IVA** en tickets y facturas A4 |
 | 4 | **Habilitar Cuenta Corriente** | Activalo si le vas a vender "fiado". Si está apagado, el POS no te deja cobrarle con cuenta corriente |
 

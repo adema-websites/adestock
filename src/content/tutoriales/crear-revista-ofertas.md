@@ -54,10 +54,10 @@ El editor tiene el **panel a la izquierda** y la **vista previa en vivo** a la d
 |---|---|---|
 | 1 | **Nombre interno** | Cómo la encontrás en el listado (ej.: *Revista semana 42*) |
 | 2 | **Formato** | **A4 vertical** u **horizontal** para imprimir; **post cuadrado**, **post vertical** o **historia** para redes |
-| — | **Tipo** | *Grilla* (varios productos por hoja) o *Revista* (1 por hoja) |
-| — | **Columnas y filas** | Cuántos productos entran por hoja (ej.: 2 × 3) |
-| — | **Agrupar por categoría** | Pone un título por sección (Almacén, Bebidas…) |
-| — | **Tema** | El diseño: *Supermercado*, *Oscuro premium*, *Minimal*, *Temporada* y los **ADE** (Bauhaus, Zen, Pop, Riso, Fuji…) |
+| - | **Tipo** | *Grilla* (varios productos por hoja) o *Revista* (1 por hoja) |
+| - | **Columnas y filas** | Cuántos productos entran por hoja (ej.: 2 × 3) |
+| - | **Agrupar por categoría** | Pone un título por sección (Almacén, Bebidas…) |
+| - | **Tema** | El diseño: *Supermercado*, *Oscuro premium*, *Minimal*, *Temporada* y los **ADE** (Bauhaus, Zen, Pop, Riso, Fuji…) |
 
 ### 3. Elegí la vigencia
 
@@ -101,7 +101,7 @@ En la vista previa, **tocá un producto**:
 | 3 | **Recortar** | Recorta la foto a mano |
 | 4 | **Encuadrar** (mover y tamaño) | Mueve y agranda la foto dentro de su marco |
 | 5 | **Quitar de la publicación** | Saca el producto de esta revista |
-| — | **Subir otra foto** | Reemplaza la foto solo para la revista |
+| - | **Subir otra foto** | Reemplaza la foto solo para la revista |
 
 > **Importante:** los cambios de foto **se usan solo en esta revista o folleto**. La foto del producto en el sistema **no se modifica**.
 

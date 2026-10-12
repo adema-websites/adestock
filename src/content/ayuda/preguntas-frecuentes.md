@@ -102,7 +102,7 @@ Esta página junta, por tema, los problemas que más aparecen. Cada fila indica 
 | *Confirmar y cerrar* está apagado | Todavía falta cobrar | Agregá otro pago hasta que el faltante sea $ 0 |
 | El panel de descuento no deja escribir | Tu usuario no tiene *Puede hacer descuentos* | Pedíselo al dueño |
 | El botón *Cuenta Corriente* está apagado | El cliente es Consumidor Final o no tiene cuenta corriente | Cambiá el cliente (ver *Vender a cuenta corriente*) |
-| Cargué un pago por error | — | Quitalo con el tacho y cargalo de nuevo |
+| Cargué un pago por error | - | Quitalo con el tacho y cargalo de nuevo |
 | El importe de tarjeta es mayor al total | El medio tiene recargo | Es lo esperado: el recargo se suma al importe de ese medio |
 
 → [Ver el tutorial completo](/tutoriales/cobrar-con-varios-medios-de-pago/)
@@ -113,8 +113,8 @@ Esta página junta, por tema, los problemas que más aparecen. Cada fila indica 
 |---|---|---|
 | El botón *Cuenta Corriente* está apagado | El cliente es Consumidor Final, o no tiene cuenta corriente habilitada | Asignale un cliente con CC (F9) o habilitala desde *Gestión de clientes → Editar* |
 | No aparece la etiqueta CC en la lista | El cliente no la tiene habilitada | Editá el cliente y tildá *Habilitar Cuenta Corriente* |
-| Necesito saber cuánto me debe | — | Ver *Revisar la cuenta corriente de un cliente* |
-| El cliente quiere pagar su deuda | — | Ver *Cobrar la deuda de un cliente* |
+| Necesito saber cuánto me debe | - | Ver *Revisar la cuenta corriente de un cliente* |
+| El cliente quiere pagar su deuda | - | Ver *Cobrar la deuda de un cliente* |
 
 → [Ver el tutorial completo](/tutoriales/vender-fiado-cuenta-corriente/)
 
@@ -148,7 +148,7 @@ Esta página junta, por tema, los problemas que más aparecen. Cada fila indica 
 | Me da faltante y no sé por qué | Algún retiro, gasto o cobro no se registró | Revisá en *Ventas anteriores*, *Gastos* y *Retiro de caja* del turno |
 | El cierre no imprime | No hay impresora o agente configurado | Menú rápido → Configuración → Impresora de tickets |
 | "Hay compras pagadas sin confirmar" al cerrar | Cargaste compras pagadas con dinero u otro medio y nadie las confirmó | Pedile al dueño o a un administrativo que las confirme en el panel (*Compra → Compras → Confirmar compra*) |
-| Cerré sin querer | — | Abrí un turno nuevo; el cierre anterior queda registrado |
+| Cerré sin querer | - | Abrí un turno nuevo; el cierre anterior queda registrado |
 
 → [Ver el tutorial completo](/tutoriales/abrir-y-cerrar-caja/)
 
@@ -205,7 +205,7 @@ Esta página junta, por tema, los problemas que más aparecen. Cada fila indica 
 | No veo *Cobrar a un cliente* en el menú | Falta el permiso *Puede cobrar Cta. Cte.* | Pedíselo al dueño |
 | "Buscar Deudas" no muestra nada | El cliente no tiene deudas pendientes | Verificá en *Gestión de clientes* su saldo |
 | El botón *Cobrar e imprimir* está gris | El *Restante* no es $ 0 | Ajustá el monto del pago o las deudas elegidas |
-| Me equivoqué en un cobro | — | Pedile al dueño que lo anule desde el panel de administración |
+| Me equivoqué en un cobro | - | Pedile al dueño que lo anule desde el panel de administración |
 
 → [Ver el tutorial completo](/tutoriales/cobrar-deuda-cliente/)
 
@@ -230,7 +230,7 @@ Esta página junta, por tema, los problemas que más aparecen. Cada fila indica 
 | No me deja cerrar la caja | Tenés compras pagadas sin confirmar | Pedí que las confirmen (o descartalas si estaban mal cargadas) |
 | No veo *Cuenta Corriente Proveedor* | Tu usuario no tiene el permiso *Puede comprar en cuenta corriente* | Pedíselo al dueño (Menú rápido → Usuarios) |
 | Quiero cargar o editar el pago desde el panel | Los pagos se registran solo desde el POS | Eliminá la compra pendiente y volvela a cargar desde el POS |
-| Cargué mal un precio | — | Antes de confirmar: eliminá la compra pendiente y volvela a cargar |
+| Cargué mal un precio | - | Antes de confirmar: eliminá la compra pendiente y volvela a cargar |
 | El proveedor no está | Es nuevo | **＋ Nuevo proveedor** en el paso 2 |
 
 → [Ver el tutorial completo](/tutoriales/cargar-compra-manual/)
@@ -248,7 +248,7 @@ Esta página junta, por tema, los problemas que más aparecen. Cada fila indica 
 | Un producto se asocia mal siempre | El alias quedó mal aprendido | Corregí el producto en ese renglón y revisá los alias (ver *Dónde ver lo que aprendió el sistema*) |
 | La compra no mueve el stock | Quedó **pendiente** | Confirmala en Panel admin → Compra → Compras → *Confirmar compra* (la hace el dueño o un administrativo) |
 | No me deja cerrar la caja | Hay compras pagadas sin confirmar en tu turno | Pedí que las confirmen en el panel |
-| Me equivoqué con el flete | — | Antes de confirmar, no hay efecto: eliminá la compra pendiente y volvela a cargar |
+| Me equivoqué con el flete | - | Antes de confirmar, no hay efecto: eliminá la compra pendiente y volvela a cargar |
 
 → [Ver el tutorial completo](/tutoriales/cargar-compras-con-foto-ia/)
 
@@ -260,7 +260,7 @@ Esta página junta, por tema, los problemas que más aparecen. Cada fila indica 
 | El botón *Aplicar pago* está apagado | Falta cargar un pago, o no tildaste ninguna compra | Elegí medio y monto, y tocá **+** |
 | Pagué de más | El pago superó la deuda tildada | Revisá el *Saldo real*: si es negativo, el excedente figura como **saldo a favor** |
 | "No hay un turno abierto" al pagar | Los pagos a proveedores salen de la caja del turno abierto | Abrí un turno desde el POS y volvé a pagar. No se pueden cargar pagos desde el panel de administración |
-| Me equivoqué en un pago | — | Pedile al dueño que lo revierta desde el panel de administración |
+| Me equivoqué en un pago | - | Pedile al dueño que lo revierta desde el panel de administración |
 
 → [Ver el tutorial completo](/tutoriales/pagar-proveedor/)
 
@@ -270,8 +270,8 @@ Esta página junta, por tema, los problemas que más aparecen. Cada fila indica 
 |---|---|---|
 | No veo la pantalla | El módulo está apagado | Configuración → Módulos y sistema → *Listas de precios de proveedores* |
 | Muchos renglones quedan en *Revisión* | Los nombres de la lista difieren de los tuyos | Asocialos uno a uno con **Buscar** (o ignoralos) antes de publicar |
-| Me equivoqué al publicar | — | Cargá la lista correcta y publicá de nuevo |
-| Quiero seguir mañana | — | **Guardar borrador** y reabrí desde *Listas guardadas* |
+| Me equivoqué al publicar | - | Cargá la lista correcta y publicá de nuevo |
+| Quiero seguir mañana | - | **Guardar borrador** y reabrí desde *Listas guardadas* |
 | El precio se leyó mal (PDF/foto) | Calidad de la imagen | Corregilo en **Costo nuevo** antes de publicar |
 
 → [Ver el tutorial completo](/tutoriales/cargar-listas-precios-proveedores/)
@@ -286,7 +286,7 @@ Esta página junta, por tema, los problemas que más aparecen. Cada fila indica 
 | No veo el lápiz | Falta ese permiso, o no abriste el producto en *Editar* | Verificá el permiso y el permiso de gestionar productos |
 | Un producto no aparece | No es contable (servicio u horas) o está fusionado | Esos productos no se cuentan |
 | Contó otra persona y no puedo ver su diferencia | Conteo a ciegas | El administrador la ve en *Ajustes de inventario* |
-| Me equivoqué en un conteo | — | Anulá el ajuste desde el panel de administración |
+| Me equivoqué en un conteo | - | Anulá el ajuste desde el panel de administración |
 
 → [Ver el tutorial completo](/tutoriales/contar-stock/)
 
@@ -298,7 +298,7 @@ Esta página junta, por tema, los problemas que más aparecen. Cada fila indica 
 | La transferencia no mueve stock | Está en un estado que no es final | Tocá **▶ Avanzar** hasta el estado final |
 | "No se puede modificar una transferencia completada" | Ya movió el stock | Hacé una transferencia inversa |
 | La merma no descontó | Quedó pendiente | Tildala y usá **Confirmar mermas** |
-| Quiero corregir el stock de varios productos | — | Usá el **Conteo de stock** del POS |
+| Quiero corregir el stock de varios productos | - | Usá el **Conteo de stock** del POS |
 
 → [Ver el tutorial completo](/tutoriales/ajustar-stock-mermas-transferencias/)
 
@@ -308,8 +308,8 @@ Esta página junta, por tema, los problemas que más aparecen. Cada fila indica 
 |---|---|---|
 | "No hay precios que coincidan con los filtros" | La categoría o el proveedor no tiene productos con precio | Probá con *Todas* / *Todos* |
 | El precio quedó más alto de lo que esperaba | El redondeo sube al múltiplo siguiente | Usá *0.01*, o corregí el precio a mano en la tabla |
-| Me equivoqué | — | **Revertir lote** (solo el último) |
-| Quiero ver cuánto gano por producto | — | La columna **% Actual / % Nuevo** de la previsualización, o la app del dueño (Productos) |
+| Me equivoqué | - | **Revertir lote** (solo el último) |
+| Quiero ver cuánto gano por producto | - | La columna **% Actual / % Nuevo** de la previsualización, o la app del dueño (Productos) |
 | La categoría dice "sin %" | No tiene rentabilidad objetivo | Cargala en el panel de administración, o usá un % fijo |
 
 → [Ver el tutorial completo](/tutoriales/actualizar-precios-y-rentabilidad/)
@@ -483,7 +483,7 @@ Esta página junta, por tema, los problemas que más aparecen. Cada fila indica 
 | El agente dice *Cloud: ERROR* o error 401/403 | La clave o la URL están mal, o la credencial se regeneró | Copiá de nuevo los datos del POS (paso 1) y guardalos |
 | «Detené el agente antes de guardar cambios» | Está corriendo | **Detener agente** → guardar → **Iniciar agente** |
 | El ticket no sale pero el agente figura OK | Nombre de impresora USB incorrecto o impresora apagada/sin papel | Revisá **Impresoras detectadas** y el nombre en el POS; probá de nuevo |
-| Se filtró la clave | — | En el POS tocá **Generar clave nueva** y cargala en el agente: el viejo deja de imprimir |
+| Se filtró la clave | - | En el POS tocá **Generar clave nueva** y cargala en el agente: el viejo deja de imprimir |
 | Dos PC imprimen lo mismo | Usan la misma credencial | Una credencial por caja |
 
 → [Ver el tutorial completo](/tutoriales/instalar-agente-de-impresion/)

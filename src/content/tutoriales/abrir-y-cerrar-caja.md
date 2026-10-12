@@ -149,7 +149,7 @@ Si dejás el turno abierto de un día para el otro, el comportamiento depende de
 | Me da faltante y no sé por qué | Algún retiro, gasto o cobro no se registró | Revisá en *Ventas anteriores*, *Gastos* y *Retiro de caja* del turno |
 | El cierre no imprime | No hay impresora o agente configurado | Menú rápido → Configuración → Impresora de tickets |
 | "Hay compras pagadas sin confirmar" al cerrar | Cargaste compras pagadas con dinero u otro medio y nadie las confirmó | Pedile al dueño o a un administrativo que las confirme en el panel (*Compra → Compras → Confirmar compra*) |
-| Cerré sin querer | — | Abrí un turno nuevo; el cierre anterior queda registrado |
+| Cerré sin querer | - | Abrí un turno nuevo; el cierre anterior queda registrado |
 
 ## Siguiente paso
 

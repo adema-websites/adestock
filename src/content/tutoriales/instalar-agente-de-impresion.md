@@ -138,7 +138,7 @@ Con el agente conectado, el bloque *Agente de impresión de esta caja* muestra s
 | El agente dice *Cloud: ERROR* o error 401/403 | La clave o la URL están mal, o la credencial se regeneró | Copiá de nuevo los datos del POS (paso 1) y guardalos |
 | «Detené el agente antes de guardar cambios» | Está corriendo | **Detener agente** → guardar → **Iniciar agente** |
 | El ticket no sale pero el agente figura OK | Nombre de impresora USB incorrecto o impresora apagada/sin papel | Revisá **Impresoras detectadas** y el nombre en el POS; probá de nuevo |
-| Se filtró la clave | — | En el POS tocá **Generar clave nueva** y cargala en el agente: el viejo deja de imprimir |
+| Se filtró la clave | - | En el POS tocá **Generar clave nueva** y cargala en el agente: el viejo deja de imprimir |
 | Dos PC imprimen lo mismo | Usan la misma credencial | Una credencial por caja |
 
 ## Nota sobre capturas

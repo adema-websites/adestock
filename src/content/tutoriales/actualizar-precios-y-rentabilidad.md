@@ -145,8 +145,8 @@ Con las listas apagadas, **todas las cajas usan los mismos precios**.
 |---|---|---|
 | "No hay precios que coincidan con los filtros" | La categoría o el proveedor no tiene productos con precio | Probá con *Todas* / *Todos* |
 | El precio quedó más alto de lo que esperaba | El redondeo sube al múltiplo siguiente | Usá *0.01*, o corregí el precio a mano en la tabla |
-| Me equivoqué | — | **Revertir lote** (solo el último) |
-| Quiero ver cuánto gano por producto | — | La columna **% Actual / % Nuevo** de la previsualización, o la app del dueño (Productos) |
+| Me equivoqué | - | **Revertir lote** (solo el último) |
+| Quiero ver cuánto gano por producto | - | La columna **% Actual / % Nuevo** de la previsualización, o la app del dueño (Productos) |
 | La categoría dice "sin %" | No tiene rentabilidad objetivo | Cargala en el panel de administración, o usá un % fijo |
 
 ## Siguiente paso

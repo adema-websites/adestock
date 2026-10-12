@@ -53,7 +53,7 @@ Panel de administración → **Producto → Mermas → Agregar**.
 | 1 | **Producto** | El que se perdió |
 | 2 | **Cantidad** | En **unidades sueltas**. Si se rompió 1 lata de un pack de 6, poné **1** |
 | 3 | **Motivo** | La causa: vencimiento, rotura, robo, consumo propio… |
-| — | **Caja / Punto de venta** | De qué caja descontar (define el depósito) |
+| - | **Caja / Punto de venta** | De qué caja descontar (define el depósito) |
 
 Tocá **Guardar**. La merma queda **Pendiente**.
 
@@ -191,7 +191,7 @@ En la pestaña **Detalles de ajuste** cargás los productos y cantidades. Con **
 | La transferencia no mueve stock | Está en un estado que no es final | Tocá **▶ Avanzar** hasta el estado final |
 | "No se puede modificar una transferencia completada" | Ya movió el stock | Hacé una transferencia inversa |
 | La merma no descontó | Quedó pendiente | Tildala y usá **Confirmar mermas** |
-| Quiero corregir el stock de varios productos | — | Usá el **Conteo de stock** del POS |
+| Quiero corregir el stock de varios productos | - | Usá el **Conteo de stock** del POS |
 
 ## Siguiente paso
 

@@ -34,7 +34,7 @@ Saber **en qué licencia estás**, qué te limita la versión gratuita y cómo *
 | Ventas | **5 por día** y **35 por mes** | Ilimitadas |
 | Autocompletado desde el catálogo por Internet | Con límite de consultas | Ilimitado |
 | Soporte y actualizaciones | Básico | Prioritario y con acceso a nuevas funciones |
-| Vencimiento | — | Según la clave: con fecha o **sin vencimiento** |
+| Vencimiento | - | Según la clave: con fecha o **sin vencimiento** |
 
 La licencia queda **atada a la PC** donde se activa (por eso se pide el *Machine ID*). Activarla **no borra ni modifica ningún dato** del negocio.
 

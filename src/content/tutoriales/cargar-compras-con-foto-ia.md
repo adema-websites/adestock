@@ -358,7 +358,7 @@ En el listado de compras se ve la diferencia con la primera:
 
 | Compra | Total productos | Total pagos | Fletes | Total general |
 |---|---|---|---|---|
-| **#2** (flete prorrateado, a cuenta corriente) | $ 84.345 | $ 84.345 | — | $ 84.345 |
+| **#2** (flete prorrateado, a cuenta corriente) | $ 84.345 | $ 84.345 | - | $ 84.345 |
 | **#4** (flete aparte, en efectivo) | $ 17.788 | $ 17.788 | **$ 2.500** | $ 20.288 |
 
 En la #2 el flete está **dentro** de los productos (por eso 84.345 y sin columna de flete). En la #4 el flete es **un concepto aparte** y no sube lo que se le paga al proveedor.
@@ -389,7 +389,7 @@ En la #2 el flete está **dentro** de los productos (por eso 84.345 y sin column
 | Un producto se asocia mal siempre | El alias quedó mal aprendido | Corregí el producto en ese renglón y revisá los alias (ver *Dónde ver lo que aprendió el sistema*) |
 | La compra no mueve el stock | Quedó **pendiente** | Confirmala en Panel admin → Compra → Compras → *Confirmar compra* (la hace el dueño o un administrativo) |
 | No me deja cerrar la caja | Hay compras pagadas sin confirmar en tu turno | Pedí que las confirmen en el panel |
-| Me equivoqué con el flete | — | Antes de confirmar, no hay efecto: eliminá la compra pendiente y volvela a cargar |
+| Me equivoqué con el flete | - | Antes de confirmar, no hay efecto: eliminá la compra pendiente y volvela a cargar |
 
 ## Siguiente paso
 

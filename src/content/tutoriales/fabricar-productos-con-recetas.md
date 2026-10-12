@@ -70,9 +70,9 @@ Escribí cuántas unidades fabricar y tocá **+** para agregarla. Podés sumar *
 | 1 | **Cantidad** | Unidades a fabricar |
 | 2 | **Depósito destino** | Dónde entra el producto terminado |
 | 3 | **Finalizar al crear** | Si lo tildás, la fabricación se completa en el momento (útil si ya lo produjiste) |
-| — | **Venta** | Opcional: asociarla a una venta (por número) |
-| — | **Lote / Observaciones** | Datos opcionales de trazabilidad |
-| — | **Crear producto si falta** | Si la receta no tiene producto vendible asociado, lo crea |
+| - | **Venta** | Opcional: asociarla a una venta (por número) |
+| - | **Lote / Observaciones** | Datos opcionales de trazabilidad |
+| - | **Crear producto si falta** | Si la receta no tiene producto vendible asociado, lo crea |
 
 ### 4. Previsualizá
 

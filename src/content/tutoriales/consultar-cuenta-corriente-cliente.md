@@ -37,7 +37,7 @@ Saber **cuánto debe un cliente** y entender la diferencia entre el **saldo norm
 |---|---|---|
 | Qué es | Lo que se le vendió, tal cual | Esa misma mercadería, valuada con los **precios actuales** |
 | Cuándo cambia | Solo cuando hay una venta nueva o un cobro | También cuando cambian los precios de los productos |
-| Puede ser menor al normal | — | **Nunca**: si los precios bajaron, se mantiene el saldo normal |
+| Puede ser menor al normal | - | **Nunca**: si los precios bajaron, se mantiene el saldo normal |
 
 ### Ejemplo con números
 

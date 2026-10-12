@@ -54,11 +54,11 @@ En el panel: **Venta → Notas de Ajuste**.
 |---|---|---|
 | 1 | **Estado** | *Borrador* (sin efecto), *Aplicada* o *Anulada* |
 | 2 | **Aplicar** | Botón que aplica la nota (solo en borradores) |
-| — | **Codigo / Tipo** | `NC-…` crédito (verde) o `ND-…` débito (rojo) |
-| — | **Venta original** y **Armado pedido** | De qué venta y de qué armado viene |
-| — | **Medio de pago** | Con qué medio se devuelve (o cobra) el dinero |
-| — | **Movimiento financiero aplicado** | Tilde verde cuando el dinero ya impactó en la billetera |
-| — | **Total** | Valor de lo que faltó, a precio de venta |
+| - | **Codigo / Tipo** | `NC-…` crédito (verde) o `ND-…` débito (rojo) |
+| - | **Venta original** y **Armado pedido** | De qué venta y de qué armado viene |
+| - | **Medio de pago** | Con qué medio se devuelve (o cobra) el dinero |
+| - | **Movimiento financiero aplicado** | Tilde verde cuando el dinero ya impactó en la billetera |
+| - | **Total** | Valor de lo que faltó, a precio de venta |
 
 Desde la lista de **ventas**, la columna **Nota Crédito** muestra el botón **NC PDF** cuando la venta tiene una nota de crédito aplicada, para imprimir el comprobante.
 

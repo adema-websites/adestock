@@ -97,7 +97,7 @@ Por ejemplo, sacaste $ 10.000 del banco para tener cambio en la caja. **Billeter
 | 1 | **Billetera origen** | De dónde sale la plata |
 | 2 | **Billetera destino** | A dónde entra |
 | 3 | **Monto a transferir** | Cuánto |
-| — | **Concepto/Motivo** | Para qué (por ejemplo, *Efectivo para cambio de la caja*) |
+| - | **Concepto/Motivo** | Para qué (por ejemplo, *Efectivo para cambio de la caja*) |
 
 Al guardar, la transferencia queda **pendiente**: todavía no movió plata. El sistema te lo recuerda: *«Recuerde confirmarla para que se apliquen los movimientos»*.
 
@@ -126,11 +126,11 @@ Para movimientos que **no vienen de una venta, compra o gasto**: la comisión de
 
 | # | Campo | Qué poner |
 |---|---|---|
-| — | **Billetera** | A cuál afecta |
+| - | **Billetera** | A cuál afecta |
 | 1 | **Tipo de ajuste** | *Ingreso* (suma) o *Egreso* (resta) |
 | 2 | **Motivo del ajuste** | Ajuste de saldo inicial, Corrección de saldo, Ingreso externo, Egreso externo, Comisión bancaria, Interés bancario u Otro |
 | 3 | **Monto** | Siempre **positivo**: el tipo decide si suma o resta |
-| — | **Descripción** | Detalle (pestaña *Descripción*) |
+| - | **Descripción** | Detalle (pestaña *Descripción*) |
 
 Igual que la transferencia, el ajuste queda **pendiente hasta que lo confirmes** (acción **Confirmar ajustes seleccionados**). Al confirmar, queda registrado **quién** lo confirmó y **cuándo**.
 

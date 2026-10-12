@@ -1,0 +1,162 @@
+---
+import Pagina from '../layouts/Pagina.astro';
+import descargas from '../data/descargas.json';
+import { getTutoriales } from '../lib/tutoriales';
+
+const ap = descargas.agent_printer;
+const publicadas = new Set((await getTutoriales()).map((t) => t.data.slug));
+const guia = publicadas.has('instalar-agente-de-impresion') ? '/tutoriales/instalar-agente-de-impresion/' : null;
+const U5 = 'https://github.com/ademasistemas/agent-printer/releases/download/1.0.5/AgentPrinter_Setup_v1.0.5.exe';
+
+const flujo = [
+  { t: 'ADEstock', d: 'Genera el ticket y lo pone en la cola de impresión.' },
+  { t: 'Agent Printer', d: 'Corre en la PC del local. Consulta la cola por HTTPS cada pocos segundos.' },
+  { t: 'Tu impresora', d: 'USB o red local. Imprime el ticket y el agente avisa si salió bien.' },
+];
+const funciones = [
+  ['USB y red local', 'Impresoras por cable USB (por nombre de Windows) o por red, con IP y puerto (habitual 9100).'],
+  ['Tickets ESC/POS', 'Funciona con impresoras térmicas que entienden ESC/POS, el estándar para tickets y comprobantes.'],
+  ['Estado en tiempo real', 'El agente avisa periódicamente que está vivo. Si deja de responder, lo ves en el sistema.'],
+  ['Reintentos', 'Si una impresión falla (sin papel, impresora ocupada), el sistema registra el error y puede reintentar.'],
+  ['Conexión segura', 'Toda la comunicación va por HTTPS con una clave por caja. No se comparten credenciales entre locales.'],
+  ['Trazabilidad', 'Cada impresión tiene un estado visible en el sistema: en cola, imprimiendo, correcta o con error.'],
+];
+const requisitos = [
+  ['Windows 10 u 11 de 64 bits', 'No hace falta instalar Python ni otras dependencias.'],
+  ['Una impresora lista', 'Instalada en Windows (USB) o accesible por IP y puerto 9100 (red).'],
+  ['Salida a Internet', 'Solo salida HTTPS (puerto 443). No abre puertos entrantes.'],
+  ['Permisos de administrador', 'Solo para instalar. Después el agente arranca solo con Windows.'],
+  ['ADEstock en la nube', 'Para clientes del plan Cloud, o cuando la impresora está en otra PC del local.'],
+];
+const pasos = [
+  ['Creá la credencial de la caja', 'En el POS: Menú rápido, Configuración, Impresora de tickets, y en "Agente de impresión de esta caja" tocá "Crear credencial". Solo el dueño ve estos datos. Cada caja tiene los suyos.'],
+  ['Instalá el agente', `Ejecutá ${ap.archivo} como administrador y completá el formulario: Cloud URL, API Key, Store ID, POS ID y un nombre para reconocer la PC (por ejemplo PC-CAJA-01).`],
+  ['Verificá que esté conectado', 'Abrí Agent Printer y mirá el Dashboard: el agente tiene que figurar ACTIVO y la nube en OK.'],
+  ['Elegí la impresora y probá', 'En el POS, en "Impresora de tickets", elegí USB o red, el ancho de papel (80 o 58 mm) y tocá "Probar". Tiene que salir un ticket de prueba.'],
+];
+---
+<Pagina
+  title="Agent Printer | Impresión Local para ADEstock en la Nube"
+  description="Agent Printer conecta ADEstock en la nube con tus impresoras locales (USB, LAN). Instalador para Windows, gratis para clientes de ADEstock Cloud."
+  path="/agent-printer.html"
+>
+  <div class="crumbs"><a href="/">Inicio</a>{' / '}Agent Printer</div>
+  <main id="contenido">
+    <header class="page-hero">
+      <div class="page-hero__inner">
+        <h1>Imprimí tickets desde la nube en tu impresora del mostrador</h1>
+        <p class="page-lead">Agent Printer es un programa gratuito para Windows que conecta ADEstock con la impresora de tu local, sin abrir puertos en tu red.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href={ap.url} download>Descargar v{ap.version}</a>
+          <a class="btn btn-ghost" href="#instalacion">Cómo se instala</a>
+        </div>
+        <p class="muted" style="margin-top:.9rem; font-size:.95rem">Gratis para clientes de ADEstock Cloud · Windows 10/11 · 64 bits</p>
+      </div>
+    </header>
+
+    <section class="band alt" aria-labelledby="que-es">
+      <div class="seo-hero__inner">
+        <h2 id="que-es" style="max-width: 22ch">Un puente seguro entre el sistema y tu impresora</h2>
+        <p class="page-lead">Un sistema en la nube no puede hablar directo con una impresora USB ni con una red privada. El agente corre en la PC del local, consulta qué hay para imprimir y lo manda a la impresora.</p>
+        <ol class="flujo">
+          {flujo.map((f, i) => (
+            <li>
+              <span class="flujo-n">{i + 1}</span>
+              <h3>{f.t}</h3>
+              <p>{f.d}</p>
+            </li>
+          ))}
+        </ol>
+        <p class="aviso" style="margin-top:1.5rem">Solo hace conexiones salientes hacia ADEstock. Tu red local nunca queda expuesta a Internet.</p>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="funciones">
+      <div class="seo-hero__inner cols-2" style="align-items:start">
+        <div>
+          <h2 id="funciones" style="max-width: 16ch">Qué hace</h2>
+          <p class="page-lead">Cada agente se vincula a una caja y a un local. Podés tener tantos como cajas activas, todos administrados desde ADEstock.</p>
+        </div>
+        <dl class="defs">
+          {funciones.map(([t, d]) => (<div><dt>{t}</dt><dd>{d}</dd></div>))}
+        </dl>
+      </div>
+    </section>
+
+    <section class="band alt" aria-labelledby="requisitos">
+      <div class="seo-hero__inner">
+        <h2 id="requisitos">Requisitos</h2>
+        <p class="page-lead">Agent Printer se instala en la PC del local, no en el servidor.</p>
+        <dl class="defs defs-2" style="margin-top:1.25rem">
+          {requisitos.map(([t, d]) => (<div><dt>{t}</dt><dd>{d}</dd></div>))}
+        </dl>
+      </div>
+    </section>
+
+    <section id="instalacion" class="band" aria-labelledby="instalar">
+      <div class="seo-hero__inner">
+        <h2 id="instalar">Instalación en 4 pasos</h2>
+        <p class="page-lead">Todo el proceso lleva unos minutos.</p>
+        <ol class="steps">
+          {pasos.map(([t, d]) => (<li><h3>{t}</h3><p>{d}</p></li>))}
+        </ol>
+        {guia && <p style="margin-top:1.25rem"><a href={guia} style="color:var(--accent)">Ver el tutorial completo con capturas</a></p>}
+      </div>
+    </section>
+
+    <section class="band alt" aria-labelledby="descarga">
+      <div class="seo-hero__inner">
+        <div class="card dark" style="max-width: 760px;">
+          <h2 id="descarga" style="font-size:1.5rem">Descargar Agent Printer</h2>
+          <p>Gratuito para todos los clientes de ADEstock Cloud. Instalador para Windows 10/11, sin dependencias adicionales.</p>
+          <div class="actions" style="margin-top:.3rem">
+            <a class="btn btn-primary btn-sobre-noche" href={ap.url} download>Descargar {ap.archivo}</a>
+          </div>
+          <p style="font-size:.9rem">Para verificar la integridad usá el archivo <code>{ap.archivo}.sha256</code> del release.<br />SHA-256: <code>{ap.sha256}</code></p>
+        </div>
+        <h3 style="margin-top:2rem">Historial de versiones</h3>
+        <ul class="historial" style="list-style:none; padding:0;">
+          <li class="version-fila">
+            <strong>v{ap.version}</strong> <span class="tag" style="margin:0 .5rem">última</span>
+            Inicia automáticamente con Windows. <span class="muted">Oct 2026</span>
+            <a href={ap.url} download style="color:var(--accent); margin-left:.5rem">.exe</a>
+          </li>
+          <li class="version-fila">
+            <strong>v1.0.5</strong> Soporte USB y LAN, estado en tiempo real, reintentos automáticos. <span class="muted">Mar 2026</span>
+            <a href={U5} download style="color:var(--accent); margin-left:.5rem">.exe</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="seo-hero__inner">
+        <h2 style="max-width: 22ch">¿Necesitás ayuda con la instalación?</h2>
+        <p class="page-lead">Te acompañamos paso a paso por WhatsApp o por mail.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://wa.me/5491127888995?text=Hola!%20necesito%20ayuda%20con%20Agent%20Printer%20para%20ADEstock">WhatsApp</a>
+          <a class="btn btn-ghost" href="/contacto.html">Contacto</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Pagina>
+
+<style is:global>
+  .btn-sobre-noche { background: #4fc3d6; color: #06222a; }
+  .btn-sobre-noche:hover { background: #7fd6e4; }
+  .flujo { list-style: none; margin: 1.75rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; counter-reset: f; }
+  .flujo li { position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-card); padding: 1.3rem; }
+  .flujo li:not(:last-child)::after { content: '→'; position: absolute; right: -1.15rem; top: 50%; transform: translateY(-50%); color: var(--ink-3); font-size: 1.3rem; }
+  .flujo-n { display: inline-grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font-weight: 700; margin-bottom: .6rem; }
+  .flujo p { color: var(--ink-2); }
+  .defs { display: grid; gap: 1rem 1.5rem; margin: 0; }
+  .defs-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .defs dt { font-weight: 650; }
+  .defs dd { margin: .15rem 0 0; color: var(--ink-2); }
+  .version-fila { padding: .6rem 0; border-top: 1px solid var(--line); }
+  @media (max-width: 900px) {
+    .flujo, .defs-2 { grid-template-columns: 1fr; }
+    .flujo li:not(:last-child)::after { content: '↓'; right: auto; left: 1.3rem; top: auto; bottom: -1.3rem; transform: none; }
+  }
+</style>

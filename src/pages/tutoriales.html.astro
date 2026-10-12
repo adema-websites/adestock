@@ -1,0 +1,120 @@
+---
+// /tutoriales.html
+//  - Mientras no haya guías nuevas publicadas: muestra la guía rápida anterior, ya renderizada en HTML (antes
+//    se armaba con JavaScript y no se podía leer sin él).
+//  - Con guías nuevas publicadas: pasa a ser una página puente hacia /tutoriales/ (canonical al centro nuevo,
+//    noindex) y redirige las anclas viejas (#t7-ventas, etc.) a la guía equivalente.
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import Pagina from '../layouts/Pagina.astro';
+import { getTutoriales, urlTutorial } from '../lib/tutoriales';
+
+const dir = join(process.cwd(), 'src', 'data', 'guia-anterior');
+const leer = (f: string) => JSON.parse(readFileSync(join(dir, f), 'utf8').replace(/^﻿/, ''));
+const manifiesto = leer('index.json') as { chapters: { id: string; file: string }[] };
+const capitulos = manifiesto.chapters.map((c) => leer(c.id + '.json'));
+
+const nuevas = await getTutoriales();
+const publicadas = nuevas.filter((t) => t.data.status === 'published');
+const puente = publicadas.length > 0;
+
+const MAPA: Record<string, string> = {
+  't1-onboarding': 'configurar-negocio', 't1-config-general': 'configurar-punto-de-venta', 't2-depositos': 'ajustar-stock-mermas-transferencias',
+  't3-puntos-venta': 'configurar-punto-de-venta', 't4-medios-pago': 'cobrar-con-varios-medios-de-pago', 't5-productos': 'cargar-productos',
+  't6-recetas': 'fabricar-productos-con-recetas', 't7-ventas': 'hacer-una-venta', 't8-compras': 'cargar-compra-manual', 't9-stock': 'contar-stock',
+  't10-gastos': 'registrar-gastos-y-retiros', 't11-dashboard': 'usar-app-del-dueno', 't12-reportes': 'consultar-reportes-y-exportar',
+  't13-impresoras': 'instalar-agente-de-impresion', 't14-usuarios': 'usuarios-y-permisos', 't15-presupuestos': 'hacer-presupuesto',
+  't16-edicion-rapida-pos': 'cargar-productos',
+};
+const destinos = Object.fromEntries(Object.entries(MAPA).filter(([, s]) => publicadas.some((t) => t.data.slug === s)).map(([k, s]) => [k, urlTutorial(s)]));
+---
+<Pagina
+  title="Tutoriales ADEstock | Stock, ventas, caja y compras"
+  description="Aprendé a usar ADEstock con tutoriales de configuración, productos, stock, ventas, compras, cajas, reportes y depósitos para comercios argentinos."
+  path={puente ? '/tutoriales/' : '/tutoriales.html'}
+  noindex={puente}
+>
+  <div class="crumbs"><a href="/">Inicio</a>{' / '}Tutoriales</div>
+  <main id="contenido">
+    {puente ? (
+      <>
+        <header class="page-hero">
+          <div class="page-hero__inner">
+            <h1>Renovamos los tutoriales</h1>
+            <p class="page-lead">Ahora hay una guía paso a paso, con capturas, para cada tarea del sistema.</p>
+            <div class="actions"><a class="btn btn-primary" href="/tutoriales/">Ir a los tutoriales</a></div>
+          </div>
+        </header>
+        <section class="band alt">
+          <div class="seo-hero__inner">
+            <h2>Equivalencias con la guía anterior</h2>
+            <ul class="check-list" style="margin-top:1rem">
+              {capitulos.filter((c) => destinos[c.id]).map((c) => (
+                <li><a href={destinos[c.id]} style="color:var(--accent)">{c.title.es}</a></li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      </>
+    ) : (
+      <>
+        <header class="page-hero">
+          <div class="page-hero__inner">
+            <h1>Guía rápida de ADEstock</h1>
+            <p class="page-lead">Tutoriales cortos y directos. Cada uno explica un proceso clave del sistema, con su objetivo, los pasos y el resultado esperado.</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#t1-onboarding">Empezar ahora</a>
+              <a class="btn btn-ghost" href="/contacto.html">Necesito ayuda</a>
+            </div>
+          </div>
+        </header>
+        <div class="seo-hero__inner antiguos">
+          <nav class="indice" aria-label="Temas de la guía">
+            <h2>Temas de la guía</h2>
+            <ol>
+              {capitulos.map((c) => <li><a href={`#${c.id}`}>{c.title.es}</a></li>)}
+            </ol>
+          </nav>
+          <div class="capitulos">
+            {capitulos.map((c) => (
+              <article id={c.id} class="capitulo">
+                <h2>{c.title.es}</h2>
+                <p class="objetivo"><strong>Objetivo:</strong> {c.objective.es}</p>
+                {c.steps?.es?.length > 0 && (
+                  <>
+                    <h3>Paso a paso</h3>
+                    <ol class="steps">{c.steps.es.map((p: string) => <li><p>{p}</p></li>)}</ol>
+                  </>
+                )}
+                {c.result?.es && <p class="aviso" style="margin-top:1rem"><strong>Resultado esperado:</strong> {c.result.es}</p>}
+              </article>
+            ))}
+          </div>
+        </div>
+      </>
+    )}
+  </main>
+</Pagina>
+
+<script is:inline define:vars={{ destinos }}>
+  // Anclas de la guía anterior: un servidor no recibe el fragmento, así que se resuelve en el navegador.
+  var h = (location.hash || '').replace('#', '');
+  if (h && destinos[h]) location.replace(destinos[h]);
+</script>
+
+<style is:global>
+  .antiguos { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 2.5rem; align-items: start; padding-bottom: 4rem; }
+  .indice { position: sticky; top: calc(var(--nav-h) + 20px); }
+  .indice h2 { font-size: .85rem; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-3); margin-bottom: .6rem; }
+  .indice ol { margin: 0; padding-left: 1.2rem; display: grid; gap: .35rem; }
+  .indice a { color: var(--accent); text-underline-offset: 3px; }
+  .capitulos { display: grid; gap: 1.25rem; max-width: 760px; }
+  .capitulo { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-card); padding: 1.5rem 1.6rem; scroll-margin-top: calc(var(--nav-h) + 20px); }
+  .capitulo h2 { font-size: 1.35rem; margin-bottom: .6rem; }
+  .capitulo h3 { font-size: 1rem; margin-top: 1.1rem; }
+  .capitulo .objetivo { color: var(--ink-2); }
+  .capitulo .steps { margin-top: .7rem; }
+  .capitulo .steps li { padding: .7rem 1rem .7rem 3.4rem; }
+  .capitulo .steps li::before { top: .55rem; left: .9rem; width: 1.7rem; height: 1.7rem; font-size: .9rem; }
+  @media (max-width: 900px) { .antiguos { grid-template-columns: 1fr; } .indice { position: static; } }
+</style>

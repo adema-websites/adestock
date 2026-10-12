@@ -81,7 +81,7 @@ Menú rápido (**F8**) → **Retiro de caja**.
 
 | # | Campo | Qué poner |
 |---|---|---|
-| — | **Fecha** | Se completa sola con la de hoy |
+| - | **Fecha** | Se completa sola con la de hoy |
 | 1 | **Medio de pago** | Normalmente *Efectivo* |
 | 2 | **Monto** | Cuánto sacás. Tiene que ser mayor a cero |
 | 3 | **Observaciones** (opcional) | Para qué es. Ej.: *Se lleva a la caja fuerte* |

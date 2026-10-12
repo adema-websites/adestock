@@ -95,8 +95,8 @@ Tocá **CONFIRMAR Y CERRAR**. La venta se cierra y el total queda como deuda del
 |---|---|---|
 | El botón *Cuenta Corriente* está apagado | El cliente es Consumidor Final, o no tiene cuenta corriente habilitada | Asignale un cliente con CC (F9) o habilitala desde *Gestión de clientes → Editar* |
 | No aparece la etiqueta CC en la lista | El cliente no la tiene habilitada | Editá el cliente y tildá *Habilitar Cuenta Corriente* |
-| Necesito saber cuánto me debe | — | Ver *Revisar la cuenta corriente de un cliente* |
-| El cliente quiere pagar su deuda | — | Ver *Cobrar la deuda de un cliente* |
+| Necesito saber cuánto me debe | - | Ver *Revisar la cuenta corriente de un cliente* |
+| El cliente quiere pagar su deuda | - | Ver *Cobrar la deuda de un cliente* |
 
 ## Siguiente paso
 

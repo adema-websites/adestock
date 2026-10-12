@@ -1,0 +1,14 @@
+---
+// Migrada desde public/politica-privacidad.html. Contenido en src/paginas/politica-privacidad.html.
+import Pagina from '../layouts/Pagina.astro';
+import contenido from '../paginas/politica-privacidad.html?raw';
+const jsonLd = [];
+---
+<Pagina
+  title={"Política de Privacidad | ADEstock"}
+  description={"Consulta la política de privacidad de ADEstock sobre recopilación, uso y protección de datos personales."}
+  path="/politica-privacidad.html"
+  jsonLd={jsonLd}
+>
+  <Fragment set:html={contenido} />
+</Pagina>

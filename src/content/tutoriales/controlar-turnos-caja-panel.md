@@ -40,9 +40,9 @@ En el panel: **Venta → Turnos de Caja**.
 | # | Columna | Qué es |
 |---|---|---|
 | 1 | **Estado** | *Abierto* (el cajero está trabajando), *Cerrado* o *Anulado* |
-| — | **Apertura / Cierre** | Fecha y hora en que se abrió y se cerró |
-| — | **Cajero** y **Punto de Venta** | Quién y en qué caja |
-| — | **Efectivo Inicial** | La plata con la que se abrió la caja |
+| - | **Apertura / Cierre** | Fecha y hora en que se abrió y se cerró |
+| - | **Cajero** y **Punto de Venta** | Quién y en qué caja |
+| - | **Efectivo Inicial** | La plata con la que se abrió la caja |
 | 2 | **Efectivo Esperado (Sistema)** | Lo que **debería haber** en la caja, según el sistema |
 | 3 | **Efectivo Real (Declarado)** | Lo que el cajero **contó** al cerrar |
 | 4 | **Diferencia** | Real − Esperado. **Negativo = faltante**, **positivo = sobrante** |
@@ -83,25 +83,25 @@ Y abajo, el **Detalle de movimientos/totales**: el resumen **por medio de pago**
 
 Las pestañas son de **solo lectura**: sirven para auditar, no para modificar. **Los turnos se abren y se cierran desde el POS**; en el panel no se crean ni se editan (solo se consultan, y se agregan observaciones).
 
-**Ingresos Ventas** — cada pago de venta del turno, con su medio y si está cobrado (✔) o pendiente (✘, por ejemplo una venta a cuenta corriente que todavía no se pagó):
+**Ingresos Ventas** - cada pago de venta del turno, con su medio y si está cobrado (✔) o pendiente (✘, por ejemplo una venta a cuenta corriente que todavía no se pagó):
 
 ![Pestaña Ingresos Ventas](../../assets/tutoriales/32-turno-de-caja-en-el-panel/04-pestana-ingresos-ventas.png)
 
-**Cobro deudas** — los cobros de cuentas corrientes hechos durante el turno:
+**Cobro deudas** - los cobros de cuentas corrientes hechos durante el turno:
 
 ![Pestaña Cobro deudas](../../assets/tutoriales/32-turno-de-caja-en-el-panel/05-pestana-cobro-deudas.png)
 
-**Retiros de caja** — la plata que se sacó de la caja durante el turno:
+**Retiros de caja** - la plata que se sacó de la caja durante el turno:
 
 ![Pestaña Retiros de caja](../../assets/tutoriales/32-turno-de-caja-en-el-panel/06-pestana-retiros.png)
 
-**Pagos de compras del turno** — los pagos de compras registrados en este turno (compra, medio de pago e importe). Solo el **efectivo** de compras **confirmadas** entra en el arqueo.
+**Pagos de compras del turno** - los pagos de compras registrados en este turno (compra, medio de pago e importe). Solo el **efectivo** de compras **confirmadas** entra en el arqueo.
 
 ![Pestaña Pagos de compras del turno](../../assets/tutoriales/32-turno-de-caja-en-el-panel/06b-pestana-pagos-de-compras.png)
 
 En el ejemplo, la *Compra #7* tiene un pago de $ 4.500 en efectivo en este turno, pero como todavía **no está confirmada** no descuenta del efectivo esperado (y bloquearía el cierre).
 
-**Pagos y adelantos a proveedores del turno** — los pagos de deuda y adelantos a proveedores hechos desde el POS en este turno (proveedor, medio e importe). El efectivo resta del efectivo esperado.
+**Pagos y adelantos a proveedores del turno** - los pagos de deuda y adelantos a proveedores hechos desde el POS en este turno (proveedor, medio e importe). El efectivo resta del efectivo esperado.
 
 ![Pestaña Pagos y adelantos a proveedores del turno](../../assets/tutoriales/32-turno-de-caja-en-el-panel/06c-pestana-pagos-a-proveedores.png)
 

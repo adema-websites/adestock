@@ -124,7 +124,7 @@ Si le das plata al proveedor **antes** de comprarle, tocá **Adelanto**: queda c
 | El botón *Aplicar pago* está apagado | Falta cargar un pago, o no tildaste ninguna compra | Elegí medio y monto, y tocá **+** |
 | Pagué de más | El pago superó la deuda tildada | Revisá el *Saldo real*: si es negativo, el excedente figura como **saldo a favor** |
 | "No hay un turno abierto" al pagar | Los pagos a proveedores salen de la caja del turno abierto | Abrí un turno desde el POS y volvé a pagar. No se pueden cargar pagos desde el panel de administración |
-| Me equivoqué en un pago | — | Pedile al dueño que lo revierta desde el panel de administración |
+| Me equivoqué en un pago | - | Pedile al dueño que lo revierta desde el panel de administración |
 
 ## Siguiente paso
 

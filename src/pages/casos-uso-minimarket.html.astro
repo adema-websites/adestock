@@ -1,0 +1,40 @@
+---
+// Migrada desde public/casos-uso-minimarket.html. Contenido en src/paginas/casos-uso-minimarket.html.
+import Pagina from '../layouts/Pagina.astro';
+import contenido from '../paginas/casos-uso-minimarket.html?raw';
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ADEstock para Minimarkets",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Software de gestión para minimarkets: control de stock, múltiples cajas POS, códigos de barras y ventas ágiles.",
+    "author": {
+      "@type": "Organization",
+      "name": "ADEMA Sistemas",
+      "url": "https://ademasistemas.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "Consultar",
+      "priceCurrency": "ARS"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ADEMA Sistemas",
+    "url": "https://ademasistemas.com",
+    "logo": "https://ademasistemas.com/logo.svg"
+  }
+];
+---
+<Pagina
+  title={"ADEstock para minimarkets | Stock, ventas y múltiples cajas"}
+  description={"ADEstock para minimarkets y pequeños supermercados argentinos: control de stock, ventas rápidas, múltiples cajas, códigos de barras, compras y reportes."}
+  path="/casos-uso-minimarket.html"
+  jsonLd={jsonLd}
+>
+  <Fragment set:html={contenido} />
+</Pagina>

@@ -1,0 +1,97 @@
+---
+import Pagina from '../layouts/Pagina.astro';
+import descargas from '../data/descargas.json';
+import datos from '../data/versiones.json';
+
+const versiones = datos.versiones.filter((v) => v.visible);
+const [actual, ...anteriores] = versiones;
+const inst = descargas.instalador;
+---
+<Pagina
+  title="Versiones de ADEstock | Novedades del sistema de stock"
+  description="Historial de versiones de ADEstock: novedades para stock, inventario, ventas, caja, compras, reportes, depósitos y enlaces de descarga."
+  path="/versiones.html"
+>
+  <div class="crumbs"><a href="/">Inicio</a>{' / '}Novedades</div>
+  <main id="contenido">
+    <header class="page-hero">
+      <div class="page-hero__inner">
+        <h1>Novedades de ADEstock</h1>
+        <p class="page-lead">Qué trae cada versión del sistema y dónde descargar el instalador de escritorio.</p>
+      </div>
+    </header>
+
+    <section class="band" aria-labelledby="descarga">
+      <div class="seo-hero__inner">
+        <div class="card dark" style="max-width: 760px;">
+          <h2 id="descarga" style="font-size:1.4rem">Descarga oficial</h2>
+          <p>Última versión estable publicada: <strong>v{inst.version}</strong>.</p>
+          <div class="actions" style="margin-top:.4rem">
+            <a class="btn btn-primary btn-sobre-noche" href={inst.url} download>Descargar {inst.archivo}</a>
+            <a class="btn btn-ghost btn-ghost-noche" href="/descargar-demo.html">Cómo instalarlo</a>
+          </div>
+          <p style="font-size:.95rem">Si ya usás ADEstock, instalá esta versión encima de la anterior: tus datos, productos y configuraciones se mantienen. Antes de actualizar, hacé una copia de seguridad (<a href="/tutoriales/respaldos/" style="color:inherit">cómo hacerla</a>).</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="band alt" aria-labelledby="actual">
+      <div class="seo-hero__inner">
+        <span class="tag">Última versión</span>
+        <h2 id="actual" style="max-width: 30ch">v{actual.version}: {actual.titulo}</h2>
+        <p class="muted" style="margin-top:.4rem">{actual.fecha}</p>
+        <p class="page-lead">{actual.resumen}</p>
+        <div class="cols-3" style="margin-top:1.5rem">
+          {actual.bloques.map((b) => (
+            <article class="card">
+              <h3>{b.titulo}</h3>
+              <ul class="check-list">{b.items.map((i) => <li>{i}</li>)}</ul>
+            </article>
+          ))}
+        </div>
+        {actual.nota && <p class="aviso" style="margin-top:1.25rem">{actual.nota}</p>}
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="historial">
+      <div class="seo-hero__inner">
+        <h2 id="historial">Historial</h2>
+        <div class="historial">
+          {anteriores.map((v) => (
+            <details class="version">
+              <summary>
+                <span class="v-num">v{v.version}</span>
+                <span class="v-tit">{v.titulo}</span>
+                <span class="v-fecha">{v.fecha}</span>
+              </summary>
+              <p>{v.resumen}</p>
+              <div class="cols-3" style="margin-top:1rem">
+                {v.bloques.map((b) => (
+                  <div>
+                    <h3 style="font-size:1rem">{b.titulo}</h3>
+                    <ul class="check-list" style="margin-top:.4rem">{b.items.map((i) => <li>{i}</li>)}</ul>
+                  </div>
+                ))}
+              </div>
+              {v.url && <p style="margin-top:1rem"><a href={v.url} download style="color:var(--accent)">Descargar {v.archivo}</a></p>}
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+</Pagina>
+
+<style is:global>
+  .btn-sobre-noche { background: #4fc3d6; color: #06222a; }
+  .btn-sobre-noche:hover { background: #7fd6e4; }
+  .btn-ghost-noche { border-color: var(--night-ink); color: var(--night-ink); }
+  .btn-ghost-noche:hover { background: var(--night-ink); color: var(--night); }
+  .historial { display: grid; gap: .75rem; margin-top: 1rem; max-width: 900px; }
+  .version { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-card); padding: 1rem 1.3rem; }
+  .version summary { cursor: pointer; display: flex; flex-wrap: wrap; gap: .4rem 1rem; align-items: baseline; list-style: none; }
+  .v-num { font-weight: 700; }
+  .v-tit { flex: 1; min-width: 12rem; color: var(--ink-2); }
+  .v-fecha { color: var(--ink-3); font-size: .9rem; }
+  .version > p { margin-top: .8rem; color: var(--ink-2); }
+</style>

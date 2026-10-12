@@ -143,8 +143,8 @@ Hay dos formas de comparar, según lo que quieras saber:
 |---|---|---|
 | No veo la pantalla | El módulo está apagado | Configuración → Módulos y sistema → *Listas de precios de proveedores* |
 | Muchos renglones quedan en *Revisión* | Los nombres de la lista difieren de los tuyos | Asocialos uno a uno con **Buscar** (o ignoralos) antes de publicar |
-| Me equivoqué al publicar | — | Cargá la lista correcta y publicá de nuevo |
-| Quiero seguir mañana | — | **Guardar borrador** y reabrí desde *Listas guardadas* |
+| Me equivoqué al publicar | - | Cargá la lista correcta y publicá de nuevo |
+| Quiero seguir mañana | - | **Guardar borrador** y reabrí desde *Listas guardadas* |
 | El precio se leyó mal (PDF/foto) | Calidad de la imagen | Corregilo en **Costo nuevo** antes de publicar |
 
 ## Siguiente paso

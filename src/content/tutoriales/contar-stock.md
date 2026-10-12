@@ -146,7 +146,7 @@ Es la forma de evitar que el que cuenta "ajuste" lo que ve a lo que dice el sist
 | No veo el lápiz | Falta ese permiso, o no abriste el producto en *Editar* | Verificá el permiso y el permiso de gestionar productos |
 | Un producto no aparece | No es contable (servicio u horas) o está fusionado | Esos productos no se cuentan |
 | Contó otra persona y no puedo ver su diferencia | Conteo a ciegas | El administrador la ve en *Ajustes de inventario* |
-| Me equivoqué en un conteo | — | Anulá el ajuste desde el panel de administración |
+| Me equivoqué en un conteo | - | Anulá el ajuste desde el panel de administración |
 
 ## Siguiente paso
 

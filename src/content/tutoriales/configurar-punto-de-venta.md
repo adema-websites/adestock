@@ -117,8 +117,8 @@ Cada **caja** vende desde un **depósito**, con sus listas de precios y sus caje
 | # | Campo | Qué es |
 |---|---|---|
 | 1 | **Carritos a la vez** | Cuántas ventas puede tener abiertas en paralelo (clientes en espera) |
-| — | **Depósito** | De qué stock se descuenta lo que vende la caja. Se puede crear un depósito nuevo desde acá |
-| — | Los cajeros configuran sus impresoras | Les deja cambiar la impresora de tickets y la etiquetadora desde el POS |
+| - | **Depósito** | De qué stock se descuenta lo que vende la caja. Se puede crear un depósito nuevo desde acá |
+| - | Los cajeros configuran sus impresoras | Les deja cambiar la impresora de tickets y la etiquetadora desde el POS |
 | 2 | **Quiénes venden acá** | Los usuarios de la caja. Cada usuario vende en **una sola caja**: si lo sumás acá, deja la anterior |
 
 > Para sumar otra caja usá **Nuevo punto de venta**. Es lo que necesitás para abrir un segundo local o una segunda caja en el mismo local.
@@ -130,13 +130,13 @@ Las formas en que te pagan. **Definen qué se cuenta en el cierre de caja y qué
 
 | # | Campo | Qué hace |
 |---|---|---|
-| — | Nombre | Cómo lo ve el cajero al cobrar y sale en el ticket |
+| - | Nombre | Cómo lo ve el cajero al cobrar y sale en el ticket |
 | 1 | **Recargo o descuento (%)** | Positivo = recargo (5 → +5 %). Negativo = descuento (−10 → −10 %). 0 = sin ajuste |
-| — | Es efectivo | El dinero entra a la caja: se cuenta en el cierre de caja |
+| - | Es efectivo | El dinero entra a la caja: se cuenta en el cierre de caja |
 | 2 | **Es cuenta corriente (fiado)** | El cliente no paga ahora: queda como deuda en su cuenta |
-| — | ⭐ Favorito | Aparece primero al cobrar (hasta 6; el resto queda en "Ver todos") |
+| - | ⭐ Favorito | Aparece primero al cobrar (hasta 6; el resto queda en "Ver todos") |
 | 3 | **Billetera** | Cuenta donde se registra lo cobrado (banco, Mercado Pago…). La cuenta corriente no lleva billetera |
-| — | En qué cajas se puede usar | En todas las cajas (incluye las que abras más adelante) o solo en algunas |
+| - | En qué cajas se puede usar | En todas las cajas (incluye las que abras más adelante) o solo en algunas |
 
 ### Usuarios
 Alta de cajeros y administrativos y sus permisos. Está explicado en [Crear usuarios y asignar permisos](/tutoriales/usuarios-y-permisos/).

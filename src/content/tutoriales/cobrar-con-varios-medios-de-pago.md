@@ -37,9 +37,9 @@ Los cuatro recuadros de arriba te acompañan todo el cobro:
 
 | # | Recuadro | Qué muestra |
 |---|---|---|
-| — | **Cliente activo** | A quién se le vende. Con *Cambiar / Ver cliente* lo cambiás sin salir |
+| - | **Cliente activo** | A quién se le vende. Con *Cambiar / Ver cliente* lo cambiás sin salir |
 | 1 | **Total venta** | Lo que tiene que quedar cubierto para cerrar |
-| — | **Total aplicado** | La suma de los pagos que ya cargaste |
+| - | **Total aplicado** | La suma de los pagos que ya cargaste |
 | 2 | **Faltante** | Lo que falta cobrar. Cuando llega a cero cambia a *Completado*. Si el cliente entrega de más en efectivo, muestra el **vuelto** |
 
 ## Paso a paso
@@ -111,7 +111,7 @@ Algunos medios de cobro pueden tener un **recargo o descuento** configurado (por
 | *Confirmar y cerrar* está apagado | Todavía falta cobrar | Agregá otro pago hasta que el faltante sea $ 0 |
 | El panel de descuento no deja escribir | Tu usuario no tiene *Puede hacer descuentos* | Pedíselo al dueño |
 | El botón *Cuenta Corriente* está apagado | El cliente es Consumidor Final o no tiene cuenta corriente | Cambiá el cliente (ver *Vender a cuenta corriente*) |
-| Cargué un pago por error | — | Quitalo con el tacho y cargalo de nuevo |
+| Cargué un pago por error | - | Quitalo con el tacho y cargalo de nuevo |
 | El importe de tarjeta es mayor al total | El medio tiene recargo | Es lo esperado: el recargo se suma al importe de ese medio |
 
 ## Siguiente paso

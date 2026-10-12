@@ -37,6 +37,9 @@ for (const d of DOCS) {
   }
   let body = raw.slice(m[0].length).replace(/^\s*# .*\r?\n/, '');
 
+  // NORMALIZAR_GUIONES: el sitio no usa raya larga (—); se reemplaza por guion con espacios.
+  body = body.replace(/\s*—\s*/g, ' - ');
+
   // Enlaces a tutoriales y a otras páginas de ayuda
   body = body.replace(/\]\(\.\.\/01-manual-usuario\/(\d\d)-[a-z0-9-]+\.md(#[^)]*)?\)/g, (x, n, a) =>
     porNumero.has(n) ? `](/tutoriales/${porNumero.get(n)}/${a ?? ''})` : x,

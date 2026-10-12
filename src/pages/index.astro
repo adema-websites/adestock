@@ -97,7 +97,7 @@ const jsonLd = [
           <p class="lead">Cargá productos, registrá ventas y compras, armá tus ofertas y revisá todo desde el celular.</p>
           <div class="hero-cta">
             <a class="btn btn-primary" href="/descargar-demo.html">Probar ADEstock</a>
-            <button class="btn btn-ghost" type="button" data-abrir-video>Ver cómo funciona</button>
+            <a class="btn btn-ghost" href="#como-funciona">Ver cómo funciona</a>
           </div>
         </div>
         <div class="hero-vis" aria-hidden="false">
@@ -122,11 +122,53 @@ const jsonLd = [
       </div>
     </section>
 
+    <!-- CÓMO FUNCIONA -->
+    <section id="como-funciona" class="seccion como" aria-labelledby="t-como">
+      <div class="wrap">
+        <h2 id="t-como" class="rev" style="max-width:20ch">Cómo funciona ADEstock</h2>
+        <p class="lead rev" style="margin-top:1rem;--d:100ms">Un solo sistema con tres lugares para usarlo. Todos trabajan con los mismos datos: lo que cargás en uno lo ves en los otros.</p>
+
+        <ol class="puertas">
+          <li class="puerta rev">
+            <span class="puerta-lugar">En el mostrador</span>
+            <h3>Punto de venta (POS)</h3>
+            <p>Vendés, cobrás, abrís y cerrás la caja y contás el stock. Se usa desde el navegador de la caja, en la nube o en tu PC.</p>
+          </li>
+          <li class="puerta rev" style="--d:120ms">
+            <span class="puerta-lugar">En la oficina</span>
+            <h3>Panel de administración</h3>
+            <p>Cargás compras, subís precios en bloque, armás ofertas y revistas, controlás los turnos de caja y hacés copias de seguridad.</p>
+          </li>
+          <li class="puerta rev" style="--d:240ms">
+            <span class="puerta-lugar">En tu celular</span>
+            <h3>App del dueño</h3>
+            <p>Mirás cuánto vendiste, qué te deben y a quién le comprás. Se instala desde el POS y es para el dueño y los administrativos.</p>
+          </li>
+        </ol>
+
+        <div class="formas">
+          <div class="forma rev">
+            <h3>En la nube</h3>
+            <p>Entrás desde cualquier navegador, sin instalar nada. Nosotros alojamos el sistema y hacemos las copias de seguridad. Para imprimir tickets usás el <a href="/agent-printer.html">Agent Printer</a>.</p>
+          </div>
+          <div class="forma rev" style="--d:120ms">
+            <h3>En tu PC con Windows</h3>
+            <p>Instalás ADEstock en tu equipo (Windows 10 o superior) con una licencia mensual, anual o de por vida. Tus datos quedan en tu equipo.</p>
+          </div>
+        </div>
+        <p class="rev" style="margin-top:1.75rem;display:flex;gap:.75rem;flex-wrap:wrap;--d:160ms">
+          <a class="btn btn-primary" href="/precios.html">Ver planes y precios</a>
+          <a class="btn btn-ghost" href="/descargar-demo.html">Probar la demo</a>
+        </p>
+      </div>
+    </section>
+
     <!-- REVISTAS -->
-    <section id="como-funciona" class="seccion revistas" aria-labelledby="t-rev">
+    <section id="revistas" class="seccion revistas" aria-labelledby="t-rev">
       <div class="wrap">
         <h2 id="t-rev" class="rev" style="max-width:20ch">Tu revista de ofertas, con tu marca y tus precios</h2>
         <p class="lead rev" style="margin-top:1rem;--d:100ms">Armás el folleto en pocos clics y lo compartís. Adiós a maquetar cada semana a mano.</p>
+        <p class="rev" style="margin-top:1.25rem;--d:160ms"><button class="btn btn-ghost" type="button" data-abrir-video>Ver el video del paso a paso</button></p>
 
         <div class="rev-grid">
           <ol class="rev-pasos">
@@ -285,6 +327,22 @@ const jsonLd = [
     .hero-grid { grid-template-columns: 1fr; }
     .hero-celular { right: .5rem; width: 130px; }
     .hero-escritorio { transform: none; }
+  }
+
+
+  .como .puertas { list-style: none; margin: 2.5rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--line); }
+  .puerta { padding: 1.75rem 1.75rem 1.75rem 0; display: grid; gap: .5rem; align-content: start; }
+  .puerta + .puerta { padding-left: 1.75rem; border-left: 1px solid var(--line); }
+  .puerta-lugar { color: var(--accent); font-weight: 650; font-size: .95rem; }
+  .puerta p { color: var(--ink-2); max-width: 36ch; }
+  .formas { margin-top: 2rem; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+  .forma { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-card); padding: 1.5rem; display: grid; gap: .5rem; align-content: start; }
+  .forma p { color: var(--ink-2); }
+  .forma a { color: var(--accent); text-underline-offset: 3px; }
+  @media (max-width: 900px) {
+    .como .puertas { grid-template-columns: 1fr; }
+    .puerta, .puerta + .puerta { padding: 1.4rem 0; border-left: 0; border-bottom: 1px solid var(--line); }
+    .formas { grid-template-columns: 1fr; }
   }
 
   .chips { list-style: none; margin: 2rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: .75rem; }

@@ -132,7 +132,7 @@ Si la pagaste en efectivo o transferencia, ya queda **pagada** al confirmar.
 | No me deja cerrar la caja | Tenés compras pagadas sin confirmar | Pedí que las confirmen (o descartalas si estaban mal cargadas) |
 | No veo *Cuenta Corriente Proveedor* | Tu usuario no tiene el permiso *Puede comprar en cuenta corriente* | Pedíselo al dueño (Menú rápido → Usuarios) |
 | Quiero cargar o editar el pago desde el panel | Los pagos se registran solo desde el POS | Eliminá la compra pendiente y volvela a cargar desde el POS |
-| Cargué mal un precio | — | Antes de confirmar: eliminá la compra pendiente y volvela a cargar |
+| Cargué mal un precio | - | Antes de confirmar: eliminá la compra pendiente y volvela a cargar |
 | El proveedor no está | Es nuevo | **＋ Nuevo proveedor** en el paso 2 |
 
 ## Siguiente paso

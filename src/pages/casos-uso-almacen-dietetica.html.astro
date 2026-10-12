@@ -1,0 +1,40 @@
+---
+// Migrada desde public/casos-uso-almacen-dietetica.html. Contenido en src/paginas/casos-uso-almacen-dietetica.html.
+import Pagina from '../layouts/Pagina.astro';
+import contenido from '../paginas/casos-uso-almacen-dietetica.html?raw';
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ADEstock para Almacén y Dietética",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Software de gestión para almacenes y dietéticas: control de vencimientos, peso variable, granel y productos naturales.",
+    "author": {
+      "@type": "Organization",
+      "name": "ADEMA Sistemas",
+      "url": "https://ademasistemas.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "Consultar",
+      "priceCurrency": "ARS"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ADEMA Sistemas",
+    "url": "https://ademasistemas.com",
+    "logo": "https://ademasistemas.com/logo.svg"
+  }
+];
+---
+<Pagina
+  title={"ADEstock para almacenes y dietéticas | Stock, caja y compras"}
+  description={"ADEstock para almacenes y dietéticas argentinas: control de stock, productos a granel, vencimientos, ventas, caja, compras, precios y reportes."}
+  path="/casos-uso-almacen-dietetica.html"
+  jsonLd={jsonLd}
+>
+  <Fragment set:html={contenido} />
+</Pagina>

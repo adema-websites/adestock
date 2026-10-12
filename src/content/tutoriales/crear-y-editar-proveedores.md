@@ -51,7 +51,7 @@ Tocá **Nuevo Proveedor**.
 | # | Campo | Qué poner |
 |---|---|---|
 | 1 | **Nombre o Empresa** *(obligatorio)* | Como lo conocés. Es lo que vas a buscar al comprar |
-| — | Persona de contacto, Teléfono, WhatsApp, Email, Dirección, Localidad | Datos de contacto. Opcionales |
+| - | Persona de contacto, Teléfono, WhatsApp, Email, Dirección, Localidad | Datos de contacto. Opcionales |
 | 2 | **CUIT / Documento** | Sirve para identificarlo y para reconocerlo en las boletas |
 | 3 | **Condición de pago (días)** | En cuántos días le pagás (30, por ejemplo). Con esto el sistema marca como **vencidas** las compras impagas |
 | 4 | **Notas internas** | Acuerdos, días de visita, descuentos… |

@@ -124,13 +124,13 @@ Para elegir otro período, tocá **Cambiar**. Se abre una hoja desde abajo:
 
 La radiografía se lee de arriba hacia abajo, en cuatro bloques:
 
-**Ventas** — cuánto vendiste en el período, lo que costó la mercadería vendida y lo que pagaste a proveedores (contado y a cuenta corriente). Tiene un **gráfico** con la línea de este período contra el anterior, en modo **Diario** o **Acumulado**.
+**Ventas** - cuánto vendiste en el período, lo que costó la mercadería vendida y lo que pagaste a proveedores (contado y a cuenta corriente). Tiene un **gráfico** con la línea de este período contra el anterior, en modo **Diario** o **Acumulado**.
 
 ![Ventas y gráfico](../../assets/tutoriales/30-app-del-dueno/07-ventas-y-grafico.png)
 
 Abajo, cuatro indicadores: la variación contra el período anterior, la **rentabilidad promedio**, el **ticket promedio** (cuántas ventas hubo) y una **proyección** de cómo cerrarías el mes si seguís a este ritmo.
 
-**Compras de mercadería** — cuánto compraste, y:
+**Compras de mercadería** - cuánto compraste, y:
 
 ![Compras](../../assets/tutoriales/30-app-del-dueno/08-compras.png)
 
@@ -141,9 +141,9 @@ Abajo, cuatro indicadores: la variación contra el período anterior, la **renta
 
 También muestra cuántos costos **subieron** y cuántos bajaron, cuántas compras hiciste y **a quién le compraste más**.
 
-**Gastos por categoría** — cuánto gastaste y en qué rubros (limpieza, alquiler, sueldos…).
+**Gastos por categoría** - cuánto gastaste y en qué rubros (limpieza, alquiler, sueldos…).
 
-**En limpio** — la cuenta final:
+**En limpio** - la cuenta final:
 
 ![En limpio](../../assets/tutoriales/30-app-del-dueno/09-en-limpio.png)
 
@@ -162,7 +162,7 @@ Tocá **Productos**. Muestra **cada producto** con su stock, cuánto vendió, su
 
 | # | Elemento | Qué hace |
 |---|---|---|
-| — | **Buscar producto** | Por nombre |
+| - | **Buscar producto** | Por nombre |
 | 1 | **Orden** | *Más vendidos ($)*, *Más unidades vendidas*, *Más rentables*, *Menos rentables*, *Más stock*, *Menos stock* o *Nombre (A-Z)* |
 | 2 | **Filtros** | Abre los filtros |
 

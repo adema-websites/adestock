@@ -126,7 +126,7 @@ En el ejemplo, Carlos debía $ 5.900 (dos ventas de $ 2.950) y pagó $ 3.000 por
 | No veo *Cobrar a un cliente* en el menú | Falta el permiso *Puede cobrar Cta. Cte.* | Pedíselo al dueño |
 | "Buscar Deudas" no muestra nada | El cliente no tiene deudas pendientes | Verificá en *Gestión de clientes* su saldo |
 | El botón *Cobrar e imprimir* está gris | El *Restante* no es $ 0 | Ajustá el monto del pago o las deudas elegidas |
-| Me equivoqué en un cobro | — | Pedile al dueño que lo anule desde el panel de administración |
+| Me equivoqué en un cobro | - | Pedile al dueño que lo anule desde el panel de administración |
 
 ## Siguiente paso
 

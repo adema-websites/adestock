@@ -49,9 +49,9 @@ Menú rápido (**F8**) → **Configuración** → **Módulos y sistema** → sec
 |---|---|---|
 | 1 | **Tienda online activa** | Publica tu revista digital para que tus clientes compren desde el celular |
 | 2 | **Registro libre de clientes** | Encendido: cualquiera puede crearse una cuenta. Apagado: solo entran las cuentas que creás vos |
-| — | **Crear el cliente al registrarse** | Quien se registra queda cargado como **cliente** de tu negocio |
-| — | **Caja de las ventas online** | La caja a la que entran las ventas de la tienda, para cerrarlas con el resto. **Sin caja, la tienda no puede tomar pedidos** |
-| — | **Lista de precios de la tienda** | Qué precios ven los clientes nuevos. Vacío: ven todos los precios |
+| - | **Crear el cliente al registrarse** | Quien se registra queda cargado como **cliente** de tu negocio |
+| - | **Caja de las ventas online** | La caja a la que entran las ventas de la tienda, para cerrarlas con el resto. **Sin caja, la tienda no puede tomar pedidos** |
+| - | **Lista de precios de la tienda** | Qué precios ven los clientes nuevos. Vacío: ven todos los precios |
 
 Tocá **Guardar cambios**.
 

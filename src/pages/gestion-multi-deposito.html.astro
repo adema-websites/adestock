@@ -1,0 +1,14 @@
+---
+// Migrada desde public/gestion-multi-deposito.html. Contenido en src/paginas/gestion-multi-deposito.html.
+import Pagina from '../layouts/Pagina.astro';
+import contenido from '../paginas/gestion-multi-deposito.html?raw';
+const jsonLd = [];
+---
+<Pagina
+  title={"Sistema multi-depósito para control de stock | ADEstock"}
+  description={"Controlá stock por depósito, transferencias, sucursales, puntos de venta y reportes con ADEstock, sistema de inventario para comercios argentinos."}
+  path="/gestion-multi-deposito.html"
+  jsonLd={jsonLd}
+>
+  <Fragment set:html={contenido} />
+</Pagina>

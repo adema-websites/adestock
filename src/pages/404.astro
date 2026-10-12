@@ -1,0 +1,25 @@
+---
+import Pagina from '../layouts/Pagina.astro';
+---
+<Pagina
+  title="Página no encontrada | ADEstock"
+  description="La página que buscás no existe o cambió de dirección. Estos accesos te llevan a lo más usado de ADEstock."
+  path="/404.html"
+  noindex={true}
+  chat={false}
+>
+  <main id="contenido">
+    <header class="page-hero">
+      <div class="page-hero__inner">
+        <h1>No encontramos esa página</h1>
+        <p class="page-lead">Puede que la dirección haya cambiado. Probá desde estos accesos.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="/">Ir al inicio</a>
+          <a class="btn btn-ghost" href="/tutoriales/">Tutoriales</a>
+          <a class="btn btn-ghost" href="/precios.html">Precios</a>
+          <a class="btn btn-ghost" href="/contacto.html">Contacto</a>
+        </div>
+      </div>
+    </header>
+  </main>
+</Pagina>

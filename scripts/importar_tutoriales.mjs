@@ -84,6 +84,9 @@ for (const t of mapa.tutoriales) {
   const lograr = body.match(/## Qué vas a lograr\s*\r?\n+([\s\S]*?)(\r?\n\r?\n|$)/);
   const description = recortar(plain(lograr ? lograr[1] : meta.titulo));
 
+  // NORMALIZAR_GUIONES: el sitio no usa raya larga (—); se reemplaza por guion con espacios.
+  body = body.replace(/\s*—\s*/g, ' - ');
+
   // Enlaces entre tutoriales: NN-nombre.md[#ancla] -> /tutoriales/<slug>/[#ancla]
   const porNumero = new Map(mapa.tutoriales.map((x) => [x.n, x.slug]));
   body = body.replace(/\]\((\d\d)-[a-z0-9-]+\.md(#[^)]*)?\)/g, (m, n, ancla) =>

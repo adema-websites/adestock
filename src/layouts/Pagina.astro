@@ -1,0 +1,26 @@
+---
+// Layout común de todas las páginas interiores: mismo encabezado, pie, tipografía y asistente que la home.
+import '../styles/paginas.css';
+import Sitio from './Sitio.astro';
+import SiteNav from '../components/SiteNav.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import Chat from '../components/Chat.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  noindex?: boolean;
+  ogImage?: string | null;
+  ogType?: 'website' | 'article';
+  jsonLd?: object[];
+  chat?: boolean;
+}
+const { chat = true, ogImage, ...rest } = Astro.props;
+---
+<Sitio {...rest} ogImage={ogImage ?? undefined}>
+  <SiteNav />
+  <slot />
+  <SiteFooter />
+  {chat && <Chat />}
+</Sitio>

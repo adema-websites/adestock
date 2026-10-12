@@ -1,0 +1,117 @@
+---
+// Migrada desde public/blog/stock-minimo-compras-reposicion/index.html. El contenido vive en src/paginas/blog--stock-minimo-compras-reposicion.html.
+import Pagina from '../../../layouts/Pagina.astro';
+import contenido from '../../../paginas/blog--stock-minimo-compras-reposicion.html?raw';
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://adestock.com.ar/#organization",
+        "name": "ADEMA Sistemas",
+        "url": "https://adestock.com.ar/",
+        "logo": "https://adestock.com.ar/img/logo.png"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://adestock.com.ar/#software",
+        "name": "ADEstock",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web, Windows",
+        "inLanguage": "es-AR",
+        "publisher": {
+          "@id": "https://adestock.com.ar/#organization"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "ARS"
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": "https://adestock.com.ar/#product",
+        "name": "ADEstock",
+        "brand": {
+          "@type": "Brand",
+          "name": "ADEstock"
+        },
+        "category": "Control de stock",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "ARS",
+          "url": "https://adestock.com.ar/descargar-demo.html"
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Cómo manejar stock mínimo, compras y reposición",
+        "datePublished": "2026-05-14",
+        "dateModified": "2026-05-14",
+        "author": {
+          "@id": "https://adestock.com.ar/#organization"
+        },
+        "publisher": {
+          "@id": "https://adestock.com.ar/#organization"
+        },
+        "mainEntityOfPage": "https://adestock.com.ar/blog/stock-minimo-compras-reposicion/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://adestock.com.ar/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://adestock.com.ar/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Stock mínimo, compras y reposición",
+            "item": "https://adestock.com.ar/blog/stock-minimo-compras-reposicion/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Qué es stock mínimo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Es la cantidad mínima recomendada de un producto antes de generar una reposición para evitar quedarse sin mercadería."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo calcular compras?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Conviene revisar stock actual, ventas promedio, demora del proveedor, productos críticos y espacio disponible."
+            }
+          }
+        ]
+      }
+    ]
+  }
+];
+---
+<Pagina
+  title={"Cómo manejar stock mínimo, compras y reposición | ADEstock"}
+  description={"Aprendé a manejar stock mínimo, compras y reposición en comercios para evitar faltantes, reducir exceso de mercadería y comprar con datos reales."}
+  path="/blog/stock-minimo-compras-reposicion/"
+  ogType="article"
+  jsonLd={jsonLd}
+>
+  <Fragment set:html={contenido} />
+</Pagina>

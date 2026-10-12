@@ -25,7 +25,7 @@ social_image: "/social/respaldos-v1.jpg"
 ---
 ## Qué vas a lograr
 
-Tener una **copia de seguridad** de todo tu negocio (ventas, productos, clientes, stock, fotos) en un archivo ZIP, guardarla en un lugar seguro —incluso en **Google Drive**— y saber cómo **volver atrás** si algo sale mal.
+Tener una **copia de seguridad** de todo tu negocio (ventas, productos, clientes, stock, fotos) en un archivo ZIP, guardarla en un lugar seguro - incluso en **Google Drive** - y saber cómo **volver atrás** si algo sale mal.
 
 > **Regla de oro:** un respaldo que está solo en la misma PC no te salva si la PC se rompe o te la roban. Guardá siempre una copia **afuera** (Drive o un pendrive).
 
