@@ -1,0 +1,34 @@
+---
+import { getTutoriales } from '../lib/tutoriales';
+const centro = (await getTutoriales()).length > 0 ? '/tutoriales/' : '/tutoriales.html';
+// Navegación definitiva del plan: Cómo funciona · Para tu negocio · Tutoriales · Precios · Contacto + CTA.
+---
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="nav-logo" href="/" aria-label="ADEstock, inicio"><img src="/img/logo-home.svg" alt="ADEstock" width="150" height="38" /></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
+    <nav id="menu" class="nav-links" aria-label="Principal" data-abierto="false">
+      <a href="/#como-funciona">Cómo funciona</a>
+      <a href="/#rubros">Para tu negocio</a>
+      <a href={centro}>Tutoriales</a>
+      <a href="/precios.html">Precios</a>
+      <a href="/contacto.html">Contacto</a>
+      <a class="btn btn-primary" href="/descargar-demo.html">Probar ADEstock</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  function iniciarNav() {
+    const btn = document.querySelector<HTMLButtonElement>('.nav-toggle');
+    const menu = document.getElementById('menu');
+    if (!btn || !menu) return;
+    btn.addEventListener('click', () => {
+      const abierto = menu.dataset.abierto !== 'true';
+      menu.dataset.abierto = String(abierto);
+      btn.setAttribute('aria-expanded', String(abierto));
+    });
+    menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => { menu.dataset.abierto = 'false'; btn.setAttribute('aria-expanded', 'false'); }));
+  }
+  document.addEventListener('astro:page-load', iniciarNav);
+</script>

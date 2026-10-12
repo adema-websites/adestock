@@ -1,0 +1,170 @@
+
+☰
+Características
+Sistema de stock
+Control de stock
+¿Para Quién Es?
+Preguntas Frecuentes
+Precios
+Guías
+Tutoriales
+Descargar
+ADEstock: sistema de stock, ventas e inventario para comercios argentinos
+Ordená productos, compras, ventas, caja, precios, reportes y depósitos en un solo sistema. Ideal para kioscos, almacenes, minimarkets, distribuidoras chicas y pymes que quieren dejar Excel.
+Conocé ADEstock
+Mirá el tutorial de Ceci
+Conocé cómo Ceci usa ADEstock para simplificar el control de stock, ventas y cajas en su negocio.
+Potenciá tu negocio con ADEstock
+Inventario Preciso y Mermas
+Gestioná stock real con productos simples o recetas, combos y kits. Registrá ajustes y mermas para evitar pérdidas y visualizá todos tus inventarios en un solo lugar.
+Multi-Depósito y Transferencias
+Controlá el stock en múltiples depósitos y puntos de venta con transferencias ágiles y trazabilidad de productos.
+POS y Cajas Ágiles
+Vendé rápido desde cualquier punto de venta, con lector de códigos, tickets y control por caja.
+Billeteras, Cuentas y Reportes
+Registra ingresos/egresos, transferencias y cierres diarios, gestioná tus medios de pagos disponibles por cada punto de venta. Reportes claros para decidir mejor.
+ADEstock para Pymes y Emprendedores en Argentina
+Si buscás controlar stock e inventario sin complicarte, ADEstock es para vos:
+Dejar las planillas:
+ Centralizá la gestión de stock e inventario.
+Controlar tu stock real:
+ Evitá pérdidas por faltantes o excesos.
+Escalar tu operación:
+ Administrá múltiples depósitos y puntos de venta.
+Orden financiero:
+ Controlá cajas, billeteras y cuentas.
+Decisiones con datos:
+ Reportes de ventas, costos y stock.
+Operación simple:
+ ADEstock es monoempresa, sin complejidad extra.
+Soluciones de stock para comercios argentinos
+ADEstock cubre búsquedas y necesidades concretas: controlar inventario, evitar faltantes, ordenar caja y dejar planillas que ya no alcanzan.
+Sistema de stock
+Para negocios que necesitan centralizar productos, ventas, compras y reportes.
+Ver solución
+Control de stock
+Para evitar faltantes, exceso de mercadería, precios viejos y compras a ojo.
+Ver control de stock
+Software de inventario
+Una solución argentina para inventario, depósitos, reportes y trazabilidad.
+Ver software
+Por rubro
+Kioscos, almacenes y minimarkets con ventas, caja y reposición diaria.
+Ver rubros
+Empezar con ADEstock es Simple
+1
+Configurá tu negocio
+Definí datos básicos, moneda, usuarios y parámetros de venta.
+2
+Carga tu Catálogo
+Cargá productos simples o recetas/kits. Las recetas permiten combinar varios productos en uno solo.
+3
+Registrá operaciones
+Compras, ventas y movimientos actualizan el stock de forma automática.
+4
+Gestioná y mejorá
+Controlá inventarios, reportes, billeteras y cierres de caja.
+Ver Guías Paso a Paso
+Casos de Uso
+¿Querés ver cómo se usa el sistema en tu rubro?
+Descubrí cómo aplica ADEstock a tu emprendimiento específico.
+Pequeñas Distribuidoras
+Ideal para venta de accesorios de belleza, cosmética y afines por mayor.
+Ver Caso de Uso
+                    -->
+Almacén y Dietética
+Perfecto para productos naturales, control de vencimientos, peso variable y granel.
+Ver Caso de Uso
+Minimarket / Supermercado
+Ideal para retail con múltiples cajas, scanner de códigos y alto volumen de ventas.
+Ver Caso de Uso
+ -->
+Preguntas frecuentes sobre ADEstock
+¿Es ADEstock difícil de usar si no sé de sistemas?
+No, ADEstock está pensado para emprendedores. Su interfaz es intuitiva y nuestros tutoriales te guían para que le saques provecho sin ser un experto.
+¿Qué tipos de productos puedo gestionar?
+Podés manejar productos simples, productos con variantes y productos compuestos o kits. Es útil para comercios que necesitan controlar stock, costos, precios y reportes. 
+Más detalles aquí
+.
+Tengo un local y vendo online, ¿me sirve?
+Sí. ADEstock te permite gestionar múltiples puntos de venta y controlar el stock de cada uno desde diferentes depósitos si es necesario. 
+Más detalles aquí
+.
+¿ADEstock emite facturas electrónicas AFIP?
+No, ADEstock se enfoca 100% en la gestión interna de stock, compras, ventas y operaciones. No incluye facturación electrónica fiscal. Podés usarlo para controlar tu negocio y complementar con un facturador externo o el sistema de AFIP cuando necesites emitir comprobantes oficiales.
+¿ADEstock tiene multiempresa?
+No. ADEstock es monoempresa para mantener la operación simple. Sí permite multi-depósito y multi-POS dentro del mismo negocio.
+¿Cómo se manejan los costos y los precios de venta?
+Registrás el costo al crear o comprar productos. El sistema puede actualizarlo automáticamente con cada compra. Los precios de venta los definís en listas flexibles que asignás a tus puntos de venta. 
+Ver tutorial
+.
+¿Puedo gestionar mis entregas o repartos?
+Claro, el módulo de Reparto te permite crear solicitudes de entrega (manuales o desde una venta), asignarlas a tus repartidores y ver el estado de cada envío fácilmente. 
+Ver tutorial
+.
+Precio de ADEstock
+100
+USD
+Pago único. Sin suscripciones ni costos ocultos.
+Incluye todas las funciones y actualizaciones menores.
+ Adquirir 🚀
+ -->
+ADEstock v2.3.3: Reportes técnicos por WhatsApp y trazabilidad asistida
+Nueva versión enfocada en soporte técnico más rápido: las pantallas de error ahora preparan un reporte de WhatsApp con contexto útil, referencia única del incidente y saneamiento automático de datos sensibles.
+Descargar ADEstock v2.3.3
+ HERRAMIENTA GRATUITA
+Agent Printer — Imprimí desde la nube en tu impresora local
+Usás ADEstock en la nube y tenés una impresora por USB o red local? Este pequeño programa para Windows actúa de puente seguro: toma los tickets encolados y los imprime sin exponer tu red a Internet.
+ USB y LAN privada
+ Sin puertos entrantes
+ Multi-caja y multi-sucursal
+ Windows 10/11 · Instalador .exe
+ Descargar Agent Printer
+                        Ver más detalles →
+Descargá la demo de ADEstock
+Probá ADEstock gratis durante 3 días. Descargá el instalador y empezá a gestionar tu stock e inventario de manera profesional. La demo solicitará licencia luego del período de prueba.
+Descargar Demo
+Sistema de gestión de stock e inventario para pymes. Multi-depósito, multi-POS y control total de tu negocio.
+Casos de Uso
+Almacén y Dietética
+Minimarket
+Sistema para kioscos
+Sistema para almacenes
+Sistema para minimarkets
+Tutoriales
+Recursos
+Características
+Sistema de stock
+Control de stock
+Control de inventarios
+Guías de stock
+Precios
+Preguntas Frecuentes
+Descargar Demo
+Versiones
+Agent Printer
+Contacto
+contact@ademasistemas.com
++54 9 11 2788-8995
+ademasistemas.com
+Sobre Nosotros
+© 
+ ADEstock by 
+ADEMA Sistemas
+. 
+Todos los derechos reservados.
+Política de Privacidad
+Términos y Condiciones
+LLMs
+×
+Descarga ADEstock
+Tutorial de instalación y primeros pasos
+Credenciales de Acceso
+Una vez instalado ADEstock, inicia sesión con estas credenciales:
+Usuario:
+ADEMASISTEMAS
+Contraseña:
+Adema123.
+Recuerda escribir las credenciales exactamente como se muestran (sensible a mayúsculas).
+Descargar Instalador
+Cerrar

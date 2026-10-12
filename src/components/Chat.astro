@@ -1,0 +1,177 @@
+---
+// "Preguntale a ADEstock": panel de chat.
+//  - Con PUBLIC_CHAT_URL definido, consulta al servicio chat-api (Gemini + índice de tutoriales).
+//  - Sin esa variable, o si el servicio falla o llegó al tope, responde con el buscador local (sin IA):
+//    muestra el extracto real del tutorial y su enlace. Nunca inventa.
+const chatUrl = import.meta.env.PUBLIC_CHAT_URL ?? '';
+const WA = 'https://wa.me/5491127888995';
+---
+<div class="chat" data-chat-url={chatUrl} data-wa={WA} transition:persist>
+  <button class="chat-fab" type="button" aria-expanded="false" aria-controls="chat-panel">
+    <span class="chat-fab-dot" aria-hidden="true"></span>
+    Preguntale a ADEstock
+  </button>
+
+  <section id="chat-panel" class="chat-panel" role="dialog" aria-label="Preguntale a ADEstock" hidden>
+    <header class="chat-head">
+      <div>
+        <strong>Preguntale a ADEstock</strong>
+        <span>Respuestas con base en los tutoriales</span>
+      </div>
+      <button class="chat-close" type="button" aria-label="Cerrar el chat">Cerrar</button>
+    </header>
+
+    <div class="chat-log" role="log" aria-live="polite" tabindex="0"></div>
+
+    <div class="chat-sugs" aria-label="Preguntas frecuentes">
+      <button type="button">¿Cómo cargo una compra con foto?</button>
+      <button type="button">¿Cómo armo una revista de ofertas?</button>
+      <button type="button">Tengo 12 pero el sistema dice 9</button>
+      <button type="button">¿Emite facturas de AFIP?</button>
+    </div>
+
+    <form class="chat-form" autocomplete="off">
+      <label class="sr-only" for="chat-q">Escribí tu pregunta</label>
+      <input id="chat-q" name="q" type="text" maxlength="300" placeholder="Escribí tu pregunta" required />
+      <button class="btn btn-primary" type="submit">Enviar</button>
+    </form>
+    <p class="chat-nota">Un asistente puede equivocarse. Si algo no coincide con tu pantalla, <a href={WA}>escribinos por WhatsApp</a>.</p>
+  </section>
+</div>
+
+<style is:global>
+  .chat { position: fixed; right: 16px; bottom: 16px; z-index: 60; font-size: .97rem; }
+  .chat-fab { display: inline-flex; align-items: center; gap: .6rem; background: var(--ink); color: var(--bg); border: 0; padding: .8rem 1.2rem; border-radius: var(--r-pill); font: inherit; font-weight: 600; cursor: pointer; box-shadow: var(--shadow); white-space: nowrap; transition: transform .25s var(--ease); }
+  .chat-fab:hover { transform: translateY(-2px); }
+  .chat-fab-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); }
+  .chat-panel { position: absolute; right: 0; bottom: 60px; width: min(400px, calc(100vw - 32px)); height: min(620px, calc(100dvh - 120px)); display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-card); box-shadow: var(--shadow); overflow: hidden; }
+  .chat-panel[hidden] { display: none; }
+  .chat-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; padding: 1rem 1.1rem; background: var(--night); color: var(--night-ink); }
+  .chat-head strong { display: block; }
+  .chat-head span { font-size: .85rem; opacity: .75; }
+  .chat-close { background: transparent; border: 1px solid rgb(255 255 255 / .3); color: inherit; border-radius: var(--r-pill); padding: .3rem .8rem; font: inherit; cursor: pointer; }
+  .chat-log { flex: 1; overflow-y: auto; padding: 1rem; display: flex; flex-direction: column; gap: .75rem; }
+  .chat-msg { max-width: 92%; padding: .7rem .9rem; border-radius: 16px; line-height: 1.5; }
+  .chat-msg.yo { align-self: flex-end; background: var(--accent); color: var(--accent-ink); border-bottom-right-radius: 4px; }
+  .chat-msg.bot { align-self: flex-start; background: var(--surface-2); color: var(--ink); border-bottom-left-radius: 4px; }
+  .chat-msg a { color: inherit; font-weight: 600; text-underline-offset: 3px; }
+  .chat-fuentes { margin: .6rem 0 0; padding: 0; list-style: none; display: grid; gap: .3rem; font-size: .9rem; }
+  .chat-sugs { display: flex; gap: .4rem; overflow-x: auto; padding: .25rem 1rem .75rem; scrollbar-width: thin; }
+  .chat-sugs button { flex: none; background: var(--surface); border: 1px solid var(--line); color: var(--ink); border-radius: var(--r-pill); padding: .4rem .8rem; font: inherit; font-size: .88rem; cursor: pointer; white-space: nowrap; }
+  .chat-sugs button:hover { border-color: var(--accent); }
+  .chat-form { display: flex; gap: .5rem; padding: 0 1rem .75rem; }
+  .chat-form input { flex: 1; min-width: 0; font: inherit; padding: .7rem .9rem; border: 1px solid var(--ink-3); border-radius: var(--r-input); background: var(--surface); color: var(--ink); }
+  .chat-nota { padding: 0 1rem 1rem; font-size: .8rem; color: var(--ink-3); }
+  .chat-nota a { text-underline-offset: 3px; }
+  @media (max-width: 480px) { .chat-fab { padding: .75rem 1rem; } }
+</style>
+
+<script>
+  import MiniSearch from 'minisearch';
+  import { buscar, opcionesMiniSearch } from '../lib/buscador-config.mjs';
+
+  // Respuestas comerciales verificadas contra el sitio actual. Cualquier cambio de planes se hace en precios.html.
+  const FIJAS: { re: RegExp; texto: string; links: [string, string][] }[] = [
+    { re: /afip|arca|factura(s)? electr|facturaci/i, texto: 'ADEstock se enfoca en la gestión interna de stock, compras, ventas y caja. No incluye facturación electrónica fiscal: podés complementarlo con un facturador externo.', links: [['Preguntas frecuentes', '/#preguntas']] },
+    { re: /precio|cu[aá]nto cuesta|plan|licencia|cuesta/i, texto: 'Hay plan en la nube y licencias locales (mensual, anual y de por vida). Los valores vigentes están en la página de precios.', links: [['Ver precios', '/precios.html']] },
+    { re: /demo|probar|prueba|descargar/i, texto: 'Podés descargar la demo e instalarla en tu PC con Windows para probar el sistema.', links: [['Descargar la demo', '/descargar-demo.html']] },
+  ];
+
+  let ms: MiniSearch | null = null;
+  let sinonimos: Record<string, string> = {};
+  let indice: Promise<void> | null = null;
+  const cargarIndice = () =>
+    (indice ??= fetch('/tutoriales/indice.json')
+      .then((r) => r.json())
+      .then((d) => { ms = new MiniSearch(opcionesMiniSearch); ms.addAll(d.fragmentos); sinonimos = d.sinonimos; }));
+
+  type Fuente = { titulo: string; url: string };
+
+  function respuestaLocal(q: string, wa: string): { texto: string; fuentes: Fuente[]; links: [string, string][] } {
+    const fija = FIJAS.find((f) => f.re.test(q));
+    if (fija) return { texto: fija.texto, fuentes: [], links: fija.links };
+    const res = ms ? buscar(ms, q, sinonimos).slice(0, 3) : [];
+    if (res.length === 0) {
+      return { texto: 'No encontré una guía que responda eso. Probá con otras palabras o escribinos y lo vemos juntos.', fuentes: [], links: [['Escribir por WhatsApp', wa], ['Ver todos los tutoriales', '/tutoriales/']] };
+    }
+    const mejor = res[0].pasos.find((x) => (x.text.match(/ · /g) ?? []).length < 3) ?? res[0].pasos[0];
+    const esTabla = (mejor.text.match(/ · /g) ?? []).length >= 3;
+    const frases = mejor.text.split(/(?<=[.!?])\s+/).slice(0, 2).join(' ');
+    const extracto = frases.length > 260 ? frases.slice(0, 260).replace(/\s\S*$/, '') + '…' : frases;
+    return {
+      texto: esTabla || !extracto
+        ? `Lo explica el tutorial «${res[0].title}», en la sección «${mejor.heading}».`
+        : `En el tutorial «${res[0].title}», sección «${mejor.heading}»: ${extracto}`,
+      fuentes: res.map((g) => ({ titulo: g.title, url: g.pasos[0].url })),
+      links: [],
+    };
+  }
+
+  function iniciar() {
+    const raiz = document.querySelector<HTMLElement>('.chat');
+    if (!raiz || raiz.dataset.listo) return;
+    raiz.dataset.listo = '1';
+    const fab = raiz.querySelector<HTMLButtonElement>('.chat-fab')!;
+    const panel = raiz.querySelector<HTMLElement>('.chat-panel')!;
+    const log = raiz.querySelector<HTMLElement>('.chat-log')!;
+    const form = raiz.querySelector<HTMLFormElement>('.chat-form')!;
+    const input = raiz.querySelector<HTMLInputElement>('input')!;
+    const url = raiz.dataset.chatUrl ?? '';
+    const wa = raiz.dataset.wa ?? '';
+
+    const agregar = (clase: 'yo' | 'bot', texto: string, fuentes: Fuente[] = [], links: [string, string][] = []) => {
+      const m = document.createElement('div');
+      m.className = `chat-msg ${clase}`;
+      const p = document.createElement('p');
+      p.textContent = texto;
+      m.appendChild(p);
+      const lista = [...fuentes.map((f) => [f.titulo, f.url] as [string, string]), ...links];
+      if (lista.length) {
+        const ul = document.createElement('ul');
+        ul.className = 'chat-fuentes';
+        for (const [t, h] of lista) {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = h; a.textContent = t;
+          li.appendChild(a); ul.appendChild(li);
+        }
+        m.appendChild(ul);
+      }
+      log.appendChild(m);
+      log.scrollTop = log.scrollHeight;
+    };
+
+    const abrir = (v: boolean) => {
+      panel.hidden = !v;
+      fab.setAttribute('aria-expanded', String(v));
+      if (v) { input.focus(); if (!log.children.length) agregar('bot', 'Hola, soy el asistente de ADEstock. Preguntame cómo hacer algo en el sistema y te llevo al paso exacto.'); cargarIndice().catch(() => {}); }
+    };
+    fab.addEventListener('click', () => abrir(panel.hidden));
+    raiz.querySelector('.chat-close')!.addEventListener('click', () => { abrir(false); fab.focus(); });
+    raiz.addEventListener('keydown', (e) => { if ((e as KeyboardEvent).key === 'Escape' && !panel.hidden) { abrir(false); fab.focus(); } });
+    raiz.querySelectorAll<HTMLButtonElement>('.chat-sugs button').forEach((b) => b.addEventListener('click', () => preguntar(b.textContent ?? '')));
+    form.addEventListener('submit', (e) => { e.preventDefault(); const q = input.value.trim(); input.value = ''; if (q) preguntar(q); });
+
+    async function preguntar(q: string) {
+      agregar('yo', q);
+      const espera = document.createElement('div');
+      espera.className = 'chat-msg bot'; espera.textContent = 'Buscando…';
+      log.appendChild(espera);
+      let respuesta: { texto: string; fuentes: Fuente[]; links: [string, string][] } | null = null;
+      if (url) {
+        try {
+          const r = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ message: q }) });
+          if (r.ok) {
+            const d = await r.json();
+            respuesta = { texto: d.answer, fuentes: d.sources ?? [], links: d.limited ? [['Escribir por WhatsApp', wa]] : [] };
+          }
+        } catch { /* cae al buscador local */ }
+      }
+      if (!respuesta) { try { await cargarIndice(); } catch { /* sin índice */ } respuesta = respuestaLocal(q, wa); }
+      espera.remove();
+      agregar('bot', respuesta.texto, respuesta.fuentes, respuesta.links);
+      (window as any).gtag?.('event', 'chat_question', { has_sources: respuesta.fuentes.length > 0 });
+    }
+  }
+  document.addEventListener('astro:page-load', iniciar);
+</script>
