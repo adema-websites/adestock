@@ -1,0 +1,25 @@
+{
+  "empezar": {
+    "titulo": "Empezar desde cero",
+    "descripcion": "El recorrido mínimo para dejar ADEstock funcionando en tu comercio: del alta del negocio a tu primera venta y el cierre de caja.",
+    "pasos": [
+      { "slug": "configurar-negocio", "resumen": "Configurá los datos del negocio." },
+      { "slug": "cargar-productos", "resumen": "Cargá tus productos con sus precios." },
+      { "slug": "abrir-y-cerrar-caja", "resumen": "Abrí el turno de caja." },
+      { "slug": "usar-punto-de-venta", "resumen": "Recorré lo mínimo del punto de venta." },
+      { "slug": "hacer-una-venta", "resumen": "Hacé tu primera venta." },
+      { "slug": "contar-stock", "resumen": "Verificá que el stock coincida con lo que tenés." }
+    ],
+    "pendientes": [
+      "Cargar existencias iniciales por depósito (guía nueva, falta validar el flujo real).",
+      "Importar productos desde Excel (guía nueva, falta validar el importador)."
+    ]
+  },
+  "tareas": [
+    { "titulo": "Cargar productos", "detalle": "Alta manual con precios y costo por bulto.", "slug": "cargar-productos" },
+    { "titulo": "Hacer mi primera venta", "detalle": "Carrito, cobro y vuelto.", "slug": "hacer-una-venta" },
+    { "titulo": "Corregir o contar el stock", "detalle": "Cuando tenés 12 y el sistema dice 9.", "slug": "contar-stock" },
+    { "titulo": "Cargar una compra con foto", "detalle": "Leé la boleta con IA y revisá antes de confirmar.", "slug": "cargar-compras-con-foto-ia" },
+    { "titulo": "Crear una revista de ofertas", "detalle": "Armá el folleto y compartilo.", "slug": "crear-revista-ofertas" }
+  ]
+}

@@ -1,0 +1,54 @@
+---
+import '../styles/tutoriales.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { SITE } from '../lib/tutoriales';
+
+interface Props {
+  title: string;
+  description: string;
+  path: string; // ruta canónica con barra inicial, ej. "/tutoriales/"
+  noindex?: boolean;
+  ogType?: 'website' | 'article';
+  ogImage?: string | null; // ruta absoluta del sitio, ej. "/social/x.jpg"
+  jsonLd?: object[];
+}
+const { title, description, path, noindex = false, ogType = 'website', ogImage = '/social/adestock-v1.jpg', jsonLd = [] } = Astro.props;
+const canonical = SITE + path;
+const img = ogImage ? SITE + ogImage : null;
+---
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow,max-image-preview:large,max-snippet:-1'} />
+    <link rel="canonical" href={canonical} />
+    <link rel="stylesheet" href="/styles-modern.css" />
+    <link rel="stylesheet" href="/seo-pages.css" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <meta property="og:site_name" content="ADEstock" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    {img && <meta property="og:image" content={img} />}
+    {img && <meta property="og:image:width" content="1200" />}
+    {img && <meta property="og:image:height" content="630" />}
+    {img && <meta property="og:image:alt" content={title} />}
+    <meta name="twitter:card" content={img ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    {img && <meta name="twitter:image" content={img} />}
+    {jsonLd.map((d) => <script type="application/ld+json" set:html={JSON.stringify(d)} />)}
+  </head>
+  <body class="seo-body">
+    <a class="skip-link" href="#contenido">Ir al contenido</a>
+    <Nav />
+    <slot />
+    <Footer />
+  </body>
+</html>

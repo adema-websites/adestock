@@ -1,0 +1,145 @@
+---
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { SITE, ROLES, SUPERFICIES, categorias, esBorrador, getTutoriales, urlTutorial } from '../../lib/tutoriales';
+import rutas from '../../data/rutas-aprendizaje.json';
+
+export async function getStaticPaths() {
+  const todos = await getTutoriales();
+  return todos.map((t) => ({ params: { slug: t.data.slug }, props: { t, todos } }));
+}
+const { t, todos } = Astro.props;
+const d = t.data;
+const { Content, headings } = await render(t);
+const toc = headings.filter((h) => h.depth === 2);
+const borrador = esBorrador(t);
+const versionOk = d.product_version !== 'pendiente-verificar';
+const path = urlTutorial(d.slug);
+
+// Siguiente según la ruta inicial; si no está en la ruta, ningún "siguiente" inventado.
+const paso = rutas.empezar.pasos.findIndex((p) => p.slug === d.slug);
+const siguienteSlug = paso >= 0 ? rutas.empezar.pasos[paso + 1]?.slug : undefined;
+const porSlug = new Map(todos.map((x) => [x.data.slug, x]));
+const siguiente = siguienteSlug ? porSlug.get(siguienteSlug) : undefined;
+const relacionados = d.related.map((s) => porSlug.get(s)).filter(Boolean).slice(0, 3);
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: SITE + '/' },
+      { '@type': 'ListItem', position: 2, name: 'Tutoriales', item: SITE + '/tutoriales/' },
+      { '@type': 'ListItem', position: 3, name: categorias[d.category], item: `${SITE}/tutoriales/categorias/${d.category}/` },
+      { '@type': 'ListItem', position: 4, name: d.title, item: SITE + path },
+    ],
+  },
+  ...(borrador
+    ? []
+    : [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'TechArticle',
+          headline: d.title,
+          description: d.description,
+          inLanguage: 'es-AR',
+          dateModified: d.reviewed_at,
+          proficiencyLevel: 'Beginner',
+          mainEntityOfPage: SITE + path,
+          author: { '@type': 'Organization', name: 'ADEMA Sistemas', url: SITE + '/' },
+          publisher: { '@type': 'Organization', name: 'ADEMA Sistemas', url: SITE + '/' },
+        },
+      ]),
+];
+const asunto = encodeURIComponent(`Consulta sobre el tutorial "${d.title}" (${d.id}, versión ${d.product_version})`);
+---
+<Base
+  title={`${d.title} | Tutoriales ADEstock`}
+  description={d.description}
+  path={path}
+  noindex={borrador}
+  ogType="article"
+  ogImage={d.social_image}
+  jsonLd={jsonLd}
+>
+  <div class="seo-breadcrumbs">
+    <a href="/">Inicio</a>{' / '}<a href="/tutoriales/">Tutoriales</a>{' / '}<a href={`/tutoriales/categorias/${d.category}/`}>{categorias[d.category]}</a>
+  </div>
+  <main id="contenido" class="tuto">
+    {borrador && (
+      <p class="tuto-aviso" role="note">
+        <strong>Borrador sin revisar.</strong> Este tutorial todavía no pasó la revisión editorial y no se indexa.
+      </p>
+    )}
+    <header class="tuto-head">
+      <h1>{d.title}</h1>
+      <p class="tuto-lead">{d.description}</p>
+      <dl class="tuto-meta">
+        <div><dt>Para quién</dt><dd>{d.roles.map((r) => ROLES[r]).join(', ')}</dd></div>
+        <div><dt>Dónde</dt><dd>{d.surface.map((s) => SUPERFICIES[s]).join(' · ')}</dd></div>
+        <div><dt>Tiempo</dt><dd>{d.tiempo}</dd></div>
+        <div><dt>Necesitás</dt><dd>{d.necesitas}</dd></div>
+        <div><dt>Permiso</dt><dd>{d.permiso}</dd></div>
+        <div><dt>Módulo</dt><dd>{d.modulo}</dd></div>
+        <div><dt>Verificado</dt><dd><time datetime={d.verified_at}>{d.verified_at}</time> · {versionOk ? `versión ${d.product_version}` : 'versión por confirmar'}</dd></div>
+      </dl>
+    </header>
+
+    <div class="tuto-grid">
+      {toc.length > 1 && (
+        <nav class="tuto-toc" aria-label="En este tutorial">
+          <h2>En este tutorial</h2>
+          <ol>
+            {toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}
+          </ol>
+        </nav>
+      )}
+      <article class="tuto-body">
+        <Content />
+
+        <section class="tuto-feedback" aria-labelledby="fb">
+          <h2 id="fb">¿Te sirvió?</h2>
+          <p>
+            Si algo no coincide con lo que ves en tu pantalla,
+            <a href={`/contacto.html?tutorial=${d.id}`}>escribinos indicando este tutorial</a>
+            (nos ayuda saber que es <code>{d.id}</code>{versionOk && `, versión ${d.product_version}`}).
+          </p>
+        </section>
+
+        {(siguiente || relacionados.length > 0) && (
+          <nav class="tuto-next" aria-label="Seguí con">
+            {siguiente && (
+              <p>Siguiente tarea: <a href={urlTutorial(siguiente.data.slug)}>{siguiente.data.title}</a></p>
+            )}
+            {relacionados.length > 0 && (
+              <>
+                <h2>Relacionados</h2>
+                <ul>{relacionados.map((r) => <li><a href={urlTutorial(r!.data.slug)}>{r!.data.title}</a></li>)}</ul>
+              </>
+            )}
+          </nav>
+        )}
+      </article>
+    </div>
+  </main>
+</Base>
+
+<script>
+  // Ampliar capturas: clic o Enter/Espacio; Esc o "Cerrar" para volver. Sin JS la imagen sigue visible.
+  const dlg = document.createElement('dialog');
+  dlg.className = 'zoom';
+  dlg.setAttribute('aria-label', 'Captura ampliada');
+  dlg.innerHTML = '<button type="button">Cerrar</button><div class="zoom-inner"><img alt="" /></div>';
+  document.body.appendChild(dlg);
+  const big = dlg.querySelector('img') as HTMLImageElement;
+  dlg.querySelector('button')!.addEventListener('click', () => dlg.close());
+  dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+  document.querySelectorAll<HTMLImageElement>('.tuto-body figure img').forEach((img) => {
+    img.tabIndex = 0;
+    img.setAttribute('role', 'button');
+    img.setAttribute('aria-label', 'Ampliar: ' + img.alt);
+    const abrir = () => { big.src = img.currentSrc || img.src; big.alt = img.alt; dlg.showModal(); };
+    img.addEventListener('click', abrir);
+    img.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); abrir(); } });
+  });
+</script>
