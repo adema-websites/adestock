@@ -12,6 +12,10 @@
         "resumen": "Cargá tus productos con sus precios."
       },
       {
+        "slug": "cargar-stock-inicial-excel",
+        "resumen": "Cargá las existencias iniciales por depósito."
+      },
+      {
         "slug": "abrir-y-cerrar-caja",
         "resumen": "Abrí el turno de caja."
       },
@@ -28,9 +32,7 @@
         "resumen": "Verificá que el stock coincida con lo que tenés."
       }
     ],
-    "pendientes": [
-      "Cargar existencias iniciales por depósito (guía nueva, falta validar el flujo real)."
-    ]
+    "pendientes": []
   },
   "tareas": [
     {
@@ -42,6 +44,11 @@
       "titulo": "Cargar mis productos desde Excel",
       "detalle": "Plantilla, vista previa y qué pisa la importación.",
       "slug": "importar-productos-excel"
+    },
+    {
+      "titulo": "Cargar mi stock inicial desde Excel",
+      "detalle": "Existencias por depósito con un ajuste de inventario.",
+      "slug": "cargar-stock-inicial-excel"
     },
     {
       "titulo": "Hacer mi primera venta",

@@ -25,6 +25,13 @@ import { ROLES, SUPERFICIES, categorias } from '../../lib/tutoriales';
     </header>
 
     <p id="estado" role="status" aria-live="polite"></p>
+    <div id="desambiguar" class="desambiguar" hidden>
+      <p><strong>¿Qué querés hacer con tu Excel?</strong></p>
+      <ul>
+        <li><a href="/tutoriales/importar-productos-excel/">Importar productos y precios</a>: cargás el catálogo, no el stock.</li>
+        <li><a href="/tutoriales/cargar-stock-inicial-excel/">Cargar existencias por depósito</a>: sumás stock de productos ya cargados.</li>
+      </ul>
+    </div>
     <ol id="resultados" class="resultados"></ol>
 
     <noscript>
@@ -52,6 +59,7 @@ import { ROLES, SUPERFICIES, categorias } from '../../lib/tutoriales';
   const estado = document.getElementById('estado')!;
   const lista = document.getElementById('resultados')!;
   const vacio = document.getElementById('sin-resultados')!;
+  const desamb = document.getElementById('desambiguar')!;
 
   let ms: MiniSearch | null = null;
   let sinonimos: Record<string, string> = {};
@@ -69,6 +77,7 @@ import { ROLES, SUPERFICIES, categorias } from '../../lib/tutoriales';
     const q = input.value.trim();
     lista.replaceChildren();
     vacio.hidden = true;
+    desamb.hidden = true;
     if (actualizarUrl) {
       const u = new URL(location.href);
       q ? u.searchParams.set('q', q) : u.searchParams.delete('q');
@@ -79,6 +88,8 @@ import { ROLES, SUPERFICIES, categorias } from '../../lib/tutoriales';
     try { await cargando; } catch { estado.textContent = 'No pudimos cargar el buscador. Probá desde el índice de tutoriales.'; return; }
     const res = buscar(ms, q, sinonimos, { role: rol.value || undefined, surface: sup.value || undefined });
     if (res.length === 0) { estado.textContent = `Sin resultados para “${q}”.`; vacio.hidden = false; return; }
+    const ids = res.map((g) => g.tutorial_id);
+    desamb.hidden = !(ids.includes('importar-productos-excel') && ids.includes('cargar-stock-inicial-excel'));
     estado.textContent = `${res.length} ${res.length === 1 ? 'guía encontrada' : 'guías encontradas'} para “${q}”.`;
     for (const g of res.slice(0, 8)) {
       const li = document.createElement('li');

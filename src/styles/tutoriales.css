@@ -79,3 +79,6 @@
 .resultados p { margin: 0 0 6px; color: #475569; }
 .resultados ul { margin: 0; padding-left: 1.1rem; font-size: .93rem; }
 @media (max-width: 480px) { .buscador { flex-direction: column; } }
+
+.desambiguar { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 12px; padding: 14px 18px; margin: 0 0 18px; max-width: 760px; }
+.desambiguar ul { margin: 6px 0 0; padding-left: 1.2rem; }

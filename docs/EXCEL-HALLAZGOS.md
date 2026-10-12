@@ -71,4 +71,14 @@ Se ejecutó `import_inventario_excel` y `analyze_inventario_excel` con libros ge
 | Archivo sin columnas de precio sobre un producto con precio | el producto queda **sin precios** |
 | Vista previa (analyze) | informa filas, grupos de precio y filas con precio; la pantalla agrega la tabla de cambios |
 
-Pendiente de verificar en la interfaz: el flujo de **ajuste de inventario por Excel** (borrador, aplicar, stock antes/después).
+### Ajuste de inventario por Excel (verificado por la interfaz, base copiada)
+
+| Prueba | Resultado |
+|---|---|
+| Formulario del ajuste | Requiere **fecha** y **depósito**; tipo "Inventario Inicial"; estado Borrador |
+| Excel con 2 filas válidas, 1 con cantidad 0 y 1 con código inexistente | "Se importaron 2…", "Se omitieron 1… cantidad de ajuste = 0", "Se encontraron 1 error(es): Fila 5: Producto no encontrado (ID: None, Código: NOEXISTE999)" |
+| Stock antes de aplicar | Sin cambios (el ajuste está en Borrador) |
+| Aplicar (acción "Aplicar ajustes seleccionados") | "Se aplicaron 1 ajuste(s) correctamente"; Yerba 76 → 86, Aceite 42 → 47; la fila con 0 no cambia |
+| Semántica | La cantidad **se suma** al stock existente (no lo fija) |
+
+Sin verificar: reimportar sobre un borrador ya cargado, anulación y ajustes con cantidades negativas.

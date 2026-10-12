@@ -143,6 +143,15 @@
     {
       "q": "se me duplicaron los productos al importar",
       "esperado": "importar-productos-excel"
+    },
+    {
+      "q": "cargar stock excel",
+      "esperado": "cargar-stock-inicial-excel",
+      "critica": true
+    },
+    {
+      "q": "cuánto tengo de cada producto cargarlo por planilla",
+      "esperado": "cargar-stock-inicial-excel"
     }
   ]
 }
