@@ -13,7 +13,7 @@ interface Props {
   ogImage?: string | null; // ruta absoluta del sitio, ej. "/social/x.jpg"
   jsonLd?: object[];
 }
-const { title, description, path, noindex = false, ogType = 'website', ogImage = null, jsonLd = [] } = Astro.props;
+const { title, description, path, noindex = false, ogType = 'website', ogImage = '/social/adestock-v1.jpg', jsonLd = [] } = Astro.props;
 const canonical = SITE + path;
 const img = ogImage ? SITE + ogImage : null;
 ---

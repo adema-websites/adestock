@@ -20,7 +20,7 @@ verified_at: "2026-10-12"
 reviewed_at: null
 synonyms: ["vender","cobrar","carrito","vuelto"]
 related: []
-social_image: null
+social_image: "/social/hacer-una-venta-v1.jpg"
 ---
 ## Qué vas a lograr
 

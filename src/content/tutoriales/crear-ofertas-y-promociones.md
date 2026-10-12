@@ -20,7 +20,7 @@ verified_at: "2026-10-12"
 reviewed_at: null
 synonyms: ["oferta","promoción","descuento por vigencia"]
 related: []
-social_image: null
+social_image: "/social/crear-ofertas-y-promociones-v1.jpg"
 ---
 ## Qué vas a lograr
 

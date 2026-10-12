@@ -20,7 +20,7 @@ verified_at: "2026-10-12"
 reviewed_at: null
 synonyms: ["ajuste de stock","merma","transferencia","corregir stock","me quedó mal el stock"]
 related: []
-social_image: null
+social_image: "/social/ajustar-stock-mermas-transferencias-v1.jpg"
 ---
 ## Qué vas a lograr
 

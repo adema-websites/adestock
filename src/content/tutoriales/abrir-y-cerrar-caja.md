@@ -20,7 +20,7 @@ verified_at: "2026-10-12"
 reviewed_at: null
 synonyms: ["turno","arqueo","faltante","sobrante","cierre de caja"]
 related: []
-social_image: null
+social_image: "/social/abrir-y-cerrar-caja-v1.jpg"
 ---
 ## Qué vas a lograr
 

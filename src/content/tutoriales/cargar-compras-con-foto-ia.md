@@ -20,7 +20,7 @@ verified_at: "2026-10-12"
 reviewed_at: null
 synonyms: ["boleta","factura proveedor","cargar compra","foto factura","OCR","foto de factura"]
 related: []
-social_image: null
+social_image: "/social/cargar-compras-con-foto-ia-v1.jpg"
 ---
 ## Qué vas a lograr
 

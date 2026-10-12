@@ -20,7 +20,7 @@ verified_at: "2026-10-12"
 reviewed_at: null
 synonyms: ["conteo","inventario","tengo 12 pero dice 9","diferencias"]
 related: []
-social_image: null
+social_image: "/social/contar-stock-v1.jpg"
 ---
 ## Qué vas a lograr
 

@@ -20,7 +20,7 @@ verified_at: "2026-10-12"
 reviewed_at: null
 synonyms: ["alta de productos","agregar producto","costo por bulto","precio"]
 related: []
-social_image: null
+social_image: "/social/cargar-productos-v1.jpg"
 ---
 ## Qué vas a lograr
 

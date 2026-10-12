@@ -13,12 +13,13 @@
 - Banco de 30 consultas (`src/data/consultas-prueba.json`) y `scripts/probar_buscador.mjs`. Resultado actual: guía correcta entre las 3 primeras 30/30, en 1.º lugar 29/30, críticas 10/10. **Salvedad:** las consultas las redactó el equipo de desarrollo y los sinónimos se ajustaron mirando sus fallos, así que el número es optimista. Falta validarlo con consultas reales (GA4 `search`/Search Console) y con personas del rubro. La respuesta visible <200 ms no está medida.
 - Sin desambiguación "¿importar productos o cargar existencias?" hasta que existan esas guías.
 
+- Sitemap generado (`src/pages/sitemap.xml.ts`): lee el canonical de cada HTML de `public/`, excluye `noindex`, deduplica `/index.html` y solo suma el centro de ayuda cuando hay guías publicadas. `lastmod` sale del sitemap anterior (`src/data/sitemap-lastmod-heredado.xml`) o de `reviewed_at`; sin fecha real no se escribe. Pasó de 30 URLs con `/index.html` duplicado a 30 URLs canónicas, e incluye `agent-printer` y `temas-revistas`, que faltaban. Se marcaron `noindex` el callback de OAuth y `vinculacion-exitosa.html` (no estaban).
+- Tarjetas sociales 1200×630 (JPG) para los 10 tutoriales P0 más la general y la del centro (`public/social/*-v1.jpg`), generadas con `node scripts/generar_tarjetas.mjs` (requiere `playwright-cli` y Chrome; es herramienta de desarrollo, no corre en el build). La captura de cada tarjeta se elige en `src/data/tarjetas-imagenes.json`. Al cambiar una tarjeta se sube `VERSION` en el script para que las redes no sigan mostrando la caché. Todas las páginas nuevas usan `og:image` (por defecto, la tarjeta general). **Falta comprobarlas en el depurador de Meta y compartiendo en WhatsApp/X/Instagram** (solo posible con la URL pública).
+
 ## Pendiente de esta fase
 
 - [ ] Los WebP usan la calidad por defecto de Astro (con pérdida): comparar nitidez del texto contra WebP sin pérdida y decidir (plan, sección 16). Sin `srcset` todavía.
 - [ ] `description` de los borradores es un recorte automático de "Qué vas a lograr": reescribir al revisar cada guía.
-- [ ] Tarjetas sociales 1200×630 por tutorial P0.
-- [ ] Sitemap generado (hoy sigue el `sitemap.xml` estático, sin tutoriales).
 - [ ] El formulario `contacto.html?tutorial=…` todavía ignora el parámetro.
 
 ## Staging

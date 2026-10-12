@@ -20,7 +20,7 @@ verified_at: "2026-10-12"
 reviewed_at: null
 synonyms: ["pos","atajos","teclas"]
 related: []
-social_image: null
+social_image: "/social/usar-punto-de-venta-v1.jpg"
 ---
 ## Qué vas a lograr
 

@@ -20,7 +20,7 @@ verified_at: "2026-10-12"
 reviewed_at: null
 synonyms: ["onboarding","primeros pasos","empezar","configuración inicial"]
 related: []
-social_image: null
+social_image: "/social/configurar-negocio-v1.jpg"
 ---
 ## Qué vas a lograr
 

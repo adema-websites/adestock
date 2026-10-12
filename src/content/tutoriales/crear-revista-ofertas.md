@@ -20,7 +20,7 @@ verified_at: "2026-10-12"
 reviewed_at: null
 synonyms: ["folleto","revista","catálogo de ofertas","hacer folleto ofertas","PDF de ofertas"]
 related: []
-social_image: null
+social_image: "/social/crear-revista-ofertas-v1.jpg"
 ---
 ## Qué vas a lograr
 
