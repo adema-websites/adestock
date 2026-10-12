@@ -9,6 +9,9 @@ COPY src ./src
 # INCLUDE_DRAFTS=1 solo en staging: publica borradores con noindex. En producción queda en 0.
 ARG INCLUDE_DRAFTS=0
 ENV INCLUDE_DRAFTS=$INCLUDE_DRAFTS
+# URL pública del servicio de chat (vacía = el chat responde con el buscador local, sin IA)
+ARG PUBLIC_CHAT_URL=
+ENV PUBLIC_CHAT_URL=$PUBLIC_CHAT_URL
 RUN npm run build
 
 # --- runtime: nginx ---

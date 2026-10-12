@@ -1,0 +1,401 @@
+---
+import { Image } from 'astro:assets';
+import Sitio from '../layouts/Sitio.astro';
+import SiteNav from '../components/SiteNav.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import Chat from '../components/Chat.astro';
+import { SITE, getTutoriales, urlTutorial } from '../lib/tutoriales';
+
+import revEditor from '../assets/web/revistas-editor.png';
+import revArmada from '../assets/web/revistas-armada.png';
+import revExportar from '../assets/web/revistas-exportar.png';
+import boleta from '../assets/web/boleta.jpg';
+import compraResumen from '../assets/web/compra-resumen.png';
+import pwaInicio from '../assets/web/pwa-inicio.png';
+import pwaRadiografia from '../assets/web/pwa-radiografia.png';
+import pwaProductos from '../assets/web/pwa-productos.png';
+import pwaCuentas from '../assets/web/pwa-cuentas.png';
+import pwaProveedores from '../assets/web/pwa-proveedores.png';
+
+// Los enlaces a tutoriales solo apuntan a guías que existen en este build; si no, al índice vigente.
+const existentes = new Set((await getTutoriales()).map((t) => t.data.slug));
+const hayCentro = existentes.size > 0;
+const guia = (slug: string) => (existentes.has(slug) ? urlTutorial(slug) : hayCentro ? '/tutoriales/' : '/tutoriales.html');
+
+const tareas = [
+  { t: 'Cargar mis productos', h: guia('cargar-productos') },
+  { t: 'Hacer mi primera venta', h: guia('hacer-una-venta') },
+  { t: 'Corregir o contar el stock', h: guia('contar-stock') },
+  { t: 'Cargar una compra con foto', h: guia('cargar-compras-con-foto-ia') },
+  { t: 'Crear una revista de ofertas', h: guia('crear-revista-ofertas') },
+];
+
+const pasosRevista = [
+  { n: '1', t: 'Traé tus ofertas o elegí productos', d: 'Un botón trae las ofertas vigentes. También sumás productos del catálogo con la presentación que quieras.', img: revEditor, alt: 'Editor de revistas con temas de diseño y vigencia' },
+  { n: '2', t: 'Con tu marca y tus precios', d: 'Elegís el tema y la cantidad de productos por página. Tu logo y tus precios salen del sistema, sin volver a escribirlos.', img: revArmada, alt: 'Revista de ofertas armada con productos, precios y logo del negocio' },
+  { n: '3', t: 'Exportá y compartí', d: 'Descargás el PDF o la imagen para redes, o compartís el enlace por WhatsApp.', img: revExportar, alt: 'Opciones para exportar la revista' },
+];
+
+const celulares = [
+  { img: pwaInicio, t: 'Inicio', d: 'La radiografía del negocio y los accesos del día.' },
+  { img: pwaRadiografia, t: 'Radiografía', d: 'Cuánto vendiste, qué costó la mercadería y qué pagaste a proveedores.' },
+  { img: pwaProductos, t: 'Productos', d: 'Rentabilidad, stock y movimientos de cada producto.' },
+  { img: pwaCuentas, t: 'Cuentas corrientes', d: 'Lo que te deben los clientes y lo que debés a proveedores.' },
+  { img: pwaProveedores, t: 'Proveedores', d: 'Qué le comprás a cada uno y a qué precio.' },
+];
+
+const faq = [
+  { q: '¿Es difícil de usar si no sé de sistemas?', a: 'No. ADEstock está pensado para quienes manejan un comercio, no un sistema. La interfaz es simple y los tutoriales te llevan paso a paso.' },
+  { q: '¿Puedo probarlo antes de contratar?', a: 'Sí. Descargás la demo e instalás ADEstock en tu PC con Windows para probarlo durante 3 días. Después te pide licencia.' },
+  { q: '¿Emite facturas electrónicas de AFIP?', a: 'No. ADEstock se enfoca en la gestión interna de stock, compras, ventas y caja. No incluye facturación electrónica fiscal; podés complementarlo con un facturador externo.' },
+  { q: '¿Sirve si tengo más de un local o depósito?', a: 'Sí. Podés trabajar con varios puntos de venta y varios depósitos dentro del mismo negocio, y transferir mercadería entre ellos.' },
+  { q: '¿Cómo se manejan costos y precios de venta?', a: 'Registrás el costo al cargar o comprar un producto y el sistema puede actualizarlo con cada compra. Los precios de venta los definís en listas que asignás a cada punto de venta.' },
+  { q: '¿Tiene multiempresa?', a: 'No. ADEstock es monoempresa para mantener la operación simple. Sí permite varios depósitos y varios puntos de venta.' },
+];
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@graph': [
+      { '@type': 'Organization', '@id': SITE + '/#organization', name: 'ADEMA Sistemas', url: SITE + '/', logo: SITE + '/logo.png', email: 'contact@ademasistemas.com' },
+      { '@type': 'WebSite', '@id': SITE + '/#website', url: SITE + '/', name: 'ADEstock', inLanguage: 'es-AR', publisher: { '@id': SITE + '/#organization' } },
+      {
+        '@type': 'SoftwareApplication',
+        '@id': SITE + '/#software',
+        name: 'ADEstock',
+        applicationCategory: 'BusinessApplication',
+        operatingSystem: 'Windows, Web',
+        description: 'Sistema de stock, ventas, compras y caja para comercios argentinos, con app para el dueño, revistas de ofertas y carga de compras con foto.',
+        publisher: { '@id': SITE + '/#organization' },
+        url: SITE + '/',
+      },
+      {
+        '@type': 'FAQPage',
+        mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+      },
+    ],
+  },
+];
+---
+<Sitio
+  title="ADEstock | Sistema de stock, ventas e inventario para comercios"
+  description="ADEstock es un sistema de stock argentino para kioscos, almacenes y minimarkets. Controlá inventario, ventas, caja y compras, armá revistas de ofertas y revisá tu negocio desde el celular."
+  path="/"
+  jsonLd={jsonLd}
+>
+  <SiteNav />
+
+  <main id="contenido">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-txt">
+          <h1>Vendé y controlá el stock de tu comercio</h1>
+          <p class="lead">Cargá productos, registrá ventas y compras, armá tus ofertas y revisá todo desde el celular.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="/descargar-demo.html">Probar ADEstock</a>
+            <button class="btn btn-ghost" type="button" data-abrir-video>Ver cómo funciona</button>
+          </div>
+        </div>
+        <div class="hero-vis" aria-hidden="false">
+          <div class="pantalla hero-escritorio">
+            <Image src={revArmada} alt="Revista de ofertas armada en ADEstock con productos, precios y logo del negocio" widths={[640, 960, 1280]} sizes="(max-width: 900px) 100vw, 640px" loading="eager" fetchpriority="high" />
+          </div>
+          <div class="celular hero-celular">
+            <Image src={pwaInicio} alt="App del dueño: Hola, con la radiografía del negocio y accesos a productos, cuentas corrientes y proveedores" widths={[260, 520]} sizes="260px" loading="eager" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUÉ QUERÉS HACER -->
+    <section class="seccion tareas" aria-labelledby="t-tareas">
+      <div class="wrap">
+        <h2 id="t-tareas" class="seccion-titulo rev">¿Qué querés hacer primero?</h2>
+        <ul class="chips rev" style="--d:120ms">
+          {tareas.map((x) => <li><a class="chip" href={x.h}>{x.t}<span aria-hidden="true">→</span></a></li>)}
+        </ul>
+      </div>
+    </section>
+
+    <!-- REVISTAS -->
+    <section id="como-funciona" class="seccion revistas" aria-labelledby="t-rev">
+      <div class="wrap">
+        <h2 id="t-rev" class="rev" style="max-width:20ch">Tu revista de ofertas, con tu marca y tus precios</h2>
+        <p class="lead rev" style="margin-top:1rem;--d:100ms">Armás el folleto en pocos clics y lo compartís. Adiós a maquetar cada semana a mano.</p>
+
+        <div class="rev-grid">
+          <ol class="rev-pasos">
+            {pasosRevista.map((p, i) => (
+              <li class="rev-paso" data-i={i}>
+                <span class="rev-n" aria-hidden="true">{p.n}</span>
+                <h3>{p.t}</h3>
+                <p>{p.d}</p>
+                <div class="pantalla rev-inline">
+                  <Image src={p.img} alt={p.alt} widths={[480, 720, 960]} sizes="(max-width: 900px) 100vw, 0px" loading="lazy" />
+                </div>
+              </li>
+            ))}
+          </ol>
+          <div class="rev-escenario" aria-hidden="true">
+            <div class="pantalla rev-sticky">
+              {pasosRevista.map((p, i) => (
+                <div class="rev-capa" data-capa={i} data-activa={i === 0 ? 'true' : 'false'}>
+                  <Image src={p.img} alt="" widths={[720, 960, 1280]} sizes="(max-width: 900px) 0px, 640px" loading={i === 0 ? 'eager' : 'lazy'} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPRAS CON FOTO -->
+    <section class="seccion compras" aria-labelledby="t-comp">
+      <div class="wrap">
+        <h2 id="t-comp" class="rev" style="max-width:19ch">Sacale una foto a la boleta y revisá</h2>
+        <p class="lead rev" style="margin-top:1rem;--d:100ms">ADEstock lee los renglones y sugiere los productos. Vos corregís lo que haga falta antes de confirmar.</p>
+
+        <ol class="flujo">
+          <li class="flujo-item rev">
+            <div class="flujo-img foto"><Image src={boleta} alt="Foto de una boleta de proveedor con renglones y total" widths={[320, 480]} sizes="(max-width: 900px) 60vw, 300px" loading="lazy" /></div>
+            <h3>1. Subís la foto</h3>
+            <p>Desde el celular o la computadora. Sirve JPG, PNG, WEBP o PDF.</p>
+          </li>
+          <li class="flujo-item rev" style="--d:140ms">
+            <div class="flujo-img resumen pantalla"><Image src={compraResumen} alt="Resumen antes de confirmar: totales leídos y calculados que coinciden" widths={[480, 720]} sizes="(max-width: 900px) 80vw, 380px" loading="lazy" /></div>
+            <h3>2. Revisás el resumen</h3>
+            <p>Ves los renglones leídos, los productos asignados y si los totales coinciden con la boleta.</p>
+          </li>
+          <li class="flujo-item rev" style="--d:280ms">
+            <div class="flujo-img celular-mini"><div class="celular"><Image src={pwaProveedores} alt="App del dueño: lo que le comprás a cada proveedor y a qué precio" widths={[260, 520]} sizes="240px" loading="lazy" /></div></div>
+            <h3>3. Comparás proveedores</h3>
+            <p>Cada compra guarda el precio por proveedor. Después mirás desde el celular quién te vende más barato lo mismo.</p>
+          </li>
+        </ol>
+        <p class="nota rev">Crear la compra no suma stock: recién al confirmarla en el panel se actualizan stock y costos.</p>
+      </div>
+    </section>
+
+    <!-- APP DEL DUEÑO -->
+    <section class="seccion app" aria-labelledby="t-app">
+      <div class="wrap">
+        <h2 id="t-app" class="rev" style="max-width:18ch">Tu negocio en el celular, sin vueltas</h2>
+        <p class="lead rev" style="margin-top:1rem;--d:100ms">La app del dueño muestra cuánto vendiste, qué te deben y a quién le conviene comprarle.</p>
+      </div>
+      <div class="carril" tabindex="0" role="region" aria-label="Pantallas de la app del dueño">
+        <ul class="carril-lista">
+          {celulares.map((c) => (
+            <li class="carril-item">
+              <div class="celular"><Image src={c.img} alt={`App del dueño: ${c.t}`} widths={[260, 520]} sizes="260px" loading="lazy" /></div>
+              <h3>{c.t}</h3>
+              <p>{c.d}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <!-- CIRCUITO DIARIO -->
+    <section class="seccion circuito" aria-labelledby="t-circ">
+      <div class="wrap">
+        <h2 id="t-circ" class="rev" style="max-width:20ch">Vendé, controlá y cerrá la caja</h2>
+        <div class="bento">
+          <article class="b b-a rev"><h3>Punto de venta</h3><p>Buscás por nombre o código de barras, cobrás con varios medios de pago y el stock se descuenta solo.</p></article>
+          <article class="b b-b rev" style="--d:80ms"><h3>Caja</h3><p>Abrís el turno, registrás gastos y retiros y cerrás con arqueo.</p></article>
+          <article class="b b-c rev" style="--d:160ms"><h3>Stock</h3><p>Contás por depósito y corregís diferencias sin perder el historial.</p></article>
+          <article class="b b-d rev" style="--d:240ms"><h3>Depósitos</h3><p>Varios depósitos y puntos de venta, con transferencias entre ellos.</p></article>
+          <article class="b b-e rev" style="--d:320ms"><h3>Cuentas corrientes</h3><p>Vendé fiado, cobrá la deuda y consultá cada saldo.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RUBROS -->
+    <section id="rubros" class="seccion rubros" aria-labelledby="t-rub">
+      <div class="wrap">
+        <h2 id="t-rub" class="rev">Para tu negocio</h2>
+        <ul class="rubros-lista">
+          <li><a href="/sistema-de-stock-para-kioscos/">Kioscos</a></li>
+          <li><a href="/sistema-de-stock-para-almacenes/">Almacenes</a></li>
+          <li><a href="/sistema-de-stock-para-minimarkets/">Minimarkets</a></li>
+          <li><a href="/casos-uso-almacen-dietetica.html">Dietéticas</a></li>
+          <li><a href="/casos-uso-distribuidora-belleza.html">Distribuidoras</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PREGUNTAS -->
+    <section id="preguntas" class="seccion preguntas" aria-labelledby="t-faq">
+      <div class="wrap faq-wrap">
+        <h2 id="t-faq" class="rev">Preguntas antes de empezar</h2>
+        <div class="faq">
+          {faq.map((f) => (
+            <details>
+              <summary>{f.q}</summary>
+              <p>{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CIERRE -->
+    <section class="cierre">
+      <div class="wrap">
+        <div class="cierre-card">
+          <h2>Probalo en tu comercio</h2>
+          <p>Descargá la demo, cargá unos productos y hacé tu primera venta.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary btn-sobre-noche" href="/descargar-demo.html">Probar ADEstock</a>
+            <a class="btn btn-ghost btn-ghost-noche" href="/precios.html">Ver precios</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+  <Chat />
+
+  <dialog class="video-dlg" aria-label="Cómo se arma una revista de ofertas">
+    <button class="video-cerrar btn btn-ghost" type="button">Cerrar</button>
+    <video controls playsinline muted preload="none" width="1440" height="900" data-src="/video/revista-flujo.webm"></video>
+  </dialog>
+</Sitio>
+
+<style is:global>
+  .hero { padding-block: clamp(2.5rem, 6vw, 5rem) clamp(3rem, 7vw, 6rem); overflow: clip; }
+  .hero-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: clamp(2rem, 4vw, 3.5rem); align-items: center; }
+  .hero-txt { display: grid; gap: 1.5rem; justify-items: start; }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: .75rem; }
+  .hero-vis { position: relative; padding-bottom: 3rem; }
+  .hero-escritorio { transform: rotate(-1.2deg); }
+  .hero-celular { position: absolute; right: -1rem; bottom: 0; width: clamp(150px, 20vw, 210px); }
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-celular { right: .5rem; width: 130px; }
+    .hero-escritorio { transform: none; }
+  }
+
+  .chips { list-style: none; margin: 2rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: .75rem; }
+  .chip { display: inline-flex; align-items: center; gap: .75rem; padding: 1rem 1.4rem; border-radius: var(--r-pill); background: var(--surface); border: 1.5px solid var(--line); text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: transform .25s var(--ease), border-color .2s, background-color .2s; }
+  .chip:hover { border-color: var(--accent); background: var(--accent-soft); transform: translateY(-2px); }
+
+  .rev-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(2rem, 5vw, 5rem); margin-top: clamp(2rem, 5vw, 4rem); align-items: start; }
+  .rev-pasos { list-style: none; margin: 0; padding: 0; }
+  .rev-paso { min-height: 60vh; display: flex; flex-direction: column; justify-content: center; gap: .75rem; opacity: .45; transition: opacity .4s var(--ease); }
+  .rev-paso[data-activo='true'] { opacity: 1; }
+  .rev-n { font-size: .95rem; font-weight: 700; width: 2rem; height: 2rem; display: grid; place-items: center; border-radius: 50%; background: var(--accent); color: var(--accent-ink); }
+  .rev-paso p { color: var(--ink-2); max-width: 40ch; }
+  .rev-escenario { position: sticky; top: calc(var(--nav-h) + 24px); }
+  .rev-sticky { position: relative; aspect-ratio: 1440 / 900; }
+  .rev-capa { position: absolute; inset: 0; opacity: 0; transition: opacity .6s var(--ease); }
+  .rev-capa[data-activa='true'] { opacity: 1; }
+  .rev-inline { display: none; margin-top: 1rem; }
+  @media (max-width: 900px) {
+    .rev-grid { grid-template-columns: 1fr; }
+    .rev-escenario { display: none; }
+    .rev-paso { min-height: 0; opacity: 1; padding-block: 1.5rem; }
+    .rev-inline { display: block; }
+  }
+  @media (prefers-reduced-motion: reduce) { .rev-paso { opacity: 1; } }
+
+  .flujo { list-style: none; margin: clamp(2rem, 5vw, 3.5rem) 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1.25fr 1fr; gap: clamp(1.25rem, 3vw, 2.5rem); align-items: end; }
+  .flujo-item { display: grid; gap: .6rem; align-content: end; }
+  .flujo-item p { color: var(--ink-2); max-width: 34ch; }
+  .flujo-img.foto img { border-radius: var(--r-card); box-shadow: var(--shadow); max-height: 460px; width: auto; margin-inline: 0; object-fit: cover; }
+  .flujo-img.celular-mini .celular { width: 190px; }
+  .nota { margin-top: 2rem; color: var(--ink-3); font-size: .97rem; max-width: 60ch; }
+  @media (max-width: 900px) { .flujo { grid-template-columns: 1fr; align-items: start; } .flujo-img.foto img { max-height: 380px; } }
+
+  .carril { margin-top: 2.5rem; overflow-x: auto; scroll-snap-type: x proximity; padding-inline: max(1rem, calc((100vw - var(--max)) / 2)); scroll-padding-inline: max(1rem, calc((100vw - var(--max)) / 2)); scrollbar-width: thin; }
+  .carril-lista { list-style: none; margin: 0; padding: 0 0 1.25rem; display: flex; gap: clamp(1.25rem, 3vw, 2.5rem); width: max-content; }
+  .carril-item { scroll-snap-align: start; width: 260px; display: grid; gap: .5rem; align-content: start; }
+  .carril-item p { color: var(--ink-2); font-size: .97rem; }
+  .carril-item .celular { width: 260px; margin-bottom: .75rem; }
+
+  .bento { margin-top: 2.5rem; display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; }
+  .b { border-radius: var(--r-card); padding: 1.75rem; display: grid; gap: .5rem; align-content: end; min-height: 220px; background: var(--surface); border: 1px solid var(--line); }
+  .b p { color: var(--ink-2); max-width: 36ch; }
+  .b-a { grid-column: span 4; background: var(--night); color: var(--night-ink); border-color: var(--night); min-height: 280px; }
+  .b-a p { color: color-mix(in srgb, var(--night-ink) 75%, transparent); }
+  .b-b { grid-column: span 2; background: var(--accent-soft); border-color: transparent; }
+  .b-c { grid-column: span 2; }
+  .b-d { grid-column: span 2; background: var(--surface-2); border-color: transparent; }
+  .b-e { grid-column: span 2; background: var(--accent); color: var(--accent-ink); border-color: transparent; }
+  .b-e p { color: color-mix(in srgb, var(--accent-ink) 85%, transparent); }
+  @media (max-width: 900px) { .bento { grid-template-columns: 1fr 1fr; } .b-a { grid-column: span 2; } .b-b, .b-c, .b-d { grid-column: span 1; } .b-e { grid-column: span 2; } }
+  @media (max-width: 520px) { .bento { grid-template-columns: 1fr; } .b-a, .b-b, .b-c, .b-d, .b-e { grid-column: span 1; min-height: 0; } }
+
+  .rubros-lista { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; }
+  .rubros-lista a { display: flex; justify-content: space-between; align-items: center; text-decoration: none; font-size: clamp(1.8rem, 5vw, 3.6rem); font-weight: 700; letter-spacing: -0.03em; padding-block: .5rem; color: var(--ink-3); transition: color .2s, padding-left .3s var(--ease); }
+  .rubros-lista a::after { content: '→'; opacity: 0; transition: opacity .2s; }
+  .rubros-lista a:hover { color: var(--ink); padding-left: .75rem; }
+  .rubros-lista a:hover::after { opacity: 1; }
+
+  .faq-wrap { max-width: 820px; }
+  .faq { margin-top: 1.5rem; display: grid; gap: .75rem; }
+  .faq details { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-card); padding: 1.1rem 1.4rem; }
+  .faq summary { cursor: pointer; font-weight: 600; font-size: 1.08rem; list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+  .faq summary::after { content: '+'; font-size: 1.4rem; line-height: 1; }
+  .faq details[open] summary::after { content: '−'; }
+  .faq details p { margin-top: .75rem; color: var(--ink-2); }
+
+  .cierre { padding-block: 0 clamp(4rem, 8vw, 7rem); }
+  .cierre-card { background: var(--night); color: var(--night-ink); border-radius: calc(var(--r-card) + 8px); padding: clamp(2rem, 6vw, 4.5rem); display: grid; gap: 1.25rem; justify-items: start; }
+  .cierre-card p { color: color-mix(in srgb, var(--night-ink) 75%, transparent); font-size: 1.15rem; }
+  .btn-sobre-noche { background: #4fc3d6; color: #06222a; }
+  .btn-sobre-noche:hover { background: #7fd6e4; }
+  .btn-ghost-noche { border-color: var(--night-ink); color: var(--night-ink); }
+  .btn-ghost-noche:hover { background: var(--night-ink); color: var(--night); }
+
+  .video-dlg { border: 0; padding: 0; border-radius: var(--r-card); width: min(1100px, 94vw); background: var(--night); }
+  .video-dlg::backdrop { background: rgb(10 11 13 / .78); }
+  .video-dlg video { width: 100%; height: auto; }
+  .video-cerrar { position: absolute; top: 12px; right: 12px; background: var(--bg); }
+</style>
+
+<script>
+  function iniciarHome() {
+    // Entradas por scroll
+    const io = new IntersectionObserver(
+      (es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }),
+      { threshold: 0.15 },
+    );
+    document.querySelectorAll('.rev').forEach((el) => io.observe(el));
+
+    // Narración de revistas: el paso centrado en pantalla activa su captura
+    const pasos = [...document.querySelectorAll<HTMLElement>('.rev-paso')];
+    const capas = [...document.querySelectorAll<HTMLElement>('.rev-capa')];
+    if (pasos.length) {
+      const ioPasos = new IntersectionObserver(
+        (es) => es.forEach((e) => {
+          if (!e.isIntersecting) return;
+          const i = Number((e.target as HTMLElement).dataset.i);
+          pasos.forEach((p, k) => (p.dataset.activo = String(k === i)));
+          capas.forEach((c, k) => (c.dataset.activa = String(k === i)));
+        }),
+        { rootMargin: '-45% 0px -45% 0px' },
+      );
+      pasos.forEach((p) => ioPasos.observe(p));
+      pasos[0].dataset.activo = 'true';
+    }
+
+    // Video bajo demanda
+    const dlg = document.querySelector<HTMLDialogElement>('.video-dlg');
+    const vid = dlg?.querySelector('video');
+    document.querySelectorAll('[data-abrir-video]').forEach((b) =>
+      b.addEventListener('click', () => {
+        if (!dlg || !vid) return;
+        if (!vid.src) vid.src = vid.dataset.src ?? '';
+        dlg.showModal();
+        vid.play().catch(() => {});
+      }),
+    );
+    dlg?.querySelector('.video-cerrar')?.addEventListener('click', () => dlg.close());
+    dlg?.addEventListener('close', () => vid?.pause());
+    dlg?.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+  }
+  // astro:page-load se dispara también en la primera carga
+  document.addEventListener('astro:page-load', iniciarHome);
+</script>

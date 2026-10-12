@@ -1,0 +1,47 @@
+---
+import { getTutoriales } from '../lib/tutoriales';
+const centro = (await getTutoriales()).length > 0 ? '/tutoriales/' : '/tutoriales.html';
+---
+<footer class="pie">
+  <div class="wrap">
+    <div class="pie-grid">
+      <div>
+        <h2>ADEstock</h2>
+        <p>Sistema de stock, ventas y compras para comercios argentinos.</p>
+        <p style="margin-top:.75rem"><a href="mailto:contact@ademasistemas.com">contact@ademasistemas.com</a><br /><a href="https://wa.me/5491127888995">+54 9 11 2788-8995</a></p>
+      </div>
+      <nav aria-label="Producto">
+        <h2>Producto</h2>
+        <ul>
+          <li><a href="/sistema-de-stock/">Sistema de stock</a></li>
+          <li><a href="/control-de-stock/">Control de stock</a></li>
+          <li><a href="/precios.html">Precios</a></li>
+          <li><a href="/descargar-demo.html">Probar la demo</a></li>
+          <li><a href="/agent-printer.html">Agent Printer</a></li>
+          <li><a href="/versiones.html">Novedades</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Rubros">
+        <h2>Para tu negocio</h2>
+        <ul>
+          <li><a href="/sistema-de-stock-para-kioscos/">Kioscos</a></li>
+          <li><a href="/sistema-de-stock-para-almacenes/">Almacenes</a></li>
+          <li><a href="/sistema-de-stock-para-minimarkets/">Minimarkets</a></li>
+          <li><a href="/casos-uso-almacen-dietetica.html">Dietéticas</a></li>
+          <li><a href="/casos-uso-distribuidora-belleza.html">Distribuidoras</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Ayuda">
+        <h2>Ayuda</h2>
+        <ul>
+          <li><a href={centro}>Tutoriales</a></li>
+          <li><a href="/blog/">Guías de stock</a></li>
+          <li><a href="/contacto.html">Contacto</a></li>
+          <li><a href="/politica-privacidad.html">Privacidad</a></li>
+          <li><a href="/terminos-condiciones.html">Términos</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="pie-legal">© ADEstock by <a href="https://ademasistemas.com">ADEMA Sistemas</a>. Todos los derechos reservados.</p>
+  </div>
+</footer>
