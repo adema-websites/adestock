@@ -1,0 +1,13 @@
+{% extends 'base.html' %}{% block c %}
+<div class="card"><h1>Temas</h1>
+{% if not temas %}<p class="mut">Todavía no hay temas. <a href="{{ url_for('subir') }}">Subir el primero</a>.</p>{% else %}
+<table><tr><th>Tema</th><th>Versión</th><th>Estado</th><th>sha256</th></tr>
+{% for t in temas %}<tr><td><a href="{{ url_for('tema', tid=t.id) }}">{{ t.nombre }}</a><br><span class="mut">{{ t.id }}</span></td>
+<td>{{ t.version }} <span class="mut">({{ t.n }} publicadas)</span></td>
+<td>{% if t.retirado %}<span class="err">retirado</span>{% else %}<span class="ok">publicado</span>{% endif %}{% if t.premium %} · premium{% endif %}</td>
+<td><code>{{ t.sha256[:16] }}…</code></td></tr>{% endfor %}</table>{% endif %}</div>
+<div class="card"><h2>Mantenimiento</h2>
+<p>Auditoría: {% if cadena_ok %}<span class="ok">cadena íntegra</span>{% else %}<span class="err">CADENA ROTA: el registro fue alterado</span>{% endif %}</p>
+<form method="post" action="{{ url_for('backup') }}"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="sec">Crear backup (índice, ZIP, auditoría)</button></form>
+<p class="mut">Después de publicar: <code>git add api admin-temas/catalogo.json &amp;&amp; git commit &amp;&amp; git push</code></p></div>
+{% endblock %}

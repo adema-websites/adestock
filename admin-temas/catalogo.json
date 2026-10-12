@@ -1,0 +1,38 @@
+{
+  "formato": 1,
+  "temas": {
+    "navidad-dorado": {
+      "capturas": [
+        "navidad-dorado/vista-1.webp"
+      ],
+      "etiquetas": [
+        "navidad",
+        "fiestas",
+        "oscuro"
+      ],
+      "formatos": [
+        "a4",
+        "a4h",
+        "post",
+        "postv",
+        "historia"
+      ],
+      "miniatura": "navidad-dorado/miniatura.webp",
+      "premium": false,
+      "retirado": false,
+      "versiones": [
+        {
+          "autor": "ADEMA Sistemas",
+          "bytes": 28968,
+          "descripcion": "Fondo verde oscuro con detalles dorados para ofertas de fin de año.",
+          "nombre": "Navidad dorado",
+          "publicado": "2026-10-10",
+          "requiere_formato": 1,
+          "sha256": "76c04b17f9d8a54d7315c0c547e5a8fdc7869e96ee1d00fe478c8e3d6cd4efa4",
+          "version": "1.0.0",
+          "zip": "navidad-dorado/navidad-dorado-1.0.0.zip"
+        }
+      ]
+    }
+  }
+}

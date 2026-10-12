@@ -1,0 +1,5 @@
+{% extends 'base.html' %}{% block c %}
+<div class="card"><h1>Verificar integridad</h1>
+<p class="mut">Recalcula sha256 y tamaño de cada ZIP publicado, re-valida su contenido y comprueba la firma del índice.</p>
+<form method="post"><input type="hidden" name="csrf" value="{{ csrf }}"><button>Verificar ahora</button></form>
+{% if problemas is not none %}{% if problemas %}<ul class="err">{% for x in problemas %}<li>{{ x }}</li>{% endfor %}</ul>{% else %}<p class="ok"><strong>Todo en orden.</strong></p>{% endif %}{% endif %}</div>{% endblock %}

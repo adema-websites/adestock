@@ -1,0 +1,6 @@
+{% extends 'base.html' %}{% block c %}
+<div class="card"><h1>Ingresar</h1>
+<form method="post" autocomplete="off"><input type="hidden" name="csrf" value="{{ csrf }}">
+<label for="password">Contraseña</label><input id="password" type="password" name="password" required autocomplete="current-password">
+<label for="codigo">Código de 6 dígitos (2FA)</label><input id="codigo" type="text" name="codigo" required inputmode="numeric" pattern="[0-9 ]{6,7}" autocomplete="one-time-code">
+<p><button>Entrar</button></p></form></div>{% endblock %}

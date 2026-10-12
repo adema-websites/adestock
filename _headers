@@ -13,3 +13,31 @@
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
+
+# --- Tienda de temas de revista (API estática de solo lectura) ---
+# HSTS (HTTPS obligatorio); sin includeSubDomains/preload a propósito.
+/*
+  Strict-Transport-Security: max-age=31536000
+
+/api/temas-revista/index.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: public, max-age=300
+  X-Content-Type-Options: nosniff
+
+/api/temas-revista/index.json.sig
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=300
+  X-Content-Type-Options: nosniff
+
+/api/temas-revista/*/*.zip
+  Content-Type: application/zip
+  Content-Disposition: attachment
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+
+/api/temas-revista/*/*.webp
+  Content-Type: image/webp
+  Cache-Control: public, max-age=86400
+  X-Content-Type-Options: nosniff
+
+# CORS: no se define Access-Control-Allow-Origin a propósito (cerrado). El sistema Adestock consulta desde su servidor.

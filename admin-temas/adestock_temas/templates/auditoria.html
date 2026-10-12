@@ -1,0 +1,6 @@
+{% extends 'base.html' %}{% block c %}
+<div class="card"><h1>Auditoría</h1>
+<p>{% if cadena_ok %}<span class="ok">Cadena de hashes íntegra.</span>{% else %}<span class="err">CADENA ROTA.</span>{% endif %}</p>
+<table><tr><th>Cuándo (UTC)</th><th>Quién</th><th>Evento</th><th>Detalle</th></tr>
+{% for f in filas %}<tr><td>{{ f.cuando }}</td><td>{{ f.quien }}<br><span class="mut">{{ f.ip }}</span></td><td>{{ f.evento }}</td>
+<td>{% for k, v in f.items() if k not in ('cuando','quien','ip','evento','prev','hash') %}{{ k }}: <code>{{ v }}</code> {% endfor %}</td></tr>{% endfor %}</table></div>{% endblock %}

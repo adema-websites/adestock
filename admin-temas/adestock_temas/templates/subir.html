@@ -1,0 +1,12 @@
+{% extends 'base.html' %}{% block c %}
+<div class="card"><h1>Subir tema o versión nueva</h1>
+{% if errores %}<div class="err"><strong>Rechazado:</strong><ul>{% for e in errores %}<li>{{ e }}</li>{% endfor %}</ul></div>{% endif %}
+<p class="mut">El id, nombre y versión salen del tema.json. Una versión ya publicada nunca se reemplaza: subí una versión mayor.</p>
+<form method="post" enctype="multipart/form-data"><input type="hidden" name="csrf" value="{{ csrf }}">
+<label for="zip">ZIP del tema (máx. 8 MB)</label><input id="zip" type="file" name="zip" accept=".zip" required>
+<label for="miniatura">Miniatura WebP (600×424 aprox., ≤150 KB; obligatoria en temas nuevos)</label><input id="miniatura" type="file" name="miniatura" accept=".webp">
+<label for="capturas">Capturas WebP (hasta 4, reemplazan a las anteriores)</label><input id="capturas" type="file" name="capturas" accept=".webp" multiple>
+<label for="etiquetas">Etiquetas (separadas por coma)</label><input id="etiquetas" type="text" name="etiquetas" value="{{ form.get('etiquetas', '') }}" placeholder="navidad, fiestas, oscuro">
+<label>Formatos</label><div class="inline">{% for f in FORMATOS %}<label><input type="checkbox" name="formatos" value="{{ f }}" checked> {{ f }}</label>{% endfor %}</div>
+<label><input type="checkbox" name="premium"> Premium (por ahora dejar sin marcar: no hay cobro)</label>
+<p><button>Validar</button></p></form></div>{% endblock %}

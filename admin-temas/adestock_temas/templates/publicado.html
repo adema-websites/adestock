@@ -1,0 +1,6 @@
+{% extends 'base.html' %}{% block c %}
+<div class="card"><h1 class="ok">Publicado</h1>
+<p>{{ p.resultado.tema.nombre }} {{ p.version }} · {{ p.resultado.bytes }} bytes<br>sha256: <code>{{ p.resultado.sha256 }}</code></p>
+<p>Se regeneraron <code>index.json</code> e <code>index.json.sig</code>. Falta subirlo al sitio:</p>
+<p><code>git add api admin-temas/catalogo.json &amp;&amp; git commit -m "Tema {{ p.tema_id }} {{ p.version }}" &amp;&amp; git push</code></p>
+<p><a class="btn" href="{{ url_for('inicio') }}">Volver</a></p></div>{% endblock %}

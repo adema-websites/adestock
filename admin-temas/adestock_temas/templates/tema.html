@@ -1,0 +1,17 @@
+{% extends 'base.html' %}{% block c %}
+<div class="card"><h1>{{ v.nombre }} <span class="mut">({{ tid }})</span></h1>
+<p>Estado: {% if t.retirado %}<span class="err">retirado</span>{% else %}<span class="ok">publicado</span>{% endif %}</p>
+<table><tr><th>Versión</th><th>Publicada</th><th>Bytes</th><th>sha256</th></tr>
+{% for x in t.versiones|sort(attribute='publicado', reverse=True) %}<tr><td>{{ x.version }}</td><td>{{ x.publicado }}</td><td>{{ x.bytes }}</td><td><code>{{ x.sha256 }}</code></td></tr>{% endfor %}</table></div>
+<div class="card"><h2>Datos de la galería (no cambian el ZIP)</h2>
+<form method="post"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="accion" value="meta">
+<label for="et">Etiquetas</label><input id="et" type="text" name="etiquetas" value="{{ t.etiquetas|join(', ') }}">
+<label>Formatos</label><div class="inline">{% for f in FORMATOS %}<label><input type="checkbox" name="formatos" value="{{ f }}" {% if f in t.formatos %}checked{% endif %}> {{ f }}</label>{% endfor %}</div>
+<label><input type="checkbox" name="premium" {% if t.premium %}checked{% endif %}> Premium (reservado para el futuro)</label>
+<label for="pw1">Contraseña (para firmar el índice)</label><input id="pw1" type="password" name="password" required autocomplete="current-password">
+<p><button>Guardar y re-firmar</button></p></form></div>
+<div class="card"><h2>{{ 'Restaurar' if t.retirado else 'Retirar' }}</h2>
+<p class="mut">Retirar lo saca del índice; los ZIP no se borran y los ya instalados siguen funcionando.</p>
+<form method="post"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="accion" value="{{ 'restaurar' if t.retirado else 'retirar' }}">
+<label for="pw2">Contraseña</label><input id="pw2" type="password" name="password" required autocomplete="current-password">
+<p><button class="{{ 'sec' if t.retirado else 'peligro' }}">{{ 'Restaurar tema' if t.retirado else 'Retirar tema' }}</button></p></form></div>{% endblock %}

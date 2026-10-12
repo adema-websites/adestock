@@ -1,0 +1,3 @@
+api/temas-revista/** -text
+*.zip binary
+*.webp binary

@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /admin-temas/
 Allow: /manuales/
 Allow: /manuales/changelog/
 Allow: /manuales/funcional/
