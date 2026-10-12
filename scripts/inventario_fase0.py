@@ -9,8 +9,9 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlparse, urldefrag, unquote
 
-ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / "docs"
+REPO = Path(__file__).resolve().parent.parent
+ROOT = REPO / "public"
+OUT = REPO / "docs"
 SITE = "https://adestock.com.ar"
 SKIP_DIRS = {".git", "admin-temas", "node_modules", "docs", "scripts"}
 

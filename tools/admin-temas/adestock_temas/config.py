@@ -1,4 +1,4 @@
-"""Rutas y límites del contrato (README_WEB_TIENDA_TEMAS_REVISTAS.md)."""
+"""Rutas y límites del contrato (docs/README_WEB_TIENDA_TEMAS_REVISTAS.md)."""
 import os
 from dataclasses import dataclass
 from pathlib import Path
@@ -24,7 +24,7 @@ FORMATO_ACTUAL = 1
 
 @dataclass
 class Entorno:
-    sitio: Path        # raíz del sitio estático (repo)
+    sitio: Path        # raíz del sitio estático (public/ del repo)
     estado: Path       # secretos, sesión, auditoría, backups: FUERA del repo
     catalogo: Path     # catálogo (fuente de verdad del índice)
 
@@ -38,7 +38,7 @@ class Entorno:
 
     @classmethod
     def desde_env(cls) -> "Entorno":
-        sitio = Path(os.environ.get("ADESTOCK_SITIO") or ADMIN_DIR.parent)
+        sitio = Path(os.environ.get("ADESTOCK_SITIO") or ADMIN_DIR.parent.parent / "public")
         if os.environ.get("ADESTOCK_TEMAS_ESTADO"):
             estado = Path(os.environ["ADESTOCK_TEMAS_ESTADO"])
         elif os.name == "nt":

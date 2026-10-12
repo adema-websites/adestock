@@ -12,3 +12,6 @@ staging/
 
 # Exportaciones de analitica (datos internos)
 impormes_gcp/
+node_modules/
+dist/
+.astro/

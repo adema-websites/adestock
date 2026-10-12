@@ -1,12 +1,12 @@
 # Panel de temas de revista (solo administrador)
 
-Implementa el contrato de `../README_WEB_TIENDA_TEMAS_REVISTAS.md`.
+Implementa el contrato de `../../docs/README_WEB_TIENDA_TEMAS_REVISTAS.md`.
 
-**Arquitectura:** la web pública sigue siendo 100 % estática (`api/temas-revista/`, `temas-revistas/`). Este panel es una
+**Arquitectura:** la web pública sigue siendo 100 % estática (`public/api/temas-revista/`, `public/temas-revistas/`). Este panel es una
 app Flask que corre **solo en tu PC** (`127.0.0.1`), valida, calcula la huella, firma y escribe en `api/temas-revista/`.
 Vos hacés `git commit` + `git push`. Ningún endpoint público acepta subidas porque en el servidor no hay nada que ejecutar.
 
-> Esta carpeta está dentro del repo (se publica con el sitio) pero **no contiene secretos**: contraseña, 2FA, clave de firma,
+> Esta carpeta está dentro del repo, fuera de `public/` (no se publica), y **no contiene secretos**: contraseña, 2FA, clave de firma,
 > auditoría y backups viven en el directorio de estado, **fuera del repo**:
 > Windows `%LOCALAPPDATA%\adestock-temas-admin`, Linux/Mac `~/.adestock-temas-admin` (o `ADESTOCK_TEMAS_ESTADO`).
 > `catalogo.json` es la fuente de verdad (versiones, huellas, retirados); se versiona con git.
@@ -14,7 +14,7 @@ Vos hacés `git commit` + `git push`. Ningún endpoint público acepta subidas p
 ## Instalación (una vez)
 
 ```powershell
-cd admin-temas
+cd tools/admin-temas
 pip install -r requirements.txt
 python -m adestock_temas init
 ```
@@ -32,7 +32,7 @@ clave de firma Ed25519, **cifrada con tu contraseña**. Imprime la clave públic
 5. Si se rechaza, se listan todos los motivos. Si pasa, ves id, versión, tamaño y **sha256 calculados** y la miniatura.
 6. Repetí tu contraseña y **Publicar y firmar índice**. Se escriben el ZIP (nunca reemplaza uno existente), las imágenes,
    `catalogo.json`, `index.json` e `index.json.sig`.
-7. `git add api admin-temas/catalogo.json && git commit -m "Tema X vX.Y.Z" && git push`
+7. `git add public/api tools/admin-temas/catalogo.json && git commit -m "Tema X vX.Y.Z" && git push`
 8. Comprobá `https://adestock.com.ar/api/temas-revista/index.json` y `/temas-revistas/`; en el panel, **Verificar**.
 
 Para corregir un tema: subí una versión **mayor** (el id no cambia). Para retirarlo: pantalla del tema → *Retirar*
@@ -96,7 +96,7 @@ sha256; detecta ediciones o borrados); cada publicación revierte todo si falla 
 ## Pruebas
 
 ```powershell
-cd admin-temas; python -m pytest tests -q
+cd tools/admin-temas; python -m pytest tests -q
 ```
 
 Cubren: tema válido, CSS prohibido (30 casos), ZIP con `..`/`\`/`:`/absoluta/symlink/cifrado/duplicados/exceso de entradas,

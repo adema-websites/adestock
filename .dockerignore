@@ -1,0 +1,9 @@
+.git
+node_modules
+dist
+docs
+tools
+scripts
+impormes_gcp
+*.md
+!public/**/*.md
