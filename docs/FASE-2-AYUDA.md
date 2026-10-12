@@ -9,10 +9,12 @@
 - Capturas: `figure` + `figcaption`, WebP generado por Astro, `width`/`height`, lazy; ampliación con teclado (clic/Enter, Esc). Probado a 390 px sin scroll horizontal.
 - Borradores: `INCLUDE_DRAFTS=1` (staging) o `npm run dev` los publican con `noindex`. En producción (por defecto) no se generan; `/tutoriales/` y `/tutoriales/empezar/` quedan vacías y con `noindex` hasta publicar la primera guía.
 
+- Buscador local: MiniSearch + diccionario editorial de sinónimos (`src/data/sinonimos.json`). Índice generado en el build (`/tutoriales/indice.json`, 236 fragmentos, ~65 KiB gzip; presupuesto 300 KiB). Resultados agrupados por guía con hasta 3 pasos con enlace directo al encabezado, filtros por rol y superficie, estado vacío con salidas útiles. `/tutoriales/buscar/` es `noindex`.
+- Banco de 30 consultas (`src/data/consultas-prueba.json`) y `scripts/probar_buscador.mjs`. Resultado actual: guía correcta entre las 3 primeras 30/30, en 1.º lugar 29/30, críticas 10/10. **Salvedad:** las consultas las redactó el equipo de desarrollo y los sinónimos se ajustaron mirando sus fallos, así que el número es optimista. Falta validarlo con consultas reales (GA4 `search`/Search Console) y con personas del rubro. La respuesta visible <200 ms no está medida.
+- Sin desambiguación "¿importar productos o cargar existencias?" hasta que existan esas guías.
+
 ## Pendiente de esta fase
 
-- [ ] Buscador local (MiniSearch + sinónimos) y banco de 30 consultas.
-- [ ] `/tutoriales/buscar/` con `noindex`.
 - [ ] Los WebP usan la calidad por defecto de Astro (con pérdida): comparar nitidez del texto contra WebP sin pérdida y decidir (plan, sección 16). Sin `srcset` todavía.
 - [ ] `description` de los borradores es un recorte automático de "Qué vas a lograr": reescribir al revisar cada guía.
 - [ ] Tarjetas sociales 1200×630 por tutorial P0.

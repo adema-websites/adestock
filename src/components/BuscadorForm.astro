@@ -1,0 +1,10 @@
+---
+interface Props { valor?: string }
+const { valor = '' } = Astro.props;
+---
+<form class="buscador" action="/tutoriales/buscar/" method="get" role="search">
+  <label for="q" class="sr-only">Buscar en los tutoriales</label>
+  <input id="q" name="q" type="search" value={valor} autocomplete="off"
+    placeholder="Ej.: cargar una compra con foto, hacer una venta, corregir stock…" />
+  <button type="submit">Buscar</button>
+</form>

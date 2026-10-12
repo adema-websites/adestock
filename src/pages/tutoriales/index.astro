@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import BuscadorForm from '../../components/BuscadorForm.astro';
 import { categorias, getTutoriales, urlTutorial, esBorrador, SITE } from '../../lib/tutoriales';
 import rutas from '../../data/rutas-aprendizaje.json';
 
@@ -32,6 +33,7 @@ const jsonLd = [
     <div class="seo-hero__inner">
       <h1>¿Qué querés hacer con ADEstock?</h1>
       <p class="seo-lead">Elegí una tarea o seguí el recorrido para empezar. Cada guía te dice qué necesitás, cómo hacerlo y cómo comprobar que salió bien.</p>
+      <BuscadorForm />
       <p><a class="btn-ruta" href="/tutoriales/empezar/">Empezar desde cero →</a></p>
     </div>
   </header>

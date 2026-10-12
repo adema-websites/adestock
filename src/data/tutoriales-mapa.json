@@ -12,7 +12,7 @@
   "tutoriales": [
     {"n":"02","slug":"configurar-negocio","titulo":"Cómo configurar tu negocio en ADEstock la primera vez","cat":"empezar","prio":"P0","roles":["dueno"],"surface":["panel"],"syn":["onboarding","primeros pasos","empezar","configuración inicial"]},
     {"n":"03","slug":"cargar-productos","titulo":"Cómo cargar productos y precios en ADEstock","cat":"empezar","prio":"P0","roles":["dueno","administrativo"],"surface":["pos","panel"],"syn":["alta de productos","agregar producto","costo por bulto","precio"]},
-    {"n":"04","slug":"usuarios-y-permisos","titulo":"Cómo crear usuarios y darles permisos","cat":"empezar","prio":"P1","roles":["dueno"],"surface":["panel"],"syn":["cajero","empleado","permisos","clave"]},
+    {"n":"04","slug":"usuarios-y-permisos","titulo":"Cómo crear usuarios y darles permisos","cat":"empezar","prio":"P1","roles":["dueno"],"surface":["panel"],"syn":["usuario","crear usuario","agregar usuario","alta de usuario","cajero","empleado","permisos","clave"]},
     {"n":"05","slug":"configurar-punto-de-venta","titulo":"Cómo configurar el punto de venta","cat":"empezar","prio":"P1","roles":["dueno"],"surface":["pos","panel"],"syn":["caja","módulos","equipo"]},
     {"n":"06","slug":"usar-punto-de-venta","titulo":"Cómo recorrer el punto de venta y usar sus atajos","cat":"vender","prio":"P0","roles":["cajero","dueno"],"surface":["pos"],"syn":["pos","atajos","teclas"]},
     {"n":"07","slug":"hacer-una-venta","titulo":"Cómo hacer una venta en ADEstock","cat":"vender","prio":"P0","roles":["cajero","dueno"],"surface":["pos"],"syn":["vender","cobrar","carrito","vuelto"]},

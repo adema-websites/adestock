@@ -18,7 +18,7 @@ source_hash: "53343310e6f4006d3755a6a00ab17cc1231c9fca92464b91a05944c547fca8ef"
 product_version: "pendiente-verificar"
 verified_at: "2026-10-12"
 reviewed_at: null
-synonyms: ["cajero","empleado","permisos","clave"]
+synonyms: ["usuario","crear usuario","agregar usuario","alta de usuario","cajero","empleado","permisos","clave"]
 related: []
 social_image: null
 ---

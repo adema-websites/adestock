@@ -1,0 +1,109 @@
+---
+import Base from '../../layouts/Base.astro';
+import BuscadorForm from '../../components/BuscadorForm.astro';
+import { ROLES, SUPERFICIES, categorias } from '../../lib/tutoriales';
+---
+<Base
+  title="Buscar en los tutoriales | ADEstock"
+  description="Buscá una tarea en los tutoriales de ADEstock y abrí directamente el paso que necesitás."
+  path="/tutoriales/buscar/"
+  noindex={true}
+>
+  <div class="seo-breadcrumbs"><a href="/">Inicio</a>{' / '}<a href="/tutoriales/">Tutoriales</a>{' / '}Buscar</div>
+  <main id="contenido" class="tuto">
+    <header class="tuto-head">
+      <h1>Buscar en los tutoriales</h1>
+      <BuscadorForm />
+      <div class="filtros">
+        <label>Rol
+          <select id="f-rol"><option value="">Todos</option>{Object.entries(ROLES).map(([k, v]) => <option value={k}>{v}</option>)}</select>
+        </label>
+        <label>Dónde
+          <select id="f-sup"><option value="">Todos</option>{Object.entries(SUPERFICIES).map(([k, v]) => <option value={k}>{v}</option>)}</select>
+        </label>
+      </div>
+    </header>
+
+    <p id="estado" role="status" aria-live="polite"></p>
+    <ol id="resultados" class="resultados"></ol>
+
+    <noscript>
+      <p>El buscador necesita JavaScript. Mientras tanto podés ver todas las guías en el <a href="/tutoriales/">índice de tutoriales</a>.</p>
+    </noscript>
+
+    <section id="sin-resultados" hidden>
+      <p>No encontramos una guía para eso. Probá con otras palabras, o elegí un tema:</p>
+      <ul>
+        {Object.entries(categorias).map(([k, v]) => <li><a href={`/tutoriales/categorias/${k}/`}>{v}</a></li>)}
+      </ul>
+      <p>Si no está, <a href="/contacto.html">escribinos</a> y lo sumamos.</p>
+    </section>
+  </main>
+</Base>
+
+<script>
+  import MiniSearch from 'minisearch';
+  import { buscar, opcionesMiniSearch } from '../../lib/buscador-config.mjs';
+
+  const form = document.querySelector<HTMLFormElement>('form.buscador')!;
+  const input = form.querySelector<HTMLInputElement>('input')!;
+  const rol = document.getElementById('f-rol') as HTMLSelectElement;
+  const sup = document.getElementById('f-sup') as HTMLSelectElement;
+  const estado = document.getElementById('estado')!;
+  const lista = document.getElementById('resultados')!;
+  const vacio = document.getElementById('sin-resultados')!;
+
+  let ms: MiniSearch | null = null;
+  let sinonimos: Record<string, string> = {};
+  const cargando = fetch('/tutoriales/indice.json')
+    .then((r) => r.json())
+    .then((d) => {
+      ms = new MiniSearch(opcionesMiniSearch);
+      ms.addAll(d.fragmentos);
+      sinonimos = d.sinonimos;
+    });
+
+  const extracto = (t: string) => (t.length > 190 ? t.slice(0, 190).replace(/\s\S*$/, '') + '…' : t);
+
+  async function ejecutar(actualizarUrl: boolean) {
+    const q = input.value.trim();
+    lista.replaceChildren();
+    vacio.hidden = true;
+    if (actualizarUrl) {
+      const u = new URL(location.href);
+      q ? u.searchParams.set('q', q) : u.searchParams.delete('q');
+      history.replaceState(null, '', u);
+    }
+    if (!q) { estado.textContent = 'Escribí qué querés hacer, por ejemplo “hacer una venta”.'; return; }
+    estado.textContent = 'Buscando…';
+    try { await cargando; } catch { estado.textContent = 'No pudimos cargar el buscador. Probá desde el índice de tutoriales.'; return; }
+    const res = buscar(ms, q, sinonimos, { role: rol.value || undefined, surface: sup.value || undefined });
+    if (res.length === 0) { estado.textContent = `Sin resultados para “${q}”.`; vacio.hidden = false; return; }
+    estado.textContent = `${res.length} ${res.length === 1 ? 'guía encontrada' : 'guías encontradas'} para “${q}”.`;
+    for (const g of res.slice(0, 8)) {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = '/tutoriales/' + g.tutorial_id + '/';
+      a.textContent = g.title;
+      const h = document.createElement('h2'); h.appendChild(a);
+      const p = document.createElement('p'); p.textContent = extracto(g.pasos[0].text);
+      li.append(h, p);
+      const pasos = g.pasos.filter((x) => x.heading && x.heading !== 'Introducción');
+      if (pasos.length) {
+        const ul = document.createElement('ul');
+        for (const s of pasos) {
+          const l = document.createElement('li'); const b = document.createElement('a');
+          b.href = s.url; b.textContent = s.heading; l.appendChild(b); ul.appendChild(l);
+        }
+        li.appendChild(ul);
+      }
+      lista.appendChild(li);
+    }
+  }
+
+  form.addEventListener('submit', (e) => { e.preventDefault(); ejecutar(true); });
+  rol.addEventListener('change', () => ejecutar(false));
+  sup.addEventListener('change', () => ejecutar(false));
+  input.value = new URL(location.href).searchParams.get('q') ?? '';
+  ejecutar(false);
+</script>
