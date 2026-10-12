@@ -1,91 +1,18 @@
 ---
-import Pagina from '../layouts/Pagina.astro';
-import descargas from '../data/descargas.json';
-const inst = descargas.instalador;
+// El instalador de escritorio ya no se distribuye. Se conserva la URL vieja para no romper enlaces externos
+// y se redirige a la demo online.
+const DEMO = 'https://demo.adestock.com.ar/';
 ---
-<Pagina
-  title="Descargar demo de ADEstock | Sistema de stock y ventas"
-  description="Descargá la demo de ADEstock y probá un sistema argentino para controlar stock, inventario, ventas, caja, compras, precios y reportes."
-  path="/descargar-demo.html"
->
-  <div class="crumbs"><a href="/">Inicio</a>{' / '}Descargar demo</div>
-  <main id="contenido">
-    <header class="page-hero">
-      <div class="page-hero__inner">
-        <h1>Probá ADEstock en tu PC durante 3 días</h1>
-        <p class="page-lead">Descargá el instalador, cargá unos productos y hacé tu primera venta. Pasado el período de prueba, la demo solicita licencia.</p>
-        <div class="actions">
-          <a class="btn btn-primary" href={inst.url} download id="download-button">Descargar la demo (Windows)</a>
-          <a class="btn btn-ghost" href="/precios.html">Ver precios</a>
-        </div>
-        <p class="muted" style="margin-top:.9rem; font-size:.95rem">Versión {inst.version} · Requiere Windows 10 o superior (64 bits)</p>
-      </div>
-    </header>
-
-    <section class="band alt" aria-labelledby="pasos">
-      <div class="seo-hero__inner cols-2" style="align-items:start">
-        <div>
-          <h2 id="pasos" style="max-width: 14ch">Empezá en cinco pasos</h2>
-          <p class="page-lead">Mirá el recorrido en video o seguí la lista.</p>
-          <button class="yt" type="button" data-yt="-2dBMZNlW-E" aria-label="Reproducir el video tutorial de instalación">
-            <img src="https://i.ytimg.com/vi/-2dBMZNlW-E/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" />
-            <span class="yt-play">Ver el tutorial de instalación</span>
-          </button>
-        </div>
-        <ol class="steps" style="margin-top:0">
-          <li><h3>Descargá el instalador</h3><p>Con el botón de arriba obtenés la última versión.</p></li>
-          <li><h3>Instalá ADEstock</h3><p>Ejecutá el archivo y seguí el asistente. Se crea un acceso directo en el escritorio.</p></li>
-          <li>
-            <h3>Iniciá sesión</h3>
-            <p>La primera vez, entrá con estas credenciales (respetá mayúsculas y minúsculas):</p>
-            <dl class="kv" style="margin-top:.5rem">
-              <dt>Usuario</dt><dd><code>ADEMASISTEMAS</code></dd>
-              <dt>Contraseña</dt><dd><code>Adema123.</code></dd>
-            </dl>
-          </li>
-          <li><h3>Abrí el sistema</h3><p>Ejecutá la aplicación, buscá el ícono del engranaje en la bandeja del sistema (junto al reloj), hacé clic derecho y elegí "Abrir en navegador".</p></li>
-          <li><h3>Guardalo en favoritos</h3><p>Guardá la página en los favoritos del navegador para entrar más rápido.</p></li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="band" aria-labelledby="despues">
-      <div class="seo-hero__inner cols-2">
-        <div>
-          <h2 id="despues" style="max-width: 18ch">Después de instalar</h2>
-          <p class="page-lead">Seguí la ruta para empezar: configurar el negocio, cargar productos y hacer la primera venta.</p>
-          <div class="actions"><a class="btn btn-primary" href="/tutoriales/empezar/">Empezar desde cero</a></div>
-        </div>
-        <div class="card">
-          <h3>¿Necesitás ayuda?</h3>
-          <p style="color:var(--ink-2)">Si tenés problemas con la instalación o el uso de ADEstock, estamos para ayudarte.</p>
-          <div class="actions" style="margin-top:.5rem">
-            <a class="btn btn-ghost" href="https://wa.me/5491127888995">WhatsApp</a>
-            <a class="btn btn-ghost" href="mailto:contact@ademasistemas.com">Email</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-</Pagina>
-
-<style is:global>
-  .yt { position: relative; display: block; width: 100%; max-width: 480px; aspect-ratio: 16 / 9; margin-top: 1.25rem; padding: 0; border: 0; border-radius: var(--r-card); overflow: hidden; cursor: pointer; background: var(--night); }
-  .yt img { width: 100%; height: 100%; object-fit: cover; opacity: .85; }
-  .yt-play { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: var(--bg); color: var(--ink); padding: .7rem 1.2rem; border-radius: var(--r-pill); font-weight: 650; white-space: nowrap; }
-  .yt iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-</style>
-
-<script>
-  document.addEventListener('astro:page-load', () => {
-    const b = document.querySelector<HTMLButtonElement>('.yt');
-    b?.addEventListener('click', () => {
-      const f = document.createElement('iframe');
-      f.src = `https://www.youtube-nocookie.com/embed/${b.dataset.yt}?autoplay=1`;
-      f.title = 'Tutorial de instalación de ADEstock';
-      f.allow = 'autoplay; encrypted-media; picture-in-picture';
-      f.allowFullscreen = true;
-      b.replaceChildren(f);
-    }, { once: true });
-  });
-</script>
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Demo de ADEstock</title>
+    <meta name="robots" content="noindex" />
+    <link rel="canonical" href={DEMO} />
+    <meta http-equiv="refresh" content={`0; url=${DEMO}`} />
+  </head>
+  <body>
+    <p>Redirigiendo a la <a href={DEMO}>demo online de ADEstock</a>…</p>
+  </body>
+</html>

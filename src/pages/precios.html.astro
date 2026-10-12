@@ -2,10 +2,10 @@
 import Pagina from '../layouts/Pagina.astro';
 
 const wa = (t: string) => `https://wa.me/5491127888995?text=${encodeURIComponent(t)}`;
+const DEMO = 'https://demo.adestock.com.ar/';
 const planes = [
-  { id: 'mensual', nombre: 'Licencia mensual', precio: '$ 45.000', per: '+ IVA / mes', detalle: '30 días', items: ['Uso completo por 30 días', 'Instalación local', 'Actualizaciones incluidas', 'Ideal para proyectos cortos o pruebas'], cta: 'Suscribirme', msg: 'Hola, quisiera consultar el precio de la Licencia Local por 30 días.' },
-  { id: 'anual', nombre: 'Licencia anual', precio: '$ 450.000', per: '+ IVA / año', detalle: '12 meses', items: ['Ahorro frente al plan mensual', '12 meses de uso continuo', 'Actualizaciones incluidas todo el año', 'Soporte técnico por WhatsApp'], cta: 'Quiero la anual', msg: 'Hola, me interesa la Licencia Anual (Local). ¿Precio?' },
-  { id: 'lifetime', nombre: 'Pago único', precio: 'Consultar', per: 'una sola vez', detalle: 'De por vida', items: ['Un solo pago, uso sin límite de tiempo', 'Sin renovaciones mensuales ni anuales', 'Licencia perpetua', 'Soporte estándar'], cta: 'Consultar precio', msg: 'Hola, quiero saber el precio de la Licencia de por vida.' },
+  { id: 'anual', nombre: 'Plan anual 10 x 12', precio: '$ 1.200.000', per: 'IVA incluido / año', detalle: 'Pagás 10, usás 12', items: ['12 meses de uso al precio de 10', 'Equivale a $ 100.000 por mes', 'Hosting y copias de seguridad incluidos', 'Soporte técnico por WhatsApp'], cta: 'Quiero la anual', msg: 'Hola, me interesa el Plan anual 10 x 12 de ADEstock Web ($1.200.000 IVA incluido). ¿Cómo avanzamos?' },
+  { id: 'lifetime', nombre: 'Pago único', precio: 'Consultar', per: 'una sola vez', detalle: 'De por vida', items: ['Un solo pago, uso sin límite de tiempo', 'Sin renovaciones mensuales ni anuales', 'Licencia perpetua', 'Soporte estándar'], cta: 'Consultar precio', msg: 'Hola, quiero saber el precio del pago único (licencia de por vida) de ADEstock.' },
 ];
 
 const jsonLd = [
@@ -14,19 +14,18 @@ const jsonLd = [
     '@type': 'SoftwareApplication',
     name: 'ADEstock',
     applicationCategory: 'BusinessApplication',
-    operatingSystem: 'Windows, Web',
+    operatingSystem: 'Web',
     url: 'https://adestock.com.ar/',
     offers: [
-      { '@type': 'Offer', name: 'ADEstock Web / Nube (mensual)', price: '60000', priceCurrency: 'ARS', priceSpecification: { '@type': 'PriceSpecification', price: '60000', priceCurrency: 'ARS', valueAddedTaxIncluded: false, unitText: 'MON' }, url: 'https://adestock.com.ar/precios.html' },
-      { '@type': 'Offer', name: 'Licencia local mensual', price: '45000', priceCurrency: 'ARS', priceSpecification: { '@type': 'PriceSpecification', price: '45000', priceCurrency: 'ARS', valueAddedTaxIncluded: false, unitText: 'MON' }, url: 'https://adestock.com.ar/precios.html' },
-      { '@type': 'Offer', name: 'Licencia local anual', price: '450000', priceCurrency: 'ARS', priceSpecification: { '@type': 'PriceSpecification', price: '450000', priceCurrency: 'ARS', valueAddedTaxIncluded: false, unitText: 'ANN' }, url: 'https://adestock.com.ar/precios.html' },
+      { '@type': 'Offer', name: 'ADEstock Web (mensual)', price: '120000', priceCurrency: 'ARS', priceSpecification: { '@type': 'UnitPriceSpecification', price: '120000', priceCurrency: 'ARS', valueAddedTaxIncluded: true, unitText: 'MON' }, url: 'https://adestock.com.ar/precios.html' },
+      { '@type': 'Offer', name: 'ADEstock Web (anual, 10 x 12)', price: '1200000', priceCurrency: 'ARS', priceSpecification: { '@type': 'UnitPriceSpecification', price: '1200000', priceCurrency: 'ARS', valueAddedTaxIncluded: true, unitText: 'ANN' }, url: 'https://adestock.com.ar/precios.html' },
     ],
   },
 ];
 ---
 <Pagina
   title="Precios de ADEstock | Sistema de stock para comercios"
-  description="Consultá planes de ADEstock para controlar stock, inventario, ventas, caja, compras y reportes en comercios argentinos. Demo gratis y opciones web o local."
+  description="Consultá los planes de ADEstock para controlar stock, inventario, ventas, caja, compras y reportes en comercios argentinos. Demo online y licencia web mensual o anual."
   path="/precios.html"
   jsonLd={jsonLd}
 >
@@ -35,38 +34,31 @@ const jsonLd = [
     <header class="page-hero">
       <div class="page-hero__inner">
         <h1>Elegí cómo querés usar ADEstock</h1>
-        <p class="page-lead">En la nube, sin instalar nada, o en tu propia PC con Windows. Precios en pesos argentinos, sin costos ocultos.</p>
+        <p class="page-lead">Licencia web: entrás desde cualquier navegador, sin instalar nada. Precios en pesos argentinos, IVA incluido, sin costos ocultos.</p>
       </div>
     </header>
 
-    <section class="band">
+    <section class="band" aria-labelledby="web">
       <div class="seo-hero__inner">
-        <div class="card dark" style="max-width: 760px;">
-          <span class="tag">Sin instalar nada</span>
-          <h2 style="font-size:1.6rem">ADEstock Web / Nube</h2>
-          <p>Tu negocio online, accesible desde cualquier lugar y dispositivo.</p>
-          <p class="price" style="color:var(--night-ink)">$ 60.000 <small style="color:inherit; opacity:.75">+ IVA / mes</small></p>
-          <ul class="check-list">
-            <li>Acceso 24/7 desde cualquier navegador</li>
-            <li>Hosting incluido: nosotros lo alojamos</li>
-            <li>Copias de seguridad automáticas diarias</li>
-            <li>Actualizaciones automáticas</li>
-            <li>Varios usuarios al mismo tiempo</li>
-            <li>Soporte prioritario</li>
-          </ul>
-          <p style="margin-top:.5rem"><strong>¿Qué cubre este plan?</strong> El uso del software alojado en nuestros servidores. Te olvidás del mantenimiento técnico y de perder datos si se rompe tu PC. Es ideal si no tenés un equipo dedicado.</p>
-          <div class="actions">
-            <a class="btn btn-primary btn-sobre-noche" href={wa('Hola ADEstock, me interesa el Plan WEB/NUBE de $60.000 + IVA mensuales. ¿Podemos avanzar?')}>Empezar ahora</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="band alt" aria-labelledby="locales">
-      <div class="seo-hero__inner">
-        <h2 id="locales" style="max-width: 24ch">Licencias locales, instaladas en tu PC</h2>
-        <p class="page-lead">Comprás la licencia y la instalás en tu equipo. Requisito: Windows 10 o superior (64 bits).</p>
-        <div class="cols-3" style="margin-top:1.75rem">
+        <div class="cols-3">
+          <article class="card dark" id="mensual" style="grid-column: span 1">
+            <span class="tag">Promo octubre: 40 % off</span>
+            <h2 id="web" style="font-size:1.6rem">ADEstock Web</h2>
+            <p class="price" style="color:var(--night-ink)">$ 72.000 <small style="color:inherit; opacity:.75">IVA incluido / mes · primeros 3 meses</small></p>
+            <p style="margin-top:.25rem">Después, precio regular: <strong>$ 120.000 por mes</strong>, IVA incluido.</p>
+            <ul class="check-list">
+              <li>Acceso 24/7 desde cualquier navegador</li>
+              <li>Hosting incluido: nosotros lo alojamos</li>
+              <li>Copias de seguridad automáticas diarias</li>
+              <li>Actualizaciones automáticas</li>
+              <li>Varios usuarios al mismo tiempo</li>
+              <li>Soporte prioritario</li>
+            </ul>
+            <p class="muted" style="margin-top:.5rem; color:inherit; opacity:.8; font-size:.9rem">Promoción válida únicamente para contrataciones realizadas en octubre de 2026.</p>
+            <div class="actions">
+              <a class="btn btn-primary btn-sobre-noche" href={wa('Hola ADEstock, me interesa la licencia web con la promo de octubre (40 % off los primeros 3 meses, luego $120.000 por mes IVA incluido). ¿Podemos avanzar?')}>Aprovechar la promo</a>
+            </div>
+          </article>
           {planes.map((p) => (
             <article class="card" id={p.id}>
               <span class="tag" style="justify-self:start; margin:0">{p.detalle}</span>
@@ -79,34 +71,16 @@ const jsonLd = [
             </article>
           ))}
         </div>
-        <p class="muted" style="margin-top:1.25rem">Todos los valores son más IVA. Para el pago único, escribinos y te pasamos el precio vigente.</p>
-      </div>
-    </section>
-
-    <section class="band" aria-labelledby="remoto">
-      <div class="seo-hero__inner">
-        <div class="cols-2">
-          <div>
-            <h2 id="remoto" style="max-width: 20ch">¿Acceso remoto con una licencia local?</h2>
-            <p class="page-lead">Aunque la licencia se instala en tu PC, podés entrar desde fuera del negocio sin pagar un servidor en la nube.</p>
-            <p style="margin-top:1rem; color:var(--ink-2)">Se logra con una VPN como <strong>Tailscale</strong> o <strong>ZeroTier</strong>, que crean un túnel seguro entre tu casa y la PC del negocio.</p>
-          </div>
-          <ol class="steps" style="margin-top:0">
-            <li><h3>Instalás ADEstock</h3><p>En la PC de tu negocio, con Windows 10 o superior.</p></li>
-            <li><h3>Instalás Tailscale</h3><p>Es gratis. Va en ambos equipos: el del negocio y el tuyo.</p></li>
-            <li><h3>Te conectás</h3><p>Entrás como si estuvieras en el local.</p></li>
-          </ol>
-        </div>
-        <p class="aviso" style="margin-top:1.5rem"><strong>Importante:</strong> las VPN son herramientas de terceros ajenas a ADEstock. Las recomendamos como una facilidad para quienes saben de redes, pero no damos soporte técnico sobre su configuración.</p>
+        <p class="muted" style="margin-top:1.25rem">Todos los valores incluyen IVA. Para el pago único, escribinos y te pasamos el precio vigente.</p>
       </div>
     </section>
 
     <section class="band alt">
       <div class="seo-hero__inner">
         <h2 style="max-width: 24ch">¿No sabés cuál te conviene?</h2>
-        <p class="page-lead">Probá la demo en tu PC por 3 días o escribinos y lo vemos según tu negocio.</p>
+        <p class="page-lead">Probá la demo online, sin instalar nada, o escribinos y lo vemos según tu negocio.</p>
         <div class="actions">
-          <a class="btn btn-primary" href="/descargar-demo.html">Descargar la demo</a>
+          <a class="btn btn-primary" href={DEMO}>Probar la demo</a>
           <a class="btn btn-ghost" href="/contacto.html">Hablar con el equipo</a>
         </div>
       </div>

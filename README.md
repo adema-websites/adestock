@@ -2,7 +2,7 @@
 
 Sistema Integral de Gestión, Punto de Venta (POS) y Control de Inventario.
 
-ADEstock es una plataforma de gestión comercial diseñada para escalar. Desarrollada con arquitectura híbrida (Cloud + Desktop), permite operar de manera ágil en el mostrador mientras mantiene una sincronización y control financiero estricto en el backend.
+ADEstock es una plataforma de gestión comercial diseñada para escalar. Desarrollada con arquitectura web (en la nube), permite operar de manera ágil en el mostrador mientras mantiene una sincronización y control financiero estricto en el backend.
 
 ## ✨ Funcionalidades Clave
 
@@ -46,12 +46,12 @@ ADEstock es una plataforma de gestión comercial diseñada para escalar. Desarro
 ### ⚙️ 8. Arquitectura, Seguridad y Soporte
 - **Backups Automatizados (Google Drive):** Integración nativa OAuth2 que genera snapshots seguros de la base de datos (eludiendo bloqueos de SO) y archivos multimedia, comprimiéndolos en ZIP y subiéndolos directamente a la nube del cliente.
 - **Sistema de Licenciamiento (Freemium/Pro):** Validador offline integrado. La versión gratuita limita el volumen operativo, mientras que la versión PRO se vincula criptográficamente al hardware (Machine ID).
-- **Despliegue Híbrido:** Preparado para funcionar en la nube (VPS) o empaquetado como un ejecutable `.exe` nativo para Windows, sirviendo archivos estáticos localmente sin dependencias externas.
+- **Despliegue en la nube:** Se distribuye únicamente como licencia web; ya no se publica instalador de escritorio.
 - **Soporte Integrado:** Vistas de error amigables (400, 404, 500) con integración directa a WhatsApp para reportes de fallos al equipo de desarrollo.
 
 ## 🔗 Enlaces útiles
 - [Sitio principal de ademasistemas.com](https://ademasistemas.com)
-- [Descargar demo](descargar-demo.html)
+- [Probar la demo](https://demo.adestock.com.ar/)
 - [Tutoriales](tutoriales.html)
 - [Política de privacidad](politica-privacidad.html)
 - [Términos y condiciones](terminos-condiciones.html)

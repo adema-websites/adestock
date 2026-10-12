@@ -73,8 +73,8 @@ const WA = 'https://wa.me/5491127888995';
   // Respuestas comerciales verificadas contra el sitio actual. Cualquier cambio de planes se hace en precios.html.
   const FIJAS: { re: RegExp; texto: string; links: [string, string][] }[] = [
     { re: /afip|arca|factura(s)? electr|facturaci/i, texto: 'ADEstock se enfoca en la gestión interna de stock, compras, ventas y caja. No incluye facturación electrónica fiscal: podés complementarlo con un facturador externo.', links: [['Preguntas frecuentes', '/#preguntas']] },
-    { re: /precio|cu[aá]nto cuesta|plan|licencia|cuesta/i, texto: 'Hay plan en la nube y licencias locales (mensual, anual y de por vida). Los valores vigentes están en la página de precios.', links: [['Ver precios', '/precios.html']] },
-    { re: /demo|probar|prueba|descargar/i, texto: 'Podés descargar la demo e instalarla en tu PC con Windows para probar el sistema.', links: [['Descargar la demo', '/descargar-demo.html']] },
+    { re: /precio|cu[aá]nto cuesta|plan|licencia|cuesta/i, texto: 'Hay licencia web mensual y plan anual 10 x 12; el pago único se consulta. Los valores vigentes están en la página de precios.', links: [['Ver precios', '/precios.html']] },
+    { re: /demo|probar|prueba|descargar|instalar|escritorio/i, texto: 'Podés probar la demo online en demo.adestock.com.ar, sin instalar nada.', links: [['Probar la demo', 'https://demo.adestock.com.ar/']] },
   ];
 
   let ms: MiniSearch | null = null;

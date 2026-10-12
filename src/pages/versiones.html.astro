@@ -1,15 +1,13 @@
 ---
 import Pagina from '../layouts/Pagina.astro';
-import descargas from '../data/descargas.json';
 import datos from '../data/versiones.json';
 
 const versiones = datos.versiones.filter((v) => v.visible);
 const [actual, ...anteriores] = versiones;
-const inst = descargas.instalador;
 ---
 <Pagina
   title="Versiones de ADEstock | Novedades del sistema de stock"
-  description="Historial de versiones de ADEstock: novedades para stock, inventario, ventas, caja, compras, reportes, depósitos y enlaces de descarga."
+  description="Historial de versiones de ADEstock: novedades para stock, inventario, ventas, caja, compras, reportes y depósitos."
   path="/versiones.html"
 >
   <div class="crumbs"><a href="/">Inicio</a>{' / '}Novedades</div>
@@ -17,25 +15,11 @@ const inst = descargas.instalador;
     <header class="page-hero">
       <div class="page-hero__inner">
         <h1>Novedades de ADEstock</h1>
-        <p class="page-lead">Qué trae cada versión del sistema y dónde descargar el instalador de escritorio.</p>
+        <p class="page-lead">Qué trae cada versión del sistema.</p>
       </div>
     </header>
 
-    <section class="band" aria-labelledby="descarga">
-      <div class="seo-hero__inner">
-        <div class="card dark" style="max-width: 760px;">
-          <h2 id="descarga" style="font-size:1.4rem">Descarga oficial</h2>
-          <p>Última versión estable publicada: <strong>v{inst.version}</strong>.</p>
-          <div class="actions" style="margin-top:.4rem">
-            <a class="btn btn-primary btn-sobre-noche" href={inst.url} download>Descargar {inst.archivo}</a>
-            <a class="btn btn-ghost btn-ghost-noche" href="/descargar-demo.html">Cómo instalarlo</a>
-          </div>
-          <p style="font-size:.95rem">Si ya usás ADEstock, instalá esta versión encima de la anterior: tus datos, productos y configuraciones se mantienen. Antes de actualizar, hacé una copia de seguridad (<a href="/tutoriales/respaldos/" style="color:inherit">cómo hacerla</a>).</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="band alt" aria-labelledby="actual">
+    <section class="band" aria-labelledby="actual">
       <div class="seo-hero__inner">
         <span class="tag">Última versión</span>
         <h2 id="actual" style="max-width: 30ch">v{actual.version}: {actual.titulo}</h2>
@@ -53,7 +37,7 @@ const inst = descargas.instalador;
       </div>
     </section>
 
-    <section class="band" aria-labelledby="historial">
+    <section class="band alt" aria-labelledby="historial">
       <div class="seo-hero__inner">
         <h2 id="historial">Historial</h2>
         <div class="historial">
@@ -73,7 +57,6 @@ const inst = descargas.instalador;
                   </div>
                 ))}
               </div>
-              {v.url && <p style="margin-top:1rem"><a href={v.url} download style="color:var(--accent)">Descargar {v.archivo}</a></p>}
             </details>
           ))}
         </div>

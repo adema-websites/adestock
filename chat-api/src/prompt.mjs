@@ -5,7 +5,7 @@ export const HECHOS = [
   'ADEstock es un sistema de stock, ventas, compras y caja para comercios argentinos (kioscos, almacenes, minimarkets, dietéticas, distribuidoras).',
   'No incluye facturación electrónica fiscal (AFIP/ARCA). Se puede complementar con un facturador externo.',
   'Es monoempresa. Permite varios depósitos y varios puntos de venta dentro del mismo negocio.',
-  'Hay una demo descargable para Windows con 3 días de prueba. Después solicita licencia.',
+  'Hay una demo online en https://demo.adestock.com.ar/ (sin instalar nada). ADEstock se usa desde el navegador; ya no existe versión de escritorio ni instalador.',
   'Los planes y precios vigentes están en https://adestock.com.ar/precios.html. No des cifras de precio: remití a esa página.',
   'Para consultas comerciales o soporte: WhatsApp +54 9 11 2788-8995 o contact@ademasistemas.com.',
 ];

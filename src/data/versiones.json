@@ -1,9 +1,9 @@
 {
-  "_nota": "Historial de versiones del instalador de escritorio. 'visible: false' oculta la versión hasta que exista el enlace oficial. scripts/aplicar_instalador.mjs lo activa y completa 'url' y 'archivo'.",
+  "_nota": "Historial de versiones de ADEstock. 'visible: false' oculta una versión de la página de novedades. El instalador de escritorio ya no se distribuye.",
   "versiones": [
     {
       "version": "3.0.1",
-      "visible": false,
+      "visible": true,
       "fecha": "Octubre 2026",
       "titulo": "Revistas de ofertas, app del dueño y caja más ordenada",
       "resumen": "La versión 3 suma revistas y folletos con tu marca, una app para el dueño en el celular, promociones por cantidad y un cierre de caja que exige las compras confirmadas. La 3.0.1 incluye la documentación completa y correcciones.",
