@@ -94,7 +94,7 @@ import { ROLES, SUPERFICIES, categorias } from '../../lib/tutoriales';
     for (const g of res.slice(0, 8)) {
       const li = document.createElement('li');
       const a = document.createElement('a');
-      a.href = '/tutoriales/' + g.tutorial_id + '/';
+      a.href = g.pasos[0].url.split('#')[0];
       a.textContent = g.title;
       const h = document.createElement('h2'); h.appendChild(a);
       const p = document.createElement('p'); p.textContent = extracto(g.pasos[0].text);

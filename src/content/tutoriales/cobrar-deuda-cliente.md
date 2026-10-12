@@ -2,7 +2,7 @@
 id: "cobrar-deuda-cliente"
 slug: "cobrar-deuda-cliente"
 title: "Cómo cobrar la deuda de un cliente"
-description: "Registrar que un cliente pagó parte o toda su deuda, eligiendo qué deudas cancela, con qué medio paga y si se cobra a precio original o actualizado."
+description: "Registrá que un cliente pagó parte o toda su deuda, eligiendo qué deudas cancela y con qué medio paga."
 category: "clientes"
 priority: "P1"
 roles: ["cajero","dueno"]
@@ -10,17 +10,18 @@ surface: ["pos","panel"]
 status: "draft"
 tiempo: "2 minutos"
 necesitas: "el turno abierto y un cliente con deuda"
-para_quien: "cajeros y dueños con el permiso *Puede cobrar Cta. Cte.*"
+para_quien: "cajeros y dueños con el permiso Puede cobrar Cta. Cte."
 modulo: "venta (POS → Cobro de cuentas corrientes), billetera"
 permiso: "Puede cobrar Cta. Cte."
 source_path: "01-manual-usuario/17-cobrar-la-deuda-de-un-cliente.md"
 source_hash: "58826f1813c1b7afe8367217e8c4381df51f91ecb36da5feea225d1fe039330c"
-product_version: "pendiente-verificar"
+product_version: "3.0.0"
 verified_at: "2026-10-12"
 reviewed_at: null
+reviewed_by: null
 synonyms: ["cobrar deuda","pago parcial","saldo a favor"]
 related: []
-social_image: null
+social_image: "/social/cobrar-deuda-cliente-v1.jpg"
 ---
 ## Qué vas a lograr
 

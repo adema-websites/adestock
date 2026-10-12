@@ -15,12 +15,12 @@ modulo: "Producto > Ajustes de Inventario"
 permiso: "acceso al panel de administración"
 source_path: "docs/EXCEL-HALLAZGOS.md"
 source_hash: "fb193c5682f27279abe21d723b727a8e7e50b148d48b339a34385d3230c48cf3"
-product_version: "pendiente-verificar"
+product_version: "3.0.1"
 verified_at: "2026-10-12"
 reviewed_at: null
 synonyms: ["cargar stock excel","stock inicial","existencias","cargar existencias","cuánto tengo de cada producto","ajuste por excel","inventario inicial"]
 related: ["importar-productos-excel","contar-stock","ajustar-stock-mermas-transferencias"]
-social_image: null
+social_image: "/social/cargar-stock-inicial-excel-v1.jpg"
 ---
 ## Qué vas a lograr
 

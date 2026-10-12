@@ -1,0 +1,18 @@
+{
+  "_nota": "Fuente de verdad de los instaladores publicados. Se actualiza con scripts/aplicar_instalador.mjs (escritorio). Agent Printer se mantiene a mano en public/agent-printer.html.",
+  "instalador": {
+    "version": "2.3.3",
+    "url": "https://github.com/adema-websites/adestock/releases/download/ADEstock-desktop-2.3.3v/Adestock_Installer_v2.3.3.exe",
+    "archivo": "Adestock_Installer_v2.3.3.exe",
+    "publicado": "2026-05-03",
+    "pendiente": "3.0.1: falta el enlace oficial"
+  },
+  "historial": [],
+  "agent_printer": {
+    "version": "1.0.7",
+    "url": "https://github.com/ademasistemas/agent-printer/releases/download/1.0.7/AgentPrinter_Setup_v1.0.7.exe",
+    "archivo": "AgentPrinter_Setup_v1.0.7.exe",
+    "sha256": "186225CB86A1096492B5BFBCE8D4611EBC45E48667B1EACAC7E17502AE81315C",
+    "publicado": "2026-10-12"
+  }
+}

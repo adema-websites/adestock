@@ -1,10 +1,11 @@
 ---
 import Base from '../../layouts/Base.astro';
 import BuscadorForm from '../../components/BuscadorForm.astro';
-import { categorias, getTutoriales, urlTutorial, esBorrador, SITE } from '../../lib/tutoriales';
+import { categorias, getAyuda, getTutoriales, urlAyuda, urlTutorial, esBorrador, SITE } from '../../lib/tutoriales';
 import rutas from '../../data/rutas-aprendizaje.json';
 
 const todos = await getTutoriales();
+const ayuda = await getAyuda();
 const porSlug = new Map(todos.map((t) => [t.data.slug, t]));
 const tareas = rutas.tareas.filter((t) => porSlug.has(t.slug));
 const cats = Object.entries(categorias)
@@ -49,6 +50,17 @@ const jsonLd = [
         ))}
       </ul>
     </section>
+
+    {ayuda.length > 0 && (
+      <section aria-labelledby="aprender">
+        <h2 id="aprender">Para entender el sistema</h2>
+        <ul class="tarjetas">
+          {ayuda.map((a) => (
+            <li><a href={urlAyuda(a.data.slug)}><strong>{a.data.title}</strong><span>{a.data.description}</span></a></li>
+          ))}
+        </ul>
+      </section>
+    )}
 
     <section aria-labelledby="cats">
       <h2 id="cats">Todas las guías por tema</h2>

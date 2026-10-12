@@ -2,25 +2,26 @@
 id: "billeteras-y-cuentas"
 slug: "billeteras-y-cuentas"
 title: "Cómo usar billeteras y cuentas"
-description: "Saber cuánta plata tenés en cada lugar (la caja de efectivo, el banco, Mercado Pago…) y llevar sus movimientos: qué entró, qué salió y cuándo. También pasar…"
+description: "Sabé cuánta plata tenés en cada lugar (caja, banco, Mercado Pago) y llevá sus movimientos y transferencias."
 category: "caja"
 priority: "P2"
 roles: ["dueno","administrativo"]
 surface: ["panel"]
 status: "draft"
 tiempo: "10 minutos"
-necesitas: "entrar al panel de administración (*Billeteras* en el menú de arriba)"
+necesitas: "entrar al panel de administración (Billeteras en el menú de arriba)"
 para_quien: "el dueño y administrativos"
 modulo: "billetera (Billeteras y Cuentas, Movimientos, Transferencias, Ajustes), agenda (Medios de pago)"
 permiso: "acceso al panel de administración"
 source_path: "01-manual-usuario/33-billeteras-y-cuentas.md"
-source_hash: "37bd0a001b87b265ebf82734622cf6ac8c02f47b926a21b8475c42785ce01e6d"
+source_hash: "18a5c124943de3879a70daceae2503547b3c00459274477de45bfd6268c78b19"
 product_version: "2.5.3"
 verified_at: "2026-10-12"
 reviewed_at: null
+reviewed_by: null
 synonyms: ["billetera","transferencias","saldos"]
 related: []
-social_image: null
+social_image: "/social/billeteras-y-cuentas-v1.jpg"
 ---
 ## Qué vas a lograr
 
@@ -29,7 +30,7 @@ Saber **cuánta plata tenés en cada lugar** (la caja de efectivo, el banco, Mer
 ## Cómo funciona (leelo una vez)
 
 - Una **billetera** es un "lugar donde hay plata": efectivo, una cuenta bancaria, Mercado Pago, etc. Cada una lleva su propio saldo.
-- **Los movimientos se cargan solos.** Cuando cobrás una venta, pagás a un proveedor, registrás un gasto o hacés un retiro, el sistema anota el movimiento en la billetera **vinculada al medio de pago** que usaste. No cargás nada dos veces.
+- **Los movimientos se cargan solos.** Cuando cobrás una venta, pagás a un proveedor, registrás un gasto o hacés un retiro **desde el POS**, el sistema anota el movimiento en la billetera **vinculada al medio de pago** que usaste. No cargás nada dos veces, y los pagos y cobros **no se cargan desde el panel**: lo único que se mueve a mano acá son las **transferencias** entre billeteras y los **ajustes**.
 - **Saldo actual = saldo inicial + ingresos − egresos.**
 - Para que un pago impacte en una billetera, su **medio de pago** tiene que estar vinculado a ella (ver *Vincular un medio de pago*, más abajo). Los medios sin billetera (por ejemplo *Cuenta Corriente*) no mueven ninguna.
 
@@ -81,7 +82,7 @@ Una cuenta **inactiva** (desmarcando *Cuenta activa*) no se puede usar en operac
 
 ### 3. Vinculá un medio de pago a la billetera
 
-Para que, por ejemplo, **las transferencias que te hacen los clientes** entren al banco, el medio de pago *Transferencia* tiene que estar vinculado a esa billetera. Se hace desde el engranaje del POS (**Menú rápido → Configuración → Medios de cobro**, campo **Billetera**) como se explica en [La configuración del POS](05-configuracion-del-pos.md), o desde el panel en **Agenda → Medios de pago** (columna *Billetera asociada*). Lo mismo para los **medios de compra** (con qué pagás a los proveedores).
+Para que, por ejemplo, **las transferencias que te hacen los clientes** entren al banco, el medio de pago *Transferencia* tiene que estar vinculado a esa billetera. Se hace desde el engranaje del POS (**Menú rápido → Configuración → Medios de cobro**, campo **Billetera**) como se explica en [La configuración del POS](/tutoriales/configurar-punto-de-venta/), o desde el panel en **Agenda → Medios de pago** (columna *Billetera asociada*). Lo mismo para los **medios de compra** (con qué pagás a los proveedores).
 
 > Si un medio de pago **no tiene billetera**, sus cobros y pagos **no se registran** en ninguna billetera.
 
@@ -171,7 +172,7 @@ Hay un ajuste para decidir qué hace el sistema cuando una **transferencia o egr
 | Qué | Detalle |
 |---|---|
 | Saldo | Se calcula en el momento: saldo inicial + ingresos − egresos de los movimientos |
-| Movimientos automáticos | Los crean el sistema al registrar ventas, compras, gastos, retiros, cobros y pagos a proveedores, si el medio de pago tiene billetera |
+| Movimientos automáticos | Los crea el sistema al registrar ventas, compras, gastos, retiros, cobros y pagos a proveedores desde el POS, si el medio de pago tiene billetera. Al **anular una venta** con cobros, la devolución resta de la billetera del medio usado |
 | Transferencia | Al confirmarla crea un egreso (origen) y un ingreso (destino) |
 | Ajuste | Al confirmarlo crea un movimiento *Ajuste Manual* |
 | Registro de origen | Cada movimiento guarda el registro que lo generó (la venta, la compra, etc.) |
@@ -189,5 +190,5 @@ Hay un ajuste para decidir qué hace el sistema cuando una **transferencia o egr
 
 ## Siguiente paso
 
-- [La configuración del POS](05-configuracion-del-pos.md) (medios de cobro y billeteras)
-- [Pagar a un proveedor](21-pagar-a-un-proveedor.md)
+- [La configuración del POS](/tutoriales/configurar-punto-de-venta/) (medios de cobro y billeteras)
+- [Pagar a un proveedor](/tutoriales/pagar-proveedor/)

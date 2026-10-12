@@ -1,6 +1,6 @@
 import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
-import { SITE, categorias, esBorrador, getTutoriales } from '../lib/tutoriales';
+import { SITE, categorias, esBorrador, getAyuda, getTutoriales } from '../lib/tutoriales';
 
 // Sitemap generado en el build: solo URLs canónicas, públicas e indexables.
 //  - Páginas estáticas de public/: se leen sus <link rel=canonical> y se excluyen las que declaran noindex.
@@ -42,6 +42,10 @@ export async function GET() {
       if (publicados.some((t) => t.data.category === cat)) urls.set(`${SITE}/tutoriales/categorias/${cat}/`, undefined);
     }
     for (const t of publicados) urls.set(`${SITE}/tutoriales/${t.data.slug}/`, t.data.reviewed_at ?? undefined);
+  }
+
+  for (const a of (await getAyuda()).filter((x) => !esBorrador(x))) {
+    urls.set(`${SITE}/ayuda/${a.data.slug}/`, a.data.reviewed_at ?? undefined);
   }
 
   const cuerpo = [...urls]

@@ -10,11 +10,21 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const SRC = resolve(process.argv[2] ?? join(ROOT, '..', 'documentacion', '01-manual-usuario'));
+const DEFAULT_SRC = [join(ROOT, '..', '..', 'ESCRITORIO', 'adestock', 'documentacion', '01-manual-usuario'), join(ROOT, '..', 'documentacion', '01-manual-usuario')].find((p) => existsSync(p));
+const SRC = resolve(process.argv[2] ?? DEFAULT_SRC);
 const OUT = join(ROOT, 'src', 'content', 'tutoriales');
 const ASSETS = join(ROOT, 'src', 'assets', 'tutoriales');
 const mapa = JSON.parse(readFileSync(join(ROOT, 'src', 'data', 'tutoriales-mapa.json'), 'utf8'));
 mkdirSync(OUT, { recursive: true });
+
+// La mayoría de los tutoriales no declara versión propia. El README de inicio declara la versión contra la que
+// se verificó el conjunto (tutoriales 02-38): se usa como respaldo y queda registrado en product_version.
+const VERSION_CONJUNTO = (() => {
+  try {
+    const r = readFileSync(join(SRC, '..', '00-inicio', 'README.md'), 'utf8');
+    return (r.match(/version_sistema:\s*(\d+\.\d+\.\d+)/) ?? [])[1] ?? null;
+  } catch { return null; }
+})();
 
 const files = readdirSync(SRC).filter((f) => /^\d\d-.*\.md$/.test(f));
 const yaml = (v) => JSON.stringify(v); // JSON es YAML válido y escapa bien tildes y comillas
@@ -25,7 +35,7 @@ function parseFrontmatter(text) {
   const meta = {};
   for (const line of m[1].split(/\r?\n/)) {
     const i = line.indexOf(':');
-    if (i > 0) meta[line.slice(0, i).trim()] = line.slice(i + 1).trim();
+    if (i > 0) meta[line.slice(0, i).trim()] = line.slice(i + 1).trim().replace(/^"(.*)"$/, '$1');
   }
   return { meta, body: text.slice(m[0].length) };
 }
@@ -68,9 +78,16 @@ for (const t of mapa.tutoriales) {
     },
   );
 
+  para = plain(para); tiempo = plain(tiempo); necesitas = plain(necesitas);
+
   // Descripción = primer párrafo de "Qué vas a lograr"
   const lograr = body.match(/## Qué vas a lograr\s*\r?\n+([\s\S]*?)(\r?\n\r?\n|$)/);
   const description = recortar(plain(lograr ? lograr[1] : meta.titulo));
+
+  // Enlaces entre tutoriales: NN-nombre.md[#ancla] -> /tutoriales/<slug>/[#ancla]
+  const porNumero = new Map(mapa.tutoriales.map((x) => [x.n, x.slug]));
+  body = body.replace(/\]\((\d\d)-[a-z0-9-]+\.md(#[^)]*)?\)/g, (m, n, ancla) =>
+    porNumero.has(n) ? `](/tutoriales/${porNumero.get(n)}/${ancla ?? ''})` : m);
 
   // Imágenes referenciadas
   const imgs = new Set();
@@ -97,7 +114,7 @@ for (const t of mapa.tutoriales) {
     id: t.slug,
     slug: t.slug,
     title: previo.title ?? t.titulo,
-    description: previo.description ?? description,
+    description: t.desc ?? previo.description ?? description,
     category: t.cat,
     priority: t.prio,
     roles: t.roles,
@@ -110,9 +127,12 @@ for (const t of mapa.tutoriales) {
     permiso: meta.permiso,
     source_path: `01-manual-usuario/${file}`,
     source_hash: createHash('sha256').update(raw).digest('hex'),
-    product_version: previo.product_version ?? meta.version_sistema ?? 'pendiente-verificar',
+    product_version: previo.product_version && previo.product_version !== 'pendiente-verificar'
+      ? previo.product_version
+      : (String(meta.version_sistema ?? '').match(/\d+\.\d+\.\d+/) ?? [VERSION_CONJUNTO ?? 'pendiente-verificar'])[0],
     verified_at: (meta.verificado.match(/\d{4}-\d{2}-\d{2}/) ?? [''])[0],
     reviewed_at: previo.reviewed_at ?? null,
+    reviewed_by: previo.reviewed_by ?? null,
     synonyms: t.syn,
     related: previo.related ?? [],
     social_image: previo.social_image ?? null,

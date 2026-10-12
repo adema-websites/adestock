@@ -2,33 +2,36 @@
 id: "consultar-reportes-y-exportar"
 slug: "consultar-reportes-y-exportar"
 title: "Cómo consultar reportes y exportarlos"
-description: "Encontrar rápido cualquier dato del negocio (una venta, un pago, un gasto, una compra), filtrarlo, exportarlo a Excel y sacar el reporte de costos de una…"
+description: "Encontrá cualquier dato del negocio (una venta, un pago, un gasto, una compra), filtralo y exportalo a Excel."
 category: "caja"
 priority: "P2"
 roles: ["dueno","administrativo"]
 surface: ["panel"]
 status: "draft"
 tiempo: "15 minutos"
-necesitas: "entrar al panel de administración (POS → Menú rápido → *Panel de administración*, o `/admin/`)"
+necesitas: "entrar al panel de administración (POS → Menú rápido → Panel de administración, o /admin/)"
 para_quien: "el dueño y administrativos"
 modulo: "panel de administración (Venta, Compra, Agenda, Producto)"
 permiso: "acceso al panel de administración"
 source_path: "01-manual-usuario/31-consultas-y-reportes-del-admin.md"
-source_hash: "aa64d41f2077752337a7d438a01fba8e554f4120192929d0ae378f6cab398e58"
+source_hash: "6165602d86a9c4e38234622ab987021c2306944222cba0dba2c24d012fb8ed0e"
 product_version: "2.5.3"
 verified_at: "2026-10-12"
 reviewed_at: null
+reviewed_by: null
 synonyms: ["reportes","exportar","estadísticas","costos"]
 related: []
-social_image: null
+social_image: "/social/consultar-reportes-y-exportar-v1.jpg"
 ---
 ## Qué vas a lograr
 
 Encontrar rápido cualquier dato del negocio (una venta, un pago, un gasto, una compra), **filtrarlo**, **exportarlo a Excel** y sacar el **reporte de costos** de una venta.
 
-> **Para ver cómo viene el negocio en general** (ventas, ganancia, deudas, productos), usá la [app del dueño](30-app-del-dueno.md): es más rápida y ya viene calculada. El panel de administración sirve para **buscar el detalle** y **exportar**.
+> **Para ver cómo viene el negocio en general** (ventas, ganancia, deudas, productos), usá la [app del dueño](/tutoriales/usar-app-del-dueno/): es más rápida y ya viene calculada. El panel de administración sirve para **buscar el detalle** y **exportar**.
 
 ## Cómo es cualquier listado del panel
+
+> **Los listados de pagos, cobros, gastos, retiros y turnos son de consulta.** Esas operaciones se registran **solo desde el POS**, con el turno abierto: el panel no permite cargarlas ni editarlas. Sí podés **filtrarlas y exportarlas**.
 
 Todos los listados del panel (ventas, compras, gastos, etc.) funcionan igual. Ejemplo con **Venta → Ventas**:
 
@@ -85,7 +88,7 @@ Tildá las columnas que querés ver y tocá **Guardar Preferencias** (1 y 2 en l
 
 | Listado | Dónde está | Para qué sirve |
 |---|---|---|
-| **Ventas** | Venta → Ventas | Cada venta con su fecha, cajero, cliente, total, seguimiento y ticket. Desde acá se **anulan** ventas y se imprimen tickets (ver [Anular una venta](10-anular-una-venta-y-reimprimir-tickets.md)) |
+| **Ventas** | Venta → Ventas | Cada venta con su fecha, cajero, cliente, total, seguimiento y ticket. Desde acá se **anulan** ventas y se imprimen tickets (ver [Anular una venta](/tutoriales/anular-venta-y-reimprimir-ticket/)) |
 | **Productos vendidos** | Venta → Productos vendidos | **Una fila por cada producto vendido**: cantidad, precio, **costo unitario**, costo total y precio final. Ideal para ver qué se vendió y con qué margen |
 
 ![Productos vendidos](../../assets/tutoriales/31-consultas-y-reportes-admin/06-productos-vendidos.png)
@@ -108,7 +111,7 @@ Tildá las columnas que querés ver y tocá **Guardar Preferencias** (1 y 2 en l
 | Listado | Dónde está | Para qué sirve |
 |---|---|---|
 | **Gastos** | Agenda → Gastos | Los gastos cargados (fecha, categoría, medio de pago, caja, importe y si está confirmado). Filtrá por categoría o medio de pago |
-| **Compras** | Compra → Compras | Cada compra con su proveedor, total de productos, **fletes** y total general; descarga el PDF de la compra |
+| **Compras** | Compra → Compras | Cada compra con su proveedor, total de productos, **fletes** y total general; descarga el PDF de la compra. Las compras se cargan desde el POS y acá se **consultan y se confirman** (acción *Confirmar compra*) |
 | **Productos comprados** | Compra → Productos comprados | **Una fila por producto comprado**: cantidad y precio unitario pagado |
 | **Egresos por Compras** | Compra → Egresos por Compras | **Cómo se pagó** cada compra, qué está *Pago Realizado* y qué queda *Pendiente* |
 | **Pagos Masivos a Prov.** | Compra → Pagos Masivos a Prov. | Los pagos a proveedores que repartieron un monto entre varias compras |
@@ -172,5 +175,5 @@ El PDF muestra los datos de la venta (número, cliente) y, por cada producto: **
 
 ## Siguiente paso
 
-- [Controlar un turno de caja desde el panel](32-controlar-un-turno-de-caja-en-el-panel.md)
-- [La app del dueño](30-app-del-dueno.md)
+- [Controlar un turno de caja desde el panel](/tutoriales/controlar-turnos-caja-panel/)
+- [La app del dueño](/tutoriales/usar-app-del-dueno/)

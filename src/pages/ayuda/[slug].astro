@@ -1,0 +1,64 @@
+---
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { SITE, esBorrador, getAyuda, urlAyuda } from '../../lib/tutoriales';
+
+export async function getStaticPaths() {
+  const todas = await getAyuda();
+  return todas.map((a) => ({ params: { slug: a.data.slug }, props: { a, todas } }));
+}
+const { a, todas } = Astro.props;
+const d = a.data;
+const { Content, headings } = await render(a);
+const toc = headings.filter((h) => h.depth === 2);
+const borrador = esBorrador(a);
+const path = urlAyuda(d.slug);
+const versionOk = d.product_version !== 'pendiente-verificar';
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: SITE + '/' },
+      { '@type': 'ListItem', position: 2, name: 'Tutoriales', item: SITE + '/tutoriales/' },
+      { '@type': 'ListItem', position: 3, name: d.title, item: SITE + path },
+    ],
+  },
+];
+---
+<Base title={`${d.title} | ADEstock`} description={d.description} path={path} noindex={borrador} ogType="article" ogImage={d.social_image} jsonLd={jsonLd}>
+  <div class="seo-breadcrumbs">
+    <a href="/">Inicio</a>{' / '}<a href="/tutoriales/">Tutoriales</a>{' / '}{d.title}
+  </div>
+  <main id="contenido" class="tuto">
+    {borrador && (
+      <p class="tuto-aviso" role="note"><strong>Borrador sin revisar.</strong> Esta página todavía no pasó la revisión editorial y no se indexa.</p>
+    )}
+    <header class="tuto-head">
+      <h1>{d.title}</h1>
+      <p class="tuto-lead">{d.description}</p>
+      <dl class="tuto-meta">
+        <div><dt>Verificado</dt><dd><time datetime={d.verified_at}>{d.verified_at}</time> · {versionOk ? `versión ${d.product_version}` : 'versión por confirmar'}</dd></div>
+      </dl>
+    </header>
+    <div class="tuto-grid">
+      {toc.length > 1 && (
+        <nav class="tuto-toc" aria-label="En esta página">
+          <h2>En esta página</h2>
+          <ol>{toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol>
+        </nav>
+      )}
+      <article class="tuto-body">
+        <Content />
+        <nav class="tuto-next" aria-label="Más ayuda">
+          <h2>Más ayuda</h2>
+          <ul>
+            <li><a href="/tutoriales/">Todos los tutoriales</a></li>
+            {todas.filter((x) => x.data.slug !== d.slug).map((x) => <li><a href={urlAyuda(x.data.slug)}>{x.data.title}</a></li>)}
+          </ul>
+        </nav>
+      </article>
+    </div>
+  </main>
+</Base>

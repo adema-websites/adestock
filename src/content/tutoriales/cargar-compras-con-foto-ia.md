@@ -2,22 +2,23 @@
 id: "cargar-compras-con-foto-ia"
 slug: "cargar-compras-con-foto-ia"
 title: "Cómo cargar una compra con foto e IA en ADEstock"
-description: "Sacarle una foto a la boleta o factura del proveedor y que el sistema lea los renglones solo, los asocie a tus productos, calcule el flete si lo hay, y deje…"
+description: "Sacale una foto a la boleta del proveedor y revisá los renglones que lee el sistema antes de crear y confirmar la compra."
 category: "compras"
 priority: "P0"
 roles: ["dueno","administrativo"]
 surface: ["pos","panel"]
 status: "draft"
 tiempo: "3 a 5 minutos por boleta (menos cada vez)"
-necesitas: "el módulo *Compras con foto (OCR)* activado y una API key de IA cargada (ver *Antes de empezar*)"
+necesitas: "el módulo Compras con foto (OCR) activado y una API key de IA cargada (ver Antes de empezar)"
 para_quien: "dueños y administrativos que cargan la mercadería que compran"
 modulo: "compra (Compra simple OCR), producto, agenda (Proveedor)"
 permiso: "acceso al módulo de compras; la configuración de la API la hace el dueño"
 source_path: "01-manual-usuario/20-comprar-con-foto-ocr.md"
-source_hash: "99312189cf7d516821b1d8aa1e5445e37216ed0c2d837fe930fbb0115d9a53c9"
-product_version: "pendiente-verificar"
+source_hash: "e8703945f22ff50b4e5bee6b94a2afc795103e14dd656ced34c8667bf6274f3f"
+product_version: "3.0.0"
 verified_at: "2026-10-12"
 reviewed_at: null
+reviewed_by: null
 synonyms: ["boleta","factura proveedor","cargar compra","foto factura","OCR","foto de factura"]
 related: []
 social_image: "/social/cargar-compras-con-foto-ia-v1.jpg"
@@ -255,7 +256,7 @@ La compra aparece en **Compras creadas**. **Todavía no impactó en el stock**: 
 
 ## Confirmar la compra
 
-La compra se crea **pendiente de confirmación**, para que puedas revisarla antes de que mueva stock y plata. Se confirma desde el panel de administración:
+La compra se crea **pendiente de confirmación**, para que puedas revisarla antes de que mueva stock y plata. La confirma el **dueño o un administrativo** desde el panel de administración (más adelante también desde la app del dueño). Mientras esté pendiente **no descuenta** plata del arqueo, y si se pagó con dinero u otro medio (no cuenta corriente) **tiene que estar confirmada antes de cerrar el turno** (ver [Turno de caja](/tutoriales/abrir-y-cerrar-caja/#antes-de-cerrar-las-compras-pagadas-tienen-que-estar-confirmadas)):
 
 **Panel de administración → Compra → Compras**.
 
@@ -386,7 +387,8 @@ En la #2 el flete está **dentro** de los productos (por eso 84.345 y sin column
 | El OCR leyó mal una cantidad o un precio | Foto poco clara | Corregilo a mano en el paso 4 (los campos son editables) |
 | La *Diferencia* no es $ 0 | Un renglón mal leído, faltante o sin asignar | Compará con la boleta y corregí; usá *Agregar renglón manual* |
 | Un producto se asocia mal siempre | El alias quedó mal aprendido | Corregí el producto en ese renglón y revisá los alias (ver *Dónde ver lo que aprendió el sistema*) |
-| La compra no mueve el stock | Quedó **pendiente** | Confirmala en Panel admin → Compra → Compras → *Confirmar compra* |
+| La compra no mueve el stock | Quedó **pendiente** | Confirmala en Panel admin → Compra → Compras → *Confirmar compra* (la hace el dueño o un administrativo) |
+| No me deja cerrar la caja | Hay compras pagadas sin confirmar en tu turno | Pedí que las confirmen en el panel |
 | Me equivoqué con el flete | — | Antes de confirmar, no hay efecto: eliminá la compra pendiente y volvela a cargar |
 
 ## Siguiente paso

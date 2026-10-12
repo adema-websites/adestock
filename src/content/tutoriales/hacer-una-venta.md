@@ -2,7 +2,7 @@
 id: "hacer-una-venta"
 slug: "hacer-una-venta"
 title: "Cómo hacer una venta en ADEstock"
-description: "Armar el carrito, cobrar en efectivo con vuelto y cerrar la venta. Es el flujo más común del día; los demás (varios medios de pago, cuenta corriente) son…"
+description: "Armá el carrito, cobrá en efectivo con vuelto y cerrá la venta. Es el flujo más común del día y la base de los demás."
 category: "vender"
 priority: "P0"
 roles: ["cajero","dueno"]
@@ -15,9 +15,10 @@ modulo: "venta (POS)"
 permiso: "ninguno (requiere turno de caja abierto y una caja asignada)"
 source_path: "01-manual-usuario/07-hacer-una-venta.md"
 source_hash: "43f7e836540d9e76dce3b5ba0e0e5263d38a7f2185ce4b3637e85b94df0ccaf6"
-product_version: "pendiente-verificar"
+product_version: "3.0.0"
 verified_at: "2026-10-12"
 reviewed_at: null
+reviewed_by: null
 synonyms: ["vender","cobrar","carrito","vuelto"]
 related: []
 social_image: "/social/hacer-una-venta-v1.jpg"

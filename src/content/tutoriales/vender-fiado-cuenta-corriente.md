@@ -2,25 +2,26 @@
 id: "vender-fiado-cuenta-corriente"
 slug: "vender-fiado-cuenta-corriente"
 title: "Cómo vender fiado a cuenta corriente"
-description: "Entregar la mercadería sin cobrar en el momento y dejar la plata como deuda del cliente, para que la pague después."
+description: "Entregá la mercadería sin cobrar en el momento y dejá la plata como deuda del cliente para que la pague después."
 category: "clientes"
 priority: "P1"
 roles: ["cajero","dueno"]
 surface: ["pos"]
 status: "draft"
 tiempo: "2 minutos"
-necesitas: "un cliente registrado con la **cuenta corriente habilitada** (ver *Crear y editar clientes*)"
+necesitas: "un cliente registrado con la cuenta corriente habilitada (ver Crear y editar clientes)"
 para_quien: "cajeros y dueños"
 modulo: "venta (POS), agenda (Cliente)"
 permiso: "ninguno; el cliente debe tener la cuenta corriente habilitada"
 source_path: "01-manual-usuario/09-vender-a-cuenta-corriente.md"
-source_hash: "96cadcd7768776ea4e00bcbcb9f340e61b568061cb4182c94684812089f4a05c"
-product_version: "pendiente-verificar"
+source_hash: "94e39df348138a42966f8268d5ad64140b3fb79300522a84f83e33b98cb580d7"
+product_version: "3.0.0"
 verified_at: "2026-10-12"
 reviewed_at: null
+reviewed_by: null
 synonyms: ["fiar","fiado","cuenta corriente","deuda"]
 related: []
-social_image: null
+social_image: "/social/vender-fiado-cuenta-corriente-v1.jpg"
 ---
 ## Qué vas a lograr
 

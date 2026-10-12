@@ -2,25 +2,26 @@
 id: "cobrar-con-varios-medios-de-pago"
 slug: "cobrar-con-varios-medios-de-pago"
 title: "Cómo cobrar con varios medios de pago"
-description: "Cobrar una misma venta repartida en varios medios (por ejemplo, una parte en efectivo y el resto con tarjeta), y aplicar un descuento sobre el total."
+description: "Cobrá una venta repartida en varios medios (por ejemplo efectivo y tarjeta) y aplicá un descuento sobre el total."
 category: "vender"
 priority: "P1"
 roles: ["cajero","dueno"]
 surface: ["pos"]
 status: "draft"
 tiempo: "2 minutos"
-necesitas: "haber armado el carrito (ver *Hacer una venta*)"
+necesitas: "haber armado el carrito (ver Hacer una venta)"
 para_quien: "cajeros y dueños"
 modulo: "venta (POS → Cobro)"
 permiso: "aplicar descuentos requiere \"Puede hacer descuentos\""
 source_path: "01-manual-usuario/08-cobrar-con-varios-medios-de-pago.md"
-source_hash: "7e095d1820835f0a12c0926efb8d5ae5f258908b3ad27ee56c549ada4ac5a6f2"
-product_version: "pendiente-verificar"
+source_hash: "09bd2011769d9f29446bb4fdae3dc7666ef63200d6037e467273f859ebd2bb0f"
+product_version: "3.0.0"
 verified_at: "2026-10-12"
 reviewed_at: null
+reviewed_by: null
 synonyms: ["pago mixto","mitad efectivo mitad tarjeta","descuento","recargo"]
 related: []
-social_image: null
+social_image: "/social/cobrar-con-varios-medios-de-pago-v1.jpg"
 ---
 ## Qué vas a lograr
 

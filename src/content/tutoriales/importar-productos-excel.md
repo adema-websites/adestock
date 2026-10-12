@@ -15,12 +15,12 @@ modulo: "Producto > Inventario Inicial (Excel)"
 permiso: "acceso al panel de administración"
 source_path: "docs/EXCEL-HALLAZGOS.md"
 source_hash: "4aa75b7495be7d5a59ba111e704a956912d4756a2a025bf50e3ff4c8575398a6"
-product_version: "pendiente-verificar"
+product_version: "3.0.1"
 verified_at: "2026-10-12"
 reviewed_at: null
 synonyms: ["subir productos de planilla","planilla","excel","importar catálogo","cargar catálogo","plantilla","cargar muchos productos"]
 related: ["cargar-productos","contar-stock"]
-social_image: null
+social_image: "/social/importar-productos-excel-v1.jpg"
 ---
 ## Qué vas a lograr
 

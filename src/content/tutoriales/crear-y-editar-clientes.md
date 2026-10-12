@@ -2,7 +2,7 @@
 id: "crear-y-editar-clientes"
 slug: "crear-y-editar-clientes"
 title: "Cómo crear y editar clientes"
-description: "Registrar a un cliente para poder asignarle ventas, venderle a cuenta corriente (fiado) y llevar su historial y su saldo."
+description: "Registrá un cliente para asignarle ventas, venderle a cuenta corriente y llevar su historial y su saldo."
 category: "clientes"
 priority: "P1"
 roles: ["cajero","dueno","administrativo"]
@@ -14,13 +14,14 @@ para_quien: "cajeros y dueños"
 modulo: "agenda (Cliente), venta (POS)"
 permiso: "ninguno para crear un cliente rápido desde la venta; el listado de gestión está en el Menú rápido"
 source_path: "01-manual-usuario/15-crear-y-editar-clientes.md"
-source_hash: "4f0fef92f2a6d0ec6efb6ed57252fb65156cb88547d8d9d8873e52f4747415e8"
-product_version: "pendiente-verificar"
+source_hash: "80f3c87b470982afeb4a1fa16a130a8d605dfb55be4f0d5a8f6b00c60c96473c"
+product_version: "3.0.0"
 verified_at: "2026-10-12"
 reviewed_at: null
+reviewed_by: null
 synonyms: ["alta de cliente","cliente nuevo"]
 related: []
-social_image: null
+social_image: "/social/crear-y-editar-clientes-v1.jpg"
 ---
 ## Qué vas a lograr
 

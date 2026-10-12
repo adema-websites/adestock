@@ -2,25 +2,26 @@
 id: "cargar-listas-precios-proveedores"
 slug: "cargar-listas-precios-proveedores"
 title: "Cómo cargar listas de precios de proveedores"
-description: "Subir la lista de precios que te manda un proveedor, que el sistema asocie cada renglón con tus productos, te avise en qué productos te conviene o no…"
+description: "Subí la lista de precios de un proveedor, asociala a tus productos y mirá en cuáles te conviene o no comprarle."
 category: "compras"
 priority: "P1"
 roles: ["dueno","administrativo"]
 surface: ["panel"]
 status: "draft"
 tiempo: "5 minutos por lista"
-necesitas: "el módulo *Listas de precios de proveedores* activado y la lista del proveedor (Excel, CSV, PDF o foto)"
-para_quien: "dueños y administrativos que quieren saber **quién les vende más barato**"
+necesitas: "el módulo Listas de precios de proveedores activado y la lista del proveedor (Excel, CSV, PDF o foto)"
+para_quien: "dueños y administrativos que quieren saber quién les vende más barato"
 modulo: "compra (Listas de precios de proveedor), gerencia (Comparar proveedores)"
 permiso: "módulo \"Listas de precios de proveedores\" activado"
 source_path: "01-manual-usuario/22-listas-de-precios-de-proveedores.md"
 source_hash: "0cc41e8612196d409f158281cb74f7343151567b8d4b743378ed41833f1e3975"
-product_version: "pendiente-verificar"
+product_version: "3.0.0"
 verified_at: "2026-10-12"
 reviewed_at: null
+reviewed_by: null
 synonyms: ["lista de precios","lista proveedor excel","comparar precios"]
 related: []
-social_image: null
+social_image: "/social/cargar-listas-precios-proveedores-v1.jpg"
 ---
 ## Qué vas a lograr
 

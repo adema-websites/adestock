@@ -2,25 +2,26 @@
 id: "imprimir-etiquetas"
 slug: "imprimir-etiquetas"
 title: "Cómo imprimir etiquetas de precios"
-description: "Imprimir etiquetas con nombre, precio y código de barras para tus productos (o solo para los que están en oferta), eligiendo cuántas copias de cada…"
+description: "Imprimí etiquetas con nombre, precio y código de barras de tus productos, o solo de los que están en oferta."
 category: "instalar"
 priority: "P1"
 roles: ["dueno","administrativo"]
 surface: ["panel"]
 status: "draft"
 tiempo: "2 minutos por tanda"
-necesitas: "una **etiquetadora** configurada para tu caja y el permiso *Puede imprimir etiquetas*"
+necesitas: "una etiquetadora configurada para tu caja y el permiso Puede imprimir etiquetas"
 para_quien: "dueños y encargados"
 modulo: "etiquetas (POS → Imprimir etiquetas), print_queue"
 permiso: "Puede imprimir etiquetas · etiquetadora configurada para la caja"
 source_path: "01-manual-usuario/28-imprimir-etiquetas.md"
-source_hash: "c09d5f7e875dabec24522d354009d2c61cb9bacfcdda7dd312c423c96853f307"
-product_version: "pendiente-verificar"
+source_hash: "9e8ee24c5e9394c79f2e4a1eefa450210f33c1e5d12d13e99341052b193f50fa"
+product_version: "3.0.0"
 verified_at: "2026-10-12"
 reviewed_at: null
+reviewed_by: null
 synonyms: ["etiquetas","impresora de etiquetas","código de barras"]
 related: []
-social_image: null
+social_image: "/social/imprimir-etiquetas-v1.jpg"
 ---
 ## Qué vas a lograr
 

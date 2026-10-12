@@ -26,5 +26,14 @@ export async function getTutoriales(): Promise<Tutorial[]> {
     .sort((a, b) => orden[a.data.priority] - orden[b.data.priority] || a.data.title.localeCompare(b.data.title, 'es'));
 }
 
-export const esBorrador = (t: Tutorial) => t.data.status !== 'published';
+export type Ayuda = CollectionEntry<'ayuda'>;
+export async function getAyuda(): Promise<Ayuda[]> {
+  const todos = await getCollection('ayuda');
+  return todos
+    .filter((a) => INCLUDE_DRAFTS || a.data.status === 'published')
+    .sort((a, b) => a.data.orden - b.data.orden);
+}
+export const urlAyuda = (slug: string) => `/ayuda/${slug}/`;
+
+export const esBorrador = (t: Tutorial | Ayuda) => t.data.status !== 'published';
 export const urlTutorial = (slug: string) => `/tutoriales/${slug}/`;

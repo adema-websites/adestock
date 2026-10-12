@@ -2,25 +2,26 @@
 id: "fabricar-productos-con-recetas"
 slug: "fabricar-productos-con-recetas"
 title: "Cómo fabricar productos con recetas"
-description: "Registrar una orden de fabricación de un producto con receta: el sistema calcula el costo, verifica que haya insumos y, al terminarla, suma el producto…"
+description: "Registrá una orden de fabricación: el sistema calcula el costo, verifica los insumos y suma el producto terminado al stock."
 category: "stock"
 priority: "P2"
 roles: ["dueno","administrativo"]
 surface: ["pos","panel"]
 status: "draft"
 tiempo: "2 minutos"
-necesitas: "el módulo *Cocina y recetas* activado y al menos una receta cargada"
-para_quien: "dueños y encargados de negocios que **elaboran** lo que venden (panadería, combos, viandas, packs)"
+necesitas: "el módulo Cocina y recetas activado y al menos una receta cargada"
+para_quien: "dueños y encargados de negocios que elaboran lo que venden (panadería, combos, viandas, packs)"
 modulo: "cocina (recetas, fabricación), venta (POS)"
 permiso: "ninguno especial; el módulo \"Cocina y recetas\" debe estar activado"
 source_path: "01-manual-usuario/14-fabrica-y-recetas-desde-el-pos.md"
-source_hash: "482042a9cb9976c27a93b89642af30a6eaead005cd5a7b9d8938113486eede21"
-product_version: "pendiente-verificar"
+source_hash: "fbbbe8bccae6559f092b6e584cd35e34284ed12196891d85c5ade431f64595ce"
+product_version: "3.0.0"
 verified_at: "2026-10-12"
 reviewed_at: null
+reviewed_by: null
 synonyms: ["receta","insumos","producción","fábrica"]
 related: []
-social_image: null
+social_image: "/social/fabricar-productos-con-recetas-v1.jpg"
 ---
 ## Qué vas a lograr
 
