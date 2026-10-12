@@ -10,7 +10,7 @@ Fuente: código de ADEstock `version.py` = **2.5.3**, commit `1dd777d` (12/10/20
 | Qué carga | Productos, costo, presentación (`cantidad`), precios de venta | Cantidades a **sumar o restar** por producto |
 | Toca el stock | **No** | Sí, pero recién al **aplicar** el ajuste |
 | Crea productos | Sí | **No** (si no existe, la fila da error) |
-| Vista previa | Sí: analiza el archivo y pide confirmación | No hay vista previa del efecto en stock; hay un borrador que se revisa y se aplica |
+| Vista previa | Sí: tabla "Preview de cambios" (crear/actualizar, precios Excel vs actual) y confirmación | Sin vista previa en el Excel; queda un borrador que se revisa y se aplica |
 
 ## Importar catálogo
 
@@ -56,3 +56,19 @@ Fuente: código de ADEstock `version.py` = **2.5.3**, commit `1dd777d` (12/10/20
 - [ ] Código `0012345` guardado como número vs texto.
 - [ ] Ajuste por Excel: borrador, aplicación, stock antes/después, producto inexistente.
 - [ ] ¿La reimportación de un ajuste en borrador reemplaza o suma? (`update_or_create` por producto: reemplaza el detalle del mismo producto en ese ajuste).
+
+## Verificado el 12/10/2026 (importador real, base de demo copiada, ADEstock 2.5.3)
+
+Se ejecutó `import_inventario_excel` y `analyze_inventario_excel` con libros generados:
+
+| Prueba | Resultado |
+|---|---|
+| Alta de 3 productos con código y precio | creados 3, precios 3, errores 0 |
+| Reimportar el mismo archivo | creados 0, actualizados 3: **no duplica** |
+| Código `12345` (número) cuando existe `0012345` (texto) | **crea un producto nuevo** (se pierden los ceros) |
+| Fila sin código, importada 2 veces | **2 productos nuevos** con el mismo nombre |
+| Categoría vacía y costo vacío sobre un producto existente | categoría **None**, costo **0**; el precio se actualiza |
+| Archivo sin columnas de precio sobre un producto con precio | el producto queda **sin precios** |
+| Vista previa (analyze) | informa filas, grupos de precio y filas con precio; la pantalla agrega la tabla de cambios |
+
+Pendiente de verificar en la interfaz: el flujo de **ajuste de inventario por Excel** (borrador, aplicar, stock antes/después).
