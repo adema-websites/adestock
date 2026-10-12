@@ -1,7 +1,6 @@
 videos/
 # Panel de temas: secretos y estado viven fuera del repo; por si acaso
-admin-temas/__pycache__/
-admin-temas/**/__pycache__/
+__pycache__/
 .pytest_cache/
 *.pem
 admin.json
@@ -15,3 +14,4 @@ impormes_gcp/
 node_modules/
 dist/
 .astro/
+*.pyc
