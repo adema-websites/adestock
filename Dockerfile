@@ -6,6 +6,9 @@ RUN npm ci
 COPY astro.config.mjs tsconfig.json ./
 COPY public ./public
 COPY src ./src
+# INCLUDE_DRAFTS=1 solo en staging: publica borradores con noindex. En producción queda en 0.
+ARG INCLUDE_DRAFTS=0
+ENV INCLUDE_DRAFTS=$INCLUDE_DRAFTS
 RUN npm run build
 
 # --- runtime: nginx ---

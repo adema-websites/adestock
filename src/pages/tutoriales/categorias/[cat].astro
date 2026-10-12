@@ -1,0 +1,35 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { categorias, getTutoriales, urlTutorial, esBorrador } from '../../../lib/tutoriales';
+
+export async function getStaticPaths() {
+  const todos = await getTutoriales();
+  // Solo categorías con contenido: nunca páginas vacías.
+  return Object.keys(categorias)
+    .map((cat) => ({ params: { cat }, props: { items: todos.filter((t) => t.data.category === cat) } }))
+    .filter((p) => p.props.items.length > 0);
+}
+const { cat } = Astro.params;
+const { items } = Astro.props;
+const nombre = categorias[cat!];
+---
+<Base
+  title={`${nombre}: tutoriales de ADEstock`}
+  description={`Guías paso a paso de ADEstock sobre ${nombre.toLowerCase()}, con requisitos, capturas y cómo comprobar el resultado.`}
+  path={`/tutoriales/categorias/${cat}/`}
+  noindex={items.every(esBorrador)}
+>
+  <div class="seo-breadcrumbs"><a href="/">Inicio</a>{" / "}<a href="/tutoriales/">Tutoriales</a>{" / "}{nombre}</div>
+  <main id="contenido" class="tuto">
+    <header class="tuto-head"><h1>{nombre}</h1></header>
+    <ul class="lista-guias">
+      {items.map((t) => (
+        <li>
+          <a href={urlTutorial(t.data.slug)}><strong>{t.data.title}</strong></a>
+          {esBorrador(t) && <span class="etiqueta">borrador</span>}
+          <p>{t.data.description}</p>
+        </li>
+      ))}
+    </ul>
+  </main>
+</Base>

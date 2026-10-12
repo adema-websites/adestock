@@ -1,0 +1,64 @@
+---
+import Base from '../../layouts/Base.astro';
+import { categorias, getTutoriales, urlTutorial, esBorrador, SITE } from '../../lib/tutoriales';
+import rutas from '../../data/rutas-aprendizaje.json';
+
+const todos = await getTutoriales();
+const porSlug = new Map(todos.map((t) => [t.data.slug, t]));
+const tareas = rutas.tareas.filter((t) => porSlug.has(t.slug));
+const cats = Object.entries(categorias)
+  .map(([id, nombre]) => ({ id, nombre, items: todos.filter((t) => t.data.category === id) }))
+  .filter((c) => c.items.length > 0);
+const hayBorradores = todos.some(esBorrador);
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Tutoriales de ADEstock',
+    url: SITE + '/tutoriales/',
+    inLanguage: 'es-AR',
+    hasPart: todos.filter((t) => !esBorrador(t)).map((t) => ({ '@type': 'TechArticle', headline: t.data.title, url: SITE + urlTutorial(t.data.slug) })),
+  },
+];
+---
+<Base
+  title="Tutoriales de ADEstock: stock, ventas, caja y compras paso a paso"
+  description="Aprendé a cargar productos, vender, controlar el stock, cargar compras con foto y crear revistas de ofertas en ADEstock, con capturas y pasos claros."
+  path="/tutoriales/"
+  noindex={todos.every(esBorrador)}
+  jsonLd={jsonLd}
+>
+  <header class="seo-hero">
+    <div class="seo-hero__inner">
+      <h1>¿Qué querés hacer con ADEstock?</h1>
+      <p class="seo-lead">Elegí una tarea o seguí el recorrido para empezar. Cada guía te dice qué necesitás, cómo hacerlo y cómo comprobar que salió bien.</p>
+      <p><a class="btn-ruta" href="/tutoriales/empezar/">Empezar desde cero →</a></p>
+    </div>
+  </header>
+  <main id="contenido" class="tuto-centro">
+    {hayBorradores && <p class="tuto-aviso" role="note"><strong>Vista de borradores.</strong> Esta página incluye guías sin revisar y no se indexa.</p>}
+
+    <section aria-labelledby="tareas">
+      <h2 id="tareas">Tareas más buscadas</h2>
+      <ul class="tarjetas">
+        {tareas.map((t) => (
+          <li><a href={urlTutorial(t.slug)}><strong>{t.titulo}</strong><span>{t.detalle}</span></a></li>
+        ))}
+      </ul>
+    </section>
+
+    <section aria-labelledby="cats">
+      <h2 id="cats">Todas las guías por tema</h2>
+      {cats.map((c) => (
+        <div class="cat">
+          <h3><a href={`/tutoriales/categorias/${c.id}/`}>{c.nombre}</a></h3>
+          <ul>
+            {c.items.map((t) => (
+              <li><a href={urlTutorial(t.data.slug)}>{t.data.title}</a>{esBorrador(t) && <span class="etiqueta">borrador</span>}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </section>
+  </main>
+</Base>

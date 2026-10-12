@@ -1,0 +1,34 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getTutoriales, urlTutorial, esBorrador } from '../../lib/tutoriales';
+import rutas from '../../data/rutas-aprendizaje.json';
+
+const todos = await getTutoriales();
+const porSlug = new Map(todos.map((t) => [t.data.slug, t]));
+const pasos = rutas.empezar.pasos.filter((p) => porSlug.has(p.slug));
+---
+<Base
+  title="Empezar con ADEstock: de la configuración a tu primera venta"
+  description={rutas.empezar.descripcion}
+  path="/tutoriales/empezar/"
+  noindex={pasos.every((p) => esBorrador(porSlug.get(p.slug)!))}
+>
+  <div class="seo-breadcrumbs"><a href="/">Inicio</a>{" / "}<a href="/tutoriales/">Tutoriales</a>{" / "}Empezar</div>
+  <main id="contenido" class="tuto">
+    <header class="tuto-head">
+      <h1>Empezar con ADEstock</h1>
+      <p class="tuto-lead">{rutas.empezar.descripcion} Si ya cumplís los requisitos de un paso, podés saltar directo al siguiente.</p>
+    </header>
+    <ol class="ruta">
+      {pasos.map((p) => {
+        const t = porSlug.get(p.slug)!;
+        return (
+          <li>
+            <a href={urlTutorial(p.slug)}><strong>{t.data.title}</strong></a>
+            <span>{p.resumen} · {t.data.tiempo}</span>
+          </li>
+        );
+      })}
+    </ol>
+  </main>
+</Base>
