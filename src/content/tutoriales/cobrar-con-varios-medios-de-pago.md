@@ -2,25 +2,26 @@
 id: "cobrar-con-varios-medios-de-pago"
 slug: "cobrar-con-varios-medios-de-pago"
 title: "Cómo cobrar con varios medios de pago"
-description: "Cobrar una misma venta repartida en varios medios (por ejemplo, una parte en efectivo y el resto con tarjeta), y aplicar un descuento sobre el total."
+description: "Cobrá una venta repartida en varios medios (por ejemplo efectivo y tarjeta) y aplicá un descuento sobre el total."
 category: "vender"
 priority: "P1"
 roles: ["cajero","dueno"]
 surface: ["pos"]
 status: "draft"
 tiempo: "2 minutos"
-necesitas: "haber armado el carrito (ver *Hacer una venta*)"
+necesitas: "haber armado el carrito (ver Hacer una venta)"
 para_quien: "cajeros y dueños"
 modulo: "venta (POS → Cobro)"
 permiso: "aplicar descuentos requiere \"Puede hacer descuentos\""
 source_path: "01-manual-usuario/08-cobrar-con-varios-medios-de-pago.md"
-source_hash: "7e095d1820835f0a12c0926efb8d5ae5f258908b3ad27ee56c549ada4ac5a6f2"
-product_version: "pendiente-verificar"
+source_hash: "09bd2011769d9f29446bb4fdae3dc7666ef63200d6037e467273f859ebd2bb0f"
+product_version: "3.0.0"
 verified_at: "2026-10-12"
 reviewed_at: null
+reviewed_by: null
 synonyms: ["pago mixto","mitad efectivo mitad tarjeta","descuento","recargo"]
 related: []
-social_image: null
+social_image: "/social/cobrar-con-varios-medios-de-pago-v1.jpg"
 ---
 ## Qué vas a lograr
 
@@ -36,9 +37,9 @@ Los cuatro recuadros de arriba te acompañan todo el cobro:
 
 | # | Recuadro | Qué muestra |
 |---|---|---|
-| — | **Cliente activo** | A quién se le vende. Con *Cambiar / Ver cliente* lo cambiás sin salir |
+| - | **Cliente activo** | A quién se le vende. Con *Cambiar / Ver cliente* lo cambiás sin salir |
 | 1 | **Total venta** | Lo que tiene que quedar cubierto para cerrar |
-| — | **Total aplicado** | La suma de los pagos que ya cargaste |
+| - | **Total aplicado** | La suma de los pagos que ya cargaste |
 | 2 | **Faltante** | Lo que falta cobrar. Cuando llega a cero cambia a *Completado*. Si el cliente entrega de más en efectivo, muestra el **vuelto** |
 
 ## Paso a paso
@@ -110,7 +111,7 @@ Algunos medios de cobro pueden tener un **recargo o descuento** configurado (por
 | *Confirmar y cerrar* está apagado | Todavía falta cobrar | Agregá otro pago hasta que el faltante sea $ 0 |
 | El panel de descuento no deja escribir | Tu usuario no tiene *Puede hacer descuentos* | Pedíselo al dueño |
 | El botón *Cuenta Corriente* está apagado | El cliente es Consumidor Final o no tiene cuenta corriente | Cambiá el cliente (ver *Vender a cuenta corriente*) |
-| Cargué un pago por error | — | Quitalo con el tacho y cargalo de nuevo |
+| Cargué un pago por error | - | Quitalo con el tacho y cargalo de nuevo |
 | El importe de tarjeta es mayor al total | El medio tiene recargo | Es lo esperado: el recargo se suma al importe de ese medio |
 
 ## Siguiente paso

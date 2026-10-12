@@ -1,0 +1,111 @@
+---
+// Migrada desde public/control-de-stock/index.html. El contenido vive en src/paginas/control-de-stock.html.
+import Pagina from '../../layouts/Pagina.astro';
+import contenido from '../../paginas/control-de-stock.html?raw';
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://adestock.com.ar/#organization",
+        "name": "ADEMA Sistemas",
+        "url": "https://adestock.com.ar/",
+        "logo": "https://adestock.com.ar/img/logo.png"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://adestock.com.ar/#software",
+        "name": "ADEstock",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web, Windows",
+        "inLanguage": "es-AR",
+        "url": "https://adestock.com.ar/control-de-stock/",
+        "description": "Software para control de stock, ventas, caja, compras y reportes en comercios argentinos.",
+        "publisher": {
+          "@id": "https://adestock.com.ar/#organization"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "ARS",
+          "description": "Demo gratis y planes a consultar"
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": "https://adestock.com.ar/#product",
+        "name": "ADEstock",
+        "brand": {
+          "@type": "Brand",
+          "name": "ADEstock"
+        },
+        "category": "Control de stock",
+        "description": "Sistema para controlar stock real, ventas, caja, compras, precios y reportes.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "ARS",
+          "availability": "https://schema.org/InStock",
+          "url": "https://adestock.com.ar/descargar-demo.html"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://adestock.com.ar/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Control de stock",
+            "item": "https://adestock.com.ar/control-de-stock/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Cómo controlar el stock de un comercio?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Registrando productos, compras, ventas, ajustes y stock mínimo en un sistema que actualice las cantidades automáticamente y genere reportes de reposición."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿ADEstock ayuda a evitar faltantes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. Permite controlar stock real, revisar movimientos, configurar mínimos y detectar qué productos necesitan reposición."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Puedo controlar caja y stock juntos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. ADEstock integra ventas, caja, medios de pago y stock para que cada operación quede registrada."
+            }
+          }
+        ]
+      }
+    ]
+  }
+];
+---
+<Pagina
+  title={"Control de stock para comercios | ADEstock Argentina"}
+  description={"Control de stock para comercios argentinos: evitá faltantes, sobrantes, errores de precios y compras mal calculadas con ventas, caja y reportes integrados."}
+  path="/control-de-stock/"
+  ogType="website"
+  jsonLd={jsonLd}
+>
+  <Fragment set:html={contenido} />
+</Pagina>

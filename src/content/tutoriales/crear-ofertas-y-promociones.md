@@ -2,22 +2,23 @@
 id: "crear-ofertas-y-promociones"
 slug: "crear-ofertas-y-promociones"
 title: "Cómo crear ofertas y promociones"
-description: "Armar una oferta con varios productos y distintos tipos de promoción (descuento, 3×2, segunda unidad a mitad de precio…), con fecha de vigencia, y que el…"
+description: "Armá una oferta con varios productos y tipos de promoción (descuento, 3x2, segunda unidad a mitad de precio) con fecha de vigencia."
 category: "ofertas"
 priority: "P0"
 roles: ["dueno","administrativo"]
 surface: ["panel"]
 status: "draft"
 tiempo: "5 minutos"
-necesitas: "el permiso *Puede gestionar ofertas* (el dueño lo tiene siempre)"
+necesitas: "el permiso Puede gestionar ofertas (el dueño lo tiene siempre)"
 para_quien: "dueños y encargados"
 modulo: "ofertas (POS → Ofertas), venta (cobro)"
 permiso: "Puede gestionar ofertas"
 source_path: "01-manual-usuario/26-ofertas-y-promociones.md"
-source_hash: "5585a8e32763196b791ccc0591075caa95f76b810a64ab75f076416d3eba9f89"
-product_version: "pendiente-verificar"
+source_hash: "230e2f3269017af59017dfbfaf692f050c4d8489fbcca2f378b6d212f46dd042"
+product_version: "3.0.0"
 verified_at: "2026-10-12"
 reviewed_at: null
+reviewed_by: null
 synonyms: ["oferta","promoción","descuento por vigencia"]
 related: []
 social_image: "/social/crear-ofertas-y-promociones-v1.jpg"

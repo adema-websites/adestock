@@ -1,0 +1,14 @@
+---
+// Migrada desde public/multiples-cajas-pos.html. Contenido en src/paginas/multiples-cajas-pos.html.
+import Pagina from '../layouts/Pagina.astro';
+import contenido from '../paginas/multiples-cajas-pos.html?raw';
+const jsonLd = [];
+---
+<Pagina
+  title={"Punto de venta POS y cajas para comercios | ADEstock"}
+  description={"Sistema POS para comercios con ventas rápidas, múltiples cajas, cierres, usuarios, medios de pago y descuento automático de stock en ADEstock."}
+  path="/multiples-cajas-pos.html"
+  jsonLd={jsonLd}
+>
+  <Fragment set:html={contenido} />
+</Pagina>

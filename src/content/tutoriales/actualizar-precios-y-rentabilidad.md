@@ -2,7 +2,7 @@
 id: "actualizar-precios-y-rentabilidad"
 slug: "actualizar-precios-y-rentabilidad"
 title: "Cómo actualizar precios y controlar la rentabilidad"
-description: "Subir (o bajar) muchos precios de una sola vez por un porcentaje, por categoría o proveedor, con redondeo, viendo antes de aplicar cómo queda cada precio y…"
+description: "Subí o bajá muchos precios a la vez por porcentaje, categoría o proveedor, viendo antes cómo queda cada uno."
 category: "stock"
 priority: "P1"
 roles: ["dueno","administrativo"]
@@ -15,12 +15,13 @@ modulo: "producto (ProductoPrecio), venta (POS → Precios masivos)"
 permiso: "acceso a Precios masivos del Menú rápido (dueño o quien tenga permiso de gestionar productos)"
 source_path: "01-manual-usuario/25-precios-masivos-y-rentabilidad.md"
 source_hash: "402a90a3db8ff438bc3717d48eec67624e60ca215fe9eb3b5bfe46ad8d98f7a5"
-product_version: "pendiente-verificar"
+product_version: "3.0.0"
 verified_at: "2026-10-12"
 reviewed_at: null
+reviewed_by: null
 synonyms: ["aumento de precios","margen","recargo","precios masivos"]
 related: []
-social_image: null
+social_image: "/social/actualizar-precios-y-rentabilidad-v1.jpg"
 ---
 ## Qué vas a lograr
 
@@ -144,8 +145,8 @@ Con las listas apagadas, **todas las cajas usan los mismos precios**.
 |---|---|---|
 | "No hay precios que coincidan con los filtros" | La categoría o el proveedor no tiene productos con precio | Probá con *Todas* / *Todos* |
 | El precio quedó más alto de lo que esperaba | El redondeo sube al múltiplo siguiente | Usá *0.01*, o corregí el precio a mano en la tabla |
-| Me equivoqué | — | **Revertir lote** (solo el último) |
-| Quiero ver cuánto gano por producto | — | La columna **% Actual / % Nuevo** de la previsualización, o la app del dueño (Productos) |
+| Me equivoqué | - | **Revertir lote** (solo el último) |
+| Quiero ver cuánto gano por producto | - | La columna **% Actual / % Nuevo** de la previsualización, o la app del dueño (Productos) |
 | La categoría dice "sin %" | No tiene rentabilidad objetivo | Cargala en el panel de administración, o usá un % fijo |
 
 ## Siguiente paso

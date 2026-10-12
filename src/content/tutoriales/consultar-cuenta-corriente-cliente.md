@@ -2,7 +2,7 @@
 id: "consultar-cuenta-corriente-cliente"
 slug: "consultar-cuenta-corriente-cliente"
 title: "Cómo consultar la cuenta corriente de un cliente"
-description: "Saber cuánto debe un cliente y entender la diferencia entre el saldo normal (lo que se le vendió) y el saldo actualizado (ese mismo saldo a los precios de…"
+description: "Mirá cuánto te debe un cliente y entendé la diferencia entre el saldo normal y el saldo actualizado a los precios de hoy."
 category: "clientes"
 priority: "P1"
 roles: ["dueno","administrativo"]
@@ -15,12 +15,13 @@ modulo: "venta (POS), agenda (Cliente)"
 permiso: "ver el estado de cuenta; cobrar requiere \"Puede cobrar Cta. Cte.\""
 source_path: "01-manual-usuario/16-revisar-cuenta-corriente-de-un-cliente.md"
 source_hash: "b0cc3d2b002a7d51415e4cff4d4460053d9821c361c885f0a817778b8702eca8"
-product_version: "pendiente-verificar"
+product_version: "3.0.0"
 verified_at: "2026-10-12"
 reviewed_at: null
+reviewed_by: null
 synonyms: ["saldo","deuda de cliente","estado de cuenta"]
 related: []
-social_image: null
+social_image: "/social/consultar-cuenta-corriente-cliente-v1.jpg"
 ---
 ## Qué vas a lograr
 
@@ -36,7 +37,7 @@ Saber **cuánto debe un cliente** y entender la diferencia entre el **saldo norm
 |---|---|---|
 | Qué es | Lo que se le vendió, tal cual | Esa misma mercadería, valuada con los **precios actuales** |
 | Cuándo cambia | Solo cuando hay una venta nueva o un cobro | También cuando cambian los precios de los productos |
-| Puede ser menor al normal | — | **Nunca**: si los precios bajaron, se mantiene el saldo normal |
+| Puede ser menor al normal | - | **Nunca**: si los precios bajaron, se mantiene el saldo normal |
 
 ### Ejemplo con números
 

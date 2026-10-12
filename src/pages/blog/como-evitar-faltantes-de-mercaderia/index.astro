@@ -1,0 +1,117 @@
+---
+// Migrada desde public/blog/como-evitar-faltantes-de-mercaderia/index.html. El contenido vive en src/paginas/blog--como-evitar-faltantes-de-mercaderia.html.
+import Pagina from '../../../layouts/Pagina.astro';
+import contenido from '../../../paginas/blog--como-evitar-faltantes-de-mercaderia.html?raw';
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://adestock.com.ar/#organization",
+        "name": "ADEMA Sistemas",
+        "url": "https://adestock.com.ar/",
+        "logo": "https://adestock.com.ar/img/logo.png"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://adestock.com.ar/#software",
+        "name": "ADEstock",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web, Windows",
+        "inLanguage": "es-AR",
+        "publisher": {
+          "@id": "https://adestock.com.ar/#organization"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "ARS"
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": "https://adestock.com.ar/#product",
+        "name": "ADEstock",
+        "brand": {
+          "@type": "Brand",
+          "name": "ADEstock"
+        },
+        "category": "Control de stock",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "ARS",
+          "url": "https://adestock.com.ar/descargar-demo.html"
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Cómo evitar faltantes de mercadería",
+        "datePublished": "2026-05-14",
+        "dateModified": "2026-05-14",
+        "author": {
+          "@id": "https://adestock.com.ar/#organization"
+        },
+        "publisher": {
+          "@id": "https://adestock.com.ar/#organization"
+        },
+        "mainEntityOfPage": "https://adestock.com.ar/blog/como-evitar-faltantes-de-mercaderia/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://adestock.com.ar/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://adestock.com.ar/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Cómo evitar faltantes de mercadería",
+            "item": "https://adestock.com.ar/blog/como-evitar-faltantes-de-mercaderia/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Por qué se producen faltantes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Por ventas no registradas, compras mal calculadas, stock mínimo inexistente, errores de carga o falta de reportes de rotación."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo ayuda un sistema de stock?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Actualiza cantidades con cada venta y compra, muestra mínimos y permite revisar reportes para reponer antes de perder ventas."
+            }
+          }
+        ]
+      }
+    ]
+  }
+];
+---
+<Pagina
+  title={"Cómo evitar faltantes de mercadería | ADEstock"}
+  description={"Cómo evitar faltantes de mercadería en comercios: stock mínimo, reportes de rotación, compras a proveedores, control de ventas y reposición con ADEstock."}
+  path="/blog/como-evitar-faltantes-de-mercaderia/"
+  ogType="article"
+  jsonLd={jsonLd}
+>
+  <Fragment set:html={contenido} />
+</Pagina>

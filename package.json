@@ -17,5 +17,8 @@
     "astro": "^7.3.8",
     "github-slugger": "^2.0.0",
     "minisearch": "^7.2.0"
+  },
+  "devDependencies": {
+    "node-html-parser": "^9.0.4"
   }
 }

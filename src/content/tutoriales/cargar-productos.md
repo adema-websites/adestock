@@ -2,22 +2,23 @@
 id: "cargar-productos"
 slug: "cargar-productos"
 title: "Cómo cargar productos y precios en ADEstock"
-description: "Dar de alta un producto con su costo, su stock y uno o varios precios de venta, sin salir del POS. Al terminar, el producto ya se puede vender."
+description: "Dá de alta un producto con su costo, su stock y sus precios de venta sin salir del POS. Al terminar, ya se puede vender."
 category: "empezar"
 priority: "P0"
 roles: ["dueno","administrativo"]
 surface: ["pos","panel"]
 status: "draft"
 tiempo: "3 minutos por producto"
-necesitas: "el turno abierto y el permiso *Gestionar productos*"
+necesitas: "el turno abierto y el permiso Gestionar productos"
 para_quien: "dueños y administrativos"
 modulo: "producto, venta (POS)"
 permiso: "puede_gestionar_productos (el dueño lo tiene siempre)"
 source_path: "01-manual-usuario/03-cargar-primeros-productos.md"
 source_hash: "9debcbb7ac1160325944ba7e11c39678921137b46f88128677a7447ae9066661"
-product_version: "pendiente-verificar"
+product_version: "3.0.0"
 verified_at: "2026-10-12"
 reviewed_at: null
+reviewed_by: null
 synonyms: ["alta de productos","agregar producto","costo por bulto","precio"]
 related: []
 social_image: "/social/cargar-productos-v1.jpg"

@@ -28,6 +28,7 @@ const tutoriales = defineCollection({
       product_version: z.string(),
       verified_at: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
       reviewed_at: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).nullable(),
+      reviewed_by: z.string().nullable().default(null),
       synonyms: z.array(z.string()),
       related: z.array(z.string()),
       social_image: z.string().nullable(),
@@ -42,4 +43,32 @@ const tutoriales = defineCollection({
     }),
 });
 
-export const collections = { tutoriales };
+// Páginas de ayuda transversales: Empezá acá, Conceptos y Preguntas frecuentes.
+const ayuda = defineCollection({
+  loader: glob({ pattern: '*.md', base: './src/content/ayuda' }),
+  schema: z
+    .object({
+      id: z.string(),
+      slug: z.string().regex(/^[a-z0-9-]+$/),
+      title: z.string().min(10),
+      description: z.string().min(40).max(200),
+      orden: z.number(),
+      status: z.enum(['draft', 'review', 'published']),
+      source_path: z.string(),
+      source_hash: z.string().length(64),
+      product_version: z.string(),
+      verified_at: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+      reviewed_at: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).nullable(),
+      reviewed_by: z.string().nullable().default(null),
+      synonyms: z.array(z.string()),
+      social_image: z.string().nullable(),
+    })
+    .superRefine((t, ctx) => {
+      if (t.status !== 'published') return;
+      if (!t.reviewed_at) ctx.addIssue({ code: 'custom', path: ['reviewed_at'], message: 'published exige reviewed_at' });
+      if (t.product_version === PENDIENTE) ctx.addIssue({ code: 'custom', path: ['product_version'], message: 'published exige versión comprobada' });
+      if (!t.social_image) ctx.addIssue({ code: 'custom', path: ['social_image'], message: 'published exige tarjeta social' });
+    }),
+});
+
+export const collections = { tutoriales, ayuda };

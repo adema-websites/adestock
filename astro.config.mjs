@@ -1,7 +1,15 @@
 import { defineConfig } from 'astro/config';
-import { existsSync, statSync } from 'node:fs';
+import { existsSync, readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import rehypeFiguras from './src/lib/rehype-figuras.mjs';
+import postBuild from './src/lib/post-build.mjs';
+
+// Fechas de modificación heredadas del sitemap anterior (no se inventan fechas nuevas).
+const heredado = new Map();
+try {
+  const xml = readFileSync('./src/data/sitemap-lastmod-heredado.xml', 'utf8');
+  for (const m of xml.matchAll(/<loc>([^<]+)<\/loc>\s*<lastmod>([^<]+)<\/lastmod>/g)) heredado.set(m[1].trim(), m[2].trim());
+} catch { /* sin heredado */ }
 
 // Solo desarrollo: nginx sirve /carpeta/ -> /carpeta/index.html desde public/; el dev server de Astro no.
 const indicesDePublic = {
@@ -21,13 +29,13 @@ const indicesDePublic = {
 };
 
 // Sitio 100 % estático. Todo lo que está en public/ se publica tal cual (URLs actuales intactas);
-// las páginas nuevas se generan desde src/pages y src/content.
+// las páginas se generan desde src/pages y src/content.
 export default defineConfig({
   site: 'https://adestock.com.ar',
   output: 'static',
   trailingSlash: 'ignore',
   build: { format: 'directory', assets: 'assets' },
   markdown: { rehypePlugins: [rehypeFiguras] },
-  integrations: [indicesDePublic],
+  integrations: [indicesDePublic, postBuild({ heredado })],
   devToolbar: { enabled: false },
 });

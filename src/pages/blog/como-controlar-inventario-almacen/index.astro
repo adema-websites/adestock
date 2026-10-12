@@ -1,0 +1,117 @@
+---
+// Migrada desde public/blog/como-controlar-inventario-almacen/index.html. El contenido vive en src/paginas/blog--como-controlar-inventario-almacen.html.
+import Pagina from '../../../layouts/Pagina.astro';
+import contenido from '../../../paginas/blog--como-controlar-inventario-almacen.html?raw';
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://adestock.com.ar/#organization",
+        "name": "ADEMA Sistemas",
+        "url": "https://adestock.com.ar/",
+        "logo": "https://adestock.com.ar/img/logo.png"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://adestock.com.ar/#software",
+        "name": "ADEstock",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web, Windows",
+        "inLanguage": "es-AR",
+        "publisher": {
+          "@id": "https://adestock.com.ar/#organization"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "ARS"
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": "https://adestock.com.ar/#product",
+        "name": "ADEstock",
+        "brand": {
+          "@type": "Brand",
+          "name": "ADEstock"
+        },
+        "category": "Sistema de stock para almacenes",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "ARS",
+          "url": "https://adestock.com.ar/descargar-demo.html"
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Cómo controlar el inventario de un almacén",
+        "datePublished": "2026-05-14",
+        "dateModified": "2026-05-14",
+        "author": {
+          "@id": "https://adestock.com.ar/#organization"
+        },
+        "publisher": {
+          "@id": "https://adestock.com.ar/#organization"
+        },
+        "mainEntityOfPage": "https://adestock.com.ar/blog/como-controlar-inventario-almacen/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://adestock.com.ar/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://adestock.com.ar/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Cómo controlar el inventario de un almacén",
+            "item": "https://adestock.com.ar/blog/como-controlar-inventario-almacen/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Qué revisar en el inventario de un almacén?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Stock real, costos, precios, vencimientos, productos sin rotación, faltantes, mermas y compras pendientes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Sirve ADEstock para almacenes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. ADEstock permite controlar productos, ventas, caja, compras, precios, reportes y reposición en almacenes."
+            }
+          }
+        ]
+      }
+    ]
+  }
+];
+---
+<Pagina
+  title={"Cómo controlar el inventario de un almacén | ADEstock"}
+  description={"Pasos para controlar el inventario de un almacén: productos, compras, ventas, caja, precios, mermas, stock mínimo y reportes para reponer mejor."}
+  path="/blog/como-controlar-inventario-almacen/"
+  ogType="article"
+  jsonLd={jsonLd}
+>
+  <Fragment set:html={contenido} />
+</Pagina>

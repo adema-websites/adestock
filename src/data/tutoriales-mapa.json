@@ -10,37 +10,779 @@
     "instalar": "Instalar, imprimir y resolver problemas"
   },
   "tutoriales": [
-    {"n":"02","slug":"configurar-negocio","titulo":"Cómo configurar tu negocio en ADEstock la primera vez","cat":"empezar","prio":"P0","roles":["dueno"],"surface":["panel"],"syn":["onboarding","primeros pasos","empezar","configuración inicial"]},
-    {"n":"03","slug":"cargar-productos","titulo":"Cómo cargar productos y precios en ADEstock","cat":"empezar","prio":"P0","roles":["dueno","administrativo"],"surface":["pos","panel"],"syn":["alta de productos","agregar producto","costo por bulto","precio"]},
-    {"n":"04","slug":"usuarios-y-permisos","titulo":"Cómo crear usuarios y darles permisos","cat":"empezar","prio":"P1","roles":["dueno"],"surface":["panel"],"syn":["usuario","crear usuario","agregar usuario","alta de usuario","cajero","empleado","permisos","clave"]},
-    {"n":"05","slug":"configurar-punto-de-venta","titulo":"Cómo configurar el punto de venta","cat":"empezar","prio":"P1","roles":["dueno"],"surface":["pos","panel"],"syn":["caja","módulos","equipo"]},
-    {"n":"06","slug":"usar-punto-de-venta","titulo":"Cómo recorrer el punto de venta y usar sus atajos","cat":"vender","prio":"P0","roles":["cajero","dueno"],"surface":["pos"],"syn":["pos","atajos","teclas"]},
-    {"n":"07","slug":"hacer-una-venta","titulo":"Cómo hacer una venta en ADEstock","cat":"vender","prio":"P0","roles":["cajero","dueno"],"surface":["pos"],"syn":["vender","cobrar","carrito","vuelto"]},
-    {"n":"08","slug":"cobrar-con-varios-medios-de-pago","titulo":"Cómo cobrar con varios medios de pago","cat":"vender","prio":"P1","roles":["cajero","dueno"],"surface":["pos"],"syn":["pago mixto","mitad efectivo mitad tarjeta","descuento","recargo"]},
-    {"n":"09","slug":"vender-fiado-cuenta-corriente","titulo":"Cómo vender fiado a cuenta corriente","cat":"clientes","prio":"P1","roles":["cajero","dueno"],"surface":["pos"],"syn":["fiar","fiado","cuenta corriente","deuda"]},
-    {"n":"10","slug":"anular-venta-y-reimprimir-ticket","titulo":"Cómo anular una venta y reimprimir un ticket","cat":"vender","prio":"P1","roles":["cajero","dueno"],"surface":["pos","panel"],"syn":["anular","devolución","reimprimir","ticket"]},
-    {"n":"11","slug":"hacer-presupuesto","titulo":"Cómo hacer un presupuesto y convertirlo en venta","cat":"vender","prio":"P1","roles":["cajero","dueno"],"surface":["pos"],"syn":["cotización","presupuesto","vigencia"]},
-    {"n":"12","slug":"abrir-y-cerrar-caja","titulo":"Cómo abrir y cerrar la caja (turno)","cat":"caja","prio":"P0","roles":["cajero","dueno"],"surface":["pos"],"syn":["turno","arqueo","faltante","sobrante","cierre de caja"]},
-    {"n":"13","slug":"registrar-gastos-y-retiros","titulo":"Cómo registrar un gasto o un retiro de caja","cat":"caja","prio":"P1","roles":["cajero","dueno"],"surface":["pos"],"syn":["gasto","retiro","caja chica"]},
-    {"n":"14","slug":"fabricar-productos-con-recetas","titulo":"Cómo fabricar productos con recetas","cat":"stock","prio":"P2","roles":["dueno","administrativo"],"surface":["pos","panel"],"syn":["receta","insumos","producción","fábrica"]},
-    {"n":"15","slug":"crear-y-editar-clientes","titulo":"Cómo crear y editar clientes","cat":"clientes","prio":"P1","roles":["cajero","dueno","administrativo"],"surface":["pos","panel"],"syn":["alta de cliente","cliente nuevo"]},
-    {"n":"16","slug":"consultar-cuenta-corriente-cliente","titulo":"Cómo consultar la cuenta corriente de un cliente","cat":"clientes","prio":"P1","roles":["dueno","administrativo"],"surface":["pos","panel"],"syn":["saldo","deuda de cliente","estado de cuenta"]},
-    {"n":"17","slug":"cobrar-deuda-cliente","titulo":"Cómo cobrar la deuda de un cliente","cat":"clientes","prio":"P1","roles":["cajero","dueno"],"surface":["pos","panel"],"syn":["cobrar deuda","pago parcial","saldo a favor"]},
-    {"n":"18","slug":"crear-y-editar-proveedores","titulo":"Cómo crear y editar proveedores","cat":"compras","prio":"P1","roles":["dueno","administrativo"],"surface":["panel"],"syn":["alta de proveedor","proveedor nuevo"]},
-    {"n":"19","slug":"cargar-compra-manual","titulo":"Cómo cargar una compra a mano","cat":"compras","prio":"P1","roles":["dueno","administrativo"],"surface":["panel"],"syn":["compra","ingreso de mercadería","remito"]},
-    {"n":"20","slug":"cargar-compras-con-foto-ia","titulo":"Cómo cargar una compra con foto e IA en ADEstock","cat":"compras","prio":"P0","roles":["dueno","administrativo"],"surface":["pos","panel"],"syn":["boleta","factura proveedor","cargar compra","foto factura","OCR","foto de factura"]},
-    {"n":"21","slug":"pagar-proveedor","titulo":"Cómo pagar a un proveedor","cat":"compras","prio":"P1","roles":["dueno","administrativo"],"surface":["panel"],"syn":["pago a proveedor","deuda con proveedor","adelanto"]},
-    {"n":"22","slug":"cargar-listas-precios-proveedores","titulo":"Cómo cargar listas de precios de proveedores","cat":"compras","prio":"P1","roles":["dueno","administrativo"],"surface":["panel"],"syn":["lista de precios","lista proveedor excel","comparar precios"]},
-    {"n":"23","slug":"contar-stock","titulo":"Cómo contar el stock de un depósito","cat":"stock","prio":"P0","roles":["dueno","administrativo"],"surface":["panel"],"syn":["conteo","inventario","tengo 12 pero dice 9","diferencias"]},
-    {"n":"24","slug":"ajustar-stock-mermas-transferencias","titulo":"Cómo ajustar stock, registrar mermas y transferir entre depósitos","cat":"stock","prio":"P0","roles":["dueno","administrativo"],"surface":["panel"],"syn":["ajuste de stock","merma","transferencia","corregir stock","me quedó mal el stock"]},
-    {"n":"25","slug":"actualizar-precios-y-rentabilidad","titulo":"Cómo actualizar precios y controlar la rentabilidad","cat":"stock","prio":"P1","roles":["dueno","administrativo"],"surface":["panel"],"syn":["aumento de precios","margen","recargo","precios masivos"]},
-    {"n":"26","slug":"crear-ofertas-y-promociones","titulo":"Cómo crear ofertas y promociones","cat":"ofertas","prio":"P0","roles":["dueno","administrativo"],"surface":["panel"],"syn":["oferta","promoción","descuento por vigencia"]},
-    {"n":"27","slug":"crear-revista-ofertas","titulo":"Cómo crear una revista de ofertas con tus productos","cat":"ofertas","prio":"P0","roles":["dueno","administrativo"],"surface":["panel"],"syn":["folleto","revista","catálogo de ofertas","hacer folleto ofertas","PDF de ofertas"]},
-    {"n":"28","slug":"imprimir-etiquetas","titulo":"Cómo imprimir etiquetas de precios","cat":"instalar","prio":"P1","roles":["dueno","administrativo"],"surface":["panel"],"syn":["etiquetas","impresora de etiquetas","código de barras"]},
-    {"n":"29","slug":"configurar-tienda-online","titulo":"Cómo activar y configurar la tienda online","cat":"ofertas","prio":"P1","roles":["dueno"],"surface":["panel"],"syn":["tienda online","catálogo online","pedidos"]},
-    {"n":"30","slug":"usar-app-del-dueno","titulo":"Cómo usar la app del dueño","cat":"caja","prio":"P2","roles":["dueno"],"surface":["app"],"syn":["app","celular","ver ventas desde el celular"]},
-    {"n":"31","slug":"consultar-reportes-y-exportar","titulo":"Cómo consultar reportes y exportarlos","cat":"caja","prio":"P2","roles":["dueno","administrativo"],"surface":["panel"],"syn":["reportes","exportar","estadísticas","costos"]},
-    {"n":"32","slug":"controlar-turnos-caja-panel","titulo":"Cómo controlar un turno de caja desde el panel","cat":"caja","prio":"P2","roles":["dueno"],"surface":["panel"],"syn":["supervisar caja","turnos"]},
-    {"n":"33","slug":"billeteras-y-cuentas","titulo":"Cómo usar billeteras y cuentas","cat":"caja","prio":"P2","roles":["dueno","administrativo"],"surface":["panel"],"syn":["billetera","transferencias","saldos"]}
+    {
+      "n": "02",
+      "slug": "configurar-negocio",
+      "titulo": "Cómo configurar tu negocio en ADEstock la primera vez",
+      "cat": "empezar",
+      "prio": "P0",
+      "roles": [
+        "dueno"
+      ],
+      "surface": [
+        "panel"
+      ],
+      "syn": [
+        "onboarding",
+        "primeros pasos",
+        "empezar",
+        "configuración inicial"
+      ],
+      "desc": "Completá el asistente inicial: nombre del negocio, depósitos, cajas, medios de cobro y usuarios. Al terminar, ADEstock queda listo para vender."
+    },
+    {
+      "n": "03",
+      "slug": "cargar-productos",
+      "titulo": "Cómo cargar productos y precios en ADEstock",
+      "cat": "empezar",
+      "prio": "P0",
+      "roles": [
+        "dueno",
+        "administrativo"
+      ],
+      "surface": [
+        "pos",
+        "panel"
+      ],
+      "syn": [
+        "alta de productos",
+        "agregar producto",
+        "costo por bulto",
+        "precio"
+      ],
+      "desc": "Dá de alta un producto con su costo, su stock y sus precios de venta sin salir del POS. Al terminar, ya se puede vender."
+    },
+    {
+      "n": "04",
+      "slug": "usuarios-y-permisos",
+      "titulo": "Cómo crear usuarios y darles permisos",
+      "cat": "empezar",
+      "prio": "P1",
+      "roles": [
+        "dueno"
+      ],
+      "surface": [
+        "panel"
+      ],
+      "syn": [
+        "usuario",
+        "crear usuario",
+        "agregar usuario",
+        "alta de usuario",
+        "cajero",
+        "empleado",
+        "permisos",
+        "clave"
+      ],
+      "desc": "Creá un cajero o un administrativo, asignale su caja y decidí qué puede hacer en el POS, sin salir del sistema."
+    },
+    {
+      "n": "05",
+      "slug": "configurar-punto-de-venta",
+      "titulo": "Cómo configurar el punto de venta",
+      "cat": "empezar",
+      "prio": "P1",
+      "roles": [
+        "dueno"
+      ],
+      "surface": [
+        "pos",
+        "panel"
+      ],
+      "syn": [
+        "caja",
+        "módulos",
+        "equipo"
+      ],
+      "desc": "Encontrá dónde se cambia cada cosa del negocio desde el POS: datos, reglas de venta, precios, cajas, medios de cobro, usuarios e impresoras."
+    },
+    {
+      "n": "06",
+      "slug": "usar-punto-de-venta",
+      "titulo": "Cómo recorrer el punto de venta y usar sus atajos",
+      "cat": "vender",
+      "prio": "P0",
+      "roles": [
+        "cajero",
+        "dueno"
+      ],
+      "surface": [
+        "pos"
+      ],
+      "syn": [
+        "pos",
+        "atajos",
+        "teclas"
+      ],
+      "desc": "Conocé la pantalla del POS, sus atajos de teclado y todo lo que hay en el Menú rápido para saber dónde está cada cosa."
+    },
+    {
+      "n": "07",
+      "slug": "hacer-una-venta",
+      "titulo": "Cómo hacer una venta en ADEstock",
+      "cat": "vender",
+      "prio": "P0",
+      "roles": [
+        "cajero",
+        "dueno"
+      ],
+      "surface": [
+        "pos"
+      ],
+      "syn": [
+        "vender",
+        "cobrar",
+        "carrito",
+        "vuelto"
+      ],
+      "desc": "Armá el carrito, cobrá en efectivo con vuelto y cerrá la venta. Es el flujo más común del día y la base de los demás."
+    },
+    {
+      "n": "08",
+      "slug": "cobrar-con-varios-medios-de-pago",
+      "titulo": "Cómo cobrar con varios medios de pago",
+      "cat": "vender",
+      "prio": "P1",
+      "roles": [
+        "cajero",
+        "dueno"
+      ],
+      "surface": [
+        "pos"
+      ],
+      "syn": [
+        "pago mixto",
+        "mitad efectivo mitad tarjeta",
+        "descuento",
+        "recargo"
+      ],
+      "desc": "Cobrá una venta repartida en varios medios (por ejemplo efectivo y tarjeta) y aplicá un descuento sobre el total."
+    },
+    {
+      "n": "09",
+      "slug": "vender-fiado-cuenta-corriente",
+      "titulo": "Cómo vender fiado a cuenta corriente",
+      "cat": "clientes",
+      "prio": "P1",
+      "roles": [
+        "cajero",
+        "dueno"
+      ],
+      "surface": [
+        "pos"
+      ],
+      "syn": [
+        "fiar",
+        "fiado",
+        "cuenta corriente",
+        "deuda"
+      ],
+      "desc": "Entregá la mercadería sin cobrar en el momento y dejá la plata como deuda del cliente para que la pague después."
+    },
+    {
+      "n": "10",
+      "slug": "anular-venta-y-reimprimir-ticket",
+      "titulo": "Cómo anular una venta y reimprimir un ticket",
+      "cat": "vender",
+      "prio": "P1",
+      "roles": [
+        "cajero",
+        "dueno"
+      ],
+      "surface": [
+        "pos",
+        "panel"
+      ],
+      "syn": [
+        "anular",
+        "devolución",
+        "reimprimir",
+        "ticket"
+      ],
+      "desc": "Reimprimí el ticket de una venta cerrada o anulá una venta hecha por error para que deje de contar en caja y en stock."
+    },
+    {
+      "n": "11",
+      "slug": "hacer-presupuesto",
+      "titulo": "Cómo hacer un presupuesto y convertirlo en venta",
+      "cat": "vender",
+      "prio": "P1",
+      "roles": [
+        "cajero",
+        "dueno"
+      ],
+      "surface": [
+        "pos"
+      ],
+      "syn": [
+        "cotización",
+        "presupuesto",
+        "vigencia"
+      ],
+      "desc": "Armá un presupuesto con precios respetados por unos días, sin descontar stock ni cobrar, y convertilo en venta cuando el cliente confirme."
+    },
+    {
+      "n": "12",
+      "slug": "abrir-y-cerrar-caja",
+      "titulo": "Cómo abrir y cerrar la caja (turno)",
+      "cat": "caja",
+      "prio": "P0",
+      "roles": [
+        "cajero",
+        "dueno"
+      ],
+      "surface": [
+        "pos"
+      ],
+      "syn": [
+        "turno",
+        "arqueo",
+        "faltante",
+        "sobrante",
+        "cierre de caja"
+      ],
+      "desc": "Abrí tu turno con el efectivo inicial y cerralo contando la plata para saber si hay faltante o sobrante."
+    },
+    {
+      "n": "13",
+      "slug": "registrar-gastos-y-retiros",
+      "titulo": "Cómo registrar un gasto o un retiro de caja",
+      "cat": "caja",
+      "prio": "P1",
+      "roles": [
+        "cajero",
+        "dueno"
+      ],
+      "surface": [
+        "pos"
+      ],
+      "syn": [
+        "gasto",
+        "retiro",
+        "caja chica"
+      ],
+      "desc": "Dejá asentada la plata que sale de la caja para que el cierre cierre bien. Un gasto y un retiro son cosas distintas."
+    },
+    {
+      "n": "14",
+      "slug": "fabricar-productos-con-recetas",
+      "titulo": "Cómo fabricar productos con recetas",
+      "cat": "stock",
+      "prio": "P2",
+      "roles": [
+        "dueno",
+        "administrativo"
+      ],
+      "surface": [
+        "pos",
+        "panel"
+      ],
+      "syn": [
+        "receta",
+        "insumos",
+        "producción",
+        "fábrica"
+      ],
+      "desc": "Registrá una orden de fabricación: el sistema calcula el costo, verifica los insumos y suma el producto terminado al stock."
+    },
+    {
+      "n": "15",
+      "slug": "crear-y-editar-clientes",
+      "titulo": "Cómo crear y editar clientes",
+      "cat": "clientes",
+      "prio": "P1",
+      "roles": [
+        "cajero",
+        "dueno",
+        "administrativo"
+      ],
+      "surface": [
+        "pos",
+        "panel"
+      ],
+      "syn": [
+        "alta de cliente",
+        "cliente nuevo"
+      ],
+      "desc": "Registrá un cliente para asignarle ventas, venderle a cuenta corriente y llevar su historial y su saldo."
+    },
+    {
+      "n": "16",
+      "slug": "consultar-cuenta-corriente-cliente",
+      "titulo": "Cómo consultar la cuenta corriente de un cliente",
+      "cat": "clientes",
+      "prio": "P1",
+      "roles": [
+        "dueno",
+        "administrativo"
+      ],
+      "surface": [
+        "pos",
+        "panel"
+      ],
+      "syn": [
+        "saldo",
+        "deuda de cliente",
+        "estado de cuenta"
+      ],
+      "desc": "Mirá cuánto te debe un cliente y entendé la diferencia entre el saldo normal y el saldo actualizado a los precios de hoy."
+    },
+    {
+      "n": "17",
+      "slug": "cobrar-deuda-cliente",
+      "titulo": "Cómo cobrar la deuda de un cliente",
+      "cat": "clientes",
+      "prio": "P1",
+      "roles": [
+        "cajero",
+        "dueno"
+      ],
+      "surface": [
+        "pos",
+        "panel"
+      ],
+      "syn": [
+        "cobrar deuda",
+        "pago parcial",
+        "saldo a favor"
+      ],
+      "desc": "Registrá que un cliente pagó parte o toda su deuda, eligiendo qué deudas cancela y con qué medio paga."
+    },
+    {
+      "n": "18",
+      "slug": "crear-y-editar-proveedores",
+      "titulo": "Cómo crear y editar proveedores",
+      "cat": "compras",
+      "prio": "P1",
+      "roles": [
+        "dueno",
+        "administrativo"
+      ],
+      "surface": [
+        "panel"
+      ],
+      "syn": [
+        "alta de proveedor",
+        "proveedor nuevo"
+      ],
+      "desc": "Registrá a tus proveedores para cargarles compras, llevar lo que les debés y pagarles."
+    },
+    {
+      "n": "19",
+      "slug": "cargar-compra-manual",
+      "titulo": "Cómo cargar una compra a mano",
+      "cat": "compras",
+      "prio": "P1",
+      "roles": [
+        "dueno",
+        "administrativo"
+      ],
+      "surface": [
+        "panel"
+      ],
+      "syn": [
+        "compra",
+        "ingreso de mercadería",
+        "remito"
+      ],
+      "desc": "Registrá una compra tecleando los renglones, sin foto ni IA, para que sume stock, actualice costos y quede pagada o a cuenta corriente."
+    },
+    {
+      "n": "20",
+      "slug": "cargar-compras-con-foto-ia",
+      "titulo": "Cómo cargar una compra con foto e IA en ADEstock",
+      "cat": "compras",
+      "prio": "P0",
+      "roles": [
+        "dueno",
+        "administrativo"
+      ],
+      "surface": [
+        "pos",
+        "panel"
+      ],
+      "syn": [
+        "boleta",
+        "factura proveedor",
+        "cargar compra",
+        "foto factura",
+        "OCR",
+        "foto de factura"
+      ],
+      "desc": "Sacale una foto a la boleta del proveedor y revisá los renglones que lee el sistema antes de crear y confirmar la compra."
+    },
+    {
+      "n": "21",
+      "slug": "pagar-proveedor",
+      "titulo": "Cómo pagar a un proveedor",
+      "cat": "compras",
+      "prio": "P1",
+      "roles": [
+        "dueno",
+        "administrativo"
+      ],
+      "surface": [
+        "panel"
+      ],
+      "syn": [
+        "pago a proveedor",
+        "deuda con proveedor",
+        "adelanto"
+      ],
+      "desc": "Pagá parte o toda la deuda de tus compras a cuenta corriente, eligiendo qué compras cancelás y con qué medio."
+    },
+    {
+      "n": "22",
+      "slug": "cargar-listas-precios-proveedores",
+      "titulo": "Cómo cargar listas de precios de proveedores",
+      "cat": "compras",
+      "prio": "P1",
+      "roles": [
+        "dueno",
+        "administrativo"
+      ],
+      "surface": [
+        "panel"
+      ],
+      "syn": [
+        "lista de precios",
+        "lista proveedor excel",
+        "comparar precios"
+      ],
+      "desc": "Subí la lista de precios de un proveedor, asociala a tus productos y mirá en cuáles te conviene o no comprarle."
+    },
+    {
+      "n": "23",
+      "slug": "contar-stock",
+      "titulo": "Cómo contar el stock de un depósito",
+      "cat": "stock",
+      "prio": "P0",
+      "roles": [
+        "dueno",
+        "administrativo"
+      ],
+      "surface": [
+        "panel"
+      ],
+      "syn": [
+        "conteo",
+        "inventario",
+        "tengo 12 pero dice 9",
+        "diferencias"
+      ],
+      "desc": "Contá la mercadería física, compará con lo que dice el sistema y corregí las diferencias con registro de quién, cuándo y cuánto."
+    },
+    {
+      "n": "24",
+      "slug": "ajustar-stock-mermas-transferencias",
+      "titulo": "Cómo ajustar stock, registrar mermas y transferir entre depósitos",
+      "cat": "stock",
+      "prio": "P0",
+      "roles": [
+        "dueno",
+        "administrativo"
+      ],
+      "surface": [
+        "panel"
+      ],
+      "syn": [
+        "ajuste de stock",
+        "merma",
+        "transferencia",
+        "corregir stock",
+        "me quedó mal el stock"
+      ],
+      "desc": "Registrá los movimientos de stock que no son compra ni venta: ajustes, mermas y transferencias entre depósitos."
+    },
+    {
+      "n": "25",
+      "slug": "actualizar-precios-y-rentabilidad",
+      "titulo": "Cómo actualizar precios y controlar la rentabilidad",
+      "cat": "stock",
+      "prio": "P1",
+      "roles": [
+        "dueno",
+        "administrativo"
+      ],
+      "surface": [
+        "panel"
+      ],
+      "syn": [
+        "aumento de precios",
+        "margen",
+        "recargo",
+        "precios masivos"
+      ],
+      "desc": "Subí o bajá muchos precios a la vez por porcentaje, categoría o proveedor, viendo antes cómo queda cada uno."
+    },
+    {
+      "n": "26",
+      "slug": "crear-ofertas-y-promociones",
+      "titulo": "Cómo crear ofertas y promociones",
+      "cat": "ofertas",
+      "prio": "P0",
+      "roles": [
+        "dueno",
+        "administrativo"
+      ],
+      "surface": [
+        "panel"
+      ],
+      "syn": [
+        "oferta",
+        "promoción",
+        "descuento por vigencia"
+      ],
+      "desc": "Armá una oferta con varios productos y tipos de promoción (descuento, 3x2, segunda unidad a mitad de precio) con fecha de vigencia."
+    },
+    {
+      "n": "27",
+      "slug": "crear-revista-ofertas",
+      "titulo": "Cómo crear una revista de ofertas con tus productos",
+      "cat": "ofertas",
+      "prio": "P0",
+      "roles": [
+        "dueno",
+        "administrativo"
+      ],
+      "surface": [
+        "panel"
+      ],
+      "syn": [
+        "folleto",
+        "revista",
+        "catálogo de ofertas",
+        "hacer folleto ofertas",
+        "PDF de ofertas"
+      ],
+      "desc": "Armá una revista de ofertas en A4 o un post para redes con tus productos, precios y promociones, y exportala o compartila."
+    },
+    {
+      "n": "28",
+      "slug": "imprimir-etiquetas",
+      "titulo": "Cómo imprimir etiquetas de precios",
+      "cat": "instalar",
+      "prio": "P1",
+      "roles": [
+        "dueno",
+        "administrativo"
+      ],
+      "surface": [
+        "panel"
+      ],
+      "syn": [
+        "etiquetas",
+        "impresora de etiquetas",
+        "código de barras"
+      ],
+      "desc": "Imprimí etiquetas con nombre, precio y código de barras de tus productos, o solo de los que están en oferta."
+    },
+    {
+      "n": "29",
+      "slug": "configurar-tienda-online",
+      "titulo": "Cómo activar y configurar la tienda online",
+      "cat": "ofertas",
+      "prio": "P1",
+      "roles": [
+        "dueno"
+      ],
+      "surface": [
+        "panel"
+      ],
+      "syn": [
+        "tienda online",
+        "catálogo online",
+        "pedidos"
+      ],
+      "desc": "Publicá una tienda web con tu catálogo, precios y ofertas donde tus clientes se registran y hacen pedidos."
+    },
+    {
+      "n": "30",
+      "slug": "usar-app-del-dueno",
+      "titulo": "Cómo usar la app del dueño",
+      "cat": "caja",
+      "prio": "P2",
+      "roles": [
+        "dueno"
+      ],
+      "surface": [
+        "app"
+      ],
+      "syn": [
+        "app",
+        "celular",
+        "ver ventas desde el celular"
+      ],
+      "desc": "Mirá cómo viene el negocio desde el celular: cuánto vendiste, cuánto ganaste, qué te deben y a quién le comprás."
+    },
+    {
+      "n": "31",
+      "slug": "consultar-reportes-y-exportar",
+      "titulo": "Cómo consultar reportes y exportarlos",
+      "cat": "caja",
+      "prio": "P2",
+      "roles": [
+        "dueno",
+        "administrativo"
+      ],
+      "surface": [
+        "panel"
+      ],
+      "syn": [
+        "reportes",
+        "exportar",
+        "estadísticas",
+        "costos"
+      ],
+      "desc": "Encontrá cualquier dato del negocio (una venta, un pago, un gasto, una compra), filtralo y exportalo a Excel."
+    },
+    {
+      "n": "32",
+      "slug": "controlar-turnos-caja-panel",
+      "titulo": "Cómo controlar un turno de caja desde el panel",
+      "cat": "caja",
+      "prio": "P2",
+      "roles": [
+        "dueno"
+      ],
+      "surface": [
+        "panel"
+      ],
+      "syn": [
+        "supervisar caja",
+        "turnos"
+      ],
+      "desc": "Revisá los turnos de caja del negocio: quién los abrió, cuánto faltó o sobró y qué ventas y cobros tuvo cada uno."
+    },
+    {
+      "n": "33",
+      "slug": "billeteras-y-cuentas",
+      "titulo": "Cómo usar billeteras y cuentas",
+      "cat": "caja",
+      "prio": "P2",
+      "roles": [
+        "dueno",
+        "administrativo"
+      ],
+      "surface": [
+        "panel"
+      ],
+      "syn": [
+        "billetera",
+        "transferencias",
+        "saldos"
+      ],
+      "desc": "Sabé cuánta plata tenés en cada lugar (caja, banco, Mercado Pago) y llevá sus movimientos y transferencias."
+    },
+    {
+      "n": "34",
+      "slug": "armar-pedidos-picking",
+      "titulo": "Cómo armar pedidos (picking) desde el celular",
+      "cat": "vender",
+      "prio": "P2",
+      "roles": [
+        "dueno",
+        "administrativo"
+      ],
+      "surface": [
+        "app",
+        "panel"
+      ],
+      "syn": [
+        "picking",
+        "armador",
+        "armado de pedidos",
+        "preparar pedidos",
+        "depósito",
+        "pedidos"
+      ],
+      "desc": "Preparé un pedido desde el celular: mirá qué productos juntar, marcá lo que ya sacaste y avisá si algo falta."
+    },
+    {
+      "n": "35",
+      "slug": "notas-de-credito-y-debito",
+      "titulo": "Cómo aplicar, controlar y anular notas de crédito y débito",
+      "cat": "vender",
+      "prio": "P2",
+      "roles": [
+        "dueno",
+        "administrativo"
+      ],
+      "surface": [
+        "panel"
+      ],
+      "syn": [
+        "nota de crédito",
+        "nota de débito",
+        "diferencia de armado",
+        "ajuste de venta"
+      ],
+      "desc": "Entendé y manejá las notas de ajuste que corrigen una venta cuando no se entregó todo lo que se cobró."
+    },
+    {
+      "n": "36",
+      "slug": "licencia",
+      "titulo": "Cómo ver y activar tu licencia de ADEstock",
+      "cat": "instalar",
+      "prio": "P1",
+      "roles": [
+        "dueno"
+      ],
+      "surface": [
+        "panel"
+      ],
+      "syn": [
+        "licencia",
+        "licencia pro",
+        "clave",
+        "activar",
+        "versión gratuita",
+        "vence la licencia"
+      ],
+      "desc": "Sabé en qué licencia estás, qué limita la versión gratuita y cómo activar la Licencia Pro con tu Machine ID."
+    },
+    {
+      "n": "37",
+      "slug": "respaldos",
+      "titulo": "Cómo hacer y restaurar copias de seguridad",
+      "cat": "instalar",
+      "prio": "P1",
+      "roles": [
+        "dueno"
+      ],
+      "surface": [
+        "panel"
+      ],
+      "syn": [
+        "backup",
+        "copia de seguridad",
+        "respaldo",
+        "restaurar",
+        "recuperar datos"
+      ],
+      "desc": "Hacé copias de seguridad de tu negocio en un archivo ZIP, guardalas en un lugar seguro y aprendé a restaurarlas."
+    },
+    {
+      "n": "38",
+      "slug": "instalar-agente-de-impresion",
+      "titulo": "Cómo instalar y conectar el agente de impresión (Agent Printer)",
+      "cat": "instalar",
+      "prio": "P1",
+      "roles": [
+        "dueno"
+      ],
+      "surface": [
+        "panel"
+      ],
+      "syn": [
+        "agent printer",
+        "imprimir ticket",
+        "impresora",
+        "impresora térmica",
+        "imprimir desde la nube",
+        "no imprime"
+      ],
+      "desc": "Instalá y conectá Agent Printer para que los tickets y etiquetas salgan por la impresora del mostrador."
+    }
   ]
 }

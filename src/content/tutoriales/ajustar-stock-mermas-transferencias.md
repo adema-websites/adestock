@@ -2,22 +2,23 @@
 id: "ajustar-stock-mermas-transferencias"
 slug: "ajustar-stock-mermas-transferencias"
 title: "Cómo ajustar stock, registrar mermas y transferir entre depósitos"
-description: "Registrar los movimientos de stock que no son una compra ni una venta:"
+description: "Registrá los movimientos de stock que no son compra ni venta: ajustes, mermas y transferencias entre depósitos."
 category: "stock"
 priority: "P0"
 roles: ["dueno","administrativo"]
 surface: ["panel"]
 status: "draft"
 tiempo: "3 minutos por operación"
-necesitas: "acceso al panel de administración (*Menú rápido → Panel de administración → Producto*)"
+necesitas: "acceso al panel de administración (Menú rápido → Panel de administración → Producto)"
 para_quien: "dueños y administrativos"
 modulo: "producto (Merma, AjusteInventario, TransferenciaInventario), panel de administración"
 permiso: "acceso al panel de administración"
 source_path: "01-manual-usuario/24-ajustes-mermas-y-transferencias.md"
-source_hash: "b4e1b3e4ddbb0f46db0632dca8dac6170e28742ce46987c34c8547e56936f98a"
-product_version: "pendiente-verificar"
+source_hash: "47fb7f67daaf931dfc795007e75d7de686ce622a0baa10b0456a734e7df8eb1d"
+product_version: "3.0.0"
 verified_at: "2026-10-12"
 reviewed_at: null
+reviewed_by: null
 synonyms: ["ajuste de stock","merma","transferencia","corregir stock","me quedó mal el stock"]
 related: []
 social_image: "/social/ajustar-stock-mermas-transferencias-v1.jpg"
@@ -31,7 +32,7 @@ Registrar los movimientos de stock que **no son una compra ni una venta**:
 | Se **rompió, venció o se perdió** mercadería | **Merma** |
 | Querés **mover mercadería** de un depósito a otro | **Transferencia de inventario** |
 | Querés **cargar o corregir** el stock de muchos productos (carga inicial, Excel) | **Ajuste de inventario** |
-| Contaste y el stock real no coincide | **Conteo de stock** (ver [Conteo de stock](23-conteo-de-stock.md)) |
+| Contaste y el stock real no coincide | **Conteo de stock** (ver [Conteo de stock](/tutoriales/contar-stock/)) |
 
 > Estas pantallas están en el **panel de administración**, no en el POS. El conteo y el lápiz de stock sí están en el POS.
 
@@ -52,7 +53,7 @@ Panel de administración → **Producto → Mermas → Agregar**.
 | 1 | **Producto** | El que se perdió |
 | 2 | **Cantidad** | En **unidades sueltas**. Si se rompió 1 lata de un pack de 6, poné **1** |
 | 3 | **Motivo** | La causa: vencimiento, rotura, robo, consumo propio… |
-| — | **Caja / Punto de venta** | De qué caja descontar (define el depósito) |
+| - | **Caja / Punto de venta** | De qué caja descontar (define el depósito) |
 
 Tocá **Guardar**. La merma queda **Pendiente**.
 
@@ -190,7 +191,7 @@ En la pestaña **Detalles de ajuste** cargás los productos y cantidades. Con **
 | La transferencia no mueve stock | Está en un estado que no es final | Tocá **▶ Avanzar** hasta el estado final |
 | "No se puede modificar una transferencia completada" | Ya movió el stock | Hacé una transferencia inversa |
 | La merma no descontó | Quedó pendiente | Tildala y usá **Confirmar mermas** |
-| Quiero corregir el stock de varios productos | — | Usá el **Conteo de stock** del POS |
+| Quiero corregir el stock de varios productos | - | Usá el **Conteo de stock** del POS |
 
 ## Siguiente paso
 

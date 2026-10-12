@@ -2,7 +2,7 @@
 id: "configurar-negocio"
 slug: "configurar-negocio"
 title: "Cómo configurar tu negocio en ADEstock la primera vez"
-description: "Al terminar este asistente, ADEstock queda listo para vender: con el nombre de tu negocio, tus depósitos y cajas, las billeteras, los medios de cobro, los…"
+description: "Completá el asistente inicial: nombre del negocio, depósitos, cajas, medios de cobro y usuarios. Al terminar, ADEstock queda listo para vender."
 category: "empezar"
 priority: "P0"
 roles: ["dueno"]
@@ -14,10 +14,11 @@ para_quien: "el dueño, la primera vez que entra al sistema"
 modulo: "agenda (onboarding), billetera, venta, producto"
 permiso: "ser el primer usuario que entra (superusuario)"
 source_path: "01-manual-usuario/02-onboarding-configuracion-inicial.md"
-source_hash: "3cda58410aa5244acfd1052bdab61e1758f9880ac22900f812768729d3e7d0ec"
-product_version: "pendiente-verificar"
+source_hash: "46527bd8ccaa226794d89d5636d4a197191772fd05e6254eea0127a391d36370"
+product_version: "3.0.0"
 verified_at: "2026-10-12"
 reviewed_at: null
+reviewed_by: null
 synonyms: ["onboarding","primeros pasos","empezar","configuración inicial"]
 related: []
 social_image: "/social/configurar-negocio-v1.jpg"

@@ -1,5 +1,4 @@
 import GithubSlugger from 'github-slugger';
-import type { Tutorial } from './tutoriales';
 
 export interface Fragmento {
   id: string;
@@ -13,6 +12,19 @@ export interface Fragmento {
   role: string[];
   surface: string[];
   version: string;
+  verified_at: string;
+}
+
+// Lo mínimo que necesita el índice de cualquier página de ayuda (tutorial o página transversal).
+export interface Documento {
+  id: string;
+  title: string;
+  url: string; // ruta base con barra final, ej. /tutoriales/hacer-una-venta/
+  body: string;
+  synonyms: string[];
+  roles: string[];
+  surface: string[];
+  product_version: string;
   verified_at: string;
 }
 
@@ -32,8 +44,8 @@ function limpiar(md: string): string {
     .trim();
 }
 
-// Divide el cuerpo por H2/H3 en pasajes de ~100–220 palabras sin partir en medio de un párrafo.
-export function fragmentar(t: Tutorial): Fragmento[] {
+// Divide el cuerpo por H2/H3 en pasajes de ~100-220 palabras sin partir en medio de un párrafo.
+export function fragmentar(doc: Documento): Fragmento[] {
   const slugger = new GithubSlugger(); // mismos ids que genera Astro en los encabezados
   const out: Fragmento[] = [];
   let heading = 'Introducción';
@@ -47,22 +59,22 @@ export function fragmentar(t: Tutorial): Fragmento[] {
     if (texto.split(' ').length < 5) return;
     n += 1;
     out.push({
-      id: `${t.data.id}#${n}`,
-      tutorial_id: t.data.id,
-      url: `/tutoriales/${t.data.slug}/${headingId ? '#' + headingId : ''}`,
+      id: `${doc.id}#${n}`,
+      tutorial_id: doc.id,
+      url: `${doc.url}${headingId ? '#' + headingId : ''}`,
       heading_id: headingId,
-      title: t.data.title,
+      title: doc.title,
       heading,
       text: texto,
-      keywords: t.data.synonyms.join(' '),
-      role: t.data.roles,
-      surface: t.data.surface,
-      version: t.data.product_version,
-      verified_at: t.data.verified_at,
+      keywords: doc.synonyms.join(' '),
+      role: doc.roles,
+      surface: doc.surface,
+      version: doc.product_version,
+      verified_at: doc.verified_at,
     });
   };
 
-  for (const bloque of (t.body ?? '').split(/\n{2,}/)) {
+  for (const bloque of (doc.body ?? '').split(/\n{2,}/)) {
     const h = bloque.match(/^(#{2,3})\s+(.*)$/m);
     if (h && bloque.trim().startsWith('#')) {
       flush();

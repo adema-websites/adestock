@@ -9,9 +9,10 @@ interface Props {
   path: string;
   noindex?: boolean;
   ogImage?: string;
+  ogType?: 'website' | 'article';
   jsonLd?: object[];
 }
-const { title, description, path, noindex = false, ogImage = '/social/adestock-v1.jpg', jsonLd = [] } = Astro.props;
+const { title, description, path, noindex = false, ogImage = '/social/adestock-v1.jpg', ogType = 'website', jsonLd = [] } = Astro.props;
 const canonical = SITE + path;
 const img = SITE + ogImage;
 const GA = 'G-W01VQ5GZND';
@@ -30,7 +31,7 @@ const GA = 'G-W01VQ5GZND';
     <link rel="alternate" type="text/plain" href={`${SITE}/llms.txt`} title="ADEstock LLM instructions" />
     <meta property="og:site_name" content="ADEstock" />
     <meta property="og:locale" content="es_AR" />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonical} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />

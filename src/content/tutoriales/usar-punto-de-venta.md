@@ -2,22 +2,23 @@
 id: "usar-punto-de-venta"
 slug: "usar-punto-de-venta"
 title: "Cómo recorrer el punto de venta y usar sus atajos"
-description: "Conocer cada parte de la pantalla del POS, los atajos de teclado y todo lo que hay dentro del Menú rápido, para saber dónde está cada cosa."
+description: "Conocé la pantalla del POS, sus atajos de teclado y todo lo que hay en el Menú rápido para saber dónde está cada cosa."
 category: "vender"
 priority: "P0"
 roles: ["cajero","dueno"]
 surface: ["pos"]
 status: "draft"
 tiempo: "8 minutos"
-necesitas: "haber ingresado al sistema y tener el **turno de caja abierto**"
+necesitas: "haber ingresado al sistema y tener el turno de caja abierto"
 para_quien: "cajeros y dueños que usan el punto de venta por primera vez"
 modulo: "venta (POS)"
 permiso: "ninguno (algunas opciones del menú dependen del permiso de cada usuario)"
 source_path: "01-manual-usuario/06-recorrido-por-el-pos.md"
 source_hash: "05a0492a667e42b750f4c81b16169808ab82e1e7b34fcb03da3b8163a6f0edc9"
-product_version: "pendiente-verificar"
+product_version: "3.0.0"
 verified_at: "2026-10-12"
 reviewed_at: null
+reviewed_by: null
 synonyms: ["pos","atajos","teclas"]
 related: []
 social_image: "/social/usar-punto-de-venta-v1.jpg"

@@ -2,7 +2,7 @@
 id: "cargar-compra-manual"
 slug: "cargar-compra-manual"
 title: "Cómo cargar una compra a mano"
-description: "Registrar una compra tecleando los renglones (sin sacar foto ni usar IA), para que sume stock, actualice los costos y deje pagada o a cuenta corriente con…"
+description: "Registrá una compra tecleando los renglones, sin foto ni IA, para que sume stock, actualice costos y quede pagada o a cuenta corriente."
 category: "compras"
 priority: "P1"
 roles: ["dueno","administrativo"]
@@ -14,13 +14,14 @@ para_quien: "dueños y administrativos"
 modulo: "compra (Compra simple), producto, agenda (Proveedor)"
 permiso: "acceso al módulo de compras"
 source_path: "01-manual-usuario/19-cargar-una-compra-manual.md"
-source_hash: "822685abf8ca977bad04200a8b1e9af494db5a1d886244108ca7a1e809524466"
-product_version: "pendiente-verificar"
+source_hash: "c05d7e1167b5f7d4451754cbb86c3ee8f3e955dbe888c42c9e5fdec4aab76a77"
+product_version: "3.0.0"
 verified_at: "2026-10-12"
 reviewed_at: null
+reviewed_by: null
 synonyms: ["compra","ingreso de mercadería","remito"]
 related: []
-social_image: null
+social_image: "/social/cargar-compra-manual-v1.jpg"
 ---
 ## Qué vas a lograr
 
@@ -52,8 +53,8 @@ No hay boleta que lo detecte: lo elegís vos de la lista (o lo creás con **＋ 
 
 | # | Pregunta | Qué responder |
 |---|---|---|
-| 1 | **¿Cómo se paga?** | *Efectivo*, *Transferencia* o *Cuenta Corriente Proveedor* (queda como deuda) |
-| 2 | **¿Hubo flete?** | Si tildás, elegís si es un gasto aparte, si se paga con la compra y si se prorratea. Está explicado en [Cargar una compra con la foto de la boleta](20-comprar-con-foto-ocr.md#el-flete-tres-formas-de-manejarlo) |
+| 1 | **¿Cómo se paga?** | *Efectivo*, *Transferencia* o *Cuenta Corriente Proveedor* (queda como deuda). La opción de **cuenta corriente** solo la ven los usuarios con el permiso *Puede comprar en cuenta corriente* |
+| 2 | **¿Hubo flete?** | Si tildás, elegís si es un gasto aparte, si se paga con la compra y si se prorratea. Está explicado en [Cargar una compra con la foto de la boleta](/tutoriales/cargar-compras-con-foto-ia/#el-flete-tres-formas-de-manejarlo) |
 
 También podés indicar si **la factura discrimina IVA**.
 
@@ -93,7 +94,7 @@ Tocá **Crear compra** otra vez para guardar.
 
 ### 7. Confirmala en el panel de administración
 
-La compra queda **pendiente**. Para que mueva stock y plata, confirmala:
+La compra queda **pendiente** y **la tiene que confirmar el dueño o un administrativo** (más adelante también desde la app del dueño). Para que mueva stock y plata, se confirma así:
 
 **Panel de administración → Compra → Compras** → tildá la compra → acción **Confirmar compra** → *Ejecutar*.
 
@@ -101,9 +102,15 @@ La compra queda **pendiente**. Para que mueva stock y plata, confirmala:
 
 Pasa a **✓ Aprobada**. En el ejemplo: 20 × $ 1.500 + 30 × $ 850 = **$ 55.500**.
 
+> **Los pagos de una compra se registran desde el POS** (paso 3), no desde el panel de administración: en el panel la compra se **consulta y se confirma**, pero sus pagos no se agregan ni se editan. Tampoco se crean compras desde el panel.
+
+### Y el turno de caja
+
+El pago de la compra queda asociado al **turno que tenías abierto** cuando la cargaste. Mientras la compra esté **pendiente**, ese pago **no descuenta** efectivo del arqueo. Si la pagaste con dinero u otro medio (no cuenta corriente), **tiene que estar confirmada antes de que cierres el turno**: si no, el cierre te avisa y no te deja cerrar (ver [Turno de caja](/tutoriales/abrir-y-cerrar-caja/#antes-de-cerrar-las-compras-pagadas-tienen-que-estar-confirmadas)). Las compras **solo a cuenta corriente** no frenan el cierre.
+
 ## ¿Y si la pagué a cuenta corriente?
 
-Si en el paso 3 elegiste *Cuenta Corriente Proveedor*, la compra confirmada suma **deuda** con el proveedor. La saldás desde **Menú rápido → Pagar a un proveedor** (ver [Pagar a un proveedor](21-pagar-a-un-proveedor.md)).
+Si en el paso 3 elegiste *Cuenta Corriente Proveedor*, la compra confirmada suma **deuda** con el proveedor. La saldás desde **Menú rápido → Pagar a un proveedor** (ver [Pagar a un proveedor](/tutoriales/pagar-proveedor/)).
 
 Si la pagaste en efectivo o transferencia, ya queda **pagada** al confirmar.
 
@@ -113,15 +120,19 @@ Si la pagaste en efectivo o transferencia, ya queda **pagada** al confirmar.
 |---|---|
 | Stock | Suma la cantidad comprada de cada producto, al confirmar |
 | Costo | Con *Act. costo* tildado, el costo del producto pasa a ser el precio de esta compra |
-| Pago | Se registra un pago con el medio elegido. Si es cuenta corriente, queda sin cancelar (deuda) |
+| Pago | Se registra un pago con el medio elegido, asociado a tu turno abierto. Si es cuenta corriente, queda sin cancelar (deuda) |
+| Caja | Al confirmar la compra, el pago en efectivo resta del efectivo esperado **del turno donde se pagó** |
 
 ## Problemas frecuentes
 
 | Si te pasa… | Es porque… | Qué hacer |
 |---|---|---|
 | No me deja crear la compra | Hay un renglón sin producto, o con cantidad 0 | Asigná el producto o quitá el renglón |
-| La compra no suma stock | Quedó pendiente | Confirmala desde el panel de administración |
-| Cargué mal un precio | — | Antes de confirmar: eliminá la compra pendiente y volvela a cargar |
+| La compra no suma stock | Quedó pendiente | Pedile al dueño o a un administrativo que la confirme en el panel de administración |
+| No me deja cerrar la caja | Tenés compras pagadas sin confirmar | Pedí que las confirmen (o descartalas si estaban mal cargadas) |
+| No veo *Cuenta Corriente Proveedor* | Tu usuario no tiene el permiso *Puede comprar en cuenta corriente* | Pedíselo al dueño (Menú rápido → Usuarios) |
+| Quiero cargar o editar el pago desde el panel | Los pagos se registran solo desde el POS | Eliminá la compra pendiente y volvela a cargar desde el POS |
+| Cargué mal un precio | - | Antes de confirmar: eliminá la compra pendiente y volvela a cargar |
 | El proveedor no está | Es nuevo | **＋ Nuevo proveedor** en el paso 2 |
 
 ## Siguiente paso

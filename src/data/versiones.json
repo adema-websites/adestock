@@ -1,0 +1,139 @@
+{
+  "_nota": "Historial de versiones del instalador de escritorio. 'visible: false' oculta la versión hasta que exista el enlace oficial. scripts/aplicar_instalador.mjs lo activa y completa 'url' y 'archivo'.",
+  "versiones": [
+    {
+      "version": "3.0.1",
+      "visible": false,
+      "fecha": "Octubre 2026",
+      "titulo": "Revistas de ofertas, app del dueño y caja más ordenada",
+      "resumen": "La versión 3 suma revistas y folletos con tu marca, una app para el dueño en el celular, promociones por cantidad y un cierre de caja que exige las compras confirmadas. La 3.0.1 incluye la documentación completa y correcciones.",
+      "url": null,
+      "archivo": null,
+      "bloques": [
+        { "titulo": "Vender y promocionar", "items": [
+          "Revistas y folletos: armás piezas con tus productos y precios, con temas de diseño, temas propios y fotos para publicidad.",
+          "Revista online con enlace público y envío por WhatsApp.",
+          "Promos por cantidad: NxM, segunda unidad al X% y llevando N.",
+          "Panel de configuración en el POS con los ajustes del negocio y de los puntos de venta."
+        ] },
+        { "titulo": "App del dueño", "items": [
+          "App para el celular (PWA) con la radiografía del negocio, productos, elaborados y cuentas corrientes.",
+          "Proveedores y comparación de proveedores: qué le comprás a cada uno y quién te vende más barato lo mismo.",
+          "Instalación desde el POS y acceso solo para dueños."
+        ] },
+        { "titulo": "Caja y control", "items": [
+          "Los pagos de compras y a proveedores se atribuyen al turno de caja.",
+          "Los pagos y cobros se hacen solo desde el POS.",
+          "El cierre de caja exige que las compras estén confirmadas y avisa cuando queda bloqueado.",
+          "Armado de pedidos (picking) desde el celular y notas de crédito y débito."
+        ] }
+      ],
+      "nota": "Antes de actualizar, hacé una copia de seguridad."
+    },
+    {
+      "version": "2.3.3",
+      "visible": true,
+      "fecha": "Mayo 2026",
+      "titulo": "Soporte técnico asistido y trazabilidad de incidencias",
+      "resumen": "Las pantallas de error ahora ayudan a reportar incidencias con contexto útil, sin exponer información sensible.",
+      "url": "https://github.com/adema-websites/adestock/releases/download/ADEstock-desktop-2.3.3v/Adestock_Installer_v2.3.3.exe",
+      "archivo": "Adestock_Installer_v2.3.3.exe",
+      "bloques": [
+        { "titulo": "Novedades", "items": [
+          "Botón de soporte en errores 400, 403, 404 y 500 con mensaje dinámico de WhatsApp.",
+          "Resumen automático del incidente con tipo de error, ruta, método HTTP, fecha, usuario y vista interna.",
+          "Referencia única del incidente para unir el reporte del usuario con los registros internos."
+        ] },
+        { "titulo": "Seguridad", "items": [
+          "No se envían stacktraces completos, formularios, cookies, tokens, contraseñas, API keys ni sentencias SQL.",
+          "Los datos sensibles se reemplazan por marcadores seguros, por ejemplo password=[oculto]."
+        ] }
+      ]
+    },
+    {
+      "version": "2.3.0",
+      "visible": true,
+      "fecha": "2026",
+      "titulo": "Presupuestos desde el mostrador",
+      "resumen": "Permitía armar presupuestos desde el POS sin mover stock, sin registrar pagos y sin cerrar una venta hasta que el cliente confirmara.",
+      "url": "https://github.com/adema-websites/adestock/releases/download/ADEstock-desktop-2.3.0v/Adestock_Installer_v2.3.0.exe",
+      "archivo": "Adestock_Installer_v2.3.0.exe",
+      "bloques": [
+        { "titulo": "Qué se incorporó", "items": [
+          "Presupuestos desde el POS sin descontar mercadería ni registrar pagos.",
+          "Precios congelados durante los días de vigencia que definas.",
+          "Impresión del presupuesto en ticket PDF o en hoja A4.",
+          "Búsqueda por número de presupuesto, cliente o documento.",
+          "Cierre rápido desde administración para convertir el presupuesto en venta."
+        ] }
+      ]
+    },
+    {
+      "version": "2.2.5",
+      "visible": true,
+      "fecha": "2026",
+      "titulo": "Edición rápida de productos desde el POS",
+      "resumen": "Corregí un dato mientras vendés, desde el explorador visual y sin salir del POS.",
+      "url": null,
+      "archivo": null,
+      "bloques": [
+        { "titulo": "Qué se incorporó", "items": [
+          "Botón Editar producto dentro de las tarjetas del explorador rápido del POS.",
+          "Edición de nombre, código de barras, costo, cantidad o precios desde el mismo flujo de venta.",
+          "Los administradores lo ven automáticamente; para cajeros, se habilita con el permiso puede_gestionar_productos."
+        ] }
+      ]
+    },
+    {
+      "version": "2.2.0",
+      "visible": true,
+      "fecha": "2026",
+      "titulo": "Compra inteligente, venta por peso y reportes de rentabilidad",
+      "resumen": "Herramientas para comprar mejor, vender por peso o cantidad variable y entender qué productos dejan más margen.",
+      "url": "https://github.com/adema-websites/adestock/releases/download/ADEstock-desktop-2.2.1v/Adestock_Installer_v2.2.1.exe",
+      "archivo": "Adestock_Installer_v2.2.1.exe",
+      "bloques": [
+        { "titulo": "Qué se incorporó", "items": [
+          "Compra Inteligente para detectar productos con stock crítico y preparar notas de pedido por proveedor.",
+          "Cantidad variable en el POS para vender por peso, volumen o medida libre.",
+          "Reporte de productos vendidos con ranking por facturación y margen bruto.",
+          "Pagos a proveedores desde el mostrador, con pagos parciales, adelantos y saldos a favor."
+        ] }
+      ]
+    },
+    {
+      "version": "1.9",
+      "visible": true,
+      "fecha": "2026",
+      "titulo": "Apertura de caja obligatoria y mejor control operativo",
+      "resumen": "Reforzó la operación diaria de caja y preparó ADEstock para instalaciones más robustas, en escritorio y en la nube.",
+      "url": null,
+      "archivo": null,
+      "bloques": [
+        { "titulo": "Qué cambió para el negocio", "items": [
+          "El POS exige abrir caja al iniciar el turno, indicando cajero y monto inicial.",
+          "Se evitan turnos sin responsable y reportes de caja inconsistentes.",
+          "Los tickets de apertura y cierre se integran con el Agente de Impresión.",
+          "El menú administrativo oculta los módulos no habilitados."
+        ] }
+      ]
+    },
+    {
+      "version": "1.7",
+      "visible": true,
+      "fecha": "2026",
+      "titulo": "Backup en Google Drive, adelantos y comprobantes renovados",
+      "resumen": "Se enfocó en proteger la información del negocio y mejorar cobros, saldos a favor y comprobantes.",
+      "url": null,
+      "archivo": null,
+      "bloques": [
+        { "titulo": "Qué se incorporó", "items": [
+          "Backup en Google Drive para guardar la base de datos y las fotos de productos en tu propia nube.",
+          "Registro de adelantos y saldos a favor de clientes, con descuento automático al cobrar.",
+          "Comprobantes de venta más claros y profesionales.",
+          "Nuevas opciones generales para adaptar el comportamiento del POS."
+        ] }
+      ]
+    }
+  ]
+}

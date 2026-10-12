@@ -1,0 +1,14 @@
+---
+// Migrada desde public/terminos-condiciones.html. Contenido en src/paginas/terminos-condiciones.html.
+import Pagina from '../layouts/Pagina.astro';
+import contenido from '../paginas/terminos-condiciones.html?raw';
+const jsonLd = [];
+---
+<Pagina
+  title={"Términos y Condiciones | ADEstock"}
+  description={"Revisa los términos y condiciones de uso de ADEstock para planes, soporte, licencias, responsabilidades y condiciones del servicio."}
+  path="/terminos-condiciones.html"
+  jsonLd={jsonLd}
+>
+  <Fragment set:html={contenido} />
+</Pagina>

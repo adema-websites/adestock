@@ -1,0 +1,40 @@
+---
+// Migrada desde public/casos-uso-distribuidora-belleza.html. Contenido en src/paginas/casos-uso-distribuidora-belleza.html.
+import Pagina from '../layouts/Pagina.astro';
+import contenido from '../paginas/casos-uso-distribuidora-belleza.html?raw';
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ADEstock para Distribuidores de Belleza",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Software de gestión para distribuidores de belleza: stock mayorista, múltiples depósitos y ventas.",
+    "author": {
+      "@type": "Organization",
+      "name": "ADEMA Sistemas",
+      "url": "https://ademasistemas.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "Consultar",
+      "priceCurrency": "ARS"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ADEMA Sistemas",
+    "url": "https://ademasistemas.com",
+    "logo": "https://ademasistemas.com/logo.svg"
+  }
+];
+---
+<Pagina
+  title={"ADEstock para distribuidoras chicas | Stock, ventas y depósitos"}
+  description={"ADEstock para distribuidoras chicas y comercios mayoristas: control de stock, preventa, depósitos, ventas, compras, precios y reportes."}
+  path="/casos-uso-distribuidora-belleza.html"
+  jsonLd={jsonLd}
+>
+  <Fragment set:html={contenido} />
+</Pagina>

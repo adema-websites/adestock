@@ -1,0 +1,14 @@
+---
+// Migrada desde public/gestion-inventario-avanzada.html. Contenido en src/paginas/gestion-inventario-avanzada.html.
+import Pagina from '../layouts/Pagina.astro';
+import contenido from '../paginas/gestion-inventario-avanzada.html?raw';
+const jsonLd = [];
+---
+<Pagina
+  title={"Gestión de inventario avanzado y productos | ADEstock"}
+  description={"Gestioná productos, variantes, kits, recetas, costos, precios, stock mínimo y reportes con ADEstock, sistema de inventario para comercios argentinos."}
+  path="/gestion-inventario-avanzada.html"
+  jsonLd={jsonLd}
+>
+  <Fragment set:html={contenido} />
+</Pagina>

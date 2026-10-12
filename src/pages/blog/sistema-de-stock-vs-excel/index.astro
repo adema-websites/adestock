@@ -1,0 +1,117 @@
+---
+// Migrada desde public/blog/sistema-de-stock-vs-excel/index.html. El contenido vive en src/paginas/blog--sistema-de-stock-vs-excel.html.
+import Pagina from '../../../layouts/Pagina.astro';
+import contenido from '../../../paginas/blog--sistema-de-stock-vs-excel.html?raw';
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://adestock.com.ar/#organization",
+        "name": "ADEMA Sistemas",
+        "url": "https://adestock.com.ar/",
+        "logo": "https://adestock.com.ar/img/logo.png"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://adestock.com.ar/#software",
+        "name": "ADEstock",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web, Windows",
+        "inLanguage": "es-AR",
+        "publisher": {
+          "@id": "https://adestock.com.ar/#organization"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "ARS"
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": "https://adestock.com.ar/#product",
+        "name": "ADEstock",
+        "brand": {
+          "@type": "Brand",
+          "name": "ADEstock"
+        },
+        "category": "Sistema de stock",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "ARS",
+          "url": "https://adestock.com.ar/descargar-demo.html"
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Sistema de stock vs Excel: cuándo conviene cambiar",
+        "datePublished": "2026-05-14",
+        "dateModified": "2026-05-14",
+        "author": {
+          "@id": "https://adestock.com.ar/#organization"
+        },
+        "publisher": {
+          "@id": "https://adestock.com.ar/#organization"
+        },
+        "mainEntityOfPage": "https://adestock.com.ar/blog/sistema-de-stock-vs-excel/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://adestock.com.ar/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://adestock.com.ar/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Sistema de stock vs Excel",
+            "item": "https://adestock.com.ar/blog/sistema-de-stock-vs-excel/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Excel sirve para controlar stock?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Puede servir al inicio, pero se vuelve limitado cuando hay muchas ventas, varios usuarios, cambios de precio, compras frecuentes o necesidad de reportes confiables."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuándo conviene pasar a un sistema?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Cuando aparecen diferencias de stock, errores de precio, falta de reportes, compras a ojo o la planilla ya no se actualiza en tiempo real."
+            }
+          }
+        ]
+      }
+    ]
+  }
+];
+---
+<Pagina
+  title={"Sistema de stock vs Excel: cuándo conviene cambiar | ADEstock"}
+  description={"Compará sistema de stock vs Excel y descubrí cuándo conviene cambiar a un software para controlar ventas, caja, compras, precios, inventario y reportes."}
+  path="/blog/sistema-de-stock-vs-excel/"
+  ogType="article"
+  jsonLd={jsonLd}
+>
+  <Fragment set:html={contenido} />
+</Pagina>

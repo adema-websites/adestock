@@ -2,22 +2,23 @@
 id: "contar-stock"
 slug: "contar-stock"
 title: "Cómo contar el stock de un depósito"
-description: "Contar la mercadería física, comparar con lo que dice el sistema y corregir las diferencias en un solo paso, con registro de quién, cuándo y cuánto."
+description: "Contá la mercadería física, compará con lo que dice el sistema y corregí las diferencias con registro de quién, cuándo y cuánto."
 category: "stock"
 priority: "P0"
 roles: ["dueno","administrativo"]
 surface: ["panel"]
 status: "draft"
 tiempo: "10 minutos por sector"
-necesitas: "el permiso *Puede modificar stock* (el dueño lo tiene siempre)"
+necesitas: "el permiso Puede modificar stock (el dueño lo tiene siempre)"
 para_quien: "dueños y encargados que controlan el inventario"
 modulo: "producto (ConteoStock, AjusteInventario), venta (POS)"
 permiso: "Puede modificar stock · opcional: Contar sin ver el stock"
 source_path: "01-manual-usuario/23-conteo-de-stock.md"
-source_hash: "78a70e6ed1520c87ebee08529f6801ce8ae12fbd17777d6f32b398c500e8654c"
-product_version: "pendiente-verificar"
+source_hash: "4757192cc81010da53028160dbbf4ab9a2c9f375a93ccd7f258344ab29387d3a"
+product_version: "3.0.0"
 verified_at: "2026-10-12"
 reviewed_at: null
+reviewed_by: null
 synonyms: ["conteo","inventario","tengo 12 pero dice 9","diferencias"]
 related: []
 social_image: "/social/contar-stock-v1.jpg"
@@ -145,7 +146,7 @@ Es la forma de evitar que el que cuenta "ajuste" lo que ve a lo que dice el sist
 | No veo el lápiz | Falta ese permiso, o no abriste el producto en *Editar* | Verificá el permiso y el permiso de gestionar productos |
 | Un producto no aparece | No es contable (servicio u horas) o está fusionado | Esos productos no se cuentan |
 | Contó otra persona y no puedo ver su diferencia | Conteo a ciegas | El administrador la ve en *Ajustes de inventario* |
-| Me equivoqué en un conteo | — | Anulá el ajuste desde el panel de administración |
+| Me equivoqué en un conteo | - | Anulá el ajuste desde el panel de administración |
 
 ## Siguiente paso
 

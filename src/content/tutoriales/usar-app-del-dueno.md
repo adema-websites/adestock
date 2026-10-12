@@ -2,25 +2,26 @@
 id: "usar-app-del-dueno"
 slug: "usar-app-del-dueno"
 title: "Cómo usar la app del dueño"
-description: "Ver cómo viene el negocio desde el celular, sin entrar al panel de administración: cuánto vendiste, cuánto ganaste, qué productos mueven la plata, cuánto te…"
+description: "Mirá cómo viene el negocio desde el celular: cuánto vendiste, cuánto ganaste, qué te deben y a quién le comprás."
 category: "caja"
 priority: "P2"
 roles: ["dueno"]
 surface: ["app"]
 status: "draft"
 tiempo: "10 minutos para recorrerla"
-necesitas: "un usuario de **dueño** o del grupo **Administrativos** y un celular (también funciona en la PC)"
+necesitas: "un usuario de dueño o del grupo Administrativos y un celular (también funciona en la PC)"
 para_quien: "el dueño y las personas de administración"
 modulo: "gerencia (app en /app/)"
 permiso: "superusuario (dueño) o usuario del grupo Administrativos"
 source_path: "01-manual-usuario/30-app-del-dueno.md"
-source_hash: "5add19d781a09fcff34d81eaa7f040497af1d80e08aa8feb3dc0e7d31e94da17"
+source_hash: "8a103c42d88872d4bb9e861e4cf8866d7517fe551d01446e097ed28b5e29e7f1"
 product_version: "2.5.3"
 verified_at: "2026-10-12"
 reviewed_at: null
+reviewed_by: null
 synonyms: ["app","celular","ver ventas desde el celular"]
 related: []
-social_image: null
+social_image: "/social/usar-app-del-dueno-v1.jpg"
 ---
 ## Qué vas a lograr
 
@@ -123,13 +124,13 @@ Para elegir otro período, tocá **Cambiar**. Se abre una hoja desde abajo:
 
 La radiografía se lee de arriba hacia abajo, en cuatro bloques:
 
-**Ventas** — cuánto vendiste en el período, lo que costó la mercadería vendida y lo que pagaste a proveedores (contado y a cuenta corriente). Tiene un **gráfico** con la línea de este período contra el anterior, en modo **Diario** o **Acumulado**.
+**Ventas** - cuánto vendiste en el período, lo que costó la mercadería vendida y lo que pagaste a proveedores (contado y a cuenta corriente). Tiene un **gráfico** con la línea de este período contra el anterior, en modo **Diario** o **Acumulado**.
 
 ![Ventas y gráfico](../../assets/tutoriales/30-app-del-dueno/07-ventas-y-grafico.png)
 
 Abajo, cuatro indicadores: la variación contra el período anterior, la **rentabilidad promedio**, el **ticket promedio** (cuántas ventas hubo) y una **proyección** de cómo cerrarías el mes si seguís a este ritmo.
 
-**Compras de mercadería** — cuánto compraste, y:
+**Compras de mercadería** - cuánto compraste, y:
 
 ![Compras](../../assets/tutoriales/30-app-del-dueno/08-compras.png)
 
@@ -140,9 +141,9 @@ Abajo, cuatro indicadores: la variación contra el período anterior, la **renta
 
 También muestra cuántos costos **subieron** y cuántos bajaron, cuántas compras hiciste y **a quién le compraste más**.
 
-**Gastos por categoría** — cuánto gastaste y en qué rubros (limpieza, alquiler, sueldos…).
+**Gastos por categoría** - cuánto gastaste y en qué rubros (limpieza, alquiler, sueldos…).
 
-**En limpio** — la cuenta final:
+**En limpio** - la cuenta final:
 
 ![En limpio](../../assets/tutoriales/30-app-del-dueno/09-en-limpio.png)
 
@@ -161,7 +162,7 @@ Tocá **Productos**. Muestra **cada producto** con su stock, cuánto vendió, su
 
 | # | Elemento | Qué hace |
 |---|---|---|
-| — | **Buscar producto** | Por nombre |
+| - | **Buscar producto** | Por nombre |
 | 1 | **Orden** | *Más vendidos ($)*, *Más unidades vendidas*, *Más rentables*, *Menos rentables*, *Más stock*, *Menos stock* o *Nombre (A-Z)* |
 | 2 | **Filtros** | Abre los filtros |
 
@@ -214,7 +215,7 @@ Tocá una persona para ver su detalle: cómo se movió su cuenta y **qué queda 
 
 ![Detalle de un cliente](../../assets/tutoriales/30-app-del-dueno/17-detalle-de-un-cliente.png)
 
-> Esta pantalla refleja el **saldo de cuenta corriente**. Para cobrar la deuda se hace desde el POS (ver [Cobrar la deuda de un cliente](17-cobrar-la-deuda-de-un-cliente.md)).
+> Esta pantalla refleja el **saldo de cuenta corriente**. Para cobrar la deuda se hace desde el POS (ver [Cobrar la deuda de un cliente](/tutoriales/cobrar-deuda-cliente/)).
 
 ### 8. Proveedores y comparar proveedores
 
@@ -256,7 +257,7 @@ La app la puede usar:
 - el **dueño** (superusuario), y
 - los usuarios del **grupo Administrativos**.
 
-Para dar acceso, creá el usuario con el rol **Administrativo** desde el POS (Menú rápido → *Usuarios*), como se explica en [Crear usuarios y asignar permisos](04-usuarios-y-permisos.md):
+Para dar acceso, creá el usuario con el rol **Administrativo** desde el POS (Menú rápido → *Usuarios*), como se explica en [Crear usuarios y asignar permisos](/tutoriales/usuarios-y-permisos/):
 
 ![Formulario de usuario nuevo](../../assets/tutoriales/04-usuarios-permisos/02-formulario-nuevo.png)
 
@@ -289,5 +290,5 @@ Para **quitar** el acceso, cambiá el rol a *Cajero* o desactivá el usuario (ca
 
 ## Siguiente paso
 
-- [Crear usuarios y asignar permisos](04-usuarios-y-permisos.md)
-- [Cobrar la deuda de un cliente](17-cobrar-la-deuda-de-un-cliente.md)
+- [Crear usuarios y asignar permisos](/tutoriales/usuarios-y-permisos/)
+- [Cobrar la deuda de un cliente](/tutoriales/cobrar-deuda-cliente/)

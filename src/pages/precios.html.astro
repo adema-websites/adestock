@@ -1,0 +1,120 @@
+---
+import Pagina from '../layouts/Pagina.astro';
+
+const wa = (t: string) => `https://wa.me/5491127888995?text=${encodeURIComponent(t)}`;
+const planes = [
+  { id: 'mensual', nombre: 'Licencia mensual', precio: '$ 45.000', per: '+ IVA / mes', detalle: '30 días', items: ['Uso completo por 30 días', 'Instalación local', 'Actualizaciones incluidas', 'Ideal para proyectos cortos o pruebas'], cta: 'Suscribirme', msg: 'Hola, quisiera consultar el precio de la Licencia Local por 30 días.' },
+  { id: 'anual', nombre: 'Licencia anual', precio: '$ 450.000', per: '+ IVA / año', detalle: '12 meses', items: ['Ahorro frente al plan mensual', '12 meses de uso continuo', 'Actualizaciones incluidas todo el año', 'Soporte técnico por WhatsApp'], cta: 'Quiero la anual', msg: 'Hola, me interesa la Licencia Anual (Local). ¿Precio?' },
+  { id: 'lifetime', nombre: 'Pago único', precio: 'Consultar', per: 'una sola vez', detalle: 'De por vida', items: ['Un solo pago, uso sin límite de tiempo', 'Sin renovaciones mensuales ni anuales', 'Licencia perpetua', 'Soporte estándar'], cta: 'Consultar precio', msg: 'Hola, quiero saber el precio de la Licencia de por vida.' },
+];
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'ADEstock',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Windows, Web',
+    url: 'https://adestock.com.ar/',
+    offers: [
+      { '@type': 'Offer', name: 'ADEstock Web / Nube (mensual)', price: '60000', priceCurrency: 'ARS', priceSpecification: { '@type': 'PriceSpecification', price: '60000', priceCurrency: 'ARS', valueAddedTaxIncluded: false, unitText: 'MON' }, url: 'https://adestock.com.ar/precios.html' },
+      { '@type': 'Offer', name: 'Licencia local mensual', price: '45000', priceCurrency: 'ARS', priceSpecification: { '@type': 'PriceSpecification', price: '45000', priceCurrency: 'ARS', valueAddedTaxIncluded: false, unitText: 'MON' }, url: 'https://adestock.com.ar/precios.html' },
+      { '@type': 'Offer', name: 'Licencia local anual', price: '450000', priceCurrency: 'ARS', priceSpecification: { '@type': 'PriceSpecification', price: '450000', priceCurrency: 'ARS', valueAddedTaxIncluded: false, unitText: 'ANN' }, url: 'https://adestock.com.ar/precios.html' },
+    ],
+  },
+];
+---
+<Pagina
+  title="Precios de ADEstock | Sistema de stock para comercios"
+  description="Consultá planes de ADEstock para controlar stock, inventario, ventas, caja, compras y reportes en comercios argentinos. Demo gratis y opciones web o local."
+  path="/precios.html"
+  jsonLd={jsonLd}
+>
+  <div class="crumbs"><a href="/">Inicio</a>{' / '}Precios</div>
+  <main id="contenido">
+    <header class="page-hero">
+      <div class="page-hero__inner">
+        <h1>Elegí cómo querés usar ADEstock</h1>
+        <p class="page-lead">En la nube, sin instalar nada, o en tu propia PC con Windows. Precios en pesos argentinos, sin costos ocultos.</p>
+      </div>
+    </header>
+
+    <section class="band">
+      <div class="seo-hero__inner">
+        <div class="card dark" style="max-width: 760px;">
+          <span class="tag">Sin instalar nada</span>
+          <h2 style="font-size:1.6rem">ADEstock Web / Nube</h2>
+          <p>Tu negocio online, accesible desde cualquier lugar y dispositivo.</p>
+          <p class="price" style="color:var(--night-ink)">$ 60.000 <small style="color:inherit; opacity:.75">+ IVA / mes</small></p>
+          <ul class="check-list">
+            <li>Acceso 24/7 desde cualquier navegador</li>
+            <li>Hosting incluido: nosotros lo alojamos</li>
+            <li>Copias de seguridad automáticas diarias</li>
+            <li>Actualizaciones automáticas</li>
+            <li>Varios usuarios al mismo tiempo</li>
+            <li>Soporte prioritario</li>
+          </ul>
+          <p style="margin-top:.5rem"><strong>¿Qué cubre este plan?</strong> El uso del software alojado en nuestros servidores. Te olvidás del mantenimiento técnico y de perder datos si se rompe tu PC. Es ideal si no tenés un equipo dedicado.</p>
+          <div class="actions">
+            <a class="btn btn-primary btn-sobre-noche" href={wa('Hola ADEstock, me interesa el Plan WEB/NUBE de $60.000 + IVA mensuales. ¿Podemos avanzar?')}>Empezar ahora</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band alt" aria-labelledby="locales">
+      <div class="seo-hero__inner">
+        <h2 id="locales" style="max-width: 24ch">Licencias locales, instaladas en tu PC</h2>
+        <p class="page-lead">Comprás la licencia y la instalás en tu equipo. Requisito: Windows 10 o superior (64 bits).</p>
+        <div class="cols-3" style="margin-top:1.75rem">
+          {planes.map((p) => (
+            <article class="card" id={p.id}>
+              <span class="tag" style="justify-self:start; margin:0">{p.detalle}</span>
+              <h3>{p.nombre}</h3>
+              <p class="price">{p.precio} <small>{p.per}</small></p>
+              <ul class="check-list">{p.items.map((i) => <li>{i}</li>)}</ul>
+              <div class="actions" style="margin-top:.5rem">
+                <a class="btn btn-ghost" href={wa(p.msg)}>{p.cta}</a>
+              </div>
+            </article>
+          ))}
+        </div>
+        <p class="muted" style="margin-top:1.25rem">Todos los valores son más IVA. Para el pago único, escribinos y te pasamos el precio vigente.</p>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="remoto">
+      <div class="seo-hero__inner">
+        <div class="cols-2">
+          <div>
+            <h2 id="remoto" style="max-width: 20ch">¿Acceso remoto con una licencia local?</h2>
+            <p class="page-lead">Aunque la licencia se instala en tu PC, podés entrar desde fuera del negocio sin pagar un servidor en la nube.</p>
+            <p style="margin-top:1rem; color:var(--ink-2)">Se logra con una VPN como <strong>Tailscale</strong> o <strong>ZeroTier</strong>, que crean un túnel seguro entre tu casa y la PC del negocio.</p>
+          </div>
+          <ol class="steps" style="margin-top:0">
+            <li><h3>Instalás ADEstock</h3><p>En la PC de tu negocio, con Windows 10 o superior.</p></li>
+            <li><h3>Instalás Tailscale</h3><p>Es gratis. Va en ambos equipos: el del negocio y el tuyo.</p></li>
+            <li><h3>Te conectás</h3><p>Entrás como si estuvieras en el local.</p></li>
+          </ol>
+        </div>
+        <p class="aviso" style="margin-top:1.5rem"><strong>Importante:</strong> las VPN son herramientas de terceros ajenas a ADEstock. Las recomendamos como una facilidad para quienes saben de redes, pero no damos soporte técnico sobre su configuración.</p>
+      </div>
+    </section>
+
+    <section class="band alt">
+      <div class="seo-hero__inner">
+        <h2 style="max-width: 24ch">¿No sabés cuál te conviene?</h2>
+        <p class="page-lead">Probá la demo en tu PC por 3 días o escribinos y lo vemos según tu negocio.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="/descargar-demo.html">Descargar la demo</a>
+          <a class="btn btn-ghost" href="/contacto.html">Hablar con el equipo</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Pagina>
+
+<style is:global>
+  .btn-sobre-noche { background: #4fc3d6; color: #06222a; }
+  .btn-sobre-noche:hover { background: #7fd6e4; }
+</style>

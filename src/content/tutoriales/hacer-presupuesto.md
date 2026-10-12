@@ -2,7 +2,7 @@
 id: "hacer-presupuesto"
 slug: "hacer-presupuesto"
 title: "Cómo hacer un presupuesto y convertirlo en venta"
-description: "Armar un carrito, dárselo al cliente como presupuesto (con precios respetados por unos días) sin descontar stock ni cobrar, y más tarde convertirlo en venta…"
+description: "Armá un presupuesto con precios respetados por unos días, sin descontar stock ni cobrar, y convertilo en venta cuando el cliente confirme."
 category: "vender"
 priority: "P1"
 roles: ["cajero","dueno"]
@@ -15,12 +15,13 @@ modulo: "venta (Presupuesto, POS)"
 permiso: "ninguno; el dueño debe activar \"Generar presupuestos desde POS\""
 source_path: "01-manual-usuario/11-presupuestos.md"
 source_hash: "0ed9724b9976aaefa22161bcd0457e188c94ad1007711325b37b3b571914ce2c"
-product_version: "pendiente-verificar"
+product_version: "3.0.0"
 verified_at: "2026-10-12"
 reviewed_at: null
+reviewed_by: null
 synonyms: ["cotización","presupuesto","vigencia"]
 related: []
-social_image: null
+social_image: "/social/hacer-presupuesto-v1.jpg"
 ---
 ## Qué vas a lograr
 

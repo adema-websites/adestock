@@ -2,7 +2,7 @@
 id: "usuarios-y-permisos"
 slug: "usuarios-y-permisos"
 title: "Cómo crear usuarios y darles permisos"
-description: "Dar de alta a un cajero o a un administrativo, asignarle su caja (punto de venta) y decidir qué puede hacer en el POS, todo sin salir del sistema."
+description: "Creá un cajero o un administrativo, asignale su caja y decidí qué puede hacer en el POS, sin salir del sistema."
 category: "empezar"
 priority: "P1"
 roles: ["dueno"]
@@ -14,13 +14,14 @@ para_quien: "el dueño"
 modulo: "agenda (Asignacion), venta (POS → Configuración → Usuarios)"
 permiso: "solo el dueño (superusuario)"
 source_path: "01-manual-usuario/04-usuarios-y-permisos.md"
-source_hash: "53343310e6f4006d3755a6a00ab17cc1231c9fca92464b91a05944c547fca8ef"
-product_version: "pendiente-verificar"
+source_hash: "850cfe775273dff74a507ce992a4d10f51a27871e3c7947044da0bffd103063a"
+product_version: "3.0.0"
 verified_at: "2026-10-12"
 reviewed_at: null
+reviewed_by: null
 synonyms: ["usuario","crear usuario","agregar usuario","alta de usuario","cajero","empleado","permisos","clave"]
 related: []
-social_image: null
+social_image: "/social/usuarios-y-permisos-v1.jpg"
 ---
 ## Qué vas a lograr
 
@@ -107,6 +108,11 @@ Después de elegir un perfil podés ajustar casilla por casilla:
 |---|---|
 | Puede cobrar Cta. Cte. | Registrar cobros de clientes y ver sus pagos |
 | Puede registrar gastos | Registrar gastos de caja desde el POS |
+| Puede comprar en cuenta corriente | Elegir *Cuenta Corriente Proveedor* como forma de pago al cargar una compra. Sin este permiso, el usuario no ve esa opción. Las compras **solo a cuenta corriente** de quien lo tiene no frenan el cierre de caja |
+
+![Permiso para comprar a cuenta corriente](../../assets/tutoriales/04-usuarios-permisos/04b-permiso-comprar-en-cuenta-corriente.png)
+
+Los perfiles **Encargado** y **Todo** incluyen *Puede comprar en cuenta corriente*; el perfil **Cajero** no.
 
 **Herramientas**
 

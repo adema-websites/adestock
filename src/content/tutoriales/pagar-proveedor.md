@@ -2,25 +2,26 @@
 id: "pagar-proveedor"
 slug: "pagar-proveedor"
 title: "Cómo pagar a un proveedor"
-description: "Pagarle a un proveedor parte o toda la deuda de tus compras a cuenta corriente, eligiendo qué compras cancelás y con qué medio, y poder ver en cualquier…"
+description: "Pagá parte o toda la deuda de tus compras a cuenta corriente, eligiendo qué compras cancelás y con qué medio."
 category: "compras"
 priority: "P1"
 roles: ["dueno","administrativo"]
 surface: ["panel"]
 status: "draft"
 tiempo: "2 minutos"
-necesitas: "un proveedor con una compra **confirmada a cuenta corriente** y el turno abierto"
+necesitas: "un proveedor con una compra confirmada a cuenta corriente y el turno abierto"
 para_quien: "dueños y administrativos"
 modulo: "compra (PagosProveedores), venta (POS → Pagar a un proveedor)"
 permiso: "acceso al Menú rápido (los pagos salen de la caja del turno abierto)"
 source_path: "01-manual-usuario/21-pagar-a-un-proveedor.md"
-source_hash: "cf9634b0cc2bff817eab05e869fc5568b69899aa304bda7c51ed154dfcda91ac"
-product_version: "pendiente-verificar"
+source_hash: "f03fccc35d98435b73dff2e1eed59bb70654e156d05d71244e81fdd6d52ee385"
+product_version: "3.0.0"
 verified_at: "2026-10-12"
 reviewed_at: null
+reviewed_by: null
 synonyms: ["pago a proveedor","deuda con proveedor","adelanto"]
 related: []
-social_image: null
+social_image: "/social/pagar-proveedor-v1.jpg"
 ---
 ## Qué vas a lograr
 
@@ -111,7 +112,7 @@ Si le das plata al proveedor **antes** de comprarle, tocá **Adelanto**: queda c
 |---|---|
 | Pago | Se registra un pago al proveedor y se aplica a cada compra elegida |
 | Billetera | Si el medio de pago tiene una billetera vinculada, el egreso se registra en ella |
-| Arqueo de caja | El cierre de caja **no incluye** los pagos a proveedores hechos desde esta pantalla (solo cuenta los retiros, gastos y los pagos de la compra cargados con la compra). Si pagás con efectivo de la caja, registrá además un **Retiro de caja** para que el cierre cuadre |
+| Arqueo de caja | Los pagos y adelantos **en efectivo** hechos desde esta pantalla **restan del efectivo esperado del turno abierto** del cajero y salen en el ticket y el PDF del cierre. Los pagos con otros medios solo se informan. No hace falta cargar un Retiro de caja aparte |
 | Compra | Una compra totalmente pagada deja de figurar como pendiente |
 | Protección | El sistema evita que la misma deuda se pague dos veces |
 
@@ -122,7 +123,8 @@ Si le das plata al proveedor **antes** de comprarle, tocá **Adelanto**: queda c
 | No aparecen deudas del proveedor | La compra se pagó en efectivo, o quedó **pendiente de confirmar** | Confirmala en el panel de administración (Compra → Compras → *Confirmar compra*) |
 | El botón *Aplicar pago* está apagado | Falta cargar un pago, o no tildaste ninguna compra | Elegí medio y monto, y tocá **+** |
 | Pagué de más | El pago superó la deuda tildada | Revisá el *Saldo real*: si es negativo, el excedente figura como **saldo a favor** |
-| Me equivoqué en un pago | — | Pedile al dueño que lo revierta desde el panel de administración |
+| "No hay un turno abierto" al pagar | Los pagos a proveedores salen de la caja del turno abierto | Abrí un turno desde el POS y volvé a pagar. No se pueden cargar pagos desde el panel de administración |
+| Me equivoqué en un pago | - | Pedile al dueño que lo revierta desde el panel de administración |
 
 ## Siguiente paso
 

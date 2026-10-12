@@ -2,25 +2,26 @@
 id: "configurar-tienda-online"
 slug: "configurar-tienda-online"
 title: "Cómo activar y configurar la tienda online"
-description: "Publicar una tienda web donde tus clientes ven el catálogo con tus precios y ofertas, se registran y hacen pedidos, y diseñarla a tu gusto (skin, portada…"
+description: "Publicá una tienda web con tu catálogo, precios y ofertas donde tus clientes se registran y hacen pedidos."
 category: "ofertas"
 priority: "P1"
 roles: ["dueno"]
 surface: ["panel"]
 status: "draft"
 tiempo: "15 minutos"
-necesitas: "productos con precio cargado y, para recibir pedidos, una **caja** para las ventas online"
+necesitas: "productos con precio cargado y, para recibir pedidos, una caja para las ventas online"
 para_quien: "dueños"
 modulo: "tienda (POS → Configuración → Módulos y sistema; Panel de administración → Diseño de la tienda), agenda (configuración)"
 permiso: "dueño (configuración) · acceso al panel de administración (diseño y pedidos)"
 source_path: "01-manual-usuario/29-tienda-online.md"
-source_hash: "f1d7c22de93b6ad037ffc047cb015b0078edd9e4af8f240e4c3611185c465d9c"
-product_version: "pendiente-verificar"
+source_hash: "85d3036ae27ea38e41d2022b3e3db06edfd089b80f9bdc752cbbb5010df0febe"
+product_version: "3.0.0"
 verified_at: "2026-10-12"
 reviewed_at: null
+reviewed_by: null
 synonyms: ["tienda online","catálogo online","pedidos"]
 related: []
-social_image: null
+social_image: "/social/configurar-tienda-online-v1.jpg"
 ---
 ## Qué vas a lograr
 
@@ -48,9 +49,9 @@ Menú rápido (**F8**) → **Configuración** → **Módulos y sistema** → sec
 |---|---|---|
 | 1 | **Tienda online activa** | Publica tu revista digital para que tus clientes compren desde el celular |
 | 2 | **Registro libre de clientes** | Encendido: cualquiera puede crearse una cuenta. Apagado: solo entran las cuentas que creás vos |
-| — | **Crear el cliente al registrarse** | Quien se registra queda cargado como **cliente** de tu negocio |
-| — | **Caja de las ventas online** | La caja a la que entran las ventas de la tienda, para cerrarlas con el resto. **Sin caja, la tienda no puede tomar pedidos** |
-| — | **Lista de precios de la tienda** | Qué precios ven los clientes nuevos. Vacío: ven todos los precios |
+| - | **Crear el cliente al registrarse** | Quien se registra queda cargado como **cliente** de tu negocio |
+| - | **Caja de las ventas online** | La caja a la que entran las ventas de la tienda, para cerrarlas con el resto. **Sin caja, la tienda no puede tomar pedidos** |
+| - | **Lista de precios de la tienda** | Qué precios ven los clientes nuevos. Vacío: ven todos los precios |
 
 Tocá **Guardar cambios**.
 
