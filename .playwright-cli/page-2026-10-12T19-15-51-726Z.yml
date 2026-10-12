@@ -1,7 +1,0 @@
-- generic [ref=f1e2]:
-  - generic [ref=f1e3]:
-    - generic [ref=f1e4]: ADEstock
-    - generic [ref=f1e5]: Sistema de stock y ventas
-    - heading "Vendé y controlá el stock de tu comercio" [level=1] [ref=f1e6]
-    - paragraph [ref=f1e7]: Productos, ventas, compras y caja en un solo sistema.
-  - generic [ref=f1e8]: adestock.com.ar
