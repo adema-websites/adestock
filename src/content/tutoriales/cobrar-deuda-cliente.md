@@ -1,31 +1,37 @@
 ---
 id: "cobrar-deuda-cliente"
 slug: "cobrar-deuda-cliente"
-title: "Cómo cobrar la deuda de un cliente"
-description: "Registrá que un cliente pagó parte o toda su deuda, eligiendo qué deudas cancela y con qué medio paga."
+title: "Cómo cobrar deudas de clientes en ADEstock"
+description: "Cobrá cuentas corrientes de clientes en ADEstock: elegí deudas, precio original o actualizado y medio de pago. Revisá adelantos y saldo pendiente."
 category: "clientes"
 priority: "P1"
 roles: ["cajero","dueno"]
 surface: ["pos","panel"]
-status: "draft"
+status: "published"
 tiempo: "2 minutos"
 necesitas: "el turno abierto y un cliente con deuda"
 para_quien: "cajeros y dueños con el permiso Puede cobrar Cta. Cte."
 modulo: "venta (POS → Cobro de cuentas corrientes), billetera"
 permiso: "Puede cobrar Cta. Cte."
 source_path: "01-manual-usuario/17-cobrar-la-deuda-de-un-cliente.md"
-source_hash: "58826f1813c1b7afe8367217e8c4381df51f91ecb36da5feea225d1fe039330c"
+source_hash: "049dd73ac10826f175808e7ae0f39836423f272711968e350c675731787c2485"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["cobrar deuda","pago parcial","saldo a favor"]
-related: []
+related: ["consultar-cuenta-corriente-cliente","vender-fiado-cuenta-corriente","abrir-y-cerrar-caja"]
 social_image: "/social/cobrar-deuda-cliente-v1.jpg"
 ---
+## Para qué sirve
+
+Es el paso final del fiado: el cliente viene a pagar y vos lo asentás en el sistema. Sirve para que la deuda **baje como corresponde**, elegir **qué deudas cancela** el pago, con qué medio paga y si cobrás al **precio original** o al **actualizado**.
+
 ## Qué vas a lograr
 
-Registrar que un cliente **pagó** parte o toda su deuda, eligiendo **qué deudas cancela**, con qué medio paga y si se cobra a **precio original** o **actualizado**.
+Vas a **cobrar la deuda de un cliente en ADEstock** desde el POS: buscar sus ventas fiadas, elegir cuáles cancelar y registrar el medio de pago. También vas a ver cómo usar los adelantos disponibles y elegir entre el importe original y el actualizado.
+
+En el recorrido mostrado, el importe de las deudas seleccionadas debe quedar cubierto para habilitar el cobro. Podés seleccionar algunas ventas y dejar las demás pendientes.
 
 ## Paso a paso
 
@@ -128,7 +134,12 @@ En el ejemplo, Carlos debía $ 5.900 (dos ventas de $ 2.950) y pagó $ 3.000 por
 | El botón *Cobrar e imprimir* está gris | El *Restante* no es $ 0 | Ajustá el monto del pago o las deudas elegidas |
 | Me equivoqué en un cobro | - | Pedile al dueño que lo anule desde el panel de administración |
 
+## Cómo comprobar que salió bien
+
+Después de **COBRAR E IMPRIMIR**, elegí al cliente con **F9** y revisá el saldo pendiente. Consultá el registro en **Pagos de clientes** y comprobá el medio y el importe. Las ventas que no seleccionaste deben seguir pendientes.
+
 ## Siguiente paso
 
-- Registrar un gasto
-- Turno de caja: apertura, retiros y cierre
+- [consultar saldos y cuentas corrientes en ADEstock](/tutoriales/consultar-cuenta-corriente-cliente/)
+- [vender fiado a cuenta corriente en ADEstock](/tutoriales/vender-fiado-cuenta-corriente/)
+- [abrir, hacer el arqueo y cerrar caja en ADEstock](/tutoriales/abrir-y-cerrar-caja/)

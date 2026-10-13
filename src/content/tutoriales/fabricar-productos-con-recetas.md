@@ -1,31 +1,37 @@
 ---
 id: "fabricar-productos-con-recetas"
 slug: "fabricar-productos-con-recetas"
-title: "Cómo fabricar productos con recetas"
-description: "Registrá una orden de fabricación: el sistema calcula el costo, verifica los insumos y suma el producto terminado al stock."
+title: "Cómo fabricar productos con recetas en ADEstock"
+description: "Creá una orden de fabricación en ADEstock: elegí recetas, cantidades y depósito. Revisá costos e insumos y finalizá para actualizar el stock."
 category: "stock"
 priority: "P2"
 roles: ["dueno","administrativo"]
 surface: ["pos","panel"]
-status: "draft"
+status: "published"
 tiempo: "2 minutos"
 necesitas: "el módulo Cocina y recetas activado y al menos una receta cargada"
 para_quien: "dueños y encargados de negocios que elaboran lo que venden (panadería, combos, viandas, packs)"
 modulo: "cocina (recetas, fabricación), venta (POS)"
 permiso: "ninguno especial; el módulo \"Cocina y recetas\" debe estar activado"
 source_path: "01-manual-usuario/14-fabrica-y-recetas-desde-el-pos.md"
-source_hash: "fbbbe8bccae6559f092b6e584cd35e34284ed12196891d85c5ade431f64595ce"
+source_hash: "9f2517261cbb69656441b55926c264c1bbf8035480af35e6b506117c3fbefcef"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["receta","insumos","producción","fábrica"]
-related: []
+related: ["cargar-compra-manual","contar-stock","usar-app-del-dueno"]
 social_image: "/social/fabricar-productos-con-recetas-v1.jpg"
 ---
+## Para qué sirve
+
+Si elaborás productos a partir de insumos, una **receta** dice qué lleva el producto y en qué cantidad. Fabricar con receta sirve para que el sistema **calcule el costo** del producto elaborado y **mueva el stock por vos**: descuenta los insumos que se consumieron y suma el producto terminado.
+
 ## Qué vas a lograr
 
-Registrar una **orden de fabricación** de un producto con receta: el sistema calcula el costo, verifica que haya insumos y, al terminarla, **suma el producto elaborado al stock** y descuenta lo que se consumió.
+Vas a **registrar una fabricación de productos con receta en ADEstock**: elegir qué producir, indicar cantidades y revisar el costo y los insumos disponibles antes de confirmar. Al finalizar la fabricación, se suma el producto elaborado y se descuenta el consumo de insumos.
+
+Este recorrido sirve para producir por adelantado, por ejemplo la tanda del día de una panadería, las viandas o los packs que vas a vender.
 
 ## Conceptos básicos
 
@@ -121,7 +127,12 @@ Los botones de la fila:
 | Dice "Stock insuficiente" | Falta algún insumo | Cargá una compra o ajustá el stock del insumo, o fabricá una cantidad menor |
 | No encuentro una fabricación terminada | El filtro muestra solo las activas | Tildá *Mostrar fabricadas y canceladas* |
 
+## Cómo comprobar que salió bien
+
+Buscá la orden en la lista de fabricaciones. Si ya la terminaste, activá **Mostrar fabricadas y canceladas** y comprobá su estado. Revisá el stock del producto terminado en el depósito destino y el consumo de los insumos de la receta.
+
 ## Siguiente paso
 
-- Ajustar el stock con un conteo
-- Cargar una compra
+- [cargar una compra manual en ADEstock](/tutoriales/cargar-compra-manual/)
+- [contar stock y corregir el inventario en ADEstock](/tutoriales/contar-stock/)
+- [consultar ventas y stock desde la app de ADEstock](/tutoriales/usar-app-del-dueno/)

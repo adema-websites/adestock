@@ -1,31 +1,37 @@
 ---
 id: "licencia"
 slug: "licencia"
-title: "Cómo ver y activar tu licencia de ADEstock"
-description: "Sabé en qué licencia estás, qué limita la versión gratuita y cómo activar la Licencia Pro con tu Machine ID."
+title: "Cómo consultar y activar la licencia Pro de ADEstock"
+description: "Consultá tu licencia de ADEstock, copiá el Machine ID y activá la clave Pro. Revisá el vencimiento y qué hacer si cambiás la PC del negocio."
 category: "instalar"
 priority: "P1"
 roles: ["dueno"]
 surface: ["panel"]
-status: "draft"
+status: "published"
 tiempo: "5 minutos"
 necesitas: "tener el sistema instalado en la PC del negocio y, para activar, la clave de licencia que te da ADEMA Sistemas"
 para_quien: "el dueño"
-modulo: "licencia (adestock/views_license.py, adestock/utils/license_manager.py)"
+modulo: "Licencia de ADEstock (pantalla /license/)"
 permiso: "usuario con sesión iniciada"
 source_path: "01-manual-usuario/36-licencia.md"
-source_hash: "c64df5269de96237d66a0c8159b790406390c48ca08e57463e3f7bbf2ac7ba4a"
+source_hash: "2cef1dd58e0d6d21471a573b27495b82eaeb668bd24f567134b53c88622bd8e0"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["licencia","licencia pro","clave","activar","versión gratuita","vence la licencia"]
-related: []
+related: ["respaldos","configurar-punto-de-venta","usar-punto-de-venta"]
 social_image: "/social/licencia-v1.jpg"
 ---
+## Para qué sirve
+
+Sirve para saber **qué incluye tu licencia**, qué límites tiene la versión gratuita y cómo **activar la Licencia Pro** cuando necesitás más. Es una consulta ocasional: la usás al empezar o cuando llegás a un límite de la versión gratuita.
+
 ## Qué vas a lograr
 
-Saber **en qué licencia estás**, qué te limita la versión gratuita y cómo **activar la Licencia Pro** con tu *Machine ID*.
+Vas a **consultar y activar tu licencia de ADEstock**, identificar el equipo con su Machine ID y cargar la clave Pro que te entrega ADEMA Sistemas. También vas a ver dónde consultar el vencimiento y cómo proceder al cambiar de computadora.
+
+La clave corresponde a un equipo específico. Antes de activarla, revisá que el identificador enviado a soporte sea el de la PC donde funciona el sistema.
 
 ## Gratuita vs. Pro
 
@@ -93,11 +99,17 @@ El botón **Desactivar Licencia** quita la clave de esta PC. Se usa, por ejemplo
 | Si te pasa… | Es porque… | Qué hacer |
 |---|---|---|
 | «Licencia no válida para este equipo», «Licencia inválida» o «Formato de licencia corrupto» | La clave es de otra PC o se copió incompleta | Revisá que pegaste toda la clave; si cambiaste de PC, pedí una nueva con el *Machine ID* actual |
-| Dice «Machine ID no disponible» (o «La licencia expiró el…» si la clave tenía fecha) | El sistema no pudo leer los datos de la PC | Reiniciá el sistema como administrador; si sigue, avisá al soporte |
+| Dice «Machine ID no disponible» | El sistema no pudo leer el identificador del equipo | Reiniciá el sistema como administrador; si sigue, avisá al soporte |
+| Dice «La licencia expiró el…» | La clave alcanzó su fecha de vencimiento | Consultá con ADEMA Sistemas la renovación y usá el Machine ID de ese equipo |
 | No puedo cobrar: «límite diario» | Estás en la versión gratuita y ya hiciste 5 ventas hoy | Activá la Licencia Pro, o esperá a mañana |
 | La licencia Pro dejó de verse tras cambiar de computadora | La licencia está atada a la PC anterior | Pedí una nueva clave con el nuevo *Machine ID* |
 
+## Cómo comprobar que salió bien
+
+Después de activar la clave, revisá que el POS muestre **PRO** y que la pantalla de licencia indique el estado y vencimiento esperados. Si aparece un error, comprobá que copiaste la clave completa y que corresponde al Machine ID de ese equipo.
+
 ## Siguiente paso
 
-- [Respaldos y restauración](/tutoriales/respaldos/)
-- [La configuración del POS](/tutoriales/configurar-punto-de-venta/)
+- [hacer copias de seguridad y restaurar ADEstock](/tutoriales/respaldos/)
+- [configurar el punto de venta (POS) en ADEstock](/tutoriales/configurar-punto-de-venta/)
+- [usar el punto de venta de ADEstock y sus atajos](/tutoriales/usar-punto-de-venta/)

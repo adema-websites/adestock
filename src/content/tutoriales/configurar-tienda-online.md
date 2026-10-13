@@ -1,31 +1,37 @@
 ---
 id: "configurar-tienda-online"
 slug: "configurar-tienda-online"
-title: "Cómo activar y configurar la tienda online"
-description: "Publicá una tienda web con tu catálogo, precios y ofertas donde tus clientes se registran y hacen pedidos."
+title: "Cómo activar y diseñar tu tienda online en ADEstock"
+description: "Activá la tienda online de ADEstock, configurá catálogo, precios y caja de pedidos. Personalizá el diseño y publicá los cambios para tus clientes."
 category: "ofertas"
 priority: "P1"
 roles: ["dueno"]
 surface: ["panel"]
-status: "draft"
+status: "published"
 tiempo: "15 minutos"
 necesitas: "productos con precio cargado y, para recibir pedidos, una caja para las ventas online"
 para_quien: "dueños"
 modulo: "tienda (POS → Configuración → Módulos y sistema; Panel de administración → Diseño de la tienda), agenda (configuración)"
 permiso: "dueño (configuración) · acceso al panel de administración (diseño y pedidos)"
 source_path: "01-manual-usuario/29-tienda-online.md"
-source_hash: "85d3036ae27ea38e41d2022b3e3db06edfd089b80f9bdc752cbbb5010df0febe"
+source_hash: "7608bc21e526ad3de8e0c5cf4ba3c326ba8fac8b121722d45ce90ecf5aa000a9"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["tienda online","catálogo online","pedidos"]
-related: []
+related: ["crear-ofertas-y-promociones","armar-pedidos-picking","crear-revista-ofertas"]
 social_image: "/social/configurar-tienda-online-v1.jpg"
 ---
+## Para qué sirve
+
+La tienda online sirve para que tus clientes **vean tu catálogo y hagan pedidos** desde el celular, sin que tengas que pasarles los precios uno por uno. Usa los mismos productos, precios y ofertas que el sistema, y la diseñás a tu gusto sin tocar código. Los pedidos los preparás con el [armado de pedidos](/tutoriales/armar-pedidos-picking/).
+
 ## Qué vas a lograr
 
-Publicar una **tienda web** donde tus clientes ven el catálogo con tus precios y ofertas, se registran y hacen pedidos, y **diseñarla a tu gusto** (skin, portada, banners, logo) sin tocar código.
+Vas a **activar y configurar la tienda online de ADEstock** para que tus clientes consulten el catálogo, vean precios al iniciar sesión y hagan pedidos. Elegí la caja de ventas online, las listas de precios y las opciones de registro.
+
+Después podés personalizar portada, banners, colores, logo y datos de contacto desde el editor. El diseño se guarda como borrador y llega a los clientes cuando lo publicás.
 
 ## Conceptos
 
@@ -158,6 +164,12 @@ Los pedidos y los mensajes de los clientes se ven en el **Panel de administraci�
 | El cliente no puede confirmar | No hay caja para las ventas online | Elegí la **Caja de las ventas online** |
 | No aparece la portada | Está en *Catálogo directo* | Elegí **Portada + catálogo** en *Contenido* |
 
+## Cómo comprobar que salió bien
+
+Abrí **Ver tienda** y revisá las vistas de visitante y cliente registrado, tanto en computadora como en celular. Verificá los precios, las ofertas y los datos de contacto. Antes de recibir pedidos, confirmá que esté asignada la **Caja de las ventas online** y que los cambios de diseño estén publicados.
+
 ## Siguiente paso
 
-- Recorrido por los reportes del panel de administración
+- [crear ofertas, descuentos y promociones 3×2 en ADEstock](/tutoriales/crear-ofertas-y-promociones/)
+- [preparar pedidos con picking móvil en ADEstock](/tutoriales/armar-pedidos-picking/)
+- [crear revistas y folletos de ofertas en ADEstock](/tutoriales/crear-revista-ofertas/)

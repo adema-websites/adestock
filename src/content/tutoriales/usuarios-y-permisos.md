@@ -1,33 +1,41 @@
 ---
 id: "usuarios-y-permisos"
 slug: "usuarios-y-permisos"
-title: "Cómo crear usuarios y darles permisos"
-description: "Creá un cajero o un administrativo, asignale su caja y decidí qué puede hacer en el POS, sin salir del sistema."
+title: "Cómo crear usuarios y asignar permisos en ADEstock"
+description: "Creá usuarios en ADEstock, asignales una caja y configurá permisos para cajeros y administrativos. Aprendé a editar accesos y cambiar contraseñas."
 category: "empezar"
 priority: "P1"
 roles: ["dueno"]
 surface: ["panel"]
-status: "draft"
+status: "published"
 tiempo: "3 minutos por usuario"
 necesitas: "ser el dueño (superusuario). Los demás usuarios no ven esta pantalla"
 para_quien: "el dueño"
 modulo: "agenda (Asignacion), venta (POS → Configuración → Usuarios)"
 permiso: "solo el dueño (superusuario)"
 source_path: "01-manual-usuario/04-usuarios-y-permisos.md"
-source_hash: "850cfe775273dff74a507ce992a4d10f51a27871e3c7947044da0bffd103063a"
+source_hash: "aa88f695db4db4b3cc4f0f7bd0b148bcdb430cadb2be5543497b3b7046240502"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["usuario","crear usuario","agregar usuario","alta de usuario","cajero","empleado","permisos","clave"]
-related: []
+related: ["configurar-punto-de-venta", "hacer-una-venta", "contar-stock"]
 social_image: "/social/usuarios-y-permisos-v1.jpg"
 ---
+## Para qué sirve
+
+Cada persona que usa el sistema entra con su propio usuario, y lo que puede hacer depende de los permisos que le des. Esto sirve para que cada empleado vea y haga **solo lo que le corresponde a su tarea**, y para saber quién hizo cada operación. Se hace una vez por persona, cuando se suma al equipo.
+
 ## Qué vas a lograr
 
-Dar de alta a un cajero o a un administrativo, asignarle su **caja** (punto de venta) y decidir **qué puede hacer** en el POS, todo sin salir del sistema.
+Vas a **crear usuarios en ADEstock**, asignarles una caja y elegir qué puede hacer cada cajero o administrativo en el punto de venta (POS). La guía te ayuda a distinguir el rol del usuario de sus permisos para vender, cambiar precios, registrar gastos o modificar stock.
+
+También vas a ver cómo cambiar contraseñas y desactivar el acceso de una persona conservando su historial.
 
 ## Antes de empezar
+
+Entrá con el **usuario dueño (superusuario)**: es el único que puede gestionar usuarios desde esta pantalla.
 
 Cada usuario necesita tres cosas: un **rol**, un **punto de venta** (caja) y un conjunto de **permisos**. Conviene entender la diferencia:
 
@@ -155,6 +163,6 @@ Elegí al usuario en la lista, cambiá lo que necesites y presioná **Guardar**.
 
 ## Siguiente paso
 
-- Configuración del POS (engranaje)
-- Hacer una venta
-- Ajustar el stock con conteo a ciegas
+- [Configurar el punto de venta](/tutoriales/configurar-punto-de-venta/)
+- [Hacer una venta y cobrarla](/tutoriales/hacer-una-venta/)
+- [Contar el stock y corregir diferencias](/tutoriales/contar-stock/)

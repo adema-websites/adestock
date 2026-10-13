@@ -1,35 +1,41 @@
 ---
 id: "pagar-proveedor"
 slug: "pagar-proveedor"
-title: "Cómo pagar a un proveedor"
-description: "Pagá parte o toda la deuda de tus compras a cuenta corriente, eligiendo qué compras cancelás y con qué medio."
+title: "Cómo pagar a proveedores y registrar adelantos en ADEstock"
+description: "Registrá pagos parciales o totales a proveedores en ADEstock. Seleccioná compras pendientes, aplicá adelantos y comprobá el saldo de cuenta corriente."
 category: "compras"
 priority: "P1"
 roles: ["dueno","administrativo"]
 surface: ["panel"]
-status: "draft"
+status: "published"
 tiempo: "2 minutos"
 necesitas: "un proveedor con una compra confirmada a cuenta corriente y el turno abierto"
 para_quien: "dueños y administrativos"
 modulo: "compra (PagosProveedores), venta (POS → Pagar a un proveedor)"
 permiso: "acceso al Menú rápido (los pagos salen de la caja del turno abierto)"
 source_path: "01-manual-usuario/21-pagar-a-un-proveedor.md"
-source_hash: "f03fccc35d98435b73dff2e1eed59bb70654e156d05d71244e81fdd6d52ee385"
+source_hash: "7e4355daac2ee05adbec6f5f269f0edf775d95695cf210587fb5b8aa79b62c8e"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["pago a proveedor","deuda con proveedor","adelanto"]
-related: []
+related: ["crear-y-editar-proveedores","cargar-compra-manual","billeteras-y-cuentas"]
 social_image: "/social/pagar-proveedor-v1.jpg"
 ---
+## Para qué sirve
+
+Cuando comprás a cuenta corriente, la deuda con el proveedor queda abierta hasta que la pagues. Esta guía sirve para **saldar esa deuda**, total o parcialmente, eligiendo **qué compras cancelás** y con qué medio, y para ver en cualquier momento cuánto le debés a cada proveedor.
+
 ## Qué vas a lograr
 
-Pagarle a un proveedor **parte o toda** la deuda de tus compras a cuenta corriente, eligiendo qué compras cancelás y con qué medio, y poder ver en cualquier momento **cuánto le debés**.
+Vas a **registrar un pago a un proveedor en ADEstock**, elegir las compras que cancelás y comprobar cuánto queda pendiente. Podés pagar una parte de la deuda, saldarla completa o registrar dinero por adelantado.
+
+Los pagos se cargan desde el POS con un turno abierto. Si pagás en efectivo, el importe resta del arqueo de ese turno sin necesidad de cargar un retiro adicional.
 
 ## Cómo se genera una deuda con un proveedor
 
-Le debés plata a un proveedor cuando cargás una compra y elegís pagarla **a cuenta corriente** (*Cuenta Corriente Proveedor*). La deuda **aparece al confirmar** la compra. Si el proveedor además te cobró flete y lo pagás con la compra, ese flete también suma a la deuda (ver *Cargar una compra con la foto de la boleta*).
+Le debés plata a un proveedor cuando cargás una compra y elegís pagarla **a cuenta corriente** (*Cuenta Corriente Proveedor*). La deuda **aparece al confirmar** la compra. Si el proveedor además te cobró flete y lo pagás con la compra, ese flete también suma a la deuda (ver [Cargar una compra con la foto de la boleta](/tutoriales/cargar-compras-con-foto-ia/)).
 
 ## Paso a paso
 
@@ -126,7 +132,12 @@ Si le das plata al proveedor **antes** de comprarle, tocá **Adelanto**: queda c
 | "No hay un turno abierto" al pagar | Los pagos a proveedores salen de la caja del turno abierto | Abrí un turno desde el POS y volvé a pagar. No se pueden cargar pagos desde el panel de administración |
 | Me equivoqué en un pago | - | Pedile al dueño que lo revierta desde el panel de administración |
 
+## Cómo comprobar que salió bien
+
+Consultá **Ver pagos realizados** y descargá el estado de cuenta del proveedor. El saldo pendiente debe reflejar el pago aplicado; si adelantaste dinero, revisá el saldo a favor. Comprobá también el egreso en la billetera vinculada al medio de pago, cuando corresponda.
+
 ## Siguiente paso
 
-- Cargar una compra manual
-- Listas de precios de proveedores
+- [crear y editar proveedores en ADEstock](/tutoriales/crear-y-editar-proveedores/)
+- [cargar una compra manual en ADEstock](/tutoriales/cargar-compra-manual/)
+- [controlar billeteras, cuentas y saldos en ADEstock](/tutoriales/billeteras-y-cuentas/)

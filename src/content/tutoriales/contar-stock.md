@@ -1,31 +1,37 @@
 ---
 id: "contar-stock"
 slug: "contar-stock"
-title: "Cómo contar el stock de un depósito"
-description: "Contá la mercadería física, compará con lo que dice el sistema y corregí las diferencias con registro de quién, cuándo y cuánto."
+title: "Cómo contar stock y corregir el inventario en ADEstock"
+description: "Hacé un conteo de stock en ADEstock desde PC o celular. Filtrá productos, revisá diferencias y confirmá el ajuste, con opción de conteo a ciegas."
 category: "stock"
 priority: "P0"
 roles: ["dueno","administrativo"]
 surface: ["panel"]
-status: "draft"
+status: "published"
 tiempo: "10 minutos por sector"
 necesitas: "el permiso Puede modificar stock (el dueño lo tiene siempre)"
 para_quien: "dueños y encargados que controlan el inventario"
 modulo: "producto (ConteoStock, AjusteInventario), venta (POS)"
 permiso: "Puede modificar stock · opcional: Contar sin ver el stock"
 source_path: "01-manual-usuario/23-conteo-de-stock.md"
-source_hash: "4757192cc81010da53028160dbbf4ab9a2c9f375a93ccd7f258344ab29387d3a"
+source_hash: "8a633bc1d027df331a0e5452dc6c0b16e3ac0a762b5342ab0b5552352553b036"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["conteo","inventario","tengo 12 pero dice 9","diferencias"]
-related: []
+related: ["ajustar-stock-mermas-transferencias","cargar-stock-inicial-excel","usuarios-y-permisos"]
 social_image: "/social/contar-stock-v1.jpg"
 ---
+## Para qué sirve
+
+Con el tiempo, el stock del sistema se aleja de la realidad: ventas sin cargar, mercadería que se rompió, errores de carga. Contar sirve para **comparar lo que hay en el local con lo que dice el sistema** y corregir las diferencias en un solo paso, dejando registro de quién lo hizo y cuándo. Conviene hacerlo cada tanto, por sección o por depósito, o cuando algo no te cierra.
+
 ## Qué vas a lograr
 
-Contar la mercadería física, **comparar con lo que dice el sistema** y **corregir las diferencias** en un solo paso, con registro de quién, cuándo y cuánto.
+Vas a **hacer un conteo de stock en ADEstock**, comparar la mercadería física con el inventario del sistema y confirmar las diferencias. Podés trabajar por categoría, proveedor o depósito, desde una computadora o un celular.
+
+La guía también explica cómo corregir un solo producto con el lápiz de stock y cómo funciona el conteo a ciegas para usuarios que no deben ver las cantidades del sistema.
 
 Hay dos herramientas, según lo que necesites:
 
@@ -148,7 +154,12 @@ Es la forma de evitar que el que cuenta "ajuste" lo que ve a lo que dice el sist
 | Contó otra persona y no puedo ver su diferencia | Conteo a ciegas | El administrador la ve en *Ajustes de inventario* |
 | Me equivoqué en un conteo | - | Anulá el ajuste desde el panel de administración |
 
+## Cómo comprobar que salió bien
+
+Después de confirmar, revisá el código del conteo y los ajustes generados por depósito. Las filas vacías deben quedar sin modificar y las cantidades ingresadas deben reflejar las diferencias previsualizadas. En un conteo a ciegas, el administrador consulta esas diferencias desde **Ajustes de inventario**.
+
 ## Siguiente paso
 
-- Ajustes de inventario, mermas y transferencias entre depósitos
-- Gestión de precios
+- [ajustar stock, registrar mermas y transferir entre depósitos](/tutoriales/ajustar-stock-mermas-transferencias/)
+- [cargar el stock inicial desde Excel en ADEstock](/tutoriales/cargar-stock-inicial-excel/)
+- [crear usuarios y asignar permisos en ADEstock](/tutoriales/usuarios-y-permisos/)

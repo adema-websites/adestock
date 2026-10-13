@@ -1,31 +1,37 @@
 ---
 id: "registrar-gastos-y-retiros"
 slug: "registrar-gastos-y-retiros"
-title: "Cómo registrar un gasto o un retiro de caja"
-description: "Dejá asentada la plata que sale de la caja para que el cierre cierre bien. Un gasto y un retiro son cosas distintas."
+title: "Cómo registrar gastos y retiros de caja en ADEstock"
+description: "Registrá gastos y retiros desde el POS de ADEstock. Elegí categoría, importe y medio de pago, y entendé cómo afectan el cierre de caja."
 category: "caja"
 priority: "P1"
 roles: ["cajero","dueno"]
 surface: ["pos"]
-status: "draft"
+status: "published"
 tiempo: "1 minuto"
 necesitas: "el turno abierto y, para gastos, el permiso Puede registrar gastos"
 para_quien: "cajeros y dueños"
 modulo: "venta (POS → Gastos y Retiro de caja)"
 permiso: "\"Puede registrar gastos\" para gastos; el retiro de caja no pide permiso especial"
 source_path: "01-manual-usuario/13-registrar-un-gasto-y-retiro-de-caja.md"
-source_hash: "15a63be2ae539d0cd9ceb45fa8ec9acc0eb544b68fb8456d90f4c455c2b8cb60"
+source_hash: "7ce23a1b630a4eac384887b030bdf2102cbc019a2930779c218a00d63311e665"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["gasto","retiro","caja chica"]
-related: []
+related: ["abrir-y-cerrar-caja","controlar-turnos-caja-panel","billeteras-y-cuentas"]
 social_image: "/social/registrar-gastos-y-retiros-v1.jpg"
 ---
+## Para qué sirve
+
+No toda la plata que sale de la caja es una venta devuelta: a veces pagás un flete, comprás limpieza o llevás efectivo a la caja fuerte. Registrarlo sirve para que el **cierre de caja cierre bien** y para saber después en qué se va la plata. Esta guía te ayuda a distinguir un **gasto** de un **retiro de caja**.
+
 ## Qué vas a lograr
 
-Dejar asentada la plata que **sale de la caja**, para que el cierre cierre bien. Hay dos casos distintos:
+Vas a **registrar gastos y retiros de caja en ADEstock** para dejar identificada cada salida de dinero en el turno donde ocurrió. Usá un gasto cuando pagás algo del negocio y un retiro cuando sacás dinero de la caja sin registrar un gasto.
+
+Elegir el medio de pago correcto permite que el arqueo reste únicamente las salidas realizadas en efectivo.
 
 | | Gasto | Retiro de caja |
 |---|---|---|
@@ -34,7 +40,7 @@ Dejar asentada la plata que **sale de la caja**, para que el cierre cierre bien.
 | Con qué se paga | El medio de pago que elijas | El medio que elijas (normalmente efectivo) |
 | Afecta el arqueo | Solo si fue en **efectivo** | Si fue en **efectivo** |
 
-> **Los gastos y los retiros se registran solo desde el POS**, con tu turno abierto. **No se cargan desde el panel de administración**: así cada movimiento queda siempre en el turno y la caja donde ocurrió, y el cierre cierra bien. Desde el panel solo se **consultan**.
+> **Los gastos y los retiros se registran solo desde el POS**, con tu turno abierto. **No se cargan desde el panel de administración**: así cada movimiento queda siempre en el turno y la caja donde ocurrió, y el arqueo puede comparar el efectivo contado con los movimientos registrados. Desde el panel solo se **consultan**.
 
 ## Registrar un gasto
 
@@ -53,7 +59,7 @@ Menú rápido (**F8**) → **Gastos**.
 | 5 | **Medio de pago** | Con qué se pagó. Solo aparecen los medios habilitados en tu punto de venta |
 | 6 | **¿A qué se imputa?** | *Gasto general* (limpieza, insumos, sueldos) o *Gasto de flete* (se imputa a la cuenta de fletes de Compras o Traslados) |
 
-### 2. Si no hay categorías, creálas
+### 2. Si no hay categorías, crealas
 
 La primera vez la lista está vacía. Tocá el engranaje (2): se abre *Gestionar Categorías de Gasto*.
 
@@ -109,6 +115,12 @@ Tocá **Registrar Retiro**.
 | Quiero cargar un gasto o retiro desde el panel de administración | Ya no se puede: solo se registran desde el POS | Registralo desde el POS con el turno abierto |
 | El retiro no se refleja en el cierre | Se registró con un medio que no es efectivo | Verificá que el medio sea *Efectivo* |
 
+## Cómo comprobar que salió bien
+
+Consultá el gasto en **Agenda → Gastos** o el retiro en **Venta → Retiros de Caja**. Revisá importe, medio de pago y turno. Si fue en efectivo, debe restar del efectivo esperado; con otro medio aparece en el resumen sin reducir el efectivo del cajón.
+
 ## Siguiente paso
 
-- Turno de caja: apertura, retiros y cierre
+- [abrir, hacer el arqueo y cerrar caja en ADEstock](/tutoriales/abrir-y-cerrar-caja/)
+- [revisar turnos y cierres de caja en ADEstock](/tutoriales/controlar-turnos-caja-panel/)
+- [controlar billeteras, cuentas y saldos en ADEstock](/tutoriales/billeteras-y-cuentas/)

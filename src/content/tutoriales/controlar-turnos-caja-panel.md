@@ -1,31 +1,37 @@
 ---
 id: "controlar-turnos-caja-panel"
 slug: "controlar-turnos-caja-panel"
-title: "Cómo controlar un turno de caja desde el panel"
-description: "Revisá los turnos de caja del negocio: quién los abrió, cuánto faltó o sobró y qué ventas y cobros tuvo cada uno."
+title: "Cómo revisar turnos y cierres de caja en ADEstock"
+description: "Revisá turnos y cierres de caja en el panel de ADEstock. Consultá movimientos, compará efectivo esperado y contado y descargá el comprobante en PDF."
 category: "caja"
 priority: "P2"
 roles: ["dueno"]
 surface: ["panel"]
-status: "draft"
+status: "published"
 tiempo: "5 minutos"
 necesitas: "entrar al panel de administración (Menú rápido del POS → Panel de administración)"
 para_quien: "el dueño y administrativos"
 modulo: "venta (Turnos de Caja, Retiros de caja)"
 permiso: "acceso al panel de administración"
 source_path: "01-manual-usuario/32-controlar-un-turno-de-caja-en-el-panel.md"
-source_hash: "62ba4ac8004085a4827555afce2e9e55e460f9bc437c13f85b13b5056c70f65f"
+source_hash: "8006c21914c69076be0c7b94050f6d821522671e8444d24e13e9c89ea0ac5c4e"
 product_version: "2.5.3"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["supervisar caja","turnos"]
-related: []
+related: ["abrir-y-cerrar-caja","registrar-gastos-y-retiros","consultar-reportes-y-exportar"]
 social_image: "/social/controlar-turnos-caja-panel-v1.jpg"
 ---
+## Para qué sirve
+
+Cada cajero abre y cierra su turno, pero quien controla es el dueño. Esta pantalla sirve para **revisar todos los cierres**: cuánta plata debía haber, cuánta se contó, cuánto faltó o sobró y qué movimientos tuvo cada turno. Así detectás diferencias y tenés el PDF del cierre. El lado del cajero está en [turno de caja](/tutoriales/abrir-y-cerrar-caja/).
+
 ## Qué vas a lograr
 
-Revisar **todos los turnos de caja** del negocio: quién los abrió, cuánta plata debía haber, cuánta se contó, **cuánto faltó o sobró**, y qué ventas, cobros y retiros tuvo cada uno. También bajar el **PDF del cierre**.
+Vas a **revisar los turnos y cierres de caja en ADEstock** desde el panel de administración: quién operó cada caja, cuánto efectivo se esperaba, cuánto se declaró y qué diferencia quedó.
+
+Podés consultar ventas, cobros, retiros y pagos asociados al turno, y descargar su cierre en PDF. Esta guía complementa la apertura y el cierre que realiza el cajero desde el POS.
 
 El cajero abre y cierra su turno desde el POS (ver [Turno de caja: apertura y cierre](/tutoriales/abrir-y-cerrar-caja/)). Esta pantalla es la **vista del dueño** para controlar esos cierres.
 
@@ -155,7 +161,12 @@ Los retiros se cargan desde el POS (ver [Registrar un gasto y un retiro de caja]
 | No puedo anular una venta | No hay ningún turno de caja abierto para imputar la devolución | Abrí un turno desde el POS y volvé a intentar |
 | No encuentro cómo agregar un turno o un pago desde el panel | Ya no se puede: se hace todo desde el POS | Abrí el turno o registrá el pago desde el POS |
 
+## Cómo comprobar que salió bien
+
+Compará caja, cajero y horarios del turno antes de revisar los movimientos. En un turno cerrado, contrastá el efectivo esperado, declarado y la diferencia con su PDF. Si una devolución pertenece a otro turno, seguí el registro de la anulación para ubicar dónde se imputó.
+
 ## Siguiente paso
 
-- [Billeteras y cuentas: dónde está tu plata](/tutoriales/billeteras-y-cuentas/)
-- [Consultar, filtrar y exportar información](/tutoriales/consultar-reportes-y-exportar/)
+- [abrir, hacer el arqueo y cerrar caja en ADEstock](/tutoriales/abrir-y-cerrar-caja/)
+- [registrar gastos y retiros de caja en ADEstock](/tutoriales/registrar-gastos-y-retiros/)
+- [consultar reportes y exportar a Excel en ADEstock](/tutoriales/consultar-reportes-y-exportar/)

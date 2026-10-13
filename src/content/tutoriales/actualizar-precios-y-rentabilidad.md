@@ -1,31 +1,37 @@
 ---
 id: "actualizar-precios-y-rentabilidad"
 slug: "actualizar-precios-y-rentabilidad"
-title: "Cómo actualizar precios y controlar la rentabilidad"
-description: "Subí o bajá muchos precios a la vez por porcentaje, categoría o proveedor, viendo antes cómo queda cada uno."
+title: "Cómo actualizar precios masivos y márgenes en ADEstock"
+description: "Actualizá precios por porcentaje, categoría o proveedor en ADEstock. Revisá margen y redondeo antes de aplicar y aprendé a revertir el último lote."
 category: "stock"
 priority: "P1"
 roles: ["dueno","administrativo"]
 surface: ["panel"]
-status: "draft"
+status: "published"
 tiempo: "3 minutos"
 necesitas: "productos con precios cargados"
 para_quien: "dueños y encargados"
 modulo: "producto (ProductoPrecio), venta (POS → Precios masivos)"
 permiso: "acceso a Precios masivos del Menú rápido (dueño o quien tenga permiso de gestionar productos)"
 source_path: "01-manual-usuario/25-precios-masivos-y-rentabilidad.md"
-source_hash: "402a90a3db8ff438bc3717d48eec67624e60ca215fe9eb3b5bfe46ad8d98f7a5"
+source_hash: "b339269ddff26ac139092e5651628dc4b740f671f6c7b3a8a881cdcecbac7467"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["aumento de precios","margen","recargo","precios masivos"]
-related: []
+related: ["cargar-productos","crear-ofertas-y-promociones","imprimir-etiquetas"]
 social_image: "/social/actualizar-precios-y-rentabilidad-v1.jpg"
 ---
+## Para qué sirve
+
+Cuando sube la mercadería, cambiar los precios producto por producto es lento y se olvidan algunos. Esta herramienta sirve para **actualizar muchos precios de una sola vez**, ver **antes de aplicar** cómo queda cada precio y cuánta rentabilidad deja, y **deshacerlo** si te equivocás.
+
 ## Qué vas a lograr
 
-Subir (o bajar) **muchos precios de una sola vez** por un porcentaje, por categoría o proveedor, con **redondeo**, viendo **antes de aplicar** cómo queda cada precio y su rentabilidad, y con la posibilidad de **deshacerlo**.
+Vas a **actualizar precios de venta en bloque en ADEstock**, por porcentaje o por rentabilidad objetivo de categoría. Podés filtrar por proveedor, elegir un redondeo y revisar cada precio y su margen antes de aplicar.
+
+Los cambios se guardan en un lote para poder revertir el último aplicado. Esta herramienta modifica precios de venta; los costos de los productos se conservan.
 
 ## Cuándo usarlo
 
@@ -33,7 +39,7 @@ Subir (o bajar) **muchos precios de una sola vez** por un porcentaje, por catego
 - Querés llevar una categoría a una **rentabilidad objetivo**.
 - Querés redondear los precios (a 10, a 100 o terminados en .99).
 
-Para cambiar el precio de **un solo** producto, usá *Editar producto* (ver *Cargar tus primeros productos*).
+Para cambiar el precio de **un solo** producto, usá *Editar producto* (ver [Cargar tus primeros productos](/tutoriales/cargar-productos/)).
 
 ## Paso a paso
 
@@ -103,14 +109,14 @@ Al tocarlo, los precios vuelven a como estaban:
 
 ## Cómo se entiende la rentabilidad
 
-La **rentabilidad** es el margen que te queda sobre cada precio. Cómo se calcula depende de un ajuste del dueño (*Configuración → Precios y productos → Calcular rentabilidad sobre venta*):
+La columna **Rentabilidad** expresa un margen sobre el precio de venta o un recargo sobre el costo, según el ajuste del dueño **Calcular rentabilidad sobre venta** (*Configuración → Precios y productos*). El mismo porcentaje da precios distintos en cada modalidad:
 
 | Ajuste | Fórmula del precio | Ejemplo con costo $ 1.000 y 30 % |
 |---|---|---|
 | **Sobre la venta** (recomendado) | `costo ÷ (1 − %)` | **$ 1.428,57** |
 | Sobre el costo | `costo × (1 + %)` | $ 1.300 |
 
-En el primer caso, de cada $ 100 que cobrás, $ 30 son ganancia.
+En el primer caso, de cada $ 100 que cobrás, $ 30 son margen bruto y $ 70 cubren el costo del producto. Ese margen todavía no descuenta otros gastos del negocio.
 
 ### Rentabilidad objetivo por categoría
 
@@ -149,6 +155,12 @@ Con las listas apagadas, **todas las cajas usan los mismos precios**.
 | Quiero ver cuánto gano por producto | - | La columna **% Actual / % Nuevo** de la previsualización, o la app del dueño (Productos) |
 | La categoría dice "sin %" | No tiene rentabilidad objetivo | Cargala en el panel de administración, o usá un % fijo |
 
+## Cómo comprobar que salió bien
+
+Después de aplicar, buscá algunos productos en el POS y compará sus precios con la previsualización. Revisá cada presentación incluida, por ejemplo unidad y pack. Si hubo un error, usá **Revertir lote** para restaurar el último cambio y volvé a comprobar los valores.
+
 ## Siguiente paso
 
-- Ofertas y variantes
+- [cargar productos, stock y precios en ADEstock](/tutoriales/cargar-productos/)
+- [crear ofertas, descuentos y promociones 3×2 en ADEstock](/tutoriales/crear-ofertas-y-promociones/)
+- [imprimir etiquetas de precios y códigos en ADEstock](/tutoriales/imprimir-etiquetas/)

@@ -1,31 +1,37 @@
 ---
 id: "notas-de-credito-y-debito"
 slug: "notas-de-credito-y-debito"
-title: "Cómo aplicar, controlar y anular notas de crédito y débito"
-description: "Entendé y manejá las notas de ajuste que corrigen una venta cuando no se entregó todo lo que se cobró."
+title: "Cómo aplicar y anular notas de crédito y débito en ADEstock"
+description: "Revisá y aplicá notas de crédito por faltantes de pedidos en ADEstock. Consultá su efecto en stock y caja y cómo anularlas con una nota inversa."
 category: "vender"
 priority: "P2"
 roles: ["dueno","administrativo"]
 surface: ["panel"]
-status: "draft"
+status: "published"
 tiempo: "5 minutos"
 necesitas: "una nota generada desde el picking (ver Armado de pedidos)"
 para_quien: "el dueño y administrativos"
 modulo: "venta (Notas de Ajuste), armado"
 permiso: "acceso al panel de administración"
 source_path: "01-manual-usuario/35-notas-de-credito-y-debito.md"
-source_hash: "fb8a896c6572b6a20360450e3cd8f19b2724ffdf9eea9394fde611012708f145"
+source_hash: "da733fcc447491665acf8ac5a0e90f8fa09d54562daada7ab447dde8bb9ba741"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["nota de crédito","nota de débito","diferencia de armado","ajuste de venta"]
-related: []
+related: ["armar-pedidos-picking","controlar-turnos-caja-panel","billeteras-y-cuentas"]
 social_image: "/social/notas-de-credito-y-debito-v1.jpg"
 ---
+## Para qué sirve
+
+Si cobraste algo que finalmente no se pudo entregar, la venta tiene que corregirse. Las notas sirven para eso: la **nota de crédito** devuelve al stock la mercadería no entregada y resta ese dinero de la caja, y la **nota de débito** deshace una nota de crédito. Nacen del [armado de pedidos](/tutoriales/armar-pedidos-picking/), así que esta guía es para entender y aplicar lo que el sistema ya generó.
+
 ## Qué vas a lograr
 
-Entender y manejar las **notas de ajuste**: el comprobante que corrige una venta cuando **no se entregó todo lo que se cobró**.
+Vas a **revisar, aplicar y anular notas de crédito y débito en ADEstock** para ajustar una venta con faltantes en el armado del pedido. La guía explica qué revisar en cada línea y cómo elegir el medio de pago de la devolución.
+
+Una nota en borrador todavía no afecta stock ni caja. Al aplicarla se registran sus efectos; si necesitás anularla, el sistema conserva el historial mediante una nota inversa.
 
 | Nota | Cuándo | Qué hace |
 |---|---|---|
@@ -36,7 +42,7 @@ Las notas **no se cargan desde el POS**: nacen del armado de pedidos y se **apli
 
 ## Cómo nace una nota
 
-1. Se arma un pedido y falta mercadería (ver [tutorial 34](/tutoriales/armar-pedidos-picking/)).
+1. Se arma un pedido y falta mercadería (ver [Preparar pedidos con picking móvil](/tutoriales/armar-pedidos-picking/)).
 2. En el celular, **Generar Nota de Crédito** → se crea en estado **Borrador**.
 3. El dueño o administrativo la **revisa y la aplica** en el panel.
 
@@ -118,11 +124,16 @@ Detalles útiles:
 |---|---|---|
 | La nota existe pero el stock no cambió | Está en **borrador** | Aplicala |
 | «La nota de crédito debe tener medio de pago…» | La nota no tiene medio y no se pudo deducir de la venta | Abrila (borrador), elegí el medio y aplicala |
-| No puedo editar la nota | Ya está aplicada o anulada | Anulala (genera su inversa) y creá una nueva si corresponde |
+| No puedo editar la nota | Ya está aplicada o anulada | Si está aplicada, anulala y creá una nueva si corresponde. Si ya está anulada, revisá su nota inversa antes de crear otra |
 | Un pedido cerrado no tiene nota de crédito | Se finalizó sin generarla | Reabrilo en el celular y generá la nota, o creala a mano (paso 5) |
 | La caja del día no cuadra por una nota | La nota se aplicó en un turno distinto al de la venta | Mirá el arqueo del turno: las notas aparecen como movimientos del medio (ver [Controlar un turno](/tutoriales/controlar-turnos-caja-panel/)) |
 
+## Cómo comprobar que salió bien
+
+Confirmá que la nota figure como **Aplicada** y corresponda a la venta, productos, cantidades y medio de pago correctos. Revisá el efecto en el depósito y en el turno de la aplicación. Si la anulaste, comprobá el estado **Anulada** de la original y la nota inversa generada.
+
 ## Siguiente paso
 
-- [Armado de pedidos (picking)](/tutoriales/armar-pedidos-picking/)
-- [Billeteras y cuentas](/tutoriales/billeteras-y-cuentas/): dónde se ve el movimiento del dinero
+- [preparar pedidos con picking móvil en ADEstock](/tutoriales/armar-pedidos-picking/)
+- [revisar turnos y cierres de caja en ADEstock](/tutoriales/controlar-turnos-caja-panel/)
+- [controlar billeteras, cuentas y saldos en ADEstock](/tutoriales/billeteras-y-cuentas/)

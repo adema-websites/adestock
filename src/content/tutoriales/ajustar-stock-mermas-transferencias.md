@@ -2,30 +2,36 @@
 id: "ajustar-stock-mermas-transferencias"
 slug: "ajustar-stock-mermas-transferencias"
 title: "Cómo ajustar stock, registrar mermas y transferir entre depósitos"
-description: "Registrá los movimientos de stock que no son compra ni venta: ajustes, mermas y transferencias entre depósitos."
+description: "Gestioná ajustes de stock, mermas y transferencias entre depósitos en ADEstock. Elegí la herramienta y confirmá cuándo debe impactar en el inventario."
 category: "stock"
 priority: "P0"
 roles: ["dueno","administrativo"]
 surface: ["panel"]
-status: "draft"
+status: "published"
 tiempo: "3 minutos por operación"
 necesitas: "acceso al panel de administración (Menú rápido → Panel de administración → Producto)"
 para_quien: "dueños y administrativos"
 modulo: "producto (Merma, AjusteInventario, TransferenciaInventario), panel de administración"
 permiso: "acceso al panel de administración"
 source_path: "01-manual-usuario/24-ajustes-mermas-y-transferencias.md"
-source_hash: "47fb7f67daaf931dfc795007e75d7de686ce622a0baa10b0456a734e7df8eb1d"
+source_hash: "790161096953cf0f4f268889ede0b162162aba133ca51a4aae5d1cfd8972d0ec"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["ajuste de stock","merma","transferencia","corregir stock","me quedó mal el stock"]
-related: []
+related: ["contar-stock","cargar-stock-inicial-excel","actualizar-precios-y-rentabilidad"]
 social_image: "/social/ajustar-stock-mermas-transferencias-v1.jpg"
 ---
+## Para qué sirve
+
+No todo movimiento de stock es una compra o una venta. Esta guía sirve para registrar los otros casos: lo que se **rompió o venció** (merma), la mercadería que **cambia de depósito** (transferencia) y las **correcciones masivas** de stock (ajuste de inventario). Así el stock sigue reflejando la realidad y queda registro de cada movimiento.
+
 ## Qué vas a lograr
 
-Registrar los movimientos de stock que **no son una compra ni una venta**:
+Vas a **ajustar el stock en ADEstock**, registrar mercadería perdida o dañada y transferir productos entre depósitos. La guía te ayuda a elegir entre merma, transferencia, ajuste de inventario y conteo según lo que pasó con la mercadería.
+
+Cada operación tiene un momento de aplicación: guardar una merma pendiente, una transferencia no finalizada o un ajuste en borrador todavía no cambia el stock.
 
 | Situación | Herramienta |
 |---|---|
@@ -193,6 +199,12 @@ En la pestaña **Detalles de ajuste** cargás los productos y cantidades. Con **
 | La merma no descontó | Quedó pendiente | Tildala y usá **Confirmar mermas** |
 | Quiero corregir el stock de varios productos | - | Usá el **Conteo de stock** del POS |
 
+## Cómo comprobar que salió bien
+
+En una **merma confirmada**, revisá la cantidad descontada y el costo estimado de la pérdida. En una **transferencia completada**, comprobá la salida y la entrada: el total entre depósitos debe conservarse. En un **ajuste aplicado**, verificá las cantidades del depósito elegido y el registro del movimiento.
+
 ## Siguiente paso
 
-- Gestión de precios y listas de precios
+- [contar stock y corregir el inventario en ADEstock](/tutoriales/contar-stock/)
+- [cargar el stock inicial desde Excel en ADEstock](/tutoriales/cargar-stock-inicial-excel/)
+- [actualizar precios masivos y márgenes en ADEstock](/tutoriales/actualizar-precios-y-rentabilidad/)

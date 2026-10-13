@@ -1,31 +1,37 @@
 ---
 id: "crear-y-editar-proveedores"
 slug: "crear-y-editar-proveedores"
-title: "Cómo crear y editar proveedores"
-description: "Registrá a tus proveedores para cargarles compras, llevar lo que les debés y pagarles."
+title: "Cómo crear y editar proveedores en ADEstock"
+description: "Cargá proveedores en ADEstock con sus datos de contacto, CUIT y condición de pago. Consultá deudas, adelantos e historial de pagos desde el POS."
 category: "compras"
 priority: "P1"
 roles: ["dueno","administrativo"]
 surface: ["panel"]
-status: "draft"
+status: "published"
 tiempo: "2 minutos"
 necesitas: "nada previo"
 para_quien: "dueños y administrativos"
 modulo: "agenda (Proveedor), venta (POS → Gestión de proveedores)"
 permiso: "ninguno especial"
 source_path: "01-manual-usuario/18-crear-y-editar-proveedores.md"
-source_hash: "a681fe445bf6ef70589b40e7eefa22028eb4f4dce5d8bee6ba6b0ad5a3fb54c5"
+source_hash: "7e0691a7cfc33452023ae426fd9b740575b078d962e69e0420039890d097950f"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["alta de proveedor","proveedor nuevo"]
-related: []
+related: ["cargar-compra-manual","cargar-compras-con-foto-ia","pagar-proveedor"]
 social_image: "/social/crear-y-editar-proveedores-v1.jpg"
 ---
+## Para qué sirve
+
+Los proveedores son la otra mitad del negocio: a quienes les comprás. Cargarlos sirve para **asociarles compras**, saber **cuánto les debés** y pagarles. Es un paso previo a cargar cualquier compra, y también a cargar sus [listas de precios](/tutoriales/cargar-listas-precios-proveedores/).
+
 ## Qué vas a lograr
 
-Registrar a tus proveedores para poder **cargarles compras**, llevar **lo que les debés** y **pagarles** (en efectivo, transferencia o a cuenta corriente).
+Vas a **crear y editar proveedores en ADEstock** para asociarles compras y consultar cuánto les debés. Registrá sus datos de contacto, CUIT y plazo de pago para identificar cada proveedor y revisar vencimientos.
+
+Desde la misma gestión podés abrir sus pagos, registrar un adelanto y descargar el estado de cuenta.
 
 ## Paso a paso
 
@@ -78,7 +84,7 @@ En la lista, tocá el primer icono de **Acciones** (lápiz). Cambiás lo que nec
 | Icono | Qué hace |
 |---|---|
 | ✏️ **Editar proveedor** | Modifica sus datos |
-| 💵 **Pagar deuda o registrar adelanto** | Abre el pago de cuentas corrientes de ese proveedor (ver *Pagar a un proveedor*) |
+| 💵 **Pagar deuda o registrar adelanto** | Abre el pago de cuentas corrientes de ese proveedor (ver [Pagar a un proveedor](/tutoriales/pagar-proveedor/)) |
 | 🕘 **Ver pagos realizados** | Historial de pagos hechos a ese proveedor |
 | 📄 **Estado de cuenta PDF** | Descarga lo que le debés, compra por compra |
 
@@ -99,7 +105,12 @@ En la lista, tocá el primer icono de **Acciones** (lápiz). Cambiás lo que nec
 | El proveedor no aparece al cargar la compra | Está mal escrito o creado dos veces | Buscalo por CUIT; editá el nombre si hace falta |
 | No encuentro cómo borrar un proveedor | Desde el POS no hay botón para borrarlos | Dejá de usarlo; el historial de compras y pagos se conserva |
 
+## Cómo comprobar que salió bien
+
+Buscá al proveedor por nombre o CUIT y revisá que sus datos y plazo de pago estén correctos. Un proveedor recién creado aparece sin deuda. Las compras a cuenta corriente empiezan a sumar deuda cuando se confirman.
+
 ## Siguiente paso
 
-- Cargar una compra manual y pagarla
-- Pagar a un proveedor y revisar su cuenta corriente
+- [cargar una compra manual en ADEstock](/tutoriales/cargar-compra-manual/)
+- [cargar compras con foto e IA en ADEstock](/tutoriales/cargar-compras-con-foto-ia/)
+- [pagar a proveedores y registrar adelantos en ADEstock](/tutoriales/pagar-proveedor/)

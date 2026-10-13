@@ -74,26 +74,33 @@ const asunto = encodeURIComponent(`Consulta sobre el tutorial "${d.title}" (${d.
     <header class="tuto-head">
       <h1>{d.title}</h1>
       <p class="tuto-lead">{d.description}</p>
-      <dl class="tuto-meta">
+      <dl class="tuto-resumen">
+        <div><dt>Tiempo</dt><dd>{d.tiempo}</dd></div>
         <div><dt>Para quién</dt><dd>{d.roles.map((r) => ROLES[r]).join(', ')}</dd></div>
         <div><dt>Dónde</dt><dd>{d.surface.map((s) => SUPERFICIES[s]).join(' · ')}</dd></div>
-        <div><dt>Tiempo</dt><dd>{d.tiempo}</dd></div>
-        <div><dt>Necesitás</dt><dd>{d.necesitas}</dd></div>
-        <div><dt>Permiso</dt><dd>{d.permiso}</dd></div>
-        <div><dt>Módulo</dt><dd>{d.modulo}</dd></div>
-        <div><dt>Verificado</dt><dd><time datetime={d.verified_at}>{d.verified_at}</time> · {versionOk ? `versión ${d.product_version}` : 'versión por confirmar'}</dd></div>
       </dl>
     </header>
 
     <div class="tuto-grid">
-      {toc.length > 1 && (
+      <aside class="tuto-aside" aria-label="Navegación y requisitos del tutorial">
+        <details class="tuto-requisitos">
+          <summary>Requisitos y detalles</summary>
+          <dl class="tuto-meta">
+            <div><dt>Necesitás</dt><dd>{d.necesitas}</dd></div>
+            <div><dt>Permiso</dt><dd>{d.permiso}</dd></div>
+            <div><dt>Módulo</dt><dd>{d.modulo}</dd></div>
+            <div><dt>Verificado</dt><dd><time datetime={d.verified_at}>{d.verified_at}</time><br />{versionOk ? `Versión ${d.product_version}` : 'Versión por confirmar'}</dd></div>
+          </dl>
+        </details>
+        {toc.length > 1 && (
         <nav class="tuto-toc" aria-label="En este tutorial">
           <h2>En este tutorial</h2>
           <ol>
             {toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}
           </ol>
         </nav>
-      )}
+        )}
+      </aside>
       <article class="tuto-body">
         <Content />
 

@@ -1,31 +1,37 @@
 ---
 id: "usar-punto-de-venta"
 slug: "usar-punto-de-venta"
-title: "Cómo recorrer el punto de venta y usar sus atajos"
-description: "Conocé la pantalla del POS, sus atajos de teclado y todo lo que hay en el Menú rápido para saber dónde está cada cosa."
+title: "Cómo usar el punto de venta de ADEstock y sus atajos"
+description: "Conocé el POS de ADEstock: buscador, carrito, catálogo, pantalla de cobro y Menú rápido. Consultá los atajos de teclado para atender desde la caja."
 category: "vender"
 priority: "P0"
 roles: ["cajero","dueno"]
 surface: ["pos"]
-status: "draft"
+status: "published"
 tiempo: "8 minutos"
 necesitas: "haber ingresado al sistema y tener el turno de caja abierto"
 para_quien: "cajeros y dueños que usan el punto de venta por primera vez"
 modulo: "venta (POS)"
 permiso: "ninguno (algunas opciones del menú dependen del permiso de cada usuario)"
 source_path: "01-manual-usuario/06-recorrido-por-el-pos.md"
-source_hash: "05a0492a667e42b750f4c81b16169808ab82e1e7b34fcb03da3b8163a6f0edc9"
+source_hash: "98394c2f12b9db7affb5d8418107e6f2a45ec80ad7ed18dfd6f88f10a4eaf1ad"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["pos","atajos","teclas"]
-related: []
+related: ["hacer-una-venta","cargar-productos","abrir-y-cerrar-caja"]
 social_image: "/social/usar-punto-de-venta-v1.jpg"
 ---
+## Para qué sirve
+
+Sirve para conocer la pantalla donde vas a pasar la mayor parte del día. Cuando sabés qué hace cada zona, cada atajo y cada opción del Menú rápido, vendés más rápido y sabés dónde buscar cuando aparece algo que no es una venta común (una compra, el stock, un cliente, la caja). Es la guía para leer **primero** si es tu primera vez en el POS.
+
 ## Qué vas a lograr
 
-Conocer cada parte de la pantalla del POS, los atajos de teclado y todo lo que hay dentro del **Menú rápido**, para saber dónde está cada cosa.
+Aprendé a **usar el punto de venta (POS) de ADEstock**: encontrar productos, recorrer el carrito, elegir un cliente y abrir la pantalla de cobro. Esta guía reúne las funciones del Menú rápido y los atajos de teclado para ubicar cada tarea mientras atendés.
+
+Si es tu primera vez, empezá por la pantalla principal. Si ya usás el POS, podés ir directo a la tabla de atajos o a la sección del menú que necesitás.
 
 ## Antes de empezar
 
@@ -163,7 +169,12 @@ Es el "índice" de todo lo que se hace desde el POS. Se abre con el botón de ar
 | "Has alcanzado el límite de 5 ventas simultáneas" | Tenés abiertas todas las pestañas permitidas | Terminá o vaciá una venta antes de abrir otra |
 | No veo la opción *Ofertas* o *Conteo de stock* | Tu usuario no tiene ese permiso | Pedírselo al dueño |
 
+## Cómo comprobar que salió bien
+
+Revisá en la barra superior que figuren tu usuario, la caja y el depósito correctos. Probá **F2** para buscar un producto y **F8** para abrir el Menú rápido. Las opciones disponibles dependen de los módulos activos y de tus permisos.
+
 ## Siguiente paso
 
-- Hacer una venta (cobrar con efectivo, tarjeta y cuenta corriente)
-- Cargar tus primeros productos
+- [hacer una venta y cobrar en efectivo en ADEstock](/tutoriales/hacer-una-venta/)
+- [cargar productos, stock y precios en ADEstock](/tutoriales/cargar-productos/)
+- [abrir, hacer el arqueo y cerrar caja en ADEstock](/tutoriales/abrir-y-cerrar-caja/)

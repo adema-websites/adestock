@@ -1,33 +1,49 @@
 ---
 id: "cargar-listas-precios-proveedores"
 slug: "cargar-listas-precios-proveedores"
-title: "Cómo cargar listas de precios de proveedores"
-description: "Subí la lista de precios de un proveedor, asociala a tus productos y mirá en cuáles te conviene o no comprarle."
+title: "Cómo cargar listas de precios de proveedores en ADEstock"
+description: "Importá listas de precios de proveedores en ADEstock desde Excel, CSV, PDF o fotos. Asociá productos, compará valores y publicá los precios revisados."
 category: "compras"
 priority: "P1"
 roles: ["dueno","administrativo"]
 surface: ["panel"]
-status: "draft"
+status: "published"
 tiempo: "5 minutos por lista"
 necesitas: "el módulo Listas de precios de proveedores activado y la lista del proveedor (Excel, CSV, PDF o foto)"
 para_quien: "dueños y administrativos que quieren saber quién les vende más barato"
 modulo: "compra (Listas de precios de proveedor), gerencia (Comparar proveedores)"
 permiso: "módulo \"Listas de precios de proveedores\" activado"
 source_path: "01-manual-usuario/22-listas-de-precios-de-proveedores.md"
-source_hash: "0cc41e8612196d409f158281cb74f7343151567b8d4b743378ed41833f1e3975"
+source_hash: "eabd94142c1af1deeaf01d86a0300258a24aaa4af8ada11e7625e448f66e1699"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["lista de precios","lista proveedor excel","comparar precios"]
-related: []
+related: ["cargar-compras-con-foto-ia","usar-app-del-dueno","actualizar-precios-y-rentabilidad"]
 social_image: "/social/cargar-listas-precios-proveedores-v1.jpg"
 ---
+## Para qué sirve
+
+Esta sección sirve para tener **la lista de precios de cada proveedor cargada en el sistema**, y así comparar cuánto sale cada producto en cada uno y decidir **dónde te conviene comprar**.
+
+Cada proveedor tiene su propia lista, pero casi siempre la manda con el mismo formato: agrega artículos o cambia precios, no cambia la forma del archivo. Por eso el trabajo fuerte se hace **una sola vez por proveedor**: cargás la lista y asociás sus renglones con tus productos. Cuando llega una lista nueva, la subís de nuevo y el sistema, que ya sabe cómo escribe ese proveedor cada producto, reconoce casi todo solo. Solo revisás lo nuevo.
+
+Para qué te sirve tener las listas cargadas:
+
+- **Comparar:** ves cuánto cuesta un producto en cada proveedor y si el precio que te ofrecen es más barato o más caro que tu costo actual.
+- **Comprar donde conviene:** la pantalla **Compra inteligente** del panel de administración arma la reposición de los productos con poco stock y, para cada uno, te sugiere el proveedor con el **precio vigente más bajo** entre las listas cargadas.
+- **Tener los precios al día:** cada lista nueva reemplaza a la anterior como precio vigente, y la anterior queda como historial.
+
+Para que la sugerencia sirva, mantené las listas actualizadas. Y ojo: el sistema compara el precio tal como figura en cada lista, sin convertir cajas a unidades; si dos proveedores listan distinto, revisalo antes de decidir.
+
 ## Qué vas a lograr
 
-Subir la **lista de precios** que te manda un proveedor, que el sistema **asocie cada renglón con tus productos**, te **avise en qué productos te conviene o no** (comparando contra tu costo actual) y **guarde el precio vigente de ese proveedor**.
+Vas a **cargar una lista de precios de proveedor en ADEstock**, asociar cada renglón a tu catálogo y comparar los valores ofrecidos con tu costo actual. Podés revisar la carga, guardarla como borrador y publicar los precios cuando estén correctos.
 
-> **Importante:** publicar una lista **no cambia el costo de tus productos**. Guarda *el precio que ofrece ese proveedor*. Tu costo cambia recién cuando le **comprás** (ver *Cargar una compra*).
+Publicar una lista guarda los precios de referencia del proveedor. El costo de tus productos se actualiza mediante las compras confirmadas con actualización de costo habilitada.
+
+> **Importante:** publicar una lista **no cambia el costo de tus productos**. Guarda *el precio que ofrece ese proveedor*. Tu costo cambia recién cuando le **comprás** (ver [Cargar una compra](/tutoriales/cargar-compra-manual/)).
 
 ## Antes de empezar
 
@@ -124,7 +140,8 @@ Hay dos formas de comparar, según lo que quieras saber:
 
 | Quiero saber… | Dónde |
 |---|---|
-| **Qué me conviene según las listas que me mandaron** | En esta pantalla, columna *Costo actual* / *Costo nuevo* con el indicador **OK / Más caro**; y en el panel de administración, **Precios proveedores desde listas** |
+| **Si el precio de una lista es mejor o peor que mi costo** | En esta pantalla, columna *Costo actual* / *Costo nuevo* con el indicador **OK / Más caro** |
+| **Qué proveedor me conviene para cada producto** | En el panel de administración, **Compra inteligente** (botón en el inicio del panel): para cada producto con poco stock sugiere el proveedor con el precio vigente más bajo de tus listas. Todos los precios cargados se ven en **Compra → Precios proveedores desde listas** |
 | **A quién le compré más barato de verdad** (y cuánto pagué de más) | En la **app de la dueña** (`/app/`), pantallas **Proveedores** y **Comparar proveedores**. Esa comparación usa **tus compras reales confirmadas**, no las listas |
 
 ## Qué pasa por detrás
@@ -147,7 +164,12 @@ Hay dos formas de comparar, según lo que quieras saber:
 | Quiero seguir mañana | - | **Guardar borrador** y reabrí desde *Listas guardadas* |
 | El precio se leyó mal (PDF/foto) | Calidad de la imagen | Corregilo en **Costo nuevo** antes de publicar |
 
+## Cómo comprobar que salió bien
+
+Abrí **Compra → Precios proveedores desde listas** y verificá proveedor, producto, moneda y precio publicado. Los renglones que ignoraste deben quedar fuera de la publicación. Comprobá que el costo de tus productos conserve su valor: publicar la lista no registra una compra.
+
 ## Siguiente paso
 
-- Comparar proveedores en la app del dueño (tutorial de la app)
-- Cargar una compra con la foto de la boleta
+- [cargar compras con foto e IA en ADEstock](/tutoriales/cargar-compras-con-foto-ia/)
+- [consultar ventas y stock desde la app de ADEstock](/tutoriales/usar-app-del-dueno/)
+- [actualizar precios masivos y márgenes en ADEstock](/tutoriales/actualizar-precios-y-rentabilidad/)

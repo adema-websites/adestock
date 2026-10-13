@@ -1,31 +1,37 @@
 ---
 id: "configurar-negocio"
 slug: "configurar-negocio"
-title: "Cómo configurar tu negocio en ADEstock la primera vez"
-description: "Completá el asistente inicial: nombre del negocio, depósitos, cajas, medios de cobro y usuarios. Al terminar, ADEstock queda listo para vender."
+title: "Cómo configurar ADEstock: primeros pasos para tu negocio"
+description: "Configurá tu negocio en ADEstock paso a paso: depósitos, cajas, medios de cobro y usuarios. Completá el asistente inicial y abrí tu primer turno."
 category: "empezar"
 priority: "P0"
 roles: ["dueno"]
 surface: ["panel"]
-status: "draft"
+status: "published"
 tiempo: "3 minutos"
 necesitas: "el usuario y la contraseña que te dio ADEMA Sistemas"
 para_quien: "el dueño, la primera vez que entra al sistema"
 modulo: "agenda (onboarding), billetera, venta, producto"
 permiso: "ser el primer usuario que entra (superusuario)"
 source_path: "01-manual-usuario/02-onboarding-configuracion-inicial.md"
-source_hash: "46527bd8ccaa226794d89d5636d4a197191772fd05e6254eea0127a391d36370"
+source_hash: "441b7cda1c11f2b15bfe9bd1b2561c0630b29c1894b8ea4cbd68eab095c7b7b0"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["onboarding","primeros pasos","empezar","configuración inicial"]
-related: []
+related: ["cargar-productos", "usuarios-y-permisos", "usar-punto-de-venta"]
 social_image: "/social/configurar-negocio-v1.jpg"
 ---
+## Para qué sirve
+
+El onboarding sirve para dejar el sistema funcionando sin recorrer decenas de pantallas de configuración. En unos minutos definís cómo se llama tu negocio, dónde guardás la mercadería, con qué cajas y medios de cobro trabajás y quiénes lo van a usar. Se hace **una sola vez**, al empezar. Lo que elijas acá después se ajusta desde la [configuración del POS](/tutoriales/configurar-punto-de-venta/).
+
 ## Qué vas a lograr
 
-Al terminar este asistente, ADEstock queda **listo para vender**: con el nombre de tu negocio, tus depósitos y cajas, las billeteras, los medios de cobro, los usuarios y un catálogo de ejemplo de tu rubro.
+En esta guía vas a **configurar ADEstock por primera vez**: cargar el nombre de tu negocio, definir depósitos y cajas, elegir medios de cobro y crear usuarios. También podés cargar un catálogo de ejemplo de tu rubro para probar el punto de venta (POS).
+
+Al finalizar el asistente, vas a llegar a la apertura de caja. Desde ahí podés abrir tu primer turno y empezar a probar el sistema.
 
 El asistente aparece **una sola vez**. Cuando termina, si volvés a entrar a `/onboarding/` el sistema te lleva directo al POS.
 
@@ -88,7 +94,7 @@ Indicá cuántas personas van a usar el sistema.
 ![Usuarios](../../assets/tutoriales/02-onboarding/07-paso4-usuarios.png)
 
 1. **Cajeros**: solo acceden al punto de venta. No ven reportes ni configuración.
-2. **Administrativos**: acceso completo (configuración, reportes, productos, compras).
+2. **Administrativos**: acceso a funciones de gestión, según los permisos asignados. Revisá sus accesos en [Usuarios y permisos](/tutoriales/usuarios-y-permisos/).
 
 El sistema crea los usuarios con contraseñas de arranque:
 
@@ -113,7 +119,7 @@ Al elegirlo, queda resaltado. Cuando tocás **Finalizar**, el sistema carga **pr
 
 Rubros disponibles: Almacén, Verdulería, Ferretería, Kiosco, Química, Carnicería, Imprenta, Bazar, Mueblería, Pinturería, Cosmética / Nails y Dietética.
 
-> Los datos de ejemplo se pueden borrar o reemplazar por los tuyos. Mirá *Cargar tus primeros productos*.
+> Los datos de ejemplo se pueden borrar o reemplazar por los tuyos. Mirá [Cargar tus primeros productos](/tutoriales/cargar-productos/).
 
 ### 8. Listo: llegás al POS
 
@@ -150,6 +156,6 @@ Detalle: si elegís **Ferretería**, los módulos de *Picking (armado de pedidos
 
 ## Siguiente paso
 
-- Cargar tus primeros productos
-- Crear usuarios y asignar permisos
-- Recorrido por el POS
+- [Cargar productos, stock y precios](/tutoriales/cargar-productos/)
+- [Crear usuarios y asignar permisos](/tutoriales/usuarios-y-permisos/)
+- [Conocer el POS y sus atajos de teclado](/tutoriales/usar-punto-de-venta/)

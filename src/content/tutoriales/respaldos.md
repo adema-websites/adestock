@@ -1,31 +1,37 @@
 ---
 id: "respaldos"
 slug: "respaldos"
-title: "Cómo hacer y restaurar copias de seguridad"
-description: "Hacé copias de seguridad de tu negocio en un archivo ZIP, guardalas en un lugar seguro y aprendé a restaurarlas."
+title: "Cómo hacer copias de seguridad y restaurar ADEstock"
+description: "Creá copias de seguridad de ADEstock en ZIP, verificá las ejecuciones y guardá una copia en Google Drive. Conocé los pasos de restauración con soporte."
 category: "instalar"
 priority: "P1"
 roles: ["dueno"]
 surface: ["panel"]
-status: "draft"
+status: "published"
 tiempo: "10 minutos"
 necesitas: "entrar al panel de administración (Menú rápido del POS → Panel de administración)"
 para_quien: "el dueño"
 modulo: "respaldo (RespaldoJob, RespaldoRun, RestauracionLocal)"
 permiso: "acceso al panel de administración"
 source_path: "01-manual-usuario/37-respaldos.md"
-source_hash: "378452b5cd33d2e6c69191462ba11b3e23a248bbcdfae22d419362de40a9eee0"
+source_hash: "0f14b4af649b3a8960685ffe1c65932cfd4e47b602a8b1be28bfbcb21c0d2be2"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["backup","copia de seguridad","respaldo","restaurar","recuperar datos"]
-related: []
+related: ["licencia","configurar-negocio","consultar-reportes-y-exportar"]
 social_image: "/social/respaldos-v1.jpg"
 ---
+## Para qué sirve
+
+Toda la información del negocio (ventas, productos, clientes, stock, fotos) vive en un solo lugar. Un respaldo es una **copia de seguridad** para no perderla si la PC se rompe, te la roban o algo sale mal. Esta guía sirve para hacerla, guardarla en un lugar seguro (incluso en Google Drive) y saber cómo **volver atrás**. Hacerla de forma regular es una de las tareas más importantes del dueño.
+
 ## Qué vas a lograr
 
-Tener una **copia de seguridad** de todo tu negocio (ventas, productos, clientes, stock, fotos) en un archivo ZIP, guardarla en un lugar seguro - incluso en **Google Drive** - y saber cómo **volver atrás** si algo sale mal.
+Vas a **crear una copia de seguridad de ADEstock** con la base de datos y, si lo seleccionás, las fotos y archivos del negocio. Aprendé a generar el ZIP, comprobar la ejecución y guardar una copia fuera de la PC, por ejemplo en Google Drive.
+
+La guía también explica el proceso de restauración con soporte. Restaurar reemplaza los datos actuales por los de la copia elegida, por lo que primero necesitás respaldar el estado actual.
 
 > **Regla de oro:** un respaldo que está solo en la misma PC no te salva si la PC se rompe o te la roban. Guardá siempre una copia **afuera** (Drive o un pendrive).
 
@@ -71,7 +77,7 @@ Según el tamaño del negocio tarda desde segundos hasta unos minutos. Al termin
 
 ![Respaldo ejecutado](../../assets/tutoriales/37-respaldos/06-respaldo-ejecutado.png)
 
-El archivo se llama `adestock_backup_AAAAMMDD_HHMMSS.zip` y contiene la base, las fotos y un archivo con los datos del respaldo (fecha, versión, tipo de base).
+El archivo se llama `adestock_backup_AAAAMMDD_HHMMSS.zip` y contiene los componentes que seleccionaste (**db**, **media** o ambos), además de los datos del respaldo (fecha, versión y tipo de base). Para conservar la base y las fotos, verificá que ambas opciones estén marcadas.
 
 ### 3. Controlá que haya salido bien
 
@@ -125,7 +131,12 @@ Por defecto **no restaura** si el ZIP viene de una versión del sistema con migr
 | Restauré y no veo cambios | La aplicación sigue con la base anterior en memoria | Reiniciá el sistema |
 | Se me llenó el disco de ZIP | Los respaldos se acumulan | Copiá los viejos afuera y borrá los que ya no necesitás |
 
+## Cómo comprobar que salió bien
+
+En **Ejecuciones de respaldo**, revisá el estado **Exitoso**, la fecha, el nombre y el tamaño del ZIP. Comprobá que el archivo exista en la carpeta de salida y, si activaste Drive, que también esté disponible allí. No uses una restauración sobre el negocio en funcionamiento como prueba del archivo; coordiná esa verificación con soporte.
+
 ## Siguiente paso
 
-- [La licencia](/tutoriales/licencia/)
-- [Billeteras y cuentas](/tutoriales/billeteras-y-cuentas/)
+- [consultar y activar la licencia Pro de ADEstock](/tutoriales/licencia/)
+- [configurar ADEstock: primeros pasos para tu negocio](/tutoriales/configurar-negocio/)
+- [consultar reportes y exportar a Excel en ADEstock](/tutoriales/consultar-reportes-y-exportar/)

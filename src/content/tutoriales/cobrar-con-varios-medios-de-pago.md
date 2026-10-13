@@ -1,31 +1,37 @@
 ---
 id: "cobrar-con-varios-medios-de-pago"
 slug: "cobrar-con-varios-medios-de-pago"
-title: "Cómo cobrar con varios medios de pago"
-description: "Cobrá una venta repartida en varios medios (por ejemplo efectivo y tarjeta) y aplicá un descuento sobre el total."
+title: "Cómo cobrar con varios medios de pago en ADEstock"
+description: "Cobrá una venta con efectivo, tarjeta o transferencia en ADEstock. Combiná medios de pago, aplicá descuentos y revisá el faltante antes de cerrar."
 category: "vender"
 priority: "P1"
 roles: ["cajero","dueno"]
 surface: ["pos"]
-status: "draft"
+status: "published"
 tiempo: "2 minutos"
 necesitas: "haber armado el carrito (ver Hacer una venta)"
 para_quien: "cajeros y dueños"
 modulo: "venta (POS → Cobro)"
 permiso: "aplicar descuentos requiere \"Puede hacer descuentos\""
 source_path: "01-manual-usuario/08-cobrar-con-varios-medios-de-pago.md"
-source_hash: "09bd2011769d9f29446bb4fdae3dc7666ef63200d6037e467273f859ebd2bb0f"
+source_hash: "fb6e6f5b22d1906202e7a93be7c3e2a280ea429e50bd1d84dc5641fa6086771a"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["pago mixto","mitad efectivo mitad tarjeta","descuento","recargo"]
-related: []
+related: ["hacer-una-venta","vender-fiado-cuenta-corriente","abrir-y-cerrar-caja"]
 social_image: "/social/cobrar-con-varios-medios-de-pago-v1.jpg"
 ---
+## Para qué sirve
+
+No todos los clientes pagan de una sola forma: a veces una parte es en efectivo y el resto con tarjeta o transferencia. Esto sirve para que **cada importe quede asentado en su medio de pago** y el cierre de caja cierre bien, y para aplicar un descuento cuando lo acordás con el cliente.
+
 ## Qué vas a lograr
 
-Cobrar una misma venta **repartida en varios medios** (por ejemplo, una parte en efectivo y el resto con tarjeta), y aplicar un **descuento** sobre el total.
+Vas a **cobrar una venta con varios medios de pago** en ADEstock, por ejemplo una parte en efectivo y el resto con tarjeta o transferencia. Cada pago queda separado para identificar cuánto se cobró con cada medio.
+
+La guía también explica cómo aplicar un descuento antes de cargar los pagos y cómo revisar los recargos configurados en cada medio de cobro.
 
 ## Cómo funciona el cobro
 
@@ -110,11 +116,16 @@ Algunos medios de cobro pueden tener un **recargo o descuento** configurado (por
 |---|---|---|
 | *Confirmar y cerrar* está apagado | Todavía falta cobrar | Agregá otro pago hasta que el faltante sea $ 0 |
 | El panel de descuento no deja escribir | Tu usuario no tiene *Puede hacer descuentos* | Pedíselo al dueño |
-| El botón *Cuenta Corriente* está apagado | El cliente es Consumidor Final o no tiene cuenta corriente | Cambiá el cliente (ver *Vender a cuenta corriente*) |
+| El botón *Cuenta Corriente* está apagado | El cliente es Consumidor Final o no tiene cuenta corriente | Cambiá el cliente (ver [Vender a cuenta corriente](/tutoriales/vender-fiado-cuenta-corriente/)) |
 | Cargué un pago por error | - | Quitalo con el tacho y cargalo de nuevo |
 | El importe de tarjeta es mayor al total | El medio tiene recargo | Es lo esperado: el recargo se suma al importe de ese medio |
 
+## Cómo comprobar que salió bien
+
+Antes de confirmar, verificá que el **Faltante** sea $ 0 y que cada pago tenga el medio y el importe correctos. Si cargaste uno por error, quitá esa fila y agregala de nuevo. Revisá también el vuelto cuando el cliente entrega efectivo de más.
+
 ## Siguiente paso
 
-- Vender a cuenta corriente
-- Turno de caja: apertura, retiros y cierre
+- [hacer una venta y cobrar en efectivo en ADEstock](/tutoriales/hacer-una-venta/)
+- [vender fiado a cuenta corriente en ADEstock](/tutoriales/vender-fiado-cuenta-corriente/)
+- [abrir, hacer el arqueo y cerrar caja en ADEstock](/tutoriales/abrir-y-cerrar-caja/)

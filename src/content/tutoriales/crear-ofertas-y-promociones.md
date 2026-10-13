@@ -1,31 +1,37 @@
 ---
 id: "crear-ofertas-y-promociones"
 slug: "crear-ofertas-y-promociones"
-title: "Cómo crear ofertas y promociones"
-description: "Armá una oferta con varios productos y tipos de promoción (descuento, 3x2, segunda unidad a mitad de precio) con fecha de vigencia."
+title: "Cómo crear ofertas, descuentos y promociones 3×2 en ADEstock"
+description: "Creá ofertas en ADEstock con precio fijo, descuento, 3×2 o segunda unidad al 50 %. Definí vigencia y topes y comprobá cómo se aplican en el POS."
 category: "ofertas"
 priority: "P0"
 roles: ["dueno","administrativo"]
 surface: ["panel"]
-status: "draft"
+status: "published"
 tiempo: "5 minutos"
 necesitas: "el permiso Puede gestionar ofertas (el dueño lo tiene siempre)"
 para_quien: "dueños y encargados"
 modulo: "ofertas (POS → Ofertas), venta (cobro)"
 permiso: "Puede gestionar ofertas"
 source_path: "01-manual-usuario/26-ofertas-y-promociones.md"
-source_hash: "230e2f3269017af59017dfbfaf692f050c4d8489fbcca2f378b6d212f46dd042"
+source_hash: "99fbd7f5041fde4c2093c061f141028efa49d44fe9c63e3adaf690da12473b89"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["oferta","promoción","descuento por vigencia"]
-related: []
+related: ["crear-revista-ofertas","imprimir-etiquetas","configurar-tienda-online"]
 social_image: "/social/crear-ofertas-y-promociones-v1.jpg"
 ---
+## Para qué sirve
+
+Una oferta sirve para vender más sin andar cambiando precios a mano. La armás una vez, con sus productos, el tipo de promoción y la fecha de vigencia, y **el POS la aplica solo** al cobrar, en todas las cajas y en la tienda online.
+
 ## Qué vas a lograr
 
-Armar una **oferta** con varios productos y **distintos tipos de promoción** (descuento, 3×2, segunda unidad a mitad de precio…), con **fecha de vigencia**, y que **el POS la cobre sola** en todas las cajas y en la tienda online.
+Vas a **crear ofertas y promociones en ADEstock** con precio fijo, porcentaje de descuento, 3×2 o segunda unidad con descuento. Elegí las presentaciones de cada producto, definí fechas, días y horarios, y revisá el precio resultante antes de activar.
+
+Las promociones vigentes se aplican en el POS y la tienda online. Si coinciden varias ofertas para un producto, se utiliza la más barata, sin acumularlas.
 
 ## Conceptos
 
@@ -140,7 +146,12 @@ El cajero **no tiene que hacer nada**: las líneas llevan una etiqueta (🔥 *3�
 | La promoción da pérdida | La regla deja el precio bajo el costo | Mirá el aviso amarillo y corregí el valor |
 | Un producto no aparece al buscar | Solo se pueden poner en oferta productos con precio de venta | Cargale un precio de venta |
 
+## Cómo comprobar que salió bien
+
+Buscá el producto en el POS y agregá las cantidades necesarias para activar la regla. Por ejemplo, probá tres unidades para un 3×2. Revisá la etiqueta de oferta, el total, la vigencia y el máximo por ticket. Si el precio difiere, comprobá si hay otra oferta vigente más barata.
+
 ## Siguiente paso
 
-- Revistas y folletos con tus ofertas
-- Imprimir etiquetas de oferta
+- [crear revistas y folletos de ofertas en ADEstock](/tutoriales/crear-revista-ofertas/)
+- [imprimir etiquetas de precios y códigos en ADEstock](/tutoriales/imprimir-etiquetas/)
+- [activar y diseñar tu tienda online en ADEstock](/tutoriales/configurar-tienda-online/)

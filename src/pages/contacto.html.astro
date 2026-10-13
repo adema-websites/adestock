@@ -3,7 +3,6 @@ import Pagina from '../layouts/Pagina.astro';
 
 const equipo = [
   { nombre: 'Kevin', rol: 'El arquitecto del sistema', texto: 'Es quien empezó todo esto. Kevin es programador con años de experiencia desarrollando software para emprendedores y se especializa en automatizar procesos. Está detrás del código y es quien responde las consultas técnicas. Además de crear soluciones, es youtuber: comparte herramientas gratuitas y enseña programación de forma clara.' },
-  { nombre: 'Ingrid', rol: 'Tu guía y aliada en el negocio', texto: 'Te acompaña en la posventa y te enseña a adaptar el sistema a tu realidad. Ingrid entiende tus dolores de cabeza porque tiene su propio almacén de barrio con producción de comidas: necesitaba ordenar sus costos y recetas, y de esa necesidad nació ADEMA. También se ocupa de que más personas nos conozcan y comparte tips de marketing y redes para tu emprendimiento.' },
   { nombre: 'Andrea', rol: 'El orden y la claridad', texto: 'Mantiene todo en regla detrás de escena: facturación, logística y que los números cierren. Si necesitás claridad sobre tu plan, tu membresía o temas administrativos, ella te da la respuesta precisa.' },
 ];
 ---
@@ -32,7 +31,7 @@ const equipo = [
         </div>
         <div style="color:var(--ink-2)">
           <p>ADEMA Sistemas no nació en una oficina de corporativos: nació dentro de un comercio, entre el mostrador y los clientes, buscando resolver problemas verdaderos como el desorden, el estrés y los papelitos perdidos.</p>
-          <p style="margin-top:1rem">Entendemos lo que vivís porque lo vivimos. Por eso no te ofrecemos solo un sistema, sino un equipo de tres personas reales trabajando todos los días para que tengas claridad y tranquilidad en tu gestión.</p>
+          <p style="margin-top:1rem">Entendemos lo que vivís porque lo vivimos. Por eso no te ofrecemos solo un sistema, sino un equipo real trabajando todos los días para que tengas claridad y tranquilidad en tu gestión.</p>
         </div>
       </div>
     </section>
@@ -41,7 +40,7 @@ const equipo = [
       <div class="seo-hero__inner">
         <h2 id="equipo" style="max-width: 24ch">Quiénes estamos detrás de ADEMA</h2>
         <p class="page-lead">Un equipo con roles definidos para que tu experiencia sea completa, de lo técnico a lo administrativo.</p>
-        <div class="cols-3" style="margin-top:1.75rem">
+        <div class="cols-2" style="margin-top:1.75rem">
           {equipo.map((e) => (
             <article class="card">
               <h3>{e.nombre}</h3>
@@ -56,21 +55,56 @@ const equipo = [
     <section class="band alt">
       <div class="seo-hero__inner cols-2">
         <div>
-          <h2 style="max-width: 18ch">Nuestra promesa</h2>
-          <p class="page-lead">Funcionar como un empleado más de tu negocio: registramos, ordenamos y controlamos para que vos puedas tomar mejores decisiones.</p>
+          <p class="contact-eyebrow">Nuestra visión</p>
+          <h2 class="contact-title">Tecnología de grandes empresas, al alcance de cada emprendedor</h2>
+          <p class="page-lead">Creemos que un comercio no debería adaptarse a un software rígido. El software tiene que adaptarse a la forma en que trabaja cada negocio.</p>
+          <p class="contact-copy">Por eso desarrollamos herramientas cercanas, potentes y personalizables: para que emprendedores y pymes puedan ordenar, automatizar y hacer crecer su negocio con la misma tecnología que antes parecía reservada para las grandes empresas.</p>
         </div>
-        <div class="card">
+        <div class="card contact-card">
           <h3>Contacto y soporte</h3>
           <p style="color:var(--ink-2)">¿Tenés dudas sobre ADEstock o necesitás ayuda con el sistema?</p>
-          <dl class="kv" style="margin-top:.5rem">
-            <dt>Email</dt><dd><a href="mailto:contact@ademasistemas.com">contact@ademasistemas.com</a></dd>
-            <dt>WhatsApp</dt><dd><a href="https://wa.me/5491127888995">+54 9 11 2788-8995</a></dd>
-            <dt>Instagram</dt><dd><a href="https://www.instagram.com/ademasistemas/">@ademasistemas</a></dd>
-            <dt>Web</dt><dd><a href="https://ademasistemas.com">ademasistemas.com</a></dd>
-          </dl>
+          <div class="contact-links" aria-label="Canales de contacto de ADEMA Sistemas">
+            <a class="contact-link contact-link--whatsapp" href="https://wa.me/5491127888995" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a9.8 9.8 0 0 0-8.4 14.9L2 22l5.2-1.5A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3.1.9 1-3-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.2 0-.4.1-.5l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.8-2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.4-.6 1.7-1.1.2-.6.2-1 .1-1.1-.1-.2-.3-.2-.5-.3Z"/></svg>
+              <span><small>WhatsApp</small>+54 9 11 2788-8995</span>
+            </a>
+            <a class="contact-link contact-link--instagram" href="https://www.instagram.com/ademasistemas/" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm10.5 1.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
+              <span><small>Instagram</small>@ademasistemas</span>
+            </a>
+            <a class="contact-link contact-link--youtube" href="https://www.youtube.com/@AdemaSistemas" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/></svg>
+              <span><small>YouTube</small>@AdemaSistemas</span>
+            </a>
+            <a class="contact-link" href="mailto:contact@ademasistemas.com">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm0 2v.5l9 5.6 9-5.6V6H3Zm18 12V8.9l-8.5 5.3a1 1 0 0 1-1 0L3 8.9V18h18Z"/></svg>
+              <span><small>Email</small>contact@ademasistemas.com</span>
+            </a>
+            <a class="contact-link" href="https://ademasistemas.com" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm6.9 6h-3.1a15.7 15.7 0 0 0-1.4-3.2A8.1 8.1 0 0 1 18.9 8ZM12 4c-.8 1-1.6 2.3-2 4h4c-.4-1.7-1.2-3-2-4ZM9.6 4.8A8.1 8.1 0 0 0 5.1 8h3.1a15.7 15.7 0 0 1 1.4-3.2ZM4.3 10a8 8 0 0 0 0 4h3.4a17.7 17.7 0 0 1 0-4H4.3Zm5.4 0a15.7 15.7 0 0 0 0 4h4.6a15.7 15.7 0 0 0 0-4H9.7Zm6.6 0a17.7 17.7 0 0 1 0 4h3.4a8 8 0 0 0 0-4h-3.4Zm-11.2 6a8.1 8.1 0 0 0 4.5 3.2A15.7 15.7 0 0 1 8.2 16H5.1Zm4.9 0c.4 1.7 1.2 3 2 4 .8-1 1.6-2.3 2-4h-4Zm5.8 0a15.7 15.7 0 0 1-1.4 3.2 8.1 8.1 0 0 0 4.5-3.2h-3.1Z"/></svg>
+              <span><small>Web</small>ademasistemas.com</span>
+            </a>
+          </div>
           <p class="muted" style="margin-top:.75rem; font-size:.95rem">Antes de escribir, probá el asistente de la web o buscá en los <a href="/tutoriales/" style="color:var(--accent)">tutoriales</a>: muchas respuestas están ahí.</p>
         </div>
       </div>
     </section>
   </main>
 </Pagina>
+
+<style>
+  .contact-eyebrow { color: var(--accent); font-size: .82rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: .7rem; }
+  .contact-title { max-width: 18ch; }
+  .contact-copy { max-width: 58ch; margin-top: 1.1rem; color: var(--ink-2); font-size: 1.05rem; line-height: 1.7; }
+  .contact-card { gap: 1rem; }
+  .contact-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .65rem; }
+  .contact-link { display: flex; align-items: center; gap: .75rem; min-width: 0; padding: .75rem .85rem; border: 1px solid var(--line); border-radius: var(--r-input); color: var(--ink); text-decoration: none; background: var(--bg); transition: transform .2s var(--ease), border-color .2s, background-color .2s; }
+  .contact-link:hover { transform: translateY(-2px); border-color: var(--accent); background: var(--accent-soft); }
+  .contact-link svg { flex: 0 0 1.35rem; width: 1.35rem; height: 1.35rem; fill: currentColor; color: var(--accent); }
+  .contact-link span { min-width: 0; overflow-wrap: anywhere; font-size: .9rem; font-weight: 650; line-height: 1.25; }
+  .contact-link small { display: block; color: var(--ink-3); font-size: .72rem; font-weight: 500; margin-bottom: .12rem; }
+  .contact-link--whatsapp svg { color: #20a85a; }
+  .contact-link--instagram svg { color: #c13584; }
+  .contact-link--youtube svg { color: #e62117; }
+  @media (max-width: 520px) { .contact-links { grid-template-columns: 1fr; } }
+</style>

@@ -1,31 +1,37 @@
 ---
 id: "armar-pedidos-picking"
 slug: "armar-pedidos-picking"
-title: "Cómo armar pedidos (picking) desde el celular"
-description: "Preparé un pedido desde el celular: mirá qué productos juntar, marcá lo que ya sacaste y avisá si algo falta."
+title: "Cómo preparar pedidos con picking móvil en ADEstock"
+description: "Prepará pedidos desde el celular con el picking de ADEstock. Marcá cantidades, registrá faltantes y generá una nota de crédito antes de finalizar."
 category: "vender"
 priority: "P2"
 roles: ["dueno","administrativo"]
 surface: ["app","panel"]
-status: "draft"
+status: "published"
 tiempo: "10 minutos"
 necesitas: "el módulo Armado de pedidos activado (engranaje del POS → Módulos, ver La configuración del POS) y una venta finalizada"
 para_quien: "el dueño o encargado que organiza los pedidos, y la persona del depósito que los arma"
 modulo: "armado (Armado de Pedidos, Estados de Armado) y venta (Estados de Seguimiento)"
 permiso: "\"Puede acceder a la vista de picking móvil\" (armado.picking_access) para el armador; panel de administración para crear armados"
 source_path: "01-manual-usuario/34-armado-de-pedidos.md"
-source_hash: "63ce3a9a39769b60de640ce4af90a4e8d229043e32e2acc439ae9906907ddcd6"
+source_hash: "4c3435fd7d181385cc842d0bc6261de53eb96c50aed6326d0c07b16bd6740960"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["picking","armador","armado de pedidos","preparar pedidos","depósito","pedidos"]
-related: []
+related: ["notas-de-credito-y-debito","configurar-tienda-online","usuarios-y-permisos"]
 social_image: "/social/armar-pedidos-picking-v1.jpg"
 ---
+## Para qué sirve
+
+Cuando vendés con entrega o recibís pedidos de la tienda online, la venta ya está hecha pero la mercadería hay que **juntarla**. El armado sirve para que quien prepara el pedido use el celular como lista: ve qué sacar, marca lo que va juntando y avisa si algo faltó. Si faltó mercadería, el sistema arma una nota de crédito por lo que no se entregó (ver [notas de crédito y débito](/tutoriales/notas-de-credito-y-debito/)).
+
 ## Qué vas a lograr
 
-Preparar un pedido **juntando la mercadería** con el celular: ver qué productos y cuántas unidades hay que sacar, ir marcando lo que se junta, avisar si algo **faltó**, y cerrar el armado. Si faltó mercadería, el sistema arma una **nota de crédito** por lo que no se entregó (ver [Notas de crédito y débito](/tutoriales/notas-de-credito-y-debito/)).
+Vas a **preparar pedidos desde el celular con el picking de ADEstock**: ver qué productos juntar, marcar las cantidades preparadas y registrar faltantes. El armado puede venir de una venta del POS o de un pedido de la tienda online.
+
+Si faltó mercadería, generá la nota de crédito y revisala en el panel antes de aplicarla. Finalizar el armado por sí solo deja el faltante registrado, pero no genera una devolución.
 
 Sirve para ventas con **entrega** (reparto, retiro por el depósito, pedidos de la [tienda online](/tutoriales/configurar-tienda-online/)): la venta ya se cobró o se anotó, y ahora hay que **preparar la caja**.
 
@@ -190,7 +196,7 @@ Si te equivocaste, abrí el pedido (con *Mostrar pedidos finalizados* tildado) y
 
 El pedido vuelve al **primer estado no final** y se puede editar de nuevo. Queda registrado el evento *Reapertura* en el historial del armado.
 
-> **Importante:** reabrir desde el celular **no anula** la nota de crédito que ya se hubiera generado. Si hay que deshacerla, hacelo desde el panel (ver el tutorial 35).
+> **Importante:** reabrir desde el celular **no anula** la nota de crédito que ya se hubiera generado. Si hay que deshacerla, hacelo desde el panel (ver [Aplicar y anular notas de crédito](/tutoriales/notas-de-credito-y-debito/)).
 
 ## Qué pasa por detrás
 
@@ -202,21 +208,26 @@ El pedido vuelve al **primer estado no final** y se puede editar de nuevo. Queda
 | Finalizar | Se guarda fecha y usuario de cierre; **no toca stock** |
 | Generar nota de crédito | Se crea la nota en **borrador** con los faltantes a precio de venta |
 
-El armado **no descuenta stock por sí mismo**: la mercadería ya salió cuando se hizo la venta. Lo único que mueve inventario es la **nota de crédito aplicada**, que devuelve al stock lo que no se entregó.
+El armado **no descuenta stock por sí mismo**. La venta afecta el stock disponible; el descuento del stock físico depende de la configuración de seguimiento de entregas (ver [Hacer una venta](/tutoriales/hacer-una-venta/)). La **nota de crédito aplicada** registra el ajuste de las cantidades no entregadas.
 
 ## Problemas frecuentes
 
 | Si te pasa… | Es porque… | Qué hacer |
 |---|---|---|
-| No veo *Picking* o dice «Permiso denegado» | Tu usuario no tiene el permiso de picking, o el módulo está desactivado | Pedile al dueño el permiso (tutorial 04) o activá el módulo en el engranaje |
+| No veo *Picking* o dice «Permiso denegado» | Tu usuario no tiene el permiso de picking, o el módulo está desactivado | Pedile al dueño que revise tus [permisos de usuario](/tutoriales/usuarios-y-permisos/) o activá el módulo en el engranaje |
 | No aparece la acción *Crear armado de pedido* | La venta no está finalizada, el módulo está apagado, o el primer estado de seguimiento ya genera armados solo | Revisá las tres cosas; si el primer estado tiene la casilla tildada, los armados ya se crean automáticamente |
 | «La venta ya tiene un armado activo» | Una venta admite un solo armado activo | Trabajá con el que existe |
-| «Error: undefined» al tocar *Siguiente Estado: Listo* | La pantalla no maneja la confirmación del estado final | Usá **Finalizar Pedido** (queda anotado como requerimiento, ver `_requerimientos/REQ-004`) |
+| «Error: undefined» al tocar *Siguiente Estado: Listo* | La pantalla no maneja la confirmación del estado final | Usá **Finalizar Pedido** (es una limitación documentada de esta versión) |
 | «Este pedido no permite edición en su estado actual» | El estado tiene *Permite edición* apagado | Reabrí el pedido o cambialo a un estado que permita edición |
-| El pedido cerró pero el cliente no recibió la devolución | Se finalizó sin generar la nota de crédito | Creá la nota a mano en el panel (ver tutorial 35) |
+| El pedido cerró pero el cliente no recibió la devolución | Se finalizó sin generar la nota de crédito | Creá la nota a mano en el panel (ver [Notas de crédito y débito](/tutoriales/notas-de-credito-y-debito/)) |
 | «Hay N items sin procesar» | Quedan ítems en PENDIENTE | Marcá cada uno (Completar o cantidad real) |
+
+## Cómo comprobar que salió bien
+
+Verificá que todos los ítems estén procesados y que el pedido figure en el estado final. Si hubo faltantes, comprobá que exista la nota de crédito y revisá si sigue en borrador o ya fue aplicada. Reabrir el armado no anula una nota existente.
 
 ## Siguiente paso
 
-- [Notas de crédito y débito: aplicar, controlar y anular](/tutoriales/notas-de-credito-y-debito/)
-- [Tienda online](/tutoriales/configurar-tienda-online/): de dónde vienen los pedidos web
+- [aplicar y anular notas de crédito y débito en ADEstock](/tutoriales/notas-de-credito-y-debito/)
+- [activar y diseñar tu tienda online en ADEstock](/tutoriales/configurar-tienda-online/)
+- [crear usuarios y asignar permisos en ADEstock](/tutoriales/usuarios-y-permisos/)

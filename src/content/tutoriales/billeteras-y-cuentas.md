@@ -1,37 +1,43 @@
 ---
 id: "billeteras-y-cuentas"
 slug: "billeteras-y-cuentas"
-title: "Cómo usar billeteras y cuentas"
-description: "Sabé cuánta plata tenés en cada lugar (caja, banco, Mercado Pago) y llevá sus movimientos y transferencias."
+title: "Cómo controlar billeteras, cuentas y saldos en ADEstock"
+description: "Gestioná billeteras y cuentas en ADEstock: vinculá medios de pago, consultá saldos y movimientos y registrá transferencias o ajustes entre cuentas."
 category: "caja"
 priority: "P2"
 roles: ["dueno","administrativo"]
 surface: ["panel"]
-status: "draft"
+status: "published"
 tiempo: "10 minutos"
 necesitas: "entrar al panel de administración (Billeteras en el menú de arriba)"
 para_quien: "el dueño y administrativos"
 modulo: "billetera (Billeteras y Cuentas, Movimientos, Transferencias, Ajustes), agenda (Medios de pago)"
 permiso: "acceso al panel de administración"
 source_path: "01-manual-usuario/33-billeteras-y-cuentas.md"
-source_hash: "18a5c124943de3879a70daceae2503547b3c00459274477de45bfd6268c78b19"
+source_hash: "95d6f417fb5e3ded9ca36365d5cc0c32d2391402b30a5f7592f8aa060034075a"
 product_version: "2.5.3"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["billetera","transferencias","saldos"]
-related: []
+related: ["configurar-punto-de-venta","pagar-proveedor","controlar-turnos-caja-panel"]
 social_image: "/social/billeteras-y-cuentas-v1.jpg"
 ---
+## Para qué sirve
+
+Sirve para saber **dónde está tu plata**: cuánto hay en la caja de efectivo, en el banco, en Mercado Pago, y qué movimientos tuvo cada cuenta. También permite **pasar plata de una cuenta a otra** y corregir saldos por comisiones o intereses, para que lo que dice el sistema coincida con lo que realmente tenés.
+
 ## Qué vas a lograr
 
-Saber **cuánta plata tenés en cada lugar** (la caja de efectivo, el banco, Mercado Pago…) y llevar sus movimientos: qué entró, qué salió y cuándo. También **pasar plata de una cuenta a otra** (por ejemplo, del banco a la caja) y **corregir saldos** (comisiones, intereses, ajustes).
+Vas a **controlar los saldos de billeteras y cuentas en ADEstock**, como efectivo, banco o Mercado Pago. Aprendé a vincular cada medio de pago para identificar los ingresos y egresos que registra el negocio.
 
-## Cómo funciona (leelo una vez)
+La guía también explica cómo transferir entre billeteras, corregir un saldo con un ajuste y consultar el origen de cada movimiento.
+
+## Cómo se calculan los saldos y movimientos
 
 - Una **billetera** es un "lugar donde hay plata": efectivo, una cuenta bancaria, Mercado Pago, etc. Cada una lleva su propio saldo.
 - **Los movimientos se cargan solos.** Cuando cobrás una venta, pagás a un proveedor, registrás un gasto o hacés un retiro **desde el POS**, el sistema anota el movimiento en la billetera **vinculada al medio de pago** que usaste. No cargás nada dos veces, y los pagos y cobros **no se cargan desde el panel**: lo único que se mueve a mano acá son las **transferencias** entre billeteras y los **ajustes**.
-- **Saldo actual = saldo inicial + ingresos − egresos.**
+- **Saldo actual = saldo inicial + ingresos − egresos.** Es el saldo registrado en ADEstock; contrastalo con el efectivo o el extracto de la cuenta para detectar movimientos que falten registrar.
 - Para que un pago impacte en una billetera, su **medio de pago** tiene que estar vinculado a ella (ver *Vincular un medio de pago*, más abajo). Los medios sin billetera (por ejemplo *Cuenta Corriente*) no mueven ninguna.
 
 ## Paso a paso
@@ -181,14 +187,19 @@ Hay un ajuste para decidir qué hace el sistema cuando una **transferencia o egr
 
 | Si te pasa… | Es porque… | Qué hacer |
 |---|---|---|
-| Un cobro no aparece en el banco | El medio de pago no tiene billetera vinculada | Vinculalo (paso 3) |
+| Un cobro no aparece en la billetera del banco en ADEstock | El medio de pago no tiene billetera vinculada | Vinculalo (paso 3) |
 | «Saldo insuficiente en …» al transferir | El origen no tiene saldo suficiente y el saldo negativo no está permitido | Revisá el saldo, registrá el ingreso que falta o activá *Permitir saldo negativo* |
 | No puedo cambiar el saldo inicial | La billetera ya tiene movimientos | Usá un **ajuste** de tipo *Corrección de saldo* |
 | La transferencia no movió plata | Quedó pendiente | Confirmala con la acción *Confirmar transferencias seleccionadas* |
 | La billetera Efectivo está en negativo | Faltan ingresos o el saldo inicial | Cargá un ajuste de *Ajuste de saldo inicial* o revisá los movimientos |
 | No puedo usar una billetera en una operación | Está inactiva | Marcá *Cuenta activa* |
 
+## Cómo comprobar que salió bien
+
+En **Movimientos de Billeteras**, filtrá por cuenta y revisá el origen de cada ingreso o egreso. Una transferencia confirmada debe generar una salida en origen y una entrada en destino. Contrastá el saldo registrado con el dinero o extracto de esa cuenta antes de cargar una corrección.
+
 ## Siguiente paso
 
-- [La configuración del POS](/tutoriales/configurar-punto-de-venta/) (medios de cobro y billeteras)
-- [Pagar a un proveedor](/tutoriales/pagar-proveedor/)
+- [configurar el punto de venta (POS) en ADEstock](/tutoriales/configurar-punto-de-venta/)
+- [pagar a proveedores y registrar adelantos en ADEstock](/tutoriales/pagar-proveedor/)
+- [revisar turnos y cierres de caja en ADEstock](/tutoriales/controlar-turnos-caja-panel/)

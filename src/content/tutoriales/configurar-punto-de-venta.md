@@ -1,31 +1,37 @@
 ---
 id: "configurar-punto-de-venta"
 slug: "configurar-punto-de-venta"
-title: "Cómo configurar el punto de venta"
-description: "Encontrá dónde se cambia cada cosa del negocio desde el POS: datos, reglas de venta, precios, cajas, medios de cobro, usuarios e impresoras."
+title: "Cómo configurar el punto de venta (POS) en ADEstock"
+description: "Configurá el POS de ADEstock: cajas, depósitos, precios, medios de cobro e impresoras. Identificá qué ajustes afectan a un equipo o a todo el negocio."
 category: "empezar"
 priority: "P1"
 roles: ["dueno"]
 surface: ["pos","panel"]
-status: "draft"
+status: "published"
 tiempo: "10 minutos para recorrerla"
 necesitas: "ser el dueño para ver las secciones de \"Tu negocio\""
 para_quien: "el dueño"
 modulo: "venta (POS → Configuración), agenda"
 permiso: "las secciones \"Tu negocio\" son solo del dueño; \"Este equipo\" las ve cualquiera"
 source_path: "01-manual-usuario/05-configuracion-del-pos.md"
-source_hash: "1b8e8c0aad7c9c66f8210766c2d1abee750a81079f62d33017390aac922c2b1b"
+source_hash: "3711a461b8852f42defd4cd681cad459f66fc0888a0c6722c80fc57a06f133e4"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["caja","módulos","equipo"]
-related: []
+related: ["hacer-una-venta", "abrir-y-cerrar-caja", "instalar-agente-de-impresion"]
 social_image: "/social/configurar-punto-de-venta-v1.jpg"
 ---
+## Para qué sirve
+
+El engranaje del POS es el lugar donde se cambia cómo funciona tu negocio dentro del sistema: datos del negocio, reglas de venta, precios, cajas, medios de cobro, usuarios e impresoras. Esta guía es un **mapa**: no hay nada para completar paso a paso, sirve para saber **dónde está cada ajuste** cuando lo necesites.
+
 ## Qué vas a lograr
 
-Saber dónde se cambia cada cosa del negocio **sin salir del POS**: datos del negocio, reglas de venta, precios, cajas, medios de cobro, usuarios e impresoras.
+Vas a aprender a **configurar el punto de venta (POS) de ADEstock**: datos del negocio, reglas de venta, precios, cajas, medios de cobro, usuarios e impresoras.
+
+Primero vas a distinguir los ajustes de **este equipo** de los que se aplican a **todo el negocio**. Después podés ir directo a la sección que necesitás. Si todavía no completaste el asistente inicial, empezá por [configurar tu negocio por primera vez](/tutoriales/configurar-negocio/).
 
 ## Cómo se abre
 
@@ -174,5 +180,6 @@ Funciones que se **prenden o apagan** para todo el sistema. Apagá lo que no us�
 
 ## Siguiente paso
 
-- Hacer una venta
-- Turno de caja: apertura, retiros y cierre
+- [Hacer una venta y cobrarla](/tutoriales/hacer-una-venta/)
+- [Abrir y cerrar un turno de caja](/tutoriales/abrir-y-cerrar-caja/)
+- [Instalar y conectar el agente de impresión](/tutoriales/instalar-agente-de-impresion/)

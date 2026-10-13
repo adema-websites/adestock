@@ -1,31 +1,37 @@
 ---
 id: "abrir-y-cerrar-caja"
 slug: "abrir-y-cerrar-caja"
-title: "Cómo abrir y cerrar la caja (turno)"
-description: "Abrí tu turno con el efectivo inicial y cerralo contando la plata para saber si hay faltante o sobrante."
+title: "Cómo abrir, hacer el arqueo y cerrar caja en ADEstock"
+description: "Abrí un turno de caja en ADEstock, registrá el efectivo inicial y hacé el arqueo al cerrar. Entendé cómo se calculan faltantes y sobrantes."
 category: "caja"
 priority: "P0"
 roles: ["cajero","dueno"]
 surface: ["pos"]
-status: "draft"
+status: "published"
 tiempo: "2 minutos para abrir, 3 para cerrar"
 necesitas: "tener una caja asignada"
 para_quien: "cajeros y dueños"
 modulo: "venta (CierreCaja, POS)"
 permiso: "ninguno (cada cajero cierra su propio turno)"
 source_path: "01-manual-usuario/12-turno-de-caja-apertura-y-cierre.md"
-source_hash: "44359f678d01e5b3c07e229f82728365a58867464b35e3d6bfa91c6c100dd6d4"
+source_hash: "05a72bf250013b185be6840ff0dbaa5371b30da89568a65f46b0e3821009a375"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["turno","arqueo","faltante","sobrante","cierre de caja"]
-related: []
+related: ["registrar-gastos-y-retiros","controlar-turnos-caja-panel","cargar-compra-manual"]
 social_image: "/social/abrir-y-cerrar-caja-v1.jpg"
 ---
+## Para qué sirve
+
+El turno de caja es el período en que una persona trabaja con una caja: se abre con el efectivo con el que arrancás y se cierra contando lo que hay. Sirve para saber **cuánta plata debería haber y cuánta hay realmente**, y detectar al instante un faltante o un sobrante. Se abre al empezar la jornada y se cierra al terminarla.
+
 ## Qué vas a lograr
 
-Abrir tu turno con el efectivo con el que arrancás, sacar plata de la caja cuando haga falta y **cerrar el turno contando el efectivo** para saber si hay faltante o sobrante.
+Vas a **abrir y cerrar un turno de caja en ADEstock**: declarar el efectivo inicial, registrar las salidas durante el turno y contar el dinero al finalizar. El arqueo compara el efectivo contado con el esperado para identificar faltantes o sobrantes.
+
+La guía incluye un ejemplo del cálculo y explica por qué las compras pagadas deben estar confirmadas antes del cierre.
 
 ## Qué es un turno
 
@@ -47,7 +53,7 @@ Mientras no abras el turno, el POS no te deja cobrar. Desde esa misma ventana po
 | Registrar un gasto pagado de la caja | Menú rápido → **Gastos** |
 | Pagar una compra o un adelanto a un proveedor con plata de la caja | [Cargar una compra](/tutoriales/cargar-compra-manual/) y [Pagar a un proveedor](/tutoriales/pagar-proveedor/) |
 
-Ambos se explican en [Registrar un gasto y un retiro de caja](/tutoriales/registrar-gastos-y-retiros/).
+Los gastos y retiros se explican en [Registrar gastos y retiros de caja](/tutoriales/registrar-gastos-y-retiros/). Las compras y los pagos a proveedores tienen sus propias guías, enlazadas en la tabla.
 
 > **Todos los pagos y cobros se hacen desde el POS**, con el turno abierto. No se cargan desde el panel de administración. Así cada movimiento queda siempre en el turno y la caja donde ocurrió, y **no se pasa a otro turno**.
 
@@ -85,7 +91,6 @@ Efectivo esperado  =  Efectivo inicial
                     − Retiros de caja en efectivo
                     − Gastos pagados en efectivo
                     − Pagos de compras confirmadas en efectivo
-                    − Pagos y adelantos a proveedores en efectivo
                     − Pagos y adelantos a proveedores en efectivo
 Diferencia         =  Efectivo contado − Efectivo esperado
 ```
@@ -139,7 +144,7 @@ Si dejás el turno abierto de un día para el otro, el comportamiento depende de
 | Cierre | Calcula los movimientos del turno, guarda el efectivo contado y la diferencia, y marca el turno como cerrado |
 | Ticket | Se encola para la impresora de la caja; si falla, intenta imprimir directo |
 | Pagos de compras y a proveedores | Cada pago queda asociado al turno en el que se registró, igual que los gastos y retiros |
-| Resumen guardado | El detalle por medio de pago queda guardado con el turno. **Un turno cerrado no se modifica**: si se descarga su PDF más tarde, muestra los mismos números |
+| Resumen guardado | El detalle por medio de pago queda guardado con el turno. **Consultar o descargar el PDF no modifica un turno cerrado**: muestra los números guardados al cerrar. La acción especial de recálculo del superusuario se explica en [Revisar turnos de caja](/tutoriales/controlar-turnos-caja-panel/) |
 
 ## Problemas frecuentes
 
@@ -151,7 +156,12 @@ Si dejás el turno abierto de un día para el otro, el comportamiento depende de
 | "Hay compras pagadas sin confirmar" al cerrar | Cargaste compras pagadas con dinero u otro medio y nadie las confirmó | Pedile al dueño o a un administrativo que las confirme en el panel (*Compra → Compras → Confirmar compra*) |
 | Cerré sin querer | - | Abrí un turno nuevo; el cierre anterior queda registrado |
 
+## Cómo comprobar que salió bien
+
+Al generar el cierre, verificá que el turno quede **cerrado** y revisá el comprobante: efectivo inicial, esperado, contado y diferencia. El POS debe pedirte abrir un turno nuevo para seguir vendiendo. Si hay diferencia, consultá los movimientos del turno antes de atribuirla a un faltante físico.
+
 ## Siguiente paso
 
-- Registrar un gasto y un retiro de caja
-- Cobrar la deuda de un cliente
+- [registrar gastos y retiros de caja en ADEstock](/tutoriales/registrar-gastos-y-retiros/)
+- [revisar turnos y cierres de caja en ADEstock](/tutoriales/controlar-turnos-caja-panel/)
+- [cargar una compra manual en ADEstock](/tutoriales/cargar-compra-manual/)

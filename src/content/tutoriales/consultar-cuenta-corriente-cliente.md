@@ -1,35 +1,41 @@
 ---
 id: "consultar-cuenta-corriente-cliente"
 slug: "consultar-cuenta-corriente-cliente"
-title: "Cómo consultar la cuenta corriente de un cliente"
-description: "Mirá cuánto te debe un cliente y entendé la diferencia entre el saldo normal y el saldo actualizado a los precios de hoy."
+title: "Cómo consultar saldos y cuentas corrientes en ADEstock"
+description: "Consultá la deuda de un cliente en ADEstock y exportá su estado de cuenta. Compará el saldo original, los adelantos y la deuda a precios actuales."
 category: "clientes"
 priority: "P1"
 roles: ["dueno","administrativo"]
 surface: ["pos","panel"]
-status: "draft"
+status: "published"
 tiempo: "5 minutos"
 necesitas: "un cliente con cuenta corriente que tenga ventas fiadas"
 para_quien: "cajeros y dueños"
 modulo: "venta (POS), agenda (Cliente)"
 permiso: "ver el estado de cuenta; cobrar requiere \"Puede cobrar Cta. Cte.\""
 source_path: "01-manual-usuario/16-revisar-cuenta-corriente-de-un-cliente.md"
-source_hash: "b0cc3d2b002a7d51415e4cff4d4460053d9821c361c885f0a817778b8702eca8"
+source_hash: "280813839e4b3557f9607e52c23633b1214c1054c2a1d26e86ac201ab52b5015"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["saldo","deuda de cliente","estado de cuenta"]
-related: []
+related: ["vender-fiado-cuenta-corriente","cobrar-deuda-cliente","crear-y-editar-clientes"]
 social_image: "/social/consultar-cuenta-corriente-cliente-v1.jpg"
 ---
+## Para qué sirve
+
+Cuando vendés fiado, la deuda queda en la cuenta corriente del cliente. Esta pantalla sirve para responder la pregunta de todos los días: **¿cuánto me debe?** Además muestra dos saldos distintos (lo que se le vendió y ese mismo saldo a los precios de hoy), y conviene entender la diferencia antes de cobrar.
+
 ## Qué vas a lograr
 
-Saber **cuánto debe un cliente** y entender la diferencia entre el **saldo normal** (lo que se le vendió) y el **saldo actualizado** (ese mismo saldo a los precios de hoy).
+Vas a **consultar la cuenta corriente de un cliente en ADEstock** y generar su estado de cuenta en ticket, PDF o Excel. Aprendé a leer la deuda pendiente, los adelantos disponibles y la diferencia entre el saldo original y el actualizado a precios de hoy.
 
-## La idea en una frase
+El saldo actualizado se calcula al consultar. Elegir qué mostrar en el informe no registra un pago ni cancela la deuda.
 
-> Cuando le vendés a un cliente "fiado", la deuda queda con el **precio de ese día**. Si pasan los días y la mercadería sube, esa deuda **se puede actualizar** para que el cliente pague a precio de reposición. **Pero si el precio baja, la deuda no baja: solo se actualiza hacia arriba.**
+## Qué significa actualizar una deuda
+
+> Cuando le vendés a un cliente "fiado", la deuda queda con el **precio de ese día**. Si pasan los días y la mercadería sube, el sistema puede mostrar esa deuda **actualizada a los precios de venta vigentes**. **Pero si el precio baja, la deuda no baja: solo se actualiza hacia arriba.**
 
 ## Saldo normal vs. saldo actualizado
 
@@ -106,16 +112,22 @@ Los productos que estaban **en oferta** al venderse se actualizan manteniendo el
 | Saldo normal | Es la suma de lo que falta cobrar de cada venta fiada |
 | Saldo actualizado | Se calcula **al momento de consultar**, con los precios vigentes; no se guarda |
 | Adelantos | Son saldo a favor del cliente: se descuentan de sus deudas al cobrar |
-| Pagos | Cuando el cliente paga, el cobro se aplica a las deudas que elijas (ver *Cobrar la deuda de un cliente*) |
+| Pagos | Cuando el cliente paga, el cobro se aplica a las deudas que elijas (ver [Cobrar la deuda de un cliente](/tutoriales/cobrar-deuda-cliente/)) |
 
 ## Problemas frecuentes
 
 | Si te pasa… | Es porque… | Qué hacer |
 |---|---|---|
-| El saldo actualizado es igual al normal | Los precios no cambiaron, o bajaron | Es lo esperado: nunca queda por debajo del original |
+| El saldo actualizado es igual al normal | El total calculado a precios actuales no supera el original | Es lo esperado: nunca queda por debajo del original |
 | Los iconos de estado de cuenta están apagados | El cliente no tiene cuenta corriente habilitada | Habilitala en *Editar cliente* |
 | Hay diferencia entre este saldo y el ticket | El ticket muestra el saldo normal (deuda real) | Para ver el actualizado, generá el PDF/Excel con *Ambas* |
 
+## Cómo comprobar que salió bien
+
+Generá el estado de cuenta con **Ambas** para comparar importes originales y actualizados. Verificá que corresponda al cliente elegido y revisá sus adelantos disponibles. Para registrar un pago, continuá desde **Cobrar a un cliente** en el POS.
+
 ## Siguiente paso
 
-- Cobrar la deuda de un cliente
+- [vender fiado a cuenta corriente en ADEstock](/tutoriales/vender-fiado-cuenta-corriente/)
+- [cobrar deudas de clientes en ADEstock](/tutoriales/cobrar-deuda-cliente/)
+- [crear y editar clientes en ADEstock](/tutoriales/crear-y-editar-clientes/)

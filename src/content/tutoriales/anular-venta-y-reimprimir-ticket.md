@@ -1,32 +1,37 @@
 ---
 id: "anular-venta-y-reimprimir-ticket"
 slug: "anular-venta-y-reimprimir-ticket"
-title: "Cómo anular una venta y reimprimir un ticket"
-description: "Reimprimí el ticket de una venta cerrada o anulá una venta hecha por error para que deje de contar en caja y en stock."
+title: "Cómo anular una venta o reimprimir un ticket en ADEstock"
+description: "Reimprimí tickets desde el POS o anulá una venta desde el panel de ADEstock. Revisá cómo registrar la devolución en un turno de caja abierto."
 category: "vender"
 priority: "P1"
 roles: ["cajero","dueno"]
 surface: ["pos","panel"]
-status: "draft"
+status: "published"
 tiempo: "2 minutos"
 necesitas: "saber el número de la venta"
 para_quien: "el dueño (y quien tenga acceso al panel de administración)"
 modulo: "venta (POS → Ventas anteriores; panel de administración → Ventas)"
 permiso: "reimprimir: ninguno (cada cajero ve los tickets de su turno); anular: acceso al panel de administración"
 source_path: "01-manual-usuario/10-anular-una-venta-y-reimprimir-tickets.md"
-source_hash: "a1d65a0c6a0017f29141df55ee67569d6fad641dd20c4c3a0a29dbd3ac3fef11"
+source_hash: "40c6bf662729fa5a3697bd07923d8aa4a8acbe09047bca53751b5f62076aa4b5"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["anular","devolución","reimprimir","ticket"]
-related: []
+related: ["abrir-y-cerrar-caja","controlar-turnos-caja-panel","notas-de-credito-y-debito"]
 social_image: "/social/anular-venta-y-reimprimir-ticket-v1.jpg"
 ---
+## Para qué sirve
+
+Alguien se equivocó al cobrar o el cliente perdió el ticket: este tutorial resuelve esos dos casos. **Reimprimir** lo hace cualquier cajero en el momento. **Anular** se hace desde el panel de administración y sirve para que una venta hecha por error **deje de contar** en caja, stock y reportes.
+
 ## Qué vas a lograr
 
-- **Reimprimir** el ticket de una venta ya cerrada (esto lo hace cualquier cajero desde el POS).
-- **Anular** una venta hecha por error, para que **deje de contar** en caja, stock y reportes.
+Esta guía explica dos tareas: **reimprimir el ticket de una venta cerrada** desde el POS y **anular una venta** desde el panel de administración. Reimprimir permite obtener otro comprobante; anular revierte la operación y deja registro de lo ocurrido.
+
+Si la venta tuvo cobros, vas a elegir un turno abierto para registrar la devolución. El turno del cobro original conserva su registro.
 
 > **Hoy la anulación de una venta se hace desde el panel de administración, no desde el POS.** Desde el POS solo se consultan y reimprimen las ventas.
 
@@ -67,7 +72,7 @@ Si la venta tenía **cobros que movieron plata** (efectivo, tarjeta, transferenc
 
 ![Turno elegido](../../assets/tutoriales/10-anular-venta/02c-turno-elegido.png)
 
-> **Siempre hace falta un turno abierto.** Podés anular una venta de **otro día**, pero la devolución se registra en un turno que esté abierto **hoy**. Si no hay ninguno, el sistema no te deja anular: abrí un turno desde el POS y volvé a intentar. El turno donde se cobró originalmente **no se modifica**.
+> **Si hubo cobros, hace falta un turno abierto.** Podés anular una venta de **otro día**, pero la devolución se registra en un turno que esté abierto **hoy**. Si no hay ninguno, el sistema no te deja anular: abrí un turno desde el POS y volvé a intentar. El turno donde se cobró originalmente **no se modifica**.
 
 Si la venta fue **solo a cuenta corriente** (sin cobro), no pide turno: se anula y la deuda se revierte.
 
@@ -102,13 +107,13 @@ Solo se anulan las ventas en estado **pagada, facturada o finalizada**. Una vent
 
 | Situación | Qué usar |
 |---|---|
-| El cliente devuelve **parte** de la mercadería | **Nota de crédito** (desde el panel de administración) |
+| El cliente devuelve **parte** de la mercadería | [Nota de crédito vinculada al armado del pedido](/tutoriales/notas-de-credito-y-debito/) (revisá los requisitos antes de aplicarla) |
 | Se cobró de menos o de más en un **cobro de deuda** | Acción *Anular cobro* (solo superusuario), en el panel de administración |
 | El carrito sigue abierto y quiero empezar de cero | **Vaciar** (F3) en el POS |
 
 ## Entregar una venta
 
-En el listado de ventas, junto a cada una está el botón **Entregar**. Marca la venta como entregada y **descuenta el stock físico** si tenés activado *Seguimiento de entregas* (ver *La configuración del POS*). Con ese ajuste apagado, el stock se descuenta al cobrar y no hace falta.
+En el listado de ventas, junto a cada una está el botón **Entregar**. Marca la venta como entregada y **descuenta el stock físico** si tenés activado *Seguimiento de entregas* (ver [La configuración del POS](/tutoriales/configurar-punto-de-venta/)). Con ese ajuste apagado, el stock se descuenta al cobrar y no hace falta.
 
 ## Problemas frecuentes
 
@@ -119,7 +124,12 @@ En el listado de ventas, junto a cada una está el botón **Entregar**. Marca la
 | "Abrí un turno de caja para registrar la devolución" | No hay ningún turno abierto y la venta tenía cobros | Abrí un turno desde el POS y anulá de nuevo |
 | La venta anulada sigue en el listado | Las ventas anuladas no se borran | Es lo esperado; el estado figura como *anulada* |
 
+## Cómo comprobar que salió bien
+
+Si reimprimiste, comprobá que el número de venta y el total del ticket sean los correctos. Si anulaste, verificá el estado **anulada** en el listado. Cuando hubo devolución de dinero, revisá el retiro generado en el turno elegido: no cargues otro retiro por el mismo importe.
+
 ## Siguiente paso
 
-- Turno de caja: apertura, retiros y cierre
-- Cobrar la deuda de un cliente
+- [abrir, hacer el arqueo y cerrar caja en ADEstock](/tutoriales/abrir-y-cerrar-caja/)
+- [revisar turnos y cierres de caja en ADEstock](/tutoriales/controlar-turnos-caja-panel/)
+- [aplicar y anular notas de crédito y débito en ADEstock](/tutoriales/notas-de-credito-y-debito/)

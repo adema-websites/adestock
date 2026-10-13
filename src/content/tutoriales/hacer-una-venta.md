@@ -1,31 +1,37 @@
 ---
 id: "hacer-una-venta"
 slug: "hacer-una-venta"
-title: "Cómo hacer una venta en ADEstock"
-description: "Armá el carrito, cobrá en efectivo con vuelto y cerrá la venta. Es el flujo más común del día y la base de los demás."
+title: "Cómo hacer una venta y cobrar en efectivo en ADEstock"
+description: "Hacé una venta en ADEstock paso a paso: buscá productos, elegí unidad o pack, armá el carrito y cobrá en efectivo con cálculo de vuelto."
 category: "vender"
 priority: "P0"
 roles: ["cajero","dueno"]
 surface: ["pos"]
-status: "draft"
+status: "published"
 tiempo: "1 minuto"
 necesitas: "el turno de caja abierto y productos cargados"
 para_quien: "cajeros y dueños"
 modulo: "venta (POS)"
 permiso: "ninguno (requiere turno de caja abierto y una caja asignada)"
 source_path: "01-manual-usuario/07-hacer-una-venta.md"
-source_hash: "43f7e836540d9e76dce3b5ba0e0e5263d38a7f2185ce4b3637e85b94df0ccaf6"
+source_hash: "a488d1086f61bb56237037d8f844f77df6189347cc288ce81ea3cb833eda009e"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["vender","cobrar","carrito","vuelto"]
-related: []
+related: ["cobrar-con-varios-medios-de-pago","vender-fiado-cuenta-corriente","abrir-y-cerrar-caja"]
 social_image: "/social/hacer-una-venta-v1.jpg"
 ---
+## Para qué sirve
+
+Es la tarea más frecuente del sistema y la base de todas las demás: cada venta descuenta stock, suma plata a la caja y queda registrada para los reportes. Esta guía muestra el caso más simple, cobrar en efectivo. Cuando lo dominás, las otras formas de cobrar son variantes del mismo recorrido.
+
 ## Qué vas a lograr
 
-Armar el carrito, cobrar en efectivo con vuelto y cerrar la venta. Es el flujo más común del día; los demás (varios medios de pago, cuenta corriente) son variantes de este.
+Vas a **hacer una venta en ADEstock y cobrarla en efectivo**, desde la búsqueda del producto hasta la entrega del vuelto. También vas a ver cómo elegir una presentación por unidad o pack, vender por peso y consultar una venta cerrada.
+
+Este es el recorrido básico del POS. Para combinar efectivo con tarjeta o dejar una deuda al cliente, seguí después las guías de pagos mixtos y cuenta corriente.
 
 ## Antes de empezar
 
@@ -126,7 +132,7 @@ Al tocar **Agregar**, la línea queda con el peso resultante. Si ingresaste por 
 
 ![Línea por peso](../../assets/tutoriales/07-hacer-una-venta/13-linea-por-peso.png)
 
-> Para que un producto pida la cantidad al vender, en su precio hay que tildar **Cant. Variable** (ver *Cargar tus primeros productos*).
+> Para que un producto pida la cantidad al vender, en su precio hay que tildar **Cant. Variable** (ver [Cargar tus primeros productos](/tutoriales/cargar-productos/)).
 
 ## Ver o reimprimir una venta ya cerrada
 
@@ -163,8 +169,12 @@ El sistema protege la venta contra **doble clic**: si se toca *Confirmar* dos ve
 | No puedo hacer descuento | Falta el permiso *Puede hacer descuentos* | Pedíselo al dueño |
 | El botón de cuenta corriente está apagado | El cliente de la venta es *Consumidor Final* o no tiene cuenta corriente | Cambiá el cliente (F9) a uno con cuenta corriente habilitada |
 
+## Cómo comprobar que salió bien
+
+Después de **CONFIRMAR Y CERRAR**, el POS debe abrir un carrito nuevo. Buscá la operación en **Menú rápido → Ventas anteriores** y comprobá el cliente, los productos y el total. Si tenés seguimiento de entregas, distinguí el stock disponible del físico: la mercadería vendida puede seguir comprometida hasta marcar la entrega.
+
 ## Siguiente paso
 
-- Cobrar con varios medios de pago
-- Vender a cuenta corriente
-- Turno de caja: apertura, retiros y cierre
+- [cobrar con varios medios de pago en ADEstock](/tutoriales/cobrar-con-varios-medios-de-pago/)
+- [vender fiado a cuenta corriente en ADEstock](/tutoriales/vender-fiado-cuenta-corriente/)
+- [abrir, hacer el arqueo y cerrar caja en ADEstock](/tutoriales/abrir-y-cerrar-caja/)

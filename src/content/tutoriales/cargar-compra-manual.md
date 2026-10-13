@@ -1,31 +1,37 @@
 ---
 id: "cargar-compra-manual"
 slug: "cargar-compra-manual"
-title: "Cómo cargar una compra a mano"
-description: "Registrá una compra tecleando los renglones, sin foto ni IA, para que sume stock, actualice costos y quede pagada o a cuenta corriente."
+title: "Cómo cargar una compra manual en ADEstock"
+description: "Cargá compras de mercadería en ADEstock sin usar IA: elegí proveedor, productos, cantidades y pago. Confirmá la compra para actualizar stock y costos."
 category: "compras"
 priority: "P1"
 roles: ["dueno","administrativo"]
 surface: ["panel"]
-status: "draft"
+status: "published"
 tiempo: "3 minutos"
-necesitas: "el proveedor y los productos ya cargados (o crearlos en el momento)"
+necesitas: "un turno de caja abierto y los datos del proveedor, productos, cantidades y precios del comprobante"
 para_quien: "dueños y administrativos"
 modulo: "compra (Compra simple), producto, agenda (Proveedor)"
 permiso: "acceso al módulo de compras"
 source_path: "01-manual-usuario/19-cargar-una-compra-manual.md"
-source_hash: "c05d7e1167b5f7d4451754cbb86c3ee8f3e955dbe888c42c9e5fdec4aab76a77"
+source_hash: "7dab4f125653c00cfd3591b5568bc2aa6a3c1700942cda36dc7d5d47b9d6fb86"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["compra","ingreso de mercadería","remito"]
-related: []
+related: ["crear-y-editar-proveedores","cargar-compras-con-foto-ia","pagar-proveedor"]
 social_image: "/social/cargar-compra-manual-v1.jpg"
 ---
+## Para qué sirve
+
+Cada compra que cargás hace tres cosas a la vez: **suma stock**, **actualiza el costo** de los productos y deja asentado si la pagaste o si **quedó debiendo** al proveedor. Esta guía es la forma manual, para cuando no tenés la boleta a mano o son pocos renglones. Si la boleta es larga, conviene la [compra con foto e IA](/tutoriales/cargar-compras-con-foto-ia/).
+
 ## Qué vas a lograr
 
-Registrar una compra **tecleando los renglones** (sin sacar foto ni usar IA), para que **sume stock**, **actualice los costos** y deje **pagada o a cuenta corriente** con el proveedor.
+Vas a **cargar una compra de mercadería manualmente en ADEstock**, escribiendo los productos, cantidades y precios del comprobante. Podés registrar el pago o dejar la compra a cuenta corriente con el proveedor.
+
+La carga se hace desde el POS y queda pendiente. La confirmación desde el panel de administración es el paso que aplica sus efectos sobre stock y pagos; el costo se actualiza en los renglones con **Act. costo** marcado.
 
 Es el mismo asistente de 4 pasos que usa la compra con foto, pero sin lectura automática. Sirve cuando:
 
@@ -47,9 +53,9 @@ No hay boleta que lo detecte: lo elegís vos de la lista (o lo creás con **＋ 
 
 ![Elegir proveedor](../../assets/tutoriales/19-compra-manual/02-elegir-proveedor.png)
 
-### 3. Checks: forma de pago y flete
+### 3. Revisá la forma de pago, el IVA y el flete
 
-![Checks](../../assets/tutoriales/19-compra-manual/03-checks.png)
+![Forma de pago y opciones de flete de la compra](../../assets/tutoriales/19-compra-manual/03-checks.png)
 
 | # | Pregunta | Qué responder |
 |---|---|---|
@@ -94,7 +100,7 @@ Tocá **Crear compra** otra vez para guardar.
 
 ### 7. Confirmala en el panel de administración
 
-La compra queda **pendiente** y **la tiene que confirmar el dueño o un administrativo** (más adelante también desde la app del dueño). Para que mueva stock y plata, se confirma así:
+La compra queda **pendiente** y **la tiene que confirmar el dueño o un administrativo**. Para que mueva stock y plata, se confirma así:
 
 **Panel de administración → Compra → Compras** → tildá la compra → acción **Confirmar compra** → *Ejecutar*.
 
@@ -135,7 +141,12 @@ Si la pagaste en efectivo o transferencia, ya queda **pagada** al confirmar.
 | Cargué mal un precio | - | Antes de confirmar: eliminá la compra pendiente y volvela a cargar |
 | El proveedor no está | Es nuevo | **＋ Nuevo proveedor** en el paso 2 |
 
+## Cómo comprobar que salió bien
+
+Verificá que la compra figure como **Aprobada** en el panel y compará sus cantidades y total con el comprobante. Revisá el stock ingresado y los costos de los renglones con **Act. costo** marcado. Si compraste a cuenta corriente, consultá la deuda del proveedor; si pagaste en efectivo, revisá el movimiento en el turno correspondiente.
+
 ## Siguiente paso
 
-- Pagar a un proveedor y revisar su cuenta corriente
-- Cargar una compra con la foto de la boleta
+- [crear y editar proveedores en ADEstock](/tutoriales/crear-y-editar-proveedores/)
+- [cargar compras con foto e IA en ADEstock](/tutoriales/cargar-compras-con-foto-ia/)
+- [pagar a proveedores y registrar adelantos en ADEstock](/tutoriales/pagar-proveedor/)

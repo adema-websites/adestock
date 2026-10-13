@@ -1,31 +1,37 @@
 ---
 id: "hacer-presupuesto"
 slug: "hacer-presupuesto"
-title: "Cómo hacer un presupuesto y convertirlo en venta"
-description: "Armá un presupuesto con precios respetados por unos días, sin descontar stock ni cobrar, y convertilo en venta cuando el cliente confirme."
+title: "Cómo crear un presupuesto y convertirlo en venta en ADEstock"
+description: "Creá e imprimí presupuestos en ADEstock, configurá su vigencia y cargalos al POS para cobrar. Consultá qué hacer cuando un presupuesto vence."
 category: "vender"
 priority: "P1"
 roles: ["cajero","dueno"]
 surface: ["pos"]
-status: "draft"
+status: "published"
 tiempo: "2 minutos"
 necesitas: "que el dueño haya activado los presupuestos (ver abajo)"
 para_quien: "cajeros y dueños"
 modulo: "venta (Presupuesto, POS)"
 permiso: "ninguno; el dueño debe activar \"Generar presupuestos desde POS\""
 source_path: "01-manual-usuario/11-presupuestos.md"
-source_hash: "0ed9724b9976aaefa22161bcd0457e188c94ad1007711325b37b3b571914ce2c"
+source_hash: "4adbd91dad483e18b85cf386b6ac71086243e6004b7140163b7f490d7ed48581"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["cotización","presupuesto","vigencia"]
-related: []
+related: ["hacer-una-venta","cobrar-con-varios-medios-de-pago","configurar-punto-de-venta"]
 social_image: "/social/hacer-presupuesto-v1.jpg"
 ---
+## Para qué sirve
+
+Cuando un cliente pide precio pero todavía no decide, el presupuesto te deja dárselo **sin vender**: no descuenta stock, no cobra y no genera deuda. Sirve para respetarle los precios por unos días y, si el cliente vuelve, **convertirlo en venta** con un clic sin volver a armar el carrito.
+
 ## Qué vas a lograr
 
-Armar un carrito, **dárselo al cliente como presupuesto** (con precios respetados por unos días) sin descontar stock ni cobrar, y más tarde **convertirlo en venta** con un clic.
+Vas a **crear un presupuesto en ADEstock**, imprimirlo o dejarlo pendiente y convertirlo en venta cuando el cliente confirme. El presupuesto guarda los productos y precios cotizados durante su vigencia.
+
+Mientras siga como presupuesto, no genera cobros ni deuda y no descuenta ni reserva stock. La operación de venta se completa cuando lo cargás al POS y lo cobrás.
 
 ## Qué es (y qué no es) un presupuesto
 
@@ -91,7 +97,7 @@ Tocá un presupuesto para ver sus productos y las acciones disponibles.
 |---|---|
 | **PDF A4** | Imprime el presupuesto en hoja A4 |
 | **Ticket** | Imprime una versión corta en ticket |
-| **Cargar al POS** | Lo convierte en un carrito para cobrar (solo si está vigente) |
+| **Cargar al POS** | Lo convierte en un carrito para cobrar. Si está activado el control de vencimiento, debe estar vigente |
 | **Cancelar** | Lo descarta (si todavía no fue aceptado) |
 | **Eliminar** | Lo borra (si no fue aceptado ni cargado a una venta) |
 
@@ -101,7 +107,7 @@ Cuando el cliente acepta, tocá **Cargar al POS**. Se abre una pestaña de venta
 
 ![Presupuesto cargado en el POS](../../assets/tutoriales/11-presupuestos/05-cargado-en-el-pos.png)
 
-Revisá el cliente de la venta y cobrá como cualquier venta (ver *Hacer una venta*). Al cobrarla, el presupuesto pasa a **Aceptado** solo.
+Revisá el cliente de la venta y cobrá como cualquier venta (ver [Hacer una venta](/tutoriales/hacer-una-venta/)). Al cobrarla, el presupuesto pasa a **Aceptado** solo.
 
 ## Estados de un presupuesto
 
@@ -130,7 +136,12 @@ Revisá el cliente de la venta y cobrá como cualquier venta (ver *Hacer una ven
 | El presupuesto salió con precios distintos | Se generó de nuevo al cambiar el carrito | Es lo esperado: toma los precios del momento |
 | No encuentro un presupuesto de otro cajero | La opción *Cajeros ven presupuestos de todos* está apagada | El dueño puede activarla |
 
+## Cómo comprobar que salió bien
+
+Buscá el presupuesto por número o cliente y verificá los productos, precios y vencimiento. Si lo cargaste al POS y cobraste la venta, debe pasar a **Aceptado**. Cargarlo al carrito por sí solo todavía no completa la venta.
+
 ## Siguiente paso
 
-- Hacer una venta
-- Cobrar con varios medios de pago
+- [hacer una venta y cobrar en efectivo en ADEstock](/tutoriales/hacer-una-venta/)
+- [cobrar con varios medios de pago en ADEstock](/tutoriales/cobrar-con-varios-medios-de-pago/)
+- [configurar el punto de venta (POS) en ADEstock](/tutoriales/configurar-punto-de-venta/)

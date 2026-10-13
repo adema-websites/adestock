@@ -2,12 +2,12 @@
 id: "cargar-stock-inicial-excel"
 slug: "cargar-stock-inicial-excel"
 title: "Cómo cargar el stock inicial desde Excel en ADEstock"
-description: "Sumá o restá existencias de muchos productos con un Excel, por depósito. Queda en borrador hasta que lo aplicás. No es lo mismo que importar productos."
+description: "Cargá existencias por depósito en ADEstock desde Excel. Prepará las cantidades de ajuste, revisá el borrador y aplicalo para actualizar el inventario."
 category: "empezar"
 priority: "P0"
 roles: ["dueno","administrativo"]
 surface: ["panel"]
-status: "draft"
+status: "published"
 tiempo: "15 minutos"
 necesitas: "productos ya cargados en el sistema y la lista de cuánto tenés de cada uno en el depósito"
 para_quien: "dueños y administrativos"
@@ -17,18 +17,24 @@ source_path: "docs/EXCEL-HALLAZGOS.md"
 source_hash: "fb193c5682f27279abe21d723b727a8e7e50b148d48b339a34385d3230c48cf3"
 product_version: "3.0.1"
 verified_at: "2026-10-12"
-reviewed_at: null
+reviewed_at: "2026-10-13"
 synonyms: ["cargar stock excel","stock inicial","existencias","cargar existencias","cuánto tengo de cada producto","ajuste por excel","inventario inicial"]
-related: ["importar-productos-excel","contar-stock","ajustar-stock-mermas-transferencias"]
+related: ["importar-productos-excel","contar-stock","hacer-una-venta"]
 social_image: "/social/cargar-stock-inicial-excel-v1.jpg"
 ---
+## Para qué sirve
+
+Cuando empezás a usar el sistema, tus productos ya existen pero todavía no le dijiste cuánta mercadería tenés de cada uno. Esta guía sirve para **cargar esas cantidades desde un Excel**, por depósito, en lugar de ir producto por producto. Se hace **después** de cargar los productos, y el sistema te deja revisar el borrador antes de aplicarlo.
+
 ## Qué vas a lograr
 
-Cargar cuánta mercadería tenés de cada producto, en un depósito, usando una planilla en lugar de producto por producto.
+Vas a **cargar el stock inicial desde Excel en ADEstock** para productos que ya existen en tu catálogo. Creá un ajuste de inventario por depósito, importá las cantidades y revisá el borrador antes de aplicarlo.
 
-> **Primero los productos, después el stock.** Esta guía supone que tus productos ya están cargados (a mano o con la guía de importar productos desde Excel). Si un producto no existe, la fila da error: **no lo crea**.
+La columna **Cantidad Ajuste** indica cuánto sumar o restar, no el stock final. Si el producto ya tiene existencias, calculá la diferencia para evitar sumarlas dos veces.
 
-## Cómo funciona (leelo antes de empezar)
+> **Primero los productos, después el stock.** Esta guía supone que tus productos ya están cargados (a mano o mediante [importación de productos desde Excel](/tutoriales/importar-productos-excel/)). Si un producto no existe, la fila da error: **no lo crea**.
+
+## Cantidad de ajuste y stock final: cuál es la diferencia
 
 - La columna **Cantidad Ajuste** es una **diferencia**, no el stock final: `+10` suma 10 unidades, `-3` resta 3.
 - Si el producto **no tenía stock** (recién importado), la diferencia es igual al stock que tenés. Si **ya tenía stock**, lo que cargues **se suma** al que había.
@@ -98,13 +104,13 @@ Vas a ver **"Se aplicaron 1 ajuste(s) correctamente"** y el estado pasa a **Apli
 ## Cómo comprobar que salió bien
 
 1. Abrí un producto de la lista y mirá su **stock** en el depósito: tiene que ser el de antes más la cantidad que cargaste.
-2. Hacé un **conteo de stock** de unos pocos productos (guía "Cómo contar el stock") para verificar contra la góndola.
+2. Hacé un **conteo de stock** de unos pocos productos ([guía de conteo de stock](/tutoriales/contar-stock/)) para verificar contra la góndola.
 
 ## Problemas frecuentes
 
 | Si te pasa… | Es porque… | Qué hacer |
 |---|---|---|
-| "Producto no encontrado" | El ID o el código no coinciden con ningún producto | Importá primero el producto (guía de importar productos) o corregí el código. Revisá que no haya perdido ceros iniciales |
+| "Producto no encontrado" | El ID o el código no coinciden con ningún producto | Primero [importá el producto](/tutoriales/importar-productos-excel/) o corregí el código. Revisá que no haya perdido ceros iniciales |
 | "No se encontró la columna "Cantidad Ajuste"" | El encabezado no está en la primera fila o cambió el nombre | Usá la plantilla y no cambies los títulos |
 | El stock no cambió | El ajuste sigue en Borrador | Aplicalo desde la lista de ajustes |
 | Cargué de más | El ajuste ya se aplicó | Anulalo con **Anular ajustes seleccionados** o hacé otro ajuste con la diferencia en negativo |
@@ -112,5 +118,6 @@ Vas a ver **"Se aplicaron 1 ajuste(s) correctamente"** y el estado pasa a **Apli
 
 ## Siguiente paso
 
-- Hacer tu primera venta.
-- Contar el stock de un depósito.
+- [importar productos y precios desde Excel en ADEstock](/tutoriales/importar-productos-excel/)
+- [contar stock y corregir el inventario en ADEstock](/tutoriales/contar-stock/)
+- [hacer una venta y cobrar en efectivo en ADEstock](/tutoriales/hacer-una-venta/)

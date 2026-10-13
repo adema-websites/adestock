@@ -1,31 +1,37 @@
 ---
 id: "crear-revista-ofertas"
 slug: "crear-revista-ofertas"
-title: "Cómo crear una revista de ofertas con tus productos"
-description: "Armá una revista de ofertas en A4 o un post para redes con tus productos, precios y promociones, y exportala o compartila."
+title: "Cómo crear revistas y folletos de ofertas en ADEstock"
+description: "Armá revistas y folletos de ofertas en ADEstock con tus productos y precios. Elegí un diseño, exportá PDF o imágenes y compartí por WhatsApp."
 category: "ofertas"
 priority: "P0"
 roles: ["dueno","administrativo"]
 surface: ["panel"]
-status: "draft"
+status: "published"
 tiempo: "10 minutos la primera revista"
 necesitas: "el módulo activado, el permiso Puede crear revistas y folletos y, idealmente, ofertas vigentes"
 para_quien: "dueños y encargados"
 modulo: "publicaciones (POS → Revistas y folletos), ofertas"
 permiso: "Puede crear revistas y folletos · módulo \"Revistas y folletos\" activado"
 source_path: "01-manual-usuario/27-revistas-y-folletos.md"
-source_hash: "8e3b1ca495d0fcd81e7f3ccabe20ef9999529cbb084fd622807e6e92e5d39c11"
+source_hash: "91b04100e3008d9af32e9f1f4b710ace1d872c6630fa4ddca54877ba38a57ff6"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["folleto","revista","catálogo de ofertas","hacer folleto ofertas","PDF de ofertas"]
-related: []
+related: ["crear-ofertas-y-promociones","imprimir-etiquetas","configurar-tienda-online"]
 social_image: "/social/crear-revista-ofertas-v1.jpg"
 ---
+## Para qué sirve
+
+Sirve para **comunicar tus ofertas** a los clientes sin contratar a un diseñador: armás una revista para imprimir o un post para redes con tus productos, precios y promociones, y la exportás como PDF o imágenes, o la compartís por WhatsApp. Los productos y los precios salen de tu catálogo, no hay que volver a escribirlos.
+
 ## Qué vas a lograr
 
-Armar una **revista de ofertas** (A4 para imprimir) o un **post para redes** (cuadrado, vertical o historia) con tus productos, precios y promociones, con diseño listo, y **exportarla** como PDF, imágenes o compartirla por WhatsApp.
+Vas a **crear una revista o un folleto de ofertas en ADEstock** usando los productos, precios y promociones de tu catálogo. Podés elegir A4 para imprimir o formatos de publicaciones e historias para redes sociales.
+
+La guía recorre el diseño, la selección de ofertas, la edición de fotos y la exportación en PDF o imágenes. También explica cómo publicar la versión web y compartir el material por WhatsApp.
 
 ## Antes de empezar
 
@@ -160,7 +166,12 @@ Cada tarjeta muestra la miniatura, el estado (*Borrador*, *Publicada*), el forma
 | El precio no es el que esperaba | La oferta cambió o venció | Volvé a **Traer ofertas** para actualizar |
 | La hoja quedó muy cargada | Muchos productos por página | Bajá columnas/filas o usá más hojas |
 
+## Cómo comprobar que salió bien
+
+Revisá todas las páginas de la vista previa: productos, presentaciones, precios, vigencia y datos del negocio. Abrí el PDF o las imágenes exportadas para comprobar que coincidan con el diseño. Si vas a compartir la versión web, usá **Online** y comprobá la publicación que verán tus clientes.
+
 ## Siguiente paso
 
-- Imprimir etiquetas de productos y ofertas
-- Tienda online
+- [crear ofertas, descuentos y promociones 3×2 en ADEstock](/tutoriales/crear-ofertas-y-promociones/)
+- [imprimir etiquetas de precios y códigos en ADEstock](/tutoriales/imprimir-etiquetas/)
+- [activar y diseñar tu tienda online en ADEstock](/tutoriales/configurar-tienda-online/)

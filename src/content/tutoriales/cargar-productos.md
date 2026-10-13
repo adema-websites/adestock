@@ -1,35 +1,43 @@
 ---
 id: "cargar-productos"
 slug: "cargar-productos"
-title: "Cómo cargar productos y precios en ADEstock"
-description: "Dá de alta un producto con su costo, su stock y sus precios de venta sin salir del POS. Al terminar, ya se puede vender."
+title: "Cómo cargar productos, stock y precios en ADEstock"
+description: "Aprendé a cargar productos en ADEstock: código de barras, costo por bulto, stock inicial y precios por unidad o pack desde el punto de venta."
 category: "empezar"
 priority: "P0"
 roles: ["dueno","administrativo"]
 surface: ["pos","panel"]
-status: "draft"
+status: "published"
 tiempo: "3 minutos por producto"
 necesitas: "el turno abierto y el permiso Gestionar productos"
 para_quien: "dueños y administrativos"
 modulo: "producto, venta (POS)"
 permiso: "puede_gestionar_productos (el dueño lo tiene siempre)"
 source_path: "01-manual-usuario/03-cargar-primeros-productos.md"
-source_hash: "9debcbb7ac1160325944ba7e11c39678921137b46f88128677a7447ae9066661"
+source_hash: "e1e86ba606e6c6d3349b50f7478b94d90ef7352c2ff340f7936ee556a76f02d9"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["alta de productos","agregar producto","costo por bulto","precio"]
-related: []
+related: ["usuarios-y-permisos", "hacer-una-venta", "contar-stock"]
 social_image: "/social/cargar-productos-v1.jpg"
 ---
+## Para qué sirve
+
+Un producto bien cargado es la base de todo lo demás: de él salen la venta, el stock, el costo y la ganancia. Esta guía sirve para dar de alta un artículo con lo mínimo que el sistema necesita para trabajar: **cuánto te cuesta**, **cuánto tenés** y **a qué precio lo vendés**. La usás cada vez que sumás un artículo nuevo al catálogo.
+
 ## Qué vas a lograr
 
-Dar de alta un producto con su **costo**, su **stock** y uno o varios **precios de venta**, sin salir del POS. Al terminar, el producto ya se puede vender.
+Vas a **cargar un producto en ADEstock** desde el punto de venta (POS), con su costo por bulto, stock inicial y precios de venta por unidad o pack. Al guardarlo, queda disponible en el catálogo para agregarlo a una venta.
+
+La guía también explica cómo calcular el costo por unidad y distinguir el margen sobre venta del recargo sobre costo.
 
 > Si elegiste un rubro en el onboarding, el sistema ya cargó productos de ejemplo. Podés editarlos, o dejarlos y sumar los tuyos.
 
 ## Antes de empezar
+
+Necesitás un **turno de caja abierto** y el permiso **Gestionar productos**. Para cargar el stock inicial también necesitás **Modificar stock**. El dueño tiene estos permisos.
 
 Tené a mano tres datos del producto: **cuánto te cuesta** (lo que pagás por el bulto cerrado), **cuántas unidades trae** ese bulto y **a cuánto querés venderlo**.
 
@@ -73,7 +81,7 @@ precio = costo ÷ (1 − rentabilidad)
 $1.000 ÷ (1 − 0,30) = $1.428,57
 ```
 
-Es decir: de cada $100 que cobrás, $30 son ganancia y $70 cubren el costo. (Si en tu negocio esta opción está configurada sobre el costo, la fórmula es `costo × (1 + rentabilidad)`.)
+Es decir: de cada $100 que cobrás, $30 son margen bruto y $70 cubren el costo del producto. Ese margen todavía no descuenta otros gastos del negocio. Si la rentabilidad está configurada sobre el costo, la fórmula es `costo × (1 + rentabilidad)`.
 
 Podés hacerlo al revés: **escribí el precio** que querés cobrar y el sistema recalcula la rentabilidad.
 
@@ -90,7 +98,7 @@ Con **+ Agregar** sumás otra fila. Cada fila es un precio por una cantidad: por
 | **Precio Calc.** | El precio final. Podés editarlo a mano |
 | **Cant. Variable** | Solo para cantidad = 1. El POS **pregunta la cantidad** al vender (ideal para peso o metros). Está deshabilitado en las filas con cantidad mayor a 1 |
 
-Cada fila es una **presentación** que se puede elegir al vender (lo vemos en el tutorial *Hacer una venta*).
+Cada fila es una **presentación** que se puede elegir al vender (lo vemos en el tutorial [Hacer una venta](/tutoriales/hacer-una-venta/)).
 
 ### 6. Cargá el stock inicial (opcional)
 
@@ -111,7 +119,7 @@ Abrí **Explorar** y buscá el producto: ahí ves su stock, el código y todos s
 
 ## Para editar un producto que ya existe
 
-En **Explorar**, tocá **Editar** en la tarjeta. Se abre el mismo formulario con los datos cargados. Si cambiás el costo o la rentabilidad, el precio se recalcula.
+En **Explorar**, tocá **Editar** en la tarjeta. Se abre el mismo formulario con los datos cargados. El recálculo del precio depende de la configuración del negocio: si está activado **Congelar precio de venta al actualizar costo**, cambiar el costo conserva el precio de venta y modifica la rentabilidad. Revisá este ajuste en [Precios y productos](/tutoriales/configurar-punto-de-venta/#precios-y-productos).
 
 ## Otras formas de cargar productos
 
@@ -140,6 +148,6 @@ En **Explorar**, tocá **Editar** en la tarjeta. Se abre el mismo formulario con
 
 ## Siguiente paso
 
-- Usuarios y permisos
-- Hacer una venta
-- Ajustar el stock (conteo)
+- [Crear usuarios y asignar permisos](/tutoriales/usuarios-y-permisos/)
+- [Hacer una venta y cobrarla](/tutoriales/hacer-una-venta/)
+- [Contar el stock y corregir diferencias](/tutoriales/contar-stock/)

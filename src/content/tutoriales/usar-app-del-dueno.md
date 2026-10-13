@@ -1,35 +1,41 @@
 ---
 id: "usar-app-del-dueno"
 slug: "usar-app-del-dueno"
-title: "Cómo usar la app del dueño"
-description: "Mirá cómo viene el negocio desde el celular: cuánto vendiste, cuánto ganaste, qué te deben y a quién le comprás."
+title: "Cómo consultar ventas y stock desde la app de ADEstock"
+description: "Usá la app del dueño de ADEstock para consultar ventas, márgenes, stock y cuentas corrientes desde el celular. Generá reportes y compará proveedores."
 category: "caja"
 priority: "P2"
 roles: ["dueno"]
 surface: ["app"]
-status: "draft"
+status: "published"
 tiempo: "10 minutos para recorrerla"
 necesitas: "un usuario de dueño o del grupo Administrativos y un celular (también funciona en la PC)"
 para_quien: "el dueño y las personas de administración"
 modulo: "gerencia (app en /app/)"
 permiso: "superusuario (dueño) o usuario del grupo Administrativos"
 source_path: "01-manual-usuario/30-app-del-dueno.md"
-source_hash: "8a103c42d88872d4bb9e861e4cf8866d7517fe551d01446e097ed28b5e29e7f1"
+source_hash: "25d291ea8b7186f817a4720ddc13216bb2251beb7f8919bf77fa9b3a837fb53d"
 product_version: "2.5.3"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["app","celular","ver ventas desde el celular"]
-related: []
+related: ["consultar-reportes-y-exportar","usuarios-y-permisos","cobrar-deuda-cliente"]
 social_image: "/social/usar-app-del-dueno-v1.jpg"
 ---
+## Para qué sirve
+
+Es la forma de **mirar tu negocio desde el celular**: cuánto vendiste, cuánto ganaste, qué productos mueven la plata, cuánto te deben y a quién le debés, sin sentarte frente a la PC. Es solo para el dueño y administración. Para buscar un dato puntual o exportar, usá el panel ([consultas y reportes](/tutoriales/consultar-reportes-y-exportar/)).
+
 ## Qué vas a lograr
 
-Ver **cómo viene el negocio** desde el celular, sin entrar al panel de administración: cuánto vendiste, cuánto ganaste, qué productos mueven la plata, cuánto te deben y a quién le debés, y qué proveedor te vende más barato.
+Vas a **consultar ventas, márgenes y stock desde el celular con la app de ADEstock**. La guía recorre la instalación, la radiografía del negocio, los productos, las cuentas corrientes y la comparación de proveedores.
+
+Los reportes quedan guardados para volver a consultarlos. Para incluir movimientos recientes, usá **Recalcular**. El acceso corresponde al dueño y a los usuarios del grupo Administrativos.
 
 > Los **cajeros no pueden entrar**: aunque tengan usuario del sistema, la app muestra ventas, márgenes y deudas, y eso es solo para el dueño y administración.
 
-## Cómo piensa la app (leelo una vez)
+## Cómo funcionan los reportes guardados
 
 La app **no recalcula todo cada vez que la abrís**. Funciona con **reportes guardados**:
 
@@ -128,7 +134,7 @@ La radiografía se lee de arriba hacia abajo, en cuatro bloques:
 
 ![Ventas y gráfico](../../assets/tutoriales/30-app-del-dueno/07-ventas-y-grafico.png)
 
-Abajo, cuatro indicadores: la variación contra el período anterior, la **rentabilidad promedio**, el **ticket promedio** (cuántas ventas hubo) y una **proyección** de cómo cerrarías el mes si seguís a este ritmo.
+Abajo, cuatro indicadores: la variación contra el período anterior, la **rentabilidad promedio**, el **ticket promedio** (importe promedio por venta) y una **proyección** de cómo cerrarías el mes si seguís a este ritmo.
 
 **Compras de mercadería** - cuánto compraste, y:
 
@@ -151,7 +157,7 @@ También muestra cuántos costos **subieron** y cuántos bajaron, cuántas compr
 
 | # | Elemento | Qué hace |
 |---|---|---|
-| 1 | **Te quedó** | La ganancia del período y su porcentaje sobre lo vendido |
+| 1 | **Te quedó** | El resultado calculado del período y su porcentaje sobre lo vendido, sin descontar impuestos ni retiros |
 | 2 | **Recalcular con los datos de hoy** | Rehace el reporte con la información actual |
 
 ### 5. Productos
@@ -288,7 +294,12 @@ Para **quitar** el acceso, cambiá el rol a *Cajero* o desactivá el usuario (ca
 | Elaborados está en cero | Todavía no se vendió ningún producto con receta en ese período | Elegí otro período |
 | No veo «Para reponer» productos | Los productos no tienen stock mínimo cargado | Cargá el mínimo en cada producto |
 
+## Cómo comprobar que salió bien
+
+Verificá el período del reporte antes de interpretar los indicadores. Si faltan operaciones recientes, tocá **Recalcular con los datos de hoy** y revisá de nuevo. Recordá que **Te quedó** descuenta el costo de lo vendido y los gastos registrados, pero no incluye impuestos ni retiros.
+
 ## Siguiente paso
 
-- [Crear usuarios y asignar permisos](/tutoriales/usuarios-y-permisos/)
-- [Cobrar la deuda de un cliente](/tutoriales/cobrar-deuda-cliente/)
+- [consultar reportes y exportar a Excel en ADEstock](/tutoriales/consultar-reportes-y-exportar/)
+- [crear usuarios y asignar permisos en ADEstock](/tutoriales/usuarios-y-permisos/)
+- [cobrar deudas de clientes en ADEstock](/tutoriales/cobrar-deuda-cliente/)

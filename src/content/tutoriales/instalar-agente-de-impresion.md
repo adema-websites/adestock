@@ -1,31 +1,37 @@
 ---
 id: "instalar-agente-de-impresion"
 slug: "instalar-agente-de-impresion"
-title: "Cómo instalar y conectar el agente de impresión (Agent Printer)"
-description: "Instalá y conectá Agent Printer para que los tickets y etiquetas salgan por la impresora del mostrador."
+title: "Cómo instalar Agent Printer para imprimir desde ADEstock"
+description: "Instalá Agent Printer en Windows y conectalo con ADEstock. Creá la credencial de caja, elegí la impresora y probá tickets o etiquetas desde la nube."
 category: "instalar"
 priority: "P1"
 roles: ["dueno"]
 surface: ["panel"]
-status: "draft"
+status: "published"
 tiempo: "15 minutos"
 necesitas: "la impresora ya instalada en Windows (USB) o su IP (red), el instalador del agente y permisos de administrador en esa PC"
 para_quien: "el dueño o quien instala el sistema en la PC de la caja"
 modulo: "print_queue (credenciales y cola de impresión) + programa Agent Printer 1.0.7"
 permiso: "ser dueño (superusuario) para crear la credencial; Windows con permisos de administrador para instalar"
 source_path: "01-manual-usuario/38-agente-de-impresion.md"
-source_hash: "6e857df0484f2ea9535298126cae48dafbc38c8e0b0f9167eb0a633c99c98264"
+source_hash: "b75745b5229677585e979ccc89d8e8cb51fc8143896d2b6772762725152869ae"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["agent printer","imprimir ticket","impresora","impresora térmica","imprimir desde la nube","no imprime"]
-related: []
+related: ["configurar-punto-de-venta","imprimir-etiquetas","anular-venta-y-reimprimir-ticket"]
 social_image: "/social/instalar-agente-de-impresion-v1.jpg"
 ---
+## Para qué sirve
+
+El sistema arma los tickets y las etiquetas, pero alguien tiene que mandarlos a la impresora. El **agente de impresión** es un programa chico que corre en la PC de la caja y hace ese trabajo, para que lo que arma ADEstock **salga por la impresora de tu mostrador** aunque el sistema esté en la nube o en otra PC. Se instala **una sola vez** en esa PC.
+
 ## Qué vas a lograr
 
-Que los **tickets y las etiquetas** que arma ADEstock **salgan por la impresora de tu mostrador**, aunque el sistema no esté en esa misma PC.
+Vas a **instalar y conectar Agent Printer con ADEstock** para imprimir tickets y etiquetas en la PC de la caja, aunque el sistema funcione en la nube o en otra computadora del local.
+
+El agente recibe los trabajos de impresión de su caja y los envía a la impresora local. Necesitás crear la credencial de esa caja, cargarla en el agente y comprobar la conexión antes de imprimir.
 
 El **agente** es un programa chico que vive en la PC de la caja: le pregunta al sistema «¿hay algo para imprimir?», lo imprime en la impresora local y avisa si salió bien. Hace falta cuando imprimís **desde la nube**, o cuando la impresora está en otra PC del local que no es la del sistema.
 
@@ -36,8 +42,7 @@ Sistema ADEstock  →  cola de impresión  →  Agent Printer (PC de la caja)  �
 ## Antes de empezar
 
 - La impresora térmica tiene que estar **instalada y funcionando en Windows** (la ves en *Dispositivos e impresoras*), o responder por **red** (IP y puerto 9100).
-- Descargá el instalador desde el repositorio oficial:
-  `https://github.com/ademasistemas/agent-printer/releases/download/1.0.7/AgentPrinter_Setup_v1.0.7.exe`
+- Descargá el [instalador de Agent Printer 1.0.7](https://github.com/ademasistemas/agent-printer/releases/download/1.0.7/AgentPrinter_Setup_v1.0.7.exe), la versión utilizada en esta guía.
 - Cada **caja** necesita su propia **credencial** (así sabés qué PC imprime qué).
 
 ## Paso a paso
@@ -145,8 +150,12 @@ Con el agente conectado, el bloque *Agente de impresión de esta caja* muestra s
 
 Las pantallas del agente (3 y 4) son de la versión 1.0.7 corriendo. **Pendiente:** la captura del formulario del instalador, que no se pudo tomar sin instalarlo en esta PC.
 
+## Cómo comprobar que salió bien
+
+Comprobá que el agente indique **ACTIVO**, **Cloud OK** y una hora reciente de conexión. Desde el POS, usá **Probar** y verificá que el ticket salga por la impresora de esa caja. Si no imprime, revisá nombre de impresora, papel y credencial antes de repetir el trabajo.
+
 ## Siguiente paso
 
-- [La configuración del POS](/tutoriales/configurar-punto-de-venta/) (ajustes de impresión y formato del ticket)
-- [Imprimir etiquetas](/tutoriales/imprimir-etiquetas/)
-- [Anular una venta y reimprimir tickets](/tutoriales/anular-venta-y-reimprimir-ticket/)
+- [configurar el punto de venta (POS) en ADEstock](/tutoriales/configurar-punto-de-venta/)
+- [imprimir etiquetas de precios y códigos en ADEstock](/tutoriales/imprimir-etiquetas/)
+- [anular una venta o reimprimir un ticket en ADEstock](/tutoriales/anular-venta-y-reimprimir-ticket/)

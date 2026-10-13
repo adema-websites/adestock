@@ -1,31 +1,37 @@
 ---
 id: "imprimir-etiquetas"
 slug: "imprimir-etiquetas"
-title: "Cómo imprimir etiquetas de precios"
-description: "Imprimí etiquetas con nombre, precio y código de barras de tus productos, o solo de los que están en oferta."
+title: "Cómo imprimir etiquetas de precios y códigos en ADEstock"
+description: "Imprimí etiquetas de precios y códigos de barras en ADEstock. Configurá la etiquetadora, seleccioná presentaciones y copias o filtrá productos en oferta."
 category: "instalar"
 priority: "P1"
 roles: ["dueno","administrativo"]
 surface: ["panel"]
-status: "draft"
+status: "published"
 tiempo: "2 minutos por tanda"
 necesitas: "una etiquetadora configurada para tu caja y el permiso Puede imprimir etiquetas"
 para_quien: "dueños y encargados"
 modulo: "etiquetas (POS → Imprimir etiquetas), print_queue"
 permiso: "Puede imprimir etiquetas · etiquetadora configurada para la caja"
 source_path: "01-manual-usuario/28-imprimir-etiquetas.md"
-source_hash: "9e8ee24c5e9394c79f2e4a1eefa450210f33c1e5d12d13e99341052b193f50fa"
+source_hash: "b2a35ad1a5c0bfaa611bbc799fdcc18bf1f31fbb9cc6dc047ccf87441257e036"
 product_version: "3.0.0"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["etiquetas","impresora de etiquetas","código de barras"]
-related: []
+related: ["instalar-agente-de-impresion","crear-ofertas-y-promociones","actualizar-precios-y-rentabilidad"]
 social_image: "/social/imprimir-etiquetas-v1.jpg"
 ---
+## Para qué sirve
+
+La etiqueta con nombre, precio y código de barras le muestra el precio al cliente y le permite al cajero escanear rápido. Esta guía sirve para imprimirlas para tus productos (o solo para los que están en oferta), eligiendo cuántas copias de cada presentación. Se usa al cargar productos nuevos o cuando cambian los precios.
+
 ## Qué vas a lograr
 
-Imprimir etiquetas con **nombre, precio y código de barras** para tus productos (o solo para los que están **en oferta**), eligiendo cuántas copias de cada presentación.
+Vas a **imprimir etiquetas de precios en ADEstock** con el nombre del producto y su código de barras, cuando lo tenga cargado. Elegí la presentación, la cantidad de copias y los productos que necesitás etiquetar.
+
+También podés imprimir solo productos con ofertas vigentes. Antes de enviar una tanda, la etiquetadora y el agente de impresión deben estar configurados para tu caja.
 
 ## Antes de empezar: configurar la etiquetadora
 
@@ -47,7 +53,7 @@ El dueño la configura en **Menú rápido → Configuración → Etiquetadora** 
 | **Al terminar cada etiqueta** | Nada, avanzar a la próxima o avance fijo; y si corta al final de la tanda |
 | **Etiqueta de prueba** | Imprime 2 de prueba para verificar el alineado |
 
-> Como el sistema imprime a través del **agente de impresión** de la caja, la caja también necesita su credencial de agente (ver *La configuración del POS*).
+> Como el sistema imprime a través del **agente de impresión** de la caja, la caja también necesita su credencial de agente (ver [La configuración del POS](/tutoriales/configurar-punto-de-venta/)).
 
 ## Paso a paso
 
@@ -101,11 +107,17 @@ En **Ofertas**, cada oferta tiene un botón **Etiquetas** que arma la tanda con 
 |---|---|---|
 | No veo *Imprimir etiquetas* | Falta el permiso *Puede imprimir etiquetas* | Pedíselo al dueño |
 | Dice que no hay etiquetadora | La caja no tiene una configurada | Configuración → Etiquetadora |
-| No puedo tildar productos | No hay etiquetadora configurada | Configurala primero |
+| Puedo armar la selección, pero no imprimir | No hay etiquetadora configurada | Configurala antes de enviar la tanda |
 | No sale nada | La caja no tiene credencial del agente de impresión, o el agente no está corriendo | Configuración → Impresora de tickets → *Agente de impresión* |
 | La segunda etiqueta sale desalineada | Falta calibrar | En *Etiquetadora* usá **Guardar e imprimir 2 de prueba** y ajustá el corrimiento |
 | La etiqueta sale sin código | El producto no tiene código de barras | Cargale uno en *Editar producto* |
 
+## Cómo comprobar que salió bien
+
+Revisá una etiqueta impresa antes de enviar una tanda grande: nombre, presentación, precio, código y alineación. Si tiene código de barras, probalo con el lector del POS. Para etiquetas de oferta, comprobá que el precio y la leyenda correspondan a la promoción vigente.
+
 ## Siguiente paso
 
-- Tienda online
+- [instalar Agent Printer para imprimir desde ADEstock](/tutoriales/instalar-agente-de-impresion/)
+- [crear ofertas, descuentos y promociones 3×2 en ADEstock](/tutoriales/crear-ofertas-y-promociones/)
+- [actualizar precios masivos y márgenes en ADEstock](/tutoriales/actualizar-precios-y-rentabilidad/)

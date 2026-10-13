@@ -1,31 +1,37 @@
 ---
 id: "consultar-reportes-y-exportar"
 slug: "consultar-reportes-y-exportar"
-title: "Cómo consultar reportes y exportarlos"
-description: "Encontrá cualquier dato del negocio (una venta, un pago, un gasto, una compra), filtralo y exportalo a Excel."
+title: "Cómo consultar reportes y exportar a Excel en ADEstock"
+description: "Consultá ventas, compras, pagos y gastos en el panel de ADEstock. Aplicá filtros, elegí columnas y exportá a Excel o generá el reporte de costos."
 category: "caja"
 priority: "P2"
 roles: ["dueno","administrativo"]
 surface: ["panel"]
-status: "draft"
+status: "published"
 tiempo: "15 minutos"
 necesitas: "entrar al panel de administración (POS → Menú rápido → Panel de administración, o /admin/)"
 para_quien: "el dueño y administrativos"
 modulo: "panel de administración (Venta, Compra, Agenda, Producto)"
 permiso: "acceso al panel de administración"
 source_path: "01-manual-usuario/31-consultas-y-reportes-del-admin.md"
-source_hash: "6165602d86a9c4e38234622ab987021c2306944222cba0dba2c24d012fb8ed0e"
+source_hash: "fa701bab97a27e09685f2d939f594721a7e394bba831e8c7d9470f713f799842"
 product_version: "2.5.3"
 verified_at: "2026-10-12"
-reviewed_at: null
-reviewed_by: null
+reviewed_at: "2026-10-13"
+reviewed_by: "ademasistemas"
 synonyms: ["reportes","exportar","estadísticas","costos"]
-related: []
+related: ["controlar-turnos-caja-panel","usar-app-del-dueno","actualizar-precios-y-rentabilidad"]
 social_image: "/social/consultar-reportes-y-exportar-v1.jpg"
 ---
+## Para qué sirve
+
+El panel de administración sirve para **buscar el detalle** de cualquier dato del negocio (una venta, un pago, un gasto, una compra), **filtrarlo** y **exportarlo a Excel**. Para ver cómo viene el negocio en general, es más rápida la [app del dueño](/tutoriales/usar-app-del-dueno/).
+
 ## Qué vas a lograr
 
-Encontrar rápido cualquier dato del negocio (una venta, un pago, un gasto, una compra), **filtrarlo**, **exportarlo a Excel** y sacar el **reporte de costos** de una venta.
+Vas a **consultar y exportar información de ADEstock a Excel** desde el panel de administración. Aprendé a encontrar ventas, compras, cobros y gastos, combinar filtros y elegir las columnas del archivo.
+
+También vas a ver cómo generar el reporte de costos de una venta para comparar el costo guardado al vender con el costo actual de reposición.
 
 > **Para ver cómo viene el negocio en general** (ventas, ganancia, deudas, productos), usá la [app del dueño](/tutoriales/usar-app-del-dueno/): es más rápida y ya viene calculada. El panel de administración sirve para **buscar el detalle** y **exportar**.
 
@@ -173,7 +179,12 @@ El PDF muestra los datos de la venta (número, cliente) y, por cada producto: **
 | Una columna que usaba desapareció | Alguien la ocultó en **tu** usuario (o la guardaste vos) | Acción *Configurar columnas visibles* → **Restaurar por defecto** |
 | El Excel tiene muchas columnas que no necesito | Se exportan todos los campos tildados | En la pantalla de exportación, destildá los campos que no quieras |
 
+## Cómo comprobar que salió bien
+
+Abrí el archivo exportado y comprobá que incluya el período, las filas y las columnas que necesitabas. En **Ingresos Ventas**, una venta puede ocupar varias filas si se cobró con distintos medios: revisá qué representa cada fila antes de sumar. Para el reporte de costos, seleccioná una sola venta.
+
 ## Siguiente paso
 
-- [Controlar un turno de caja desde el panel](/tutoriales/controlar-turnos-caja-panel/)
-- [La app del dueño](/tutoriales/usar-app-del-dueno/)
+- [revisar turnos y cierres de caja en ADEstock](/tutoriales/controlar-turnos-caja-panel/)
+- [consultar ventas y stock desde la app de ADEstock](/tutoriales/usar-app-del-dueno/)
+- [actualizar precios masivos y márgenes en ADEstock](/tutoriales/actualizar-precios-y-rentabilidad/)
