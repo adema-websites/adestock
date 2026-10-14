@@ -1,0 +1,44 @@
+---
+// Video del tutorial: portada liviana (sin cargar YouTube) y, al tocar, el reproductor.
+// Responsive 16:9, sin JS muestra el enlace a YouTube, y usa youtube-nocookie (sin cookies hasta reproducir).
+interface Props {
+  id: string;
+  titulo: string;
+  poster: string;
+  duracion: number;
+}
+const { id, titulo, poster, duracion } = Astro.props;
+const min = Math.floor(duracion / 60);
+const seg = String(duracion % 60).padStart(2, '0');
+const watch = `https://www.youtube.com/watch?v=${id}`;
+---
+<section class="tuto-video" aria-labelledby={`tv-${id}`}>
+  <h2 id={`tv-${id}`} class="tuto-video-h">Mirá el tutorial en video <span class="tuto-video-dur">{min}:{seg} min</span></h2>
+  <div class="tuto-video-marco" data-video-id={id} data-video-titulo={titulo}>
+    <button type="button" class="tuto-video-play" aria-label={`Reproducir el video: ${titulo}`}>
+      <img src={poster} width="960" height="540" alt="" loading="lazy" decoding="async" />
+      <span class="tuto-video-icono" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z" /></svg>
+      </span>
+    </button>
+    <noscript><a class="tuto-video-sinjs" href={watch}>Ver el video en YouTube</a></noscript>
+  </div>
+  <p class="tuto-video-nota">Muestra los mismos pasos que el texto de abajo. <a href={watch} target="_blank" rel="noopener">Abrirlo en YouTube</a></p>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLElement>('.tuto-video-marco').forEach((marco) => {
+    const boton = marco.querySelector<HTMLButtonElement>('.tuto-video-play');
+    if (!boton) return;
+    boton.addEventListener('click', () => {
+      const f = document.createElement('iframe');
+      f.src = `https://www.youtube-nocookie.com/embed/${marco.dataset.videoId}?autoplay=1&rel=0&modestbranding=1&hl=es&cc_lang_pref=es`;
+      f.title = marco.dataset.videoTitulo || 'Video del tutorial';
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      f.allowFullscreen = true;
+      f.referrerPolicy = 'strict-origin-when-cross-origin';
+      boton.replaceWith(f);
+      f.focus();
+    });
+  });
+</script>

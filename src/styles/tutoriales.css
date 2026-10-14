@@ -18,6 +18,22 @@
 .tuto-meta dt { font-size: .78rem; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-3); }
 .tuto-meta dd { margin: .2rem 0 0; color: var(--ink-2); line-height: 1.5; }
 
+/* Video del tutorial: 16:9 fluido; la portada se cambia por el reproductor al tocar. */
+.tuto-video { margin: 0 0 2rem; max-width: 880px; }
+.tuto-video-h { font-size: 1.05rem; margin: 0 0 .65rem; display: flex; align-items: baseline; gap: .6rem; flex-wrap: wrap; }
+.tuto-video-dur { font-size: .8rem; font-weight: 600; color: var(--ink-3); }
+.tuto-video-marco { position: relative; aspect-ratio: 16 / 9; width: 100%; background: var(--night); border-radius: var(--r-card); overflow: hidden; box-shadow: var(--shadow); }
+.tuto-video-marco iframe, .tuto-video-play { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.tuto-video-play { display: block; padding: 0; margin: 0; background: none; cursor: pointer; }
+.tuto-video-play img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s var(--ease), filter .3s; }
+.tuto-video-play:hover img { transform: scale(1.025); filter: brightness(.92); }
+.tuto-video-icono { position: absolute; left: 50%; top: 50%; width: clamp(56px, 11%, 84px); aspect-ratio: 1; transform: translate(-50%, -50%); border-radius: 50%; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; box-shadow: 0 10px 30px -8px rgb(0 0 0 / .5); transition: transform .3s var(--ease); }
+.tuto-video-icono svg { margin-left: 4%; width: 42%; height: 42%; }
+.tuto-video-play:hover .tuto-video-icono { transform: translate(-50%, -50%) scale(1.08); }
+.tuto-video-sinjs { position: absolute; inset: 0; display: grid; place-items: center; color: #fff; font-weight: 600; }
+.tuto-video-nota { margin: .6rem 0 0; font-size: .88rem; color: var(--ink-3); }
+@media (prefers-reduced-motion: reduce) { .tuto-video-play img, .tuto-video-icono { transition: none; } }
+
 .tuto-grid { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 2.5rem; align-items: start; }
 .tuto-toc { position: sticky; top: calc(var(--nav-h) + 20px); font-size: .92rem; }
 .tuto-aside .tuto-toc { position: static; }

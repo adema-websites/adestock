@@ -1,0 +1,261 @@
+{
+  "abrir-y-cerrar-caja": {
+    "n": 12,
+    "id": "wOu26rtRSVQ",
+    "duracion": 89,
+    "subido": "2026-10-13",
+    "titulo": "Apertura y cierre de caja con arqueo, paso a paso"
+  },
+  "actualizar-precios-y-rentabilidad": {
+    "n": 25,
+    "id": "rHF41RHIi7o",
+    "duracion": 89,
+    "subido": "2026-10-13",
+    "titulo": "Actualizar precios masivamente y ver tu rentabilidad"
+  },
+  "ajustar-stock-mermas-transferencias": {
+    "n": 24,
+    "id": "uI-OqMl-pg8",
+    "duracion": 134,
+    "subido": "2026-10-13",
+    "titulo": "Ajustes de inventario, mermas y transferencias"
+  },
+  "anular-venta-y-reimprimir-ticket": {
+    "n": 10,
+    "id": "A1CbuxTyIsI",
+    "duracion": 92,
+    "subido": "2026-10-13",
+    "titulo": "Cómo anular una venta y reimprimir un ticket"
+  },
+  "armar-pedidos-picking": {
+    "n": 34,
+    "id": "uSeQ7SdcS1g",
+    "duracion": 174,
+    "subido": "2026-10-13",
+    "titulo": "Armado de pedidos (picking) desde el celular"
+  },
+  "billeteras-y-cuentas": {
+    "n": 33,
+    "id": "dhFGiYOMbiw",
+    "duracion": 156,
+    "subido": "2026-10-13",
+    "titulo": "Control de billeteras y cuentas: dónde está tu plata"
+  },
+  "cargar-compra-manual": {
+    "n": 19,
+    "id": "AnzaV2Sin7U",
+    "duracion": 103,
+    "subido": "2026-10-13",
+    "titulo": "Cómo cargar una compra de mercadería y pagarla"
+  },
+  "cargar-compras-con-foto-ia": {
+    "n": 20,
+    "id": "CiHq4UtLRQc",
+    "duracion": 230,
+    "subido": "2026-10-13",
+    "titulo": "Cargar una compra con foto de la factura (OCR)"
+  },
+  "cargar-listas-precios-proveedores": {
+    "n": 22,
+    "id": "fUXJ_NmJXXU",
+    "duracion": 109,
+    "subido": "2026-10-13",
+    "titulo": "Listas de precios de proveedores: compará y comprá más barato"
+  },
+  "cargar-productos": {
+    "n": 3,
+    "id": "5g9C97I21GE",
+    "duracion": 87,
+    "subido": "2026-10-13",
+    "titulo": "Cómo cargar productos en tu sistema de stock"
+  },
+  "cobrar-con-varios-medios-de-pago": {
+    "n": 8,
+    "id": "2IykL9CuY0g",
+    "duracion": 92,
+    "subido": "2026-10-13",
+    "titulo": "Cobrar con varios medios de pago y aplicar descuentos"
+  },
+  "cobrar-deuda-cliente": {
+    "n": 17,
+    "id": "OruE-EKSaDg",
+    "duracion": 89,
+    "subido": "2026-10-13",
+    "titulo": "Cómo cobrar la deuda de un cliente (cuenta corriente)"
+  },
+  "configurar-negocio": {
+    "n": 2,
+    "id": "nAN3ymHQ9nk",
+    "duracion": 115,
+    "subido": "2026-10-13",
+    "titulo": "Cómo configurar tu sistema de ventas y stock desde cero"
+  },
+  "configurar-punto-de-venta": {
+    "n": 5,
+    "id": "vzRNwY-SMp4",
+    "duracion": 140,
+    "subido": "2026-10-13",
+    "titulo": "Configuración del punto de venta (POS) paso a paso"
+  },
+  "configurar-tienda-online": {
+    "n": 29,
+    "id": "QS7ZvKlE6hE",
+    "duracion": 128,
+    "subido": "2026-10-13",
+    "titulo": "Cómo crear una tienda online para tu negocio"
+  },
+  "consultar-cuenta-corriente-cliente": {
+    "n": 16,
+    "id": "Jbzvi0wk-wQ",
+    "duracion": 59,
+    "subido": "2026-10-13",
+    "titulo": "Cuenta corriente de un cliente: saldo y deuda actualizada"
+  },
+  "consultar-reportes-y-exportar": {
+    "n": 31,
+    "id": "ObLrqRKa9Ps",
+    "duracion": 149,
+    "subido": "2026-10-13",
+    "titulo": "Reportes de ventas: consultar, filtrar y exportar a Excel"
+  },
+  "contar-stock": {
+    "n": 23,
+    "id": "SLCZOYsWcy0",
+    "duracion": 114,
+    "subido": "2026-10-13",
+    "titulo": "Cómo hacer un conteo de stock (inventario)"
+  },
+  "controlar-turnos-caja-panel": {
+    "n": 32,
+    "id": "IXVE05DIiBE",
+    "duracion": 114,
+    "subido": "2026-10-13",
+    "titulo": "Cómo controlar los turnos de caja de tus empleados"
+  },
+  "crear-ofertas-y-promociones": {
+    "n": 26,
+    "id": "cSYU6XIb0Bc",
+    "duracion": 110,
+    "subido": "2026-10-13",
+    "titulo": "Cómo crear ofertas y promociones (3x2, descuentos)"
+  },
+  "crear-revista-ofertas": {
+    "n": 27,
+    "id": "-ddRFxtzHIc",
+    "duracion": 127,
+    "subido": "2026-10-13",
+    "titulo": "Cómo hacer folletos y revistas de ofertas para imprimir"
+  },
+  "crear-y-editar-clientes": {
+    "n": 15,
+    "id": "5FlPBGzxEXI",
+    "duracion": 66,
+    "subido": "2026-10-13",
+    "titulo": "Cómo cargar y editar clientes en tu sistema de ventas"
+  },
+  "crear-y-editar-proveedores": {
+    "n": 18,
+    "id": "krLQWf5hWhE",
+    "duracion": 55,
+    "subido": "2026-10-13",
+    "titulo": "Cómo cargar y administrar proveedores"
+  },
+  "fabricar-productos-con-recetas": {
+    "n": 14,
+    "id": "VgA0Or1GPGo",
+    "duracion": 63,
+    "subido": "2026-10-13",
+    "titulo": "Producción con recetas: fabricá productos desde el POS"
+  },
+  "hacer-presupuesto": {
+    "n": 11,
+    "id": "xEyQ2LuFX2I",
+    "duracion": 77,
+    "subido": "2026-10-13",
+    "titulo": "Cómo hacer un presupuesto y convertirlo en venta"
+  },
+  "hacer-una-venta": {
+    "n": 7,
+    "id": "fjuWiHoR5l4",
+    "duracion": 145,
+    "subido": "2026-10-13",
+    "titulo": "Cómo hacer una venta en el punto de venta"
+  },
+  "imprimir-etiquetas": {
+    "n": 28,
+    "id": "2bBimdgfPcQ",
+    "duracion": 83,
+    "subido": "2026-10-13",
+    "titulo": "Cómo imprimir etiquetas de precio y código de barras"
+  },
+  "instalar-agente-de-impresion": {
+    "n": 38,
+    "id": "2d-33eCOA2U",
+    "duracion": 104,
+    "subido": "2026-10-13",
+    "titulo": "Cómo instalar el agente de impresión de tickets y etiquetas"
+  },
+  "licencia": {
+    "n": 36,
+    "id": "gGgVW6Ka3YQ",
+    "duracion": 56,
+    "subido": "2026-10-13",
+    "titulo": "Licencia gratuita y Licencia Pro: qué incluye"
+  },
+  "notas-de-credito-y-debito": {
+    "n": 35,
+    "id": "bIOpFGuJu4o",
+    "duracion": 102,
+    "subido": "2026-10-13",
+    "titulo": "Notas de crédito y débito: cómo aplicarlas y anularlas"
+  },
+  "pagar-proveedor": {
+    "n": 21,
+    "id": "AFiFhrWPakA",
+    "duracion": 81,
+    "subido": "2026-10-13",
+    "titulo": "Cómo pagar a un proveedor y ver lo que le debés"
+  },
+  "registrar-gastos-y-retiros": {
+    "n": 13,
+    "id": "pm8OCigV3mk",
+    "duracion": 88,
+    "subido": "2026-10-13",
+    "titulo": "Cómo registrar un gasto y un retiro de caja"
+  },
+  "respaldos": {
+    "n": 37,
+    "id": "6HOXXG9s9B8",
+    "duracion": 107,
+    "subido": "2026-10-13",
+    "titulo": "Cómo hacer un respaldo (backup) de tu sistema de ventas"
+  },
+  "usar-app-del-dueno": {
+    "n": 30,
+    "id": "_KpGlFnF99w",
+    "duracion": 209,
+    "subido": "2026-10-13",
+    "titulo": "Controlá tu negocio desde el celular: app del dueño"
+  },
+  "usar-punto-de-venta": {
+    "n": 6,
+    "id": "7KsQdglDFSk",
+    "duracion": 92,
+    "subido": "2026-10-13",
+    "titulo": "Cómo usar el punto de venta: pantalla, atajos y menú rápido"
+  },
+  "usuarios-y-permisos": {
+    "n": 4,
+    "id": "X0xAJTr20RU",
+    "duracion": 89,
+    "subido": "2026-10-13",
+    "titulo": "Crear usuarios y permisos para tus empleados"
+  },
+  "vender-fiado-cuenta-corriente": {
+    "n": 9,
+    "id": "3J7tjvB7XM8",
+    "duracion": 68,
+    "subido": "2026-10-13",
+    "titulo": "Cómo vender fiado: cuenta corriente de clientes"
+  }
+}

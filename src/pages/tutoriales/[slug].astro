@@ -3,6 +3,8 @@ import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import { SITE, ROLES, SUPERFICIES, categorias, esBorrador, getTutoriales, urlTutorial } from '../../lib/tutoriales';
 import rutas from '../../data/rutas-aprendizaje.json';
+import videos from '../../data/tutoriales-videos.json';
+import VideoTutorial from '../../components/VideoTutorial.astro';
 
 export async function getStaticPaths() {
   const todos = await getTutoriales();
@@ -15,6 +17,9 @@ const toc = headings.filter((h) => h.depth === 2);
 const borrador = esBorrador(t);
 const versionOk = d.product_version !== 'pendiente-verificar';
 const path = urlTutorial(d.slug);
+// Video de YouTube del tutorial (datos generados desde la carpeta de videos; no todos los tutoriales tienen).
+const video = (videos as Record<string, { id: string; duracion: number; subido: string; titulo: string }>)[d.slug];
+const posterVideo = video ? `/video/tutoriales/${d.slug}.webp` : undefined;
 
 // Siguiente según la ruta inicial; si no está en la ruta, ningún "siguiente" inventado.
 const paso = rutas.empezar.pasos.findIndex((p) => p.slug === d.slug);
@@ -49,6 +54,22 @@ const jsonLd = [
           author: { '@type': 'Organization', name: 'ADEMA Sistemas', url: SITE + '/' },
           publisher: { '@type': 'Organization', name: 'ADEMA Sistemas', url: SITE + '/' },
         },
+        ...(video
+          ? [
+              {
+                '@context': 'https://schema.org',
+                '@type': 'VideoObject',
+                name: video.titulo,
+                description: d.description,
+                thumbnailUrl: SITE + posterVideo,
+                uploadDate: video.subido,
+                duration: `PT${Math.floor(video.duracion / 60)}M${video.duracion % 60}S`,
+                embedUrl: `https://www.youtube.com/embed/${video.id}`,
+                inLanguage: 'es-AR',
+                publisher: { '@type': 'Organization', name: 'ADEMA Sistemas', url: SITE + '/' },
+              },
+            ]
+          : []),
       ]),
 ];
 const asunto = encodeURIComponent(`Consulta sobre el tutorial "${d.title}" (${d.id}, versión ${d.product_version})`);
@@ -74,6 +95,7 @@ const asunto = encodeURIComponent(`Consulta sobre el tutorial "${d.title}" (${d.
     <header class="tuto-head">
       <h1>{d.title}</h1>
       <p class="tuto-lead">{d.description}</p>
+      {video && <VideoTutorial id={video.id} titulo={video.titulo} poster={posterVideo!} duracion={video.duracion} />}
       <dl class="tuto-resumen">
         <div><dt>Tiempo</dt><dd>{d.tiempo}</dd></div>
         <div><dt>Para quién</dt><dd>{d.roles.map((r) => ROLES[r]).join(', ')}</dd></div>
